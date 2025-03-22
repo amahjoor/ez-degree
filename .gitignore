@@ -39,7 +39,7 @@ build/
 *.swo
 
 # Output files that may contain sensitive data
-output/*.json
+output/*
 
 # Alembic migration versions (if you want to keep these in version control, remove this line)
 # migrations/versions/node_modules/

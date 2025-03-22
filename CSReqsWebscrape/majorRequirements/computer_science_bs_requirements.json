@@ -1,0 +1,504 @@
+{
+  "degree_name": "Computer Science BS",
+  "total_credits": 120.0,
+  "categories": [
+    {
+      "name": "Computer Science Core",
+      "total_credits": 35.0,
+      "courses": [
+        {
+          "code": "CS 110",
+          "title": "Essentials of Computer Science 1",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 112",
+          "title": "Introduction to Computer Programming (Mason Core)",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 211",
+          "title": "Object-Oriented Programming",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 262",
+          "title": "Introduction to Low-Level Programming",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 306",
+          "title": "Synthesis of Ethics and Law for the Computing Professional (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 310",
+          "title": "Data Structures",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 321",
+          "title": "Software Engineering (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 330",
+          "title": "Formal Methods and Models",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 367",
+          "title": "Computer Systems and Programming",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 483",
+          "title": "Analysis of Algorithms",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Senior Computer Science",
+      "total_credits": 78.0,
+      "courses": [
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 468",
+          "title": "Secure Programming and Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 487",
+          "title": "Introduction to Cryptography",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 425",
+          "title": "Game Programming I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 440",
+          "title": "Compilers",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 450",
+          "title": "Database Concepts",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 451",
+          "title": "Computer Graphics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 452",
+          "title": "Virtual Reality",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 463",
+          "title": "Comparative Programming Languages",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 465",
+          "title": "Computer Systems Architecture 1",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 468",
+          "title": "Secure Programming and Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 469",
+          "title": "Security Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 477",
+          "title": "Mobile Application Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 478",
+          "title": "Natural Language Processing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 480",
+          "title": "Introduction to Artificial Intelligence",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 482",
+          "title": "Computer Vision",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 484",
+          "title": "Data Mining",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 485",
+          "title": "Autonomous Robotics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 487",
+          "title": "Introduction to Cryptography",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 490",
+          "title": "Design Exhibition 2",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 491",
+          "title": "Industry-Sponsored Senior Design Project 2",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 499",
+          "title": "Special Topics in Computer Science 3",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 446",
+          "title": "Numerical Analysis I 4",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "total_credits": 18.0,
+      "courses": [
+        {
+          "code": "MATH 113",
+          "title": "Analytic Geometry and Calculus I (Mason Core)",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 114",
+          "title": "Analytic Geometry and Calculus II",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 125",
+          "title": "Discrete Mathematics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 203",
+          "title": "Linear Algebra",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 213",
+          "title": "Analytic Geometry and Calculus III",
+          "credits": 4.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Statistics",
+      "total_credits": 3.0,
+      "courses": [
+        {
+          "code": "STAT 344",
+          "title": "Probability and Statistics for Engineers and Scientists I 1",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Computer Science-Related Courses",
+      "total_credits": 57.0,
+      "courses": [
+        {
+          "code": "STAT 354",
+          "title": "Probability and Statistics for Engineers and Scientists II",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "OR 335",
+          "title": "Discrete Systems Modeling and Simulation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "OR 441",
+          "title": "Deterministic Optimization",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "OR 442",
+          "title": "Stochastic Models",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ECE 301",
+          "title": "Digital Electronics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ECE 350",
+          "title": "Embedded Systems and Hardware Interfaces",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ECE 446",
+          "title": "Device Driver Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ECE 447",
+          "title": "Microcontrollers",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ECE 455",
+          "title": "GPU Architecture and Programming",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ECE 511",
+          "title": "Computer Architecture",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 419",
+          "title": "Object-Oriented Software Design and Implementation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 432",
+          "title": "Web Application Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 437",
+          "title": "Software Testing and Maintenance",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 443",
+          "title": "Software Architectures",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SYST 371",
+          "title": "Systems Engineering Management",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SYST 470",
+          "title": "Human Factors Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHIL 371",
+          "title": "Philosophy of the Natural Sciences",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHIL 376",
+          "title": "Symbolic Logic",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 388",
+          "title": "Professional and Technical Writing",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Approved Two-Course Sequences with Laboratories",
+      "total_credits": 17.0,
+      "courses": [
+        {
+          "code": "BIOL 102",
+          "title": "Introductory Biology I-Survey of Biodiversity and Ecology (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BIOL 106",
+          "title": "Introductory Biology I Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "BIOL 107",
+          "title": "Intro Biology II Lecture (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BIOL 103",
+          "title": "Introductory Biology II-Survey of Cell and Molecular Biology (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BIOL 105",
+          "title": "Introductory Biology II Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHEM 211& CHEM 213",
+          "title": "General Chemistry I (Mason Core)and General Chemistry Laboratory I (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHEM 212& CHEM 214",
+          "title": "General Chemistry II (Mason Core)and General Chemistry Laboratory II (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "GEOL 101& GEOL 103",
+          "title": "Physical Geology (Mason Core)and Physical Geology Lab (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "GEOL 102& GEOL 104",
+          "title": "Historical Geology (Mason Core)and Historical Geology Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 160& PHYS 161",
+          "title": "University Physics I (Mason Core)and University Physics I Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 260& PHYS 261",
+          "title": "University Physics II (Mason Core)and University Physics II Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section) 1",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    }
+  ]
+}

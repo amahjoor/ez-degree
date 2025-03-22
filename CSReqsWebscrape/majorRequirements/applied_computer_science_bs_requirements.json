@@ -1,0 +1,2730 @@
+{
+  "degree_name": "Applied Computer Science BS",
+  "total_credits": 120.0,
+  "categories": [
+    {
+      "name": "Foundation",
+      "total_credits": 24.0,
+      "courses": [
+        {
+          "code": "CS 110",
+          "title": "Essentials of Computer Science 1",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 112",
+          "title": "Introduction to Computer Programming (Mason Core)",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 211",
+          "title": "Object-Oriented Programming",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 113",
+          "title": "Analytic Geometry and Calculus I (Mason Core)",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 114",
+          "title": "Analytic Geometry and Calculus II",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 125",
+          "title": "Discrete Mathematics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 203",
+          "title": "Linear Algebra",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 19.0,
+      "courses": [
+        {
+          "code": "CS 262",
+          "title": "Introduction to Low-Level Programming",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 310",
+          "title": "Data Structures",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 321",
+          "title": "Software Engineering (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 330",
+          "title": "Formal Methods and Models",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 367",
+          "title": "Computer Systems and Programming",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 483",
+          "title": "Analysis of Algorithms",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 17.0,
+      "courses": [
+        {
+          "code": "PHYS 160",
+          "title": "University Physics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 161",
+          "title": "University Physics I Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "BIOL 213",
+          "title": "Cell Structure and Function (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHEM 211",
+          "title": "General Chemistry I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHEM 213",
+          "title": "General Chemistry Laboratory I (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 344",
+          "title": "Probability and Statistics for Engineers and Scientists I",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 21.0,
+      "courses": [
+        {
+          "code": "BINF 450",
+          "title": "Bioinformatics for Life Sciences",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BIOL 482",
+          "title": "Introduction to Molecular Genetics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BIOL 580",
+          "title": "Computer Applications for the Life Sciences",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 450",
+          "title": "Database Concepts",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BINF 401",
+          "title": "Bioinformatics and Computational Biology I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BINF 402",
+          "title": "Bioinformatics and Computational Biology II",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section) 1",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 18.0,
+      "courses": [
+        {
+          "code": "STAT 250",
+          "title": "Introductory Statistics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BUS 100",
+          "title": "Business and Society (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PSYC 100",
+          "title": "Introduction to Psychology (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MGMT 303",
+          "title": "Principles of Management",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MKTG 303",
+          "title": "Principles of Marketing",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 15.0,
+      "courses": [
+        {
+          "code": "MGMT 313",
+          "title": "Organizational Behavior (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MGMT 321",
+          "title": "Introduction to Human Resource Management",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MGMT 451",
+          "title": "Introduction to Entrepreneurship",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MGMT 453",
+          "title": "Starting a Business",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 18.0,
+      "courses": [
+        {
+          "code": "STAT 250",
+          "title": "Introductory Statistics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "BUS 100",
+          "title": "Business and Society (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PSYC 100",
+          "title": "Introduction to Psychology (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MGMT 303",
+          "title": "Principles of Management",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MKTG 303",
+          "title": "Principles of Marketing",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "MKTG 312",
+          "title": "Consumer Behavior",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MKTG 351",
+          "title": "Marketing Research",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MKTG 471",
+          "title": "Marketing Management (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 18.0,
+      "courses": [
+        {
+          "code": "GAME 230",
+          "title": "History of Computer Game Design",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 325",
+          "title": "Introduction to Game Design",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 351",
+          "title": "Visual Computing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "AVT 104",
+          "title": "Two-Dimensional Design and Color (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 344",
+          "title": "Probability and Statistics for Engineers and Scientists I",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 18.0,
+      "courses": [
+        {
+          "code": "AVT 382",
+          "title": "2D Experimental Animation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "AVT 383",
+          "title": "3D Experimental Animation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 425",
+          "title": "Game Programming I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 426",
+          "title": "Game Programming II",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 451",
+          "title": "Computer Graphics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "CGDS Related Electives",
+      "total_credits": 39.0,
+      "courses": [
+        {
+          "code": "SWE 419",
+          "title": "Object-Oriented Software Design and Implementation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 452",
+          "title": "Virtual Reality",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 477",
+          "title": "Mobile Application Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 480",
+          "title": "Introduction to Artificial Intelligence",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 485",
+          "title": "Autonomous Robotics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 432",
+          "title": "Web Application Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GAME 332",
+          "title": "RS: Story Design for Computer Games (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "AVT 370",
+          "title": "Entrepreneurship in the Arts",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "AVT 374",
+          "title": "Sound Art I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "AVT 487",
+          "title": "Advanced Topics: New Media Art",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "JAPA 370",
+          "title": "Video Games and Japan",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Natural Science",
+      "total_credits": 4.0,
+      "courses": [
+        {
+          "code": "PHYS 160",
+          "title": "University Physics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 161",
+          "title": "University Physics I Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 18.0,
+      "courses": [
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 102",
+          "title": "Physical Geography (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 103",
+          "title": "Human Geography (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 110",
+          "title": "Introduction to Geoinformation Technologies",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 300",
+          "title": "Quantitative Methods for Geographical Analysis",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 250",
+          "title": "Introductory Statistics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 15.0,
+      "courses": [
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 310",
+          "title": "Cartographic Design",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 311",
+          "title": "Geographic Information Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 366",
+          "title": "Spatial Computing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 379",
+          "title": "Remote Sensing",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "GINF Related Electives",
+      "total_credits": 27.0,
+      "courses": [
+        {
+          "code": "GGS 354",
+          "title": "Data Analysis and Global Change Detection Techniques",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 411",
+          "title": "Geovisualization",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 416",
+          "title": "Satellite Image Analysis",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 422",
+          "title": "Drone Remote Sensing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 426",
+          "title": "Physical Fundamentals of Remote Sensing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 429",
+          "title": "Remote Sensing of the Environment and Earth System",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 462",
+          "title": "Web-based Geographic Information Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 463",
+          "title": "RS: GIS Analysis and Application",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 470",
+          "title": "Special Topics in Geographic Techniques",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "CS Related",
+      "total_credits": 21.0,
+      "courses": [
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 468",
+          "title": "Secure Programming and Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 487",
+          "title": "Introduction to Cryptography",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SOCI 213",
+          "title": "Statistics for the Behavioral Sciences (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 250",
+          "title": "Introductory Statistics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Chinese Language",
+      "total_credits": 24.0,
+      "courses": [
+        {
+          "code": "CHIN 110",
+          "title": "Elementary Chinese",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 201",
+          "title": "Intermediate Chinese I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 202",
+          "title": "Intermediate Chinese II",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 300",
+          "title": "Reading Skills Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 301",
+          "title": "Advanced Grammar and Syntax",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 305",
+          "title": "Chinese for the Business World",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 318",
+          "title": "Introduction to Classical Chinese (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 480",
+          "title": "Fourth-Year Chinese I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Intelligence Analysis",
+      "total_credits": 27.0,
+      "courses": [
+        {
+          "code": "CRIM 230",
+          "title": "Introduction to Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 304",
+          "title": "Computer Crime, Forensics, and Auditing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 310",
+          "title": "Introduction to the Intelligence Community",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 312",
+          "title": "Intelligence Analysis Techniques",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 350",
+          "title": "Counterintelligence",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 400",
+          "title": "Applied Criminal Psychology",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 460",
+          "title": "Surveillance and Privacy in Contemporary Society",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 462",
+          "title": "Law Enforcement and Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 475",
+          "title": "Theory and Politics of Terrorism",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Chinese Studies",
+      "total_credits": 57.0,
+      "courses": [
+        {
+          "code": "CHIN 310",
+          "title": "Survey of Chinese Literature (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 311",
+          "title": "Modern Chinese Literature in Translation (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 320",
+          "title": "Contemporary Chinese Film",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 325",
+          "title": "Major Chinese Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 328",
+          "title": "Asian American Women Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 355",
+          "title": "Readings in Chinese Poetry and Poetics (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 365",
+          "title": "Readings in Chinese Fiction after Mao",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 470",
+          "title": "Special Topics in Chinese Studies",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 475",
+          "title": "Chinese Popular Culture (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CHIN 485",
+          "title": "China on Stage: Introduction to Chinese Theatrical Dramas in the 20th Century",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 317",
+          "title": "Geography of China (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 353",
+          "title": "History of Traditional China",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 354",
+          "title": "Modern China (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 358",
+          "title": "Post-1949 China (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 333",
+          "title": "Politics of East Asia",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 315",
+          "title": "Buddhism (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 314",
+          "title": "Chinese Philosophies and Religious Traditions",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 317",
+          "title": "Daoism",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 341",
+          "title": "Chinese Foreign Policy",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Fundamentals of Communication (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 101",
+          "title": "Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "CS Related",
+      "total_credits": 21.0,
+      "courses": [
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 468",
+          "title": "Secure Programming and Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 487",
+          "title": "Introduction to Cryptography",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SOCI 213",
+          "title": "Statistics for the Behavioral Sciences (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 250",
+          "title": "Introductory Statistics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Korean Language",
+      "total_credits": 36.0,
+      "courses": [
+        {
+          "code": "KORE 110",
+          "title": "Elementary Korean",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 201",
+          "title": "Intermediate Korean I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 202",
+          "title": "Intermediate Korean II",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 301",
+          "title": "Advanced Korean Language and Culture",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 305",
+          "title": "Business Korean",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 321",
+          "title": "Korean Proficiency through Visual Culture",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 331",
+          "title": "Special Topics in Advanced Korean Reading",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 332",
+          "title": "Special Topics in Advanced Korean Speaking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 340",
+          "title": "Transformation of Language and Culture in North and South Korea",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 370",
+          "title": "Advanced Korean Writing (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 385",
+          "title": "Introduction to Korean Linguistics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 410",
+          "title": "Special Topics in Korean Linguistics",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Intelligence Analysis",
+      "total_credits": 27.0,
+      "courses": [
+        {
+          "code": "CRIM 230",
+          "title": "Introduction to Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 304",
+          "title": "Computer Crime, Forensics, and Auditing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 310",
+          "title": "Introduction to the Intelligence Community",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 312",
+          "title": "Intelligence Analysis Techniques",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 350",
+          "title": "Counterintelligence",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 400",
+          "title": "Applied Criminal Psychology",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 460",
+          "title": "Surveillance and Privacy in Contemporary Society",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 462",
+          "title": "Law Enforcement and Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 475",
+          "title": "Theory and Politics of Terrorism",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Korean Studies",
+      "total_credits": 24.0,
+      "courses": [
+        {
+          "code": "GOVT 333",
+          "title": "Politics of East Asia",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 300",
+          "title": "Korean Culture and Society",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 310",
+          "title": "Traditional Korean Literature in Translation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 311",
+          "title": "Modern Korean Literature in Translation (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 320",
+          "title": "Korean Popular Culture in a Global World",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 325",
+          "title": "Major North and South Korean Writers",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "KORE 450",
+          "title": "Korean Cultural Studies",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 318",
+          "title": "Korean Philosophy and Religions",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Fundamentals of Communication (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 101",
+          "title": "Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "CS Related",
+      "total_credits": 21.0,
+      "courses": [
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 468",
+          "title": "Secure Programming and Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 487",
+          "title": "Introduction to Cryptography",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SOCI 213",
+          "title": "Statistics for the Behavioral Sciences (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 250",
+          "title": "Introductory Statistics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Arabic Language",
+      "total_credits": 24.0,
+      "courses": [
+        {
+          "code": "ARAB 110",
+          "title": "Elementary Arabic",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 201",
+          "title": "Intermediate Arabic I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 202",
+          "title": "Intermediate Arabic II",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 300",
+          "title": "Advanced Arabic",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 330",
+          "title": "Reading and Conversation I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 370",
+          "title": "Arabic for the Professions",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 380",
+          "title": "Arabic Dialects",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 430",
+          "title": "Advanced Arabic Grammar",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Intelligence Analysis",
+      "total_credits": 27.0,
+      "courses": [
+        {
+          "code": "CRIM 230",
+          "title": "Introduction to Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 304",
+          "title": "Computer Crime, Forensics, and Auditing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 310",
+          "title": "Introduction to the Intelligence Community",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 312",
+          "title": "Intelligence Analysis Techniques",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 350",
+          "title": "Counterintelligence",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 400",
+          "title": "Applied Criminal Psychology",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 460",
+          "title": "Surveillance and Privacy in Contemporary Society",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 462",
+          "title": "Law Enforcement and Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 475",
+          "title": "Theory and Politics of Terrorism",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Arabic and Middle Eastern Studies",
+      "total_credits": 51.0,
+      "courses": [
+        {
+          "code": "ANTH 308",
+          "title": "Peoples and Cultures of the Middle East (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 325",
+          "title": "Major Arab Writers/Stories (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 355",
+          "title": "Advanced Arabic Media: Debates  Context",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 360",
+          "title": "Topics in Arabic Cultural Production",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ARAB 470",
+          "title": "Special Topics in Modern Arabic Studies",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 325",
+          "title": "Geography of North Africa and the Middle East",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 332",
+          "title": "Politics of the Middle East and North Africa",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 345",
+          "title": "Islam and Politics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 461",
+          "title": "Arab-Israeli Conflict",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 462",
+          "title": "Women in Islamic Society (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 465",
+          "title": "The Middle East in the 20th Century",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 312",
+          "title": "Islam (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 352",
+          "title": "Judaism from Exile to Talmud",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 343",
+          "title": "Sufism",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 310",
+          "title": "Judaism (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 338",
+          "title": "Qur'an and Hadith",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RELI 368",
+          "title": "Islam, Democracy, and Human Rights (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Fundamentals of Communication (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 101",
+          "title": "Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "CS Related",
+      "total_credits": 21.0,
+      "courses": [
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 468",
+          "title": "Secure Programming and Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 487",
+          "title": "Introduction to Cryptography",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SOCI 213",
+          "title": "Statistics for the Behavioral Sciences (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 250",
+          "title": "Introductory Statistics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Russian Language",
+      "total_credits": 21.0,
+      "courses": [
+        {
+          "code": "RUSS 110",
+          "title": "Elementary Russian",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 201",
+          "title": "Intermediate Russian I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 202",
+          "title": "Intermediate Russian II",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 302",
+          "title": "Russian Conversation and Composition",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 303",
+          "title": "Russian Advanced Conversation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 380",
+          "title": "Advanced Russian I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 480",
+          "title": "Fourth-Year Russian",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Intelligence Analysis",
+      "total_credits": 27.0,
+      "courses": [
+        {
+          "code": "CRIM 230",
+          "title": "Introduction to Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 304",
+          "title": "Computer Crime, Forensics, and Auditing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 310",
+          "title": "Introduction to the Intelligence Community",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 312",
+          "title": "Intelligence Analysis Techniques",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 350",
+          "title": "Counterintelligence",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 400",
+          "title": "Applied Criminal Psychology",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 460",
+          "title": "Surveillance and Privacy in Contemporary Society",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 462",
+          "title": "Law Enforcement and Homeland Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CRIM 475",
+          "title": "Theory and Politics of Terrorism",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Russian Studies",
+      "total_credits": 54.0,
+      "courses": [
+        {
+          "code": "ECON 380",
+          "title": "Economies in Transition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GGS 326",
+          "title": "Geography of Eastern Europe and Russia",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 338",
+          "title": "Politics of Eurasia",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 326",
+          "title": "Stalinism",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 327",
+          "title": "The Soviet Union and Russia Since World War II",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 328",
+          "title": "Rise of Russia (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "HIST 329",
+          "title": "Modern Russia and the Soviet Union (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 310",
+          "title": "Readings in Russian Literature",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 311",
+          "title": "Contemporary Russian Short Fiction",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 325",
+          "title": "Major Russian Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 326",
+          "title": "19th-Century Literature in Translation (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 401",
+          "title": "Readings in the Social Sciences",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 407",
+          "title": "Russian Drama and Theater",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 410",
+          "title": "Russian Poetry",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 470",
+          "title": "Topics in (Post) Soviet Film",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 327",
+          "title": "20th-Century Literature in Translation (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 353",
+          "title": "Russian Civilization (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "RUSS 354",
+          "title": "Contemporary Post-Soviet Life (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "ENGH 101",
+          "title": "Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "COMM 101",
+          "title": "Fundamentals of Communication (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional (Apex)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "LING 300",
+          "title": "Linguistic Variation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 306",
+          "title": "Introduction to Linguistic Analysis (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 344",
+          "title": "Probability and Statistics for Engineers and Scientists I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 30.0,
+      "courses": [
+        {
+          "code": "LING 331",
+          "title": "Phonetics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 335",
+          "title": "Morphology",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 338",
+          "title": "Semantics and Pragmatics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 471",
+          "title": "Computational Linguistics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 478",
+          "title": "Natural Language Processing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 440",
+          "title": "Compilers",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 480",
+          "title": "Introduction to Artificial Intelligence",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 484",
+          "title": "Data Mining",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 499",
+          "title": "Special Topics in Computer Science 1",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SYST 469",
+          "title": "Human Computer Interaction",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Linguistics Breadth",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "LING 441",
+          "title": "First Language Acquisition",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 451",
+          "title": "Sociolinguistics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 453",
+          "title": "Typology",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "LING Related Electives",
+      "total_credits": 27.0,
+      "courses": [
+        {
+          "code": "LING 316",
+          "title": "Linguistic Field Methods",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 322",
+          "title": "English Grammar and Pedagogy",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 323",
+          "title": "English Pronunciation and Pedagogy",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 336",
+          "title": "Syntax A",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 443",
+          "title": "Psycholinguistics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 441",
+          "title": "First Language Acquisition",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 451",
+          "title": "Sociolinguistics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 453",
+          "title": "Typology",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "LING 496",
+          "title": "Special Topics in Linguistics",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Fundamentals of Communication (Mason Core) (Oral Communication)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 101",
+          "title": "Composition (Mason Core) (Written Communication)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Advanced Composition)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "CHEM 211& CHEM 213",
+          "title": "General Chemistry I (Mason Core)and General Chemistry Laboratory I (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 213",
+          "title": "Analytic Geometry and Calculus III",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 214",
+          "title": "Elementary Differential Equations",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 160& PHYS 161",
+          "title": "University Physics I (Mason Core)and University Physics I Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 27.0,
+      "courses": [
+        {
+          "code": "ME 211",
+          "title": "Statics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 212",
+          "title": "Solid Mechanics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 221",
+          "title": "Thermodynamics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 231",
+          "title": "Dynamics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 313",
+          "title": "Material Science",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 322",
+          "title": "Fluid Mechanics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 323",
+          "title": "Heat Transfer",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 443",
+          "title": "Mechanical Design I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 444",
+          "title": "Mechanical Design II (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "CS Related Electives",
+      "total_credits": 15.0,
+      "courses": [
+        {
+          "code": "CS 451",
+          "title": "Computer Graphics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 452",
+          "title": "Virtual Reality",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 482",
+          "title": "Computer Vision",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 485",
+          "title": "Autonomous Robotics",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "ME Related Electives",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "ME 445",
+          "title": "Finite Element Analysis",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 447",
+          "title": "Computer-Aided Design",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ME 499",
+          "title": "Special Topics in Mechanical Engineering 1",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) 1",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 6.0,
+      "courses": [
+        {
+          "code": "STAT 344",
+          "title": "Probability and Statistics for Engineers and Scientists I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 18.0,
+      "courses": [
+        {
+          "code": "SWE 205",
+          "title": "Software Usability Analysis and Design",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 301",
+          "title": "Internship Preparation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 401",
+          "title": "Internship Reflection",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 419",
+          "title": "Object-Oriented Software Design and Implementation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 437",
+          "title": "Software Testing and Maintenance",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 471",
+          "title": "Operating Systems",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "SWE Related Electives",
+      "total_credits": 36.0,
+      "courses": [
+        {
+          "code": "CS 450",
+          "title": "Database Concepts",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 455",
+          "title": "Computer Communications and Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 463",
+          "title": "Comparative Programming Languages",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 465",
+          "title": "Computer Systems Architecture",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 468",
+          "title": "Secure Programming and Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 475",
+          "title": "Concurrent and Distributed Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 477",
+          "title": "Mobile Application Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 478",
+          "title": "Natural Language Processing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 491",
+          "title": "Industry-Sponsored Senior Design Project",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 432",
+          "title": "Web Application Development",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SWE 443",
+          "title": "Software Architectures",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "SYST 469",
+          "title": "Human Computer Interaction",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Cross-Disciplinary",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "ENGH 388",
+          "title": "Professional and Technical Writing",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PSYC 333",
+          "title": "Psychology in the Workplace (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "COMM 320",
+          "title": "Business and Professional Communication",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "COMM 335",
+          "title": "Organizational Communication",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "total_credits": 12.0,
+      "courses": [
+        {
+          "code": "GOVT 101",
+          "title": "Democratic Theory and Practice (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 134",
+          "title": "Grand Challenges to Human Security (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 150",
+          "title": "Introduction to Technology Policy (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 300",
+          "title": "Research Methods and Analysis (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "total_credits": 21.0,
+      "courses": [
+        {
+          "code": "CS 405",
+          "title": "Synthesis of Ethics and Law for the Computing Professional",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 352",
+          "title": "Responsible Innovation",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 363",
+          "title": "Science and Technology Institutions/Policy",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 366",
+          "title": "Public Policy Analysis",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 426",
+          "title": "Political Theory of Autonomous Algorithms",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 460",
+          "title": "Surveillance and Privacy in Contemporary Society",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 492",
+          "title": "Computing Ethics, Law and Policy Seminar (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "TCHP Related Electives",
+      "total_credits": 42.0,
+      "courses": [
+        {
+          "code": "GOVT 304",
+          "title": "American State and Local Government",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 312",
+          "title": "Political Parties and Campaigns",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 318",
+          "title": "Interest Groups, Lobbying, and the Political Process",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 351",
+          "title": "Administration in the Political System",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 369",
+          "title": "Cybersecurity Policy",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 400",
+          "title": "Issues in Political Analysis",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 414",
+          "title": "Politics of Race and Gender",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 435",
+          "title": "Data Analysis for Comparative and International Politics",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 444",
+          "title": "Issues in International Studies",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 446",
+          "title": "International Law and Organization",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 461",
+          "title": "Governance in Space",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 462",
+          "title": "Public Interest Technology",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 464",
+          "title": "Issues in Public Policy and Administration",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "GOVT 480",
+          "title": "Internship",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Mason Core",
+      "total_credits": 9.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 100",
+          "title": "Composition for Multilingual Writers (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ENGH 302",
+          "title": "Advanced Composition (Mason Core) (Natural Sciences section) 1",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    }
+  ]
+}
