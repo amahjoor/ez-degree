@@ -162,7 +162,15 @@ async def get_major_requirements(
                 status_code=404,
                 detail=f"Requirements for major '{major_id}' not found"
             )
-            
+        
+        # Transform the data to match expected format
+        for category in requirements["categories"]:
+            for course in category["courses"]:
+                # Map 'id' to 'code' field
+                if "id" in course and "code" not in course:
+                    course["code"] = course["id"]
+                    # Keep the id field too to avoid breaking anything else
+        
         return requirements
         
     except HTTPException:
