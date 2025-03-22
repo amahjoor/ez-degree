@@ -187,13 +187,16 @@ def save_to_sql(requirements, filename=None):
 
 def main():
     # Load the programs from the bachelor_programs.json file
-    with open('bachelor_programs.json', 'r') as f:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    bachelor_programs_path = os.path.join(script_dir, 'bachelor_programs.json')
+    
+    with open(bachelor_programs_path, 'r') as f:
         programs = json.load(f)
     
     print(f"Loaded {len(programs)} bachelor's programs")
     
-    # Process only the first 5 programs
-    programs_to_process = programs[:5]
+    # Process only the first 3 programs for testing
+    programs_to_process = programs[:3]
     print(f"Processing {len(programs_to_process)} programs...")
     
     # Initialize counters

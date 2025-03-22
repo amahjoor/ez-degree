@@ -34,8 +34,8 @@ def extract_course_from_text(text):
     if not text:
         return None
     
-    # Extract course code using regex
-    code_match = re.search(r'([A-Z]{2,5})\s*(\d{3}[A-Z]?)', text)
+    # Extract course code using regex - FIXED: removed [A-Z]? to prevent capturing title's first letter
+    code_match = re.search(r'([A-Z]{2,5})\s*(\d{3})', text)
     if not code_match:
         return None
     
@@ -82,78 +82,143 @@ def extract_course_from_text(text):
         "credits": credits
     }
 
-def find_courses_in_element(element, all_found_courses, current_category):
-    """
-    Find course codes, titles, and credits in a given element.
+def extract_title_from_text(text, course_code):
+    """Extract course title from surrounding text."""
+    # Try different patterns to find title
+    # Look for title after the course code
+    title_match = re.search(rf'{re.escape(course_code)}\s*[:-]?\s*([^()\n\r.]*[a-zA-Z][^()\n\r.]*)', text)
+    if title_match:
+        return title_match.group(1).strip()
     
-    Args:
-        element: BeautifulSoup element to search within
-        all_found_courses: Dictionary of course codes already found to avoid duplicates
-        current_category: Current category being processed
-        
-    Returns:
-        List of course dictionaries found in the element
-    """
-    courses = []
+    # Look for title before any mention of credits
+    credit_pos = text.find('credits')
+    if credit_pos > 0:
+        before_credits = text[:credit_pos]
+        title_match = re.search(r'[:-]\s*([^()\n\r.]*[a-zA-Z][^()\n\r.]*?)$', before_credits)
+        if title_match:
+            return title_match.group(1).strip()
     
-    # Look for course patterns in the text
-    if element.text:
-        # First, look for course codes with pattern like "CS 110", "MATH 113", etc.
-        course_pattern = r'([A-Z]{2,4})\s*(\d{3}[A-Z]?)'
+    # Look for phrases like "Select from..."
+    select_match = re.search(r'Select\s+(?:from|one\s+of|one\s+from)\s+(.+?)(?:\.|\n|$)', text)
+    if select_match:
+        return select_match.group(0).strip()
+    
+    # If all else fails, return empty string
+    return ""
+
+def extract_department_and_number(course_code):
+    """Extract department and course number from a course code."""
+    # Split on whitespace and handle potential format variations
+    parts = course_code.strip().split()
+    if len(parts) >= 2:
+        department = parts[0]
+        number = parts[1]
+        return department, number
+    return "", ""  # Return empty strings if parsing fails
+
+def find_courses_in_element(element, all_found_courses=None):
+    """Find all courses in this element. Return list of found courses."""
+    if all_found_courses is None:
+        all_found_courses = {}
+    
+    found_courses = []
+    
+    # First, try to find courses in table rows with codecol
+    codecol_cells = element.find_all('td', class_='codecol')
+    for codecol in codecol_cells:
+        course_code_element = codecol.find('a', class_='code')
+        if not course_code_element:
+            continue
         
-        # Find all occurrences of course codes
-        course_matches = re.finditer(course_pattern, element.text)
+        course_code = course_code_element.text.strip()
+        if course_code in all_found_courses:
+            continue
         
-        for match in course_matches:
-            # Get department code and course number
-            dept_code = match.group(1)
-            course_num = match.group(2)
-            course_code = f"{dept_code} {course_num}"
+        # Get course title from next sibling td element (not td with class hourscol)
+        title_cell = codecol.find_next_sibling('td')
+        title = ""
+        if title_cell and not title_cell.has_attr('class'):
+            # Extract title, removing nested tags and specific text
+            title = title_cell.get_text(strip=True)
+            title = re.sub(r'\(Mason Core\)', '', title).strip()
             
-            # Skip if already found in this category to avoid duplicates
-            if current_category in all_found_courses and course_code in all_found_courses[current_category]:
+        # Get credit hours from third cell with class hourscol
+        credits_cell = codecol.find_next_sibling('td', class_='hourscol')
+        credits = 3  # Default to 3 if not specified
+        if credits_cell and credits_cell.string and credits_cell.string.strip().isdigit():
+            credits = int(credits_cell.string.strip())
+        
+        # Get alternatives if any
+        alternatives = []
+        parent_row = codecol.parent
+        if parent_row:
+            row_text = parent_row.get_text()
+            alternatives = extract_alternatives(row_text, course_code)
+            
+        course_id = course_code
+        department, number = extract_department_and_number(course_code)
+        
+        course = {
+            'id': course_id,
+            'department': department,
+            'number': number, 
+            'title': title,
+            'credits': credits,
+            'alternatives': alternatives
+        }
+        
+        all_found_courses[course_id] = course
+        found_courses.append(course)
+    
+    # If no courses found in tables, try to find in text
+    if not all_found_courses:
+        text = element.get_text()
+        # Look for course codes like "CS 112" in the text
+        matches = re.finditer(r'([A-Z]{2,4})\s*(\d{3})', text)
+        for match in matches:
+            full_code = match.group(1) + ' ' + match.group(2)
+            if full_code in all_found_courses:
                 continue
             
-            # Get surrounding text for title and credits
-            start_pos = max(0, match.start() - 50)
-            end_pos = min(len(element.text), match.end() + 200)
-            surrounding_text = element.text[start_pos:end_pos]
+            # Try to extract title around the course code
+            surrounding_text = text[max(0, match.start() - 100):min(len(text), match.end() + 100)]
+            title = extract_title_from_text(surrounding_text, full_code)
             
-            # Try to extract the course title
-            title_match = re.search(r'{}\s+([^0-9\(\)]+)'.format(re.escape(course_code)), surrounding_text)
-            title = ""
-            if title_match:
-                title = title_match.group(1).strip()
+            department = match.group(1)
+            number = match.group(2)
             
-            # Try to find credits
-            credit_match = re.search(r'(\d+)\s*credit', surrounding_text, re.IGNORECASE)
-            credits = 3  # Default to 3 credits if not found
-            if credit_match:
-                credits = int(credit_match.group(1))
+            # Extract alternatives
+            alternatives = extract_alternatives(surrounding_text, full_code)
             
-            # Add to courses list
             course = {
-                "code": course_code,
-                "title": title,
-                "credits": credits,
-                "alternatives": []
+                'id': full_code,
+                'department': department,
+                'number': number,
+                'title': title,
+                'credits': 3,  # Default to 3 credits for courses found in text
+                'alternatives': alternatives
             }
             
-            courses.append(course)
-            
-            # Track this course to avoid duplicates
-            if current_category not in all_found_courses:
-                all_found_courses[current_category] = set()
-            all_found_courses[current_category].add(course_code)
+            all_found_courses[full_code] = course
+            found_courses.append(course)
     
-    return courses
+    # Recursively search for courses in child elements
+    for child in element.find_all(['div', 'table', 'tbody', 'tr'], recursive=False):
+        child_courses = find_courses_in_element(child, all_found_courses)
+        for course in child_courses:
+            if course['id'] not in all_found_courses:
+                all_found_courses[course['id']] = course
+                found_courses.append(course)
+    
+    return found_courses
 
 def extract_alternatives(text, main_course_code):
     """Extract alternative courses from text"""
     alternatives = []
     
     # Look for phrases like "or MATH 114" or "OR CS 112"
-    alt_matches = re.finditer(r'(?:or|OR)\s+([A-Z]{2,5})\s*(\d{3}[A-Z]?)', text)
+    # FIXED: removed [A-Z]? to prevent capturing title's first letter
+    alt_matches = re.finditer(r'(?:or|OR)\s+([A-Z]{2,5})\s*(\d{3})', text)
     
     for alt_match in alt_matches:
         alt_code = f"{alt_match.group(1)} {alt_match.group(2)}"
@@ -291,11 +356,11 @@ def parse_gmu_catalog(file_path, major=None):
         for table in course_tables:
             # Process each row in the table
             for row in table.find_all('tr'):
-                courses.extend(find_courses_in_element(row, all_found_courses, category_title))
+                courses.extend(find_courses_in_element(row, all_found_courses))
         
         # If no tables, look for courses in the text
         if not courses:
-            courses.extend(find_courses_in_element(category_element, all_found_courses, category_title))
+            courses.extend(find_courses_in_element(category_element, all_found_courses))
         
         # Only add categories with courses
         if courses:
@@ -313,7 +378,7 @@ def parse_gmu_catalog(file_path, major=None):
         # Add a generic category for all found courses
         all_elements = requirements_div.find_all(['p', 'div', 'li', 'td'])
         for element in all_elements:
-            fallback_courses.extend(find_courses_in_element(element, all_found_courses, "Degree Requirements"))
+            fallback_courses.extend(find_courses_in_element(element, all_found_courses))
         
         if fallback_courses:
             results["categories"].append({
@@ -510,7 +575,7 @@ def save_results(results, major):
             category_id = f"{major_id}_cat_{i}"
             for j, course in enumerate(category['courses']):
                 course_id = f"{category_id}_course_{j}"
-                course_code = course['code'].replace(' ', '')  # Remove spaces from course code
+                course_code = course['id'].replace(' ', '')  # Use 'id' instead of 'code'
                 title = course['title'].replace("'", "''")  # Escape single quotes for SQL
                 f.write(f"INSERT INTO courses (id, category_id, course_code, title, credits) VALUES ('{course_id}', '{category_id}', '{course_code}', '{title}', {course['credits']});\n")
     
