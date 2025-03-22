@@ -70,3 +70,6 @@ After starting the backend, you can access the API documentation at http://127.0
 - `scraper/` - Web scrapers for course and requirements data
 - `logic/` - Business logic components
 - `migrations/` - Database migration scripts
+
+
+Test
