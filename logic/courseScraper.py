@@ -8,26 +8,26 @@ import re
 # List of subjects to scrape - uncomment to include all subjects
 SUBJECTS = [
     # Uncomment the line below to only test with CS courses
-    "CS", # Just CS for testing
+    # "CS", # Just CS for testing
     
     # All subjects for full scraping
-    # "AE", "ACCT", "AFAM", "ANTH", "AIT", "ARAB", "AVT", "ARTH", "AII", "AMGT", 
-    # "EDAT", "ASTR", "ATEP", "BIS", "BAS", "BIOD", "BENG", "BINF", "BIOL", "BIMR",
-    # "BMED", "BIOS", "BULE", "BUS", "CHEM", "CHIN", "CEIE", "CLAS", "CLIM", "CEC",
-    # "CHSS", "COS", "CVPA", "COMM", "CDS", "CSI", "CSS", "GAME", "CS", "COMP",
-    # "CONF", "CONS", "CM", "EDCD", "CRIM", "CULT", "EDCI", "CYSE", "DANC", "DAEN",
-    # "DSGN", "DFOR", "ECED", "ECON", "EDEP", "EDUC", "EDIT", "EDLE", "EDPO", "EDRS",
-    # "ECE", "ELED", "ENGR", "ENGH", "EAP", "EVPP", "EFHP", "FAVS", "FNAN", "FOLK",
-    # "FRLN", "FRSC", "FREN", "GGS", "GEOL", "GERM", "GLOA", "GCH", "GCP", "GEOC",
-    # "GOVT", "GBUS", "GREE", "HAP", "HEAL", "HEBR", "HE", "HIST", "HNRS", "HNRT",
-    # "HDFS", "ISA", "ISM", "INFS", "IT", "INTS", "MAIS", "INYO", "ITAL", "JAPA",
-    # "KINE", "KORE", "LAS", "LATN", "LAW", "LING", "MGMT", "MIS", "MSEC", "MKTG",
-    # "MSF", "MATH", "MBA", "ME", "MLAB", "MEIS", "MLSC", "MBUS", "MSBA", "MUSI",
-    # "NAIS", "NEUR", "NURS", "NUTR", "OR", "OSCM", "ODKM", "PERS", "PHIL", "PHED",
-    # "PHYS", "POGO", "PORT", "EDPD", "PROV", "PSYC", "PUAD", "PH", "PUBP", "EDRD",
-    # "REAL", "RMGT", "RECR", "RELI", "RENE", "RUSS", "SPSY", "SEED", "SOCW", "SOCI",
-    # "SWE", "SPAN", "EDSE", "SPMT", "SRTM", "SRST", "STAT", "SYST", "SEOR", "TECM",
-    # "TCOM", "THR", "TOUR", "TURK", "UNIV", "USST", "WMST"
+    "AE", "ACCT", "AFAM", "ANTH", "AIT", "ARAB", "AVT", "ARTH", "AII", "AMGT", 
+    "EDAT", "ASTR", "ATEP", "BIS", "BAS", "BIOD", "BENG", "BINF", "BIOL", "BIMR",
+    "BMED", "BIOS", "BULE", "BUS", "CHEM", "CHIN", "CEIE", "CLAS", "CLIM", "CEC",
+    "CHSS", "COS", "CVPA", "COMM", "CDS", "CSI", "CSS", "GAME", "CS", "COMP",
+    "CONF", "CONS", "CM", "EDCD", "CRIM", "CULT", "EDCI", "CYSE", "DANC", "DAEN",
+    "DSGN", "DFOR", "ECED", "ECON", "EDEP", "EDUC", "EDIT", "EDLE", "EDPO", "EDRS",
+    "ECE", "ELED", "ENGR", "ENGH", "EAP", "EVPP", "EFHP", "FAVS", "FNAN", "FOLK",
+    "FRLN", "FRSC", "FREN", "GGS", "GEOL", "GERM", "GLOA", "GCH", "GCP", "GEOC",
+    "GOVT", "GBUS", "GREE", "HAP", "HEAL", "HEBR", "HE", "HIST", "HNRS", "HNRT",
+    "HDFS", "ISA", "ISM", "INFS", "IT", "INTS", "MAIS", "INYO", "ITAL", "JAPA",
+    "KINE", "KORE", "LAS", "LATN", "LAW", "LING", "MGMT", "MIS", "MSEC", "MKTG",
+    "MSF", "MATH", "MBA", "ME", "MLAB", "MEIS", "MLSC", "MBUS", "MSBA", "MUSI",
+    "NAIS", "NEUR", "NURS", "NUTR", "OR", "OSCM", "ODKM", "PERS", "PHIL", "PHED",
+    "PHYS", "POGO", "PORT", "EDPD", "PROV", "PSYC", "PUAD", "PH", "PUBP", "EDRD",
+    "REAL", "RMGT", "RECR", "RELI", "RENE", "RUSS", "SPSY", "SEED", "SOCW", "SOCI",
+    "SWE", "SPAN", "EDSE", "SPMT", "SRTM", "SRST", "STAT", "SYST", "SEOR", "TECM",
+    "TCOM", "THR", "TOUR", "TURK", "UNIV", "USST", "WMST"
 ]
 
 def ensure_directories():

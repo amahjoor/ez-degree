@@ -16,6 +16,50 @@ interface Course {
   notes: string | null;
 }
 
+// Function to convert course codes in text to clickable links
+const parseCourseCodes = (text: string | null) => {
+  if (!text) return null;
+  
+  // Regular expression to match course codes like "CS 211", "MATH 113", etc.
+  const courseCodeRegex = /([A-Z]{2,4})\s+(\d{3}[A-Z]?)/g;
+  
+  // Split the text by the regex to preserve non-matching parts
+  const parts = text.split(courseCodeRegex);
+  
+  if (parts.length === 1) {
+    // No course codes found, return the original text
+    return <span>{text}</span>;
+  }
+  
+  // Rebuild the text with links for course codes
+  const result = [];
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 3 === 0) {
+      // This is regular text between course codes
+      result.push(<span key={`text-${i}`}>{parts[i]}</span>);
+    } else if (i % 3 === 1) {
+      // This is the subject code (e.g., "CS")
+      const subjectCode = parts[i];
+      const courseNumber = parts[i + 1]; // The next part is the course number
+      const courseCode = `${subjectCode} ${courseNumber}`;
+      
+      result.push(
+        <Link 
+          href={`/courses/${encodeURIComponent(courseCode)}`} 
+          key={`link-${i}`}
+          className="text-blue-600 hover:text-blue-800 hover:underline"
+        >
+          {courseCode}
+        </Link>
+      );
+      // Skip the next part as we've already used it
+      i++;
+    }
+  }
+  
+  return <>{result}</>;
+};
+
 export default function CourseDetail() {
   const params = useParams();
   const courseCode = params.courseCode as string;
@@ -104,14 +148,14 @@ export default function CourseDetail() {
           {course.prerequisites && (
             <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
               <h3 className="font-semibold text-gray-700 mb-2">Prerequisites</h3>
-              <p className="text-gray-600">{course.prerequisites}</p>
+              <p className="text-gray-600">{parseCourseCodes(course.prerequisites)}</p>
             </div>
           )}
 
           {course.corequisites && (
             <div className="px-6 py-4 border-t border-gray-200">
               <h3 className="font-semibold text-gray-700 mb-2">Corequisites</h3>
-              <p className="text-gray-600">{course.corequisites}</p>
+              <p className="text-gray-600">{parseCourseCodes(course.corequisites)}</p>
             </div>
           )}
 
