@@ -34,11 +34,6 @@ export default function RootLayout({
             <Link href="/" className="font-bold text-xl">
               iWannaGraduate
             </Link>
-            <div className="flex space-x-4">
-              <Link href="/requirements" className="hover:text-blue-200">
-                Degree Requirements
-              </Link>
-            </div>
           </div>
         </nav>
         <main className="min-h-screen py-4">

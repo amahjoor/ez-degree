@@ -10,6 +10,10 @@ interface Course {
   credits: number;
   description: string;
   subject: string;
+  prerequisites: string | null;
+  corequisites: string | null;
+  restrictions: string | null;
+  notes: string | null;
 }
 
 export default function CourseDetail() {
@@ -97,12 +101,33 @@ export default function CourseDetail() {
             <p className="text-gray-600">{course.description}</p>
           </div>
           
-          <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-            <h3 className="font-semibold text-gray-700 mb-2">Prerequisites</h3>
-            <p className="text-gray-600 italic">
-              Prerequisites information is not available in the current API.
-            </p>
-          </div>
+          {course.prerequisites && (
+            <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+              <h3 className="font-semibold text-gray-700 mb-2">Prerequisites</h3>
+              <p className="text-gray-600">{course.prerequisites}</p>
+            </div>
+          )}
+
+          {course.corequisites && (
+            <div className="px-6 py-4 border-t border-gray-200">
+              <h3 className="font-semibold text-gray-700 mb-2">Corequisites</h3>
+              <p className="text-gray-600">{course.corequisites}</p>
+            </div>
+          )}
+
+          {course.restrictions && (
+            <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+              <h3 className="font-semibold text-gray-700 mb-2">Registration Restrictions</h3>
+              <p className="text-gray-600">{course.restrictions}</p>
+            </div>
+          )}
+
+          {course.notes && (
+            <div className="px-6 py-4 border-t border-gray-200">
+              <h3 className="font-semibold text-gray-700 mb-2">Notes</h3>
+              <p className="text-gray-600">{course.notes}</p>
+            </div>
+          )}
         </div>
       ) : (
         <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-4">

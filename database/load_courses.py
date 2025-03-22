@@ -1,6 +1,8 @@
 import json
 import os
-from db import init_db, Subject, Course, get_session
+from database.db import init_db, Subject, Course, get_session
+from sqlalchemy.exc import IntegrityError
+from sqlalchemy import text
 
 def load_courses():
     # Initialize database
@@ -22,26 +24,57 @@ def load_courses():
         for subject_code, courses in data['subjects'].items():
             print(f"Processing {subject_code}...")
             
-            # Add subject
-            subject = Subject(
-                id=subject_code,
-                name=subject_code
-            )
-            db.add(subject)
+            # Check if subject already exists
+            existing_subject = db.query(Subject).filter(Subject.id == subject_code).first()
             
-            # Add courses for this subject
-            for course_data in courses:
-                course = Course(
-                    subject_id=subject_code,
-                    course_code=course_data['Code'],
-                    title=course_data['Title'],
-                    credits=course_data['Credits'],
-                    description=course_data['Description']
+            if not existing_subject:
+                # Add subject if it doesn't exist
+                subject = Subject(
+                    id=subject_code,
+                    name=subject_code
                 )
-                db.add(course)
+                db.add(subject)
+                try:
+                    db.flush()
+                except IntegrityError:
+                    db.rollback()
+                    print(f"Subject {subject_code} already exists, skipping creation.")
+                    existing_subject = db.query(Subject).filter(Subject.id == subject_code).first()
+            
+            # Process courses for this subject
+            for course_data in courses:
+                course_code = course_data['Code']
+                
+                # Check if course already exists
+                existing_course = db.query(Course).filter(Course.course_code == course_code).first()
+                
+                if existing_course:
+                    # Update existing course
+                    existing_course.title = course_data['Title']
+                    existing_course.credits = course_data['Credits']
+                    existing_course.description = course_data['Description']
+                    existing_course.prerequisites = course_data.get('Prerequisites', None)
+                    existing_course.corequisites = course_data.get('Corequisites', None)
+                    existing_course.restrictions = course_data.get('Restrictions', None)
+                    existing_course.notes = course_data.get('Notes', None)
+                else:
+                    # Add new course
+                    course = Course(
+                        subject_id=subject_code,
+                        course_code=course_code,
+                        title=course_data['Title'],
+                        credits=course_data['Credits'],
+                        description=course_data['Description'],
+                        prerequisites=course_data.get('Prerequisites', None),
+                        corequisites=course_data.get('Corequisites', None),
+                        restrictions=course_data.get('Restrictions', None),
+                        notes=course_data.get('Notes', None)
+                    )
+                    db.add(course)
+            
+            # Commit after each subject to avoid large transactions
+            db.commit()
         
-        # Commit changes
-        db.commit()
         print("Successfully loaded all courses into database!")
         
     except Exception as e:

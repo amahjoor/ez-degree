@@ -350,7 +350,11 @@ async def get_courses(
                 "title": course.title,
                 "credits": course.credits,
                 "description": course.description,
-                "subject": course.subject_id
+                "subject": course.subject_id,
+                "prerequisites": course.prerequisites,
+                "corequisites": course.corequisites,
+                "restrictions": course.restrictions,
+                "notes": course.notes
             }
             for course in courses
         ]
@@ -394,7 +398,11 @@ async def get_course(course_code: str):
             "title": course.title,
             "credits": course.credits,
             "description": course.description,
-            "subject": course.subject_id
+            "subject": course.subject_id,
+            "prerequisites": course.prerequisites,
+            "corequisites": course.corequisites,
+            "restrictions": course.restrictions,
+            "notes": course.notes
         }
         
     finally:

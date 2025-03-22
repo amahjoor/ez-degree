@@ -307,7 +307,12 @@ export default function RequirementsPage() {
                         {category.courses.map((course, courseIndex) => (
                           <tr key={`category-${categoryIndex}-course-${courseIndex}`}>
                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                              {course.code}
+                              <Link 
+                                href={`/courses/${encodeURIComponent(course.code.replace(/\u00a0/g, ' '))}`} 
+                                className="text-blue-600 hover:text-blue-800 hover:underline"
+                              >
+                                {course.code}
+                              </Link>
                             </td>
                             <td className="px-6 py-4 whitespace-normal text-sm text-gray-500">
                               {course.title}
