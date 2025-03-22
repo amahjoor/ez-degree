@@ -238,26 +238,161 @@ def parse_gmu_catalog(file_path, major=None):
     Parse the GMU catalog HTML to extract course requirements.
     
     Args:
-        file_path: Path to the HTML file
+        file_path: Path to the HTML file or HTML content string
         major: Major name
         
     Returns:
         Dictionary containing the parsed requirements
     """
-    # Read the HTML file
-    with open(file_path, 'r', encoding='utf-8') as f:
-        html_content = f.read()
+    # Check if file_path is a file or HTML content
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            html_content = f.read()
+    else:
+        html_content = file_path  # Assume file_path is HTML content
     
     # Parse the HTML content
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # Extract program_id from file_path
-    program_id = os.path.basename(file_path).replace(".html", "")
+    # Extract program_id from file_path if it's a file
+    program_id = ""
+    if os.path.exists(file_path):
+        program_id = os.path.basename(file_path).replace(".html", "")
     
     # Initialize the results structure
     results = {
         "degree_name": major if major else "",
-        "total_credits": 0,
+        "total_credits": 120,  # Default to 120 credits for most bachelor's programs
+        "categories": []
+    }
+    
+    # Try to find the page title if major not provided
+    if not major:
+        title_elem = soup.find('h1', class_='page-title')
+        if title_elem:
+            results["degree_name"] = title_elem.text.strip()
+    
+    # Look for the requirements section
+    requirements_div = soup.find('div', id='requirementstextcontainer')
+    if not requirements_div:
+        print("Warning: Requirements section not found.")
+        return results
+    
+    # Extract section headers and their associated tables
+    headers = requirements_div.find_all(['h2', 'h3', 'h4'])
+    print(f"Found {len(headers)} section headers")
+    
+    # Track all found courses to avoid duplicates
+    all_found_courses = {}
+    
+    # Process each section
+    for i, header in enumerate(headers):
+        category_title = header.text.strip()
+        category_title = re.sub(r'\s+', ' ', category_title).strip()
+        print(f"Processing section: {category_title}")
+        
+        # Standardize category name
+        category_title = standardize_category_name(category_title)
+        
+        # Skip categories that aren't core curriculum
+        if is_excluded_category(category_title):
+            continue
+        
+        # Find the next table after this header
+        course_list = header.find_next('table', {'class': 'sc_courselist'})
+        
+        # Skip if no table found
+        if not course_list:
+            print(f"No course list found for {category_title}")
+            continue
+        
+        # Extract courses from this list
+        courses = []
+        
+        # Find all rows in the table except the header row
+        rows = course_list.find_all('tr')
+        for row in rows:
+            # Skip header rows
+            if row.find('th'):
+                continue
+            
+            # Extract course information
+            cells = row.find_all('td')
+            
+            # Skip rows that don't have enough cells
+            if len(cells) < 2:
+                continue
+            
+            code_cell = cells[0]
+            title_cell = cells[1]
+            credits_cell = cells[2] if len(cells) > 2 else None
+            
+            code_text = clean_course_code(code_cell.get_text())
+            title_text = title_cell.get_text().strip()
+            title_text = re.sub(r'\s+', ' ', title_text)
+            credits_text = credits_cell.get_text().strip() if credits_cell else ""
+            
+            # Skip total rows
+            if code_text.startswith('Total'):
+                continue
+            
+            # Extract credits if available
+            credits = 0
+            if credits_text:
+                # Try to extract a numeric value
+                credits_match = re.search(r'(\d+)', credits_text)
+                if credits_match:
+                    credits = int(credits_match.group(1))
+            
+            # Parse department and number if possible
+            code_match = re.match(r'([A-Z]+)[^\d]*(\d+)', code_text)
+            if code_match:
+                department = code_match.group(1)
+                number = code_match.group(2)
+                
+                # Skip if we've already found this course
+                if code_text in all_found_courses:
+                    continue
+                
+                all_found_courses[code_text] = True
+                
+                # Extract alternatives
+                alternatives = extract_alternatives(title_text, code_text)
+                
+                courses.append({
+                    "id": code_text,
+                    "department": department,
+                    "number": number,
+                    "title": title_text,
+                    "credits": credits,
+                    "alternatives": alternatives
+                })
+        
+        # Add category to requirements if it has courses
+        if courses:
+            # Calculate total credits for this category
+            total_credits = sum(course["credits"] for course in courses if course["credits"] > 0)
+            
+            results["categories"].append({
+                "name": category_title,
+                "total_credits": total_credits,
+                "courses": courses
+            })
+    
+    # If no categories were found, try the old method
+    if not results["categories"]:
+        print("No categories found with new method, trying legacy approach...")
+        return legacy_parse_gmu_catalog(soup, major, program_id)
+    
+    print(f"Successfully parsed {len(results['categories'])} categories with courses")
+    return results
+
+def legacy_parse_gmu_catalog(soup, major, program_id):
+    """Legacy implementation of parse_gmu_catalog to use as a fallback"""
+    # Initialize the results structure
+    results = {
+        "degree_name": major if major else "",
+        "total_credits": 120,
         "categories": []
     }
     
@@ -377,35 +512,7 @@ def parse_gmu_catalog(file_path, major=None):
                 "courses": courses
             })
     
-    # If not enough categories or courses found, scan the entire document as a fallback
-    if len(results["categories"]) < 2 or sum(len(cat["courses"]) for cat in results["categories"]) < 5:
-        print("Warning: Not enough structured categories found, scanning entire document...")
-        fallback_courses = []
-        
-        # Add a generic category for all found courses
-        all_elements = requirements_div.find_all(['p', 'div', 'li', 'td'])
-        for element in all_elements:
-            fallback_courses.extend(find_courses_in_element(element, all_found_courses))
-        
-        if fallback_courses:
-            results["categories"].append({
-                "name": "Degree Requirements",
-                "total_credits": 120,  # Default to 120 for a typical bachelor's
-                "courses": fallback_courses
-            })
-    
-    # Calculate total credits
-    total_credits = 0
-    for category in results["categories"]:
-        total_credits += category["total_credits"]
-    
-    results["total_credits"] = total_credits
-    
-    # Add concentrations if this is a program with concentrations
-    concentrations = extract_concentrations(soup, program_id)
-    if concentrations:
-        results["concentrations"] = concentrations
-    
+    print(f"Legacy method parsed {len(results['categories'])} categories with courses")
     return results
 
 def standardize_category_name(name):
@@ -557,7 +664,9 @@ def save_results(results, major):
         filename_base = "unknown_major"
     
     # Create the data directory if it doesn't exist
-    data_dir = "data"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(script_dir))  # Go up two levels to project root
+    data_dir = os.path.join(project_root, "data", "majorRequirements")
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
     

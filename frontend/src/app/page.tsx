@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 
 // API configuration
@@ -58,7 +58,11 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [selectedSubject, setSelectedSubject] = useState<string>("");
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const [subjectSearchTerm, setSubjectSearchTerm] = useState('');
+  const [isSubjectDropdownOpen, setIsSubjectDropdownOpen] = useState(false);
+  const subjectDropdownRef = useRef<HTMLDivElement>(null);
+  const subjectSearchInputRef = useRef<HTMLInputElement>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalCourses, setTotalCourses] = useState<number>(0);
   const itemsPerPage = 10;
@@ -234,8 +238,10 @@ export default function Home() {
           url += `&search=${encodeURIComponent(searchTerm)}`;
         }
         
-        if (selectedSubject) {
-          url += `&subject=${encodeURIComponent(selectedSubject)}`;
+        if (selectedSubjects.length > 0) {
+          selectedSubjects.forEach(subject => {
+            url += `&subject=${encodeURIComponent(subject)}`;
+          });
         }
         
         console.log(`Fetching courses from: ${url}`);
@@ -262,7 +268,7 @@ export default function Home() {
     };
 
     fetchCourses();
-  }, [searchTerm, selectedSubject, currentPage, isApiAvailable]);
+  }, [searchTerm, selectedSubjects, currentPage, isApiAvailable]);
 
   // Handle page change
   const handlePageChange = (page: number) => {
@@ -321,13 +327,69 @@ export default function Home() {
   // Reset to page 1 when search or filter changes
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, selectedSubject]);
+  }, [searchTerm, selectedSubjects]);
 
   // Function to retry API connection
   const handleRetryConnection = () => {
     setLoading(true);
     setError(null);
     setIsApiAvailable(true);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (subjectDropdownRef.current && !subjectDropdownRef.current.contains(event.target as Node)) {
+        setIsSubjectDropdownOpen(false);
+        setSubjectSearchTerm(''); // Clear search term when closing dropdown
+      }
+    }
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Focus search input when dropdown opens
+  useEffect(() => {
+    if (isSubjectDropdownOpen && subjectSearchInputRef.current) {
+      subjectSearchInputRef.current.focus();
+    }
+  }, [isSubjectDropdownOpen]);
+
+  // Filter subjects based on search term
+  const filteredSubjects = useMemo(() => {
+    if (!subjectSearchTerm) return subjects;
+    return subjects.filter(subject => 
+      subject.id.toLowerCase().includes(subjectSearchTerm.toLowerCase()) ||
+      subject.name.toLowerCase().includes(subjectSearchTerm.toLowerCase())
+    );
+  }, [subjects, subjectSearchTerm]);
+
+  // Toggle subject selection
+  const toggleSubjectSelection = (subjectId: string) => {
+    setSelectedSubjects(prev => 
+      prev.includes(subjectId)
+        ? prev.filter(id => id !== subjectId)
+        : [...prev, subjectId]
+    );
+  };
+
+  // Handle subject search Enter key
+  const handleSubjectSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && subjectSearchTerm) {
+      // Find the first matching subject
+      const matchingSubject = filteredSubjects.find(subject => 
+        subject.id.toLowerCase().includes(subjectSearchTerm.toLowerCase()) ||
+        subject.name.toLowerCase().includes(subjectSearchTerm.toLowerCase())
+      );
+      
+      if (matchingSubject) {
+        toggleSubjectSelection(matchingSubject.id);
+        setSubjectSearchTerm('');
+      }
+    }
   };
 
   // If API is not available, show a more helpful error message
@@ -432,19 +494,71 @@ export default function Home() {
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                     Filter by Subject
                   </label>
-                  <select
-                    id="subject"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    value={selectedSubject}
-                    onChange={(e) => setSelectedSubject(e.target.value)}
-                  >
-                    <option value="">All Subjects</option>
-                    {subjects.map((subject) => (
-                      <option key={subject.id} value={subject.id}>
-                        {subject.id} - {subject.name} ({subject.course_count})
-                      </option>
-                    ))}
-                  </select>
+                  <div ref={subjectDropdownRef} className="relative">
+                    <div 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 cursor-pointer flex justify-between items-center"
+                      onClick={() => setIsSubjectDropdownOpen(!isSubjectDropdownOpen)}
+                    >
+                      <span className="truncate">
+                        {selectedSubjects.length === 0 
+                          ? "All Subjects" 
+                          : selectedSubjects.length === 1
+                            ? subjects.find(s => s.id === selectedSubjects[0])?.id || "All Subjects"
+                            : `${selectedSubjects.length} subjects selected`
+                        }
+                      </span>
+                      <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    
+                    {isSubjectDropdownOpen && (
+                      <div className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-80 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+                        <div className="sticky top-0 z-10 bg-white p-2">
+                          <input
+                            ref={subjectSearchInputRef}
+                            type="text"
+                            className="w-full p-2 border border-gray-300 rounded-md"
+                            placeholder="Search subjects"
+                            value={subjectSearchTerm}
+                            onChange={(e) => setSubjectSearchTerm(e.target.value)}
+                            onKeyDown={handleSubjectSearchKeyDown}
+                          />
+                          <div className="mt-2 flex justify-between">
+                            <button 
+                              className="text-xs text-blue-600 hover:text-blue-800"
+                              onClick={() => setSelectedSubjects([])}
+                            >
+                              Clear all
+                            </button>
+                            <button 
+                              className="text-xs text-blue-600 hover:text-blue-800"
+                              onClick={() => setSelectedSubjects(subjects.map(s => s.id))}
+                            >
+                              Select all
+                            </button>
+                          </div>
+                        </div>
+                        <div>
+                          {filteredSubjects.map((subject) => (
+                            <div
+                              key={subject.id}
+                              className="px-3 py-2 hover:bg-blue-50 cursor-pointer flex items-center"
+                              onClick={() => toggleSubjectSelection(subject.id)}
+                            >
+                              <input
+                                type="checkbox"
+                                className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                                checked={selectedSubjects.includes(subject.id)}
+                                readOnly
+                              />
+                              <span>{subject.id} - {subject.name} ({subject.course_count})</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@ from fastapi.openapi.utils import get_openapi
 from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, Field
 from database.db import get_session, Course as DbCourse, Subject as DbSubject
-from logic.courseScraper import scrape_courses
+from scrapers.courseScraper.courseScraper import scrape_courses
 
 # Define models for API documentation
 class Major(BaseModel):
@@ -82,47 +82,71 @@ app.add_middleware(
 )
 
 # Path to requirements directory
-REQUIREMENTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
-                               "majorReqScraper", "data")
+REQUIREMENTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 # Make sure it exists
 if not os.path.exists(REQUIREMENTS_DIR):
-    # Try an alternate path for the data directory
-    REQUIREMENTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
-    print(f"Using alternate data directory: {REQUIREMENTS_DIR}")
+    print(f"Using data directory: {REQUIREMENTS_DIR}")
     
     # Create it if it doesn't exist
-    if not os.path.exists(REQUIREMENTS_DIR):
-        os.makedirs(REQUIREMENTS_DIR, exist_ok=True)
-        print(f"Created data directory: {REQUIREMENTS_DIR}")
+    os.makedirs(REQUIREMENTS_DIR, exist_ok=True)
+    print(f"Created data directory: {REQUIREMENTS_DIR}")
 
 # Helper function to load all majors
 def get_available_majors():
+    # Check for all_programs.json in the data/majors folder
+    majors_dir = os.path.join(os.path.dirname(REQUIREMENTS_DIR), "majors")
+    all_programs_path = os.path.join(majors_dir, "all_programs.json")
     
-    """Get a list of all available majors from the requirements directory"""
-    majors = []
-    # Look for json files that follow the pattern: xxx_requirements.json
-    for filename in os.listdir(REQUIREMENTS_DIR):
-        if filename.endswith("_requirements.json") and not filename.startswith("cs_requirements"):
-            # Convert filename to major name
-            major_id = filename.replace("_requirements.json", "")
-            major_name = major_id.replace("_", " ").title()
-            majors.append({
-                "id": major_id,
-                "name": major_name
-            })
-    return majors
+    if os.path.exists(all_programs_path):
+        with open(all_programs_path, 'r') as f:
+            return json.load(f)
+    else:
+        # Fall back to checking in the data folder for backward compatibility
+        all_programs_path = os.path.join(REQUIREMENTS_DIR, "all_programs.json")
+        if os.path.exists(all_programs_path):
+            with open(all_programs_path, 'r') as f:
+                return json.load(f)
+        return []
 
-# Helper function to load requirements for a specific major
-def load_major_requirements(major_id: str):
-    """Load requirements for a specific major from JSON file"""
-    file_path = os.path.join(REQUIREMENTS_DIR, f"{major_id}_requirements.json")
+# Helper function to load major requirements
+def load_major_requirements(major_id):
+    """
+    Load major requirements from the JSON file.
     
-    if not os.path.exists(file_path):
-        return None
+    Args:
+        major_id (str): The ID of the major
+    
+    Returns:
+        dict: The requirements data
+    """
+    major_requirements_dir = os.path.join(os.path.dirname(REQUIREMENTS_DIR), "majorRequirements")
+    if not os.path.exists(major_requirements_dir):
+        os.makedirs(major_requirements_dir, exist_ok=True)
         
-    with open(file_path, 'r') as f:
-        return json.load(f)
+    req_file = os.path.join(major_requirements_dir, f"{major_id}_requirements.json")
+    
+    try:
+        if os.path.exists(req_file):
+            with open(req_file, 'r') as f:
+                return json.load(f)
+        else:
+            # Try fallback filenames
+            fallback_files = [
+                os.path.join(major_requirements_dir, f"{major_id.replace('_', '-')}_requirements.json"),
+                os.path.join(major_requirements_dir, f"{major_id}_bs_requirements.json")
+            ]
+            
+            for file in fallback_files:
+                if os.path.exists(file):
+                    with open(file, 'r') as f:
+                        return json.load(f)
+                        
+            # If we get here, no file was found
+            return None
+    except Exception as e:
+        print(f"Error loading major requirements: {e}")
+        return None
 
 @app.get("/")
 async def root():
@@ -308,17 +332,19 @@ async def get_major_concentrations(
 
 @app.get("/courses/")
 async def get_courses(
-    subject: Optional[str] = None,
+    subject: Optional[List[str]] = Query(None, description="Filter by subject code(s) (e.g., 'CS', 'MATH')"),
     search: Optional[str] = None,
     skip: int = 0,
     limit: int = 100
 ):
     """
     Get all courses with optional filtering:
-    - subject: Filter by subject code (e.g., 'CS', 'MATH')
+    - subject: Filter by one or more subject codes (e.g., 'CS', 'MATH')
     - search: Search in course code, title, or description
     - skip: Number of records to skip (pagination)
     - limit: Number of records to return (pagination)
+    
+    Results are sorted by subject and then by course number.
     """
     db = get_session()
     try:
@@ -326,7 +352,14 @@ async def get_courses(
         
         # Apply subject filter if provided
         if subject:
-            query = query.filter(DbCourse.subject_id == subject.upper())
+            if len(subject) == 1:
+                # Single subject filter
+                query = query.filter(DbCourse.subject_id == subject[0].upper())
+            else:
+                # Multiple subject filter using OR condition
+                from sqlalchemy import or_
+                subject_filters = [DbCourse.subject_id == s.upper() for s in subject]
+                query = query.filter(or_(*subject_filters))
         
         # Apply search filter if provided
         if search:
@@ -339,6 +372,14 @@ async def get_courses(
         
         # Get total count before pagination
         total_count = query.count()
+        
+        # Apply ordering by subject_id and then by numeric part of course code
+        # We use a SQL function to extract the numeric part from course_code for sorting
+        from sqlalchemy.sql import text
+        query = query.order_by(
+            DbCourse.subject_id,
+            text("CAST(REGEXP_REPLACE(course_code, '[^0-9]', '', 'g') AS INTEGER)")
+        )
         
         # Apply pagination
         courses = query.offset(skip).limit(limit).all()
