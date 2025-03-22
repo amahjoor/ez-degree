@@ -211,18 +211,6 @@ export default function Home() {
                 Search for courses by subject, keyword, or course code. View detailed information about each course.
               </p>
             </Link>
-            
-            <Link href="/requirements" className="group border bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all">
-              <h2 className="text-2xl font-semibold mb-2 text-green-600 group-hover:text-green-700">
-                Degree Requirements
-                <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                  →
-                </span>
-              </h2>
-              <p>
-                Explore the requirements for various majors and understand what you need to graduate.
-              </p>
-            </Link>
           </div>
         </div>
       </main>
@@ -233,39 +221,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-5xl mb-10 text-center font-bold">iWannaGraduate</h1>
+        <h1 className="text-5xl mb-10 text-center font-bold text-green-600">iWannaGraduate</h1>
         <p className="text-center text-lg mb-8">
-          Your ultimate companion for navigating your GMU degree requirements and planning your path to graduation.
+          The ultimate tool to navigate your degree requirements and plan your path to graduation.
         </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <Link href="/courses" className="group border bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all">
-            <h2 className="text-2xl font-semibold mb-2 text-green-600 group-hover:text-green-700">
-              Course Search
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                →
-              </span>
-            </h2>
-            <p>
-              Search for courses by subject, keyword, or course code. View detailed information about each course.
-            </p>
-          </Link>
-          
-          <Link href="/requirements" className="group border bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all">
-            <h2 className="text-2xl font-semibold mb-2 text-green-600 group-hover:text-green-700">
-              Degree Requirements
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                →
-              </span>
-            </h2>
-            <p>
-              Explore the requirements for various majors and understand what you need to graduate.
-            </p>
-          </Link>
-          
-          {/* More links can be added here */}
-        </div>
-        
         <div className="mb-8 bg-white shadow rounded-lg p-6">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="md:w-1/2">
