@@ -203,6 +203,17 @@ def format_prerequisites(prereqs_text):
     for dept in dept_codes:
         prereqs_text = re.sub(rf'{dept} {dept} ', f'{dept} ', prereqs_text)
     
+    # Remove unnecessary parentheses around single course codes like "(CS 262)" -> "CS 262"
+    prereqs_text = re.sub(r'\(([A-Z]+ \d+)\)', r'\1', prereqs_text)
+    
+    # Clean up patterns with a single item in parentheses connected by "and"
+    # For example: "(CS 262) and (CS 310) and (MATH 203)" -> "CS 262 and CS 310 and MATH 203"
+    while re.search(r'\(([A-Z]+ \d+)\) and \(', prereqs_text):
+        prereqs_text = re.sub(r'\(([A-Z]+ \d+)\) and \(([A-Z]+ \d+)\)', r'\1 and \2', prereqs_text)
+    
+    # Also handle the case where the last item has parentheses
+    prereqs_text = re.sub(r'([A-Z]+ \d+) and \(([A-Z]+ \d+)\)', r'\1 and \2', prereqs_text)
+    
     # Add the concurrent enrollment information if we found any concurrent courses
     if concurrent_courses:
         courses_text = ", ".join(concurrent_courses)
@@ -388,6 +399,11 @@ def scrape_courses(subject):
                     corequisites = re.sub(r'^s:\s*', '', corequisites) 
                     # Remove "Required" prefix if present
                     corequisites = re.sub(r'^Required\s+', '', corequisites)
+                    # Remove "May be taken concurrently" since that's implied for corequisites
+                    corequisites = re.sub(r'\(may be taken concurrently\)', '', corequisites, flags=re.IGNORECASE)
+                    corequisites = re.sub(r'\*\s*May be taken concurrently\.?', '', corequisites)
+                    # Clean up extra whitespace after removing text
+                    corequisites = re.sub(r'\s+', ' ', corequisites).strip()
                     continue
                 
                 # Check for Mason Core
@@ -418,7 +434,7 @@ def scrape_courses(subject):
                     prerequisites = "Math Placement Test score of 80+ or one of: MATH 104, MATH 105, MATH 113, MATH 115, MATH 123"
                 elif code == "CS 262":
                     prerequisites = "CS 211 or CS 222"
-                    corequisites = "CS 110 or CS 101 (may be taken concurrently)"
+                    corequisites = "CS 110 or CS 101"
                 elif code == "CS 306" or code == "CS 405":
                     prerequisites = "(CS 105 or CS 110) and (COMM 100 or COMM 101) and (ENGH 302 or HNRS 260 or HNRS 261)"
                 elif code == "CS 310":

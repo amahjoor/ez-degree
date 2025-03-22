@@ -1,5 +1,10 @@
 import json
 import os
+import sys
+
+# Add parent directory to path so we can import properly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from database.db import init_db, Subject, Course, get_session
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import text
