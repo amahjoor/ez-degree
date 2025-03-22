@@ -69,7 +69,7 @@ app.add_middleware(
 
 # Path to requirements directory
 REQUIREMENTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
-                               "CSReqsWebscrape", "majorRequirements")
+                               "majorReqScraper", "data")
 
 # Helper function to load all majors
 def get_available_majors():

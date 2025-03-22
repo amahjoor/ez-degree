@@ -1,0 +1,32 @@
+[
+  {
+    "id": "computer_science_bs",
+    "name": "Computer Science, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/computer-science-bs/#requirementstext",
+    "college": "College of Engineering and Computing"
+  },
+  {
+    "id": "information_technology_bs",
+    "name": "Information Technology, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/information-sciences-technology/information-technology-bs/#requirementstext",
+    "college": "College of Engineering and Computing"
+  },
+  {
+    "id": "applied_computer_science_bs",
+    "name": "Applied Computer Science, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/applied-computer-science-bs/#requirementstext",
+    "college": "College of Engineering and Computing"
+  },
+  {
+    "id": "cybersecurity_engineering_bs",
+    "name": "Cybersecurity Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/cyber-security-engineering/cyber-security-engineering-bs/#requirementstext",
+    "college": "College of Engineering and Computing"
+  },
+  {
+    "id": "computer_engineering_bs",
+    "name": "Computer Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/electrical-computer/computer-engineering-bs/#requirementstext",
+    "college": "College of Engineering and Computing"
+  }
+]

@@ -43,3 +43,6 @@ output/*
 
 # Alembic migration versions (if you want to keep these in version control, remove this line)
 # migrations/versions/node_modules/
+
+# Data directory
+data/

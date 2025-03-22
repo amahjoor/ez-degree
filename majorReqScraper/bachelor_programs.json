@@ -1,0 +1,446 @@
+[
+  {
+    "id": "anthropology_ba",
+    "name": "Anthropology, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/sociology-anthropology/anthropology-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "applied_computer_science_bs",
+    "name": "Applied Computer Science, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/applied-computer-science-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "applied_science_ba",
+    "name": "Applied Science, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/interdisciplinary-programs-courses/applied-science-bas/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "art_and_visual_technology_ba",
+    "name": "Art and Visual Technology, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/visual-performing-arts/art/art-visual-technology-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "art_history_ba",
+    "name": "Art History, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/history-art/art-history-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "astronomy_bs",
+    "name": "Astronomy, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/physics-astronomy/astronomy-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "atmospheric_sciences_bs",
+    "name": "Atmospheric Sciences, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/atmospheric-oceanic-earth-sciences/atmospheric-sciences-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "bioengineering_bs",
+    "name": "Bioengineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/bioengineering/bioengineering-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "biology_ba",
+    "name": "Biology, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/biology/biology-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "biology_bs",
+    "name": "Biology, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/biology/biology-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "business_bs",
+    "name": "Business, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/business/business-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "chemistry_ba",
+    "name": "Chemistry, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/chemistry-biochemistry/chemistry-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "chemistry_bs",
+    "name": "Chemistry, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/chemistry-biochemistry/chemistry-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "civil_and_infrastructure_engineering_bs",
+    "name": "Civil and Infrastructure Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/civil-environmental-infrastructure/civil-infrastructure-engineering-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "communication_ba",
+    "name": "Communication, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/communication/communication-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "community_health_bs",
+    "name": "Community Health, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/public-health/global-community-health/community-health-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "computational_and_data_sciences_bs",
+    "name": "Computational and Data Sciences, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/computational-data-sciences/computational-data-sciences-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "computer_engineering_bs",
+    "name": "Computer Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/electrical-computer/computer-engineering-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "computer_science_bs",
+    "name": "Computer Science, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/computer-science-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "conflict_analysis_and_resolution_ba",
+    "name": "Conflict Analysis and Resolution, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/peace-conflict-resolution/conflict-analysis-resolution-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "conflict_analysis_and_resolution_bs",
+    "name": "Conflict Analysis and Resolution, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/peace-conflict-resolution/conflict-analysis-resolution-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "law_and_society_ba",
+    "name": "Law and Society, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/criminology-law-society/criminology-law-society-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "law_and_society_bs",
+    "name": "Law and Society, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/criminology-law-society/criminology-law-society-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "cyber_security_engineering_bs",
+    "name": "Cyber Security Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/cyber-security-engineering/cyber-security-engineering-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "early_childhood_education_for_diverse_learners_bs",
+    "name": "Early Childhood Education for Diverse Learners, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-education/early-childhood-education-diverse-learners-bsed/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "economics_ba",
+    "name": "Economics, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/economics/economics-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "economics_bs",
+    "name": "Economics, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/economics/economics-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "electrical_engineering_bs",
+    "name": "Electrical Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/electrical-computer/electrical-engineering-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "elementary_education_bs",
+    "name": "Elementary Education, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-education/elementary-education-bsed/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "english_ba",
+    "name": "English, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/english/english-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "environmental_and_sustainability_studies_ba",
+    "name": "Environmental and Sustainability Studies, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/integrative-studies/environmental-sustainability-studies-ba-chss/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "environmental_science_bs",
+    "name": "Environmental Science, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/environmental-policy/environmental-science-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "film_and_video_studies_ba",
+    "name": "Film and Video Studies, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/visual-performing-arts/film-video-studies/film-video-studies-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "foreign_languages_ba",
+    "name": "Foreign Languages, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/modern-classical-languages/foreign-languages-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "forensic_science_bs",
+    "name": "Forensic Science, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/forensic-program/forensic-science-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "geography_ba",
+    "name": "Geography, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/geography-geoinformation-science/geography-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "geography_bs",
+    "name": "Geography, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/geography-geoinformation-science/geography-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "geology_ba",
+    "name": "Geology, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/atmospheric-oceanic-earth-sciences/geology-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "geology_bs",
+    "name": "Geology, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/atmospheric-oceanic-earth-sciences/geology-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "global_affairs_ba",
+    "name": "Global Affairs, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/global-affairs/global-affairs-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "government_and_international_politics_ba",
+    "name": "Government and International Politics, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/policy-government/government-international-politics-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "health_administration_bs",
+    "name": "Health Administration, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/public-health/health-administration-policy/health-administration-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "health_informatics_bs",
+    "name": "Health Informatics, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/public-health/health-administration-policy/health-informatics-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "history_ba",
+    "name": "History, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/history-art/history-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "human_development_and_family_science_ba",
+    "name": "Human Development and Family Science, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/integrative-studies/human-development-and-family-science-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "information_technology_bs",
+    "name": "Information Technology, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/information-sciences-technology/information-technology-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "integrative_studies_ba",
+    "name": "Integrative Studies, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/integrative-studies/integrative-studies-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "integrative_studies_bs",
+    "name": "Integrative Studies, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/integrative-studies/integrative-studies-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "international_security_and_law_ba",
+    "name": "International Security and Law, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/policy-government/international-security-law-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "kinesiology_bs",
+    "name": "Kinesiology, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-kinesiology/kinesiology-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "mathematics_ba",
+    "name": "Mathematics, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/mathematical-sciences/mathematics-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "mathematics_bs",
+    "name": "Mathematics, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/mathematical-sciences/mathematics-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "mechanical_engineering_bs",
+    "name": "Mechanical Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/mechanical/mechanical-engineering-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "medical_laboratory_science_bs",
+    "name": "Medical Laboratory Science, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/biology/medical-laboratory-science-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "music_ba",
+    "name": "Music, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/visual-performing-arts/music/music-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "neuroscience_bs",
+    "name": "Neuroscience, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/neuroscience-program/neuroscience-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "nursing_bs",
+    "name": "Nursing, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/public-health/nursing/nursing-bsn/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "philosophy_ba",
+    "name": "Philosophy, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/philosophy/philosophy-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "physical_education_bs",
+    "name": "Physical Education, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-education/physical-education-bsed/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "physics_bs",
+    "name": "Physics, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/science/physics-astronomy/physics-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "psychology_ba",
+    "name": "Psychology, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/psychology/psychology-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "psychology_bs",
+    "name": "Psychology, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/psychology/psychology-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "public_administration_bs",
+    "name": "Public Administration, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/policy-government/public-administration-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "recreation_management_bs",
+    "name": "Recreation Management, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-sport-recreation-tourism-management/recreation-management-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "religious_studies_ba",
+    "name": "Religious Studies, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/religious-studies/religious-studies-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "russian_and_eurasian_studies_ba",
+    "name": "Russian and Eurasian Studies, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/russian-eurasian-studies/russian-eurasian-studies-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "social_work_bs",
+    "name": "Social Work, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/public-health/social-work/social-work-bsw/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "sociology_ba",
+    "name": "Sociology, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/humanities-social-sciences/sociology-anthropology/sociology-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "special_education_bs",
+    "name": "Special Education, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-education/special-education-bsed/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "sport_management_bs",
+    "name": "Sport Management, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-sport-recreation-tourism-management/sport-management-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "statistics_bs",
+    "name": "Statistics, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/statistics/statistics-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "systems_and_industrial_engineering_bs",
+    "name": "Systems and Industrial Engineering, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/systems-operations-research/systems-industrial-engineering-bs/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "theater_ba",
+    "name": "Theater, BA",
+    "url": "https://catalog.gmu.edu/colleges-schools/visual-performing-arts/theater/theater-ba/#requirementstext",
+    "college": "Costello College of Business"
+  },
+  {
+    "id": "tourism_and_events_management_bs",
+    "name": "Tourism and Events Management, BS",
+    "url": "https://catalog.gmu.edu/colleges-schools/education-human-development/school-sport-recreation-tourism-management/tourism-and-events-management-bs/#requirementstext",
+    "college": "Costello College of Business"
+  }
+]
