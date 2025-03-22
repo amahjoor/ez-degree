@@ -52,10 +52,29 @@ npm start
 
 ## API Integration
 
-The frontend interacts with the GMU Course API for data retrieval:
+The frontend application communicates with the GMU Course API for data retrieval. There are two ways to access the API:
 
-- Course data is fetched from `/courses` endpoints
-- Major requirements are fetched from `/requirements/majors` endpoints
+1. **Direct API Access** (Backend development): 
+   - The API server runs at `http://localhost:8000`
+   - Access OpenAPI documentation at `http://localhost:8000/docs`
+
+2. **API Proxy** (Frontend development):
+   - For convenience, the API is also available at `http://localhost:3000/api`
+   - This proxy forwards requests to the backend API server
+   - Example: `http://localhost:3000/api/courses` forwards to `http://localhost:8000/courses`
+
+### API Endpoints
+
+The application uses the following key endpoints:
+
+- Course Data:
+  - GET `/api/courses` - List all courses with pagination and filtering
+  - GET `/api/courses/{course_code}` - Get details for a specific course
+  - GET `/api/subjects` - List all available subjects
+
+- Degree Requirements:
+  - GET `/api/requirements/majors` - List all available majors
+  - GET `/api/requirements/majors/{major_id}` - Get detailed requirements for a specific major
 
 ## Environment Variables
 
