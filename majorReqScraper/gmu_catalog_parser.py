@@ -251,6 +251,9 @@ def parse_gmu_catalog(file_path, major=None):
     # Parse the HTML content
     soup = BeautifulSoup(html_content, 'html.parser')
     
+    # Extract program_id from file_path
+    program_id = os.path.basename(file_path).replace(".html", "")
+    
     # Initialize the results structure
     results = {
         "degree_name": major if major else "",
@@ -278,6 +281,10 @@ def parse_gmu_catalog(file_path, major=None):
     toggle_headers = requirements_div.find_all('h3', class_='toggle')
     for header in toggle_headers:
         category_title = header.text.strip()
+        # Skip concentration headers - they'll be handled separately
+        if category_title.startswith('Concentration in'):
+            continue
+            
         # Remove "Expand" text which appears in some headers
         category_title = re.sub(r'Expand$', '', category_title).strip()
         
@@ -393,6 +400,11 @@ def parse_gmu_catalog(file_path, major=None):
         total_credits += category["total_credits"]
     
     results["total_credits"] = total_credits
+    
+    # Add concentrations if this is a program with concentrations
+    concentrations = extract_concentrations(soup, program_id)
+    if concentrations:
+        results["concentrations"] = concentrations
     
     return results
 
@@ -580,6 +592,108 @@ def save_results(results, major):
                 f.write(f"INSERT INTO courses (id, category_id, course_code, title, credits) VALUES ('{course_id}', '{category_id}', '{course_code}', '{title}', {course['credits']});\n")
     
     print(f"Results saved to {json_path} and {sql_path}")
+
+def extract_concentrations(soup, program_id):
+    """
+    Extract concentration information from a program page
+    
+    Args:
+        soup: BeautifulSoup object of the program page
+        program_id: ID of the program
+        
+    Returns:
+        List of Concentration objects with their categories and courses
+    """
+    concentrations = []
+    
+    # Find all concentration headers - they usually start with "Concentration in"
+    concentration_headers = soup.find_all('h3', class_='toggle')
+    
+    for header in concentration_headers:
+        header_text = header.text.strip()
+        
+        # Check if this is a concentration header
+        if not header_text.startswith('Concentration in'):
+            continue
+            
+        # Extract concentration name and ID
+        concentration_name = header_text.replace('Concentration in', '').strip()
+        # Extract ID from parentheses if available, e.g., "Concentration in Software Engineering (SWE)"
+        concentration_id = None
+        if '(' in concentration_name and ')' in concentration_name:
+            start_idx = concentration_name.rfind('(')
+            end_idx = concentration_name.rfind(')')
+            if start_idx != -1 and end_idx != -1:
+                concentration_id = concentration_name[start_idx+1:end_idx].strip()
+                concentration_name = concentration_name[:start_idx].strip()
+        
+        # If ID not found in parentheses, create one from the name
+        if not concentration_id:
+            concentration_id = ''.join(c for c in concentration_name if c.isalnum())
+        
+        # Initialize concentration data
+        concentration = {
+            "id": concentration_id,
+            "name": concentration_name,
+            "total_credits": 0,  # Will calculate later
+            "categories": []
+        }
+        
+        # Find all category headers that follow this concentration header
+        # Categories are usually h4 elements
+        next_element = header.find_next_sibling()
+        while next_element and next_element.name != 'h3':
+            if next_element.name == 'h4':
+                category_name = next_element.text.strip()
+                category_total_credits = 0
+                
+                # Find the course table for this category
+                course_table = next_element.find_next('table', class_='sc_courselist')
+                if course_table:
+                    courses = []
+                    
+                    # Extract courses from the table
+                    course_rows = course_table.find_all('tr')
+                    for row in course_rows:
+                        # Find total credits for the category
+                        if 'listsum' in row.get('class', []):
+                            credits_cell = row.find('td', class_='hourscol')
+                            if credits_cell and credits_cell.text.strip():
+                                try:
+                                    category_total_credits = float(credits_cell.text.strip())
+                                except ValueError:
+                                    # Handle ranges like "3-6" by taking the upper bound
+                                    if '-' in credits_cell.text:
+                                        upper_bound = credits_cell.text.split('-')[1].strip()
+                                        try:
+                                            category_total_credits = float(upper_bound)
+                                        except ValueError:
+                                            pass
+                        
+                        # Extract courses from regular rows
+                        course_code_cell = row.find('td', class_='codecol')
+                        if course_code_cell and not ('listsum' in row.get('class', [])):
+                            # Find courses in this row
+                            courses_in_row = find_courses_in_element(row)
+                            courses.extend(courses_in_row)
+                    
+                    # Create category
+                    if courses:
+                        category = {
+                            "name": category_name,
+                            "total_credits": category_total_credits,
+                            "courses": courses
+                        }
+                        concentration["categories"].append(category)
+                        concentration["total_credits"] += category_total_credits
+            
+            next_element = next_element.find_next_sibling()
+        
+        # Add concentration to the list if it has categories
+        if concentration["categories"]:
+            concentrations.append(concentration)
+    
+    return concentrations
 
 def main():
     """Main function to parse the GMU catalog HTML file"""

@@ -45,10 +45,24 @@ class Category(BaseModel):
     total_credits: float = Field(..., description="Total credits required in this category")
     courses: List[CourseModel] = Field(..., description="List of courses in this category")
 
+class Concentration(BaseModel):
+    id: str = Field(..., description="Concentration ID (e.g., 'IAME', 'SWE')")
+    name: str = Field(..., description="Concentration name (e.g., 'Intelligence Analysis and Middle Eastern Studies')")
+    total_credits: float = Field(..., description="Total credits required for this concentration")
+    categories: List[Category] = Field(..., description="List of requirement categories for this concentration")
+
 class Requirements(BaseModel):
     degree_name: str = Field(..., description="Name of the degree program")
     total_credits: float = Field(..., description="Total credits required for the degree")
     categories: List[Category] = Field(..., description="List of requirement categories")
+    concentrations: List[Concentration] = Field(default=[], description="List of available concentrations for this degree")
+
+class ConcentrationInfo(BaseModel):
+    id: str = Field(..., description="Concentration ID (e.g., 'SWE')")
+    name: str = Field(..., description="Concentration name (e.g., 'Software Engineering')")
+
+class ConcentrationList(BaseModel):
+    concentrations: List[ConcentrationInfo] = Field(..., description="List of available concentrations for the major")
 
 app = FastAPI(
     title="GMU Course API",
@@ -71,8 +85,20 @@ app.add_middleware(
 REQUIREMENTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
                                "majorReqScraper", "data")
 
+# Make sure it exists
+if not os.path.exists(REQUIREMENTS_DIR):
+    # Try an alternate path for the data directory
+    REQUIREMENTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+    print(f"Using alternate data directory: {REQUIREMENTS_DIR}")
+    
+    # Create it if it doesn't exist
+    if not os.path.exists(REQUIREMENTS_DIR):
+        os.makedirs(REQUIREMENTS_DIR, exist_ok=True)
+        print(f"Created data directory: {REQUIREMENTS_DIR}")
+
 # Helper function to load all majors
 def get_available_majors():
+    
     """Get a list of all available majors from the requirements directory"""
     majors = []
     # Look for json files that follow the pattern: xxx_requirements.json
@@ -135,19 +161,24 @@ async def get_majors():
 async def get_major_requirements(
     major_id: str = Path(..., 
                        description="ID of the major to retrieve requirements for", 
-                       example="computer_science_bs")
+                       example="computer_science_bs"),
+    concentration_id: Optional[str] = Query(None,
+                                         description="Optional ID of a specific concentration to retrieve")
 ):
     """
     Get requirements for a specific major
     
     Args:
         major_id: ID of the major (e.g., 'computer_science_bs')
+        concentration_id: Optional concentration ID to filter by (e.g., 'SWE' for Software Engineering)
     
     Returns:
         Requirements object containing degree name, total credits, and categories with courses
+        If concentration_id is provided, only returns requirements for that concentration
     
     Raises:
         HTTPException 404: If the major is not found
+        HTTPException 404: If the concentration is not found
         HTTPException 500: If there's an error processing the request
     """
     try:
@@ -171,6 +202,42 @@ async def get_major_requirements(
                     course["code"] = course["id"]
                     # Keep the id field too to avoid breaking anything else
         
+        # Handle concentrations if present
+        if "concentrations" in requirements and requirements["concentrations"]:
+            # Transform concentration data to match expected format
+            for concentration in requirements["concentrations"]:
+                for category in concentration["categories"]:
+                    for course in category["courses"]:
+                        # Map 'id' to 'code' field
+                        if "id" in course and "code" not in course:
+                            course["code"] = course["id"]
+                            # Keep the id field too to avoid breaking anything else
+            
+            # If concentration_id is provided, filter to show only that concentration
+            if concentration_id:
+                concentration_id = concentration_id.upper()  # Convert to uppercase for case-insensitive matching
+                
+                # Find the requested concentration
+                matching_concentration = None
+                for concentration in requirements["concentrations"]:
+                    if concentration["id"].upper() == concentration_id:
+                        matching_concentration = concentration
+                        break
+                
+                if not matching_concentration:
+                    raise HTTPException(
+                        status_code=404,
+                        detail=f"Concentration '{concentration_id}' not found for major '{major_id}'"
+                    )
+                
+                # Return a modified requirements object that includes only the requested concentration
+                return {
+                    "degree_name": f"{requirements['degree_name']} - {matching_concentration['name']}",
+                    "total_credits": requirements["total_credits"],
+                    "categories": requirements["categories"] + matching_concentration["categories"],
+                    "concentrations": []  # Empty since we're already including the specific concentration
+                }
+        
         return requirements
         
     except HTTPException:
@@ -179,6 +246,64 @@ async def get_major_requirements(
         raise HTTPException(
             status_code=500,
             detail=f"Error retrieving requirements: {str(e)}"
+        )
+
+@app.get("/requirements/majors/{major_id}/concentrations", 
+         response_model=ConcentrationList,
+         summary="Get available concentrations for a major",
+         description="Returns a list of all concentrations available for a specific major",
+         response_description="A list of concentration objects with ID and name")
+async def get_major_concentrations(
+    major_id: str = Path(..., 
+                       description="ID of the major to retrieve concentrations for", 
+                       example="applied_computer_science_bs")
+):
+    """
+    Get a list of all available concentrations for a specific major
+    
+    Args:
+        major_id: ID of the major (e.g., 'applied_computer_science_bs')
+    
+    Returns:
+        A dictionary containing a list of concentration objects with their IDs and names
+    
+    Raises:
+        HTTPException 404: If the major is not found
+        HTTPException 500: If there's an error processing the request
+    """
+    try:
+        # Clean up the major_id to avoid directory traversal
+        major_id = major_id.lower().replace(" ", "_")
+        major_id = ''.join(c for c in major_id if c.isalnum() or c == '_')
+        
+        requirements = load_major_requirements(major_id)
+        
+        if not requirements:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Requirements for major '{major_id}' not found"
+            )
+        
+        # Check if the major has concentrations
+        if "concentrations" not in requirements or not requirements["concentrations"]:
+            return {"concentrations": []}
+        
+        # Extract concentration information
+        concentrations = []
+        for concentration in requirements["concentrations"]:
+            concentrations.append({
+                "id": concentration["id"],
+                "name": concentration["name"]
+            })
+        
+        return {"concentrations": concentrations}
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving concentrations: {str(e)}"
         )
 
 @app.get("/courses/")

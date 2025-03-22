@@ -25,15 +25,23 @@ type Category = {
   courses: Course[];
 };
 
+type Concentration = {
+  id: string;
+  name: string;
+};
+
 type Requirements = {
   degree_name: string;
   total_credits: number;
   categories: Category[];
+  concentrations?: any[]; // Optional field for concentrations
 };
 
 export default function RequirementsPage() {
   const [majors, setMajors] = useState<Major[]>([]);
   const [selectedMajor, setSelectedMajor] = useState<string>('');
+  const [concentrations, setConcentrations] = useState<Concentration[]>([]);
+  const [selectedConcentration, setSelectedConcentration] = useState<string>('');
   const [requirements, setRequirements] = useState<Requirements | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -68,6 +76,39 @@ export default function RequirementsPage() {
     fetchMajors();
   }, []);
 
+  // Fetch concentrations when a major is selected
+  useEffect(() => {
+    if (!selectedMajor || !isApiAvailable) {
+      setConcentrations([]);
+      setSelectedConcentration('');
+      return;
+    }
+
+    async function fetchConcentrations() {
+      try {
+        const response = await fetch(`${API_BASE_URL}/requirements/majors/${selectedMajor}/concentrations`);
+        
+        if (!response.ok) {
+          if (response.status === 404) {
+            // It's OK if no concentrations are found - just set an empty array
+            setConcentrations([]);
+            return;
+          } else {
+            throw new Error(`Failed to fetch concentrations: ${response.statusText}`);
+          }
+        }
+        
+        const data = await response.json();
+        setConcentrations(data.concentrations || []);
+      } catch (error) {
+        console.error('Error fetching concentrations:', error);
+        setConcentrations([]);
+      }
+    }
+
+    fetchConcentrations();
+  }, [selectedMajor, isApiAvailable]);
+
   // Fetch requirements for selected major
   useEffect(() => {
     if (!selectedMajor || !isApiAvailable) return;
@@ -77,7 +118,13 @@ export default function RequirementsPage() {
       setError('');
       
       try {
-        const response = await fetch(`${API_BASE_URL}/requirements/majors/${selectedMajor}`);
+        // Add concentration_id as a query parameter if selected
+        let url = `${API_BASE_URL}/requirements/majors/${selectedMajor}`;
+        if (selectedConcentration) {
+          url += `?concentration_id=${selectedConcentration}`;
+        }
+        
+        const response = await fetch(url);
         if (!response.ok) {
           if (response.status === 404) {
             throw new Error(`Requirements for ${selectedMajor} not found`);
@@ -103,7 +150,7 @@ export default function RequirementsPage() {
     }
 
     fetchRequirements();
-  }, [selectedMajor, isApiAvailable]);
+  }, [selectedMajor, selectedConcentration, isApiAvailable]);
 
   // Toggle category expansion
   const toggleCategory = (categoryIndex: number) => {
@@ -111,6 +158,12 @@ export default function RequirementsPage() {
       ...prev,
       [`category-${categoryIndex}`]: !prev[`category-${categoryIndex}`]
     }));
+  };
+
+  // Handle major selection change
+  const handleMajorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedMajor(e.target.value);
+    setSelectedConcentration(''); // Clear concentration when major changes
   };
 
   // If API is not available, show a more helpful error message
@@ -156,7 +209,7 @@ export default function RequirementsPage() {
         <select
           id="major-select"
           value={selectedMajor}
-          onChange={(e) => setSelectedMajor(e.target.value)}
+          onChange={handleMajorChange}
           className="w-full md:w-1/2 p-2 border rounded-md bg-white"
           disabled={loading}
         >
@@ -167,6 +220,29 @@ export default function RequirementsPage() {
             </option>
           ))}
         </select>
+        
+        {/* Concentration selection - only show if concentrations are available */}
+        {concentrations.length > 0 && (
+          <div className="mt-4">
+            <label htmlFor="concentration-select" className="block text-lg font-medium mb-2">
+              Select a Concentration:
+            </label>
+            <select
+              id="concentration-select"
+              value={selectedConcentration}
+              onChange={(e) => setSelectedConcentration(e.target.value)}
+              className="w-full md:w-1/2 p-2 border rounded-md bg-white"
+              disabled={loading}
+            >
+              <option value="">-- All Requirements --</option>
+              {concentrations.map((concentration) => (
+                <option key={concentration.id} value={concentration.id}>
+                  {concentration.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
       </div>
 
       {/* Error message */}
