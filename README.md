@@ -31,31 +31,42 @@ iWannaGraduate helps GMU students navigate their degree requirements, plan cours
    pip install fastapi uvicorn sqlalchemy alembic selenium beautifulsoup4
    ```
 
-### Running the Backend
-To start the API server:
+4. Install Node.js dependencies for the project
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+#### All-in-One Development Mode
+To start both the API server and frontend together:
 ```bash
-uvicorn api.main:app --reload
+npm run dev
 ```
 
-The API will be available at http://127.0.0.1:8000
+This will start:
+- Backend API server at http://127.0.0.1:8000
+- Frontend development server at http://localhost:3000 (or next available port)
 
-You can access the API documentation at http://127.0.0.1:8000/docs
+#### Separately
 
-### Running the Frontend
-The frontend is a Next.js application located in the `graduate` directory:
-
+To start the API server only:
 ```bash
-cd graduate
-npm install  # Install dependencies
-npm run dev  # Start the development server
+npm run start:backend
 ```
 
-The frontend will be available at http://localhost:3000
+To start the frontend only:
+```bash
+npm run start:frontend
+```
+
+### API Documentation
+After starting the backend, you can access the API documentation at http://127.0.0.1:8000/docs
 
 ## Project Structure
 - `api/` - FastAPI backend
 - `database/` - Database models and operations
-- `graduate/` - Next.js frontend application
+- `frontend/` - Next.js frontend application
 - `scraper/` - Web scrapers for course and requirements data
 - `logic/` - Business logic components
 - `migrations/` - Database migration scripts

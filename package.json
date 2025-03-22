@@ -1,0 +1,14 @@
+{
+  "name": "iwannagraduate",
+  "version": "1.0.0",
+  "description": "GMU Course Planning Tool",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "cd . && uvicorn api.main:app --reload",
+    "start:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 

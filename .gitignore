@@ -42,4 +42,4 @@ build/
 output/*.json
 
 # Alembic migration versions (if you want to keep these in version control, remove this line)
-# migrations/versions/
+# migrations/versions/node_modules/
