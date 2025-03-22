@@ -88,10 +88,10 @@ export default function RequirementsPage() {
         const data = await response.json();
         setRequirements(data);
         
-        // Initialize all categories as expanded
+        // Initialize all categories as expanded using indexes
         const initialExpandedState = {} as {[key: string]: boolean};
-        data.categories.forEach((category: Category) => {
-          initialExpandedState[category.name] = true;
+        data.categories.forEach((category: Category, index: number) => {
+          initialExpandedState[`category-${index}`] = true;
         });
         setExpandedCategories(initialExpandedState);
       } catch (error: any) {
@@ -106,10 +106,10 @@ export default function RequirementsPage() {
   }, [selectedMajor, isApiAvailable]);
 
   // Toggle category expansion
-  const toggleCategory = (categoryName: string) => {
+  const toggleCategory = (categoryIndex: number) => {
     setExpandedCategories(prev => ({
       ...prev,
-      [categoryName]: !prev[categoryName]
+      [`category-${categoryIndex}`]: !prev[`category-${categoryIndex}`]
     }));
   };
 
@@ -191,17 +191,17 @@ export default function RequirementsPage() {
           <p className="text-lg mb-6">Total Credits: {requirements.total_credits}</p>
           
           <div className="space-y-6">
-            {requirements.categories.map((category) => (
-              <div key={category.name} className="border rounded-md overflow-hidden">
+            {requirements.categories.map((category, categoryIndex) => (
+              <div key={`category-${categoryIndex}`} className="border rounded-md overflow-hidden">
                 <div 
                   className="bg-gray-100 p-4 flex justify-between items-center cursor-pointer"
-                  onClick={() => toggleCategory(category.name)}
+                  onClick={() => toggleCategory(categoryIndex)}
                 >
                   <h3 className="text-xl font-semibold">{category.name}</h3>
                   <div className="flex items-center">
                     <span className="mr-3">{category.total_credits} credits</span>
                     <svg 
-                      className={`w-6 h-6 transform transition-transform ${expandedCategories[category.name] ? 'rotate-180' : ''}`} 
+                      className={`w-6 h-6 transform transition-transform ${expandedCategories[`category-${categoryIndex}`] ? 'rotate-180' : ''}`} 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24" 
@@ -211,7 +211,7 @@ export default function RequirementsPage() {
                   </div>
                 </div>
                 
-                {expandedCategories[category.name] && (
+                {expandedCategories[`category-${categoryIndex}`] && (
                   <div className="p-4 overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                       <thead className="bg-gray-50">
@@ -228,8 +228,8 @@ export default function RequirementsPage() {
                         </tr>
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
-                        {category.courses.map((course) => (
-                          <tr key={course.code}>
+                        {category.courses.map((course, courseIndex) => (
+                          <tr key={`category-${categoryIndex}-course-${courseIndex}`}>
                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                               {course.code}
                             </td>

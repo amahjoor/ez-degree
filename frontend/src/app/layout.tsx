@@ -51,7 +51,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 text-center">
             <p>&copy; {new Date().getFullYear()} iWannaGraduate - GMU Course Planning Tool</p>
             <p className="text-gray-400 text-sm mt-1">
-              Helping students navigate their degree requirements since 2023
+              Made by Arman
             </p>
           </div>
         </footer>
