@@ -1,24 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# iWannaGraduate Frontend
+
+A Next.js frontend for the iWannaGraduate application, helping GMU students plan their path to graduation.
+
+## Features
+
+- **Course Search**: Browse and search GMU courses by subject, keyword, or course code
+- **Course Details**: View detailed information about specific courses
+- **Degree Requirements**: Explore the requirements for various majors at GMU
+  - View all available majors
+  - See detailed requirement categories and courses for each major
+  - Interactive UI with collapsible sections
+
+## Pages
+
+- `/` - Home page with links to main features
+- `/courses` - Course search and browse page
+- `/courses/[course_code]` - Detailed view of a specific course
+- `/requirements` - Degree requirements explorer
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 14+ and npm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install dependencies
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start the development server
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This will start the Next.js development server at [http://localhost:3000](http://localhost:3000).
+
+### Build for Production
+
+```bash
+# Build the application
+npm run build
+
+# Start the production server
+npm start
+```
+
+## API Integration
+
+The frontend interacts with the GMU Course API for data retrieval:
+
+- Course data is fetched from `/courses` endpoints
+- Major requirements are fetched from `/requirements/majors` endpoints
+
+## Environment Variables
+
+Create a `.env.local` file in the frontend directory with:
+
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+## Technologies
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Learn More
 

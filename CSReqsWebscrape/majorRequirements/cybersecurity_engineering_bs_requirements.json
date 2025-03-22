@@ -1,0 +1,324 @@
+{
+  "degree_name": "Cybersecurity Engineering BS",
+  "total_credits": 120.0,
+  "categories": [
+    {
+      "name": "Cyber Security Engineering Core",
+      "total_credits": 74.0,
+      "courses": [
+        {
+          "code": "CYSE 101",
+          "title": "Introduction to Cyber Security Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 130",
+          "title": "Introduction to Computing for Digital Systems Engineering (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 211",
+          "title": "Operating Systems and Lab",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 230",
+          "title": "Computer Networking",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 304",
+          "title": "Cyber Security in Logic Design and Digital Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 411",
+          "title": "Secure Software Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 421",
+          "title": "Industrial Control Systems Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 425",
+          "title": "Secure RF Communications",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 430",
+          "title": "Critical Infrastructure Protection",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 445",
+          "title": "System Security and Resilience",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 450",
+          "title": "Cyber Vulnerability Lab",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 476",
+          "title": "Cryptography Fundamentals",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 491",
+          "title": "Engineering Senior Seminar (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 492",
+          "title": "Senior Advanced Design Project I",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 493",
+          "title": "Senior Advanced Design Project II (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 424",
+          "title": "Embedded and Real Time Systems",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 460",
+          "title": "Power Systems and Smart Grid Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 462",
+          "title": "Mobile Devices and Network Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 465",
+          "title": "Transportation Systems Design",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 467",
+          "title": "GPS Security",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 470",
+          "title": "Human Factors and Cyber Security Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 477",
+          "title": "Intrusion Detection",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 478",
+          "title": "Cyber Security Audit and Compliance",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 479",
+          "title": "Methods of User Authentication",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 480",
+          "title": "Reverse Software Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CYSE 499",
+          "title": "Special Topics in Cyber Security Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Electrical and Computer Engineering",
+      "total_credits": 3.0,
+      "courses": [
+        {
+          "code": "ECE 301",
+          "title": "Digital Electronics 1",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Systems Engineering",
+      "total_credits": 3.0,
+      "courses": [
+        {
+          "code": "SYST 205",
+          "title": "Systems Engineering Principles",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Mathematics and Statistics",
+      "total_credits": 24.0,
+      "courses": [
+        {
+          "code": "MATH 113",
+          "title": "Analytic Geometry and Calculus I (Mason Core)",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 114",
+          "title": "Analytic Geometry and Calculus II",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 125",
+          "title": "Discrete Mathematics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 203",
+          "title": "Linear Algebra",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 213",
+          "title": "Analytic Geometry and Calculus III",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "MATH 214",
+          "title": "Elementary Differential Equations",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "STAT 344",
+          "title": "Probability and Statistics for Engineers and Scientists I",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Natural Sciences",
+      "total_credits": 8.0,
+      "courses": [
+        {
+          "code": "PHYS 160",
+          "title": "University Physics I (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 161",
+          "title": "University Physics I Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 260",
+          "title": "University Physics II (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "PHYS 261",
+          "title": "University Physics II Laboratory (Mason Core)",
+          "credits": 1.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Computing",
+      "total_credits": 10.0,
+      "courses": [
+        {
+          "code": "CS 112",
+          "title": "Introduction to Computer Programming (Mason Core)",
+          "credits": 4.0,
+          "alternatives": []
+        },
+        {
+          "code": "SYST 230",
+          "title": "Object-oriented Modeling and Design",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "CS 222",
+          "title": "Computer Programming for Engineers",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Engineering",
+      "total_credits": 3.0,
+      "courses": [
+        {
+          "code": "ENGR 107",
+          "title": "Introduction to Engineering",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    },
+    {
+      "name": "Oral Communication and Economics",
+      "total_credits": 6.0,
+      "courses": [
+        {
+          "code": "COMM 100",
+          "title": "Public Speaking (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        },
+        {
+          "code": "ECON 103",
+          "title": "Contemporary Microeconomic Principles (Mason Core)",
+          "credits": 3.0,
+          "alternatives": []
+        }
+      ]
+    }
+  ]
+}

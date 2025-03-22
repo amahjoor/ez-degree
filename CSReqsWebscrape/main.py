@@ -372,7 +372,7 @@ def main():
     driver = webdriver.Chrome(options=chrome_options)
     
     try:
-        # Define majors to scrape
+        # Define majors to scrape - URLs verified from GMU catalog search
         majors = [
             {
                 "name": "Computer Science BS",
@@ -388,11 +388,15 @@ def main():
             },
             {
                 "name": "Cybersecurity Engineering BS",
-                "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/cyber-security-engineering/cyber-security-engineering-bs/#requirementstext"
+                "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/cyber-security-engineering/cyber-security-engineering-bs/#requirementstext"
             },
             {
                 "name": "Computer Engineering BS",
-                "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/electrical-computer/computer-engineering-bs/#requirementstext"
+                "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/engineering/electrical-computer/computer-engineering-bs/#requirementstext"
+            },
+            {
+                "name": "Statistics BS",
+                "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/statistics/statistics-bs/#requirementstext"
             }
         ]
         
