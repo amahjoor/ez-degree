@@ -63,12 +63,37 @@ npm run start:frontend
 ### API Documentation
 After starting the backend, you can access the API documentation at http://127.0.0.1:8000/docs
 
+## Data Collection
+
+### Course Scraper
+The project includes a course scraper that collects course information from the GMU course catalog.
+
+#### Running the Course Scraper
+1. Ensure your virtual environment is activated
+2. Run the course scraper:
+   ```bash
+   python scrapers/courseScraper/courseScraper.py
+   ```
+3. The scraper will prompt you with options:
+   - Enter a number (e.g., "5") to scrape that many subjects
+   - Enter "all" to scrape all subjects
+   - Enter specific subject codes (e.g., "CS,MATH") to scrape only those subjects
+
+#### Output
+The course scraper generates the following files:
+- Individual JSON files for each subject (e.g., `data/courses/cs_courses.json`)
+- A combined file with all courses (`data/courses/all_courses.json`)
+- HTML files for debugging purposes in `data/courses/html_files/`
+
+This data is used by the application to provide course information, prerequisites, and help with degree planning.
+
 ## Project Structure
 - `api/` - FastAPI backend
 - `database/` - Database models and operations
 - `frontend/` - Next.js frontend application
-- `scraper/` - Web scrapers for course and requirements data
-- `logic/` - Business logic components
+- `scrapers/` - Web scrapers for course and requirements data
+- `data/` - Collected and processed data
+  - `courses/` - Course information scraped from the GMU catalog
 - `migrations/` - Database migration scripts
 
 
