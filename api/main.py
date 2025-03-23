@@ -95,7 +95,7 @@ if not os.path.exists(REQUIREMENTS_DIR):
 # Helper function to load all majors
 def get_available_majors():
     # Check for all_programs.json in the data/majors folder
-    majors_dir = os.path.join(os.path.dirname(REQUIREMENTS_DIR), "majors")
+    majors_dir = os.path.join(REQUIREMENTS_DIR, "majors")
     all_programs_path = os.path.join(majors_dir, "all_programs.json")
     
     if os.path.exists(all_programs_path):
@@ -120,7 +120,7 @@ def load_major_requirements(major_id):
     Returns:
         dict: The requirements data
     """
-    major_requirements_dir = os.path.join(os.path.dirname(REQUIREMENTS_DIR), "majorRequirements")
+    major_requirements_dir = os.path.join(REQUIREMENTS_DIR, "majorRequirements")
     if not os.path.exists(major_requirements_dir):
         os.makedirs(major_requirements_dir, exist_ok=True)
         
