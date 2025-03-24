@@ -1,7 +1,7 @@
 # iWannaGraduate
-Building a project to help CS majors at GMU graduate.
+Building a project to help students at GMU graduate.
 
-The plan is to work on GMU CS, then expand it out to all majors at GMU. Then at that point, maybe even further...
+The development plan is to fine-tune working on GMU CS, then other engineering, then expand it out to all majors at GMU. Then at that point, maybe even further...
 
 ## Project Overview
 iWannaGraduate helps GMU students navigate their degree requirements, plan courses, and track progress toward graduation.
