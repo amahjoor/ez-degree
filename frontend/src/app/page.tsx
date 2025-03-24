@@ -6,12 +6,29 @@ import Link from "next/link";
 // API configuration
 const API_BASE_URL = '/api';
 
+// Interface for course difficulty data
+interface CourseDifficulty {
+  professors: Array<{
+    name: string;
+    difficulty: number;
+    rating: number;
+  }>;
+  average_difficulty: number;
+  difficulty_level: string;
+  num_professors_rated: number;
+}
+
 interface Course {
-  course_code: string;
-  title: string;
-  credits: number;
-  description: string;
-  subject: string;
+  Code?: string;
+  course_code?: string;
+  title?: string;
+  Title?: string;
+  credits?: number | string;
+  Credits?: string;
+  description?: string;
+  Description?: string;
+  subject?: string;
+  difficulty?: CourseDifficulty | null;
 }
 
 interface Subject {
@@ -49,6 +66,22 @@ type Requirements = {
   total_credits: number;
   categories: Category[];
   concentrations?: any[];
+};
+
+// Helper function to get difficulty color based on level
+const getDifficultyBadgeClass = (level?: string) => {
+  if (!level) return "bg-gray-100 text-gray-600";
+  
+  switch (level) {
+    case 'Easy':
+      return 'bg-green-100 text-green-800';
+    case 'Moderate':
+      return 'bg-yellow-100 text-yellow-800';
+    case 'Difficult':
+      return 'bg-red-100 text-red-800';
+    default:
+      return 'bg-gray-100 text-gray-600';
+  }
 };
 
 export default function Home() {
@@ -392,6 +425,30 @@ export default function Home() {
     }
   };
 
+  // Helper function to render difficulty badge
+  const renderDifficultyBadge = (course: Course) => {
+    if (!course.difficulty) return null;
+
+    return (
+      <span className={`text-xs font-medium px-2 py-1 rounded-full ml-2 ${getDifficultyBadgeClass(course.difficulty.difficulty_level)}`}>
+        {course.difficulty.difficulty_level} ({course.difficulty.average_difficulty.toFixed(1)})
+      </span>
+    );
+  };
+
+  // Normalize course data
+  const normalizeCourseName = (course: Course): string => {
+    return course.Code || course.course_code || '';
+  };
+
+  const normalizeTitle = (course: Course): string => {
+    return course.Title || course.title || '';
+  };
+
+  const normalizeCredits = (course: Course): string => {
+    return `${course.Credits || course.credits || ''}`;
+  };
+
   // If API is not available, show a more helpful error message
   if (!isApiAvailable) {
     return (
@@ -612,24 +669,36 @@ export default function Home() {
                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                             Subject
                           </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Difficulty
+                          </th>
                         </tr>
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
                         {courses.map((course) => (
-                          <tr key={course.course_code} className="hover:bg-gray-50">
+                          <tr key={normalizeCourseName(course)} className="hover:bg-gray-50">
                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
-                              <Link href={`/courses/${encodeURIComponent(course.course_code)}`}>
-                                {course.course_code}
+                              <Link href={`/courses/${encodeURIComponent(normalizeCourseName(course))}`}>
+                                {normalizeCourseName(course)}
                               </Link>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              {course.title}
+                              {normalizeTitle(course)}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                              {course.credits}
+                              {normalizeCredits(course)}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                               {course.subject}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              {course.difficulty ? (
+                                <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getDifficultyBadgeClass(course.difficulty.difficulty_level)}`}>
+                                  {course.difficulty.difficulty_level} ({course.difficulty.average_difficulty.toFixed(1)})
+                                </span>
+                              ) : (
+                                <span className="text-gray-400 text-xs">Not rated</span>
+                              )}
                             </td>
                           </tr>
                         ))}

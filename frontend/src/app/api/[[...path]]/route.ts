@@ -28,7 +28,12 @@ export async function GET(
       headers: {
         'Content-Type': 'application/json',
       },
+      // Make sure we're not using cached responses
+      cache: 'no-store',
+      next: { revalidate: 0 }
     });
+
+    console.log(`Received response from backend with status: ${response.status}`);
 
     // Handle different content types
     const contentType = response.headers.get('content-type') || '';
@@ -39,11 +44,16 @@ export async function GET(
       return NextResponse.redirect(`${API_BASE_URL}/${path}${searchParams ? `?${searchParams}` : ''}`);
     }
     
+    // Clone the response before reading the body
+    const clonedResponse = response.clone();
+    
     // For JSON responses (API data)
     try {
-      const data = await response.json();
+      const data = await clonedResponse.json();
+      console.log(`Successfully parsed response as JSON for ${path}:`, data);
       return NextResponse.json(data, { status: response.status });
     } catch (error) {
+      console.error(`Error parsing JSON response for ${path}:`, error);
       // If response is not JSON, return the raw text
       const text = await response.text();
       return new NextResponse(text, {
@@ -56,7 +66,7 @@ export async function GET(
   } catch (error) {
     console.error('API proxy error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch data from API' },
+      { error: 'Failed to fetch data from API', details: error instanceof Error ? error.message : String(error) },
       { status: 500 }
     );
   }
@@ -74,8 +84,11 @@ export async function POST(
 
     console.log(`Proxying POST request to: ${url}`);
 
+    // Clone the request to avoid "Body has already been read" errors
+    const clonedRequest = request.clone();
+    
     // Get the request body
-    const body = await request.json();
+    const body = await clonedRequest.json();
 
     // Forward the request to the FastAPI backend
     const response = await fetch(url, {
@@ -86,15 +99,27 @@ export async function POST(
       body: JSON.stringify(body),
     });
 
+    // Clone the response before reading the body
+    const clonedResponse = response.clone();
+    
     // Read the response body
-    const data = await response.json();
-
-    // Return the response from the FastAPI backend
-    return NextResponse.json(data, { status: response.status });
+    try {
+      const data = await clonedResponse.json();
+      return NextResponse.json(data, { status: response.status });
+    } catch (error) {
+      // If response is not JSON, return the raw text
+      const text = await response.text();
+      return new NextResponse(text, {
+        status: response.status,
+        headers: {
+          'Content-Type': response.headers.get('content-type') || 'text/plain',
+        },
+      });
+    }
   } catch (error) {
     console.error('API proxy error:', error);
     return NextResponse.json(
-      { error: 'Failed to send data to API' },
+      { error: 'Failed to send data to API', details: error instanceof Error ? error.message : String(error) },
       { status: 500 }
     );
   }
@@ -110,8 +135,11 @@ export async function PUT(
     const path = params.path?.join('/') || '';
     const url = `${API_BASE_URL}/${path}`;
 
+    // Clone the request to avoid "Body has already been read" errors
+    const clonedRequest = request.clone();
+    
     // Get the request body
-    const body = await request.json();
+    const body = await clonedRequest.json();
 
     // Forward the request to the FastAPI backend
     const response = await fetch(url, {
@@ -122,15 +150,27 @@ export async function PUT(
       body: JSON.stringify(body),
     });
 
+    // Clone the response before reading the body
+    const clonedResponse = response.clone();
+    
     // Read the response body
-    const data = await response.json();
-
-    // Return the response from the FastAPI backend
-    return NextResponse.json(data, { status: response.status });
+    try {
+      const data = await clonedResponse.json();
+      return NextResponse.json(data, { status: response.status });
+    } catch (error) {
+      // If response is not JSON, return the raw text
+      const text = await response.text();
+      return new NextResponse(text, {
+        status: response.status,
+        headers: {
+          'Content-Type': response.headers.get('content-type') || 'text/plain',
+        },
+      });
+    }
   } catch (error) {
     console.error('API proxy error:', error);
     return NextResponse.json(
-      { error: 'Failed to update data via API' },
+      { error: 'Failed to update data via API', details: error instanceof Error ? error.message : String(error) },
       { status: 500 }
     );
   }
@@ -154,15 +194,27 @@ export async function DELETE(
       },
     });
 
+    // Clone the response before reading the body
+    const clonedResponse = response.clone();
+    
     // Read the response body
-    const data = await response.json();
-
-    // Return the response from the FastAPI backend
-    return NextResponse.json(data, { status: response.status });
+    try {
+      const data = await clonedResponse.json();
+      return NextResponse.json(data, { status: response.status });
+    } catch (error) {
+      // If response is not JSON, return the raw text
+      const text = await response.text();
+      return new NextResponse(text, {
+        status: response.status,
+        headers: {
+          'Content-Type': response.headers.get('content-type') || 'text/plain',
+        },
+      });
+    }
   } catch (error) {
     console.error('API proxy error:', error);
     return NextResponse.json(
-      { error: 'Failed to delete data via API' },
+      { error: 'Failed to delete data via API', details: error instanceof Error ? error.message : String(error) },
       { status: 500 }
     );
   }

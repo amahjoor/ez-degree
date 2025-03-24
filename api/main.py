@@ -64,6 +64,26 @@ class ConcentrationInfo(BaseModel):
 class ConcentrationList(BaseModel):
     concentrations: List[ConcentrationInfo] = Field(..., description="List of available concentrations for the major")
 
+# New models for course difficulty data
+class ProfessorRating(BaseModel):
+    name: str = Field(..., description="Professor's name")
+    difficulty: float = Field(..., description="Professor's difficulty rating (1-5)")
+    rating: float = Field(..., description="Professor's overall rating (1-5)")
+
+class CourseDifficulty(BaseModel):
+    professors: List[ProfessorRating] = Field(..., description="List of professors teaching this course and their ratings")
+    average_difficulty: float = Field(..., description="Average difficulty rating for the course")
+    difficulty_level: str = Field(..., description="Difficulty level category (Easy, Moderate, Difficult)")
+    num_professors_rated: int = Field(..., description="Number of professors with ratings for this course")
+
+class CourseWithDifficulty(BaseModel):
+    code: str = Field(..., description="Course code (e.g., CS 310)")
+    title: str = Field(..., description="Course title")
+    credits: str = Field(..., description="Number of credits for the course")
+    description: Optional[str] = Field(None, description="Course description")
+    prerequisites: Optional[str] = Field(None, description="Course prerequisites")
+    difficulty: Optional[CourseDifficulty] = Field(None, description="Course difficulty information")
+
 app = FastAPI(
     title="GMU Course API",
     description="API for GMU course information and degree requirements",
@@ -75,7 +95,7 @@ app = FastAPI(
 # Add CORS middleware to allow cross-origin requests from the frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],  # Allow requests from Next.js dev server
+    allow_origins=["http://localhost:3000", "http://localhost:3001", "*"],  # Allow requests from Next.js dev server (including fallback port)
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"],  # Allow all headers
@@ -147,6 +167,20 @@ def load_major_requirements(major_id):
     except Exception as e:
         print(f"Error loading major requirements: {e}")
         return None
+
+# Helper function to load course difficulty data
+def get_course_difficulty(course_code):
+    # Path to course difficulty data
+    difficulty_path = os.path.join(REQUIREMENTS_DIR, "professors", "course_difficulty.json")
+    
+    if not os.path.exists(difficulty_path):
+        return None
+    
+    with open(difficulty_path, 'r') as f:
+        difficulty_data = json.load(f)
+    
+    # Return difficulty data for the requested course, if it exists
+    return difficulty_data.get(course_code, None)
 
 @app.get("/")
 async def root():
@@ -414,40 +448,105 @@ async def get_courses(
 
 @app.get("/courses/{course_code}")
 async def get_course(course_code: str):
-    """
-    Get detailed information about a specific course
-    """
-    db = get_session()
+    # First, check if it's a valid course code format
+    if not course_code or len(course_code.split()) < 2:
+        raise HTTPException(status_code=400, detail="Invalid course code format. Expected format: SUBJ NUM (e.g., CS 310)")
+    
+    parts = course_code.split()
+    subject_code = parts[0].upper()
+    course_number = parts[1]
+    
+    # Construct the standardized course code with a space between subject and number
+    standard_course_code = f"{subject_code} {course_number}"
+    
     try:
-        # Clean up the course code: remove extra spaces and convert to uppercase
-        course_code = " ".join(course_code.upper().split())
+        # Get a database session
+        session = get_session()
         
-        course = db.query(DbCourse).filter(
-            (DbCourse.course_code == course_code) |  # Try exact match
-            (DbCourse.course_code == course_code.replace(" ", "")) |  # Try without space
-            (DbCourse.course_code == f"{course_code[0:2]} {course_code[2:]}") # Try with space
-        ).first()
-        
-        if not course:
-            raise HTTPException(
-                status_code=404, 
-                detail=f"Course {course_code} not found"
-            )
+        try:
+            # Query the database
+            course = session.query(DbCourse).filter(DbCourse.code == standard_course_code).first()
             
-        return {
-            "course_code": course.course_code,
-            "title": course.title,
-            "credits": course.credits,
-            "description": course.description,
-            "subject": course.subject_id,
-            "prerequisites": course.prerequisites,
-            "corequisites": course.corequisites,
-            "restrictions": course.restrictions,
-            "notes": course.notes
-        }
+            if course:
+                # Convert SQLAlchemy object to dict
+                course_dict = {c: getattr(course, c) for c in course.__table__.columns.keys()}
+                
+                # Get course difficulty data
+                difficulty_data = get_course_difficulty(standard_course_code)
+                
+                # Add difficulty data
+                course_dict["difficulty"] = difficulty_data
+                
+                return course_dict
+        except Exception as e:
+            # Log the database error but continue with fallback
+            print(f"Database error: {e}")
         
+        # If not found in the database or database error, try to find it in the JSON files
+        # Construct the path to the JSON file for this subject
+        subject_file = os.path.join(REQUIREMENTS_DIR, "courses", f"{subject_code.lower()}_courses.json")
+        
+        if os.path.exists(subject_file):
+            with open(subject_file, 'r') as f:
+                subject_data = json.load(f)
+                
+                for c in subject_data.get('courses', []):
+                    if c.get('Code', '').upper() == standard_course_code.upper():
+                        # Get course difficulty data
+                        difficulty_data = get_course_difficulty(standard_course_code)
+                        
+                        # Add difficulty data to course
+                        course_data = {
+                            **c,
+                            "difficulty": difficulty_data
+                        }
+                        return course_data
+        
+        # If we still couldn't find it, raise a 404
+        raise HTTPException(status_code=404, detail=f"Course {course_code} not found")
+    
+    except HTTPException as he:
+        # Re-raise HTTP exceptions
+        raise he
+    except Exception as e:
+        # Log and return a more detailed error
+        print(f"Error retrieving course {course_code}: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving course: {str(e)}"
+        )
     finally:
-        db.close()
+        # Ensure session is closed if it was opened
+        if 'session' in locals():
+            session.close()
+
+# New endpoint specifically for course difficulty
+@app.get("/courses/{course_code}/difficulty", 
+         response_model=Optional[CourseDifficulty],
+         summary="Get course difficulty",
+         description="Returns difficulty information for a specific course",
+         response_description="Difficulty data for the specified course")
+async def get_course_difficulty_endpoint(
+    course_code: str = Path(..., 
+                       description="Course code to retrieve difficulty for", 
+                       example="CS 310")
+):
+    # Standardize course code format
+    parts = course_code.split()
+    if len(parts) < 2:
+        raise HTTPException(status_code=400, detail="Invalid course code format. Expected format: SUBJ NUM (e.g., CS 310)")
+    
+    subject_code = parts[0].upper()
+    course_number = parts[1]
+    standard_course_code = f"{subject_code} {course_number}"
+    
+    # Get difficulty data
+    difficulty_data = get_course_difficulty(standard_course_code)
+    
+    if not difficulty_data:
+        raise HTTPException(status_code=404, detail=f"No difficulty data found for {course_code}")
+    
+    return difficulty_data
 
 @app.get("/subjects/")
 async def get_subjects():
@@ -465,6 +564,28 @@ async def get_subjects():
             }
             for subject in subjects
         ]
+    except Exception as e:
+        # Fallback to scanning JSON files if database connection fails
+        subjects_map = {}
+        courses_dir = os.path.join(REQUIREMENTS_DIR, "courses")
+        if os.path.exists(courses_dir):
+            for filename in os.listdir(courses_dir):
+                if filename.endswith('_courses.json'):
+                    subject_code = filename.split('_')[0].upper()
+                    subject_file = os.path.join(courses_dir, filename)
+                    try:
+                        with open(subject_file, 'r') as f:
+                            data = json.load(f)
+                            if 'subject' in data:
+                                subjects_map[subject_code] = {
+                                    "id": subject_code,
+                                    "name": data.get('subject', subject_code),
+                                    "course_count": len(data.get('courses', []))
+                                }
+                    except Exception:
+                        pass
+        
+        return list(subjects_map.values())
     finally:
         db.close()
 
