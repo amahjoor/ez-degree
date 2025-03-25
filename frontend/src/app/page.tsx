@@ -82,16 +82,16 @@ interface CourseNodeData {
   category?: string;
   categoryColor: string;
   isLabel?: boolean;
-  relationshipToSelected?: string;
+  relationshipToSelected?: string | null;
   isHighlighted?: boolean;
 }
 
-// Type for our custom ReactFlow nodes
-interface CourseNode extends FlowNode {
+// Define type for our node
+type CourseNode = Omit<FlowNode, 'data'> & {
   data: CourseNodeData;
-}
+};
 
-// Type for edge data
+// Define interface for our edge data
 interface EdgeData {
   id: string;
   type: string;
@@ -99,10 +99,10 @@ interface EdgeData {
   label?: string;
 }
 
-// Type for our custom ReactFlow edges
-interface CourseEdge extends FlowEdge {
+// Define type for our edge
+type CourseEdge = Omit<FlowEdge, 'data'> & {
   data: EdgeData;
-}
+};
 
 // Parse prerequisites string
 const parsePrerequisites = (prereqString?: string): string[] => {
@@ -143,18 +143,18 @@ const parsePrerequisites = (prereqString?: string): string[] => {
 function CourseNode({ data }: { data: CourseNodeData }) {
   // If this is a category label, render a different component
   if (data.isLabel) {
-    return (
-      <div
+  return (
+    <div 
         className="flex items-center justify-center rounded-md px-4 py-2 shadow-md text-white font-bold text-lg"
-        style={{
+      style={{ 
           backgroundColor: data.categoryColor,
           minWidth: '120px',
           textAlign: 'center'
         }}
       >
         {data.label}
-      </div>
-    );
+    </div>
+  );
   }
 
   // Determine border style based on relationship to selected node
@@ -502,7 +502,8 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     const updatedNodes = nodes.map(node => {
       const isSelected = node.id === selectedNode;
       const isConnected = selectedNode ? connectedNodeIds.has(node.id) : true;
-      const matchesCategory = !shouldApplyCategoryFilter || filteredCategories.includes(node.data.category);
+      const matchesCategory = !shouldApplyCategoryFilter || 
+        filteredCategories.includes(((node.data as any)?.category || '') as string);
       
       const isPrereq = selectedNode && currentEdges
         .filter(edge => edge.target === selectedNode && edge.data?.type === 'prereq')
@@ -602,23 +603,26 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     const selectedNodeObj = nodes.find(node => node.id === selectedNode);
     if (!selectedNodeObj) return null;
     
-    // Fix type issue by casting to proper type
-    const selectedNodeData = selectedNodeObj.data as CourseNodeData;
+    // First convert to unknown then to CourseNodeData to avoid TypeScript errors
+    const selectedNodeData = (selectedNodeObj.data as unknown) as CourseNodeData;
     
-    // Find prerequisites
-    const prerequisites = nodes.filter(node => 
-      (node.data as CourseNodeData).relationshipToSelected === 'prereq'
-    );
+    // Find prerequisites - filter and ensure safe type casting
+    const prerequisites = nodes.filter(node => {
+      const nodeData = (node.data as unknown) as CourseNodeData;
+      return nodeData.relationshipToSelected === 'prereq';
+    });
     
-    // Find corequisites
-    const corequisites = nodes.filter(node => 
-      (node.data as CourseNodeData).relationshipToSelected === 'coreq'
-    );
+    // Find corequisites - filter and ensure safe type casting
+    const corequisites = nodes.filter(node => {
+      const nodeData = (node.data as unknown) as CourseNodeData;
+      return nodeData.relationshipToSelected === 'coreq';
+    });
     
-    // Find courses that this is a prerequisite for
-    const dependentCourses = nodes.filter(node => 
-      (node.data as CourseNodeData).relationshipToSelected === 'dependent'
-    );
+    // Find courses that this is a prerequisite for - filter and ensure safe type casting
+    const dependentCourses = nodes.filter(node => {
+      const nodeData = (node.data as unknown) as CourseNodeData;
+      return nodeData.relationshipToSelected === 'dependent';
+    });
     
     return (
       <Panel position="top-right" className="bg-white p-4 rounded shadow-md w-[300px]">
@@ -635,11 +639,14 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
           <div className="mb-2">
             <h4 className="font-semibold text-sm text-red-700">Prerequisites:</h4>
             <ul className="text-xs ml-2">
-              {prerequisites.map(node => (
-                <li key={`prereq-${node.id}`} className="mt-1">
-                  <span className="font-medium">{(node.data as CourseNodeData).label}</span> - {(node.data as CourseNodeData).title}
-                </li>
-              ))}
+              {prerequisites.map(node => {
+                const nodeData = (node.data as unknown) as CourseNodeData;
+                return (
+                  <li key={`prereq-${node.id}`} className="mt-1">
+                    <span className="font-medium">{nodeData.label}</span> - {nodeData.title}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -648,11 +655,14 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
           <div className="mb-2">
             <h4 className="font-semibold text-sm text-blue-700">Corequisites:</h4>
             <ul className="text-xs ml-2">
-              {corequisites.map(node => (
-                <li key={`coreq-${node.id}`} className="mt-1">
-                  <span className="font-medium">{(node.data as CourseNodeData).label}</span> - {(node.data as CourseNodeData).title}
-                </li>
-              ))}
+              {corequisites.map(node => {
+                const nodeData = (node.data as unknown) as CourseNodeData;
+                return (
+                  <li key={`coreq-${node.id}`} className="mt-1">
+                    <span className="font-medium">{nodeData.label}</span> - {nodeData.title}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -661,11 +671,14 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
           <div className="mb-2">
             <h4 className="font-semibold text-sm text-green-700">Required for:</h4>
             <ul className="text-xs ml-2">
-              {dependentCourses.map(node => (
-                <li key={`dependent-${node.id}`} className="mt-1">
-                  <span className="font-medium">{(node.data as CourseNodeData).label}</span> - {(node.data as CourseNodeData).title}
-                </li>
-              ))}
+              {dependentCourses.map(node => {
+                const nodeData = (node.data as unknown) as CourseNodeData;
+                return (
+                  <li key={`dependent-${node.id}`} className="mt-1">
+                    <span className="font-medium">{nodeData.label}</span> - {nodeData.title}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -1522,9 +1535,9 @@ export default function Home() {
         let nodeCategoryColor = categoryColor;
         
         const node = {
-          data: {
+        data: {
             id: normalizedId,
-            label: course.code,
+          label: course.code,
             title: course.title,
             credits: course.credits,
             color: nodeCategoryColor,
@@ -1579,7 +1592,7 @@ export default function Home() {
         });
       }
     });
-
+    
     console.log("Created nodes:", nodeElements.length);
     console.log("Created edges:", edgeElements.length);
 
@@ -2134,17 +2147,14 @@ export default function Home() {
                           })();
                           
                           const isActive = filteredCategories.includes(category);
-                          const hasHidden = count.visible < count.total;
                           
                           return (
                             <div
                               key={category}
-                              className={`flex items-center px-3 py-2 rounded border cursor-pointer transition-colors ${
+                              className={`flex items-center px-3 py-2 mb-1 rounded cursor-pointer transition-all ${
                                 isActive 
-                                  ? 'bg-blue-50 border-blue-200 shadow-sm' 
-                                  : filteredCategories.length > 0
-                                    ? 'opacity-60 border-gray-200 hover:opacity-100'
-                                    : 'border-gray-200 hover:bg-gray-50'
+                                  ? 'border-2 border-black shadow-md' 
+                                  : 'border border-gray-200 hover:border-gray-400'
                               }`}
                               onClick={() => {
                                 if (window.courseGraphState?.toggleCategoryFilter) {
@@ -2152,21 +2162,21 @@ export default function Home() {
                                 }
                               }}
                             >
+                              {/* Color indicator with larger size when selected */}
                               <div 
-                                className="w-3 h-3 mr-2 rounded-sm" 
+                                className={`${isActive ? 'w-5 h-5' : 'w-4 h-4'} mr-2 rounded-sm flex-shrink-0`}
                                 style={{ backgroundColor: color }}
                               ></div>
-                              <span className="text-sm font-medium">{category}</span>
                               
-                              <span className="text-xs text-gray-500 ml-2">
+                              {/* Text with bold when selected */}
+                              <span className={`text-sm ${isActive ? 'font-semibold' : ''}`}>{category}</span>
+                              
+                              {/* Counter */}
+                              <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
+                                isActive ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-600'
+                              }`}>
                                 {count.visible}/{count.total}
                               </span>
-                              
-                              {isActive && (
-                                <svg className="w-4 h-4 ml-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                              )}
                             </div>
                           );
                         })}
