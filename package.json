@@ -9,6 +9,11 @@
     "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
   },
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "@types/cytoscape": "^3.21.9",
+    "concurrently": "^8.2.2",
+    "cytoscape": "^3.31.1",
+    "cytoscape-dagre": "^2.5.0",
+    "react-cytoscapejs": "^2.0.0",
+    "reactflow": "^11.11.4"
   }
-} 
+}

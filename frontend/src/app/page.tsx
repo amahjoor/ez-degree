@@ -2,6 +2,25 @@
 
 import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
+import ReactFlow, {
+  Controls,
+  Background,
+  MarkerType,
+  Panel,
+  useNodesState,
+  useEdgesState,
+  ReactFlowProvider,
+  Node as FlowNode,
+  Edge as FlowEdge,
+  ConnectionLineType,
+  Handle,
+  Position,
+  ConnectionMode,
+  MiniMap,
+  NodeTypes,
+  EdgeTypes,
+} from 'reactflow';
+import 'reactflow/dist/style.css';
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -36,6 +55,8 @@ type RequirementCourse = {
   title: string;
   credits: number;
   alternatives: any[];
+  prerequisites?: string;
+  corequisites?: string;
 };
 
 type Category = {
@@ -50,6 +71,398 @@ type Requirements = {
   categories: Category[];
   concentrations?: any[];
 };
+
+// Define interfaces for our custom node data
+interface CourseNodeData {
+  label: string;
+  title?: string;
+  credits?: number;
+  prerequisites?: string;
+  category?: string;
+  categoryColor: string;
+}
+
+// Parse prerequisites string
+const parsePrerequisites = (prereqString?: string): string[] => {
+  if (!prereqString) return [];
+  
+  // Extract course codes (e.g., CS 310, MATH 113) - handle both with and without spaces
+  // The regex matches:
+  // - 2-4 uppercase letters (department code)
+  // - Optional space
+  // - 3 digits (course number)
+  const regex = /[A-Z]{2,4}\s*\d{3}/g;
+  
+  // First normalize spaces to ensure consistent matching
+  const normalizedString = prereqString.replace(/\u00a0/g, ' ').replace(/\s+/g, ' ');
+  const matches = normalizedString.match(regex) || [];
+  
+  // Normalize the matches to ensure they all have a space
+  const normalizedMatches = matches.map(match => {
+    // If there's no space between the department code and course number, add one
+    if (!/\s/.test(match)) {
+      // Find where the numbers start
+      const numberIndex = match.search(/\d/);
+      if (numberIndex > 0) {
+        return match.slice(0, numberIndex) + ' ' + match.slice(numberIndex);
+      }
+    }
+    return match;
+  });
+  
+  // Log the matches for debugging
+  console.log('Prerequisite string:', prereqString);
+  console.log('Extracted prereqs:', normalizedMatches);
+  
+  return normalizedMatches;
+};
+
+// Custom node component for courses
+function CourseNode({ data }: { data: CourseNodeData }) {
+  return (
+    <div
+      className="flex flex-col items-center justify-center rounded-lg shadow-md p-3 w-[150px] h-[100px] text-center"
+      style={{
+        backgroundColor: data.categoryColor + '80', // Adding transparency
+        borderColor: data.categoryColor,
+        borderWidth: '2px',
+        borderStyle: 'solid',
+      }}
+    >
+      {/* Handle for incoming edges at the top */}
+      <Handle
+        type="target"
+        position={Position.Top}
+        id="top"
+        style={{ 
+          background: '#555', 
+          width: '8px', 
+          height: '8px', 
+          top: '-4px',
+          borderRadius: '50%'
+        }}
+      />
+      
+      {/* Handles for outgoing edges at multiple positions to support better straight connections */}
+      <Handle
+        type="source"
+        position={Position.Bottom}
+        id="bottom"
+        style={{ 
+          background: '#555', 
+          width: '8px', 
+          height: '8px', 
+          bottom: '-4px',
+          borderRadius: '50%'
+        }}
+      />
+      
+      <Handle
+        type="source"
+        position={Position.Left}
+        id="left"
+        style={{ 
+          background: '#555', 
+          width: '8px', 
+          height: '8px', 
+          left: '-4px',
+          borderRadius: '50%'
+        }}
+      />
+      
+      <Handle
+        type="source"
+        position={Position.Right}
+        id="right"
+        style={{ 
+          background: '#555', 
+          width: '8px', 
+          height: '8px', 
+          right: '-4px',
+          borderRadius: '50%'
+        }}
+      />
+      
+      <div className="font-bold text-lg">{data.label}</div>
+      {data.title && <div className="text-sm">{data.title}</div>}
+      {data.credits !== undefined && <div className="text-xs text-gray-600">{data.credits} Credits</div>}
+    </div>
+  );
+}
+
+// Flow Graph Component
+interface FlowGraphProps {
+  elements: any[];
+  categoryColors: Record<string, string>;
+}
+
+function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
+  const [nodes, setNodes, onNodesChange] = useNodesState<FlowNode[]>([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState<FlowEdge[]>([]);
+  
+  // Configure default edge options for ReactFlow
+  const defaultEdgeOptions = useMemo(() => ({
+    type: 'straight', // Use straight lines for direct connections
+    style: { strokeWidth: 3 },
+    animated: true,
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      width: 20,
+      height: 20,
+    },
+  }), []);
+
+  // Memoize nodeTypes to prevent recreation on every render
+  const nodeTypes = useMemo(() => ({ 
+    courseNode: CourseNode 
+  }), []);
+
+  // Apply layout when the reference is available, elements change, or registration completes
+  useEffect(() => {
+    if (!elements || elements.length === 0) {
+      console.log("No elements provided to FlowGraph");
+      return;
+    }
+
+    try {
+      console.log("Original elements received:", elements);
+      console.log("Elements structure sample:", JSON.stringify(elements[0]));
+      
+      // Extract nodes and edges from elements
+      const nodeElements = elements.filter(el => !el.data.source && !el.data.target);
+      const edgeElements = elements.filter(el => el.data.source && el.data.target);
+      
+      console.log("Node elements:", nodeElements.length);
+      if (nodeElements.length > 0) {
+        console.log("Sample node structure:", JSON.stringify(nodeElements[0]));
+      }
+      
+      console.log("Edge elements:", edgeElements.length);
+      if (edgeElements.length > 0) {
+        console.log("Sample edge structure:", JSON.stringify(edgeElements[0]));
+      }
+      
+      // Create ReactFlow nodes with better initial layout
+      const courseNodes: FlowNode[] = nodeElements.map((el, index) => {
+        // Use the position from the source if available, otherwise calculate
+        const position = el.position || {
+          x: 500 + 300 * Math.cos((index / nodeElements.length) * 2 * Math.PI),
+          y: 350 + 300 * Math.sin((index / nodeElements.length) * 2 * Math.PI)
+        };
+        
+        const node = {
+          id: el.data.id,
+          type: 'courseNode',
+          position: position,
+          data: {
+            label: el.data.label || el.data.id,
+            title: el.data.title || '',
+            credits: el.data.credits || 0,
+            prerequisites: el.data.prerequisites,
+            category: el.data.category,
+            categoryColor: el.data.color || '#cccccc'
+          }
+        };
+        console.log(`Created node: ${node.id} at position (${position.x}, ${position.y})`);
+        return node;
+      });
+      
+      // Create ReactFlow edges with explicit source and target IDs
+      const courseEdges: FlowEdge[] = edgeElements.map((el, edgeIndex) => {
+        // Make sure each edge has a unique ID
+        const uniqueId = `edge-${el.data.id || `${el.data.source}-to-${el.data.target}`}-${edgeIndex}`;
+        
+        // Log each edge for debugging
+        console.log(`Creating flow edge: ${el.data.source} -> ${el.data.target} (${el.data.type || 'prereq'}) with ID ${uniqueId}`);
+        
+        return {
+          id: uniqueId,
+          source: el.data.source,
+          target: el.data.target,
+          // Use explicit sourceHandle and targetHandle
+          sourceHandle: 'bottom', // Edge starts from bottom of source node
+          targetHandle: 'top',    // Edge ends at top of target node
+          type: 'straight',     // Use straight lines for direct connections
+          animated: el.data.type === 'coreq',
+          style: { 
+            strokeWidth: 3,
+            stroke: el.data.type === 'coreq' ? '#0000ff' : '#ff0000',
+          },
+          markerEnd: {
+            type: MarkerType.ArrowClosed,
+            width: 20,
+            height: 20,
+            color: el.data.type === 'coreq' ? '#0000ff' : '#ff0000',
+          },
+          label: el.data.type || 'prereq',
+          labelStyle: { 
+            fill: el.data.type === 'coreq' ? '#0000ff' : '#ff0000',
+            fontWeight: 700,
+            fontSize: 12
+          }
+        };
+      });
+      
+      console.log("Final ReactFlow nodes:", courseNodes.length);
+      console.log("Final ReactFlow edges:", courseEdges.length);
+      
+      // Set the nodes and edges
+      setNodes(courseNodes);
+      setEdges(courseEdges);
+    } catch (error) {
+      console.error('Error converting elements to ReactFlow format:', error);
+    }
+  }, [elements, setNodes, setEdges]);
+  
+  return (
+    <ReactFlow
+      nodes={nodes}
+      edges={edges}
+      onNodesChange={onNodesChange}
+      onEdgesChange={onEdgesChange}
+      nodeTypes={nodeTypes}
+      fitView
+      fitViewOptions={{ padding: 0.5 }}
+      minZoom={0.1}
+      maxZoom={2}
+      defaultViewport={{ x: 0, y: 0, zoom: 0.8 }}
+      defaultEdgeOptions={defaultEdgeOptions}
+      connectionLineType={ConnectionLineType.Straight}
+      connectionMode={ConnectionMode.Loose}
+      proOptions={{ hideAttribution: true }}
+      elementsSelectable={true}
+      selectNodesOnDrag={false}
+      nodesFocusable={true}
+      nodesConnectable={false}
+    >
+      <Background color="#f8f8f8" gap={16} />
+      <Controls />
+      <Panel position="top-left">
+        <div className="bg-white p-3 rounded shadow-md text-sm">
+          <p className="font-bold mb-2">Course Dependencies</p>
+          <p className="flex items-center mb-1">
+            <span className="inline-block w-3 h-3 mr-2 bg-red-500"></span> 
+            <span>Prerequisites (must take before)</span>
+          </p>
+          <p className="flex items-center">
+            <span className="inline-block w-3 h-3 mr-2 bg-blue-500"></span> 
+            <span>Corequisites (take together)</span>
+          </p>
+        </div>
+      </Panel>
+    </ReactFlow>
+  );
+}
+
+// Helper function to get course category from code
+function getCourseCategory(code: string): string {
+  // Extract the course prefix (e.g., "CS" from "CS 113")
+  const match = code.match(/^([A-Z]+)/);
+  return match ? match[1] : "Other";
+}
+
+// Fix normalizeCourseId function
+function normalizeCourseId(code: string): string {
+  // Trim whitespace and ensure consistent formatting
+  return code.trim().replace(/\s+/g, ' ');
+}
+
+// Fix getCategoryColor function
+function getCategoryColor(code: string): string {
+  // Extract the department code (e.g., CS, MATH)
+  const department = getCourseCategory(code);
+  
+  // Map of department to colors
+  const departmentColors: Record<string, string> = {
+    'CS': '#4285F4',    // Google Blue
+    'MATH': '#EA4335',  // Google Red
+    'PHYS': '#FBBC05',  // Google Yellow
+    'CHEM': '#34A853',  // Google Green
+    'BIOL': '#8F44AD',  // Purple
+    'ECON': '#F39C12',  // Orange
+    'ENGL': '#16A085',  // Teal
+    'HIST': '#E74C3C',  // Bright Red
+  };
+  
+  return departmentColors[department] || '#7F8C8D'; // Default to gray
+}
+
+// Add the addEdgeIfNotExists function definition
+function addEdgeIfNotExists(
+  sourceId: string,
+  targetId: string,
+  edgeType: string,
+  index: number,
+  edgeElements: any[],
+  edgeTracker: Set<string>,
+  nodeMap: Record<string, any>,
+  isPrereq: boolean = true
+) {
+  const edgeSignature = `${sourceId}-${targetId}-${edgeType}`;
+  if (edgeTracker.has(edgeSignature)) {
+    console.log(`Skipping duplicate edge: ${edgeSignature}`);
+    return;
+  }
+  
+  // Make sure we have both source and target nodes
+  if (!nodeMap[sourceId] || !nodeMap[targetId]) {
+    console.warn(`Cannot create edge: missing node for ${sourceId} or ${targetId}`);
+    return;
+  }
+  
+  // Choose appropriate handles based on node positions
+  let sourceHandle = "bottom";
+  let targetHandle = "top";
+  
+  // If we have node positions, determine best handles
+  if (nodeMap[sourceId].position && nodeMap[targetId].position) {
+    const sourcePos = nodeMap[sourceId].position;
+    const targetPos = nodeMap[targetId].position;
+    
+    // Calculate angle between nodes
+    const dx = targetPos.x - sourcePos.x;
+    const dy = targetPos.y - sourcePos.y;
+    const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+    
+    // Choose handles based on angle
+    if (angle > -45 && angle < 45) {
+      // Target is to the right
+      sourceHandle = "right";
+      targetHandle = "left";
+    } else if (angle >= 45 && angle < 135) {
+      // Target is below
+      sourceHandle = "bottom";
+      targetHandle = "top";
+    } else if (angle >= 135 || angle < -135) {
+      // Target is to the left
+      sourceHandle = "left";
+      targetHandle = "right";
+    } else {
+      // Target is above
+      sourceHandle = "top";
+      targetHandle = "bottom";
+    }
+  }
+  
+  const edgeId = `${sourceId}-to-${targetId}-${edgeType}-${index}`;
+  
+  // Create edge with data in the format expected by FlowGraph
+  const edge = {
+    data: {
+      id: edgeId,
+      source: sourceId,
+      target: targetId,
+      type: edgeType,
+      isPrereq: isPrereq,
+      label: edgeType
+    }
+  };
+  
+  console.log(`Creating ${edgeType} edge: ${sourceId} -> ${targetId} (ID: ${edgeId})`);
+  
+  edgeElements.push(edge);
+  edgeTracker.add(edgeSignature);
+}
 
 export default function Home() {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -77,6 +490,17 @@ export default function Home() {
   const [requirementsError, setRequirementsError] = useState<string>('');
   const [expandedCategories, setExpandedCategories] = useState<{[key: string]: boolean}>({});
   const [activeTab, setActiveTab] = useState<'courses' | 'requirements'>('courses');
+  const [graphView, setGraphView] = useState<boolean>(false);
+  const [nodes, setNodes] = useState<any[]>([]);
+  const [edges, setEdges] = useState<any[]>([]);
+  const [categoryColors, setCategoryColors] = useState<Record<string, string>>({});
+  const [reactFlowElements, setReactFlowElements] = useState<any[]>([]);
+  
+  // Colors for different categories
+  const colors = [
+    '#e6f7ff', '#fff7e6', '#f6ffe6', '#ffe6e6', '#e6e6ff', 
+    '#ffe6f7', '#f7ffe6', '#e6ffe6', '#e6ffff', '#ffe6ff'
+  ];
 
   // Fetch subjects on component mount
   useEffect(() => {
@@ -392,6 +816,185 @@ export default function Home() {
     }
   };
 
+  // Create node graph when requirements data changes
+  useEffect(() => {
+    if (!graphView || !requirements || requirementsLoading) {
+      return;
+    }
+    
+    try {
+      // Get all courses from the requirements
+      const allCourses: RequirementCourse[] = [];
+      const courseMap: Record<string, RequirementCourse> = {};
+      const categoryMap: Record<string, { name: string, color: string }> = {};
+      
+      // Assign colors to categories
+      requirements.categories.forEach((category, index) => {
+        categoryMap[category.name] = {
+          name: category.name,
+          color: colors[index % colors.length]
+        };
+      });
+      
+      setCategoryColors(
+        Object.fromEntries(
+          Object.entries(categoryMap).map(([name, data]) => [name, data.color])
+        )
+      );
+      
+      // Collect all courses
+      requirements.categories.forEach((category) => {
+        category.courses.forEach((course) => {
+          const courseCode = course.code;
+          if (!courseMap[courseCode]) {
+            // Clone the course and add it to our collection
+            courseMap[courseCode] = {
+              ...course,
+              prerequisites: '',
+              corequisites: ''
+            };
+            allCourses.push(courseMap[courseCode]);
+          }
+        });
+      });
+      
+      // Fetch prerequisites for each course
+      const fetchPrerequisites = async () => {
+        await Promise.all(
+          allCourses.map(async (course) => {
+            try {
+              const courseResponse = await fetch(`${API_BASE_URL}/courses/${encodeURIComponent(course.code)}`);
+              if (courseResponse.ok) {
+                const courseData = await courseResponse.json();
+                
+                // Debug log to check if prerequisites are being fetched correctly
+                console.log(`Course ${course.code} prerequisites:`, courseData.prerequisites);
+                
+                course.prerequisites = courseData.prerequisites;
+                course.corequisites = courseData.corequisites;
+              }
+            } catch (error) {
+              console.error(`Error fetching details for ${course.code}:`, error);
+            }
+          })
+        );
+        
+        // After fetching prerequisites, create the graph
+        const { nodeElements, edgeElements } = createGraph(allCourses);
+        setNodes(nodeElements);
+        setEdges(edgeElements);
+        setReactFlowElements([...nodeElements, ...edgeElements]);
+      };
+      
+      fetchPrerequisites();
+    } catch (error) {
+      console.error('Error preparing graph data:', error);
+    }
+  }, [requirements, graphView, requirementsLoading]);
+  
+  // Function to create the graph
+  const createGraph = (allCourses: RequirementCourse[]) => {
+    const nodeElements: any[] = [];
+    const edgeElements: any[] = [];
+    const edgeTracker = new Set<string>();
+    const nodeMap: Record<string, any> = {};
+
+    // Group courses by category
+    const coursesByCategory: Record<string, RequirementCourse[]> = {};
+    allCourses.forEach(course => {
+      const category = getCourseCategory(course.code);
+      if (!coursesByCategory[category]) {
+        coursesByCategory[category] = [];
+      }
+      coursesByCategory[category].push(course);
+    });
+
+    // Calculate positions for each category and create nodes
+    const categories = Object.keys(coursesByCategory);
+    categories.forEach((category, categoryIndex) => {
+      const coursesInCategory = coursesByCategory[category];
+      const categoryAngle = (2 * Math.PI * categoryIndex) / categories.length;
+      const categoryX = Math.cos(categoryAngle) * 500;
+      const categoryY = Math.sin(categoryAngle) * 500;
+      
+      // Position courses within this category in a grid-like manner
+      const coursesPerRow = Math.ceil(Math.sqrt(coursesInCategory.length));
+      
+      coursesInCategory.forEach((course, courseIndex) => {
+        const row = Math.floor(courseIndex / coursesPerRow);
+        const col = courseIndex % coursesPerRow;
+        
+        // Space courses 200px apart within their category cluster
+        const x = categoryX + (col - coursesPerRow / 2) * 200;
+        const y = categoryY + (row - Math.floor(coursesInCategory.length / coursesPerRow) / 2) * 150;
+        
+        const normalizedId = normalizeCourseId(course.code);
+        const courseColor = getCategoryColor(course.code);
+        
+        const node = {
+          data: {
+            id: normalizedId,
+            label: course.code,
+            title: course.title,
+            credits: course.credits,
+            color: courseColor,
+            category: category
+          },
+          position: { x, y }
+        };
+        
+        nodeElements.push(node);
+        nodeMap[normalizedId] = node;
+      });
+    });
+
+    // Second pass: create all edges
+    allCourses.forEach(course => {
+      const normalizedSourceId = normalizeCourseId(course.code);
+      
+      // Create edges for prerequisites
+      if (course.prerequisites) {
+        const prereqs = parsePrerequisites(course.prerequisites);
+        prereqs.forEach((prereq, index) => {
+          const normalizedPrereqId = normalizeCourseId(prereq);
+          addEdgeIfNotExists(
+            normalizedPrereqId, 
+            normalizedSourceId, 
+            'prereq', 
+            index, 
+            edgeElements, 
+            edgeTracker,
+            nodeMap,
+            true
+          );
+        });
+      }
+      
+      // Create edges for corequisites
+      if (course.corequisites) {
+        const coreqs = parsePrerequisites(course.corequisites);
+        coreqs.forEach((coreq, index) => {
+          const normalizedCoreqId = normalizeCourseId(coreq);
+          addEdgeIfNotExists(
+            normalizedSourceId, 
+            normalizedCoreqId, 
+            'coreq', 
+            index, 
+            edgeElements, 
+            edgeTracker,
+            nodeMap,
+            false
+          );
+        });
+      }
+    });
+
+    console.log("Created nodes:", nodeElements.length);
+    console.log("Created edges:", edgeElements.length);
+
+    return { nodeElements, edgeElements };
+  };
+
   // If API is not available, show a more helpful error message
   if (!isApiAvailable) {
     return (
@@ -503,7 +1106,16 @@ export default function Home() {
                         {selectedSubjects.length === 0 
                           ? "All Subjects" 
                           : selectedSubjects.length === 1
-                            ? subjects.find(s => s.id === selectedSubjects[0])?.id || "All Subjects"
+                            ? (() => {
+                                const selectedSubject = subjects.find(s => s.id === selectedSubjects[0]);
+                                if (!selectedSubject) return "All Subjects";
+                                
+                                // If the name is the same as the ID, just display the ID
+                                // Otherwise display ID - Name format
+                                return selectedSubject.id === selectedSubject.name 
+                                  ? selectedSubject.id
+                                  : `${selectedSubject.id} - ${selectedSubject.name}`;
+                              })()
                             : `${selectedSubjects.length} subjects selected`
                         }
                       </span>
@@ -552,7 +1164,13 @@ export default function Home() {
                                 checked={selectedSubjects.includes(subject.id)}
                                 readOnly
                               />
-                              <span>{subject.id} - {subject.name} ({subject.course_count})</span>
+                              <span>
+                                {subject.id === subject.name 
+                                  ? subject.id
+                                  : `${subject.id} - ${subject.name}`
+                                }
+                                {` (${subject.course_count})`}
+                              </span>
                             </div>
                           ))}
                         </div>
@@ -762,6 +1380,32 @@ export default function Home() {
                   </div>
                 )}
               </div>
+              
+              {/* View toggle - Add this section */}
+              {!requirementsLoading && requirements && (
+                <div className="mt-4 flex space-x-2">
+                  <button
+                    className={`px-4 py-2 rounded-md ${
+                      !graphView 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                    onClick={() => setGraphView(false)}
+                  >
+                    Table View
+                  </button>
+                  <button
+                    className={`px-4 py-2 rounded-md ${
+                      graphView 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                    onClick={() => setGraphView(true)}
+                  >
+                    Graph View
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Error message */}
@@ -779,8 +1423,8 @@ export default function Home() {
               </div>
             )}
 
-            {/* Requirements display */}
-            {!requirementsLoading && requirements && (
+            {/* Requirements display - only show this in table view */}
+            {!requirementsLoading && requirements && !graphView && (
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <h2 className="text-2xl font-bold mb-2">{requirements.degree_name}</h2>
                 <p className="text-lg mb-6">Total Credits: {requirements.total_credits}</p>
@@ -848,6 +1492,59 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+              </div>
+            )}
+            
+            {/* Graph View */}
+            {!requirementsLoading && requirements && graphView && (
+              <div>
+                {/* Legend */}
+                {Object.keys(categoryColors).length > 0 && (
+                  <div className="mb-4 p-4 bg-white border rounded-md">
+                    <h3 className="font-bold mb-2">Category Legend:</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {Object.entries(categoryColors).map(([category, color]) => (
+                        <div key={category} className="flex items-center">
+                          <div 
+                            className="w-4 h-4 mr-1 rounded" 
+                            style={{ backgroundColor: color }}
+                          ></div>
+                          <span className="text-sm">{category}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Status message */}
+                {reactFlowElements.length === 0 ? (
+                  <div className="mb-4 p-4 bg-yellow-50 border border-yellow-200 rounded-md text-yellow-800">
+                    <p className="font-semibold">Loading course graph...</p>
+                    <p className="text-sm mt-1">Please wait while we fetch course prerequisites and generate the visualization.</p>
+                  </div>
+                ) : (
+                  <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded-md text-blue-800">
+                    <p className="font-semibold">Graph Visualization</p>
+                    <p className="text-sm mt-1">Showing {nodes.length} courses and {edges.length} prerequisite connections. You can zoom and pan to explore.</p>
+                  </div>
+                )}
+                
+                {/* Flow chart - using ReactFlow */}
+                <div className="h-[700px] bg-white border rounded-md shadow-lg">
+                  <ReactFlowProvider>
+                    <FlowGraph 
+                      elements={reactFlowElements} 
+                      categoryColors={categoryColors} 
+                    />
+                  </ReactFlowProvider>
+                </div>
+              </div>
+            )}
+            
+            {/* Empty state - no major selected */}
+            {!requirementsLoading && !requirements && !requirementsError && (
+              <div className="bg-gray-50 border border-gray-200 rounded-md p-8 text-center">
+                <p className="text-gray-600">Select a major from the dropdown above to view degree requirements.</p>
               </div>
             )}
           </>
