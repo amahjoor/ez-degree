@@ -305,6 +305,8 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   // Use a ref to store connected edges to avoid dependency issues
   const edgesRef = useRef<FlowEdge[]>([]);
+  // Add state for category filters
+  const [filteredCategories, setFilteredCategories] = useState<string[]>([]);
   
   // Update the edges ref whenever edges change
   useEffect(() => {
@@ -444,10 +446,14 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     setSelectedNode(prevSelected => prevSelected === node.id ? null : node.id);
   }, []);
 
-  // Apply highlighting to nodes and edges based on selection
+  // Apply highlighting and filtering to nodes and edges based on selection and category filters
   useEffect(() => {
-    if (!selectedNode) {
-      // No selection, reset all nodes and edges to original state
+    // First check for category filters
+    const shouldApplyCategoryFilter = filteredCategories.length > 0;
+    
+    // If no node is selected and no category filters active, reset all nodes and edges 
+    if (!selectedNode && !shouldApplyCategoryFilter) {
+      // No selection or filters, reset all nodes and edges to original state
       setNodes(nodes => nodes.map(node => ({
         ...node,
         hidden: false,
@@ -476,41 +482,47 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     const currentEdges = edgesRef.current;
     
     // Find all connected edges (where selected node is source or target)
-    const connectedEdges = currentEdges.filter(
-      edge => edge.source === selectedNode || edge.target === selectedNode
-    );
+    let connectedEdges = currentEdges;
+    let connectedNodeIds = new Set<string>();
     
-    // Get IDs of all connected nodes
-    const connectedNodeIds = new Set<string>();
-    connectedNodeIds.add(selectedNode); // Add the selected node itself
-    connectedEdges.forEach(edge => {
-      connectedNodeIds.add(edge.source);
-      connectedNodeIds.add(edge.target);
-    });
-    
-    // Prepare node information for details panel
-    const prereqNodeIds = currentEdges
-      .filter(edge => edge.target === selectedNode && (edge.data as any)?.type === 'prereq')
-      .map(edge => edge.source);
+    if (selectedNode) {
+      connectedEdges = currentEdges.filter(
+        edge => edge.source === selectedNode || edge.target === selectedNode
+      );
       
-    const coreqNodeIds = currentEdges
-      .filter(edge => (edge.source === selectedNode || edge.target === selectedNode) && (edge.data as any)?.type === 'coreq')
-      .map(edge => edge.source === selectedNode ? edge.target : edge.source);
+      // Get IDs of all connected nodes
+      connectedNodeIds.add(selectedNode); // Add the selected node itself
+      connectedEdges.forEach(edge => {
+        connectedNodeIds.add(edge.source);
+        connectedNodeIds.add(edge.target);
+      });
+    }
     
-    const dependentNodeIds = currentEdges
-      .filter(edge => edge.source === selectedNode && (edge.data as any)?.type === 'prereq')
-      .map(edge => edge.target);
-    
-    // Update nodes - hide nodes that are not connected to the selected node
-    setNodes(nodes => nodes.map(node => {
+    // Create updated nodes array without triggering re-renders
+    const updatedNodes = nodes.map(node => {
       const isSelected = node.id === selectedNode;
-      const isConnected = connectedNodeIds.has(node.id);
-      const isPrereq = prereqNodeIds.includes(node.id);
-      const isCoreq = coreqNodeIds.includes(node.id);
-      const isDependent = dependentNodeIds.includes(node.id);
+      const isConnected = selectedNode ? connectedNodeIds.has(node.id) : true;
+      const matchesCategory = !shouldApplyCategoryFilter || filteredCategories.includes(node.data.category);
       
-      // Hide nodes that are not connected to the selected node
-      if (!isConnected) {
+      const isPrereq = selectedNode && currentEdges
+        .filter(edge => edge.target === selectedNode && edge.data?.type === 'prereq')
+        .map(edge => edge.source)
+        .includes(node.id);
+        
+      const isCoreq = selectedNode && currentEdges
+        .filter(edge => (edge.source === selectedNode || edge.target === selectedNode) && edge.data?.type === 'coreq')
+        .map(edge => edge.source === selectedNode ? edge.target : edge.source)
+        .includes(node.id);
+      
+      const isDependent = selectedNode && currentEdges
+        .filter(edge => edge.source === selectedNode && edge.data?.type === 'prereq')
+        .map(edge => edge.target)
+        .includes(node.id);
+      
+      // Hide nodes that don't match our criteria (not connected or filtered out by category)
+      const shouldBeHidden = (selectedNode && !isConnected) || !matchesCategory;
+      
+      if (shouldBeHidden) {
         return {
           ...node,
           hidden: true,
@@ -522,8 +534,8 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
         };
       }
       
-      // For connected nodes, show them with proper styling
-      let style: any = {
+      // For visible nodes, show them with proper styling
+      let style = {
         zIndex: 2,
         filter: 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.3))',
       };
@@ -554,23 +566,34 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
                   : null
         }
       };
-    }));
+    });
     
-    // Update edges - hide edges that don't connect to the selected node
-    setEdges(edges => edges.map(edge => {
-      const isConnected = edge.source === selectedNode || edge.target === selectedNode;
+    // Create updated edges array
+    const updatedEdges = edges.map(edge => {
+      const isConnectedToSelected = selectedNode ? (edge.source === selectedNode || edge.target === selectedNode) : true;
+      
+      // Get node visibility status from our updated nodes
+      const sourceVisible = updatedNodes.some(n => n.id === edge.source && !n.hidden);
+      const targetVisible = updatedNodes.some(n => n.id === edge.target && !n.hidden);
+      const bothNodesVisible = sourceVisible && targetVisible;
       
       return {
         ...edge,
-        hidden: !isConnected,
+        hidden: !isConnectedToSelected || !bothNodesVisible,
         style: {
           ...edge.style,
           opacity: 1,
-          strokeWidth: isConnected ? 5 : 2,
+          strokeWidth: isConnectedToSelected ? 5 : 2,
         }
       };
-    }));
-  }, [selectedNode, setNodes, setEdges]);
+    });
+    
+    // Only update state if needed to avoid infinite loops
+    setNodes(updatedNodes);
+    setEdges(updatedEdges);
+    
+  // Remove 'nodes' from dependency array, as it causes infinite loops
+  }, [selectedNode, filteredCategories, setNodes, setEdges]);
   
   // Create details panel for selected node
   const renderDetailsPanel = () => {
@@ -579,21 +602,22 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     const selectedNodeObj = nodes.find(node => node.id === selectedNode);
     if (!selectedNodeObj) return null;
     
-    const selectedNodeData = selectedNodeObj.data;
+    // Fix type issue by casting to proper type
+    const selectedNodeData = selectedNodeObj.data as CourseNodeData;
     
     // Find prerequisites
     const prerequisites = nodes.filter(node => 
-      (node.data as any).relationshipToSelected === 'prereq'
+      (node.data as CourseNodeData).relationshipToSelected === 'prereq'
     );
     
     // Find corequisites
     const corequisites = nodes.filter(node => 
-      (node.data as any).relationshipToSelected === 'coreq'
+      (node.data as CourseNodeData).relationshipToSelected === 'coreq'
     );
     
     // Find courses that this is a prerequisite for
     const dependentCourses = nodes.filter(node => 
-      (node.data as any).relationshipToSelected === 'dependent'
+      (node.data as CourseNodeData).relationshipToSelected === 'dependent'
     );
     
     return (
@@ -613,7 +637,7 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
             <ul className="text-xs ml-2">
               {prerequisites.map(node => (
                 <li key={`prereq-${node.id}`} className="mt-1">
-                  <span className="font-medium">{(node.data as any).label}</span> - {(node.data as any).title}
+                  <span className="font-medium">{(node.data as CourseNodeData).label}</span> - {(node.data as CourseNodeData).title}
                 </li>
               ))}
             </ul>
@@ -626,7 +650,7 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
             <ul className="text-xs ml-2">
               {corequisites.map(node => (
                 <li key={`coreq-${node.id}`} className="mt-1">
-                  <span className="font-medium">{(node.data as any).label}</span> - {(node.data as any).title}
+                  <span className="font-medium">{(node.data as CourseNodeData).label}</span> - {(node.data as CourseNodeData).title}
                 </li>
               ))}
             </ul>
@@ -639,7 +663,7 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
             <ul className="text-xs ml-2">
               {dependentCourses.map(node => (
                 <li key={`dependent-${node.id}`} className="mt-1">
-                  <span className="font-medium">{(node.data as any).label}</span> - {(node.data as any).title}
+                  <span className="font-medium">{(node.data as CourseNodeData).label}</span> - {(node.data as CourseNodeData).title}
                 </li>
               ))}
             </ul>
@@ -658,7 +682,7 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
 
   // Create notification panel to show when nodes are hidden
   const renderFilterNotification = () => {
-    if (!selectedNode) return null;
+    if (!selectedNode && filteredCategories.length === 0) return null;
     
     // Count visible and hidden nodes
     const visibleNodes = nodes.filter(node => !node.hidden).length;
@@ -672,18 +696,162 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
           </svg>
           <span className="text-sm text-blue-700">
-            Showing only connected nodes. {hiddenCount} nodes are hidden.
+            {selectedNode 
+              ? `Showing only connected nodes. ${hiddenCount} nodes are hidden.` 
+              : `Filtered by categories: ${filteredCategories.join(', ')}. ${hiddenCount} nodes are hidden.`}
           </span>
           <button 
             className="ml-4 text-xs text-blue-700 underline"
-            onClick={() => setSelectedNode(null)}
+            onClick={() => {
+              setSelectedNode(null);
+              setFilteredCategories([]);
+            }}
           >
-            Show All
+            Clear All Filters
           </button>
         </div>
       </Panel>
     );
   };
+  
+  // Handle category filter toggling
+  const toggleCategoryFilter = (category: string) => {
+    setFilteredCategories(prev => {
+      if (prev.includes(category)) {
+        return prev.filter(c => c !== category);
+      } else {
+        return [...prev, category];
+      }
+    });
+  };
+
+  // Render category filter controls
+  const renderCategoryFilters = () => {
+    if (Object.keys(categoryColors).length === 0) return null;
+    
+    // Calculate count of visible courses per category
+    const categoryCounts: Record<string, {total: number, visible: number}> = {};
+    
+    // Initialize counts
+    Object.keys(categoryColors).forEach(category => {
+      categoryCounts[category] = { total: 0, visible: 0 };
+    });
+    
+    // Count nodes per category
+    nodes.forEach(node => {
+      const category = (node.data as any).category;
+      if (category && categoryCounts[category]) {
+        categoryCounts[category].total += 1;
+        if (!node.hidden) {
+          categoryCounts[category].visible += 1;
+        }
+      }
+    });
+    
+    return (
+      <Panel position="top-left">
+        <div className="bg-white p-3 rounded shadow-md text-sm">
+          <div className="flex justify-between items-center mb-2">
+            <p className="font-bold">Course Categories</p>
+            {filteredCategories.length > 0 && (
+              <button 
+                className="text-xs text-blue-600 hover:text-blue-800 ml-2"
+                onClick={() => setFilteredCategories([])}
+              >
+                Clear Filters
+              </button>
+            )}
+          </div>
+          
+          <div className="border-b border-gray-200 pb-2 mb-2">
+            <p className="flex items-center mb-1">
+              <span className="inline-block w-3 h-3 mr-2 bg-red-500"></span> 
+              <span>Prerequisites (must take before)</span>
+            </p>
+            <p className="flex items-center">
+              <span className="inline-block w-3 h-3 mr-2 bg-blue-500"></span> 
+              <span>Corequisites (take together)</span>
+            </p>
+          </div>
+          
+          <div className="pt-1">
+            <div className="flex justify-between mb-2">
+              <p className="font-semibold text-xs">Filter by Category:</p>
+              <span className="text-xs text-gray-500">
+                {filteredCategories.length > 0 
+                  ? `${filteredCategories.length} active` 
+                  : 'All visible'}
+              </span>
+            </div>
+            <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">
+              {Object.entries(categoryColors).map(([category, color]) => {
+                const count = categoryCounts[category] || { total: 0, visible: 0 };
+                const isActive = filteredCategories.includes(category);
+                const hasHidden = count.visible < count.total;
+                
+                return (
+                  <div 
+                    key={category} 
+                    className={`flex items-center px-2 py-1.5 rounded cursor-pointer hover:bg-gray-50 ${
+                      isActive 
+                        ? 'bg-blue-50 font-medium' 
+                        : filteredCategories.length > 0
+                          ? 'opacity-60'
+                          : ''
+                    }`}
+                    onClick={() => toggleCategoryFilter(category)}
+                  >
+                    <div 
+                      className="w-3 h-3 mr-2 rounded-sm" 
+                      style={{ backgroundColor: color }}
+                    ></div>
+                    <span className="text-xs flex-grow">{category}</span>
+                    
+                    <span className="text-xs text-gray-500 mr-2">
+                      {count.visible}/{count.total}
+                    </span>
+                    
+                    {isActive && (
+                      <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    )}
+                    
+                    {!isActive && hasHidden && filteredCategories.length > 0 && (
+                      <svg className="w-3 h-3 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
+                      </svg>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex justify-between items-center mt-2 text-xs text-gray-500">
+              <p>Click to toggle filters</p>
+              {filteredCategories.length > 0 && (
+                <button 
+                  className="text-blue-600 hover:text-blue-800 text-xs"
+                  onClick={() => setFilteredCategories([])}
+                >
+                  Show All
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </Panel>
+    );
+  };
+  
+  // Make these available to the parent component through a ref
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.courseGraphState = {
+        filteredCategories,
+        toggleCategoryFilter
+      };
+    }
+  }, [filteredCategories]);
   
   return (
     <ReactFlow
@@ -711,20 +879,7 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
       <Controls />
       {renderDetailsPanel()}
       {renderFilterNotification()}
-      <Panel position="top-left">
-        <div className="bg-white p-3 rounded shadow-md text-sm">
-          <p className="font-bold mb-2">Course Dependencies</p>
-          <p className="flex items-center mb-1">
-            <span className="inline-block w-3 h-3 mr-2 bg-red-500"></span> 
-            <span>Prerequisites (must take before)</span>
-          </p>
-          <p className="flex items-center">
-            <span className="inline-block w-3 h-3 mr-2 bg-blue-500"></span> 
-            <span>Corequisites (take together)</span>
-          </p>
-          <p className="text-xs mt-2 text-gray-500">Click on a course to see its relationships</p>
-        </div>
-      </Panel>
+      {/* Remove the category filters panel since filtering is now handled in the main legend */}
     </ReactFlow>
   );
 }
@@ -873,6 +1028,19 @@ export default function Home() {
   const [edges, setEdges] = useState<any[]>([]);
   const [categoryColors, setCategoryColors] = useState<Record<string, string>>({});
   const [reactFlowElements, setReactFlowElements] = useState<any[]>([]);
+  // Add state for category filters
+  const [filteredCategories, setFilteredCategories] = useState<string[]>([]);
+  
+  // Toggle category filter function
+  const toggleCategoryFilter = (category: string) => {
+    setFilteredCategories(prev => {
+      if (prev.includes(category)) {
+        return prev.filter(c => c !== category);
+      } else {
+        return [...prev, category];
+      }
+    });
+  };
   
   // Colors for different categories
   const colors = [
@@ -1921,20 +2089,88 @@ export default function Home() {
             {/* Graph View */}
             {!requirementsLoading && requirements && graphView && (
               <div>
-                {/* Legend */}
+                {/* Combined Legend and Filter Controls */}
                 {Object.keys(categoryColors).length > 0 && (
-                  <div className="mb-4 p-4 bg-white border rounded-md">
-                    <h3 className="font-bold mb-2">Category Legend:</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {Object.entries(categoryColors).map(([category, color]) => (
-                        <div key={category} className="flex items-center">
-                          <div 
-                            className="w-4 h-4 mr-1 rounded" 
-                            style={{ backgroundColor: color }}
-                          ></div>
-                          <span className="text-sm">{category}</span>
+                  <div className="mb-4 p-4 bg-white border rounded-md shadow-md">
+                    <div className="flex justify-between items-center mb-3">
+                      <h3 className="font-bold">Category Filter</h3>
+                      {filteredCategories.length > 0 && (
+                        <button 
+                          className="text-xs text-blue-600 hover:text-blue-800"
+                          onClick={() => setFilteredCategories([])}
+                        >
+                          Clear All Filters
+                        </button>
+                      )}
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-y-2">
+                      <div className="w-full md:w-1/3 lg:w-1/4 pr-4 mb-3">
+                        <div className="border-b border-gray-200 pb-2 mb-2">
+                          <p className="flex items-center mb-1 text-sm">
+                            <span className="inline-block w-3 h-3 mr-2 bg-red-500"></span> 
+                            <span>Prerequisites</span>
+                          </p>
+                          <p className="flex items-center text-sm">
+                            <span className="inline-block w-3 h-3 mr-2 bg-blue-500"></span> 
+                            <span>Corequisites</span>
+                          </p>
                         </div>
-                      ))}
+                        <p className="text-xs text-gray-500 mt-1">Click categories to filter</p>
+                      </div>
+                      
+                      <div className="w-full md:w-2/3 lg:w-3/4 flex flex-wrap gap-x-2 gap-y-2">
+                        {Object.entries(categoryColors).map(([category, color]) => {
+                          // Get course count for this category
+                          const count = (() => {
+                            let total = 0, visible = 0;
+                            nodes.forEach(node => {
+                              if ((node.data as any).category === category) {
+                                total++;
+                                if (!node.hidden) visible++;
+                              }
+                            });
+                            return { total, visible };
+                          })();
+                          
+                          const isActive = filteredCategories.includes(category);
+                          const hasHidden = count.visible < count.total;
+                          
+                          return (
+                            <div
+                              key={category}
+                              className={`flex items-center px-3 py-2 rounded border cursor-pointer transition-colors ${
+                                isActive 
+                                  ? 'bg-blue-50 border-blue-200 shadow-sm' 
+                                  : filteredCategories.length > 0
+                                    ? 'opacity-60 border-gray-200 hover:opacity-100'
+                                    : 'border-gray-200 hover:bg-gray-50'
+                              }`}
+                              onClick={() => {
+                                if (window.courseGraphState?.toggleCategoryFilter) {
+                                  window.courseGraphState.toggleCategoryFilter(category);
+                                }
+                              }}
+                            >
+                              <div 
+                                className="w-3 h-3 mr-2 rounded-sm" 
+                                style={{ backgroundColor: color }}
+                              ></div>
+                              <span className="text-sm font-medium">{category}</span>
+                              
+                              <span className="text-xs text-gray-500 ml-2">
+                                {count.visible}/{count.total}
+                              </span>
+                              
+                              {isActive && (
+                                <svg className="w-4 h-4 ml-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -1975,4 +2211,14 @@ export default function Home() {
       </div>
     </main>
   );
+}
+
+// Declare the global window interface
+declare global {
+  interface Window {
+    courseGraphState?: {
+      filteredCategories: string[];
+      toggleCategoryFilter: (category: string) => void;
+    };
+  }
 }
