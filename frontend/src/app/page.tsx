@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import Link from "next/link";
 import ReactFlow, {
   Controls,
@@ -21,6 +21,7 @@ import ReactFlow, {
   EdgeTypes,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
+import React from "react";
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -80,6 +81,27 @@ interface CourseNodeData {
   prerequisites?: string;
   category?: string;
   categoryColor: string;
+  isLabel?: boolean;
+  relationshipToSelected?: string;
+  isHighlighted?: boolean;
+}
+
+// Type for our custom ReactFlow nodes
+interface CourseNode extends FlowNode {
+  data: CourseNodeData;
+}
+
+// Type for edge data
+interface EdgeData {
+  id: string;
+  type: string;
+  isPrereq?: boolean;
+  label?: string;
+}
+
+// Type for our custom ReactFlow edges
+interface CourseEdge extends FlowEdge {
+  data: EdgeData;
 }
 
 // Parse prerequisites string
@@ -119,14 +141,64 @@ const parsePrerequisites = (prereqString?: string): string[] => {
 
 // Custom node component for courses
 function CourseNode({ data }: { data: CourseNodeData }) {
+  // If this is a category label, render a different component
+  if (data.isLabel) {
+    return (
+      <div
+        className="flex items-center justify-center rounded-md px-4 py-2 shadow-md text-white font-bold text-lg"
+        style={{
+          backgroundColor: data.categoryColor,
+          minWidth: '120px',
+          textAlign: 'center'
+        }}
+      >
+        {data.label}
+      </div>
+    );
+  }
+
+  // Determine border style based on relationship to selected node
+  let borderStyle = '2px solid';
+  let shadowColor = 'rgba(0, 0, 0, 0.1)';
+  let shadowSize = '0 1px 3px';
+  let zIndex = 0;
+  
+  if (data.relationshipToSelected) {
+    borderStyle = '3px solid';
+    shadowSize = '0 0 10px';
+    zIndex = 10;
+    
+    switch (data.relationshipToSelected) {
+      case 'selected':
+        shadowColor = 'rgba(75, 85, 99, 0.7)'; // Gray shadow for selected
+        break;
+      case 'prereq':
+        shadowColor = 'rgba(239, 68, 68, 0.5)'; // Red shadow for prerequisites
+        break;
+      case 'coreq':
+        shadowColor = 'rgba(59, 130, 246, 0.5)'; // Blue shadow for corequisites
+        break;
+      case 'dependent':
+        shadowColor = 'rgba(16, 185, 129, 0.5)'; // Green shadow for dependents
+        break;
+    }
+  }
+
+  // Regular course node
   return (
     <div
-      className="flex flex-col items-center justify-center rounded-lg shadow-md p-3 w-[150px] h-[100px] text-center"
+      className={`flex flex-col items-center justify-center rounded-lg p-3 w-[180px] h-[120px] text-center ${
+        data.isHighlighted ? 'z-10' : 'z-0'
+      }`}
       style={{
         backgroundColor: data.categoryColor + '80', // Adding transparency
         borderColor: data.categoryColor,
-        borderWidth: '2px',
-        borderStyle: 'solid',
+        borderWidth: borderStyle.split(' ')[0],
+        borderStyle: borderStyle.split(' ')[1],
+        boxShadow: `${shadowSize} ${shadowColor}`,
+        transition: 'all 0.3s ease',
+        opacity: data.isHighlighted === false ? 0.6 : 1,
+        zIndex: zIndex,
       }}
     >
       {/* Handle for incoming edges at the top */}
@@ -183,9 +255,40 @@ function CourseNode({ data }: { data: CourseNodeData }) {
         }}
       />
       
-      <div className="font-bold text-lg">{data.label}</div>
-      {data.title && <div className="text-sm">{data.title}</div>}
-      {data.credits !== undefined && <div className="text-xs text-gray-600">{data.credits} Credits</div>}
+      <div className="font-bold text-md">{data.label}</div>
+      {data.title && (
+        <div className="text-xs line-clamp-2 mt-1 h-8 overflow-hidden">
+          {data.title}
+        </div>
+      )}
+      <div className="flex flex-col text-xs mt-1">
+        {data.credits !== undefined && (
+          <span className="text-gray-700">{data.credits} Credits</span>
+        )}
+        {data.category && !data.isLabel && (
+          <span className="text-xs text-gray-600 italic mt-1 line-clamp-1">
+            {data.category}
+          </span>
+        )}
+      </div>
+      
+      {/* Relationship indicator badge */}
+      {data.relationshipToSelected && data.relationshipToSelected !== 'selected' && (
+        <div 
+          className="absolute -top-2 -right-2 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs font-bold"
+          style={{
+            backgroundColor: 
+              data.relationshipToSelected === 'prereq' ? '#ef4444' :  // Red
+              data.relationshipToSelected === 'coreq' ? '#3b82f6' :   // Blue
+              data.relationshipToSelected === 'dependent' ? '#10b981' : // Green
+              '#6b7280', // Gray default
+          }}
+        >
+          {data.relationshipToSelected === 'prereq' ? 'P' : 
+           data.relationshipToSelected === 'coreq' ? 'C' : 
+           data.relationshipToSelected === 'dependent' ? 'R' : ''}
+        </div>
+      )}
     </div>
   );
 }
@@ -199,6 +302,14 @@ interface FlowGraphProps {
 function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
   const [nodes, setNodes, onNodesChange] = useNodesState<FlowNode[]>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<FlowEdge[]>([]);
+  const [selectedNode, setSelectedNode] = useState<string | null>(null);
+  // Use a ref to store connected edges to avoid dependency issues
+  const edgesRef = useRef<FlowEdge[]>([]);
+  
+  // Update the edges ref whenever edges change
+  useEffect(() => {
+    edgesRef.current = edges;
+  }, [edges]);
   
   // Configure default edge options for ReactFlow
   const defaultEdgeOptions = useMemo(() => ({
@@ -259,11 +370,20 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
             title: el.data.title || '',
             credits: el.data.credits || 0,
             prerequisites: el.data.prerequisites,
-            category: el.data.category,
-            categoryColor: el.data.color || '#cccccc'
+            category: el.data.category || '',
+            categoryColor: el.data.color || '#cccccc',
+            isLabel: el.data.isLabel || false,
+            relationshipToSelected: null,
+            isHighlighted: false
           }
         };
-        console.log(`Created node: ${node.id} at position (${position.x}, ${position.y})`);
+        
+        if (el.data.isLabel) {
+          console.log(`Created category label: ${node.id}, category: ${node.data.label}`);
+        } else {
+          console.log(`Created node: ${node.id} at position (${position.x}, ${position.y}), category: ${node.data.category}`);
+        }
+        
         return node;
       });
       
@@ -299,6 +419,10 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
             fill: el.data.type === 'coreq' ? '#0000ff' : '#ff0000',
             fontWeight: 700,
             fontSize: 12
+          },
+          data: {
+            id: uniqueId,
+            type: el.data.type || 'prereq'
           }
         };
       });
@@ -314,6 +438,253 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     }
   }, [elements, setNodes, setEdges]);
   
+  // Handle node selection to highlight connected nodes and edges
+  const onNodeClick = useCallback((event: React.MouseEvent, node: FlowNode) => {
+    // Toggle selection: if the same node is clicked, clear selection
+    setSelectedNode(prevSelected => prevSelected === node.id ? null : node.id);
+  }, []);
+
+  // Apply highlighting to nodes and edges based on selection
+  useEffect(() => {
+    if (!selectedNode) {
+      // No selection, reset all nodes and edges to original state
+      setNodes(nodes => nodes.map(node => ({
+        ...node,
+        hidden: false,
+        style: undefined,
+        data: { 
+          ...node.data,
+          isHighlighted: false,
+          relationshipToSelected: null 
+        }
+      })));
+      
+      setEdges(edges => edges.map(edge => ({
+        ...edge,
+        hidden: false,
+        style: {
+          ...edge.style,
+          opacity: 1,
+          strokeWidth: 3,
+        }
+      })));
+      
+      return;
+    }
+    
+    // Use the edges from the ref to avoid dependency issues
+    const currentEdges = edgesRef.current;
+    
+    // Find all connected edges (where selected node is source or target)
+    const connectedEdges = currentEdges.filter(
+      edge => edge.source === selectedNode || edge.target === selectedNode
+    );
+    
+    // Get IDs of all connected nodes
+    const connectedNodeIds = new Set<string>();
+    connectedNodeIds.add(selectedNode); // Add the selected node itself
+    connectedEdges.forEach(edge => {
+      connectedNodeIds.add(edge.source);
+      connectedNodeIds.add(edge.target);
+    });
+    
+    // Prepare node information for details panel
+    const prereqNodeIds = currentEdges
+      .filter(edge => edge.target === selectedNode && (edge.data as any)?.type === 'prereq')
+      .map(edge => edge.source);
+      
+    const coreqNodeIds = currentEdges
+      .filter(edge => (edge.source === selectedNode || edge.target === selectedNode) && (edge.data as any)?.type === 'coreq')
+      .map(edge => edge.source === selectedNode ? edge.target : edge.source);
+    
+    const dependentNodeIds = currentEdges
+      .filter(edge => edge.source === selectedNode && (edge.data as any)?.type === 'prereq')
+      .map(edge => edge.target);
+    
+    // Update nodes - hide nodes that are not connected to the selected node
+    setNodes(nodes => nodes.map(node => {
+      const isSelected = node.id === selectedNode;
+      const isConnected = connectedNodeIds.has(node.id);
+      const isPrereq = prereqNodeIds.includes(node.id);
+      const isCoreq = coreqNodeIds.includes(node.id);
+      const isDependent = dependentNodeIds.includes(node.id);
+      
+      // Hide nodes that are not connected to the selected node
+      if (!isConnected) {
+        return {
+          ...node,
+          hidden: true,
+          data: {
+            ...node.data,
+            isHighlighted: false,
+            relationshipToSelected: null
+          }
+        };
+      }
+      
+      // For connected nodes, show them with proper styling
+      let style: any = {
+        zIndex: 2,
+        filter: 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.3))',
+      };
+      
+      if (isSelected) {
+        style = {
+          ...style,
+          filter: 'drop-shadow(0 0 14px rgba(59, 130, 246, 0.8))',
+          zIndex: 10,
+        };
+      }
+      
+      return {
+        ...node,
+        hidden: false,
+        style,
+        data: {
+          ...node.data,
+          isHighlighted: true,
+          relationshipToSelected: isSelected 
+            ? 'selected' 
+            : isPrereq 
+              ? 'prereq' 
+              : isCoreq 
+                ? 'coreq' 
+                : isDependent 
+                  ? 'dependent' 
+                  : null
+        }
+      };
+    }));
+    
+    // Update edges - hide edges that don't connect to the selected node
+    setEdges(edges => edges.map(edge => {
+      const isConnected = edge.source === selectedNode || edge.target === selectedNode;
+      
+      return {
+        ...edge,
+        hidden: !isConnected,
+        style: {
+          ...edge.style,
+          opacity: 1,
+          strokeWidth: isConnected ? 5 : 2,
+        }
+      };
+    }));
+  }, [selectedNode, setNodes, setEdges]);
+  
+  // Create details panel for selected node
+  const renderDetailsPanel = () => {
+    if (!selectedNode) return null;
+    
+    const selectedNodeObj = nodes.find(node => node.id === selectedNode);
+    if (!selectedNodeObj) return null;
+    
+    const selectedNodeData = selectedNodeObj.data;
+    
+    // Find prerequisites
+    const prerequisites = nodes.filter(node => 
+      (node.data as any).relationshipToSelected === 'prereq'
+    );
+    
+    // Find corequisites
+    const corequisites = nodes.filter(node => 
+      (node.data as any).relationshipToSelected === 'coreq'
+    );
+    
+    // Find courses that this is a prerequisite for
+    const dependentCourses = nodes.filter(node => 
+      (node.data as any).relationshipToSelected === 'dependent'
+    );
+    
+    return (
+      <Panel position="top-right" className="bg-white p-4 rounded shadow-md w-[300px]">
+        <div className="mb-2 pb-2 border-b border-gray-200">
+          <h3 className="font-bold text-lg">{selectedNodeData.label}</h3>
+          <p className="text-sm text-gray-600">{selectedNodeData.title}</p>
+          <p className="text-sm">{selectedNodeData.credits} Credits</p>
+          {selectedNodeData.category && (
+            <p className="text-xs text-gray-500 mt-1">Category: {selectedNodeData.category}</p>
+          )}
+        </div>
+        
+        {prerequisites.length > 0 && (
+          <div className="mb-2">
+            <h4 className="font-semibold text-sm text-red-700">Prerequisites:</h4>
+            <ul className="text-xs ml-2">
+              {prerequisites.map(node => (
+                <li key={`prereq-${node.id}`} className="mt-1">
+                  <span className="font-medium">{(node.data as any).label}</span> - {(node.data as any).title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        
+        {corequisites.length > 0 && (
+          <div className="mb-2">
+            <h4 className="font-semibold text-sm text-blue-700">Corequisites:</h4>
+            <ul className="text-xs ml-2">
+              {corequisites.map(node => (
+                <li key={`coreq-${node.id}`} className="mt-1">
+                  <span className="font-medium">{(node.data as any).label}</span> - {(node.data as any).title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        
+        {dependentCourses.length > 0 && (
+          <div className="mb-2">
+            <h4 className="font-semibold text-sm text-green-700">Required for:</h4>
+            <ul className="text-xs ml-2">
+              {dependentCourses.map(node => (
+                <li key={`dependent-${node.id}`} className="mt-1">
+                  <span className="font-medium">{(node.data as any).label}</span> - {(node.data as any).title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        
+        <button 
+          className="mt-2 text-xs text-blue-600 hover:text-blue-800"
+          onClick={() => setSelectedNode(null)}
+        >
+          Clear Selection & Show All Nodes
+        </button>
+      </Panel>
+    );
+  };
+
+  // Create notification panel to show when nodes are hidden
+  const renderFilterNotification = () => {
+    if (!selectedNode) return null;
+    
+    // Count visible and hidden nodes
+    const visibleNodes = nodes.filter(node => !node.hidden).length;
+    const totalNodes = nodes.length;
+    const hiddenCount = totalNodes - visibleNodes;
+    
+    return (
+      <Panel position="bottom-center" className="bg-blue-50 px-4 py-2 rounded shadow-md">
+        <div className="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+          </svg>
+          <span className="text-sm text-blue-700">
+            Showing only connected nodes. {hiddenCount} nodes are hidden.
+          </span>
+          <button 
+            className="ml-4 text-xs text-blue-700 underline"
+            onClick={() => setSelectedNode(null)}
+          >
+            Show All
+          </button>
+        </div>
+      </Panel>
+    );
+  };
+  
   return (
     <ReactFlow
       nodes={nodes}
@@ -321,6 +692,7 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
       nodeTypes={nodeTypes}
+      onNodeClick={onNodeClick}
       fitView
       fitViewOptions={{ padding: 0.5 }}
       minZoom={0.1}
@@ -337,6 +709,8 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     >
       <Background color="#f8f8f8" gap={16} />
       <Controls />
+      {renderDetailsPanel()}
+      {renderFilterNotification()}
       <Panel position="top-left">
         <div className="bg-white p-3 rounded shadow-md text-sm">
           <p className="font-bold mb-2">Course Dependencies</p>
@@ -348,11 +722,15 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
             <span className="inline-block w-3 h-3 mr-2 bg-blue-500"></span> 
             <span>Corequisites (take together)</span>
           </p>
+          <p className="text-xs mt-2 text-gray-500">Click on a course to see its relationships</p>
         </div>
       </Panel>
     </ReactFlow>
   );
 }
+
+// Create a memoized wrapper for ReactFlow component to prevent unnecessary renders
+const MemoizedFlowGraph = React.memo(FlowGraph);
 
 // Helper function to get course category from code
 function getCourseCategory(code: string): string {
@@ -881,9 +1259,21 @@ export default function Home() {
         
         // After fetching prerequisites, create the graph
         const { nodeElements, edgeElements } = createGraph(allCourses);
-        setNodes(nodeElements);
-        setEdges(edgeElements);
-        setReactFlowElements([...nodeElements, ...edgeElements]);
+        
+        // Only update states if the component is still mounted and in graph view
+        if (graphView) {
+          setNodes(nodeElements);
+          setEdges(edgeElements);
+          // Create a stable reference for reactFlowElements
+          setReactFlowElements(prev => {
+            const newElements = [...nodeElements, ...edgeElements];
+            // Only update if there's an actual change to avoid infinite updates
+            if (JSON.stringify(prev) !== JSON.stringify(newElements)) {
+              return newElements;
+            }
+            return prev;
+          });
+        }
       };
       
       fetchPrerequisites();
@@ -899,10 +1289,24 @@ export default function Home() {
     const edgeTracker = new Set<string>();
     const nodeMap: Record<string, any> = {};
 
-    // Group courses by category
+    // Map courses to their categories in the requirements
+    const courseCategories: Record<string, string> = {};
+    
+    // Find which category each course belongs to
+    if (requirements) {
+      requirements.categories.forEach((category) => {
+        category.courses.forEach((course) => {
+          courseCategories[normalizeCourseId(course.code)] = category.name;
+        });
+      });
+    }
+    
+    // Group courses by requirement category
     const coursesByCategory: Record<string, RequirementCourse[]> = {};
     allCourses.forEach(course => {
-      const category = getCourseCategory(course.code);
+      const normalizedId = normalizeCourseId(course.code);
+      // Use the requirement category if available, otherwise use subject
+      const category = courseCategories[normalizedId] || getCourseCategory(course.code);
       if (!coursesByCategory[category]) {
         coursesByCategory[category] = [];
       }
@@ -911,11 +1315,28 @@ export default function Home() {
 
     // Calculate positions for each category and create nodes
     const categories = Object.keys(coursesByCategory);
+    console.log("Categories for layout:", categories);
+    
+    // Place categories in a circular layout
     categories.forEach((category, categoryIndex) => {
       const coursesInCategory = coursesByCategory[category];
+      console.log(`Category ${category} has ${coursesInCategory.length} courses`);
+      
+      // Place each category in a position on a large circle
       const categoryAngle = (2 * Math.PI * categoryIndex) / categories.length;
-      const categoryX = Math.cos(categoryAngle) * 500;
-      const categoryY = Math.sin(categoryAngle) * 500;
+      const radius = 600; // Larger radius to space out categories more
+      const categoryX = Math.cos(categoryAngle) * radius;
+      const categoryY = Math.sin(categoryAngle) * radius;
+      
+      // Get color for this category
+      let categoryColor = colors[categoryIndex % colors.length];
+      if (requirements) {
+        // Try to find this category in requirements to use consistent coloring
+        const reqCategoryIndex = requirements.categories.findIndex(c => c.name === category);
+        if (reqCategoryIndex >= 0) {
+          categoryColor = colors[reqCategoryIndex % colors.length];
+        }
+      }
       
       // Position courses within this category in a grid-like manner
       const coursesPerRow = Math.ceil(Math.sqrt(coursesInCategory.length));
@@ -924,12 +1345,13 @@ export default function Home() {
         const row = Math.floor(courseIndex / coursesPerRow);
         const col = courseIndex % coursesPerRow;
         
-        // Space courses 200px apart within their category cluster
-        const x = categoryX + (col - coursesPerRow / 2) * 200;
-        const y = categoryY + (row - Math.floor(coursesInCategory.length / coursesPerRow) / 2) * 150;
+        // Space courses closer within their category cluster
+        const x = categoryX + (col - coursesPerRow / 2) * 150;
+        const y = categoryY + (row - Math.floor(coursesInCategory.length / coursesPerRow) / 2) * 100;
         
         const normalizedId = normalizeCourseId(course.code);
-        const courseColor = getCategoryColor(course.code);
+        // Use category colors from requirements if available
+        let nodeCategoryColor = categoryColor;
         
         const node = {
           data: {
@@ -937,8 +1359,9 @@ export default function Home() {
             label: course.code,
             title: course.title,
             credits: course.credits,
-            color: courseColor,
-            category: category
+            color: nodeCategoryColor,
+            category: category,
+            isLabel: false
           },
           position: { x, y }
         };
@@ -1531,8 +1954,8 @@ export default function Home() {
                 
                 {/* Flow chart - using ReactFlow */}
                 <div className="h-[700px] bg-white border rounded-md shadow-lg">
-                  <ReactFlowProvider>
-                    <FlowGraph 
+                  <ReactFlowProvider key="react-flow-provider">
+                    <MemoizedFlowGraph 
                       elements={reactFlowElements} 
                       categoryColors={categoryColors} 
                     />
