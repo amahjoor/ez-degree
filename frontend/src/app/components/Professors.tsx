@@ -1,7 +1,102 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Professor } from '@/types/professor';
+import Link from 'next/link';
 
 const API_BASE_URL = '/api';
+
+// Modal component for professor details
+function ProfessorModal({ professor, onClose }: { professor: Professor; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="flex justify-between items-start mb-4">
+          <h2 className="text-2xl font-bold">
+            {professor.firstName} {professor.lastName}
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div>
+            <h3 className="font-semibold text-gray-700">Department</h3>
+            <p>{professor.department}</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-700">Average Rating</h3>
+            <p>{professor.avgRating.toFixed(1)} / 5.0</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-700">Difficulty</h3>
+            <p>{professor.avgDifficulty.toFixed(1)} / 5.0</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-700">Would Take Again</h3>
+            <p>{professor.wouldTakeAgainPercent}%</p>
+          </div>
+          {professor.helpfulRating && (
+            <div>
+              <h3 className="font-semibold text-gray-700">Helpfulness</h3>
+              <p>{professor.helpfulRating.toFixed(1)} / 5.0</p>
+            </div>
+          )}
+          {professor.clarityRating && (
+            <div>
+              <h3 className="font-semibold text-gray-700">Clarity</h3>
+              <p>{professor.clarityRating.toFixed(1)} / 5.0</p>
+            </div>
+          )}
+          {professor.averageGrade && (
+            <div>
+              <h3 className="font-semibold text-gray-700">Average Grade</h3>
+              <p>{professor.averageGrade}</p>
+            </div>
+          )}
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-gray-700 mb-2">Course Reviews</h3>
+          <div className="space-y-4">
+            {Object.entries(professor.reviews).map(([courseCode, reviews]) => (
+              <div key={courseCode} className="border rounded-lg p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-medium">{courseCode}</h4>
+                  <div className="flex items-center">
+                    <span className="text-yellow-500 mr-1">★</span>
+                    <span>
+                      {(reviews.reduce((acc, review) => acc + review.difficultyRating, 0) / reviews.length).toFixed(1)}
+                    </span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {reviews.map((review, index) => (
+                    <div key={index} className="border-t pt-3 first:border-t-0 first:pt-0">
+                      {review.comment && (
+                        <p className="text-gray-600 text-sm">{review.comment}</p>
+                      )}
+                      <div className="flex gap-4 mt-2 text-sm text-gray-500">
+                        <span>Difficulty: {review.difficultyRating.toFixed(1)}</span>
+                        <span>Would Take Again: {review.wouldTakeAgain ? 'Yes' : 'No'}</span>
+                        {review.grade && <span>Grade: {review.grade}</span>}
+                        {review.date && <span>Date: {new Date(review.date).toLocaleDateString()}</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Professors() {
   const [professors, setProfessors] = useState<Professor[]>([]);
@@ -113,11 +208,17 @@ export default function Professors() {
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {paginatedProfessors.map((professor) => (
-                <tr key={`${professor.firstName}-${professor.lastName}-${professor.department}`}>
+                <tr 
+                  key={`${professor.firstName}-${professor.lastName}-${professor.department}`}
+                  className="hover:bg-gray-50"
+                >
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">
+                    <Link 
+                      href={`/professors/${professor.url?.split('/').pop() || ''}`}
+                      className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                    >
                       {professor.firstName} {professor.lastName}
-                    </div>
+                    </Link>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm text-gray-500">{professor.department}</div>
@@ -220,4 +321,4 @@ export default function Professors() {
       )}
     </div>
   );
-} 
+}

@@ -1,11 +1,11 @@
 export interface Review {
-    comment: string;
+    comment?: string;
     date: string;
     difficultyRating: number;
     clarityRating?: number;
     helpfulRating?: number;
     grade: string;
-    textbookUse?: string;
+    textbookUse?: string | number;
     wouldTakeAgain?: boolean;
     attendanceMandatory?: string;
     isForCredit?: boolean;
@@ -25,14 +25,7 @@ export interface Professor {
     helpfulRating?: number;
     clarityRating?: number;
     averageGrade?: string;
-    reviews: {
-        [courseId: string]: {
-            rating: number;
-            difficulty: number;
-            wouldTakeAgain: boolean;
-            comment?: string;
-        };
-    };
+    reviews: { [courseCode: string]: Review[] };
     url?: string;
     isAttendanceMandatory?: number;
 } 
