@@ -8,8 +8,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fastapi import FastAPI, HTTPException, Query, Path
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
-from typing import List, Optional, Dict, Any
-from pydantic import BaseModel, Field
+from typing import List, Optional, Dict, Any, Union
+from pydantic import BaseModel, Field, validator
 from database.db import get_session, Course as DbCourse, Subject as DbSubject
 from scrapers.courseScraper.courseScraper import scrape_courses
 
@@ -63,6 +63,45 @@ class ConcentrationInfo(BaseModel):
 
 class ConcentrationList(BaseModel):
     concentrations: List[ConcentrationInfo] = Field(..., description="List of available concentrations for the major")
+
+class Review(BaseModel):
+    comment: str = Field(..., description="Review comment")
+    date: str = Field(..., description="Review date")
+    difficultyRating: float = Field(..., description="Difficulty rating (1-5)")
+    clarityRating: Optional[float] = Field(None, description="Clarity rating (1-5)")
+    helpfulRating: Optional[float] = Field(None, description="Helpfulness rating (1-5)")
+    grade: str = Field("", description="Grade received")
+    textbookUse: Optional[Union[str, int]] = Field(None, description="Textbook use (Yes/No/N/A or numeric rating)")
+    wouldTakeAgain: Optional[bool] = Field(None, description="Would take again")
+    attendanceMandatory: Optional[str] = Field(None, description="Attendance requirement")
+    isForCredit: Optional[bool] = Field(None, description="If the review is for credit")
+    isForOnlineClass: Optional[bool] = Field(None, description="If the review is for an online class")
+    ratingTags: Optional[List[str]] = Field(None, description="Rating tags")
+    thumbsDownTotal: Optional[int] = Field(None, description="Number of thumbs down")
+    thumbsUpTotal: Optional[int] = Field(None, description="Number of thumbs up")
+
+    @validator('textbookUse', pre=True)
+    def convert_textbook_use(cls, v):
+        if isinstance(v, int):
+            return str(v)  # Convert numeric values to string
+        return v
+
+class Professor(BaseModel):
+    firstName: str = Field(..., description="Professor's first name")
+    lastName: str = Field(..., description="Professor's last name")
+    department: str = Field(..., description="Professor's department")
+    avgRating: float = Field(..., description="Average rating (1-5)")
+    avgDifficulty: float = Field(..., description="Average difficulty (1-5)")
+    wouldTakeAgainPercent: float = Field(..., description="Percentage of students who would take again")
+    helpfulRating: Optional[float] = Field(None, description="Average helpfulness rating (1-5)")
+    clarityRating: Optional[float] = Field(None, description="Average clarity rating (1-5)")
+    averageGrade: Optional[str] = Field(None, description="Average grade given")
+    reviews: Dict[str, List[Review]] = Field(..., description="Reviews by course code")
+    url: Optional[str] = Field(None, description="URL to professor's profile")
+    isAttendanceMandatory: Optional[float] = Field(None, description="Attendance mandatory percentage")
+
+class ProfessorList(BaseModel):
+    professors: List[Professor] = Field(..., description="List of professors")
 
 app = FastAPI(
     title="GMU Course API",
@@ -467,6 +506,123 @@ async def get_subjects():
         ]
     finally:
         db.close()
+
+@app.get("/professors/", 
+         response_model=ProfessorList,
+         summary="Get professor information",
+         description="Returns information about professors, optionally filtered by department or course",
+         response_description="A list of professor objects with their ratings and reviews")
+async def get_professors(
+    department: Optional[str] = Query(None, description="Filter by department"),
+    course_code: Optional[str] = Query(None, description="Filter by course code"),
+    min_rating: Optional[float] = Query(None, description="Minimum average rating (1-5)"),
+    max_difficulty: Optional[float] = Query(None, description="Maximum difficulty rating (1-5)")
+):
+    """
+    Get information about professors with optional filtering
+    
+    Args:
+        department: Optional department to filter by
+        course_code: Optional course code to filter by
+        min_rating: Optional minimum average rating
+        max_difficulty: Optional maximum difficulty rating
+    
+    Returns:
+        A list of professor objects with their ratings and reviews
+    
+    Raises:
+        HTTPException: If there's an error retrieving professor data
+    """
+    try:
+        professors_dir = os.path.join(REQUIREMENTS_DIR, "professors")
+        if not os.path.exists(professors_dir):
+            raise HTTPException(
+                status_code=404,
+                detail="Professor data not found"
+            )
+        
+        professors = []
+        for filename in os.listdir(professors_dir):
+            try:
+                with open(os.path.join(professors_dir, filename), 'r') as f:
+                    professor_data = json.load(f)
+                    
+                    # Apply filters
+                    if department and professor_data.get('department') != department:
+                        continue
+                        
+                    if course_code and course_code not in professor_data.get('reviews', {}):
+                        continue
+                        
+                    if min_rating and professor_data.get('avgRating', 0) < min_rating:
+                        continue
+                        
+                    if max_difficulty and professor_data.get('avgDifficulty', 5) > max_difficulty:
+                        continue
+                    
+                    professors.append(professor_data)
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON for file {filename}: {e}")
+                continue
+            except Exception as e:
+                print(f"Error processing file {filename}: {e}")
+                continue
+        
+        if not professors:
+            return {"professors": []}
+            
+        return {"professors": professors}
+        
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving professor data: {str(e)}"
+        )
+
+@app.get("/professors/{professor_id}", 
+         response_model=Professor,
+         summary="Get specific professor information",
+         description="Returns detailed information about a specific professor",
+         response_description="Complete professor data including ratings and reviews")
+async def get_professor(
+    professor_id: str = Path(..., description="ID of the professor to retrieve")
+):
+    """
+    Get information about a specific professor
+    
+    Args:
+        professor_id: ID of the professor to retrieve
+    
+    Returns:
+        Professor object with complete information including ratings and reviews
+    
+    Raises:
+        HTTPException 404: If the professor is not found
+        HTTPException 500: If there's an error processing the request
+    """
+    try:
+        professor_file = os.path.join(REQUIREMENTS_DIR, "professors", professor_id)
+        if not os.path.exists(professor_file):
+            raise HTTPException(
+                status_code=404,
+                detail=f"Professor with ID '{professor_id}' not found"
+            )
+            
+        with open(professor_file, 'r') as f:
+            professor_data = json.load(f)
+            
+        return professor_data
+        
+    except json.JSONDecodeError as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error decoding professor data: {str(e)}"
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving professor data: {str(e)}"
+        )
 
 if __name__ == "__main__":
     # Scrape ACCT courses

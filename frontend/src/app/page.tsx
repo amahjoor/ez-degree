@@ -22,6 +22,8 @@ import ReactFlow, {
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import React from "react";
+import { Professor } from '@/types/professor';
+import Professors from '@/app/components/Professors';
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -804,37 +806,33 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
                 
                 return (
                   <div 
-                    key={category} 
-                    className={`flex items-center px-2 py-1.5 rounded cursor-pointer hover:bg-gray-50 ${
+                    key={category}
+                    className={`flex items-center px-3 py-2 mb-1 rounded cursor-pointer transition-all ${
                       isActive 
-                        ? 'bg-blue-50 font-medium' 
-                        : filteredCategories.length > 0
-                          ? 'opacity-60'
-                          : ''
+                        ? 'border-2 border-black shadow-md' 
+                        : 'border border-gray-200 hover:border-gray-400'
                     }`}
-                    onClick={() => toggleCategoryFilter(category)}
+                    onClick={() => {
+                      if (window.courseGraphState?.toggleCategoryFilter) {
+                        window.courseGraphState.toggleCategoryFilter(category);
+                      }
+                    }}
                   >
+                    {/* Color indicator with larger size when selected */}
                     <div 
-                      className="w-3 h-3 mr-2 rounded-sm" 
+                      className={`${isActive ? 'w-5 h-5' : 'w-4 h-4'} mr-2 rounded-sm flex-shrink-0`}
                       style={{ backgroundColor: color }}
                     ></div>
-                    <span className="text-xs flex-grow">{category}</span>
                     
-                    <span className="text-xs text-gray-500 mr-2">
+                    {/* Text with bold when selected */}
+                    <span className={`text-sm ${isActive ? 'font-semibold' : ''}`}>{category}</span>
+                    
+                    {/* Counter */}
+                    <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
+                      isActive ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-600'
+                    }`}>
                       {count.visible}/{count.total}
                     </span>
-                    
-                    {isActive && (
-                      <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                    )}
-                    
-                    {!isActive && hasHidden && filteredCategories.length > 0 && (
-                      <svg className="w-3 h-3 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
-                      </svg>
-                    )}
                   </div>
                 );
               })}
@@ -1035,13 +1033,12 @@ export default function Home() {
   const [requirementsLoading, setRequirementsLoading] = useState<boolean>(false);
   const [requirementsError, setRequirementsError] = useState<string>('');
   const [expandedCategories, setExpandedCategories] = useState<{[key: string]: boolean}>({});
-  const [activeTab, setActiveTab] = useState<'courses' | 'requirements'>('courses');
+  const [activeTab, setActiveTab] = useState<'courses' | 'requirements' | 'professors'>('courses');
   const [graphView, setGraphView] = useState<boolean>(false);
   const [nodes, setNodes] = useState<any[]>([]);
   const [edges, setEdges] = useState<any[]>([]);
   const [categoryColors, setCategoryColors] = useState<Record<string, string>>({});
   const [reactFlowElements, setReactFlowElements] = useState<any[]>([]);
-  // Add state for category filters
   const [filteredCategories, setFilteredCategories] = useState<string[]>([]);
   
   // Toggle category filter function
@@ -1060,6 +1057,21 @@ export default function Home() {
     '#e6f7ff', '#fff7e6', '#f6ffe6', '#ffe6e6', '#e6e6ff', 
     '#ffe6f7', '#f7ffe6', '#e6ffe6', '#e6ffff', '#ffe6ff'
   ];
+
+  // Toggle category expansion
+  const toggleCategory = (categoryIndex: number) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [`category-${categoryIndex}`]: !prev[`category-${categoryIndex}`]
+    }));
+  };
+
+  // Handle major selection change
+  const handleMajorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedMajor(e.target.value);
+    setSelectedConcentration(''); // Clear concentration when major changes
+    setActiveTab('requirements'); // Switch to requirements tab
+  };
 
   // Fetch subjects on component mount
   useEffect(() => {
@@ -1185,21 +1197,6 @@ export default function Home() {
 
     fetchRequirements();
   }, [selectedMajor, selectedConcentration, isApiAvailable]);
-
-  // Toggle category expansion
-  const toggleCategory = (categoryIndex: number) => {
-    setExpandedCategories(prev => ({
-      ...prev,
-      [`category-${categoryIndex}`]: !prev[`category-${categoryIndex}`]
-    }));
-  };
-
-  // Handle major selection change
-  const handleMajorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedMajor(e.target.value);
-    setSelectedConcentration(''); // Clear concentration when major changes
-    setActiveTab('requirements'); // Switch to requirements tab
-  };
 
   // Fetch courses when search, subject filters, or page changes
   useEffect(() => {
@@ -1678,110 +1675,177 @@ export default function Home() {
           >
             Degree Requirements
           </button>
+          <button
+            className={`py-3 px-6 font-medium text-sm rounded-t-lg ${
+              activeTab === 'professors'
+                ? 'bg-white border-l border-t border-r border-gray-200 text-blue-600'
+                : 'text-gray-500 hover:text-gray-700 bg-gray-50'
+            }`}
+            onClick={() => setActiveTab('professors')}
+          >
+            Professors
+          </button>
         </div>
 
         {activeTab === 'courses' ? (
           <>
+            {/* Course Search and Results */}
             <div className="mb-8 bg-white shadow rounded-lg p-6">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="md:w-1/2">
-                  <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-1">
-                    Search Courses
-                  </label>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold">
+                  Course Search
+                </h2>
+                <div className="flex space-x-4">
                   <input
                     type="text"
-                    id="search"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Enter course code, title, or keywords"
+                    className="w-1/2 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Search for courses..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
+                  <button
+                    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 shadow-sm"
+                    onClick={() => {
+                      // Implement course search functionality
+                      console.log("Searching for courses:", searchTerm);
+                    }}
+                  >
+                    Search
+                  </button>
                 </div>
-                <div className="md:w-1/2">
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Filter by Subject
-                  </label>
-                  <div ref={subjectDropdownRef} className="relative">
-                    <div 
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 cursor-pointer flex justify-between items-center"
-                      onClick={() => setIsSubjectDropdownOpen(!isSubjectDropdownOpen)}
-                    >
-                      <span className="truncate">
-                        {selectedSubjects.length === 0 
-                          ? "All Subjects" 
-                          : selectedSubjects.length === 1
-                            ? (() => {
-                                const selectedSubject = subjects.find(s => s.id === selectedSubjects[0]);
-                                if (!selectedSubject) return "All Subjects";
-                                
-                                // If the name is the same as the ID, just display the ID
-                                // Otherwise display ID - Name format
-                                return selectedSubject.id === selectedSubject.name 
-                                  ? selectedSubject.id
-                                  : `${selectedSubject.id} - ${selectedSubject.name}`;
-                              })()
-                            : `${selectedSubjects.length} subjects selected`
-                        }
-                      </span>
-                      <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    
-                    {isSubjectDropdownOpen && (
-                      <div className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-80 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
-                        <div className="sticky top-0 z-10 bg-white p-2">
-                          <input
-                            ref={subjectSearchInputRef}
-                            type="text"
-                            className="w-full p-2 border border-gray-300 rounded-md"
-                            placeholder="Search subjects"
-                            value={subjectSearchTerm}
-                            onChange={(e) => setSubjectSearchTerm(e.target.value)}
-                            onKeyDown={handleSubjectSearchKeyDown}
-                          />
-                          <div className="mt-2 flex justify-between">
-                            <button 
-                              className="text-xs text-blue-600 hover:text-blue-800"
-                              onClick={() => setSelectedSubjects([])}
-                            >
-                              Clear all
-                            </button>
-                            <button 
-                              className="text-xs text-blue-600 hover:text-blue-800"
-                              onClick={() => setSelectedSubjects(subjects.map(s => s.id))}
-                            >
-                              Select all
-                            </button>
-                          </div>
-                        </div>
-                        <div>
-                          {filteredSubjects.map((subject) => (
-                            <div
-                              key={subject.id}
-                              className="px-3 py-2 hover:bg-blue-50 cursor-pointer flex items-center"
-                              onClick={() => toggleSubjectSelection(subject.id)}
-                            >
-                              <input
-                                type="checkbox"
-                                className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                                checked={selectedSubjects.includes(subject.id)}
-                                readOnly
-                              />
-                              <span>
-                                {subject.id === subject.name 
-                                  ? subject.id
-                                  : `${subject.id} - ${subject.name}`
-                                }
-                                {` (${subject.course_count})`}
-                              </span>
-                            </div>
+              </div>
+
+              {/* Course Results */}
+              <div className="mt-4">
+                {loading ? (
+                  <div className="text-center py-8">
+                    <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
+                    <p className="mt-2">Loading courses...</p>
+                  </div>
+                ) : courses.length === 0 ? (
+                  <div className="text-center py-8 text-gray-500">
+                    No courses found. Try adjusting your search criteria.
+                  </div>
+                ) : (
+                  <>
+                    <div className="overflow-x-auto">
+                      <table className="min-w-full divide-y divide-gray-200">
+                        <thead className="bg-gray-50">
+                          <tr>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              Course Code
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              Title
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              Credits
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              Subject
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className="bg-white divide-y divide-gray-200">
+                          {courses.map((course) => (
+                            <tr key={course.course_code} className="hover:bg-gray-50">
+                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                                <Link href={`/courses/${encodeURIComponent(course.course_code)}`}>
+                                  {course.course_code}
+                                </Link>
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                {course.title}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                {course.credits}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                {course.subject}
+                              </td>
+                            </tr>
                           ))}
-                        </div>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {/* Pagination */}
+                    {totalPages > 1 && (
+                      <div className="flex justify-center mt-6">
+                        <nav className="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
+                          <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
+                              currentPage === 1 ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-50'
+                            }`}
+                          >
+                            <span className="sr-only">Previous</span>
+                            <svg
+                              className="h-5 w-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                          
+                          {getPageNumbers().map((page, idx) => (
+                            page === "..." ? (
+                              <span
+                                key={`ellipsis-${idx}`}
+                                className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700"
+                              >
+                                ...
+                              </span>
+                            ) : (
+                              <button
+                                key={`page-${page}`}
+                                onClick={() => handlePageChange(page as number)}
+                                className={`relative inline-flex items-center px-4 py-2 border ${
+                                  currentPage === page
+                                    ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
+                                    : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
+                                } text-sm font-medium`}
+                              >
+                                {page}
+                              </button>
+                            )
+                          ))}
+
+                          <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
+                              currentPage === totalPages ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-50'
+                            }`}
+                          >
+                            <span className="sr-only">Next</span>
+                            <svg
+                              className="h-5 w-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </button>
+                        </nav>
                       </div>
                     )}
-                  </div>
-                </div>
+                  </>
+                )}
               </div>
             </div>
 
@@ -1790,155 +1854,8 @@ export default function Home() {
                 {error}
               </div>
             )}
-
-            <div className="bg-white shadow rounded-lg p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-semibold">
-                  Course Results {!loading && (() => {
-                    const start = (currentPage - 1) * itemsPerPage + 1;
-                    const end = Math.min(currentPage * itemsPerPage, totalCourses);
-                    return `(${start}-${end} of ${totalCourses})`;
-                  })()}
-                </h2>
-                {!loading && totalCourses > 0 && (
-                  <p className="text-gray-600">
-                    Page {currentPage} of {totalPages}
-                  </p>
-                )}
-              </div>
-
-              {loading ? (
-                <div className="text-center py-8">
-                  <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
-                  <p className="mt-2">Loading courses...</p>
-                </div>
-              ) : courses.length === 0 ? (
-                <div className="text-center py-8 text-gray-500">
-                  No courses found. Try adjusting your search criteria.
-                </div>
-              ) : (
-                <>
-                  <div className="overflow-x-auto">
-                    <table className="min-w-full divide-y divide-gray-200">
-                      <thead className="bg-gray-50">
-                        <tr>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Course Code
-                          </th>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Title
-                          </th>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Credits
-                          </th>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Subject
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="bg-white divide-y divide-gray-200">
-                        {courses.map((course) => (
-                          <tr key={course.course_code} className="hover:bg-gray-50">
-                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
-                              <Link href={`/courses/${encodeURIComponent(course.course_code)}`}>
-                                {course.course_code}
-                              </Link>
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              {course.title}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                              {course.credits}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                              {course.subject}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-
-                  {/* Pagination */}
-                  {totalPages > 1 && (
-                    <div className="flex justify-center mt-6">
-                      <nav className="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
-                        <button
-                          onClick={() => handlePageChange(currentPage - 1)}
-                          disabled={currentPage === 1}
-                          className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
-                            currentPage === 1 ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-50'
-                          }`}
-                        >
-                          <span className="sr-only">Previous</span>
-                          <svg
-                            className="h-5 w-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </button>
-                        
-                        {getPageNumbers().map((page, idx) => (
-                          page === "..." ? (
-                            <span
-                              key={`ellipsis-${idx}`}
-                              className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700"
-                            >
-                              ...
-                            </span>
-                          ) : (
-                            <button
-                              key={`page-${page}`}
-                              onClick={() => handlePageChange(page as number)}
-                              className={`relative inline-flex items-center px-4 py-2 border ${
-                                currentPage === page
-                                  ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
-                                  : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
-                              } text-sm font-medium`}
-                            >
-                              {page}
-                            </button>
-                          )
-                        ))}
-
-                        <button
-                          onClick={() => handlePageChange(currentPage + 1)}
-                          disabled={currentPage === totalPages}
-                          className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
-                            currentPage === totalPages ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-50'
-                          }`}
-                        >
-                          <span className="sr-only">Next</span>
-                          <svg
-                            className="h-5 w-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </button>
-                      </nav>
-                    </div>
-                  )}
-                </>
-              )}
-            </div>
           </>
-        ) : (
+        ) : activeTab === 'requirements' ? (
           <>
             {/* Degree Requirements UI */}
             <div className="mb-8 bg-white shadow rounded-lg p-6">
@@ -1950,7 +1867,7 @@ export default function Home() {
                   <select
                     id="major-select"
                     value={selectedMajor}
-                    onChange={handleMajorChange}
+                    onChange={(e) => setSelectedMajor(e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                     disabled={requirementsLoading}
                   >
@@ -2106,7 +2023,7 @@ export default function Home() {
                 {Object.keys(categoryColors).length > 0 && (
                   <div className="mb-4 p-4 bg-white border rounded-md shadow-md">
                     <div className="flex justify-between items-center mb-3">
-                      <h3 className="font-bold">Category Filter</h3>
+                      <h3 className="font-bold">Key</h3>
                       {filteredCategories.length > 0 && (
                         <button 
                           className="text-xs text-blue-600 hover:text-blue-800"
@@ -2117,69 +2034,76 @@ export default function Home() {
                       )}
                     </div>
                     
-                    <div className="flex flex-wrap gap-y-2">
-                      <div className="w-full md:w-1/3 lg:w-1/4 pr-4 mb-3">
-                        <div className="border-b border-gray-200 pb-2 mb-2">
-                          <p className="flex items-center mb-1 text-sm">
-                            <span className="inline-block w-3 h-3 mr-2 bg-red-500"></span> 
-                            <span>Prerequisites</span>
-                          </p>
-                          <p className="flex items-center text-sm">
-                            <span className="inline-block w-3 h-3 mr-2 bg-blue-500"></span> 
-                            <span>Corequisites</span>
-                          </p>
-                        </div>
-                        <p className="text-xs text-gray-500 mt-1">Click categories to filter</p>
+                    {/* Prerequisites and Corequisites legend moved to top */}
+                    <div className="w-full mb-3 border-b border-gray-200 pb-2">
+                      <div className="flex flex-wrap gap-x-8">
+                        <p className="flex items-center mb-1 text-sm">
+                          <span className="inline-block w-3 h-3 mr-2 bg-red-500"></span> 
+                          <span>Prerequisites (must take before)</span>
+                        </p>
+                        <p className="flex items-center text-sm">
+                          <span className="inline-block w-3 h-3 mr-2 bg-blue-500"></span> 
+                          <span>Corequisites (take together)</span>
+                        </p>
                       </div>
-                      
-                      <div className="w-full md:w-2/3 lg:w-3/4 flex flex-wrap gap-x-2 gap-y-2">
-                        {Object.entries(categoryColors).map(([category, color]) => {
-                          // Get course count for this category
-                          const count = (() => {
-                            let total = 0, visible = 0;
-                            nodes.forEach(node => {
-                              if ((node.data as any).category === category) {
-                                total++;
-                                if (!node.hidden) visible++;
-                              }
-                            });
-                            return { total, visible };
-                          })();
-                          
-                          const isActive = filteredCategories.includes(category);
-                          
-                          return (
-                            <div
-                              key={category}
-                              className={`flex items-center px-3 py-2 mb-1 rounded cursor-pointer transition-all ${
-                                isActive 
-                                  ? 'border-2 border-black shadow-md' 
-                                  : 'border border-gray-200 hover:border-gray-400'
-                              }`}
-                              onClick={() => {
-                                if (window.courseGraphState?.toggleCategoryFilter) {
-                                  window.courseGraphState.toggleCategoryFilter(category);
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-y-2">
+                      <div className="w-full">
+                        <div className="flex justify-between items-center mb-2">
+                          <p className="text-sm font-medium">Filter by category:</p>
+                          <p className="text-xs text-gray-500">Click to toggle filters</p>
+                        </div>
+                        
+                        <div className="w-full flex flex-wrap gap-x-2 gap-y-2">
+                          {Object.entries(categoryColors).map(([category, color]) => {
+                            // Get course count for this category
+                            const count = (() => {
+                              let total = 0, visible = 0;
+                              nodes.forEach(node => {
+                                if ((node.data as any).category === category) {
+                                  total++;
+                                  if (!node.hidden) visible++;
                                 }
-                              }}
-                            >
-                              {/* Color indicator with larger size when selected */}
-                              <div 
-                                className={`${isActive ? 'w-5 h-5' : 'w-4 h-4'} mr-2 rounded-sm flex-shrink-0`}
-                                style={{ backgroundColor: color }}
-                              ></div>
-                              
-                              {/* Text with bold when selected */}
-                              <span className={`text-sm ${isActive ? 'font-semibold' : ''}`}>{category}</span>
-                              
-                              {/* Counter */}
-                              <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
-                                isActive ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-600'
-                              }`}>
-                                {count.visible}/{count.total}
-                              </span>
-                            </div>
-                          );
-                        })}
+                              });
+                              return { total, visible };
+                            })();
+                            
+                            const isActive = filteredCategories.includes(category);
+                            
+                            return (
+                              <div
+                                key={category}
+                                className={`flex items-center px-3 py-2 mb-1 rounded cursor-pointer transition-all ${
+                                  isActive 
+                                    ? 'border-2 border-black shadow-md' 
+                                    : 'border border-gray-200 hover:border-gray-400'
+                                }`}
+                                onClick={() => {
+                                  if (window.courseGraphState?.toggleCategoryFilter) {
+                                    window.courseGraphState.toggleCategoryFilter(category);
+                                  }
+                                }}
+                              >
+                                {/* Color indicator with larger size when selected */}
+                                <div 
+                                  className={`${isActive ? 'w-5 h-5' : 'w-4 h-4'} mr-2 rounded-sm flex-shrink-0`}
+                                  style={{ backgroundColor: color }}
+                                ></div>
+                                
+                                {/* Text with bold when selected */}
+                                <span className={`text-sm ${isActive ? 'font-semibold' : ''}`}>{category}</span>
+                                
+                                {/* Counter */}
+                                <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
+                                  isActive ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-600'
+                                }`}>
+                                  {count.visible}/{count.total}
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2217,6 +2141,12 @@ export default function Home() {
               </div>
             )}
           </>
+        ) : activeTab === 'professors' ? (
+          <Professors />
+        ) : (
+          <div className="bg-white shadow rounded-lg p-6">
+            <p className="text-gray-600">Select a tab above to view content.</p>
+          </div>
         )}
       </div>
     </main>

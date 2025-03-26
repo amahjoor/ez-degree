@@ -31,9 +31,14 @@ export default function RootLayout({
       >
         <nav className="bg-blue-600 text-white shadow-md">
           <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-            <Link href="/" className="font-bold text-xl">
-              iWannaGraduate
-            </Link>
+            <div className="flex items-center space-x-6">
+              <Link href="/" className="font-bold text-xl">
+                iWannaGraduate
+              </Link>
+              <Link href="/professors" className="hover:text-blue-200 transition-colors">
+                Professors
+              </Link>
+            </div>
           </div>
         </nav>
         <main className="min-h-screen py-4">
