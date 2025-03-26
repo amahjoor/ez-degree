@@ -102,6 +102,7 @@ class Professor(BaseModel):
 
 class ProfessorList(BaseModel):
     professors: List[Professor] = Field(..., description="List of professors")
+    total: int = Field(..., description="Total number of professors matching the filters")
 
 app = FastAPI(
     title="GMU Course API",
@@ -516,16 +517,22 @@ async def get_professors(
     department: Optional[str] = Query(None, description="Filter by department"),
     course_code: Optional[str] = Query(None, description="Filter by course code"),
     min_rating: Optional[float] = Query(None, description="Minimum average rating (1-5)"),
-    max_difficulty: Optional[float] = Query(None, description="Maximum difficulty rating (1-5)")
+    max_difficulty: Optional[float] = Query(None, description="Maximum difficulty rating (1-5)"),
+    search: Optional[str] = Query(None, description="Search by professor name or department"),
+    skip: int = Query(0, description="Number of records to skip (pagination)"),
+    limit: int = Query(10, description="Number of records to return (pagination)")
 ):
     """
-    Get information about professors with optional filtering
+    Get information about professors with optional filtering and pagination
     
     Args:
         department: Optional department to filter by
         course_code: Optional course code to filter by
         min_rating: Optional minimum average rating
         max_difficulty: Optional maximum difficulty rating
+        search: Optional search term for professor name or department
+        skip: Number of records to skip (pagination)
+        limit: Number of records to return (pagination)
     
     Returns:
         A list of professor objects with their ratings and reviews
@@ -559,6 +566,14 @@ async def get_professors(
                         
                     if max_difficulty and professor_data.get('avgDifficulty', 5) > max_difficulty:
                         continue
+
+                    # Apply search filter
+                    if search:
+                        search_term = search.lower()
+                        full_name = f"{professor_data.get('firstName', '')} {professor_data.get('lastName', '')}".lower()
+                        dept = professor_data.get('department', '').lower()
+                        if not (search_term in full_name or search_term in dept):
+                            continue
                     
                     professors.append(professor_data)
             except json.JSONDecodeError as e:
@@ -568,10 +583,14 @@ async def get_professors(
                 print(f"Error processing file {filename}: {e}")
                 continue
         
-        if not professors:
-            return {"professors": []}
-            
-        return {"professors": professors}
+        # Apply pagination
+        total_count = len(professors)
+        paginated_professors = professors[skip:skip + limit]
+        
+        return {
+            "professors": paginated_professors,
+            "total": total_count
+        }
         
     except Exception as e:
         raise HTTPException(

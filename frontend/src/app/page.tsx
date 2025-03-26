@@ -1252,7 +1252,6 @@ export default function Home() {
 
   // Handle page change
   const handlePageChange = (page: number) => {
-    window.scrollTo(0, 0); // Scroll to top when changing pages
     setCurrentPage(page);
   };
 

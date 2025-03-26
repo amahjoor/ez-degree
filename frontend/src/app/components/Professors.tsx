@@ -38,7 +38,7 @@ function ProfessorModal({ professor, onClose }: { professor: Professor; onClose:
           </div>
           <div>
             <h3 className="font-semibold text-gray-700">Would Take Again</h3>
-            <p>{professor.wouldTakeAgainPercent}%</p>
+            <p>{professor.wouldTakeAgainPercent === -1 ? 'N/A' : `${professor.wouldTakeAgainPercent}%`}</p>
           </div>
           {professor.helpfulRating && (
             <div>
@@ -104,28 +104,50 @@ export default function Professors() {
   const [professorsError, setProfessorsError] = useState<string | null>(null);
   const [professorSearchTerm, setProfessorSearchTerm] = useState('');
   const [currentProfessorPage, setCurrentProfessorPage] = useState<number>(1);
+  const [totalProfessors, setTotalProfessors] = useState<number>(0);
   const professorsPerPage = 10;
 
-  // Calculate filtered professors
-  const filteredProfessors = useMemo(() => {
-    return professors.filter(professor => 
-      professor.firstName.toLowerCase().includes(professorSearchTerm.toLowerCase()) ||
-      professor.lastName.toLowerCase().includes(professorSearchTerm.toLowerCase()) ||
-      professor.department.toLowerCase().includes(professorSearchTerm.toLowerCase())
-    );
-  }, [professors, professorSearchTerm]);
+  // Fetch professors when component mounts or when search/page changes
+  useEffect(() => {
+    const fetchProfessors = async () => {
+      setProfessorsLoading(true);
+      setProfessorsError(null);
+      try {
+        const skip = (currentProfessorPage - 1) * professorsPerPage;
+        const response = await fetch(
+          `${API_BASE_URL}/professors?skip=${skip}&limit=${professorsPerPage}${
+            professorSearchTerm ? `&search=${encodeURIComponent(professorSearchTerm)}` : ''
+          }`
+        );
+        if (!response.ok) {
+          throw new Error('Failed to fetch professors');
+        }
+        const data = await response.json();
+        setProfessors(data.professors);
+        setTotalProfessors(data.total);
+      } catch (error) {
+        setProfessorsError(error instanceof Error ? error.message : 'Failed to fetch professors');
+        setProfessors([]); // Set empty array on error
+      } finally {
+        setProfessorsLoading(false);
+      }
+    };
 
-  // Calculate total pages and paginated professors
-  const totalProfessorPages = Math.ceil(filteredProfessors.length / professorsPerPage);
-  const paginatedProfessors = useMemo(() => {
-    const startIndex = (currentProfessorPage - 1) * professorsPerPage;
-    return filteredProfessors.slice(startIndex, startIndex + professorsPerPage);
-  }, [filteredProfessors, currentProfessorPage]);
+    // Add debounce to search
+    const timeoutId = setTimeout(() => {
+      fetchProfessors();
+    }, 300); // Wait 300ms after the last keystroke
+
+    return () => clearTimeout(timeoutId);
+  }, [currentProfessorPage, professorSearchTerm]);
 
   // Reset to first page when search term changes
   useEffect(() => {
     setCurrentProfessorPage(1);
   }, [professorSearchTerm]);
+
+  // Calculate total pages
+  const totalProfessorPages = Math.ceil(totalProfessors / professorsPerPage);
 
   // Function to get page numbers for pagination
   const getProfessorPageNumbers = () => {
@@ -154,29 +176,6 @@ export default function Professors() {
     
     return pages;
   };
-
-  // Fetch professors when component mounts
-  useEffect(() => {
-    const fetchProfessors = async () => {
-      setProfessorsLoading(true);
-      setProfessorsError(null);
-      try {
-        const response = await fetch(`${API_BASE_URL}/professors`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch professors');
-        }
-        const data = await response.json();
-        setProfessors(Array.isArray(data.professors) ? data.professors : []);
-      } catch (error) {
-        setProfessorsError(error instanceof Error ? error.message : 'Failed to fetch professors');
-        setProfessors([]); // Set empty array on error
-      } finally {
-        setProfessorsLoading(false);
-      }
-    };
-
-    fetchProfessors();
-  }, []);
 
   return (
     <div className="bg-white shadow rounded-lg p-6">
@@ -207,7 +206,7 @@ export default function Professors() {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {paginatedProfessors.map((professor) => (
+              {professors.map((professor) => (
                 <tr 
                   key={`${professor.firstName}-${professor.lastName}-${professor.department}`}
                   className="hover:bg-gray-50"
@@ -230,7 +229,9 @@ export default function Professors() {
                     <div className="text-sm text-gray-900">{professor.avgDifficulty.toFixed(1)}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{professor.wouldTakeAgainPercent}%</div>
+                    <div className="text-sm text-gray-900">
+                      {professor.wouldTakeAgainPercent === -1 ? 'N/A' : `${professor.wouldTakeAgainPercent}%`}
+                    </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm text-gray-900">
@@ -246,11 +247,14 @@ export default function Professors() {
           {totalProfessorPages > 1 && (
             <div className="flex justify-center mt-6">
               <nav className="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
+                {/* Previous Button */}
                 <button
                   onClick={() => setCurrentProfessorPage(prev => Math.max(1, prev - 1))}
                   disabled={currentProfessorPage === 1}
-                  className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
-                    currentProfessorPage === 1 ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-50'
+                  className={`relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium ${
+                    currentProfessorPage === 1 
+                      ? 'text-gray-300 cursor-not-allowed' 
+                      : 'text-gray-500 hover:bg-gray-50'
                   }`}
                 >
                   <span className="sr-only">Previous</span>
@@ -268,7 +272,8 @@ export default function Professors() {
                     />
                   </svg>
                 </button>
-                
+
+                {/* Page Numbers */}
                 {getProfessorPageNumbers().map((page, idx) => (
                   page === "..." ? (
                     <span
@@ -292,11 +297,14 @@ export default function Professors() {
                   )
                 ))}
 
+                {/* Next Button */}
                 <button
                   onClick={() => setCurrentProfessorPage(prev => Math.min(totalProfessorPages, prev + 1))}
                   disabled={currentProfessorPage === totalProfessorPages}
-                  className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
-                    currentProfessorPage === totalProfessorPages ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-50'
+                  className={`relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium ${
+                    currentProfessorPage === totalProfessorPages 
+                      ? 'text-gray-300 cursor-not-allowed' 
+                      : 'text-gray-500 hover:bg-gray-50'
                   }`}
                 >
                   <span className="sr-only">Next</span>
