@@ -35,9 +35,6 @@ export default function RootLayout({
               <Link href="/" className="font-bold text-xl">
                 iWannaGraduate
               </Link>
-              <Link href="/professors" className="hover:text-blue-200 transition-colors">
-                Professors
-              </Link>
             </div>
           </div>
         </nav>
