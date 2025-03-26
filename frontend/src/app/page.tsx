@@ -60,6 +60,7 @@ type RequirementCourse = {
   alternatives: any[];
   prerequisites?: string;
   corequisites?: string;
+  overall_difficulty?: number;
 };
 
 type Category = {
@@ -86,6 +87,7 @@ interface CourseNodeData {
   isLabel?: boolean;
   relationshipToSelected?: string | null;
   isHighlighted?: boolean;
+  difficulty?: number;
 }
 
 // Define type for our node
@@ -1008,6 +1010,16 @@ function addEdgeIfNotExists(
   edgeTracker.add(edgeSignature);
 }
 
+// Declare the global window interface
+declare global {
+  interface Window {
+    courseGraphState?: {
+      filteredCategories: string[];
+      toggleCategoryFilter: (category: string) => void;
+    };
+  }
+}
+
 export default function Home() {
   const [courses, setCourses] = useState<Course[]>([]);
   const [subjects, setSubjects] = useState<Subject[]>([]);
@@ -1040,6 +1052,7 @@ export default function Home() {
   const [categoryColors, setCategoryColors] = useState<Record<string, string>>({});
   const [reactFlowElements, setReactFlowElements] = useState<any[]>([]);
   const [filteredCategories, setFilteredCategories] = useState<string[]>([]);
+  const [colorScheme, setColorScheme] = useState<'category' | 'difficulty'>('category');
   
   // Toggle category filter function
   const toggleCategoryFilter = (category: string) => {
@@ -1133,122 +1146,82 @@ export default function Home() {
     async function fetchConcentrations() {
       try {
         const response = await fetch(`${API_BASE_URL}/requirements/majors/${selectedMajor}/concentrations`);
-        
         if (!response.ok) {
           if (response.status === 404) {
-            // It's OK if no concentrations are found - just set an empty array
-            setConcentrations([]);
-            return;
+            throw new Error('Concentrations API endpoint not found');
           } else {
             throw new Error(`Failed to fetch concentrations: ${response.statusText}`);
           }
         }
-        
         const data = await response.json();
-        setConcentrations(data.concentrations || []);
+        setConcentrations(data.concentrations);
+        setIsApiAvailable(true);
       } catch (error) {
         console.error('Error fetching concentrations:', error);
-        setConcentrations([]);
+        setIsApiAvailable(false);
+        setRequirementsError('Error connecting to the requirements API. Please ensure the server is running.');
       }
     }
 
     fetchConcentrations();
   }, [selectedMajor, isApiAvailable]);
 
-  // Fetch requirements for selected major
+  // Fetch requirements when a major (and optionally concentration) is selected
   useEffect(() => {
-    if (!selectedMajor || !isApiAvailable) return;
+    if (!selectedMajor || !isApiAvailable) {
+      setRequirements(null);
+      setRequirementsError('');
+      return;
+    }
 
     async function fetchRequirements() {
-      setRequirementsLoading(true);
-      setRequirementsError('');
-      
       try {
-        // Add concentration_id as a query parameter if selected
-        let url = `${API_BASE_URL}/requirements/majors/${selectedMajor}`;
-        if (selectedConcentration) {
-          url += `?concentration_id=${selectedConcentration}`;
-        }
+        const url = selectedConcentration
+          ? `${API_BASE_URL}/requirements/majors/${selectedMajor}/concentrations/${selectedConcentration}`
+          : `${API_BASE_URL}/requirements/majors/${selectedMajor}`;
         
         const response = await fetch(url);
         if (!response.ok) {
           if (response.status === 404) {
-            throw new Error(`Requirements for ${selectedMajor} not found`);
+            throw new Error('Requirements API endpoint not found');
           } else {
             throw new Error(`Failed to fetch requirements: ${response.statusText}`);
           }
         }
         const data = await response.json();
         setRequirements(data);
-        
-        // Initialize all categories as expanded using indexes
-        const initialExpandedState = {} as {[key: string]: boolean};
-        data.categories.forEach((category: Category, index: number) => {
-          initialExpandedState[`category-${index}`] = true;
-        });
-        setExpandedCategories(initialExpandedState);
-      } catch (error: any) {
-        setRequirementsError(error.message || 'Error loading requirements. Please try again later.');
+        setRequirementsError('');
+        setIsApiAvailable(true);
+      } catch (error) {
         console.error('Error fetching requirements:', error);
-      } finally {
-        setRequirementsLoading(false);
+        setIsApiAvailable(false);
+        setRequirementsError('Error connecting to the requirements API. Please ensure the server is running.');
       }
     }
 
     fetchRequirements();
   }, [selectedMajor, selectedConcentration, isApiAvailable]);
 
-  // Fetch courses when search, subject filters, or page changes
-  useEffect(() => {
-    if (!isApiAvailable) return;
-
-    const fetchCourses = async () => {
+  // Fetch courses
+  const fetchCourses = async () => {
+    try {
       setLoading(true);
-      setError(null);
-      
-      try {
-        // Calculate pagination parameters
-        const skip = (currentPage - 1) * itemsPerPage;
-        const limit = itemsPerPage;
-        
-        // Construct URL with search, subject, and pagination parameters
-        let url = `${API_BASE_URL}/courses/?skip=${skip}&limit=${limit}`;
-        
-        if (searchTerm) {
-          url += `&search=${encodeURIComponent(searchTerm)}`;
-        }
-        
-        if (selectedSubjects.length > 0) {
-          selectedSubjects.forEach(subject => {
-            url += `&subject=${encodeURIComponent(subject)}`;
-          });
-        }
-        
-        console.log(`Fetching courses from: ${url}`);
-        
-        const response = await fetch(url);
-        
-        if (!response.ok) {
-          throw new Error(`API request failed: ${response.status} ${response.statusText}`);
-        }
-        
-        const data = await response.json();
-        setCourses(data.courses);
-        setTotalCourses(data.total);
-        setIsApiAvailable(true);
-      } catch (err) {
-        console.error("Error fetching courses:", err);
-        setError(err instanceof Error ? err.message : "Failed to fetch courses");
-        setIsApiAvailable(false);
-        setCourses([]);
-        setTotalCourses(0);
-      } finally {
-        setLoading(false);
+      const response = await fetch(`${API_BASE_URL}/courses?page=${currentPage}&limit=${itemsPerPage}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch courses');
       }
-    };
-
-    fetchCourses();
-  }, [searchTerm, selectedSubjects, currentPage, isApiAvailable]);
+      const data = await response.json();
+      setCourses(data.courses);
+      setTotalCourses(data.total);
+      setIsApiAvailable(true);
+    } catch (error) {
+      console.error('Error fetching courses:', error);
+      setIsApiAvailable(false);
+      setError('Failed to load courses. Please ensure the server is running.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Handle page change
   const handlePageChange = (page: number) => {
@@ -1371,6 +1344,15 @@ export default function Home() {
     }
   };
 
+  // Function to get color based on difficulty
+  const getDifficultyColor = (difficulty: number) => {
+    console.log('Getting color for difficulty:', difficulty);
+    if (difficulty <= 2) return '#22c55e'; // green-500
+    if (difficulty <= 3) return '#eab308'; // yellow-500
+    if (difficulty <= 4) return '#f97316'; // orange-500
+    return '#ef4444'; // red-500
+  };
+
   // Create node graph when requirements data changes
   useEffect(() => {
     if (!graphView || !requirements || requirementsLoading) {
@@ -1402,31 +1384,29 @@ export default function Home() {
         category.courses.forEach((course) => {
           const courseCode = course.code;
           if (!courseMap[courseCode]) {
-            // Clone the course and add it to our collection
             courseMap[courseCode] = {
               ...course,
               prerequisites: '',
-              corequisites: ''
+              corequisites: '',
+              overall_difficulty: undefined
             };
             allCourses.push(courseMap[courseCode]);
           }
         });
       });
       
-      // Fetch prerequisites for each course
-      const fetchPrerequisites = async () => {
+      // Fetch prerequisites and difficulty for each course
+      const fetchCourseDetails = async () => {
         await Promise.all(
           allCourses.map(async (course) => {
             try {
               const courseResponse = await fetch(`${API_BASE_URL}/courses/${encodeURIComponent(course.code)}`);
               if (courseResponse.ok) {
                 const courseData = await courseResponse.json();
-                
-                // Debug log to check if prerequisites are being fetched correctly
-                console.log(`Course ${course.code} prerequisites:`, courseData.prerequisites);
-                
                 course.prerequisites = courseData.prerequisites;
                 course.corequisites = courseData.corequisites;
+                course.overall_difficulty = courseData.overall_difficulty;
+                console.log(`Course ${course.code} difficulty:`, courseData.overall_difficulty);
               }
             } catch (error) {
               console.error(`Error fetching details for ${course.code}:`, error);
@@ -1434,17 +1414,15 @@ export default function Home() {
           })
         );
         
-        // After fetching prerequisites, create the graph
+        // After fetching details, create the graph
         const { nodeElements, edgeElements } = createGraph(allCourses);
         
         // Only update states if the component is still mounted and in graph view
         if (graphView) {
           setNodes(nodeElements);
           setEdges(edgeElements);
-          // Create a stable reference for reactFlowElements
           setReactFlowElements(prev => {
             const newElements = [...nodeElements, ...edgeElements];
-            // Only update if there's an actual change to avoid infinite updates
             if (JSON.stringify(prev) !== JSON.stringify(newElements)) {
               return newElements;
             }
@@ -1453,12 +1431,40 @@ export default function Home() {
         }
       };
       
-      fetchPrerequisites();
+      fetchCourseDetails();
     } catch (error) {
       console.error('Error preparing graph data:', error);
     }
   }, [requirements, graphView, requirementsLoading]);
-  
+
+  // Update node colors when color scheme changes
+  useEffect(() => {
+    if (!nodes.length) return;
+
+    const updatedNodes = nodes.map(node => {
+      const nodeData = node.data;
+      let newColor = nodeData.color;
+
+      if (colorScheme === 'difficulty' && nodeData.difficulty !== undefined) {
+        newColor = getDifficultyColor(nodeData.difficulty);
+        console.log(`Updating color for ${nodeData.label} with difficulty ${nodeData.difficulty} to ${newColor}`);
+      } else if (colorScheme === 'category' && nodeData.category) {
+        const categoryIndex = requirements?.categories.findIndex(c => c.name === nodeData.category) ?? -1;
+        newColor = categoryIndex >= 0 ? colors[categoryIndex % colors.length] : '#cccccc';
+      }
+
+      return {
+        ...node,
+        data: {
+          ...nodeData,
+          color: newColor
+        }
+      };
+    });
+
+    setNodes(updatedNodes);
+  }, [colorScheme, nodes, requirements?.categories]);
+
   // Function to create the graph
   const createGraph = (allCourses: RequirementCourse[]) => {
     const nodeElements: any[] = [];
@@ -1482,7 +1488,6 @@ export default function Home() {
     const coursesByCategory: Record<string, RequirementCourse[]> = {};
     allCourses.forEach(course => {
       const normalizedId = normalizeCourseId(course.code);
-      // Use the requirement category if available, otherwise use subject
       const category = courseCategories[normalizedId] || getCourseCategory(course.code);
       if (!coursesByCategory[category]) {
         coursesByCategory[category] = [];
@@ -1492,23 +1497,20 @@ export default function Home() {
 
     // Calculate positions for each category and create nodes
     const categories = Object.keys(coursesByCategory);
-    console.log("Categories for layout:", categories);
     
     // Place categories in a circular layout
     categories.forEach((category, categoryIndex) => {
       const coursesInCategory = coursesByCategory[category];
-      console.log(`Category ${category} has ${coursesInCategory.length} courses`);
       
       // Place each category in a position on a large circle
       const categoryAngle = (2 * Math.PI * categoryIndex) / categories.length;
-      const radius = 600; // Larger radius to space out categories more
+      const radius = 600;
       const categoryX = Math.cos(categoryAngle) * radius;
       const categoryY = Math.sin(categoryAngle) * radius;
       
       // Get color for this category
       let categoryColor = colors[categoryIndex % colors.length];
       if (requirements) {
-        // Try to find this category in requirements to use consistent coloring
         const reqCategoryIndex = requirements.categories.findIndex(c => c.name === category);
         if (reqCategoryIndex >= 0) {
           categoryColor = colors[reqCategoryIndex % colors.length];
@@ -1522,23 +1524,27 @@ export default function Home() {
         const row = Math.floor(courseIndex / coursesPerRow);
         const col = courseIndex % coursesPerRow;
         
-        // Space courses closer within their category cluster
         const x = categoryX + (col - coursesPerRow / 2) * 150;
         const y = categoryY + (row - Math.floor(coursesInCategory.length / coursesPerRow) / 2) * 100;
         
         const normalizedId = normalizeCourseId(course.code);
-        // Use category colors from requirements if available
-        let nodeCategoryColor = categoryColor;
+        
+        // Determine node color based on selected color scheme
+        let nodeColor = categoryColor;
+        if (colorScheme === 'difficulty' && course.overall_difficulty) {
+          nodeColor = getDifficultyColor(course.overall_difficulty);
+        }
         
         const node = {
-        data: {
+          data: {
             id: normalizedId,
-          label: course.code,
+            label: course.code,
             title: course.title,
             credits: course.credits,
-            color: nodeCategoryColor,
+            color: nodeColor,
             category: category,
-            isLabel: false
+            isLabel: false,
+            difficulty: course.overall_difficulty
           },
           position: { x, y }
         };
@@ -1548,11 +1554,10 @@ export default function Home() {
       });
     });
 
-    // Second pass: create all edges
+    // Create edges for prerequisites and corequisites
     allCourses.forEach(course => {
       const normalizedSourceId = normalizeCourseId(course.code);
       
-      // Create edges for prerequisites
       if (course.prerequisites) {
         const prereqs = parsePrerequisites(course.prerequisites);
         prereqs.forEach((prereq, index) => {
@@ -1570,7 +1575,6 @@ export default function Home() {
         });
       }
       
-      // Create edges for corequisites
       if (course.corequisites) {
         const coreqs = parsePrerequisites(course.corequisites);
         coreqs.forEach((coreq, index) => {
@@ -1589,9 +1593,6 @@ export default function Home() {
       }
     });
     
-    console.log("Created nodes:", nodeElements.length);
-    console.log("Created edges:", edgeElements.length);
-
     return { nodeElements, edgeElements };
   };
 
@@ -2023,17 +2024,30 @@ export default function Home() {
                   <div className="mb-4 p-4 bg-white border rounded-md shadow-md">
                     <div className="flex justify-between items-center mb-3">
                       <h3 className="font-bold">Key</h3>
-                      {filteredCategories.length > 0 && (
-                        <button 
-                          className="text-xs text-blue-600 hover:text-blue-800"
-                          onClick={() => setFilteredCategories([])}
-                        >
-                          Clear All Filters
-                        </button>
-                      )}
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm">Color by:</span>
+                          <select 
+                            className="text-sm border rounded px-2 py-1"
+                            value={colorScheme}
+                            onChange={(e) => setColorScheme(e.target.value as 'category' | 'difficulty')}
+                          >
+                            <option value="category">Category</option>
+                            <option value="difficulty">Difficulty</option>
+                          </select>
+                        </div>
+                        {filteredCategories.length > 0 && (
+                          <button 
+                            className="text-xs text-blue-600 hover:text-blue-800"
+                            onClick={() => setFilteredCategories([])}
+                          >
+                            Clear All Filters
+                          </button>
+                        )}
+                      </div>
                     </div>
                     
-                    {/* Prerequisites and Corequisites legend moved to top */}
+                    {/* Prerequisites and Corequisites legend */}
                     <div className="w-full mb-3 border-b border-gray-200 pb-2">
                       <div className="flex flex-wrap gap-x-8">
                         <p className="flex items-center mb-1 text-sm">
@@ -2046,65 +2060,49 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    
-                    <div className="flex flex-wrap gap-y-2">
-                      <div className="w-full">
-                        <div className="flex justify-between items-center mb-2">
-                          <p className="text-sm font-medium">Filter by category:</p>
-                          <p className="text-xs text-gray-500">Click to toggle filters</p>
+
+                    {/* Color scheme specific legend */}
+                    {colorScheme === 'category' ? (
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                        {Object.entries(categoryColors).map(([category, color]) => (
+                          <div key={category} className="flex items-center">
+                            <input
+                              type="checkbox"
+                              id={`category-${category}`}
+                              checked={!filteredCategories.includes(category)}
+                              onChange={() => toggleCategoryFilter(category)}
+                              className="mr-2"
+                            />
+                            <label htmlFor={`category-${category}`} className="flex items-center text-sm">
+                              <span 
+                                className="inline-block w-3 h-3 mr-2" 
+                                style={{ backgroundColor: color }}
+                              ></span>
+                              {category}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="flex items-center space-x-4 text-sm">
+                        <div className="flex items-center">
+                          <span className="inline-block w-3 h-3 mr-2 bg-green-500"></span>
+                          <span>Easy (1-2)</span>
                         </div>
-                        
-                        <div className="w-full flex flex-wrap gap-x-2 gap-y-2">
-                          {Object.entries(categoryColors).map(([category, color]) => {
-                            // Get course count for this category
-                            const count = (() => {
-                              let total = 0, visible = 0;
-                              nodes.forEach(node => {
-                                if ((node.data as any).category === category) {
-                                  total++;
-                                  if (!node.hidden) visible++;
-                                }
-                              });
-                              return { total, visible };
-                            })();
-                            
-                            const isActive = filteredCategories.includes(category);
-                            
-                            return (
-                              <div
-                                key={category}
-                                className={`flex items-center px-3 py-2 mb-1 rounded cursor-pointer transition-all ${
-                                  isActive 
-                                    ? 'border-2 border-black shadow-md' 
-                                    : 'border border-gray-200 hover:border-gray-400'
-                                }`}
-                                onClick={() => {
-                                  if (window.courseGraphState?.toggleCategoryFilter) {
-                                    window.courseGraphState.toggleCategoryFilter(category);
-                                  }
-                                }}
-                              >
-                                {/* Color indicator with larger size when selected */}
-                                <div 
-                                  className={`${isActive ? 'w-5 h-5' : 'w-4 h-4'} mr-2 rounded-sm flex-shrink-0`}
-                                  style={{ backgroundColor: color }}
-                                ></div>
-                                
-                                {/* Text with bold when selected */}
-                                <span className={`text-sm ${isActive ? 'font-semibold' : ''}`}>{category}</span>
-                                
-                                {/* Counter */}
-                                <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
-                                  isActive ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-600'
-                                }`}>
-                                  {count.visible}/{count.total}
-                                </span>
-                              </div>
-                            );
-                          })}
+                        <div className="flex items-center">
+                          <span className="inline-block w-3 h-3 mr-2 bg-yellow-500"></span>
+                          <span>Moderate (2-3)</span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="inline-block w-3 h-3 mr-2 bg-orange-500"></span>
+                          <span>Hard (3-4)</span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="inline-block w-3 h-3 mr-2 bg-red-500"></span>
+                          <span>Very Hard (4-5)</span>
                         </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 )}
                 
@@ -2150,14 +2148,4 @@ export default function Home() {
       </div>
     </main>
   );
-}
-
-// Declare the global window interface
-declare global {
-  interface Window {
-    courseGraphState?: {
-      filteredCategories: string[];
-      toggleCategoryFilter: (category: string) => void;
-    };
-  }
 }

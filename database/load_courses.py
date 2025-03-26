@@ -19,7 +19,7 @@ def load_courses():
     try:
         # Get the absolute path to the JSON file
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        json_path = os.path.join(os.path.dirname(current_dir), 'output', 'all_courses.json')
+        json_path = os.path.join(os.path.dirname(current_dir), 'data', 'courses', 'all_courses.json')
         
         # Load the combined JSON file
         with open(json_path, 'r') as f:

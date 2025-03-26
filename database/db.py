@@ -1,6 +1,7 @@
-from sqlalchemy import create_engine, Column, String, Integer, Text, ForeignKey
+from sqlalchemy import create_engine, Column, String, Integer, Text, ForeignKey, Float, Boolean, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
+from datetime import datetime
 
 # Create database engine
 DATABASE_URL = "postgresql://localhost/gmu_courses"
@@ -33,7 +34,36 @@ class Course(Base):
     restrictions = Column(Text)
     notes = Column(Text)
     
+    # Rating fields
+    overall_rating = Column(Float, nullable=True)
+    overall_difficulty = Column(Float, nullable=True)
+    
     subject = relationship("Subject", back_populates="courses")
+    reviews = relationship("Review", back_populates="course")
+
+class Review(Base):
+    __tablename__ = 'reviews'
+    
+    id = Column(Integer, primary_key=True)
+    course_id = Column(Integer, ForeignKey('courses.id'), nullable=False)
+    professor_name = Column(String(200), nullable=False)
+    professor_department = Column(String(100))
+    comment = Column(Text)
+    date = Column(DateTime, default=datetime.utcnow)
+    difficulty_rating = Column(Float, nullable=False)
+    clarity_rating = Column(Float)
+    helpful_rating = Column(Float)
+    grade = Column(String(10))
+    textbook_use = Column(String(50))
+    would_take_again = Column(Boolean)
+    attendance_mandatory = Column(String(50))
+    is_for_credit = Column(Boolean)
+    is_for_online_class = Column(Boolean)
+    rating_tags = Column(Text)  # Store as JSON string
+    thumbs_down_total = Column(Integer)
+    thumbs_up_total = Column(Integer)
+    
+    course = relationship("Course", back_populates="reviews")
 
 # Create Session class
 Session = sessionmaker(bind=engine)

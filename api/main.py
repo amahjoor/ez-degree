@@ -64,27 +64,31 @@ class ConcentrationInfo(BaseModel):
 class ConcentrationList(BaseModel):
     concentrations: List[ConcentrationInfo] = Field(..., description="List of available concentrations for the major")
 
-class Review(BaseModel):
+class CourseReview(BaseModel):
+    """Model for a course review with professor information"""
+    professor_name: str = Field(..., description="Full name of the professor")
+    professor_department: str = Field(..., description="Department of the professor")
     comment: str = Field(..., description="Review comment")
     date: str = Field(..., description="Review date")
-    difficultyRating: float = Field(..., description="Difficulty rating (1-5)")
-    clarityRating: Optional[float] = Field(None, description="Clarity rating (1-5)")
-    helpfulRating: Optional[float] = Field(None, description="Helpfulness rating (1-5)")
+    difficulty_rating: float = Field(..., description="Difficulty rating (1-5)")
+    clarity_rating: Optional[float] = Field(None, description="Clarity rating (1-5)")
+    helpful_rating: Optional[float] = Field(None, description="Helpfulness rating (1-5)")
     grade: str = Field("", description="Grade received")
-    textbookUse: Optional[Union[str, int]] = Field(None, description="Textbook use (Yes/No/N/A or numeric rating)")
-    wouldTakeAgain: Optional[bool] = Field(None, description="Would take again")
-    attendanceMandatory: Optional[str] = Field(None, description="Attendance requirement")
-    isForCredit: Optional[bool] = Field(None, description="If the review is for credit")
-    isForOnlineClass: Optional[bool] = Field(None, description="If the review is for an online class")
-    ratingTags: Optional[List[str]] = Field(None, description="Rating tags")
-    thumbsDownTotal: Optional[int] = Field(None, description="Number of thumbs down")
-    thumbsUpTotal: Optional[int] = Field(None, description="Number of thumbs up")
+    textbook_use: Optional[str] = Field(None, description="Textbook use (Yes/No/N/A or numeric rating)")
+    would_take_again: Optional[bool] = Field(None, description="Would take again")
+    attendance_mandatory: Optional[str] = Field(None, description="Attendance requirement")
+    is_for_credit: Optional[bool] = Field(None, description="If the review is for credit")
+    is_for_online_class: Optional[bool] = Field(None, description="If the review is for an online class")
+    rating_tags: Optional[List[str]] = Field(None, description="Rating tags")
+    thumbs_down_total: Optional[int] = Field(None, description="Number of thumbs down")
+    thumbs_up_total: Optional[int] = Field(None, description="Number of thumbs up")
 
-    @validator('textbookUse', pre=True)
-    def convert_textbook_use(cls, v):
-        if isinstance(v, int):
-            return str(v)  # Convert numeric values to string
-        return v
+class PaginatedReviews(BaseModel):
+    """Model for paginated review response"""
+    total: int = Field(..., description="Total number of reviews")
+    page: int = Field(..., description="Current page number")
+    total_pages: int = Field(..., description="Total number of pages")
+    reviews: List[CourseReview] = Field(..., description="List of reviews for the current page")
 
 class Professor(BaseModel):
     firstName: str = Field(..., description="Professor's first name")
@@ -96,7 +100,7 @@ class Professor(BaseModel):
     helpfulRating: Optional[float] = Field(None, description="Average helpfulness rating (1-5)")
     clarityRating: Optional[float] = Field(None, description="Average clarity rating (1-5)")
     averageGrade: Optional[str] = Field(None, description="Average grade given")
-    reviews: Dict[str, List[Review]] = Field(..., description="Reviews by course code")
+    reviews: Dict[str, List[CourseReview]] = Field(..., description="Reviews by course code")
     url: Optional[str] = Field(None, description="URL to professor's profile")
     isAttendanceMandatory: Optional[float] = Field(None, description="Attendance mandatory percentage")
 
@@ -520,6 +524,63 @@ async def get_course(course_code: str):
                     print(f"Error processing professor file {filename}: {e}")
                     continue
             
+            # Calculate overall course difficulty
+            if course_professors:
+                total_difficulty = sum(prof['avgDifficulty'] for prof in course_professors)
+                overall_difficulty = total_difficulty / len(course_professors)
+                
+                # Calculate overall average grade
+                all_grades = []
+                for prof in course_professors:
+                    for review in prof['reviews']:
+                        if review.get('grade'):
+                            all_grades.append(review['grade'])
+                
+                if all_grades:
+                    # Convert letter grades to numbers for averaging
+                    grade_values = {
+                        'A+': 4.0, 'A': 4.0, 'A-': 3.7,
+                        'B+': 3.3, 'B': 3.0, 'B-': 2.7,
+                        'C+': 2.3, 'C': 2.0, 'C-': 1.7,
+                        'D+': 1.3, 'D': 1.0, 'D-': 0.7,
+                        'F': 0.0
+                    }
+                    
+                    # Calculate average numeric grade
+                    numeric_grades = [grade_values.get(grade, 0) for grade in all_grades]
+                    avg_numeric = sum(numeric_grades) / len(numeric_grades)
+                    
+                    # Convert back to letter grade
+                    if avg_numeric >= 3.85:
+                        overall_grade = 'A'
+                    elif avg_numeric >= 3.5:
+                        overall_grade = 'A-'
+                    elif avg_numeric >= 3.15:
+                        overall_grade = 'B+'
+                    elif avg_numeric >= 2.85:
+                        overall_grade = 'B'
+                    elif avg_numeric >= 2.5:
+                        overall_grade = 'B-'
+                    elif avg_numeric >= 2.15:
+                        overall_grade = 'C+'
+                    elif avg_numeric >= 1.85:
+                        overall_grade = 'C'
+                    elif avg_numeric >= 1.5:
+                        overall_grade = 'C-'
+                    elif avg_numeric >= 1.15:
+                        overall_grade = 'D+'
+                    elif avg_numeric >= 0.85:
+                        overall_grade = 'D'
+                    elif avg_numeric >= 0.5:
+                        overall_grade = 'D-'
+                    else:
+                        overall_grade = 'F'
+                else:
+                    overall_grade = None
+            else:
+                overall_difficulty = None
+                overall_grade = None
+            
         return {
             "course_code": course.course_code,
             "title": course.title,
@@ -530,6 +591,8 @@ async def get_course(course_code: str):
             "corequisites": course.corequisites,
             "restrictions": course.restrictions,
             "notes": course.notes,
+            "overall_difficulty": overall_difficulty,
+            "overall_grade": overall_grade,
             "professors": course_professors
         }
         
@@ -689,6 +752,142 @@ async def get_professor(
             status_code=500,
             detail=f"Error retrieving professor data: {str(e)}"
         )
+
+@app.get("/api/courses/{course_code}/reviews", response_model=PaginatedReviews)
+async def get_course_reviews(
+    course_code: str = Path(..., description="Course code (e.g., CS 110)"),
+    page: int = Query(1, description="Page number for pagination"),
+    limit: int = Query(10, description="Number of reviews per page"),
+    professor: Optional[str] = Query(None, description="Filter reviews by professor name")
+):
+    """
+    Get paginated reviews for a specific course.
+    Optionally filter by professor name.
+    """
+    # Load professor data
+    professors_data = []
+    professors_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'professors')
+    
+    for filename in os.listdir(professors_dir):
+        if filename.endswith('.json'):
+            with open(os.path.join(professors_dir, filename), 'r') as f:
+                professor_data = json.load(f)
+                professors_data.append(Professor(**professor_data))
+    
+    # Collect all reviews for the course
+    all_reviews = []
+    for prof in professors_data:
+        if course_code in prof.reviews:
+            for review in prof.reviews[course_code]:
+                # Convert review to CourseReview format
+                course_review = CourseReview(
+                    professor_name=f"{prof.firstName} {prof.lastName}",
+                    professor_department=prof.department,
+                    comment=review.comment,
+                    date=review.date,
+                    difficulty_rating=review.difficultyRating,
+                    clarity_rating=review.clarityRating,
+                    helpful_rating=review.helpfulRating,
+                    grade=review.grade,
+                    textbook_use=review.textbookUse,
+                    would_take_again=review.wouldTakeAgain,
+                    attendance_mandatory=review.attendanceMandatory,
+                    is_for_credit=review.isForCredit,
+                    is_for_online_class=review.isForOnlineClass,
+                    rating_tags=review.ratingTags,
+                    thumbs_down_total=review.thumbsDownTotal,
+                    thumbs_up_total=review.thumbsUpTotal
+                )
+                all_reviews.append(course_review)
+    
+    # Filter by professor if specified
+    if professor:
+        all_reviews = [r for r in all_reviews if professor.lower() in r.professor_name.lower()]
+    
+    # Sort reviews by date (newest first)
+    all_reviews.sort(key=lambda x: x.date, reverse=True)
+    
+    # Calculate pagination
+    total_reviews = len(all_reviews)
+    total_pages = (total_reviews + limit - 1) // limit
+    start_idx = (page - 1) * limit
+    end_idx = min(start_idx + limit, total_reviews)
+    
+    # Get reviews for current page
+    page_reviews = all_reviews[start_idx:end_idx]
+    
+    return PaginatedReviews(
+        total=total_reviews,
+        page=page,
+        total_pages=total_pages,
+        reviews=page_reviews
+    )
+
+@app.get("/api/courses/{course_code}/reviews/summary")
+async def get_course_reviews_summary(
+    course_code: str = Path(..., description="Course code (e.g., CS 110)")
+):
+    """
+    Get a summary of reviews for a specific course, including:
+    - Average ratings
+    - Total number of reviews
+    - Distribution of grades
+    - Most common tags
+    """
+    # Load professor data
+    professors_data = []
+    professors_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'professors')
+    
+    for filename in os.listdir(professors_dir):
+        if filename.endswith('.json'):
+            with open(os.path.join(professors_dir, filename), 'r') as f:
+                professor_data = json.load(f)
+                professors_data.append(Professor(**professor_data))
+    
+    # Collect all reviews for the course
+    all_reviews = []
+    for prof in professors_data:
+        if course_code in prof.reviews:
+            all_reviews.extend(prof.reviews[course_code])
+    
+    if not all_reviews:
+        raise HTTPException(status_code=404, detail="No reviews found for this course")
+    
+    # Calculate summary statistics
+    total_reviews = len(all_reviews)
+    
+    # Calculate average ratings
+    avg_difficulty = sum(r.difficultyRating for r in all_reviews) / total_reviews
+    avg_clarity = sum(r.clarityRating for r in all_reviews if r.clarityRating) / len([r for r in all_reviews if r.clarityRating])
+    avg_helpful = sum(r.helpfulRating for r in all_reviews if r.helpfulRating) / len([r for r in all_reviews if r.helpfulRating])
+    
+    # Calculate grade distribution
+    grade_distribution = {}
+    for review in all_reviews:
+        grade = review.grade
+        grade_distribution[grade] = grade_distribution.get(grade, 0) + 1
+    
+    # Calculate most common tags
+    tag_counts = {}
+    for review in all_reviews:
+        if review.ratingTags:
+            for tag in review.ratingTags:
+                tag_counts[tag] = tag_counts.get(tag, 0) + 1
+    
+    # Sort tags by frequency
+    sorted_tags = sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
+    top_tags = [tag for tag, _ in sorted_tags[:5]]  # Get top 5 tags
+    
+    return {
+        "total_reviews": total_reviews,
+        "average_ratings": {
+            "difficulty": round(avg_difficulty, 2),
+            "clarity": round(avg_clarity, 2),
+            "helpful": round(avg_helpful, 2)
+        },
+        "grade_distribution": grade_distribution,
+        "top_tags": top_tags
+    }
 
 if __name__ == "__main__":
     # Scrape ACCT courses

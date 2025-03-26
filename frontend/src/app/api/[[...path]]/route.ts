@@ -3,14 +3,22 @@ import { NextRequest, NextResponse } from 'next/server';
 // Get the API base URL from environment variable or default to localhost:8000
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
+// Helper function to clean path and build URL
+function buildUrl(path: string, searchParams?: string) {
+  // Remove leading and trailing slashes, then join with single slashes
+  const cleanPath = path.replace(/^\/+|\/+$/g, '');
+  const baseUrl = API_BASE_URL.replace(/\/+$/, '');
+  const url = cleanPath
+    ? `${baseUrl}/${cleanPath}${searchParams ? `?${searchParams}` : ''}`
+    : baseUrl;
+  return url;
+}
+
 // This is a catch-all route handler that proxies requests to the FastAPI backend
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
-) {
+export async function GET(request: NextRequest) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
+    // Get the path from the request URL
+    const path = request.nextUrl.pathname.replace(/^\/api\/?/, '');
     const searchParams = request.nextUrl.searchParams.toString();
     
     // If root /api path with no additional path segments, redirect to docs
@@ -18,8 +26,7 @@ export async function GET(
       return NextResponse.redirect(`${API_BASE_URL}/docs`);
     }
     
-    const url = `${API_BASE_URL}/${path}${searchParams ? `?${searchParams}` : ''}`;
-
+    const url = buildUrl(path, searchParams);
     console.log(`Proxying GET request to: ${url}`);
 
     // Forward the request to the FastAPI backend
@@ -36,7 +43,7 @@ export async function GET(
     // For documentation endpoints (docs, redoc, openapi.json)
     if (path === 'docs' || path === 'redoc' || path === 'openapi.json' || contentType.includes('text/html')) {
       // Redirect to the original backend for documentation
-      return NextResponse.redirect(`${API_BASE_URL}/${path}${searchParams ? `?${searchParams}` : ''}`);
+      return NextResponse.redirect(buildUrl(path, searchParams));
     }
     
     // For JSON responses (API data)
@@ -63,14 +70,11 @@ export async function GET(
 }
 
 // Handle POST requests
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
-) {
+export async function POST(request: NextRequest) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
-    const url = `${API_BASE_URL}/${path}`;
+    // Get the path from the request URL
+    const path = request.nextUrl.pathname.replace(/^\/api\/?/, '');
+    const url = buildUrl(path);
 
     console.log(`Proxying POST request to: ${url}`);
 
@@ -101,14 +105,13 @@ export async function POST(
 }
 
 // Handle PUT requests
-export async function PUT(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
-) {
+export async function PUT(request: NextRequest) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
-    const url = `${API_BASE_URL}/${path}`;
+    // Get the path from the request URL
+    const path = request.nextUrl.pathname.replace(/^\/api\/?/, '');
+    const url = buildUrl(path);
+
+    console.log(`Proxying PUT request to: ${url}`);
 
     // Get the request body
     const body = await request.json();
@@ -130,21 +133,20 @@ export async function PUT(
   } catch (error) {
     console.error('API proxy error:', error);
     return NextResponse.json(
-      { error: 'Failed to update data via API' },
+      { error: 'Failed to send data to API' },
       { status: 500 }
     );
   }
 }
 
 // Handle DELETE requests
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
-) {
+export async function DELETE(request: NextRequest) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
-    const url = `${API_BASE_URL}/${path}`;
+    // Get the path from the request URL
+    const path = request.nextUrl.pathname.replace(/^\/api\/?/, '');
+    const url = buildUrl(path);
+
+    console.log(`Proxying DELETE request to: ${url}`);
 
     // Forward the request to the FastAPI backend
     const response = await fetch(url, {
