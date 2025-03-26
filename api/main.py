@@ -601,7 +601,13 @@ async def get_professor(
         HTTPException 500: If there's an error processing the request
     """
     try:
-        professor_file = os.path.join(REQUIREMENTS_DIR, "professors", professor_id)
+        # Remove .json extension if present
+        professor_id = professor_id.replace('.json', '')
+        
+        # Clean up the professor ID
+        professor_id = professor_id.replace(' ', '_').lower()
+        
+        professor_file = os.path.join(REQUIREMENTS_DIR, "professors", f"{professor_id}.json")
         if not os.path.exists(professor_file):
             raise HTTPException(
                 status_code=404,
