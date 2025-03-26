@@ -455,7 +455,7 @@ async def get_courses(
 @app.get("/courses/{course_code}")
 async def get_course(course_code: str):
     """
-    Get detailed information about a specific course
+    Get detailed information about a specific course, including professor ratings and reviews
     """
     db = get_session()
     try:
@@ -473,6 +473,52 @@ async def get_course(course_code: str):
                 status_code=404, 
                 detail=f"Course {course_code} not found"
             )
+
+        # Get professor information for this course
+        professors_dir = os.path.join(REQUIREMENTS_DIR, "professors")
+        course_professors = []
+        
+        if os.path.exists(professors_dir):
+            for filename in os.listdir(professors_dir):
+                try:
+                    with open(os.path.join(professors_dir, filename), 'r') as f:
+                        professor_data = json.load(f)
+                        # Try different course code formats
+                        course_code_variants = [
+                            course_code,  # Original format (e.g., "ENG 302")
+                            course_code.replace(" ", ""),  # No space (e.g., "ENG302")
+                            course_code.replace(" ", "")[:3] + course_code.replace(" ", "")[3:],  # With space after subject (e.g., "ENG 302")
+                            course_code[:2] + course_code[2:].replace(" ", ""),  # Subject without space (e.g., "ENGL302")
+                        ]
+                        
+                        for variant in course_code_variants:
+                            if variant in professor_data.get('reviews', {}):
+                                # Calculate course-specific metrics
+                                reviews = professor_data['reviews'][variant]
+                                avg_rating = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
+                                avg_difficulty = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
+                                would_take_again = sum(1 for review in reviews if review.get('wouldTakeAgain', False)) / len(reviews) * 100
+                                avg_clarity = sum(review.get('clarityRating', 0) for review in reviews) / len(reviews) if all('clarityRating' in review for review in reviews) else None
+                                avg_helpful = sum(review.get('helpfulRating', 0) for review in reviews) / len(reviews) if all('helpfulRating' in review for review in reviews) else None
+                                avg_grade = max(set(review.get('grade', '') for review in reviews), key=lambda x: reviews.count(x)) if reviews else None
+                                
+                                course_professors.append({
+                                    "firstName": professor_data['firstName'],
+                                    "lastName": professor_data['lastName'],
+                                    "department": professor_data['department'],
+                                    "avgRating": avg_rating,
+                                    "avgDifficulty": avg_difficulty,
+                                    "wouldTakeAgainPercent": would_take_again,
+                                    "clarityRating": avg_clarity,
+                                    "helpfulRating": avg_helpful,
+                                    "averageGrade": avg_grade,
+                                    "reviews": reviews,
+                                    "url": professor_data.get('url')
+                                })
+                                break  # Found a match, no need to try other variants
+                except Exception as e:
+                    print(f"Error processing professor file {filename}: {e}")
+                    continue
             
         return {
             "course_code": course.course_code,
@@ -483,7 +529,8 @@ async def get_course(course_code: str):
             "prerequisites": course.prerequisites,
             "corequisites": course.corequisites,
             "restrictions": course.restrictions,
-            "notes": course.notes
+            "notes": course.notes,
+            "professors": course_professors
         }
         
     finally:

@@ -4,6 +4,37 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
+interface Review {
+  comment?: string;
+  date: string;
+  difficultyRating: number;
+  clarityRating?: number;
+  helpfulRating?: number;
+  grade: string;
+  textbookUse?: string | number;
+  wouldTakeAgain?: boolean;
+  attendanceMandatory?: string;
+  isForCredit?: boolean;
+  isForOnlineClass?: boolean;
+  ratingTags?: string[];
+  thumbsDownTotal?: number;
+  thumbsUpTotal?: number;
+}
+
+interface Professor {
+  firstName: string;
+  lastName: string;
+  department: string;
+  avgRating: number;
+  avgDifficulty: number;
+  wouldTakeAgainPercent: number;
+  clarityRating?: number;
+  helpfulRating?: number;
+  averageGrade?: string;
+  reviews: Review[];
+  url?: string;
+}
+
 interface Course {
   course_code: string;
   title: string;
@@ -14,6 +45,7 @@ interface Course {
   corequisites: string | null;
   restrictions: string | null;
   notes: string | null;
+  professors: Professor[];
 }
 
 // Function to convert course codes in text to clickable links
@@ -170,6 +202,79 @@ export default function CourseDetail() {
             <div className="px-6 py-4 border-t border-gray-200">
               <h3 className="font-semibold text-gray-700 mb-2">Notes</h3>
               <p className="text-gray-600">{course.notes}</p>
+            </div>
+          )}
+
+          {course.professors && course.professors.length > 0 && (
+            <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+              <h3 className="font-semibold text-gray-700 mb-4">Professor Reviews</h3>
+              <div className="space-y-6">
+                {course.professors.map((professor) => (
+                  <div key={`${professor.firstName}-${professor.lastName}`} className="bg-white rounded-lg shadow p-4">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900">
+                          <Link 
+                            href={`/professors/${professor.url?.split('/').pop() || ''}`}
+                            className="text-blue-600 hover:text-blue-800"
+                          >
+                            {professor.firstName} {professor.lastName}
+                          </Link>
+                        </h4>
+                        <p className="text-sm text-gray-500">{professor.department}</p>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-yellow-500 mr-1">★</span>
+                        <span className="text-lg font-semibold">{professor.avgRating.toFixed(1)}</span>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                      <div className="bg-gray-50 p-3 rounded">
+                        <p className="text-sm text-gray-500">Difficulty</p>
+                        <p className="font-semibold">{professor.avgDifficulty.toFixed(1)}</p>
+                      </div>
+                      <div className="bg-gray-50 p-3 rounded">
+                        <p className="text-sm text-gray-500">Would Take Again</p>
+                        <p className="font-semibold">{professor.wouldTakeAgainPercent === -1 ? 'N/A' : `${professor.wouldTakeAgainPercent.toFixed(1)}%`}</p>
+                      </div>
+                      {professor.clarityRating && (
+                        <div className="bg-gray-50 p-3 rounded">
+                          <p className="text-sm text-gray-500">Clarity</p>
+                          <p className="font-semibold">{professor.clarityRating.toFixed(1)}</p>
+                        </div>
+                      )}
+                      {professor.helpfulRating && (
+                        <div className="bg-gray-50 p-3 rounded">
+                          <p className="text-sm text-gray-500">Helpfulness</p>
+                          <p className="font-semibold">{professor.helpfulRating.toFixed(1)}</p>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="space-y-4">
+                      {professor.reviews.map((review, index) => (
+                        <div key={index} className="border-t pt-4 first:border-t-0 first:pt-0">
+                          {review.comment && (
+                            <p className="text-gray-600 mb-2">{review.comment}</p>
+                          )}
+                          <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                            <span>Difficulty: {review.difficultyRating.toFixed(1)}</span>
+                            <span>Would Take Again: {review.wouldTakeAgain ? 'Yes' : 'No'}</span>
+                            {review.grade && <span>Grade: {review.grade}</span>}
+                            {review.date && <span>Date: {new Date(review.date).toLocaleDateString()}</span>}
+                            {review.clarityRating && <span>Clarity: {review.clarityRating.toFixed(1)}</span>}
+                            {review.helpfulRating && <span>Helpfulness: {review.helpfulRating.toFixed(1)}</span>}
+                            {review.textbookUse && <span>Textbook: {review.textbookUse}</span>}
+                            {review.attendanceMandatory && <span>Attendance: {review.attendanceMandatory}</span>}
+                            {review.isForOnlineClass && <span>Online Class</span>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
