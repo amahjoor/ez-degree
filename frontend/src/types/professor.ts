@@ -16,9 +16,14 @@ export interface Review {
 }
 
 export interface Professor {
+    id: string;
+    name: string;
     firstName: string;
     lastName: string;
     department: string;
+    email?: string;
+    office?: string;
+    phone?: string;
     avgRating: number;
     avgDifficulty: number;
     wouldTakeAgainPercent: number;
