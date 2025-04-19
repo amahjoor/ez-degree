@@ -37,7 +37,10 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
     return (
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center py-4">Loading professor details...</div>
+          <div className="flex justify-center items-center py-8">
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary-blue border-r-transparent mr-2"></div>
+            <p>Loading professor details...</p>
+          </div>
         </div>
       </div>
     );
@@ -47,7 +50,7 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
     return (
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center py-4 text-red-500">
+          <div className="text-center py-4 text-primary-red">
             {error || 'Professor not found'}
           </div>
         </div>
@@ -79,7 +82,7 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div className="bg-gray-50 p-4 rounded-lg">
               <h3 className="font-semibold text-gray-700">Average Rating</h3>
-              <p className="text-2xl font-bold text-gray-900">{professor.avgRating.toFixed(1)} / 5.0</p>
+              <p className="text-2xl font-bold text-primary-blue">{professor.avgRating.toFixed(1)} / 5.0</p>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <h3 className="font-semibold text-gray-700">Difficulty</h3>
@@ -87,7 +90,7 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <h3 className="font-semibold text-gray-700">Would Take Again</h3>
-              <p className="text-2xl font-bold text-gray-900">{professor.wouldTakeAgainPercent}%</p>
+              <p className="text-2xl font-bold text-primary-green">{professor.wouldTakeAgainPercent}%</p>
             </div>
             {professor.helpfulRating && (
               <div className="bg-gray-50 p-4 rounded-lg">
@@ -115,7 +118,7 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
               {Object.entries(professor.reviews).map(([courseCode, reviews]) => (
                 <div key={courseCode} className="border rounded-lg p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-semibold text-gray-900">{courseCode}</h3>
+                    <h3 className="text-xl font-semibold text-primary-blue">{courseCode}</h3>
                     <div className="flex items-center">
                       <span className="text-yellow-500 mr-1">★</span>
                       <span className="text-lg font-semibold">

@@ -1647,7 +1647,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-5xl mb-10 text-center font-bold text-green-600">iWannaGraduate</h1>
+        <h1 className="text-5xl mb-10 text-center font-bold text-primary-green">iWannaGraduate</h1>
         <p className="text-center text-lg mb-8">
           The ultimate tool to navigate your degree requirements and plan your path to graduation.
         </p>
@@ -1657,7 +1657,7 @@ export default function Home() {
           <button
             className={`py-3 px-6 font-medium text-sm rounded-t-lg ${
               activeTab === 'courses'
-                ? 'bg-white border-l border-t border-r border-gray-200 text-blue-600'
+                ? 'bg-white border-l border-t border-r border-gray-200 text-primary-blue'
                 : 'text-gray-500 hover:text-gray-700 bg-gray-50'
             }`}
             onClick={() => setActiveTab('courses')}
@@ -1667,7 +1667,7 @@ export default function Home() {
           <button
             className={`py-3 px-6 font-medium text-sm rounded-t-lg ${
               activeTab === 'requirements'
-                ? 'bg-white border-l border-t border-r border-gray-200 text-blue-600'
+                ? 'bg-white border-l border-t border-r border-gray-200 text-primary-blue'
                 : 'text-gray-500 hover:text-gray-700 bg-gray-50'
             }`}
             onClick={() => setActiveTab('requirements')}
@@ -1677,7 +1677,7 @@ export default function Home() {
           <button
             className={`py-3 px-6 font-medium text-sm rounded-t-lg ${
               activeTab === 'professors'
-                ? 'bg-white border-l border-t border-r border-gray-200 text-blue-600'
+                ? 'bg-white border-l border-t border-r border-gray-200 text-primary-blue'
                 : 'text-gray-500 hover:text-gray-700 bg-gray-50'
             }`}
             onClick={() => setActiveTab('professors')}
@@ -1703,7 +1703,7 @@ export default function Home() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
                   <button
-                    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 shadow-sm"
+                    className="px-4 py-2 bg-primary-blue text-white rounded hover:bg-blue-700 shadow-sm"
                     onClick={() => {
                       // Implement course search functionality
                       console.log("Searching for courses:", searchTerm);
@@ -1907,7 +1907,7 @@ export default function Home() {
                   <button
                     className={`px-4 py-2 rounded-md ${
                       !graphView 
-                        ? 'bg-blue-600 text-white' 
+                        ? 'bg-primary-blue text-white' 
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                     }`}
                     onClick={() => setGraphView(false)}
@@ -1917,7 +1917,7 @@ export default function Home() {
                   <button
                     className={`px-4 py-2 rounded-md ${
                       graphView 
-                        ? 'bg-blue-600 text-white' 
+                        ? 'bg-primary-blue text-white' 
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                     }`}
                     onClick={() => setGraphView(true)}

@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 font-sans`}
       >
-        <nav className="bg-blue-600 text-white shadow-md">
+        <nav className="bg-primary-blue text-white shadow-md">
           <div className="container mx-auto px-4 py-3 flex justify-between items-center">
             <div className="flex items-center space-x-6">
               <Link href="/" className="font-bold text-xl">

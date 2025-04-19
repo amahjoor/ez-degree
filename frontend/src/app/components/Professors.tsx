@@ -88,7 +88,7 @@ export default function Professors() {
       <div className="mb-4">
         <input
           type="text"
-          className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
           placeholder="Search professors by name or department..."
           value={professorSearchTerm}
           onChange={(e) => setProfessorSearchTerm(e.target.value)}
@@ -97,11 +97,11 @@ export default function Professors() {
 
       {professorsLoading ? (
         <div className="text-center py-8">
-          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
+          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary-blue border-r-transparent"></div>
           <p className="mt-2">Loading professors...</p>
         </div>
       ) : professorsError ? (
-        <div className="text-center py-8 text-red-500">
+        <div className="text-center py-8 text-primary-red">
           {professorsError}
         </div>
       ) : (
@@ -127,7 +127,7 @@ export default function Professors() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <Link 
                         href={`/professors/${professor.url?.split('/').pop() || ''}`}
-                        className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                        className="text-sm font-medium text-primary-blue hover:text-blue-800"
                       >
                         {professor.firstName} {professor.lastName}
                       </Link>
@@ -202,7 +202,7 @@ export default function Professors() {
                       onClick={() => setCurrentProfessorPage(page as number)}
                       className={`relative inline-flex items-center px-4 py-2 border ${
                         currentProfessorPage === page
-                          ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
+                          ? 'z-10 bg-blue-50 border-primary-blue text-primary-blue'
                           : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
                       } text-sm font-medium`}
                     >
