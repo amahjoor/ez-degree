@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>iWannaGraduate - GMU Course Planning Tool</title>
+        <title>Patriot Assist</title>
         <meta name="description" content="A tool to help GMU students navigate degree requirements and plan their courses" />
       </head>
       <body
@@ -36,7 +36,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-3 flex justify-between items-center">
             <div className="flex items-center space-x-12">
               <Link href="/" className="font-bold text-xl hover:text-gray-200 transition-colors">
-                iWannaGraduate
+                Patriot Assist
               </Link>
               <div className="flex space-x-8">
                 <Link 
@@ -68,14 +68,6 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
-        <footer className="bg-gray-800 text-white py-4 mt-auto">
-          <div className="container mx-auto px-4 text-center">
-            <p>&copy; {new Date().getFullYear()} iWannaGraduate - Course Planning Tool</p>
-            <p className="text-gray-400 text-sm mt-1">
-              Made with ❤️ by Arman
-            </p>
-          </div>
-        </footer>
       </body>
     </html>
   );

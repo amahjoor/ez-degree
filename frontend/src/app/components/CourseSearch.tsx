@@ -207,11 +207,21 @@ const CourseSearch: React.FC<CourseSearchProps> = ({ isApiAvailable, onApiConnec
     <div className="mb-8 bg-white shadow rounded-lg p-6">
       {/* Course Search Header */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
-        <h2 className="text-xl font-semibold mb-4 md:mb-0">Course Search</h2>
         
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        <div className="flex flex-col md:flex-row md:w-full md:items-center md:justify-between space-y-4 md:space-y-0 md:space-x-4">
+          {/* Search Input */}
+          <form onSubmit={handleSearchSubmit} className="flex w-full md:mr-4">
+            <input
+              type="text"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search for courses..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </form>
+
           {/* Subject Filter Dropdown */}
-          <div className="relative" ref={subjectDropdownRef}>
+          <div className="relative flex-shrink-0" ref={subjectDropdownRef}>
             <button
               type="button"
               className="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -225,7 +235,7 @@ const CourseSearch: React.FC<CourseSearchProps> = ({ isApiAvailable, onApiConnec
             </button>
             
             {isSubjectDropdownOpen && (
-              <div className="absolute z-10 mt-1 w-72 bg-white shadow-lg max-h-60 rounded-md py-1 text-base overflow-auto focus:outline-none sm:text-sm">
+              <div className="absolute right-0 z-10 mt-1 w-72 bg-white shadow-lg max-h-60 rounded-md py-1 text-base overflow-auto focus:outline-none sm:text-sm">
                 <div className="px-3 py-2 border-b">
                   <input
                     ref={subjectSearchInputRef}
@@ -282,23 +292,6 @@ const CourseSearch: React.FC<CourseSearchProps> = ({ isApiAvailable, onApiConnec
               </div>
             )}
           </div>
-
-          {/* Search Input */}
-          <form onSubmit={handleSearchSubmit} className="flex">
-            <input
-              type="text"
-              className="px-3 py-2 border border-gray-300 rounded-l-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 min-w-[200px]"
-              placeholder="Search for courses..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <button
-              type="submit"
-              className="px-4 py-2 bg-primary-blue text-white rounded-r-md hover:bg-blue-700 shadow-sm"
-            >
-              Search
-            </button>
-          </form>
         </div>
       </div>
 

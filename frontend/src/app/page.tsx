@@ -56,9 +56,9 @@ export default function Home() {
 
         {/* Hero content */}
         <div className="text-center">
-          <h1 className="text-5xl mb-4 font-bold text-primary-green">iWannaGraduate</h1>
+          <h1 className="text-5xl mb-4 font-bold text-primary-green">Patriot Assist</h1>
           <p className="text-center text-xl mb-8">
-            The ultimate tool to graduate
+            The ultimate tool for GMU students to graduate.
           </p>
           
           {/* Main action buttons */}

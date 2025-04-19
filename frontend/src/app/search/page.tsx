@@ -20,9 +20,7 @@ export default function SearchPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <div className="flex justify-center mb-8">
-          <h1 className="text-3xl font-bold text-primary-green">Search</h1>
-        </div>
+
 
         {/* Search Tabs */}
         <div className="mb-6">
