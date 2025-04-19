@@ -28,7 +28,7 @@ iWannaGraduate helps GMU students navigate their degree requirements, plan cours
 
 3. Install Python dependencies
    ```bash
-   pip install fastapi uvicorn sqlalchemy alembic selenium beautifulsoup4
+   pip install -r requirements.txt
    ```
 
 4. Install Node.js dependencies for the project
