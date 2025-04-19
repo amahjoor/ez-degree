@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import DegreeRequirements from "../components/DegreeRequirements";
+import SemesterPlanner from "../components/SemesterPlanner";
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -11,6 +12,7 @@ export default function PlanPage() {
   // State to track API availability
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [activeTab, setActiveTab] = useState<'requirements' | 'planner'>('requirements');
   
   // Function to check if the API is available
   const checkApiConnection = useCallback(async () => {
@@ -55,9 +57,37 @@ export default function PlanPage() {
   return (
     <main className="flex flex-col p-4 md:p-8">
       <h1 className="text-3xl font-bold text-center mb-2">Degree Planning</h1>
-      <p className="text-center text-gray-600 mb-8">
+      <p className="text-center text-gray-600 mb-6">
         Plan your courses and track your degree progress
       </p>
+      
+      {/* Content Tabs */}
+      <div className="mb-6">
+        <div className="border-b border-gray-200">
+          <div className="flex -mb-px justify-center">
+            <button
+              className={`py-4 px-6 font-medium text-lg border-b-2 ${
+                activeTab === 'requirements'
+                  ? 'border-primary-blue text-primary-blue'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              } transition-colors`}
+              onClick={() => setActiveTab('requirements')}
+            >
+              Degree Requirements
+            </button>
+            <button
+              className={`py-4 px-6 font-medium text-lg border-b-2 ${
+                activeTab === 'planner'
+                  ? 'border-primary-blue text-primary-blue'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              } transition-colors`}
+              onClick={() => setActiveTab('planner')}
+            >
+              Semester Planner
+            </button>
+          </div>
+        </div>
+      </div>
       
       {/* API Error Message */}
       {!isApiAvailable && !isLoading && (
@@ -83,12 +113,16 @@ export default function PlanPage() {
         </div>
       )}
       
-      {/* Degree Requirements Component - only render when API is available and not loading */}
+      {/* Tab content */}
       {(isApiAvailable && !isLoading) && (
         <div className="w-full">
-          <DegreeRequirements 
-            isApiAvailable={isApiAvailable} 
-          />
+          {activeTab === 'requirements' ? (
+            <DegreeRequirements 
+              isApiAvailable={isApiAvailable} 
+            />
+          ) : (
+            <SemesterPlanner />
+          )}
         </div>
       )}
     </main>
