@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import dynamic from 'next/dynamic';
 
 interface Review {
   comment?: string;
@@ -47,6 +48,12 @@ interface Course {
   notes: string | null;
   professors: Professor[];
 }
+
+// Dynamically import the GradeDistribution component with client-side rendering
+const GradeDistribution = dynamic(
+  () => import('../../components/GradeDistribution'),
+  { ssr: false }
+);
 
 // Function to convert course codes in text to clickable links
 const parseCourseCodes = (text: string | null) => {
@@ -450,8 +457,14 @@ export default function CourseDetail() {
 
             {/* Grade Distribution Tab */}
             {activeTab === 'grade' && (
-              <div className="text-center py-10">
-                <p className="text-gray-500">Grade distribution data is not available yet.</p>
+              <div>
+                {course && course.professors && course.professors.length > 0 ? (
+                  <GradeDistribution professors={course.professors} />
+                ) : (
+                  <div className="text-center py-10">
+                    <p className="text-gray-500">No grade data available for this course.</p>
+                  </div>
+                )}
               </div>
             )}
           </div>
