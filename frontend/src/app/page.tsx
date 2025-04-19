@@ -2,79 +2,81 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import CourseSearch from "./components/CourseSearch";
-import DegreeRequirements from "./components/DegreeRequirements";
-import Professors from "./components/Professors";
+import { useRouter } from "next/navigation";
 
 // API configuration
 const API_BASE_URL = '/api';
 
 export default function Home() {
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
-  const [activeTab, setActiveTab] = useState<'courses' | 'requirements' | 'professors'>('courses');
+  const router = useRouter();
 
   // Function to retry API connection
   const handleRetryConnection = () => {
     setIsApiAvailable(true);
   };
 
+  // Navigation handlers
+  const handleSearch = () => {
+    router.push('/search');
+  };
+
+  const handlePlan = () => {
+    router.push('/plan');
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-5xl mb-10 text-center font-bold text-primary-green">iWannaGraduate</h1>
-        <p className="text-center text-lg mb-8">
-          The ultimate tool to navigate your degree requirements and plan your path to graduation.
-        </p>
-
-        {/* Tab Navigation */}
-        <div className="flex border-b border-gray-200 mb-8">
-          <button
-            className={`py-3 px-6 font-medium text-sm rounded-t-lg ${
-              activeTab === 'courses'
-                ? 'bg-white border-l border-t border-r border-gray-200 text-primary-blue'
-                : 'text-gray-500 hover:text-gray-700 bg-gray-50'
-            }`}
-            onClick={() => setActiveTab('courses')}
-          >
-            Course Search
-          </button>
-          <button
-            className={`py-3 px-6 font-medium text-sm rounded-t-lg ${
-              activeTab === 'requirements'
-                ? 'bg-white border-l border-t border-r border-gray-200 text-primary-blue'
-                : 'text-gray-500 hover:text-gray-700 bg-gray-50'
-            }`}
-            onClick={() => setActiveTab('requirements')}
-          >
-            Degree Requirements
-          </button>
-          <button
-            className={`py-3 px-6 font-medium text-sm rounded-t-lg ${
-              activeTab === 'professors'
-                ? 'bg-white border-l border-t border-r border-gray-200 text-primary-blue'
-                : 'text-gray-500 hover:text-gray-700 bg-gray-50'
-            }`}
-            onClick={() => setActiveTab('professors')}
-          >
-            Professors
-          </button>
-        </div>
-
-        {/* Content based on active tab */}
-        {activeTab === 'courses' ? (
-          <CourseSearch 
-            isApiAvailable={isApiAvailable} 
-            onApiConnectionRetry={handleRetryConnection} 
-          />
-        ) : activeTab === 'requirements' ? (
-          <DegreeRequirements isApiAvailable={isApiAvailable} />
-        ) : activeTab === 'professors' ? (
-          <Professors />
-        ) : (
-          <div className="bg-white shadow rounded-lg p-6">
-            <p className="text-gray-600">Select a tab above to view content.</p>
+    <main className="flex h-[calc(100vh-10rem)] flex-col items-center justify-center px-4">
+      <div className="z-10 max-w-3xl w-full">
+        {/* API connection error message */}
+        {!isApiAvailable && (
+          <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-8 rounded-lg shadow-md">
+            <h2 className="text-xl font-bold mb-2">API Connection Error</h2>
+            <p className="mb-3">
+              Unable to connect to the Course API. This is needed to show course information.
+            </p>
+            <div className="mb-3">
+              <p className="font-semibold">Please ensure:</p>
+              <ul className="list-disc ml-6 mt-1">
+                <li>The API server is running with <code className="bg-red-50 px-2 py-1 rounded">uvicorn api.main:app --reload</code></li>
+                <li>Your network connection is working</li>
+                <li>The API is available at: <code className="bg-red-50 px-2 py-1 rounded">{API_BASE_URL}</code></li>
+              </ul>
+            </div>
+            <div className="mt-4">
+              <button 
+                onClick={handleRetryConnection}
+                className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 shadow-sm"
+              >
+                Retry Connection
+              </button>
+            </div>
           </div>
         )}
+
+        {/* Hero content */}
+        <div className="text-center">
+          <h1 className="text-5xl mb-4 font-bold text-primary-green">iWannaGraduate</h1>
+          <p className="text-center text-xl mb-8">
+            The ultimate tool to graduate
+          </p>
+          
+          {/* Main action buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-5 mt-6">
+            <button 
+              onClick={handleSearch}
+              className="px-10 py-3 text-lg font-medium rounded-full bg-primary-blue text-white hover:bg-blue-700 shadow-lg transition-all"
+            >
+              Search
+            </button>
+            <button 
+              onClick={handlePlan}
+              className="px-10 py-3 text-lg font-medium rounded-full bg-primary-green text-white hover:bg-green-700 shadow-lg transition-all"
+            >
+              Plan
+            </button>
+          </div>
+        </div>
       </div>
     </main>
   );
