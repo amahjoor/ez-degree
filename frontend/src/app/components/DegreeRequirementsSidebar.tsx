@@ -433,9 +433,6 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                           onClick={() => handleRequirementClick(req)}
                           title={req.title}
                         >
-                          <svg className="h-3.5 w-3.5 mr-2 text-gray-400" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9v1h1a1 1 0 110 2H9v1h3a1 1 0 110 2H8a1 1 0 01-1-1v-1H4a1 1 0 110-2h3V9H6a1 1 0 110-2h1V6H4a1 1 0 010-2h3V3a1 1 0 011-1z"/>
-                          </svg>
                           {req.id}
                           {req.completed && (
                             <span className="ml-2 text-green-600">
