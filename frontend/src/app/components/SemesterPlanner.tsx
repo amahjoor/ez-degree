@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useImperativeHandle, forwardRef } from 'react';
 import Link from 'next/link';
 import CourseSelectionModal from './CourseSelectionModal';
 import { Course } from '@/types/course';
@@ -19,7 +19,12 @@ interface SemesterData {
   courses: CourseEntry[];
 }
 
-const SemesterPlanner: React.FC = () => {
+// Export a handle type for external control
+export interface SemesterPlannerHandle {
+  addCourse: (courseCode: string, courseTitle: string, credits: number, targetYear?: number, targetSemester?: string) => void;
+}
+
+const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
   // State to store courses for each semester
   const [semesters, setSemesters] = useState<{[key: string]: CourseEntry[]}>({});
   const [draggedCourse, setDraggedCourse] = useState<CourseEntry | null>(null);
@@ -31,6 +36,28 @@ const SemesterPlanner: React.FC = () => {
   
   // Semesters for each year
   const semesterTypes = ["Fall", "Spring", "Summer"];
+
+  // Expose methods to parent component
+  useImperativeHandle(ref, () => ({
+    addCourse: (courseCode: string, courseTitle: string, credits: number, targetYear?: number, targetSemester?: string) => {
+      // Default to the current semester or first available one
+      const year = targetYear || 1;
+      const semester = targetSemester || "Fall";
+      
+      const semesterId = `${year}-${semester}`;
+      const newCourse: CourseEntry = {
+        id: `course-${Date.now()}-${courseCode}`,
+        code: courseCode,
+        title: courseTitle,
+        credits: Number(credits)
+      };
+      
+      setSemesters(prev => ({
+        ...prev,
+        [semesterId]: [...(prev[semesterId] || []), newCourse]
+      }));
+    }
+  }));
   
   // Function to open course selection modal
   const openCourseSelectionModal = (yearNum: number, semesterName: string) => {
@@ -76,6 +103,33 @@ const SemesterPlanner: React.FC = () => {
   const handleDrop = (e: React.DragEvent, targetSemesterId: string, sourceSemesterId: string) => {
     e.preventDefault();
     
+    // Try to get drag data from the DegreeRequirementsSidebar first
+    try {
+      const externalData = e.dataTransfer.getData('text/plain');
+      if (externalData) {
+        const courseData = JSON.parse(externalData);
+        if (courseData && courseData.code) {
+          // Create a new course entry from the external data
+          const newCourse: CourseEntry = {
+            id: `course-${Date.now()}-${courseData.code}`,
+            code: courseData.code,
+            title: courseData.title,
+            credits: Number(courseData.credits) || 4
+          };
+          
+          // Add the course to the target semester
+          setSemesters(prev => ({
+            ...prev,
+            [targetSemesterId]: [...(prev[targetSemesterId] || []), newCourse]
+          }));
+          return;
+        }
+      }
+    } catch (error) {
+      console.error('Error handling external course drop:', error);
+    }
+    
+    // Handle internal dragging if no external data or if external data processing failed
     if (!draggedCourse) return;
     
     // Remove from source semester and add to target semester
@@ -158,7 +212,7 @@ const SemesterPlanner: React.FC = () => {
                         {semesterCourses.map(course => (
                           <div 
                             key={course.id}
-                            className="bg-blue-50 border border-blue-100 p-2 rounded text-gray-800 text-sm flex justify-between items-center cursor-move shadow-sm hover:shadow"
+                            className="bg-blue-50 border border-blue-100 p-2 rounded text-gray-800 text-sm flex justify-between items-center cursor-grab active:cursor-grabbing shadow-sm hover:shadow"
                             draggable
                             onDragStart={() => handleDragStart(course)}
                           >
@@ -221,6 +275,8 @@ const SemesterPlanner: React.FC = () => {
       )}
     </div>
   );
-};
+});
+
+SemesterPlanner.displayName = 'SemesterPlanner';
 
 export default SemesterPlanner; 

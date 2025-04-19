@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import DegreeRequirements from "../components/DegreeRequirements";
-import SemesterPlanner from "../components/SemesterPlanner";
+import SemesterPlanner, { SemesterPlannerHandle } from "../components/SemesterPlanner";
+import DegreeRequirementsSidebar from "../components/DegreeRequirementsSidebar";
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -12,7 +13,10 @@ export default function PlanPage() {
   // State to track API availability
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [activeTab, setActiveTab] = useState<'requirements' | 'planner'>('requirements');
+  const [showFullDegreeRequirements, setShowFullDegreeRequirements] = useState<boolean>(false);
+  
+  // Reference to SemesterPlanner for adding courses
+  const semesterPlannerRef = useRef<SemesterPlannerHandle>(null);
   
   // Function to check if the API is available
   const checkApiConnection = useCallback(async () => {
@@ -54,40 +58,45 @@ export default function PlanPage() {
     checkApiConnection();
   }, [checkApiConnection]);
 
+  // Function to handle adding a course from the requirements list
+  const handleCourseSelect = (courseCode: string, courseTitle: string, courseCredits: number) => {
+    // Add the selected course to the semester planner
+    if (semesterPlannerRef.current) {
+      semesterPlannerRef.current.addCourse(courseCode, courseTitle, courseCredits);
+    }
+  };
+
+  // Handle drop events from degree sidebar to semester planner
+  const handlePlannerDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    try {
+      // Get the course data from the drag event
+      const courseData = JSON.parse(e.dataTransfer.getData('application/json'));
+      
+      // Add to semester planner if valid data is received
+      if (courseData && courseData.code && semesterPlannerRef.current) {
+        semesterPlannerRef.current.addCourse(
+          courseData.code, 
+          courseData.title, 
+          courseData.credits
+        );
+      }
+    } catch (error) {
+      console.error('Error handling course drop:', error);
+    }
+  };
+
+  // Allow drag over to enable dropping
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <main className="flex flex-col p-4 md:p-8">
       <h1 className="text-3xl font-bold text-center mb-2">Degree Planning</h1>
       <p className="text-center text-gray-600 mb-6">
         Plan your courses and track your degree progress
       </p>
-      
-      {/* Content Tabs */}
-      <div className="mb-6">
-        <div className="border-b border-gray-200">
-          <div className="flex -mb-px justify-center">
-            <button
-              className={`py-4 px-6 font-medium text-lg border-b-2 ${
-                activeTab === 'requirements'
-                  ? 'border-primary-blue text-primary-blue'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-              } transition-colors`}
-              onClick={() => setActiveTab('requirements')}
-            >
-              Degree Requirements
-            </button>
-            <button
-              className={`py-4 px-6 font-medium text-lg border-b-2 ${
-                activeTab === 'planner'
-                  ? 'border-primary-blue text-primary-blue'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-              } transition-colors`}
-              onClick={() => setActiveTab('planner')}
-            >
-              Semester Planner
-            </button>
-          </div>
-        </div>
-      </div>
       
       {/* API Error Message */}
       {!isApiAvailable && !isLoading && (
@@ -113,15 +122,36 @@ export default function PlanPage() {
         </div>
       )}
       
-      {/* Tab content */}
+      {/* View toggle */}
+      <div className="flex justify-end mb-4">
+        <button
+          className="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+          onClick={() => setShowFullDegreeRequirements(!showFullDegreeRequirements)}
+        >
+          {showFullDegreeRequirements ? "Back to Planner" : "View Full Degree Requirements"}
+        </button>
+      </div>
+
+      {/* Main content */}
       {(isApiAvailable && !isLoading) && (
         <div className="w-full">
-          {activeTab === 'requirements' ? (
-            <DegreeRequirements 
-              isApiAvailable={isApiAvailable} 
-            />
+          {showFullDegreeRequirements ? (
+            <DegreeRequirements isApiAvailable={isApiAvailable} />
           ) : (
-            <SemesterPlanner />
+            <div className="flex flex-col lg:flex-row gap-6">
+              <div 
+                className="lg:w-2/3"
+                onDragOver={(e) => e.preventDefault()}
+              >
+                <SemesterPlanner ref={semesterPlannerRef} />
+              </div>
+              <div className="lg:w-1/3 mt-6 lg:mt-0">
+                <DegreeRequirementsSidebar 
+                  isApiAvailable={isApiAvailable}
+                  onCourseSelect={handleCourseSelect}
+                />
+              </div>
+            </div>
           )}
         </div>
       )}
