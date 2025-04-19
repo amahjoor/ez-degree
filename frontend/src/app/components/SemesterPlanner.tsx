@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import CourseSelectionModal from './CourseSelectionModal';
+import { Course } from '@/types/course';
 
 interface CourseEntry {
   id: string;
@@ -21,6 +23,8 @@ const SemesterPlanner: React.FC = () => {
   // State to store courses for each semester
   const [semesters, setSemesters] = useState<{[key: string]: CourseEntry[]}>({});
   const [draggedCourse, setDraggedCourse] = useState<CourseEntry | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [selectedSemester, setSelectedSemester] = useState<{year: number, name: string} | null>(null);
   
   // Years array (1-4)
   const years = [1, 2, 3, 4];
@@ -28,16 +32,22 @@ const SemesterPlanner: React.FC = () => {
   // Semesters for each year
   const semesterTypes = ["Fall", "Spring", "Summer"];
   
-  // Function to add a course to a semester
-  const addCourse = (yearNum: number, semesterName: string) => {
-    // In a real implementation, this would open a course selection modal
-    // For now, we'll just add a placeholder course
-    const semesterId = `${yearNum}-${semesterName}`;
+  // Function to open course selection modal
+  const openCourseSelectionModal = (yearNum: number, semesterName: string) => {
+    setSelectedSemester({ year: yearNum, name: semesterName });
+    setIsModalOpen(true);
+  };
+  
+  // Function to add a course to a semester from API data
+  const addCourseFromSelection = (course: Course) => {
+    if (!selectedSemester) return;
+    
+    const semesterId = `${selectedSemester.year}-${selectedSemester.name}`;
     const newCourse: CourseEntry = {
-      id: `course-${Date.now()}`,
-      code: "CS 101",
-      title: "Introduction to Computer Science",
-      credits: 3
+      id: `course-${Date.now()}-${course.course_code}`,
+      code: course.course_code,
+      title: course.title,
+      credits: Number(course.credits) // Ensure credits is stored as a number
     };
     
     setSemesters(prev => ({
@@ -87,6 +97,24 @@ const SemesterPlanner: React.FC = () => {
     setDraggedCourse(null);
   };
   
+  // Calculate summary statistics with proper type handling
+  const summaryStats = useMemo(() => {
+    // Flatten all courses from all semesters into a single array
+    const allCourses = Object.values(semesters).flat();
+    
+    // Calculate total credits, ensuring numeric values
+    const totalCredits = allCourses.reduce((sum, course) => {
+      // Ensure the credits value is treated as a number
+      const credits = typeof course.credits === 'number' ? course.credits : Number(course.credits) || 0;
+      return sum + credits;
+    }, 0);
+    
+    return {
+      totalCourses: allCourses.length,
+      totalCredits
+    };
+  }, [semesters]);
+  
   return (
     <div className="space-y-8 mb-8">
       {years.map(year => (
@@ -113,7 +141,7 @@ const SemesterPlanner: React.FC = () => {
                     <h3 className="text-lg font-medium text-gray-800">{semester}</h3>
                     <button 
                       className="text-primary-blue w-6 h-6 flex items-center justify-center hover:bg-gray-200 rounded"
-                      onClick={() => addCourse(year, semester)}
+                      onClick={() => openCourseSelectionModal(year, semester)}
                       title="Add course"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
@@ -166,13 +194,13 @@ const SemesterPlanner: React.FC = () => {
           <div className="bg-blue-50 p-3 rounded-lg border border-blue-100">
             <p className="text-sm text-gray-500 mb-1">Total Credits:</p>
             <p className="font-bold text-xl text-primary-blue">
-              {Object.values(semesters).flat().reduce((total, course) => total + course.credits, 0)}
+              {summaryStats.totalCredits}
             </p>
           </div>
           <div className="bg-green-50 p-3 rounded-lg border border-green-100">
             <p className="text-sm text-gray-500 mb-1">Total Courses:</p>
             <p className="font-bold text-xl text-primary-green">
-              {Object.values(semesters).flat().length}
+              {summaryStats.totalCourses}
             </p>
           </div>
         </div>
@@ -181,6 +209,16 @@ const SemesterPlanner: React.FC = () => {
           <p>Drag and drop courses between semesters to reorganize your plan.</p>
         </div>
       </div>
+      
+      {/* Course Selection Modal */}
+      {selectedSemester && (
+        <CourseSelectionModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          onSelectCourse={addCourseFromSelection}
+          semesterTitle={`Year ${selectedSemester.year} ${selectedSemester.name}`}
+        />
+      )}
     </div>
   );
 };
