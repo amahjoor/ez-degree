@@ -415,7 +415,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                     </div>
 
                     {group.isOpen && group.isChoice && group.options && (
-                      <div className="px-6 py-3 bg-gray-50">
+                      <div className="px-6 py-3">
                         <div className="mb-2 ml-2">
                           <div className="inline-flex items-center justify-center w-6 h-6 text-xs text-white bg-primary-green rounded-full">
                             1
@@ -444,7 +444,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                     )}
 
                     {group.isOpen && group.requirements && (
-                      <div className="px-4 py-2 bg-gray-50 flex flex-wrap gap-2">
+                      <div className="px-4 py-2 flex flex-wrap gap-2">
                         {group.requirements.map((req, reqIndex) => (
                           <div 
                             key={reqIndex}
