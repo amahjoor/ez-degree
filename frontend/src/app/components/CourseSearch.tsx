@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import PaginationControls from "./PaginationControls";
 import { Course, Subject } from "@/types/course";
+import { SkeletonTable } from './ui/SkeletonTable';
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -332,10 +333,7 @@ const CourseSearch: React.FC<CourseSearchProps> = ({ isApiAvailable, onApiConnec
       {/* Course Results */}
       <div className="mt-4">
         {loading ? (
-          <div className="text-center py-8">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
-            <p className="mt-2">Loading courses...</p>
-          </div>
+          <SkeletonTable rows={10} columns={4} hasHeader={true} className="animate-pulse" />
         ) : courses.length === 0 ? (
           <div className="text-center py-8 text-gray-500">
             No courses found. Try adjusting your search criteria.

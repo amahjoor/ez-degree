@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { ReactFlowProvider } from 'reactflow';
+import ReactFlow, { Background, Controls, ReactFlowProvider } from 'reactflow';
 import 'reactflow/dist/style.css';
+import { SkeletonTable, SkeletonCard, SkeletonText } from './ui/';
 
 import { Major, Concentration, Requirements, RequirementCourse } from '@/types/course';
 import { getCourseCategory, normalizeCourseId, addEdgeIfNotExists } from '@/utils/courseUtils';
@@ -392,7 +393,7 @@ const DegreeRequirements: React.FC<DegreeRequirementsProps> = ({ isApiAvailable 
   }
 
   return (
-    <div>
+    <div className="container mx-auto">
       {/* Major and Concentration Selector */}
       <div className="mb-8 bg-white shadow rounded-lg p-6">
         <div className="flex flex-col md:flex-row gap-4">
@@ -474,9 +475,22 @@ const DegreeRequirements: React.FC<DegreeRequirementsProps> = ({ isApiAvailable 
 
       {/* Loading indicator */}
       {requirementsLoading && (
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
-          <span className="ml-4 text-lg">Loading requirements...</span>
+        <div className="space-y-6">
+          <SkeletonCard 
+            hasHeader={true} 
+            contentLines={1} 
+            className="max-w-full mb-4"
+          />
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div key={i} className="border rounded-md overflow-hidden">
+              <div className="bg-gray-100 p-4">
+                <SkeletonText className="w-full" />
+              </div>
+              <div className="p-4">
+                <SkeletonTable rows={5} columns={3} />
+              </div>
+            </div>
+          ))}
         </div>
       )}
 

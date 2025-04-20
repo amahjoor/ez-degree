@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import SemesterPlanner, { SemesterPlannerHandle } from "../components/SemesterPlanner";
 import DegreeRequirementsSidebar from "../components/DegreeRequirementsSidebar";
 import WeeklyCalendar from "../components/WeeklyCalendar";
+import { SkeletonCard } from '../components/ui';
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -69,7 +70,7 @@ export default function PlanPage() {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-3.5rem)] overflow-hidden bg-gray-50">
+    <div className="h-screen flex flex-col">
       {/* API Error Message */}
       {!isApiAvailable && !isLoading && (
         <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
@@ -88,9 +89,16 @@ export default function PlanPage() {
       
       {/* Loading indicator */}
       {isLoading && (
-        <div className="flex justify-center items-center h-24 m-4">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-green-500"></div>
-          <span className="ml-4">Checking API connection...</span>
+        <div className="p-4 space-y-4">
+          <SkeletonCard hasHeader={true} hasImage={false} contentLines={1} className="h-32" />
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="md:w-3/4">
+              <SkeletonCard hasHeader={true} hasImage={false} contentLines={6} className="h-96" />
+            </div>
+            <div className="md:w-1/4">
+              <SkeletonCard hasHeader={true} hasImage={false} contentLines={3} className="h-96" />
+            </div>
+          </div>
         </div>
       )}
 
@@ -100,27 +108,33 @@ export default function PlanPage() {
           {/* Main planner area */}
           <div className="lg:w-3/4 flex flex-col overflow-hidden">
             {/* View Toggle */}
-            <div className="flex items-center border-b border-gray-200 bg-white px-4">
-              <button
-                className={`py-3 px-5 ${
-                  activeView === 'long-term' 
-                    ? 'border-b-2 border-primary-blue text-primary-blue font-medium' 
-                    : 'text-gray-500 hover:text-gray-700'
-                }`}
-                onClick={() => setActiveView('long-term')}
-              >
-                4-Year Plan
-              </button>
-              <button
-                className={`py-3 px-5 ${
-                  activeView === 'weekly' 
-                    ? 'border-b-2 border-primary-blue text-primary-blue font-medium' 
-                    : 'text-gray-500 hover:text-gray-700'
-                }`}
-                onClick={() => setActiveView('weekly')}
-              >
-                Weekly Schedule
-              </button>
+            <div className="bg-blue-50 border-b border-blue-100">
+              <div className="flex">
+                <button
+                  className={`px-5 py-3 font-medium ${
+                    activeView === 'long-term' 
+                      ? 'text-primary-blue border-b-2 border-primary-blue' 
+                      : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent'
+                  }`}
+                  onClick={() => setActiveView('long-term')}
+                >
+                  <h2 className="font-medium text-lg truncate">
+                    4-Year Plan
+                  </h2>
+                </button>
+                <button
+                  className={`px-5 py-3 font-medium ${
+                    activeView === 'weekly' 
+                      ? 'text-primary-blue border-b-2 border-primary-blue' 
+                      : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent'
+                  }`}
+                  onClick={() => setActiveView('weekly')}
+                >
+                  <h2 className="font-medium text-lg truncate">
+                    Weekly Schedule
+                  </h2>
+                </button>
+              </div>
             </div>
             
             {/* Content area */}

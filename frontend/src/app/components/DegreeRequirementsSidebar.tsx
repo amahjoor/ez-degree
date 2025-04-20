@@ -280,67 +280,95 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
 
   return (
     <div className="w-full h-full flex flex-col bg-white overflow-hidden">
-      <div className="px-4 py-3 bg-blue-50 text-gray-800 border-b border-blue-100 flex justify-between items-center">
-        <div className="flex-1 flex items-center">
-          <h2 className="font-medium text-lg truncate">
-            {showMajorSelect ? "Select Program" : selectedMajorName}
-          </h2>
-        </div>
-        {/* Only show refresh button when displaying requirements, not during selection */}
-        {!showMajorSelect && (
-          <button 
-            className="text-gray-700 hover:text-gray-900 ml-2"
-            onClick={() => setShowMajorSelect(true)}
-            title="Change major"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
-            </svg>
-          </button>
+      <div className="px-4 py-3 bg-blue-50 text-gray-800 border-b border-blue-100">
+        {!selectedMajor || showMajorSelect ? (
+          <Select
+            id="major-select"
+            options={majorOptions}
+            value={majorOptions.find(option => option.value === selectedMajor) || null}
+            onChange={(option) => {
+              handleMajorChange(option);
+              if (option) {
+                setShowMajorSelect(false);
+              }
+            }}
+            placeholder="Select Program..."
+            isDisabled={loading}
+            isSearchable={true}
+            isClearable={true}
+            className="react-select-container"
+            classNamePrefix="react-select"
+            styles={{
+              ...customSelectStyles,
+              control: (provided) => ({
+                ...provided,
+                border: 'none',
+                boxShadow: 'none',
+                backgroundColor: 'transparent',
+                minHeight: '1.5rem',
+                '&:hover': {
+                  border: 'none'
+                }
+              }),
+              valueContainer: (provided) => ({
+                ...provided,
+                padding: '0',
+              }),
+              input: (provided) => ({
+                ...provided,
+                fontSize: '1.125rem',
+                fontWeight: '500',
+              }),
+              singleValue: (provided) => ({
+                ...provided,
+                fontSize: '1.125rem',
+                fontWeight: '500',
+                color: '#1F2937',
+              }),
+              placeholder: (provided) => ({
+                ...provided,
+                fontSize: '1.125rem',
+                fontWeight: '500',
+                color: '#4B5563',
+              }),
+              indicatorSeparator: () => ({
+                display: 'none'
+              }),
+              dropdownIndicator: (provided) => ({
+                ...provided,
+                padding: '0 0 0 8px'
+              })
+            }}
+            menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+            menuPosition="fixed"
+          />
+        ) : (
+          <div className="flex justify-between items-center">
+            <h2 className="font-medium text-lg truncate">{selectedMajorName}</h2>
+            <button 
+              className="text-gray-400 hover:text-gray-600 transition-colors"
+              onClick={() => {
+                setSelectedMajor("");
+                setSelectedConcentration("");
+                setShowMajorSelect(true);
+              }}
+              title="Change program"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
+              </svg>
+            </button>
+          </div>
         )}
       </div>
 
-      {/* Major and Concentration Selection Panel */}
-      {showMajorSelect && (
-        <div className="p-4 bg-gray-50 border-b border-gray-200 flex-1 flex flex-col overflow-y-auto">
-          <div className="mb-4">
-            <label htmlFor="major-select" className="block text-sm font-medium text-gray-700 mb-1">
-              Major:
-            </label>
-            <Select
-              id="major-select"
-              options={majorOptions}
-              value={majorOptions.find(option => option.value === selectedMajor) || null}
-              onChange={handleMajorChange}
-              placeholder="Select major..."
-              isDisabled={loading}
-              isSearchable={true}
-              isClearable={true}
-              className="react-select-container"
-              classNamePrefix="react-select"
-              styles={customSelectStyles}
-              aria-label="Select a major"
-              menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
-              menuPosition="fixed"
-            />
-          </div>
-          
-          <button 
-            className={`w-full font-medium py-2 px-4 rounded shadow mt-2 ${
-              selectedMajor 
-                ? 'bg-primary-blue hover:bg-blue-700 text-white' 
-                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            }`}
-            onClick={() => selectedMajor && setShowMajorSelect(false)}
-            disabled={!selectedMajor}
-          >
-            Apply
-          </button>
-          
+      {/* Major and Concentration Selection Panel - Only show if major not yet selected */}
+      {showMajorSelect && selectedMajor && (
+        <div className="p-4 bg-white border-b border-gray-200">
           {concentrations.length > 0 && (
-            <div className="mt-6">
+            <div>
               <label htmlFor="concentration-select" className="block text-sm font-medium text-gray-700 mb-1">
-                Concentration:
+                Concentration (optional):
               </label>
               <select
                 id="concentration-select"
@@ -356,6 +384,15 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                   </option>
                 ))}
               </select>
+              
+              <div className="mt-4 flex justify-end">
+                <button 
+                  className="font-medium py-2 px-4 rounded shadow bg-primary-blue hover:bg-blue-700 text-white"
+                  onClick={() => setShowMajorSelect(false)}
+                >
+                  Apply
+                </button>
+              </div>
             </div>
           )}
         </div>

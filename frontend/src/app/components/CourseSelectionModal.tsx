@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Course, Subject } from "@/types/course";
+import { createPortal } from "react-dom";
+import { SkeletonList } from './ui';
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -27,6 +29,13 @@ const CourseSelectionModal: React.FC<CourseSelectionModalProps> = ({
   const [selectedSubject, setSelectedSubject] = useState<string>("");
   
   const modalRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+  
+  // Set mounted state when component mounts
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
   
   // Prevent body scrolling when modal is open
   useEffect(() => {
@@ -138,39 +147,55 @@ const CourseSelectionModal: React.FC<CourseSelectionModalProps> = ({
     fetchCourses();
   }, [searchTerm, selectedSubject, isOpen]);
   
-  if (!isOpen) return null;
+  if (!isOpen || !mounted) return null;
   
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+  const modalContent = (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999] flex items-center justify-center p-4">
       <div 
         ref={modalRef}
         className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[80vh] flex flex-col"
       >
+        {/* Modal header */}
         <div className="p-4 border-b border-gray-200 flex justify-between items-center">
           <h2 className="text-xl font-bold text-gray-800">
             Add Course to {semesterTitle}
           </h2>
-          <button 
+          <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         
-        <div className="p-4 border-b border-gray-200">
-          <div className="flex flex-col sm:flex-row gap-3">
-            {/* Subject Filter */}
-            <div className="w-full sm:w-1/3">
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+        {/* Search and filter controls */}
+        <div className="p-4 border-b border-gray-200 space-y-4">
+          <div className="flex space-x-4">
+            <div className="w-full">
+              <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-1">
+                Search Courses
+              </label>
+              <input
+                type="text"
+                id="search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search by course code or title..."
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+            
+            <div className="w-1/3">
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                 Subject
               </label>
               <select
+                id="subject"
                 value={selectedSubject}
                 onChange={(e) => setSelectedSubject(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
               >
                 <option value="">All Subjects</option>
                 {subjects.map((subject) => (
@@ -180,29 +205,12 @@ const CourseSelectionModal: React.FC<CourseSelectionModalProps> = ({
                 ))}
               </select>
             </div>
-            
-            {/* Search Input */}
-            <div className="w-full sm:w-2/3">
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Search
-              </label>
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search courses by name or code..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
-              />
-            </div>
           </div>
         </div>
         
         <div className="overflow-y-auto flex-grow p-4">
           {loading ? (
-            <div className="flex justify-center items-center h-40">
-              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-blue"></div>
-              <span className="ml-3">Loading courses...</span>
-            </div>
+            <SkeletonList items={8} className="animate-pulse" />
           ) : error ? (
             <div className="text-center py-8 text-red-500">
               {error}
@@ -245,6 +253,8 @@ const CourseSelectionModal: React.FC<CourseSelectionModalProps> = ({
       </div>
     </div>
   );
+
+  return isOpen ? createPortal(modalContent, document.body) : null;
 };
 
 export default CourseSelectionModal; 

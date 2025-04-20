@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import dynamic from 'next/dynamic';
+import { SkeletonCard, SkeletonText } from '@/app/components/ui';
+import GradeDistribution from '@/app/components/GradeDistribution';
 
 interface Review {
   comment?: string;
@@ -50,7 +52,7 @@ interface Course {
 }
 
 // Dynamically import the GradeDistribution component with client-side rendering
-const GradeDistribution = dynamic(
+const GradeDistributionComponent = dynamic(
   () => import('../../components/GradeDistribution'),
   { ssr: false }
 );
@@ -204,34 +206,33 @@ export default function CourseDetail() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-6">
-        <Link
-          href="/"
-          className="inline-flex items-center text-primary-blue hover:text-blue-800"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 mr-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          Back to Courses
-        </Link>
-      </div>
-
+    <div className="container mx-auto py-8 px-4">
       {loading ? (
-        <div className="text-center py-8">
-          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary-blue border-r-transparent"></div>
-          <p className="mt-2">Loading course details...</p>
+        <div className="max-w-5xl mx-auto space-y-8">
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="md:w-2/3">
+              <SkeletonText width="50%" height="3rem" className="mb-2" />
+              <SkeletonText width="80%" height="2rem" className="mb-2" />
+              <SkeletonText width="20%" height="1.5rem" />
+            </div>
+            <div className="md:w-1/3 flex justify-end">
+              <SkeletonCard hasHeader={false} contentLines={0} className="w-32 h-32" />
+            </div>
+          </div>
+          
+          <div>
+            <div className="border-b border-gray-200 mb-6">
+              <div className="flex space-x-6">
+                <SkeletonText width="6rem" height="2.5rem" />
+                <SkeletonText width="6rem" height="2.5rem" />
+                <SkeletonText width="6rem" height="2.5rem" />
+              </div>
+            </div>
+            
+            <SkeletonCard hasHeader={true} contentLines={4} className="mb-6" />
+            <SkeletonCard hasHeader={true} contentLines={3} className="mb-6" />
+            <SkeletonCard hasHeader={true} contentLines={2} />
+          </div>
         </div>
       ) : error ? (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
@@ -470,8 +471,8 @@ export default function CourseDetail() {
           </div>
         </div>
       ) : (
-        <div className="bg-yellow-50 border border-yellow-200 text-yellow-700 px-4 py-3 rounded mb-4">
-          Course not found. Please check the course code and try again.
+        <div className="text-center py-8">
+          <p>Course not found</p>
         </div>
       )}
     </div>

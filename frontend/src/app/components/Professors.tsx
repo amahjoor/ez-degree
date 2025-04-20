@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Professor } from '@/types/professor';
 import Link from 'next/link';
+import { SkeletonTable } from './ui/SkeletonTable';
 
 const API_BASE_URL = '/api';
 
@@ -84,8 +85,8 @@ export default function Professors() {
   };
 
   return (
-    <div className="bg-white shadow rounded-lg p-6">
-      <div className="mb-4">
+    <div className="container mx-auto py-8">
+      <div className="mb-6">
         <input
           type="text"
           className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
@@ -96,10 +97,7 @@ export default function Professors() {
       </div>
 
       {professorsLoading ? (
-        <div className="text-center py-8">
-          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary-blue border-r-transparent"></div>
-          <p className="mt-2">Loading professors...</p>
-        </div>
+        <SkeletonTable rows={10} columns={6} hasHeader={true} className="animate-pulse" />
       ) : professorsError ? (
         <div className="text-center py-8 text-primary-red">
           {professorsError}
