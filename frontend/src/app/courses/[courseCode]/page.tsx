@@ -297,7 +297,7 @@ export default function CourseDetail() {
           </div>
 
           {/* Tab Content */}
-          <div className="bg-white rounded-lg">
+          <div className="rounded-lg">
             {/* Overview Tab */}
             {activeTab === 'overview' && (
               <div>

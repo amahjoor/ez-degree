@@ -600,84 +600,124 @@ async def get_course(course_code: str):
     """
     Get detailed information about a specific course, including professor ratings and reviews
     """
-    db = get_session()
+    print(f"\n[DEBUG] Starting get_course endpoint for course_code: {course_code}")
+    
     try:
         # Clean up the course code: remove extra spaces and convert to uppercase
+        print(f"[DEBUG] Original course_code: {course_code}")
         course_code = " ".join(course_code.upper().split())
+        print(f"[DEBUG] Cleaned course_code: {course_code}")
         
-        course = db.query(DbCourse).filter(
-            (DbCourse.course_code == course_code) |  # Try exact match
-            (DbCourse.course_code == course_code.replace(" ", "")) |  # Try without space
-            (DbCourse.course_code == f"{course_code[0:2]} {course_code[2:]}") # Try with space
-        ).first()
+        print("[DEBUG] Attempting to get database session...")
+        db = get_session()
+        print("[DEBUG] Successfully got database session")
         
-        if not course:
-            raise HTTPException(
-                status_code=404, 
-                detail=f"Course {course_code} not found"
-            )
-
-        # Get professor information for this course
-        professors_dir = os.path.join(REQUIREMENTS_DIR, "professors")
-        course_professors = []
-        
-        if os.path.exists(professors_dir):
-            for filename in os.listdir(professors_dir):
-                try:
-                    with open(os.path.join(professors_dir, filename), 'r') as f:
-                        professor_data = json.load(f)
-                        # Try different course code formats
-                        course_code_variants = [
-                            course_code,  # Original format (e.g., "ENG 302")
-                            course_code.replace(" ", ""),  # No space (e.g., "ENG302")
-                            course_code.replace(" ", "")[:3] + course_code.replace(" ", "")[3:],  # With space after subject (e.g., "ENG 302")
-                            course_code[:2] + course_code[2:].replace(" ", ""),  # Subject without space (e.g., "ENGL302")
-                        ]
-                        
-                        for variant in course_code_variants:
-                            if variant in professor_data.get('reviews', {}):
-                                # Calculate course-specific metrics
-                                reviews = professor_data['reviews'][variant]
-                                avg_rating = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
-                                avg_difficulty = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
-                                would_take_again = sum(1 for review in reviews if review.get('wouldTakeAgain', False)) / len(reviews) * 100
-                                avg_clarity = sum(review.get('clarityRating', 0) for review in reviews) / len(reviews) if all('clarityRating' in review for review in reviews) else None
-                                avg_helpful = sum(review.get('helpfulRating', 0) for review in reviews) / len(reviews) if all('helpfulRating' in review for review in reviews) else None
-                                avg_grade = max(set(review.get('grade', '') for review in reviews), key=lambda x: reviews.count(x)) if reviews else None
-                                
-                                course_professors.append({
-                                    "firstName": professor_data['firstName'],
-                                    "lastName": professor_data['lastName'],
-                                    "department": professor_data['department'],
-                                    "avgRating": avg_rating,
-                                    "avgDifficulty": avg_difficulty,
-                                    "wouldTakeAgainPercent": would_take_again,
-                                    "clarityRating": avg_clarity,
-                                    "helpfulRating": avg_helpful,
-                                    "averageGrade": avg_grade,
-                                    "reviews": reviews,
-                                    "url": professor_data.get('url')
-                                })
-                                break  # Found a match, no need to try other variants
-                except Exception as e:
-                    print(f"Error processing professor file {filename}: {e}")
-                    continue
+        try:
+            print("[DEBUG] Attempting to query course from database...")
+            print(f"[DEBUG] Querying with course_code: {course_code}")
+            course = db.query(DbCourse).filter(
+                (DbCourse.course_code == course_code) |  # Try exact match
+                (DbCourse.course_code == course_code.replace(" ", "")) |  # Try without space
+                (DbCourse.course_code == f"{course_code[0:2]} {course_code[2:]}") # Try with space
+            ).first()
             
-        return {
-            "course_code": course.course_code,
-            "title": course.title,
-            "credits": course.credits,
-            "description": course.description,
-            "subject": course.subject_id,
-            "prerequisites": course.prerequisites,
-            "corequisites": course.corequisites,
-            "restrictions": course.restrictions,
-            "notes": course.notes,
-            "professors": course_professors
-        }
-        
-    finally:
-        db.close()
+            if not course:
+                print(f"[DEBUG] No course found for code: {course_code}")
+                raise HTTPException(
+                    status_code=404, 
+                    detail=f"Course {course_code} not found"
+                )
+            print(f"[DEBUG] Found course: {course.course_code} - {course.title}")
+
+            # Get professor information for this course
+            print("[DEBUG] Starting professor data loading...")
+            professors_dir = os.path.join(REQUIREMENTS_DIR, "professors")
+            course_professors = []
+            
+            if os.path.exists(professors_dir):
+                print(f"[DEBUG] Professors directory exists at: {professors_dir}")
+                for filename in os.listdir(professors_dir):
+                    try:
+                        print(f"[DEBUG] Processing professor file: {filename}")
+                        with open(os.path.join(professors_dir, filename), 'r') as f:
+                            professor_data = json.load(f)
+                            # Try different course code formats
+                            course_code_variants = [
+                                course_code,  # Original format (e.g., "ENG 302")
+                                course_code.replace(" ", ""),  # No space (e.g., "ENG302")
+                                course_code.replace(" ", "")[:3] + course_code.replace(" ", "")[3:],  # With space after subject (e.g., "ENG 302")
+                                course_code[:2] + course_code[2:].replace(" ", ""),  # Subject without space (e.g., "ENGL302")
+                            ]
+                            print(f"[DEBUG] Checking course code variants: {course_code_variants}")
+                            
+                            for variant in course_code_variants:
+                                if variant in professor_data.get('reviews', {}):
+                                    print(f"[DEBUG] Found matching course code variant: {variant}")
+                                    # Calculate course-specific metrics
+                                    reviews = professor_data['reviews'][variant]
+                                    avg_rating = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
+                                    avg_difficulty = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
+                                    would_take_again = sum(1 for review in reviews if review.get('wouldTakeAgain', False)) / len(reviews) * 100
+                                    avg_clarity = sum(review.get('clarityRating', 0) for review in reviews) / len(reviews) if all('clarityRating' in review for review in reviews) else None
+                                    avg_helpful = sum(review.get('helpfulRating', 0) for review in reviews) / len(reviews) if all('helpfulRating' in review for review in reviews) else None
+                                    avg_grade = max(set(review.get('grade', '') for review in reviews), key=lambda x: reviews.count(x)) if reviews else None
+                                    
+                                    course_professors.append({
+                                        "firstName": professor_data['firstName'],
+                                        "lastName": professor_data['lastName'],
+                                        "department": professor_data['department'],
+                                        "avgRating": avg_rating,
+                                        "avgDifficulty": avg_difficulty,
+                                        "wouldTakeAgainPercent": would_take_again,
+                                        "clarityRating": avg_clarity,
+                                        "helpfulRating": avg_helpful,
+                                        "averageGrade": avg_grade,
+                                        "reviews": reviews,
+                                        "url": professor_data.get('url')
+                                    })
+                                    print(f"[DEBUG] Added professor: {professor_data['firstName']} {professor_data['lastName']}")
+                                    break  # Found a match, no need to try other variants
+                    except Exception as e:
+                        print(f"[DEBUG] Error processing professor file {filename}: {str(e)}")
+                        continue
+            else:
+                print(f"[DEBUG] Professors directory not found at: {professors_dir}")
+            
+            print("[DEBUG] Constructing response...")
+            response = {
+                "course_code": course.course_code,
+                "title": course.title,
+                "credits": course.credits,
+                "description": course.description,
+                "subject": course.subject_id,
+                "prerequisites": course.prerequisites,
+                "corequisites": course.corequisites,
+                "restrictions": course.restrictions,
+                "notes": course.notes,
+                "professors": course_professors
+            }
+            print("[DEBUG] Successfully constructed response")
+            return response
+            
+        except HTTPException as he:
+            print(f"[DEBUG] HTTP Exception: {str(he)}")
+            raise he
+        except Exception as e:
+            print(f"[DEBUG] Error in database operations: {str(e)}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Error retrieving course data: {str(e)}"
+            )
+        finally:
+            print("[DEBUG] Closing database session")
+            db.close()
+            
+    except Exception as e:
+        print(f"[DEBUG] Unhandled exception in get_course: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"An unexpected error occurred processing your request: {str(e)}"
+        )
 
 @app.get("/subjects/")
 async def get_subjects():

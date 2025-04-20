@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import CourseSearch from "../components/CourseSearch";
-import Professors from "../components/Professors";
+import SharedSearchTable from "../components/SharedSearchTable";
+import { SkeletonCard } from '../components/ui';
 
 // API configuration
 const API_BASE_URL = '/api';
 
 export default function SearchPage() {
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<'courses' | 'professors'>('courses');
 
   // Function to retry API connection
@@ -18,48 +18,74 @@ export default function SearchPage() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
+    <div className="h-screen flex flex-col">
+      {/* API Error Message - similar to plan page */}
+      {!isApiAvailable && !isLoading && (
+        <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
+          <h3 className="font-bold mb-2">API Connection Error</h3>
+          <p className="mb-3">
+            Cannot load search results. Please ensure the API server is running.
+          </p>
+          <button 
+            onClick={handleRetryConnection}
+            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 shadow-sm"
+          >
+            Retry Connection
+          </button>
+        </div>
+      )}
+      
+      {/* Loading indicator - similar to plan page */}
+      {isLoading && (
+        <div className="p-4 space-y-4">
+          <SkeletonCard hasHeader={true} hasImage={false} contentLines={1} className="h-32" />
+          <SkeletonCard hasHeader={true} hasImage={false} contentLines={6} className="h-96" />
+        </div>
+      )}
 
-
-        {/* Search Tabs */}
-        <div className="mb-6">
-          <div className="border-b border-gray-200">
-            <div className="flex -mb-px">
+      {/* Main content */}
+      {(isApiAvailable && !isLoading) && (
+        <div className="flex flex-col h-full overflow-hidden">
+          {/* View Toggle - similar styling to plan page */}
+          <div className="bg-blue-50 border-b border-blue-100">
+            <div className="flex">
               <button
-                className={`py-4 px-6 font-medium text-lg border-b-2 ${
-                  activeTab === 'courses'
-                    ? 'border-primary-blue text-primary-blue'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                } transition-colors`}
+                className={`px-5 py-3 font-medium ${
+                  activeTab === 'courses' 
+                    ? 'text-primary-blue border-b-2 border-primary-blue' 
+                    : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent'
+                }`}
                 onClick={() => setActiveTab('courses')}
               >
-                Search for Courses
+                <h2 className="font-medium text-lg truncate">
+                  Search for Courses
+                </h2>
               </button>
               <button
-                className={`py-4 px-6 font-medium text-lg border-b-2 ${
-                  activeTab === 'professors'
-                    ? 'border-primary-blue text-primary-blue'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                } transition-colors`}
+                className={`px-5 py-3 font-medium ${
+                  activeTab === 'professors' 
+                    ? 'text-primary-blue border-b-2 border-primary-blue' 
+                    : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent'
+                }`}
                 onClick={() => setActiveTab('professors')}
               >
-                Search for Professors
+                <h2 className="font-medium text-lg truncate">
+                  Search for Professors
+                </h2>
               </button>
             </div>
           </div>
+          
+          {/* Content area */}
+          <div className="flex-1 overflow-y-auto p-4">
+            <SharedSearchTable 
+              mode={activeTab}
+              isApiAvailable={isApiAvailable}
+              onApiConnectionRetry={handleRetryConnection}
+            />
+          </div>
         </div>
-
-        {/* Content based on active tab */}
-        {activeTab === 'courses' ? (
-          <CourseSearch 
-            isApiAvailable={isApiAvailable} 
-            onApiConnectionRetry={handleRetryConnection} 
-          />
-        ) : (
-          <Professors />
-        )}
-      </div>
-    </main>
+      )}
+    </div>
   );
 } 
