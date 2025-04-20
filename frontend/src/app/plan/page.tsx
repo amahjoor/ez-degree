@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import SemesterPlanner, { SemesterPlannerHandle } from "../components/SemesterPlanner";
 import DegreeRequirementsSidebar from "../components/DegreeRequirementsSidebar";
+import WeeklyCalendar from "../components/WeeklyCalendar";
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -11,6 +12,9 @@ export default function PlanPage() {
   // State to track API availability
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  
+  // State to track which view is active
+  const [activeView, setActiveView] = useState<'long-term' | 'weekly'>('long-term');
   
   // Reference to SemesterPlanner for adding courses
   const semesterPlannerRef = useRef<SemesterPlannerHandle>(null);
@@ -57,10 +61,11 @@ export default function PlanPage() {
 
   // Function to handle adding a course from the requirements list
   const handleCourseSelect = (courseCode: string, courseTitle: string, courseCredits: number) => {
-    // Add the selected course to the semester planner
-    if (semesterPlannerRef.current) {
+    // Add the selected course to the semester planner or weekly calendar
+    if (activeView === 'long-term' && semesterPlannerRef.current) {
       semesterPlannerRef.current.addCourse(courseCode, courseTitle, courseCredits);
     }
+    // For weekly view, we could implement a different way to add courses
   };
 
   return (
@@ -91,16 +96,47 @@ export default function PlanPage() {
 
       {/* Main content */}
       {(isApiAvailable && !isLoading) && (
-        <div className="flex flex-col lg:flex-row flex-1 overflow-hidden">
+        <div className="flex flex-col lg:flex-row h-full overflow-hidden">
           {/* Main planner area */}
-          <div className="lg:w-3/4 overflow-hidden">
-            <div className="h-full overflow-y-auto p-4">
-              <SemesterPlanner ref={semesterPlannerRef} />
+          <div className="lg:w-3/4 flex flex-col overflow-hidden">
+            {/* View Toggle */}
+            <div className="flex items-center border-b border-gray-200 bg-white px-4">
+              <button
+                className={`py-3 px-5 ${
+                  activeView === 'long-term' 
+                    ? 'border-b-2 border-primary-blue text-primary-blue font-medium' 
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+                onClick={() => setActiveView('long-term')}
+              >
+                4-Year Plan
+              </button>
+              <button
+                className={`py-3 px-5 ${
+                  activeView === 'weekly' 
+                    ? 'border-b-2 border-primary-blue text-primary-blue font-medium' 
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+                onClick={() => setActiveView('weekly')}
+              >
+                Weekly Schedule
+              </button>
+            </div>
+            
+            {/* Content area */}
+            <div className="flex-1 overflow-y-auto">
+              {activeView === 'long-term' ? (
+                <div className="p-4">
+                  <SemesterPlanner ref={semesterPlannerRef} />
+                </div>
+              ) : (
+                <WeeklyCalendar onCourseSelect={handleCourseSelect} />
+              )}
             </div>
           </div>
           
-          {/* Sidebar - fixed height with its own scroll */}
-          <div className="lg:w-1/4 border-l border-gray-200 overflow-hidden">
+          {/* Sidebar */}
+          <div className="lg:w-1/4 border-l border-gray-200 h-full overflow-hidden">
             <DegreeRequirementsSidebar 
               isApiAvailable={isApiAvailable}
               onCourseSelect={handleCourseSelect}

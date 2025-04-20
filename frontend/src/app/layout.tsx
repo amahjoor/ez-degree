@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Patriot Assist</title>
+        <title>4yrplan</title>
         <meta name="description" content="A tool to help GMU students navigate degree requirements and plan their courses" />
       </head>
       <body
@@ -36,7 +36,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-3 flex justify-between items-center">
             <div className="flex items-center space-x-12">
               <Link href="/" className="font-bold text-xl hover:text-gray-200 transition-colors">
-                Patriot Assist
+                4yrplan
               </Link>
               <div className="flex space-x-8">
                 <Link 
