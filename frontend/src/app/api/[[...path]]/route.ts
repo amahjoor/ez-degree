@@ -5,12 +5,14 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 // This is a catch-all route handler that proxies requests to the FastAPI backend
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
+  request: NextRequest
 ) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
+    // Get the path from URL segments instead of params
+    const pathSegments = request.nextUrl.pathname.split('/').filter(Boolean);
+    // Remove 'api' from the path segments
+    const apiIndex = pathSegments.indexOf('api');
+    const path = apiIndex !== -1 ? pathSegments.slice(apiIndex + 1).join('/') : '';
     const searchParams = request.nextUrl.searchParams.toString();
     
     // If root /api path with no additional path segments, redirect to docs
@@ -64,12 +66,14 @@ export async function GET(
 
 // Handle POST requests
 export async function POST(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
+  request: NextRequest
 ) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
+    // Get the path from URL segments instead of params
+    const pathSegments = request.nextUrl.pathname.split('/').filter(Boolean);
+    // Remove 'api' from the path segments
+    const apiIndex = pathSegments.indexOf('api');
+    const path = apiIndex !== -1 ? pathSegments.slice(apiIndex + 1).join('/') : '';
     const url = `${API_BASE_URL}/${path}`;
 
     console.log(`Proxying POST request to: ${url}`);
@@ -102,12 +106,14 @@ export async function POST(
 
 // Handle PUT requests
 export async function PUT(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
+  request: NextRequest
 ) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
+    // Get the path from URL segments instead of params
+    const pathSegments = request.nextUrl.pathname.split('/').filter(Boolean);
+    // Remove 'api' from the path segments
+    const apiIndex = pathSegments.indexOf('api');
+    const path = apiIndex !== -1 ? pathSegments.slice(apiIndex + 1).join('/') : '';
     const url = `${API_BASE_URL}/${path}`;
 
     // Get the request body
@@ -138,12 +144,14 @@ export async function PUT(
 
 // Handle DELETE requests
 export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { path: string[] } }
+  request: NextRequest
 ) {
   try {
-    // Get the path from the request
-    const path = params.path?.join('/') || '';
+    // Get the path from URL segments instead of params
+    const pathSegments = request.nextUrl.pathname.split('/').filter(Boolean);
+    // Remove 'api' from the path segments
+    const apiIndex = pathSegments.indexOf('api');
+    const path = apiIndex !== -1 ? pathSegments.slice(apiIndex + 1).join('/') : '';
     const url = `${API_BASE_URL}/${path}`;
 
     // Forward the request to the FastAPI backend
