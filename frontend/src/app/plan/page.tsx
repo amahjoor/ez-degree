@@ -64,7 +64,7 @@ export default function PlanPage() {
   };
 
   return (
-    <main className="fixed inset-0 flex flex-col bg-gray-50">
+    <div className="flex flex-col h-[calc(100vh-3.5rem)] overflow-hidden bg-gray-50">
       {/* API Error Message */}
       {!isApiAvailable && !isLoading && (
         <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
@@ -108,6 +108,6 @@ export default function PlanPage() {
           </div>
         </div>
       )}
-    </main>
+    </div>
   );
 } 
