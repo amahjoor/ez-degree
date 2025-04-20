@@ -216,16 +216,16 @@ export default function CourseDetail() {
               <SkeletonText width="20%" height="1.5rem" />
             </div>
             <div className="md:w-1/3 flex justify-end">
-              <SkeletonCard hasHeader={false} contentLines={0} className="w-32 h-32" />
+              <SkeletonCard hasHeader={false} contentLines={0} className="w-28 h-28" />
             </div>
           </div>
           
           <div>
             <div className="border-b border-gray-200 mb-6">
               <div className="flex space-x-6">
-                <SkeletonText width="6rem" height="2.5rem" />
-                <SkeletonText width="6rem" height="2.5rem" />
-                <SkeletonText width="6rem" height="2.5rem" />
+                <SkeletonText width="6rem" height="2.5rem" className="mb-2" />
+                <SkeletonText width="6rem" height="2.5rem" className="mb-2" />
+                <SkeletonText width="6rem" height="2.5rem" className="mb-2" />
               </div>
             </div>
             
