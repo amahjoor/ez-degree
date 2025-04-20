@@ -25,7 +25,7 @@ export default function Home() {
     router.push('/plan');
   };
 
-  return (
+    return (
     <main className="flex h-[calc(100vh-10rem)] flex-col items-center justify-center px-4">
       <div className="z-10 max-w-3xl w-full">
         {/* API connection error message */}
@@ -63,20 +63,20 @@ export default function Home() {
           
           {/* Main action buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-5 mt-6">
-            <button 
+          <button
               onClick={handleSearch}
               className="px-10 py-3 text-lg font-medium rounded-full bg-primary-blue text-white hover:bg-blue-700 shadow-lg transition-all"
-            >
-              Search
-            </button>
-            <button 
+                  >
+                    Search
+                  </button>
+                          <button
               onClick={handlePlan}
               className="px-10 py-3 text-lg font-medium rounded-full bg-primary-green text-white hover:bg-green-700 shadow-lg transition-all"
             >
               Plan
-            </button>
-          </div>
-        </div>
+                          </button>
+                      </div>
+              </div>
       </div>
     </main>
   );
