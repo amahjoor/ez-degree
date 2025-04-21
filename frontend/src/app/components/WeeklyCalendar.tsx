@@ -22,6 +22,26 @@ interface WeeklyCalendarProps {
   onCourseSelect?: (courseCode: string, title: string, credits: number) => void;
 }
 
+interface SchedulePreferences {
+  locations: {
+    fairfax: boolean;
+    arlington: boolean;
+    virtual: boolean;
+  };
+  creditLimits: {
+    min: number;
+    max: number;
+  };
+  scheduling: {
+    minimizeGaps: boolean;
+    minimizeDays: boolean;
+    preferLater: boolean;
+    preferEarlier: boolean;
+  };
+  considerSeats: boolean;
+  considerRMP: boolean;
+}
+
 // Generate a random pastel color for new courses
 const getRandomColor = () => {
   const colors = [
@@ -66,12 +86,33 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     }
   ]);
 
+  // State declarations
+  const [isPreferencesOpen, setIsPreferencesOpen] = useState<boolean>(false);
+  const [preferences, setPreferences] = useState<SchedulePreferences>({
+    locations: {
+      fairfax: true,
+      arlington: false,
+      virtual: false,
+    },
+    creditLimits: {
+      min: 12,
+      max: 18,
+    },
+    scheduling: {
+      minimizeGaps: true,
+      minimizeDays: false,
+      preferLater: false,
+      preferEarlier: false,
+    },
+    considerSeats: true,
+    considerRMP: false,
+  });
+
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
   const [timeRange, setTimeRange] = useState<{start: number, end: number}>({start: 8, end: 20}); // 8am-8pm
   const [semester, setSemester] = useState<string>("Spring 2025");
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
-
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
@@ -265,6 +306,37 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     }
   };
   
+  const semesterList = ["Summer 2025", "Fall 2025"];
+  const [currentSemesterIndex, setCurrentSemesterIndex] = useState(0);
+
+  const handlePrevSemester = () => {
+    setCurrentSemesterIndex(prev => (prev > 0 ? prev - 1 : prev));
+  };
+
+  const handleNextSemester = () => {
+    setCurrentSemesterIndex(prev => (prev < semesterList.length - 1 ? prev + 1 : prev));
+  };
+
+  useEffect(() => {
+    setSemester(semesterList[currentSemesterIndex]);
+  }, [currentSemesterIndex]);
+
+  // Effect to handle body scroll lock when modal is open
+  useEffect(() => {
+    if (isPreferencesOpen) {
+      // Add class to prevent scrolling on body
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Remove class when modal is closed
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to ensure we remove the class when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isPreferencesOpen]);
+
   // Effect to set up menu portal target on component mount
   useEffect(() => {
     // This ensures the dropdown menu has access to document.body
@@ -277,40 +349,58 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
 
   return (
     <div className="bg-white h-full w-full overflow-hidden flex flex-col">
-      {/* Updated header with semester selection */}
+      {/* Updated header with semester navigation and controls */}
       <div className="border-b border-gray-200">
-        <div className="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-            <div className="w-full sm:w-48">
-              <Select
-                value={semesterOptions.find(option => option.value === semester)}
-                onChange={handleSemesterChange}
-                options={semesterOptions}
-                placeholder="Select semester"
-                className="react-select-container"
-                classNamePrefix="react-select"
-                styles={customSelectStyles}
-                menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
-                menuPosition="fixed"
-              />
-            </div>
-            <h2 className="text-xl font-bold text-gray-800 ml-0 sm:ml-1">Weekly Schedule</h2>
+        <div className="p-4 flex items-center justify-between">
+          {/* Semester Navigation */}
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={handlePrevSemester}
+              disabled={currentSemesterIndex === 0}
+              className={`p-2 rounded-full hover:bg-gray-100 ${currentSemesterIndex === 0 ? 'text-gray-300' : 'text-gray-600'}`}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </button>
+            <h2 className="text-lg font-semibold min-w-[150px] text-center">
+              {semesterList[currentSemesterIndex]}
+            </h2>
+            <button
+              onClick={handleNextSemester}
+              disabled={currentSemesterIndex === semesterList.length - 1}
+              className={`p-2 rounded-full hover:bg-gray-100 ${currentSemesterIndex === semesterList.length - 1 ? 'text-gray-300' : 'text-gray-600'}`}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </button>
           </div>
-          <button 
-            onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-            className="self-end sm:self-auto px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm rounded border border-gray-300 flex items-center"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-            </svg>
-            {isFilterExpanded ? 'Hide Filters' : 'Show Filters'}
-          </button>
+
+          {/* Control Buttons */}
+          <div className="flex items-center space-x-3">
+            <button 
+              onClick={() => setIsFilterExpanded(!isFilterExpanded)}
+              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm rounded-md border border-gray-300 flex items-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+              </svg>
+              Filters
+            </button>
+            <button 
+              onClick={() => setIsPreferencesOpen(!isPreferencesOpen)}
+              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm rounded-md border border-gray-300 flex items-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Preferences
+            </button>
+          </div>
         </div>
-        
-        <div className={`px-4 pb-3 ${isFilterExpanded ? 'hidden' : 'block'}`}>
-          <p className="text-sm text-gray-500">Click on a time slot to add a class or drag courses from requirements</p>
-        </div>
-        
+
         {/* Expanded filters section */}
         {isFilterExpanded && (
           <div className="p-4 bg-gray-50 border-t border-gray-200">
@@ -367,6 +457,171 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
                     </button>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Schedule Preferences Modal */}
+        {isPreferencesOpen && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
+            onClick={(e) => {
+              // Close modal when clicking the overlay
+              if (e.target === e.currentTarget) {
+                setIsPreferencesOpen(false);
+              }
+            }}
+          >
+            <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 overflow-hidden">
+              <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+                <h3 className="text-lg font-semibold text-gray-900">Schedule Preferences</h3>
+                <button 
+                  onClick={() => setIsPreferencesOpen(false)}
+                  className="text-gray-400 hover:text-gray-500"
+                >
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              <div className="px-6 py-4 max-h-[calc(100vh-200px)] overflow-y-auto">
+                {/* Campus Locations */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-medium text-gray-700 mb-3">Preferred Locations</h4>
+                  <div className="space-y-2">
+                    {Object.entries(preferences.locations).map(([location, isSelected]) => (
+                      <label key={location} className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={isSelected}
+                          onChange={() => setPreferences(prev => ({
+                            ...prev,
+                            locations: {
+                              ...prev.locations,
+                              [location]: !isSelected
+                            }
+                          }))}
+                          className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                        />
+                        <span className="ml-2 text-sm text-gray-700 capitalize">
+                          {location === 'fairfax' ? 'Fairfax Campus' :
+                           location === 'arlington' ? 'Arlington Campus' : 'Virtual'}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Credit Limits */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-medium text-gray-700 mb-3">Semester Credit Limits</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-1">Minimum Credits</label>
+                      <input
+                        type="number"
+                        value={preferences.creditLimits.min}
+                        onChange={(e) => setPreferences(prev => ({
+                          ...prev,
+                          creditLimits: {
+                            ...prev.creditLimits,
+                            min: parseInt(e.target.value) || 0
+                          }
+                        }))}
+                        min="0"
+                        max={preferences.creditLimits.max}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-blue focus:border-primary-blue"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-600 mb-1">Maximum Credits</label>
+                      <input
+                        type="number"
+                        value={preferences.creditLimits.max}
+                        onChange={(e) => setPreferences(prev => ({
+                          ...prev,
+                          creditLimits: {
+                            ...prev.creditLimits,
+                            max: parseInt(e.target.value) || 0
+                          }
+                        }))}
+                        min={preferences.creditLimits.min}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-blue focus:border-primary-blue"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Scheduling Preferences */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-medium text-gray-700 mb-3">Scheduling Preferences</h4>
+                  <div className="space-y-2">
+                    {Object.entries(preferences.scheduling).map(([pref, isSelected]) => (
+                      <label key={pref} className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={isSelected}
+                          onChange={() => setPreferences(prev => ({
+                            ...prev,
+                            scheduling: {
+                              ...prev.scheduling,
+                              [pref]: !isSelected
+                            }
+                          }))}
+                          className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">
+                          {pref === 'minimizeGaps' ? 'Minimize gaps between classes' :
+                           pref === 'minimizeDays' ? 'Minimize days on campus' :
+                           pref === 'preferLater' ? 'Prefer later classes' :
+                           'Prefer earlier classes'}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Additional Considerations */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-medium text-gray-700 mb-3">Additional Considerations</h4>
+                  <div className="space-y-2">
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={preferences.considerSeats}
+                        onChange={() => setPreferences(prev => ({
+                          ...prev,
+                          considerSeats: !prev.considerSeats
+                        }))}
+                        className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                      />
+                      <span className="ml-2 text-sm text-gray-700">Consider seat availability</span>
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={preferences.considerRMP}
+                        onChange={() => setPreferences(prev => ({
+                          ...prev,
+                          considerRMP: !prev.considerRMP
+                        }))}
+                        className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                      />
+                      <span className="ml-2 text-sm text-gray-700">Consider RMP professor ratings</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end">
+                <button
+                  onClick={() => setIsPreferencesOpen(false)}
+                  className="px-4 py-2 bg-primary-blue text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-blue"
+                >
+                  Save Preferences
+                </button>
               </div>
             </div>
           </div>

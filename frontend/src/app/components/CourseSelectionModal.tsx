@@ -160,7 +160,7 @@ const CourseSelectionModal: React.FC<CourseSelectionModalProps> = ({
           <h2 className="text-xl font-bold text-gray-800">
             Add Course to {semesterTitle}
           </h2>
-          <button
+          <button 
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600"
           >

@@ -20,6 +20,9 @@ export default function PlanPage() {
   // Reference to SemesterPlanner for adding courses
   const semesterPlannerRef = useRef<SemesterPlannerHandle>(null);
   
+  // State to track sidebar collapse
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  
   // Function to check if the API is available
   const checkApiConnection = useCallback(async () => {
     setIsLoading(true);
@@ -70,7 +73,7 @@ export default function PlanPage() {
   };
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-full flex flex-col overflow-hidden">
       {/* API Error Message */}
       {!isApiAvailable && !isLoading && (
         <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
@@ -104,11 +107,10 @@ export default function PlanPage() {
 
       {/* Main content */}
       {(isApiAvailable && !isLoading) && (
-        <div className="flex flex-col lg:flex-row h-full overflow-hidden">
-          {/* Main planner area */}
-          <div className="lg:w-3/4 flex flex-col overflow-hidden">
-            {/* View Toggle */}
-            <div className="bg-blue-50 border-b border-blue-100">
+        <div className="flex flex-col h-full overflow-hidden">
+          {/* View Toggle and Sidebar Control */}
+          <div className="bg-blue-50 border-b border-blue-100 flex-shrink-0">
+            <div className="flex justify-between items-center">
               <div className="flex">
                 <button
                   className={`px-5 py-3 font-medium ${
@@ -135,26 +137,58 @@ export default function PlanPage() {
                   </h2>
                 </button>
               </div>
+              
+              {/* Sidebar Toggle Button */}
+              <button
+                onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+                className="flex items-center px-5 py-3 text-gray-500 hover:text-gray-700 mr-2"
+                title={isSidebarCollapsed ? "Show requirements sidebar" : "Hide requirements sidebar"}
+              >
+                <h2 className="font-medium text-lg truncate mr-2">
+                  Requirements
+                </h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={isSidebarCollapsed ? "M13 5l7 7-7 7" : "M11 19l-7-7 7-7"}
+                  />
+                </svg>
+              </button>
             </div>
+          </div>
             
-            {/* Content area */}
-            <div className="flex-1 overflow-y-auto">
+          {/* Content and Sidebar Container */}
+          <div className="flex flex-1 overflow-hidden">
+            {/* Main content area */}
+            <div className="flex-1 overflow-hidden h-full">
               {activeView === 'long-term' ? (
-                <div className="p-4">
+                <div className="h-full overflow-y-auto p-4">
                   <SemesterPlanner ref={semesterPlannerRef} />
                 </div>
               ) : (
-                <WeeklyCalendar onCourseSelect={handleCourseSelect} />
+                <div className="h-full overflow-y-auto">
+                  <WeeklyCalendar onCourseSelect={handleCourseSelect} />
+                </div>
               )}
             </div>
-          </div>
-          
-          {/* Sidebar */}
-          <div className="lg:w-1/4 border-l border-gray-200 h-full overflow-hidden">
-            <DegreeRequirementsSidebar 
-              isApiAvailable={isApiAvailable}
-              onCourseSelect={handleCourseSelect}
-            />
+            
+            {/* Sidebar - preserve state but toggle display instantly */}
+            <div className={`${isSidebarCollapsed ? 'w-0 overflow-hidden border-0' : 'w-1/4 border-l border-gray-200'} h-full`}>
+              <div className={`${isSidebarCollapsed ? 'invisible' : 'visible'} w-full h-full`}>
+                <DegreeRequirementsSidebar 
+                  isApiAvailable={isApiAvailable}
+                  onCourseSelect={handleCourseSelect}
+                />
+              </div>
+            </div>
           </div>
         </div>
       )}

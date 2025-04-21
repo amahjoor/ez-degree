@@ -239,7 +239,19 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
     }),
     menu: (provided: any) => ({
       ...provided,
-      zIndex: 9999
+      zIndex: 9999,
+      width: 'calc(100% + 2rem)', // Match sidebar width (accounting for padding)
+      margin: '0',
+      borderRadius: '0 0 0.5rem 0.5rem',
+      border: '1px solid #E5E7EB',
+      borderTop: 'none',
+      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      position: 'absolute',
+      left: '-1rem', // Offset to account for sidebar padding
+    }),
+    menuList: (provided: any) => ({
+      ...provided,
+      padding: '0.5rem 0',
     }),
     menuPortal: (base: any) => ({
       ...base,
@@ -280,7 +292,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
 
   return (
     <div className="w-full h-full flex flex-col bg-white overflow-hidden">
-      <div className="px-4 py-3 bg-blue-50 text-gray-800 border-b border-blue-100">
+      <div className="px-4 py-3 bg-blue-50 text-gray-800 border-b border-blue-100 flex-shrink-0 relative">
         {!selectedMajor || showMajorSelect ? (
           <Select
             id="major-select"
@@ -306,6 +318,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                 boxShadow: 'none',
                 backgroundColor: 'transparent',
                 minHeight: '1.5rem',
+                paddingLeft: '0.5rem',
                 '&:hover': {
                   border: 'none'
                 }
@@ -318,18 +331,22 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                 ...provided,
                 fontSize: '1.125rem',
                 fontWeight: '500',
+                margin: '0',
+                padding: '0',
               }),
               singleValue: (provided) => ({
                 ...provided,
                 fontSize: '1.125rem',
                 fontWeight: '500',
                 color: '#1F2937',
+                margin: '0',
               }),
               placeholder: (provided) => ({
                 ...provided,
                 fontSize: '1.125rem',
                 fontWeight: '500',
                 color: '#4B5563',
+                margin: '0',
               }),
               indicatorSeparator: () => ({
                 display: 'none'
@@ -337,13 +354,25 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
               dropdownIndicator: (provided) => ({
                 ...provided,
                 padding: '0 0 0 8px'
+              }),
+              menu: (provided) => ({
+                ...provided,
+                zIndex: 9999,
+                width: 'calc(100% + 2rem)',
+                margin: '0',
+                borderRadius: '0 0 0.5rem 0.5rem',
+                border: '1px solid #E5E7EB',
+                borderTop: 'none',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                position: 'absolute',
+                left: '-1rem',
               })
             }}
             menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
             menuPosition="fixed"
           />
         ) : (
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center pl-2">
             <h2 className="font-medium text-lg truncate">{selectedMajorName}</h2>
             <button 
               className="text-gray-400 hover:text-gray-600 transition-colors"

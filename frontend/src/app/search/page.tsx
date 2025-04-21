@@ -18,7 +18,7 @@ export default function SearchPage() {
   };
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-full flex flex-col overflow-hidden">
       {/* API Error Message - similar to plan page */}
       {!isApiAvailable && !isLoading && (
         <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
@@ -47,7 +47,7 @@ export default function SearchPage() {
       {(isApiAvailable && !isLoading) && (
         <div className="flex flex-col h-full overflow-hidden">
           {/* View Toggle - similar styling to plan page */}
-          <div className="bg-blue-50 border-b border-blue-100">
+          <div className="bg-blue-50 border-b border-blue-100 flex-shrink-0">
             <div className="flex">
               <button
                 className={`px-5 py-3 font-medium ${
@@ -77,12 +77,14 @@ export default function SearchPage() {
           </div>
           
           {/* Content area */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <SharedSearchTable 
-              mode={activeTab}
-              isApiAvailable={isApiAvailable}
-              onApiConnectionRetry={handleRetryConnection}
-            />
+          <div className="flex-1 overflow-hidden">
+            <div className="h-full overflow-y-auto p-4">
+              <SharedSearchTable 
+                mode={activeTab}
+                isApiAvailable={isApiAvailable}
+                onApiConnectionRetry={handleRetryConnection}
+              />
+            </div>
           </div>
         </div>
       )}
