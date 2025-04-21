@@ -149,6 +149,51 @@ const sortProfessorsByRating = (professors: Professor[]): Professor[] => {
   return [...professors].sort((a, b) => b.avgRating - a.avgRating);
 };
 
+// Add a new utility function after the other utility functions
+const calculateGradeDistribution = (professors: Professor[]): Record<string, number> => {
+  const gradeOccurrences: Record<string, number> = {};
+  let totalGrades = 0;
+  
+  // Common grade groups
+  const gradeGroups = {
+    A: ['A+', 'A', 'A-'],
+    B: ['B+', 'B', 'B-'],
+    C: ['C+', 'C', 'C-'],
+    D: ['D+', 'D', 'D-'],
+    F: ['F']
+  };
+  
+  // Initialize counters
+  Object.keys(gradeGroups).forEach(group => {
+    gradeOccurrences[group] = 0;
+  });
+  
+  // Count grades by group
+  professors.forEach(professor => {
+    professor.reviews.forEach(review => {
+      if (review.grade) {
+        // Find which group this grade belongs to
+        for (const [group, grades] of Object.entries(gradeGroups)) {
+          if (grades.includes(review.grade)) {
+            gradeOccurrences[group] = (gradeOccurrences[group] || 0) + 1;
+            totalGrades++;
+            break;
+          }
+        }
+      }
+    });
+  });
+  
+  // Convert counts to percentages
+  if (totalGrades > 0) {
+    Object.keys(gradeOccurrences).forEach(grade => {
+      gradeOccurrences[grade] = Math.round((gradeOccurrences[grade] / totalGrades) * 100);
+    });
+  }
+  
+  return gradeOccurrences;
+};
+
 export default function CourseDetail() {
   const params = useParams();
   const courseCode = params.courseCode as string;
@@ -160,6 +205,9 @@ export default function CourseDetail() {
   const [totalReviews, setTotalReviews] = useState<number>(0);
   const [expandedProfessor, setExpandedProfessor] = useState<string | null>(null);
   const [sortedProfessors, setSortedProfessors] = useState<Professor[]>([]);
+  const [gradeDistribution, setGradeDistribution] = useState<Record<string, number>>({
+    A: 0, B: 0, C: 0, D: 0, F: 0
+  });
 
   useEffect(() => {
     const fetchCourse = async () => {
@@ -181,6 +229,8 @@ export default function CourseDetail() {
           setTotalReviews(countTotalReviews(data.professors));
           // Sort professors by rating
           setSortedProfessors(sortProfessorsByRating(data.professors));
+          // Calculate grade distribution
+          setGradeDistribution(calculateGradeDistribution(data.professors));
         }
         
         setLoading(false);
@@ -300,39 +350,167 @@ export default function CourseDetail() {
           <div className="rounded-lg">
             {/* Overview Tab */}
             {activeTab === 'overview' && (
-              <div>
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold mb-2">Description</h3>
-                  <p className="text-gray-700">{course.description}</p>
+              <div className="flex flex-col md:flex-row gap-8">
+                {/* Left column - Overview information */}
+                <div className="md:w-2/3">
+                  <div className="mb-6">
+                    <h3 className="text-xl font-semibold mb-2">Description</h3>
+                    <p className="text-gray-700">{course.description}</p>
+                  </div>
+
+                  {course.prerequisites && (
+                    <div className="mb-6">
+                      <h3 className="text-xl font-semibold mb-2">Prerequisites</h3>
+                      <p className="text-gray-700">{parseCourseCodes(course.prerequisites)}</p>
+                    </div>
+                  )}
+
+                  {course.corequisites && (
+                    <div className="mb-6">
+                      <h3 className="text-xl font-semibold mb-2">Corequisites</h3>
+                      <p className="text-gray-700">{parseCourseCodes(course.corequisites)}</p>
+                    </div>
+                  )}
+
+                  {course.restrictions && (
+                    <div className="mb-6">
+                      <h3 className="text-xl font-semibold mb-2">Registration Restrictions</h3>
+                      <p className="text-gray-700">{course.restrictions}</p>
+                    </div>
+                  )}
+
+                  {course.notes && (
+                    <div className="mb-6">
+                      <h3 className="text-xl font-semibold mb-2">Notes</h3>
+                      <p className="text-gray-700">{course.notes}</p>
+                    </div>
+                  )}
+
+                  {/* Professor preview section */}
+                  <div className="mt-8">
+                    <h3 className="text-xl font-semibold mb-4">Professors</h3>
+                    {sortedProfessors.length > 0 ? (
+                      <div className="space-y-4">
+                        {sortedProfessors.slice(0, 3).map((professor) => (
+                          <div key={`${professor.firstName}-${professor.lastName}`} className="flex items-center border-b pb-4">
+                            <div className="mr-4">
+                              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 font-bold">
+                                {professor.firstName[0]}{professor.lastName[0]}
+                              </div>
+                            </div>
+                            <div className="flex-grow">
+                              <h4 className="font-medium">
+                                <Link 
+                                  href={`/professors/${professor.url?.split('/').pop() || ''}`}
+                                  className="text-primary-blue hover:text-blue-800"
+                                >
+                                  {professor.firstName} {professor.lastName}
+                                </Link>
+                              </h4>
+                            </div>
+                            <div className="flex items-center">
+                              <div className="flex items-center text-yellow-500">
+                                {[...Array(5)].map((_, i) => (
+                                  <span key={i} className={i < Math.round(professor.avgRating) ? "text-yellow-500" : "text-gray-300"}>★</span>
+                                ))}
+                              </div>
+                              <span className="ml-2 font-semibold">{professor.avgRating.toFixed(1)}</span>
+                            </div>
+                          </div>
+                        ))}
+                        {sortedProfessors.length > 3 && (
+                          <button 
+                            onClick={() => setActiveTab('professors')}
+                            className="text-primary-blue hover:underline text-sm font-medium"
+                          >
+                            View all {sortedProfessors.length} professors
+                          </button>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-gray-500 italic">No professor data available.</p>
+                    )}
+                  </div>
                 </div>
 
-                {course.prerequisites && (
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Prerequisites</h3>
-                    <p className="text-gray-700">{parseCourseCodes(course.prerequisites)}</p>
+                {/* Right column - Stats & Grade Distribution */}
+                <div className="md:w-1/3">
+                  <div className="bg-gray-50 rounded-lg p-6 mb-6">
+                    <div className="flex justify-between mb-4">
+                      <div>
+                        <h4 className="text-gray-500 text-sm">Credits</h4>
+                        <p className="text-3xl font-semibold">{course.credits}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-gray-500 text-sm">Avg, GPA</h4>
+                        <p className="text-3xl font-semibold">{mostCommonGrade !== 'N/A' ? mostCommonGrade : '—'}</p>
+                      </div>
+                    </div>
+                    
+                    {/* Grade distribution mini preview */}
+                    <div className="mt-8">
+                      <h4 className="text-lg font-semibold mb-4">Grade Distribution</h4>
+                      {course.professors && course.professors.length > 0 && totalReviews > 0 ? (
+                        <div className="space-y-2">
+                          {/* Dynamic grade distribution bars */}
+                          <div className="flex items-center mb-3">
+                            <div className="w-full bg-gray-200 rounded-full h-3.5">
+                              <div className="bg-green-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.A || 0}%` }}></div>
+                            </div>
+                            <div className="ml-3 w-24 flex justify-between">
+                              <span className="text-sm font-medium">{gradeDistribution.A || 0}%</span>
+                              <span className="text-sm text-gray-700">A</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center mb-3">
+                            <div className="w-full bg-gray-200 rounded-full h-3.5">
+                              <div className="bg-blue-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.B || 0}%` }}></div>
+                            </div>
+                            <div className="ml-3 w-24 flex justify-between">
+                              <span className="text-sm font-medium">{gradeDistribution.B || 0}%</span>
+                              <span className="text-sm text-gray-700">B</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center mb-3">
+                            <div className="w-full bg-gray-200 rounded-full h-3.5">
+                              <div className="bg-yellow-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.C || 0}%` }}></div>
+                            </div>
+                            <div className="ml-3 w-24 flex justify-between">
+                              <span className="text-sm font-medium">{gradeDistribution.C || 0}%</span>
+                              <span className="text-sm text-gray-700">C</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center mb-3">
+                            <div className="w-full bg-gray-200 rounded-full h-3.5">
+                              <div className="bg-orange-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.D || 0}%` }}></div>
+                            </div>
+                            <div className="ml-3 w-24 flex justify-between">
+                              <span className="text-sm font-medium">{gradeDistribution.D || 0}%</span>
+                              <span className="text-sm text-gray-700">D</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center">
+                            <div className="w-full bg-gray-200 rounded-full h-3.5">
+                              <div className="bg-red-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.F || 0}%` }}></div>
+                            </div>
+                            <div className="ml-3 w-24 flex justify-between">
+                              <span className="text-sm font-medium">{gradeDistribution.F || 0}%</span>
+                              <span className="text-sm text-gray-700">F</span>
+                            </div>
+                          </div>
+                          <button 
+                            onClick={() => setActiveTab('grade')}
+                            className="text-primary-blue hover:underline text-sm font-medium mt-2"
+                          >
+                            View full grade distribution
+                          </button>
+                        </div>
+                      ) : (
+                        <p className="text-gray-500 italic">No grade data available.</p>
+                      )}
+                    </div>
                   </div>
-                )}
-
-                {course.corequisites && (
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Corequisites</h3>
-                    <p className="text-gray-700">{parseCourseCodes(course.corequisites)}</p>
-                  </div>
-                )}
-
-                {course.restrictions && (
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Registration Restrictions</h3>
-                    <p className="text-gray-700">{course.restrictions}</p>
-                  </div>
-                )}
-
-                {course.notes && (
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Notes</h3>
-                    <p className="text-gray-700">{course.notes}</p>
-                  </div>
-                )}
+                </div>
               </div>
             )}
 

@@ -10,6 +10,23 @@ import { SkeletonList, SkeletonCard } from '../components/ui';
 // API configuration
 const API_BASE_URL = '/api';
 
+interface CourseDetails {
+  course_code: string;
+  title: string;
+  credits: number;
+  description?: string;
+  professors?: Array<{
+    firstName: string;
+    lastName: string;
+    avgRating: number;
+    reviews?: Array<{
+      grade?: string;
+    }>;
+  }>;
+  mostCommonGrade?: string;
+  totalReviews?: number;
+}
+
 interface RequirementGroup {
   title: string;
   isOpen: boolean;
@@ -37,6 +54,237 @@ interface MajorOption {
   label: string;
 }
 
+// CourseOverlay Component
+const CourseOverlay: React.FC<{
+  courseCode: string;
+  onClose: () => void;
+  position: { x: number; y: number };
+}> = ({ courseCode, onClose, position }) => {
+  const [loading, setLoading] = useState(true);
+  const [courseData, setCourseData] = useState<CourseDetails | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  
+  useEffect(() => {
+    async function fetchCourseDetails() {
+      try {
+        setLoading(true);
+        const response = await fetch(`http://127.0.0.1:8000/courses/${courseCode}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch course data");
+        }
+        const data = await response.json();
+        setCourseData(data);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching course details:", err);
+        setError("Failed to load course details");
+        setLoading(false);
+      }
+    }
+    
+    fetchCourseDetails();
+  }, [courseCode]);
+  
+  // Calculate total reviews and most common grade if available
+  useEffect(() => {
+    if (courseData?.professors) {
+      // Calculate most common grade
+      const grades: Record<string, number> = {};
+      let totalReviews = 0;
+      
+      courseData.professors.forEach(professor => {
+        if (professor.reviews) {
+          professor.reviews.forEach((review) => {
+            if (review.grade) {
+              grades[review.grade] = (grades[review.grade] || 0) + 1;
+            }
+            totalReviews++;
+          });
+        }
+      });
+      
+      let mostCommonGrade = "N/A";
+      let maxCount = 0;
+      
+      Object.entries(grades).forEach(([grade, count]) => {
+        if (count > maxCount) {
+          mostCommonGrade = grade;
+          maxCount = count;
+        }
+      });
+      
+      setCourseData(prev => ({
+        ...prev!,
+        mostCommonGrade,
+        totalReviews
+      }));
+    }
+  }, [courseData?.professors]);
+  
+  // Calculate adjusted overlay position to ensure it stays within viewport
+  const adjustPosition = () => {
+    // Get viewport dimensions
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    // Calculate initial position
+    let x = position.x;
+    let y = position.y;
+    
+    // Default offset values
+    const offsetY = 10;
+    const width = 400; // max width of overlay
+    const height = 300; // estimated height of overlay
+    
+    // Adjust horizontal position if it would extend beyond right edge
+    if (x + width/2 > viewportWidth) {
+      x = viewportWidth - width/2 - 10; // 10px padding from right edge
+    }
+    
+    // Adjust horizontal position if it would extend beyond left edge
+    if (x - width/2 < 0) {
+      x = width/2 + 10; // 10px padding from left edge
+    }
+    
+    // Adjust vertical position based on available space
+    // If not enough space above, show below the element
+    if (y - height < 20) { // 20px minimum from top of viewport
+      return {
+        top: `${y + offsetY}px`,
+        left: `${x}px`,
+        transform: 'translate(-50%, 0)',
+        marginTop: '0',
+      };
+    } else {
+      // Default: show above the element
+      return {
+        top: `${y}px`,
+        left: `${x}px`,
+        transform: 'translate(-50%, -100%)',
+        marginTop: `-${offsetY}px`,
+      };
+    }
+  };
+  
+  const overlayStyle: React.CSSProperties = {
+    position: 'fixed',
+    zIndex: 9999,
+    maxWidth: '400px',
+    width: '100%',
+    ...adjustPosition()
+  };
+  
+  // Close when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.course-overlay') && !target.closest('.course-chip')) {
+        onClose();
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
+  
+  return (
+    <div 
+      className="course-overlay bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden"
+      style={overlayStyle}
+    >
+      <div className="relative">
+        <button 
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+          onClick={onClose}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        {loading ? (
+          <div className="p-4">
+            <div className="animate-pulse">
+              <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+              <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+              <div className="h-20 bg-gray-200 rounded mb-4"></div>
+              <div className="flex space-x-4">
+                <div className="h-8 bg-gray-200 rounded w-1/4"></div>
+                <div className="h-8 bg-gray-200 rounded w-1/4"></div>
+              </div>
+            </div>
+          </div>
+        ) : error ? (
+          <div className="p-4 text-red-500">{error}</div>
+        ) : courseData ? (
+          <div>
+            {/* Header with course code and grade */}
+            <div className="flex justify-between items-center bg-blue-50 p-4 border-b border-blue-100">
+              <div>
+                <h3 className="font-bold text-lg text-gray-900">{courseData.course_code}</h3>
+                <p className="text-gray-600 text-sm">{courseData.credits} credits</p>
+              </div>
+              {courseData.mostCommonGrade && courseData.mostCommonGrade !== 'N/A' && (
+                <div className="bg-primary-blue text-white text-2xl font-bold px-4 py-2 rounded-lg">
+                  {courseData.mostCommonGrade}
+                </div>
+              )}
+            </div>
+            
+            {/* Course details */}
+            <div className="p-4">
+              <h4 className="font-medium text-base mb-2">{courseData.title}</h4>
+              
+              {courseData.description && (
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                  {courseData.description}
+                </p>
+              )}
+              
+              {/* Professors preview */}
+              {courseData.professors && courseData.professors.length > 0 && (
+                <div className="mt-2">
+                  <p className="text-sm text-gray-500 mb-1">Top Professors:</p>
+                  <div className="space-y-1">
+                    {courseData.professors.slice(0, 2).map((prof, idx) => (
+                      <div key={idx} className="flex justify-between items-center">
+                        <span className="text-sm">{prof.firstName} {prof.lastName}</span>
+                        <div className="flex items-center">
+                          <span className="text-yellow-500 mr-1">★</span>
+                          <span className="text-sm font-medium">{prof.avgRating?.toFixed(1) || 'N/A'}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Footer with link to full page */}
+              <div className="mt-4 flex justify-between items-center pt-2 border-t border-gray-100">
+                {courseData.totalReviews !== undefined && (
+                  <span className="text-xs text-gray-500">
+                    {courseData.totalReviews} {courseData.totalReviews === 1 ? 'review' : 'reviews'}
+                  </span>
+                )}
+                <Link 
+                  href={`/courses/${encodeURIComponent(courseData.course_code)}`}
+                  className="text-primary-blue hover:text-blue-700 text-sm font-medium"
+                >
+                  View Details →
+                </Link>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="p-4 text-gray-500">No course data available</div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({ 
   isApiAvailable,
   onCourseSelect
@@ -52,6 +300,11 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
 
   const [requirementGroups, setRequirementGroups] = useState<RequirementGroup[]>([]);
   const [showMajorSelect, setShowMajorSelect] = useState<boolean>(true);
+  
+  // Course overlay state
+  const [overlayVisible, setOverlayVisible] = useState(false);
+  const [overlayPosition, setOverlayPosition] = useState({ x: 0, y: 0 });
+  const [selectedCourseCode, setSelectedCourseCode] = useState<string>('');
 
   // Fetch majors on component mount
   useEffect(() => {
@@ -185,27 +438,24 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
     setRequirementGroups(updatedGroups);
   };
 
-  const handleRequirementClick = (requirement: Requirement) => {
-    if (onCourseSelect) {
-      // Extract credits from the requirement's matched course in requirements data
-      let credits = 4; // Default fallback
-      
-      if (requirements) {
-        // Search all categories for matching course code
-        for (const category of requirements.categories) {
-          const matchedCourse = category.courses.find(course => 
-            course.code === requirement.id
-          );
-          
-          if (matchedCourse) {
-            credits = matchedCourse.credits;
-            break;
-          }
-        }
-      }
-      
-      onCourseSelect(requirement.id, requirement.title, credits);
-    }
+  const handleRequirementClick = (requirement: Requirement, event: React.MouseEvent) => {
+    // Stop event propagation to prevent other click handlers from firing
+    event.stopPropagation();
+    event.preventDefault();
+    
+    // Get click position for overlay
+    const rect = event.currentTarget.getBoundingClientRect();
+    setOverlayPosition({
+      x: rect.left + rect.width / 2,
+      y: rect.top
+    });
+    
+    // Set selected course and show overlay
+    setSelectedCourseCode(requirement.id);
+    setOverlayVisible(true);
+    
+    // Don't call onCourseSelect since we're showing the overlay instead
+    // The user can click "View Details" in the overlay to go to the full page
   };
 
   const handleMajorChange = (selectedOption: MajorOption | null) => {
@@ -518,10 +768,10 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                           {group.requirements.map((req, reqIndex) => (
                             <div 
                               key={reqIndex}
-                              className="bg-blue-50 border border-blue-100 px-3 py-1.5 rounded text-primary-blue text-sm font-medium cursor-grab hover:bg-blue-100 active:cursor-grabbing flex items-center shadow-sm hover:shadow-md transition-all"
+                              className="course-chip bg-blue-50 border border-blue-100 px-3 py-1.5 rounded text-primary-blue text-sm font-medium cursor-pointer hover:bg-blue-100 flex items-center shadow-sm hover:shadow-md transition-all relative"
                               draggable="true"
                               onDragStart={(e) => handleDragStart(e, req)}
-                              onClick={() => handleRequirementClick(req)}
+                              onClick={(e) => handleRequirementClick(req, e)}
                               title={req.title}
                             >
                               {req.id}
@@ -544,6 +794,15 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
           </div>
         )}
       </div>
+      
+      {/* Course overlay - only render when visible */}
+      {overlayVisible && (
+        <CourseOverlay 
+          courseCode={selectedCourseCode}
+          position={overlayPosition}
+          onClose={() => setOverlayVisible(false)}
+        />
+      )}
     </div>
   );
 };
