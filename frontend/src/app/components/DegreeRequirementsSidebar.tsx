@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Select from 'react-select';
 import { Major, Concentration, Requirements, RequirementCourse } from '@/types/course';
+import { SkeletonList, SkeletonCard } from '../components/ui';
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -430,11 +431,11 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
           </div>
         )}
 
-        {/* Loading state */}
+        {/* Loading state with skeletons */}
         {loading && (
-          <div className="flex flex-col items-center justify-center p-8">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-blue"></div>
-            <p className="mt-2 text-sm text-gray-500">Loading requirements...</p>
+          <div className="p-4">
+            <SkeletonCard hasHeader={true} hasImage={false} contentLines={1} className="mb-4" />
+            <SkeletonList items={6} hasImage={false} className="pl-2" />
           </div>
         )}
 
