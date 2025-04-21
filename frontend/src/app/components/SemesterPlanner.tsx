@@ -170,10 +170,10 @@ const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
   }, [semesters]);
   
   return (
-    <div className="space-y-8 mb-8">
+    <div className="h-full overflow-y-auto p-4">
       {years.map(year => (
-        <div key={`year-${year}`} className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-primary-green">Year {year}</h2>
+        <div key={year} className="mb-8">
+          <h2 className="text-2xl font-bold text-green-600 mb-4">Year {year}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {semesterTypes.map(semester => {
@@ -242,7 +242,7 @@ const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
         </div>
       ))}
       
-      <div className="mt-8 p-4 bg-white rounded-lg shadow-lg border border-gray-200">
+      <div className="mt-8 mb-8 p-4 bg-white rounded-lg shadow-lg border border-gray-200">
         <h3 className="font-bold mb-4 text-gray-800">Plan Summary</h3>
         <div className="grid grid-cols-2 gap-6">
           <div className="bg-blue-50 p-3 rounded-lg border border-blue-100">

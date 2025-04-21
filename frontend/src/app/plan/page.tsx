@@ -63,6 +63,20 @@ export default function PlanPage() {
     checkApiConnection();
   }, [checkApiConnection]);
 
+  // Add an effect to prevent body scrolling when this page is active
+  useEffect(() => {
+    // Save the original overflow style
+    const originalStyle = document.body.style.overflow;
+    
+    // Disable scrolling on body
+    document.body.style.overflow = 'hidden';
+    
+    // Restore original overflow style when component unmounts
+    return () => {
+      document.body.style.overflow = originalStyle;
+    };
+  }, []);
+
   // Function to handle adding a course from the requirements list
   const handleCourseSelect = (courseCode: string, courseTitle: string, courseCredits: number) => {
     // Add the selected course to the semester planner or weekly calendar
@@ -73,7 +87,7 @@ export default function PlanPage() {
   };
 
   return (
-    <div className="h-full flex flex-col overflow-hidden">
+    <div className="h-screen flex flex-col overflow-hidden">
       {/* API Error Message */}
       {!isApiAvailable && !isLoading && (
         <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
@@ -168,13 +182,13 @@ export default function PlanPage() {
           {/* Content and Sidebar Container */}
           <div className="flex flex-1 overflow-hidden">
             {/* Main content area */}
-            <div className="flex-1 overflow-hidden h-full">
+            <div className="flex-1 h-full overflow-hidden">
               {activeView === 'long-term' ? (
-                <div className="h-full overflow-y-auto p-4">
+                <div className="h-full overflow-auto">
                   <SemesterPlanner ref={semesterPlannerRef} />
                 </div>
               ) : (
-                <div className="h-full overflow-y-auto">
+                <div className="h-full overflow-auto">
                   <WeeklyCalendar onCourseSelect={handleCourseSelect} />
                 </div>
               )}

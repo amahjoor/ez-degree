@@ -349,8 +349,8 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
 
   return (
     <div className="bg-white h-full w-full overflow-hidden flex flex-col">
-      {/* Updated header with semester navigation and controls */}
-      <div className="border-b border-gray-200">
+      {/* Fixed header with semester navigation and controls */}
+      <div className="border-b border-gray-200 flex-shrink-0">
         <div className="p-4 flex items-center justify-between">
           {/* Semester Navigation */}
           <div className="flex items-center space-x-4">
@@ -403,7 +403,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
 
         {/* Expanded filters section */}
         {isFilterExpanded && (
-          <div className="p-4 bg-gray-50 border-t border-gray-200">
+          <div className="p-4 bg-gray-50 border-t border-gray-200 flex-shrink-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Time range section */}
               <div>
@@ -628,114 +628,119 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
         )}
       </div>
       
-      <div className="relative grid grid-cols-6 flex-1 overflow-y-auto">
-        {/* Only show columns for available days */}
-        <div className="col-span-1 bg-gray-50 border-r border-gray-200 z-20 sticky left-0">
-          <div className="h-12 flex items-center justify-center font-semibold border-b border-gray-200 bg-gray-100 sticky top-0">
-            Time
-          </div>
-          {hours.map(hour => (
-            <React.Fragment key={`hour-${hour}`}>
-              <div className="h-16 flex items-center justify-end pr-3 text-sm text-gray-500 border-b border-gray-200">
-                {hour % 12 || 12}{hour >= 12 ? 'pm' : 'am'}
+      {/* Scrollable calendar grid */}
+      <div className="relative flex-1 overflow-hidden">
+        <div className="h-full overflow-auto">
+          <div className="grid grid-cols-6 min-h-full">
+            {/* Only show columns for available days */}
+            <div className="col-span-1 bg-gray-50 border-r border-gray-200 z-20 sticky left-0">
+              <div className="h-12 flex items-center justify-center font-semibold border-b border-gray-200 bg-gray-100 sticky top-0">
+                Time
               </div>
-            </React.Fragment>
-          ))}
-        </div>
-        
-        {/* Day columns - filtered by availability */}
-        <div className={`col-span-5 grid bg-white relative`} 
-          style={{ 
-            gridTemplateColumns: `repeat(${availableDays.filter(Boolean).length}, minmax(0, 1fr))` 
-          }}
-        >
-          {/* Day headers */}
-          {days.map((day, index) => (
-            availableDays[index] && (
-              <div 
-                key={`day-${index}`}
-                className="h-12 flex items-center justify-center font-semibold border-b border-gray-200 border-r border-gray-200 sticky top-0 bg-gray-100 z-10"
-              >
-                {day}
-              </div>
-            )
-          ))}
-          
-          {/* Time grid - generates the background grid, filtered by day availability */}
-          {days.map((_, dayIndex) => (
-            availableDays[dayIndex] && (
-              <div 
-                key={`day-col-${dayIndex}`} 
-                className="relative border-r border-gray-200"
-              >
-                {hours.map((hour) => (
-                  <div
-                    key={`slot-${dayIndex}-${hour}`}
-                    className={`h-16 border-b border-gray-200 hover:bg-blue-50 cursor-pointer transition-colors ${
-                      draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour
-                        ? 'bg-blue-100 border border-blue-400'
-                        : ''
-                    }`}
-                    onClick={() => handleAddClass(dayIndex, hour)}
-                    onDragOver={(e) => handleDragOver(e, dayIndex, hour)}
-                    onDragLeave={handleDragLeave}
-                    onDrop={(e) => handleDrop(e, dayIndex, hour)}
-                  />
-                ))}
-              </div>
-            )
-          ))}
-          
-          {/* Class blocks - filtered and positioned based on availability */}
-          {classes.map((cls) => {
-            // Only show classes for available days
-            if (!availableDays[cls.day]) return null;
-            
-            // Count how many days are available before this class's day
-            // to adjust the position in the grid
-            const visibleDayIndex = availableDays
-              .slice(0, cls.day)
-              .filter(Boolean)
-              .length;
-              
-            return (
-              <div
-                key={cls.id}
-                className={`absolute p-2 rounded-md border shadow-sm hover:shadow-md transition-shadow overflow-y-auto max-h-full hover:z-30 group ${cls.color}`}
-                style={{
-                  left: `${(visibleDayIndex * (100 / availableDays.filter(Boolean).length))}%`,
-                  width: `calc(${100 / availableDays.filter(Boolean).length}% - 8px)`,
-                  top: `calc(3rem + ${(cls.startTime - 8) * 4}rem)`,
-                  height: `calc(${(cls.endTime - cls.startTime) * 4}rem - 4px)`,
-                }}
-              >
-                <div className="flex justify-between items-start h-full">
-                  <div className="w-full overflow-y-auto scrollbar-thin">
-                    <p className="font-bold text-sm">{cls.courseCode}</p>
-                    <p className="text-xs truncate group-hover:text-clip group-hover:whitespace-normal">{cls.title}</p>
-                    <p className="text-xs text-gray-600 mt-1">{cls.location}</p>
-                    <p className="text-xs text-gray-600 font-medium">{formatTime(cls.startTime)} - {formatTime(cls.endTime)}</p>
-                    {cls.credits && (
-                      <span className="inline-block mt-1 px-1.5 py-0.5 bg-white bg-opacity-50 rounded text-xs font-medium">
-                        {cls.credits} credit{cls.credits !== 1 ? 's' : ''}
-                      </span>
-                    )}
+              {hours.map(hour => (
+                <React.Fragment key={`hour-${hour}`}>
+                  <div className="h-16 flex items-center justify-end pr-3 text-sm text-gray-500 border-b border-gray-200">
+                    {hour % 12 || 12}{hour >= 12 ? 'pm' : 'am'}
                   </div>
-                  <button 
-                    className="text-gray-400 hover:text-red-500 flex-shrink-0 ml-1"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleRemoveClass(cls.id);
+                </React.Fragment>
+              ))}
+            </div>
+            
+            {/* Day columns - filtered by availability */}
+            <div className={`col-span-5 grid bg-white relative`} 
+              style={{ 
+                gridTemplateColumns: `repeat(${availableDays.filter(Boolean).length}, minmax(0, 1fr))` 
+              }}
+            >
+              {/* Day headers */}
+              {days.map((day, index) => (
+                availableDays[index] && (
+                  <div 
+                    key={`day-${index}`}
+                    className="h-12 flex items-center justify-center font-semibold border-b border-gray-200 border-r border-gray-200 sticky top-0 bg-gray-100 z-10"
+                  >
+                    {day}
+                  </div>
+                )
+              ))}
+              
+              {/* Time grid - generates the background grid, filtered by day availability */}
+              {days.map((_, dayIndex) => (
+                availableDays[dayIndex] && (
+                  <div 
+                    key={`day-col-${dayIndex}`} 
+                    className="relative border-r border-gray-200"
+                  >
+                    {hours.map((hour) => (
+                      <div
+                        key={`slot-${dayIndex}-${hour}`}
+                        className={`h-16 border-b border-gray-200 hover:bg-blue-50 cursor-pointer transition-colors ${
+                          draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour
+                            ? 'bg-blue-100 border border-blue-400'
+                            : ''
+                        }`}
+                        onClick={() => handleAddClass(dayIndex, hour)}
+                        onDragOver={(e) => handleDragOver(e, dayIndex, hour)}
+                        onDragLeave={handleDragLeave}
+                        onDrop={(e) => handleDrop(e, dayIndex, hour)}
+                      />
+                    ))}
+                  </div>
+                )
+              ))}
+              
+              {/* Class blocks - filtered and positioned based on availability */}
+              {classes.map((cls) => {
+                // Only show classes for available days
+                if (!availableDays[cls.day]) return null;
+                
+                // Count how many days are available before this class's day
+                // to adjust the position in the grid
+                const visibleDayIndex = availableDays
+                  .slice(0, cls.day)
+                  .filter(Boolean)
+                  .length;
+                  
+                return (
+                  <div
+                    key={cls.id}
+                    className={`absolute p-2 rounded-md border shadow-sm hover:shadow-md transition-shadow overflow-y-auto max-h-full hover:z-30 group ${cls.color}`}
+                    style={{
+                      left: `${(visibleDayIndex * (100 / availableDays.filter(Boolean).length))}%`,
+                      width: `calc(${100 / availableDays.filter(Boolean).length}% - 8px)`,
+                      top: `calc(3rem + ${(cls.startTime - 8) * 4}rem)`,
+                      height: `calc(${(cls.endTime - cls.startTime) * 4}rem - 4px)`,
                     }}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+                    <div className="flex justify-between items-start h-full">
+                      <div className="w-full overflow-y-auto scrollbar-thin">
+                        <p className="font-bold text-sm">{cls.courseCode}</p>
+                        <p className="text-xs truncate group-hover:text-clip group-hover:whitespace-normal">{cls.title}</p>
+                        <p className="text-xs text-gray-600 mt-1">{cls.location}</p>
+                        <p className="text-xs text-gray-600 font-medium">{formatTime(cls.startTime)} - {formatTime(cls.endTime)}</p>
+                        {cls.credits && (
+                          <span className="inline-block mt-1 px-1.5 py-0.5 bg-white bg-opacity-50 rounded text-xs font-medium">
+                            {cls.credits} credit{cls.credits !== 1 ? 's' : ''}
+                          </span>
+                        )}
+                      </div>
+                      <button 
+                        className="text-gray-400 hover:text-red-500 flex-shrink-0 ml-1"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleRemoveClass(cls.id);
+                        }}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
       

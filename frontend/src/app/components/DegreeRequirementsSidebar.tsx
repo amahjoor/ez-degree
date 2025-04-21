@@ -292,6 +292,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
 
   return (
     <div className="w-full h-full flex flex-col bg-white overflow-hidden">
+      {/* Fixed header */}
       <div className="px-4 py-3 bg-blue-50 text-gray-800 border-b border-blue-100 flex-shrink-0 relative">
         {!selectedMajor || showMajorSelect ? (
           <Select
@@ -391,154 +392,157 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
         )}
       </div>
 
-      {/* Major and Concentration Selection Panel - Only show if major not yet selected */}
-      {showMajorSelect && selectedMajor && (
-        <div className="p-4 bg-white border-b border-gray-200">
-          {concentrations.length > 0 && (
-            <div>
-              <label htmlFor="concentration-select" className="block text-sm font-medium text-gray-700 mb-1">
-                Concentration (optional):
-              </label>
-              <select
-                id="concentration-select"
-                value={selectedConcentration}
-                onChange={(e) => setSelectedConcentration(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
-                disabled={loading}
-              >
-                <option value="">-- All Requirements --</option>
-                {concentrations.map((concentration) => (
-                  <option key={concentration.id} value={concentration.id}>
-                    {concentration.name}
-                  </option>
-                ))}
-              </select>
-              
-              <div className="mt-4 flex justify-end">
-                <button 
-                  className="font-medium py-2 px-4 rounded shadow bg-primary-blue hover:bg-blue-700 text-white"
-                  onClick={() => setShowMajorSelect(false)}
+      {/* Scrollable content area */}
+      <div className="flex-1 overflow-y-auto">
+        {/* Major and Concentration Selection Panel - Only show if major not yet selected */}
+        {showMajorSelect && selectedMajor && (
+          <div className="p-4 bg-white border-b border-gray-200">
+            {concentrations.length > 0 && (
+              <div>
+                <label htmlFor="concentration-select" className="block text-sm font-medium text-gray-700 mb-1">
+                  Concentration (optional):
+                </label>
+                <select
+                  id="concentration-select"
+                  value={selectedConcentration}
+                  onChange={(e) => setSelectedConcentration(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
+                  disabled={loading}
                 >
-                  Apply
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* Loading state */}
-      {loading && (
-        <div className="flex-1 flex flex-col items-center justify-center p-8">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-blue"></div>
-          <p className="mt-2 text-sm text-gray-500">Loading requirements...</p>
-        </div>
-      )}
-
-      {/* Error message */}
-      {requirementsError && (
-        <div className="flex-1 p-4 bg-red-50 border-l-4 border-red-500 text-red-700">
-          <p className="text-sm">{requirementsError}</p>
-        </div>
-      )}
-
-      {/* Requirements list - Only show if not in select mode */}
-      {!showMajorSelect && !loading && !requirementsError && (
-        <div className="flex-1 flex flex-col overflow-hidden">
-          <div className="flex-1 overflow-y-auto">
-            {requirementGroups.length === 0 ? (
-              <div className="p-4 text-center text-gray-500">
-                <p>No requirements found for this major</p>
-              </div>
-            ) : (
-              <>
-                {/* Summary info */}
-                {requirements && (
-                  <div className="px-4 py-3 bg-blue-50 border-b border-blue-100">
-                    <p className="text-sm text-gray-700">Total Credits Required: <span className="font-semibold text-primary-blue">{requirements.total_credits}</span></p>
-                  </div>
-                )}
+                  <option value="">-- All Requirements --</option>
+                  {concentrations.map((concentration) => (
+                    <option key={concentration.id} value={concentration.id}>
+                      {concentration.name}
+                    </option>
+                  ))}
+                </select>
                 
-                {requirementGroups.map((group, index) => (
-                  <div key={index} className="border-b border-gray-200">
-                    <div 
-                      className="px-4 py-3 flex justify-between items-center cursor-pointer hover:bg-gray-50"
-                      onClick={() => toggleGroup(index)}
-                    >
-                      <h3 className="text-gray-800 text-sm font-medium">{group.title}</h3>
-                      <svg 
-                        className={`w-5 h-5 text-gray-500 transform transition-transform ${group.isOpen ? 'rotate-180' : ''}`} 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24" 
-                      >
-                        {group.isOpen ? (
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
-                        ) : (
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                        )}
-                      </svg>
-                    </div>
-
-                    {group.isOpen && group.isChoice && group.options && (
-                      <div className="px-6 py-3">
-                        <div className="mb-2 ml-2">
-                          <div className="inline-flex items-center justify-center w-6 h-6 text-xs text-white bg-primary-green rounded-full">
-                            1
-                          </div>
-                          <span className="ml-2 text-gray-600">Choose from the following options:</span>
-                        </div>
-                        <div className="flex flex-wrap gap-2 mt-2">
-                          {group.options.map((option, optionIndex) => (
-                            <button
-                              key={optionIndex}
-                              className={`px-4 py-2 rounded-md ${
-                                group.selectedOption === option
-                                  ? 'bg-primary-blue text-white'
-                                  : 'bg-blue-50 text-primary-blue hover:bg-blue-100'
-                              }`}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                selectOption(index, option);
-                              }}
-                            >
-                              {option}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {group.isOpen && group.requirements && (
-                      <div className="px-4 py-2 flex flex-wrap gap-2">
-                        {group.requirements.map((req, reqIndex) => (
-                          <div 
-                            key={reqIndex}
-                            className="bg-blue-50 border border-blue-100 px-3 py-1.5 rounded text-primary-blue text-sm font-medium cursor-grab hover:bg-blue-100 active:cursor-grabbing flex items-center shadow-sm hover:shadow-md transition-all"
-                            draggable="true"
-                            onDragStart={(e) => handleDragStart(e, req)}
-                            onClick={() => handleRequirementClick(req)}
-                            title={req.title}
-                          >
-                            {req.id}
-                            {req.completed && (
-                              <span className="ml-2 text-green-600">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                              </span>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </>
+                <div className="mt-4 flex justify-end">
+                  <button 
+                    className="font-medium py-2 px-4 rounded shadow bg-primary-blue hover:bg-blue-700 text-white"
+                    onClick={() => setShowMajorSelect(false)}
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
             )}
           </div>
-        </div>
-      )}
+        )}
+
+        {/* Loading state */}
+        {loading && (
+          <div className="flex flex-col items-center justify-center p-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-blue"></div>
+            <p className="mt-2 text-sm text-gray-500">Loading requirements...</p>
+          </div>
+        )}
+
+        {/* Error message */}
+        {requirementsError && (
+          <div className="p-4 bg-red-50 border-l-4 border-red-500 text-red-700">
+            <p className="text-sm">{requirementsError}</p>
+          </div>
+        )}
+
+        {/* Requirements list - Only show if not in select mode */}
+        {!showMajorSelect && !loading && !requirementsError && (
+          <div className="flex-col overflow-hidden">
+            <div className="overflow-y-auto">
+              {requirementGroups.length === 0 ? (
+                <div className="p-4 text-center text-gray-500">
+                  <p>No requirements found for this major</p>
+                </div>
+              ) : (
+                <>
+                  {/* Summary info */}
+                  {requirements && (
+                    <div className="px-4 py-3 bg-blue-50 border-b border-blue-100">
+                      <p className="text-sm text-gray-700">Total Credits Required: <span className="font-semibold text-primary-blue">{requirements.total_credits}</span></p>
+                    </div>
+                  )}
+                  
+                  {requirementGroups.map((group, index) => (
+                    <div key={index} className="border-b border-gray-200">
+                      <div 
+                        className="px-4 py-3 flex justify-between items-center cursor-pointer hover:bg-gray-50"
+                        onClick={() => toggleGroup(index)}
+                      >
+                        <h3 className="text-gray-800 text-sm font-medium">{group.title}</h3>
+                        <svg 
+                          className={`w-5 h-5 text-gray-500 transform transition-transform ${group.isOpen ? 'rotate-180' : ''}`} 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24" 
+                        >
+                          {group.isOpen ? (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
+                          ) : (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                          )}
+                        </svg>
+                      </div>
+
+                      {group.isOpen && group.isChoice && group.options && (
+                        <div className="px-6 py-3">
+                          <div className="mb-2 ml-2">
+                            <div className="inline-flex items-center justify-center w-6 h-6 text-xs text-white bg-primary-green rounded-full">
+                              1
+                            </div>
+                            <span className="ml-2 text-gray-600">Choose from the following options:</span>
+                          </div>
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {group.options.map((option, optionIndex) => (
+                              <button
+                                key={optionIndex}
+                                className={`px-4 py-2 rounded-md ${
+                                  group.selectedOption === option
+                                    ? 'bg-primary-blue text-white'
+                                    : 'bg-blue-50 text-primary-blue hover:bg-blue-100'
+                                }`}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  selectOption(index, option);
+                                }}
+                              >
+                                {option}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {group.isOpen && group.requirements && (
+                        <div className="px-4 py-2 flex flex-wrap gap-2">
+                          {group.requirements.map((req, reqIndex) => (
+                            <div 
+                              key={reqIndex}
+                              className="bg-blue-50 border border-blue-100 px-3 py-1.5 rounded text-primary-blue text-sm font-medium cursor-grab hover:bg-blue-100 active:cursor-grabbing flex items-center shadow-sm hover:shadow-md transition-all"
+                              draggable="true"
+                              onDragStart={(e) => handleDragStart(e, req)}
+                              onClick={() => handleRequirementClick(req)}
+                              title={req.title}
+                            >
+                              {req.id}
+                              {req.completed && (
+                                <span className="ml-2 text-green-600">
+                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                  </svg>
+                                </span>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
