@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Professor } from '@/types/professor';
 import { useRouter } from 'next/navigation';
 import { use } from 'react';
+import { SkeletonText } from '@/app/components/ui/SkeletonText';
 
 const API_BASE_URL = '/api';
 
@@ -91,9 +92,55 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
     return (
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center py-8">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary-blue border-r-transparent mr-2"></div>
-            <p>Loading professor details...</p>
+          <div className="bg-white shadow rounded-lg p-6">
+            {/* Professor Header */}
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <SkeletonText width="300px" height="2.5rem" className="mb-2" />
+                <SkeletonText width="200px" height="1.25rem" />
+              </div>
+              <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="bg-gray-50 p-4 rounded-lg">
+                  <SkeletonText width="80px" height="1.25rem" className="mx-auto mb-2" />
+                  <SkeletonText width="60px" height="2rem" className="mx-auto" />
+                </div>
+              ))}
+            </div>
+
+            {/* Course Reviews Section */}
+            <div>
+              <SkeletonText width="200px" height="2rem" className="mb-4" />
+              <div className="space-y-6">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="border rounded-lg p-6">
+                    <div className="flex justify-between items-center mb-4">
+                      <SkeletonText width="150px" height="1.5rem" />
+                      <div className="flex items-center">
+                        <SkeletonText width="40px" height="1.5rem" />
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      {[1, 2].map((j) => (
+                        <div key={j} className="border-t pt-4">
+                          <SkeletonText width="100%" height="1rem" className="mb-2" />
+                          <SkeletonText width="100%" height="1rem" className="mb-2" />
+                          <div className="flex flex-wrap gap-4">
+                            <SkeletonText width="100px" height="1rem" />
+                            <SkeletonText width="120px" height="1rem" />
+                            <SkeletonText width="80px" height="1rem" />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
