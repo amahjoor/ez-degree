@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import CourseSelectionModal from './CourseSelectionModal';
+import AIScheduleGenerator from './AIScheduleGenerator';
 import { Course } from '@/types/course';
 
 // API configuration
@@ -84,7 +85,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
   ]);
 
   // State declarations
-  const [isPreferencesOpen, setIsPreferencesOpen] = useState<boolean>(false);
+  const [isAIGeneratorOpen, setIsAIGeneratorOpen] = useState<boolean>(false);
   const [preferences, setPreferences] = useState<SchedulePreferences>({
     locations: {
       fairfax: true,
@@ -99,19 +100,6 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     considerRMP: false,
   });
   
-  // New state for AI class input
-  const [desiredClasses, setDesiredClasses] = useState<string>("");
-  
-  // State for tracking AI schedule generation
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  
-  // State for selected courses in AI generator
-  const [selectedCourses, setSelectedCourses] = useState<{id: string, code: string, title: string}[]>([]);
-  const [courseSearchTerm, setCourseSearchTerm] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<{id: string, code: string, title: string}[]>([]);
-  const [isSearching, setIsSearching] = useState<boolean>(false);
-  const [searchError, setSearchError] = useState<string | null>(null);
-
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
   const [timeRange, setTimeRange] = useState<{start: number, end: number}>({start: 8, end: 20}); // 8am-8pm
@@ -327,23 +315,9 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
 
   // Effect to handle body scroll lock when modal is open
   useEffect(() => {
-    if (isPreferencesOpen) {
+    if (isAIGeneratorOpen) {
       // Add class to prevent scrolling on body
       document.body.style.overflow = 'hidden';
-      
-      // Pre-populate selectedCourses with existing classes from the calendar
-      const existingCourses = classes.map(cls => ({
-        id: cls.id,
-        code: cls.courseCode,
-        title: cls.title
-      }));
-      
-      // Filter out any duplicates (by id)
-      const uniqueCourses = existingCourses.filter(
-        (course, index, self) => index === self.findIndex(c => c.id === course.id)
-      );
-      
-      setSelectedCourses(uniqueCourses);
     } else {
       // Remove class when modal is closed
       document.body.style.overflow = 'unset';
@@ -353,7 +327,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isPreferencesOpen, classes]);
+  }, [isAIGeneratorOpen]);
 
   // Effect to set up menu portal target on component mount
   useEffect(() => {
@@ -426,7 +400,11 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
           <div className="flex items-center space-x-3">
             <button 
               onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm rounded-md border border-gray-300 flex items-center"
+              className={`px-3 py-2 text-sm rounded-md border flex items-center ${
+                isFilterExpanded 
+                  ? 'bg-primary-blue hover:bg-primary-blue/90 text-white border-primary-blue' 
+                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-300'
+              }`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
@@ -434,8 +412,12 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
               Filters
             </button>
             <button 
-              onClick={() => setIsPreferencesOpen(!isPreferencesOpen)}
-              className="px-3 py-2 bg-primary-blue hover:bg-primary-blue/90 text-white text-sm rounded-md border border-primary-blue flex items-center"
+              onClick={() => setIsAIGeneratorOpen(true)}
+              className={`px-3 py-2 text-sm rounded-md border flex items-center ${
+                isAIGeneratorOpen 
+                  ? 'bg-primary-blue hover:bg-primary-blue/90 text-white border-primary-blue' 
+                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-300'
+              }`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -505,416 +487,26 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
             </div>
           </div>
         )}
-
-        {/* Schedule Preferences Modal */}
-        {isPreferencesOpen && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
-            onClick={(e) => {
-              // Close modal when clicking the overlay
-              if (e.target === e.currentTarget) {
-                setIsPreferencesOpen(false);
-              }
-            }}
-          >
-            <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 overflow-hidden">
-              <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-gray-900">AI Schedule Generation</h3>
-                <button 
-                  onClick={() => setIsPreferencesOpen(false)}
-                  className="text-gray-400 hover:text-gray-500"
-                >
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              
-              <div className="px-6 py-4 max-h-[calc(100vh-200px)] overflow-y-auto">
-                {/* Desired Classes and Credit Limits in same row */}
-                <div className="flex flex-wrap gap-4 mb-4">
-                  {/* Desired Classes */}
-                  <div className="flex-1 min-w-[250px]">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2 flex items-center">
-                      Classes You Want
-                      <div className="relative ml-1 group">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400 hover:text-gray-600 cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <div className="absolute left-0 -bottom-1 transform translate-y-full w-64 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity z-50 pointer-events-none">
-                          The AI will prioritize these courses and fill remaining credits with suggested courses based on your requirements.
-                        </div>
-                      </div>
-                    </h4>
-                    <div className="space-y-2">
-                      <div className="relative">
-                        <input
-                          type="text"
-                          value={courseSearchTerm}
-                          onChange={(e) => {
-                            setCourseSearchTerm(e.target.value);
-                            // Search with debounce
-                            const searchValue = e.target.value.trim();
-                            if (searchValue.length > 2) {
-                              setIsSearching(true);
-                              setSearchError(null);
-                              
-                              // Use the same API as CourseSelectionModal
-                              const fetchCourses = async () => {
-                                try {
-                                  // Construct URL with search parameters
-                                  let url = `${API_BASE_URL}/courses/?limit=20`;
-                                  
-                                  if (searchValue) {
-                                    url += `&search=${encodeURIComponent(searchValue)}`;
-                                  }
-                                  
-                                  const response = await fetch(url);
-                                  
-                                  if (!response.ok) {
-                                    throw new Error(`API request failed: ${response.status} ${response.statusText}`);
-                                  }
-                                  
-                                  const data = await response.json();
-                                  // Format courses to match our state structure
-                                  const formattedCourses = data.courses.map((course: any) => ({
-                                    id: course.course_code,
-                                    code: course.course_code,
-                                    title: course.title
-                                  }));
-                                  
-                                  setSearchResults(formattedCourses);
-                                } catch (err) {
-                                  console.error("Error fetching courses:", err);
-                                  setSearchError("Failed to fetch courses");
-                                  setSearchResults([]);
-                                } finally {
-                                  setIsSearching(false);
-                                }
-                              };
-                              
-                              // Debounce the API call
-                              const timeoutId = setTimeout(() => {
-                                fetchCourses();
-                              }, 300);
-                              
-                              return () => clearTimeout(timeoutId);
-                            } else {
-                              setSearchResults([]);
-                              setIsSearching(false);
-                            }
-                          }}
-                          placeholder="Search by course code or title..."
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-blue"
-                        />
-                        {courseSearchTerm.trim().length > 2 && (
-                          <div className="absolute z-10 w-full mt-1 bg-white shadow-lg rounded-md border border-gray-200 max-h-48 overflow-y-auto">
-                            {isSearching ? (
-                              <div className="flex justify-center items-center p-4">
-                                <svg className="animate-spin h-5 w-5 text-primary-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                </svg>
-                              </div>
-                            ) : searchError ? (
-                              <div className="p-3 text-sm text-red-500 text-center">
-                                {searchError}
-                              </div>
-                            ) : searchResults.length === 0 ? (
-                              <div className="p-3 text-sm text-gray-500 text-center">
-                                No courses found matching "{courseSearchTerm}"
-                              </div>
-                            ) : (
-                              searchResults.map(course => (
-                                <div 
-                                  key={course.id}
-                                  className="px-3 py-2 hover:bg-blue-50 cursor-pointer"
-                                  onClick={() => {
-                                    if (!selectedCourses.some(c => c.id === course.id)) {
-                                      setSelectedCourses([...selectedCourses, course]);
-                                    }
-                                    setCourseSearchTerm("");
-                                    setSearchResults([]);
-                                  }}
-                                >
-                                  <div className="font-medium text-primary-blue">{course.code}</div>
-                                  <div className="text-xs text-gray-500">{course.title}</div>
-                                </div>
-                              ))
-                            )}
-                          </div>
-                        )}
-                      </div>
-                      
-                      {selectedCourses.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-2">
-                          {selectedCourses.map(course => (
-                            <div 
-                              key={course.id} 
-                              className="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm flex items-center"
-                            >
-                              <span className="mr-1">{course.code}</span>
-                              <button
-                                onClick={() => setSelectedCourses(selectedCourses.filter(c => c.id !== course.id))}
-                                className="text-blue-500 hover:text-blue-700"
-                              >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                                </svg>
-                              </button>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Credit Limits */}
-                  <div className="min-w-[240px]">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">Semester Credit Limits</h4>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>
-                        <div className="flex h-10 w-full max-w-[110px] overflow-hidden rounded-md border border-gray-300 focus-within:border-primary-blue focus-within:ring-1 focus-within:ring-primary-blue">
-                          <div className="relative flex-grow">
-                            <input
-                              type="number"
-                              value={preferences.creditLimits.min}
-                              onChange={(e) => {
-                                const value = parseInt(e.target.value) || 0;
-                                if (value <= preferences.creditLimits.max) {
-                                  setPreferences(prev => ({
-                                    ...prev,
-                                    creditLimits: {
-                                      ...prev.creditLimits,
-                                      min: value
-                                    }
-                                  }));
-                                }
-                              }}
-                              min="0"
-                              max="18"
-                              className="w-[85px] h-full pl-2 pr-12 py-2 border-none focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            />
-                            <span className="absolute right-1 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">credits</span>
-                          </div>
-                          <div className="flex flex-col border-l border-gray-300">
-                            <button 
-                              type="button"
-                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
-                              onClick={() => {
-                                const newValue = preferences.creditLimits.min + 1;
-                                if (newValue <= preferences.creditLimits.max) {
-                                  setPreferences(prev => ({
-                                    ...prev,
-                                    creditLimits: {
-                                      ...prev.creditLimits,
-                                      min: newValue
-                                    }
-                                  }));
-                                }
-                              }}
-                            >
-                              <span className="text-sm font-medium leading-none">+</span>
-                            </button>
-                            <div className="border-t border-gray-300"></div>
-                            <button 
-                              type="button"
-                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
-                              onClick={() => {
-                                const newValue = preferences.creditLimits.min - 1;
-                                if (newValue >= 0) {
-                                  setPreferences(prev => ({
-                                    ...prev,
-                                    creditLimits: {
-                                      ...prev.creditLimits,
-                                      min: newValue
-                                    }
-                                  }));
-                                }
-                              }}
-                            >
-                              <span className="text-sm font-medium leading-none">−</span>
-                            </button>
-                          </div>
-                        </div>
-                        <div className="text-sm text-gray-600 mt-1">Minimum</div>
-                      </div>
-                      <div>
-                        <div className="flex h-10 w-full max-w-[110px] overflow-hidden rounded-md border border-gray-300 focus-within:border-primary-blue focus-within:ring-1 focus-within:ring-primary-blue">
-                          <div className="relative flex-grow">
-                            <input
-                              type="number"
-                              value={preferences.creditLimits.max}
-                              onChange={(e) => {
-                                const value = parseInt(e.target.value) || 0;
-                                if (value >= preferences.creditLimits.min) {
-                                  setPreferences(prev => ({
-                                    ...prev,
-                                    creditLimits: {
-                                      ...prev.creditLimits,
-                                      max: value
-                                    }
-                                  }));
-                                }
-                              }}
-                              min={preferences.creditLimits.min}
-                              max="21"
-                              className="w-[85px] h-full pl-2 pr-12 py-2 border-none focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            />
-                            <span className="absolute right-1 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">credits</span>
-                          </div>
-                          <div className="flex flex-col border-l border-gray-300">
-                            <button 
-                              type="button"
-                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
-                              onClick={() => {
-                                const newValue = preferences.creditLimits.max + 1;
-                                if (newValue <= 21) {
-                                  setPreferences(prev => ({
-                                    ...prev,
-                                    creditLimits: {
-                                      ...prev.creditLimits,
-                                      max: newValue
-                                    }
-                                  }));
-                                }
-                              }}
-                            >
-                              <span className="text-sm font-medium leading-none">+</span>
-                            </button>
-                            <div className="border-t border-gray-300"></div>
-                            <button 
-                              type="button"
-                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
-                              onClick={() => {
-                                const newValue = preferences.creditLimits.max - 1;
-                                if (newValue >= preferences.creditLimits.min) {
-                                  setPreferences(prev => ({
-                                    ...prev,
-                                    creditLimits: {
-                                      ...prev.creditLimits,
-                                      max: newValue
-                                    }
-                                  }));
-                                }
-                              }}
-                            >
-                              <span className="text-sm font-medium leading-none">−</span>
-                            </button>
-                          </div>
-                        </div>
-                        <div className="text-sm text-gray-600 mt-1">Maximum</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Preferred Locations and Additional Considerations in same row */}
-                <div className="flex flex-wrap gap-4">
-                  {/* Campus Locations */}
-                  <div className="min-w-[250px] flex-1">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">Preferred Locations</h4>
-                    <div className="space-y-1">
-                      {Object.entries(preferences.locations).map(([location, isSelected]) => (
-                        <label key={location} className="flex items-center">
-                          <input
-                            type="checkbox"
-                            checked={isSelected}
-                            onChange={() => setPreferences(prev => ({
-                              ...prev,
-                              locations: {
-                                ...prev.locations,
-                                [location]: !isSelected
-                              }
-                            }))}
-                            className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
-                          />
-                          <span className="ml-2 text-sm text-gray-700 capitalize">
-                            {location === 'fairfax' ? 'Fairfax Campus' :
-                             location === 'arlington' ? 'Arlington Campus' : 'Virtual'}
-                          </span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Additional Considerations */}
-                  <div className="min-w-[250px]">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">Additional Considerations</h4>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Seat availability</span>
-                        <button 
-                          onClick={() => setPreferences(prev => ({
-                            ...prev,
-                            considerSeats: !prev.considerSeats
-                          }))}
-                          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${preferences.considerSeats ? 'bg-primary-blue' : 'bg-gray-200'}`}
-                          role="switch"
-                          aria-checked={preferences.considerSeats}
-                        >
-                          <span
-                            className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${preferences.considerSeats ? 'translate-x-[24px]' : 'translate-x-[3px]'}`}
-                          />
-                        </button>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">RMP professor ratings</span>
-                        <button 
-                          onClick={() => setPreferences(prev => ({
-                            ...prev,
-                            considerRMP: !prev.considerRMP
-                          }))}
-                          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${preferences.considerRMP ? 'bg-primary-blue' : 'bg-gray-200'}`}
-                          role="switch"
-                          aria-checked={preferences.considerRMP}
-                        >
-                          <span
-                            className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${preferences.considerRMP ? 'translate-x-[24px]' : 'translate-x-[3px]'}`}
-                          />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="px-6 py-3 bg-gray-50 border-t border-gray-200 flex justify-end">
-                <button
-                  onClick={() => {
-                    setIsGenerating(true);
-                    // Simulate schedule generation
-                    setTimeout(() => {
-                      setIsGenerating(false);
-                      setIsPreferencesOpen(false);
-                      // TODO: This is where you would actually generate schedules with AI
-                      // and display the results
-                    }, 2000);
-                  }}
-                  disabled={isGenerating}
-                  className={`px-4 py-2 ${isGenerating ? 'bg-gray-400' : 'bg-primary-blue hover:bg-blue-600'} text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-blue flex items-center`}
-                >
-                  {isGenerating ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Generating...
-                    </>
-                  ) : (
-                    "Generate Schedules"
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
       
+      {/* AI Schedule Generator */}
+      <AIScheduleGenerator
+        isOpen={isAIGeneratorOpen}
+        onClose={() => setIsAIGeneratorOpen(false)}
+        preferences={preferences}
+        setPreferences={setPreferences}
+        existingClasses={classes}
+        onGenerateSchedule={(generatedClasses) => {
+          // Handle generated classes
+          if (generatedClasses && generatedClasses.length > 0) {
+            setClasses(prev => [...prev, ...generatedClasses]);
+          }
+        }}
+      />
+      
       {/* Scrollable calendar grid */}
-      <div className="relative flex-1 overflow-hidden">
-        <div className="h-full overflow-auto">
+      <div className="relative flex-1 overflow-hidden z-20 isolate">
+        <div className="h-full overflow-auto pointer-events-auto">
           <div className="grid grid-cols-6 min-h-full">
             {/* Only show columns for available days */}
             <div className="col-span-1 bg-gray-50 border-r border-gray-200 z-20 sticky left-0">
