@@ -535,7 +535,17 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
                 <div className="flex flex-wrap gap-4 mb-4">
                   {/* Desired Classes */}
                   <div className="flex-1 min-w-[250px]">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">Classes You Want</h4>
+                    <h4 className="text-sm font-medium text-gray-700 mb-2 flex items-center">
+                      Classes You Want
+                      <div className="relative ml-1 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400 hover:text-gray-600 cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div className="absolute left-0 -bottom-1 transform translate-y-full w-64 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity z-50 pointer-events-none">
+                          The AI will prioritize these courses and fill remaining credits with suggested courses based on your requirements.
+                        </div>
+                      </div>
+                    </h4>
                     <div className="space-y-2">
                       <div className="relative">
                         <input
@@ -656,10 +666,6 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
                           ))}
                         </div>
                       )}
-                      
-                      <p className="text-xs text-gray-500">
-                        The AI will prioritize these courses and fill remaining credits with suggested courses based on your requirements.
-                      </p>
                     </div>
                   </div>
 
@@ -835,31 +841,39 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
                   {/* Additional Considerations */}
                   <div className="min-w-[250px]">
                     <h4 className="text-sm font-medium text-gray-700 mb-2">Additional Considerations</h4>
-                    <div className="space-y-1">
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={preferences.considerSeats}
-                          onChange={() => setPreferences(prev => ({
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-700">Seat availability</span>
+                        <button 
+                          onClick={() => setPreferences(prev => ({
                             ...prev,
                             considerSeats: !prev.considerSeats
                           }))}
-                          className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
-                        />
-                        <span className="ml-2 text-sm text-gray-700">Consider seat availability</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={preferences.considerRMP}
-                          onChange={() => setPreferences(prev => ({
+                          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${preferences.considerSeats ? 'bg-primary-blue' : 'bg-gray-200'}`}
+                          role="switch"
+                          aria-checked={preferences.considerSeats}
+                        >
+                          <span
+                            className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${preferences.considerSeats ? 'translate-x-[24px]' : 'translate-x-[3px]'}`}
+                          />
+                        </button>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-700">RMP professor ratings</span>
+                        <button 
+                          onClick={() => setPreferences(prev => ({
                             ...prev,
                             considerRMP: !prev.considerRMP
                           }))}
-                          className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
-                        />
-                        <span className="ml-2 text-sm text-gray-700">Consider RMP professor ratings</span>
-                      </label>
+                          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${preferences.considerRMP ? 'bg-primary-blue' : 'bg-gray-200'}`}
+                          role="switch"
+                          aria-checked={preferences.considerRMP}
+                        >
+                          <span
+                            className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${preferences.considerRMP ? 'translate-x-[24px]' : 'translate-x-[3px]'}`}
+                          />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
