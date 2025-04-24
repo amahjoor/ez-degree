@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import SemesterPlanner, { SemesterPlannerHandle } from "../components/SemesterPlanner";
+import SemesterPlanner, { SemesterPlannerHandle } from "../components/FourYearPlanner";
 import DegreeRequirementsSidebar from "../components/DegreeRequirementsSidebar";
-import WeeklyCalendar from "../components/WeeklyCalendar";
+import WeeklyCalendar from "../components/SemesterCalendar";
 import { SkeletonCard } from '../components/ui';
 
 // API configuration
@@ -147,7 +147,7 @@ export default function PlanPage() {
                   onClick={() => setActiveView('weekly')}
                 >
                   <h2 className="font-medium text-lg truncate">
-                    Weekly Schedule
+                    Semester Schedule
                   </h2>
                 </button>
               </div>

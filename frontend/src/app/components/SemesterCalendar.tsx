@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import CourseSelectionModal from './CourseSelectionModal';
-import AIScheduleGenerator from './AIScheduleGenerator';
+import AIScheduleGenerator from './ai/AIScheduleGenerator';
 import { Course } from '@/types/course';
 
 // API configuration
@@ -38,6 +38,7 @@ interface SchedulePreferences {
   };
   considerSeats: boolean;
   considerRMP: boolean;
+  professorsToAvoid: string[];
 }
 
 // Generate a random pastel color for new courses
@@ -98,6 +99,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     },
     considerSeats: true,
     considerRMP: false,
+    professorsToAvoid: [],
   });
   
   // New filter states
