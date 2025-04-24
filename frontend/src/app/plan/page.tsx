@@ -123,7 +123,7 @@ export default function PlanPage() {
       {(isApiAvailable && !isLoading) && (
         <div className="flex flex-col h-full overflow-hidden">
           {/* View Toggle and Sidebar Control */}
-          <div className="bg-blue-50 border-b border-blue-100 flex-shrink-0">
+          <div className="bg-primary-blue/5 border-b border-primary-blue/10 flex-shrink-0">
             <div className="flex justify-between items-center">
               <div className="flex">
                 <button
@@ -198,8 +198,9 @@ export default function PlanPage() {
             <div className={`${isSidebarCollapsed ? 'w-0 overflow-hidden border-0' : 'w-1/4 border-l border-gray-200'} h-full`}>
               <div className={`${isSidebarCollapsed ? 'invisible' : 'visible'} w-full h-full`}>
                 <DegreeRequirementsSidebar 
-                  isApiAvailable={isApiAvailable}
                   onCourseSelect={handleCourseSelect}
+                  isApiAvailable={isApiAvailable}
+                  onApiConnectionRetry={checkApiConnection}
                 />
               </div>
             </div>

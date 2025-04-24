@@ -5,6 +5,9 @@ import Select from 'react-select';
 import CourseSelectionModal from './CourseSelectionModal';
 import { Course } from '@/types/course';
 
+// API configuration
+const API_BASE_URL = '/api';
+
 interface ClassSession {
   id: string;
   courseCode: string;
@@ -31,12 +34,6 @@ interface SchedulePreferences {
   creditLimits: {
     min: number;
     max: number;
-  };
-  scheduling: {
-    minimizeGaps: boolean;
-    minimizeDays: boolean;
-    preferLater: boolean;
-    preferEarlier: boolean;
   };
   considerSeats: boolean;
   considerRMP: boolean;
@@ -98,15 +95,22 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
       min: 12,
       max: 18,
     },
-    scheduling: {
-      minimizeGaps: true,
-      minimizeDays: false,
-      preferLater: false,
-      preferEarlier: false,
-    },
     considerSeats: true,
     considerRMP: false,
   });
+  
+  // New state for AI class input
+  const [desiredClasses, setDesiredClasses] = useState<string>("");
+  
+  // State for tracking AI schedule generation
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  
+  // State for selected courses in AI generator
+  const [selectedCourses, setSelectedCourses] = useState<{id: string, code: string, title: string}[]>([]);
+  const [courseSearchTerm, setCourseSearchTerm] = useState<string>("");
+  const [searchResults, setSearchResults] = useState<{id: string, code: string, title: string}[]>([]);
+  const [isSearching, setIsSearching] = useState<boolean>(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
 
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
@@ -326,6 +330,20 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     if (isPreferencesOpen) {
       // Add class to prevent scrolling on body
       document.body.style.overflow = 'hidden';
+      
+      // Pre-populate selectedCourses with existing classes from the calendar
+      const existingCourses = classes.map(cls => ({
+        id: cls.id,
+        code: cls.courseCode,
+        title: cls.title
+      }));
+      
+      // Filter out any duplicates (by id)
+      const uniqueCourses = existingCourses.filter(
+        (course, index, self) => index === self.findIndex(c => c.id === course.id)
+      );
+      
+      setSelectedCourses(uniqueCourses);
     } else {
       // Remove class when modal is closed
       document.body.style.overflow = 'unset';
@@ -335,7 +353,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isPreferencesOpen]);
+  }, [isPreferencesOpen, classes]);
 
   // Effect to set up menu portal target on component mount
   useEffect(() => {
@@ -346,6 +364,33 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
       document.body.classList.remove('react-select-body');
     };
   }, []);
+
+  // Options for credit limits
+  const creditOptions = Array.from({ length: 18 }, (_, i) => ({
+    value: i + 1,
+    label: `${i + 1} credit${i === 0 ? '' : 's'}`
+  }));
+
+  // Add function to ensure every class has a color
+  const ensureClassHasColor = (cls: ClassSession): ClassSession => {
+    if (!cls.color || cls.color.trim() === '') {
+      return {
+        ...cls,
+        color: getRandomTailwindColor()
+      };
+    }
+    return cls;
+  };
+
+  // Effect to ensure all classes have colors
+  useEffect(() => {
+    // Check if any classes are missing colors and update them
+    const allHaveColors = classes.every(cls => cls.color && cls.color.trim() !== '');
+    if (!allHaveColors) {
+      const updatedClasses = classes.map(cls => ensureClassHasColor(cls));
+      setClasses(updatedClasses);
+    }
+  }, [classes]);
 
   return (
     <div className="bg-white h-full w-full overflow-hidden flex flex-col">
@@ -390,13 +435,12 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
             </button>
             <button 
               onClick={() => setIsPreferencesOpen(!isPreferencesOpen)}
-              className="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm rounded-md border border-gray-300 flex items-center"
+              className="px-3 py-2 bg-primary-blue hover:bg-primary-blue/90 text-white text-sm rounded-md border border-primary-blue flex items-center"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              Preferences
+              AI
             </button>
           </div>
         </div>
@@ -475,7 +519,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
           >
             <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 overflow-hidden">
               <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-gray-900">Schedule Preferences</h3>
+                <h3 className="text-lg font-semibold text-gray-900">AI Schedule Generation</h3>
                 <button 
                   onClick={() => setIsPreferencesOpen(false)}
                   className="text-gray-400 hover:text-gray-500"
@@ -487,140 +531,366 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
               </div>
               
               <div className="px-6 py-4 max-h-[calc(100vh-200px)] overflow-y-auto">
-                {/* Campus Locations */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-medium text-gray-700 mb-3">Preferred Locations</h4>
-                  <div className="space-y-2">
-                    {Object.entries(preferences.locations).map(([location, isSelected]) => (
-                      <label key={location} className="flex items-center">
+                {/* Desired Classes and Credit Limits in same row */}
+                <div className="flex flex-wrap gap-4 mb-4">
+                  {/* Desired Classes */}
+                  <div className="flex-1 min-w-[250px]">
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">Classes You Want</h4>
+                    <div className="space-y-2">
+                      <div className="relative">
+                        <input
+                          type="text"
+                          value={courseSearchTerm}
+                          onChange={(e) => {
+                            setCourseSearchTerm(e.target.value);
+                            // Search with debounce
+                            const searchValue = e.target.value.trim();
+                            if (searchValue.length > 2) {
+                              setIsSearching(true);
+                              setSearchError(null);
+                              
+                              // Use the same API as CourseSelectionModal
+                              const fetchCourses = async () => {
+                                try {
+                                  // Construct URL with search parameters
+                                  let url = `${API_BASE_URL}/courses/?limit=20`;
+                                  
+                                  if (searchValue) {
+                                    url += `&search=${encodeURIComponent(searchValue)}`;
+                                  }
+                                  
+                                  const response = await fetch(url);
+                                  
+                                  if (!response.ok) {
+                                    throw new Error(`API request failed: ${response.status} ${response.statusText}`);
+                                  }
+                                  
+                                  const data = await response.json();
+                                  // Format courses to match our state structure
+                                  const formattedCourses = data.courses.map((course: any) => ({
+                                    id: course.course_code,
+                                    code: course.course_code,
+                                    title: course.title
+                                  }));
+                                  
+                                  setSearchResults(formattedCourses);
+                                } catch (err) {
+                                  console.error("Error fetching courses:", err);
+                                  setSearchError("Failed to fetch courses");
+                                  setSearchResults([]);
+                                } finally {
+                                  setIsSearching(false);
+                                }
+                              };
+                              
+                              // Debounce the API call
+                              const timeoutId = setTimeout(() => {
+                                fetchCourses();
+                              }, 300);
+                              
+                              return () => clearTimeout(timeoutId);
+                            } else {
+                              setSearchResults([]);
+                              setIsSearching(false);
+                            }
+                          }}
+                          placeholder="Search by course code or title..."
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-blue"
+                        />
+                        {courseSearchTerm.trim().length > 2 && (
+                          <div className="absolute z-10 w-full mt-1 bg-white shadow-lg rounded-md border border-gray-200 max-h-48 overflow-y-auto">
+                            {isSearching ? (
+                              <div className="flex justify-center items-center p-4">
+                                <svg className="animate-spin h-5 w-5 text-primary-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                              </div>
+                            ) : searchError ? (
+                              <div className="p-3 text-sm text-red-500 text-center">
+                                {searchError}
+                              </div>
+                            ) : searchResults.length === 0 ? (
+                              <div className="p-3 text-sm text-gray-500 text-center">
+                                No courses found matching "{courseSearchTerm}"
+                              </div>
+                            ) : (
+                              searchResults.map(course => (
+                                <div 
+                                  key={course.id}
+                                  className="px-3 py-2 hover:bg-blue-50 cursor-pointer"
+                                  onClick={() => {
+                                    if (!selectedCourses.some(c => c.id === course.id)) {
+                                      setSelectedCourses([...selectedCourses, course]);
+                                    }
+                                    setCourseSearchTerm("");
+                                    setSearchResults([]);
+                                  }}
+                                >
+                                  <div className="font-medium text-primary-blue">{course.code}</div>
+                                  <div className="text-xs text-gray-500">{course.title}</div>
+                                </div>
+                              ))
+                            )}
+                          </div>
+                        )}
+                      </div>
+                      
+                      {selectedCourses.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-2">
+                          {selectedCourses.map(course => (
+                            <div 
+                              key={course.id} 
+                              className="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm flex items-center"
+                            >
+                              <span className="mr-1">{course.code}</span>
+                              <button
+                                onClick={() => setSelectedCourses(selectedCourses.filter(c => c.id !== course.id))}
+                                className="text-blue-500 hover:text-blue-700"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                                </svg>
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      
+                      <p className="text-xs text-gray-500">
+                        The AI will prioritize these courses and fill remaining credits with suggested courses based on your requirements.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Credit Limits */}
+                  <div className="min-w-[240px]">
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">Semester Credit Limits</h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <div className="flex h-10 w-full max-w-[110px] overflow-hidden rounded-md border border-gray-300 focus-within:border-primary-blue focus-within:ring-1 focus-within:ring-primary-blue">
+                          <div className="relative flex-grow">
+                            <input
+                              type="number"
+                              value={preferences.creditLimits.min}
+                              onChange={(e) => {
+                                const value = parseInt(e.target.value) || 0;
+                                if (value <= preferences.creditLimits.max) {
+                                  setPreferences(prev => ({
+                                    ...prev,
+                                    creditLimits: {
+                                      ...prev.creditLimits,
+                                      min: value
+                                    }
+                                  }));
+                                }
+                              }}
+                              min="0"
+                              max="18"
+                              className="w-[85px] h-full pl-2 pr-12 py-2 border-none focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                            />
+                            <span className="absolute right-1 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">credits</span>
+                          </div>
+                          <div className="flex flex-col border-l border-gray-300">
+                            <button 
+                              type="button"
+                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
+                              onClick={() => {
+                                const newValue = preferences.creditLimits.min + 1;
+                                if (newValue <= preferences.creditLimits.max) {
+                                  setPreferences(prev => ({
+                                    ...prev,
+                                    creditLimits: {
+                                      ...prev.creditLimits,
+                                      min: newValue
+                                    }
+                                  }));
+                                }
+                              }}
+                            >
+                              <span className="text-sm font-medium leading-none">+</span>
+                            </button>
+                            <div className="border-t border-gray-300"></div>
+                            <button 
+                              type="button"
+                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
+                              onClick={() => {
+                                const newValue = preferences.creditLimits.min - 1;
+                                if (newValue >= 0) {
+                                  setPreferences(prev => ({
+                                    ...prev,
+                                    creditLimits: {
+                                      ...prev.creditLimits,
+                                      min: newValue
+                                    }
+                                  }));
+                                }
+                              }}
+                            >
+                              <span className="text-sm font-medium leading-none">−</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className="text-sm text-gray-600 mt-1">Minimum</div>
+                      </div>
+                      <div>
+                        <div className="flex h-10 w-full max-w-[110px] overflow-hidden rounded-md border border-gray-300 focus-within:border-primary-blue focus-within:ring-1 focus-within:ring-primary-blue">
+                          <div className="relative flex-grow">
+                            <input
+                              type="number"
+                              value={preferences.creditLimits.max}
+                              onChange={(e) => {
+                                const value = parseInt(e.target.value) || 0;
+                                if (value >= preferences.creditLimits.min) {
+                                  setPreferences(prev => ({
+                                    ...prev,
+                                    creditLimits: {
+                                      ...prev.creditLimits,
+                                      max: value
+                                    }
+                                  }));
+                                }
+                              }}
+                              min={preferences.creditLimits.min}
+                              max="21"
+                              className="w-[85px] h-full pl-2 pr-12 py-2 border-none focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                            />
+                            <span className="absolute right-1 top-1/2 transform -translate-y-1/2 text-sm text-gray-500">credits</span>
+                          </div>
+                          <div className="flex flex-col border-l border-gray-300">
+                            <button 
+                              type="button"
+                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
+                              onClick={() => {
+                                const newValue = preferences.creditLimits.max + 1;
+                                if (newValue <= 21) {
+                                  setPreferences(prev => ({
+                                    ...prev,
+                                    creditLimits: {
+                                      ...prev.creditLimits,
+                                      max: newValue
+                                    }
+                                  }));
+                                }
+                              }}
+                            >
+                              <span className="text-sm font-medium leading-none">+</span>
+                            </button>
+                            <div className="border-t border-gray-300"></div>
+                            <button 
+                              type="button"
+                              className="h-5 px-2 hover:bg-gray-100 active:bg-gray-200 text-gray-600 focus:outline-none flex items-center justify-center"
+                              onClick={() => {
+                                const newValue = preferences.creditLimits.max - 1;
+                                if (newValue >= preferences.creditLimits.min) {
+                                  setPreferences(prev => ({
+                                    ...prev,
+                                    creditLimits: {
+                                      ...prev.creditLimits,
+                                      max: newValue
+                                    }
+                                  }));
+                                }
+                              }}
+                            >
+                              <span className="text-sm font-medium leading-none">−</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className="text-sm text-gray-600 mt-1">Maximum</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Preferred Locations and Additional Considerations in same row */}
+                <div className="flex flex-wrap gap-4">
+                  {/* Campus Locations */}
+                  <div className="min-w-[250px] flex-1">
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">Preferred Locations</h4>
+                    <div className="space-y-1">
+                      {Object.entries(preferences.locations).map(([location, isSelected]) => (
+                        <label key={location} className="flex items-center">
+                          <input
+                            type="checkbox"
+                            checked={isSelected}
+                            onChange={() => setPreferences(prev => ({
+                              ...prev,
+                              locations: {
+                                ...prev.locations,
+                                [location]: !isSelected
+                              }
+                            }))}
+                            className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                          />
+                          <span className="ml-2 text-sm text-gray-700 capitalize">
+                            {location === 'fairfax' ? 'Fairfax Campus' :
+                             location === 'arlington' ? 'Arlington Campus' : 'Virtual'}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Additional Considerations */}
+                  <div className="min-w-[250px]">
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">Additional Considerations</h4>
+                    <div className="space-y-1">
+                      <label className="flex items-center">
                         <input
                           type="checkbox"
-                          checked={isSelected}
+                          checked={preferences.considerSeats}
                           onChange={() => setPreferences(prev => ({
                             ...prev,
-                            locations: {
-                              ...prev.locations,
-                              [location]: !isSelected
-                            }
+                            considerSeats: !prev.considerSeats
                           }))}
                           className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
                         />
-                        <span className="ml-2 text-sm text-gray-700 capitalize">
-                          {location === 'fairfax' ? 'Fairfax Campus' :
-                           location === 'arlington' ? 'Arlington Campus' : 'Virtual'}
-                        </span>
+                        <span className="ml-2 text-sm text-gray-700">Consider seat availability</span>
                       </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Credit Limits */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-medium text-gray-700 mb-3">Semester Credit Limits</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm text-gray-600 mb-1">Minimum Credits</label>
-                      <input
-                        type="number"
-                        value={preferences.creditLimits.min}
-                        onChange={(e) => setPreferences(prev => ({
-                          ...prev,
-                          creditLimits: {
-                            ...prev.creditLimits,
-                            min: parseInt(e.target.value) || 0
-                          }
-                        }))}
-                        min="0"
-                        max={preferences.creditLimits.max}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-blue focus:border-primary-blue"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm text-gray-600 mb-1">Maximum Credits</label>
-                      <input
-                        type="number"
-                        value={preferences.creditLimits.max}
-                        onChange={(e) => setPreferences(prev => ({
-                          ...prev,
-                          creditLimits: {
-                            ...prev.creditLimits,
-                            max: parseInt(e.target.value) || 0
-                          }
-                        }))}
-                        min={preferences.creditLimits.min}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-blue focus:border-primary-blue"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Scheduling Preferences */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-medium text-gray-700 mb-3">Scheduling Preferences</h4>
-                  <div className="space-y-2">
-                    {Object.entries(preferences.scheduling).map(([pref, isSelected]) => (
-                      <label key={pref} className="flex items-center">
+                      <label className="flex items-center">
                         <input
                           type="checkbox"
-                          checked={isSelected}
+                          checked={preferences.considerRMP}
                           onChange={() => setPreferences(prev => ({
                             ...prev,
-                            scheduling: {
-                              ...prev.scheduling,
-                              [pref]: !isSelected
-                            }
+                            considerRMP: !prev.considerRMP
                           }))}
                           className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
                         />
-                        <span className="ml-2 text-sm text-gray-700">
-                          {pref === 'minimizeGaps' ? 'Minimize gaps between classes' :
-                           pref === 'minimizeDays' ? 'Minimize days on campus' :
-                           pref === 'preferLater' ? 'Prefer later classes' :
-                           'Prefer earlier classes'}
-                        </span>
+                        <span className="ml-2 text-sm text-gray-700">Consider RMP professor ratings</span>
                       </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Additional Considerations */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-medium text-gray-700 mb-3">Additional Considerations</h4>
-                  <div className="space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={preferences.considerSeats}
-                        onChange={() => setPreferences(prev => ({
-                          ...prev,
-                          considerSeats: !prev.considerSeats
-                        }))}
-                        className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Consider seat availability</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={preferences.considerRMP}
-                        onChange={() => setPreferences(prev => ({
-                          ...prev,
-                          considerRMP: !prev.considerRMP
-                        }))}
-                        className="rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Consider RMP professor ratings</span>
-                    </label>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end">
+              <div className="px-6 py-3 bg-gray-50 border-t border-gray-200 flex justify-end">
                 <button
-                  onClick={() => setIsPreferencesOpen(false)}
-                  className="px-4 py-2 bg-primary-blue text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-blue"
+                  onClick={() => {
+                    setIsGenerating(true);
+                    // Simulate schedule generation
+                    setTimeout(() => {
+                      setIsGenerating(false);
+                      setIsPreferencesOpen(false);
+                      // TODO: This is where you would actually generate schedules with AI
+                      // and display the results
+                    }, 2000);
+                  }}
+                  disabled={isGenerating}
+                  className={`px-4 py-2 ${isGenerating ? 'bg-gray-400' : 'bg-primary-blue hover:bg-blue-600'} text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-blue flex items-center`}
                 >
-                  Save Preferences
+                  {isGenerating ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Generating...
+                    </>
+                  ) : (
+                    "Generate Schedules"
+                  )}
                 </button>
               </div>
             </div>
@@ -694,6 +964,9 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
                 // Only show classes for available days
                 if (!availableDays[cls.day]) return null;
                 
+                // Ensure class has a color
+                const classWithColor = ensureClassHasColor(cls);
+                
                 // Count how many days are available before this class's day
                 // to adjust the position in the grid
                 const visibleDayIndex = availableDays
@@ -704,7 +977,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
                 return (
                   <div
                     key={cls.id}
-                    className={`absolute p-2 rounded-md border shadow-sm hover:shadow-md transition-shadow overflow-y-auto max-h-full hover:z-30 group ${cls.color}`}
+                    className={`absolute p-2 rounded-md border shadow-sm hover:shadow-md transition-shadow overflow-y-auto max-h-full hover:z-30 group ${classWithColor.color}`}
                     style={{
                       left: `${(visibleDayIndex * (100 / availableDays.filter(Boolean).length))}%`,
                       width: `calc(${100 / availableDays.filter(Boolean).length}% - 8px)`,

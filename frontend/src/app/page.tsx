@@ -85,13 +85,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center gap-5 mt-6">
             <button
               onClick={handleSearch}
-              className="px-10 py-3 text-lg font-medium rounded-full bg-primary-blue text-white hover:bg-blue-700 shadow-lg transition-all"
+              className="px-10 py-3 text-lg font-medium rounded-full bg-primary-blue text-white hover:bg-primary-blue/90 shadow-lg transition-all"
             >
               Search
             </button>
             <button
               onClick={handlePlan}
-              className="px-10 py-3 text-lg font-medium rounded-full bg-primary-green text-white hover:bg-green-700 shadow-lg transition-all"
+              className="px-10 py-3 text-lg font-medium rounded-full bg-primary-green text-white hover:bg-primary-green/90 shadow-lg transition-all"
             >
               Plan
             </button>
@@ -103,7 +103,7 @@ export default function Home() {
       <div className="absolute bottom-0"> 
         <button
           onClick={toggleHelpModal}
-          className="text-primary-blue hover:text-blue-700 text-md font-medium"
+          className="text-primary-blue hover:text-primary-blue/80 text-md font-medium"
         >
           How to use 4yrplan
         </button>
@@ -137,7 +137,7 @@ export default function Home() {
                   <p>Use the <strong>Plan</strong> feature to build your academic plans. You can plan out for upcoming semesters or the full 4 years. Drag and drop courses from the degree requirements sidebar into your plan.</p>                  
                 </div>
 
-                <div className="bg-blue-50 p-4 rounded-lg mt-6">
+                <div className="bg-primary-blue/5 p-4 rounded-lg mt-6">
                   <p>If you have questions or feedback, please send an email to <a href="mailto:hi@4yrplan.com" className="text-primary-blue hover:underline">hi@4yrplan.com</a> :)</p>
                 </div>
               </div>

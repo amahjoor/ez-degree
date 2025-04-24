@@ -47,7 +47,7 @@ export default function SearchPage() {
       {(isApiAvailable && !isLoading) && (
         <div className="flex flex-col h-full overflow-hidden">
           {/* View Toggle - similar styling to plan page */}
-          <div className="bg-blue-50 border-b border-blue-100 flex-shrink-0">
+          <div className="bg-primary-blue/5 border-b border-primary-blue/10 flex-shrink-0">
             <div className="flex">
               <button
                 className={`px-5 py-3 font-medium ${

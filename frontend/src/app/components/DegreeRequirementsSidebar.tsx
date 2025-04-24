@@ -46,6 +46,7 @@ interface Requirement {
 interface DegreeRequirementsSidebarProps {
   isApiAvailable: boolean;
   onCourseSelect?: (courseCode: string, title: string, credits: number) => void;
+  onApiConnectionRetry?: () => void;
 }
 
 // Define option type for react-select
@@ -221,7 +222,7 @@ const CourseOverlay: React.FC<{
         ) : courseData ? (
           <div>
             {/* Header with course code and grade */}
-            <div className="flex justify-between items-center bg-blue-50 p-4 border-b border-blue-100">
+            <div className="flex justify-between items-center bg-primary-blue/5 p-4 border-b border-primary-blue/10">
               <div>
                 <h3 className="font-bold text-lg text-gray-900">{courseData.course_code}</h3>
                 <p className="text-gray-600 text-sm">{courseData.credits} credits</p>
@@ -708,7 +709,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
                 <>
                   {/* Summary info */}
                   {requirements && (
-                    <div className="px-4 py-3 bg-blue-50 border-b border-blue-100">
+                    <div className="px-4 py-3 bg-primary-blue/5 border-b border-primary-blue/10">
                       <p className="text-sm text-gray-700">Total Credits Required: <span className="font-semibold text-primary-blue">{requirements.total_credits}</span></p>
                     </div>
                   )}

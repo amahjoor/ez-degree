@@ -7,95 +7,13 @@
     /* Font configuration */
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
-    
-    /* Primary colors */
-    --color-primary-blue: #4285F4;
-    --color-primary-red: #EA4335;
-    --color-primary-yellow: #FBBC05;
-    --color-primary-green: #34A853;
-    
-    /* Secondary colors */
-    --color-purple: #8F44AD;
-    --color-orange: #F39C12;
-    --color-teal: #16A085;
-    --color-bright-red: #E74C3C;
-    --color-gray: #7F8C8D;
-    
-    /* Blue shades */
-    --color-blue-50: #eff6ff;
-    --color-blue-100: #dbeafe;
-    --color-blue-200: #bfdbfe;
-    --color-blue-500: #3b82f6;
-    --color-blue-600: #2563eb;
-    --color-blue-700: #1d4ed8;
-    --color-blue-800: #1e40af;
-    
-    /* Gray shades */
-    --color-gray-50: #f9fafb;
-    --color-gray-100: #f3f4f6;
-    --color-gray-200: #e5e7eb;
-    --color-gray-300: #d1d5db;
-    --color-gray-400: #9ca3af;
-    --color-gray-500: #6b7280;
-    --color-gray-600: #4b5563;
-    --color-gray-700: #374151;
-    --color-gray-800: #1f2937;
-    
-    /* Red shades */
-    --color-red-100: #fee2e2;
-    --color-red-400: #f87171;
-    --color-red-500: #ef4444;
-    --color-red-600: #dc2626;
-    --color-red-700: #b91c1c;
-    
-    /* Green shades */
-    --color-green-500: #22c55e;
-    --color-green-600: #16a34a;
-    --color-green-700: #15803d;
-    
-    /* Yellow shades */
-    --color-yellow-50: #fefce8;
-    --color-yellow-100: #fef9c3;
-    --color-yellow-200: #fef08a;
-    --color-yellow-500: #eab308;
-    
-    /* White and black */
-    --color-white: #ffffff;
-    --color-black: #000000;
-    
-    /* Background and foreground */
-    --background: var(--color-white);
-    --foreground: #171717;
   }
   
-  /* Dark mode preferences */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
-    }
-  }
+  /* Dark mode preferences will be handled by Tailwind now */
   
   body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    @apply text-foreground bg-background font-sans;
   }
 }
 
-/* Custom utility classes for compatibility */
-.bg-primary-blue { background-color: var(--color-primary-blue) !important; }
-.text-primary-blue { color: var(--color-primary-blue) !important; }
-.border-primary-blue { border-color: var(--color-primary-blue) !important; }
-
-.bg-primary-red { background-color: var(--color-primary-red) !important; }
-.text-primary-red { color: var(--color-primary-red) !important; }
-.border-primary-red { border-color: var(--color-primary-red) !important; }
-
-.bg-primary-green { background-color: var(--color-primary-green) !important; }
-.text-primary-green { color: var(--color-primary-green) !important; }
-.border-primary-green { border-color: var(--color-primary-green) !important; }
-
-.bg-primary-yellow { background-color: var(--color-primary-yellow) !important; }
-.text-primary-yellow { color: var(--color-primary-yellow) !important; }
-.border-primary-yellow { border-color: var(--color-primary-yellow) !important; }
+/* Custom utility classes are now handled by Tailwind's theme configuration */

@@ -234,7 +234,7 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
           <form onSubmit={handleSearchSubmit} className="flex w-full md:mr-4">
             <input
               type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
               placeholder={mode === 'courses' ? "Search for courses..." : "Search professors by name or department..."}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -262,7 +262,7 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
                     <input
                       ref={subjectSearchInputRef}
                       type="text"
-                      className="w-full px-2 py-1 text-sm border border-gray-300 rounded"
+                      className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-primary-blue focus:border-primary-blue"
                       placeholder="Search subjects..."
                       value={subjectSearchTerm}
                       onChange={(e) => setSubjectSearchTerm(e.target.value)}
@@ -297,7 +297,7 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
                         >
                           <input
                             type="checkbox"
-                            className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                            className="h-4 w-4 text-primary-blue focus:ring-primary-blue border-gray-300 rounded"
                             checked={selectedSubjects.includes(subject.id)}
                             onChange={() => {}}
                             onClick={(e) => e.stopPropagation()}
@@ -316,7 +316,7 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
                     <div className="px-3 py-2 border-t">
                       <button
                         type="button"
-                        className="text-xs text-blue-600 hover:text-blue-800"
+                        className="text-xs text-primary-blue hover:text-blue-700"
                         onClick={() => setSelectedSubjects([])}
                       >
                         Clear All Filters
@@ -339,12 +339,12 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
             return (
               <span 
                 key={subjectId}
-                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
+                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-primary-blue"
               >
                 {subject?.id || subjectId}
                 <button 
                   type="button" 
-                  className="ml-1.5 h-4 w-4 rounded-full inline-flex items-center justify-center text-blue-400 hover:text-blue-600 focus:outline-none"
+                  className="ml-1.5 h-4 w-4 rounded-full inline-flex items-center justify-center text-primary-blue hover:text-blue-600 focus:outline-none"
                   onClick={() => setSelectedSubjects(prev => prev.filter(id => id !== subjectId))}
                 >
                   <span className="sr-only">Remove filter for {subjectId}</span>
@@ -357,7 +357,7 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
           })}
           <button 
             onClick={() => setSelectedSubjects([])}
-            className="text-xs text-blue-600 hover:text-blue-800 hover:underline"
+            className="text-xs text-primary-blue hover:text-blue-700 hover:underline"
           >
             Clear all
           </button>
@@ -420,7 +420,7 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
                     ) : (
                       courses.map((course) => (
                         <tr key={course.course_code} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600 font-mono">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-primary-blue font-mono">
                             <Link href={`/courses/${encodeURIComponent(course.course_code)}`}>
                               {course.course_code}
                             </Link>
@@ -454,7 +454,7 @@ const SharedSearchTable: React.FC<SharedSearchTableProps> = ({
                           <td className="px-6 py-4 whitespace-nowrap">
                             <Link 
                               href={`/professors/${professor.url?.split('/').pop() || ''}`}
-                              className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                              className="text-sm font-medium text-primary-blue hover:text-blue-700"
                             >
                               {professor.firstName} {professor.lastName}
                             </Link>

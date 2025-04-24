@@ -100,7 +100,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
               onClick={() => onPageChange(page as number)}
               className={`relative inline-flex items-center px-4 py-2 border ${
                 currentPage === page
-                  ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
+                  ? 'z-10 bg-primary-blue/5 border-primary-blue text-primary-blue'
                   : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
               } text-sm font-medium`}
             >
@@ -108,7 +108,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
             </button>
           )
         ))}
-
+        
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
