@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import SemesterPlanner, { SemesterPlannerHandle } from "../components/FourYearPlanner";
-import DegreeRequirementsSidebar from "../components/DegreeRequirementsSidebar";
+import DegreeRequirementsSidebar from "../components/sidebar/DegreeRequirementsSidebar";
 import WeeklyCalendar from "../components/SemesterCalendar";
 import { SkeletonCard } from '../components/ui';
 
