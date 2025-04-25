@@ -22,12 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  
+
   return (
     <html lang="en">
       <head>
         <title>4yrplan</title>
-        <meta name="description" content="A tool to help GMU students navigate degree requirements and plan their courses" />
+        <meta
+          name="description"
+          content="A tool to help GMU students navigate degree requirements and plan their courses"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 font-sans flex flex-col min-h-screen`}
@@ -35,12 +39,16 @@ export default function RootLayout({
         <nav className="bg-primary-blue text-white shadow-md">
           <div className="container mx-auto px-4 py-3 flex justify-between items-center">
             <div className="flex items-center space-x-12">
-              <Link href="/" className="font-bold text-xl hover:text-gray-200 transition-colors">
+              <Link
+                href="/"
+                className="font-bold text-xl hover:text-gray-200 transition-colors"
+              >
                 4yrplan
               </Link>
+
               <div className="flex space-x-8">
-                <Link 
-                  href="/search" 
+                <Link
+                  href="/search"
                   className={`font-medium text-lg hover:text-gray-200 transition-colors relative ${
                     pathname.startsWith('/search') ? 'font-bold' : ''
                   }`}
@@ -50,8 +58,9 @@ export default function RootLayout({
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
                   )}
                 </Link>
-                <Link 
-                  href="/plan" 
+
+                <Link
+                  href="/plan"
                   className={`font-medium text-lg hover:text-gray-200 transition-colors relative ${
                     pathname.startsWith('/plan') ? 'font-bold' : ''
                   }`}
@@ -65,6 +74,7 @@ export default function RootLayout({
             </div>
           </div>
         </nav>
+
         <main className="flex-grow">
           {children}
         </main>

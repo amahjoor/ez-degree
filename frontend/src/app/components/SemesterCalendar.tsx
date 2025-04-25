@@ -1,10 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { forwardRef, useImperativeHandle, useState, useEffect } from 'react';
 import Select from 'react-select';
 import CourseSelectionModal from './CourseSelectionModal';
 import AIScheduleGenerator from './ai/AIScheduleGenerator';
 import { Course } from '@/types/course';
+
+export interface WeeklyCalendarHandle {
+  /** Append one or more ClassSession objects into the calendar */
+  addSessions: (sessions: ClassSession[]) => void;
+}
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -23,7 +28,7 @@ interface ClassSession {
 }
 
 interface WeeklyCalendarProps {
-  onCourseSelect?: (courseCode: string, title: string, credits: number) => void;
+  // no onCourseSelect
 }
 
 interface SchedulePreferences {
@@ -56,7 +61,8 @@ const getRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
+const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
+  (props, ref) => {
   const [classes, setClasses] = useState<ClassSession[]>([
     // Example classes with corrected positioning
     {
@@ -84,6 +90,12 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
       credits: 4
     }
   ]);
+
+  useImperativeHandle(ref, () => ({
+    addSessions: (newSessions: ClassSession[]) => {
+      setClasses(prev => [...prev, ...newSessions]);
+    }
+  }), []);
 
   // State declarations
   const [isAIGeneratorOpen, setIsAIGeneratorOpen] = useState<boolean>(false);
@@ -634,6 +646,6 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
       />
     </div>
   );
-};
+});
 
 export default WeeklyCalendar; 
