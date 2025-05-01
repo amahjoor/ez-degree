@@ -1,0 +1,104 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "BENG 413",
+        "courseName": "Molecular Engineering Laboratory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C or 213XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 415",
+        "courseName": "Biomanufacturing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BENG 240C, 240XS, 341C or 341XS) or ((BIOL 213C or 213XS) and (CHEM 271C, 271XS, 211C or 211XS))).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 417",
+        "courseName": "Bioengineering World Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 420",
+        "courseName": "Biomedical Data Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 112C or 112XS) and (BENG 330C or 330XS) and (STAT 350C, 350XS, 360C or 360XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 421",
+        "courseName": "Cell and Tissue Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 240C or 240XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 426",
+        "courseName": "Neural Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BENG 370C or 370XS) and (BENG 371C or 371XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 430",
+        "courseName": "Continuum Biomechanics and Biotransport II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 230C or 230XS) and (BENG 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 434",
+        "courseName": "Computational Modelling of Neurons and Networks",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 327C or 327XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 435",
+        "courseName": "Multi-scale Modeling and Simulation in Biomedicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 230C or 230XS) and (BENG 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 437",
+        "courseName": "Medical Image Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 320C or 320XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 438",
+        "courseName": "Advanced Biomedical Imaging",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 360C or 360XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 440",
+        "courseName": "Advanced Biomaterials and Biomimetic Devices for Nanomedicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 310C or 310XS) and (BENG 240C, 240XS, 341C or 341XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 470",
+        "courseName": "Bioinstrumentation and Devices II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 487",
+        "courseName": "Neuroinformatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: BENG 350C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "BENG 492",
+        "courseName": "Senior Advanced Design Project I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ENGH 302C, 302XS, HNRS 110C or 110XS) and (BENG 320C or 320XS) and (BENG 370C or 370XS) and (BENG 330C or 330XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 493",
+        "courseName": "RS: Senior Advanced Design Project II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 492C or 492XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 499",
+        "courseName": "Special Topics in Bioengineering",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

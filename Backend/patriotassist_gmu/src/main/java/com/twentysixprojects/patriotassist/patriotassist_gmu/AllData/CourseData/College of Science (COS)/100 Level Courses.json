@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "COS 100",
+        "courseName": "Introduction to Science as Profession",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 108",
+        "courseName": "College of Science Transitions",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 120",
+        "courseName": "Introduction to Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 150",
+        "courseName": "Women Leaders in STEM",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

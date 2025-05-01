@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Virginia Practice",
+  "CourseSubject": "Law",
+  "CourseNumber": "334",
+  "CourseSection": "001",
+  "CreditHours": "3",
+  "CRN": "70121",
+  "Term": "Fall 2025",
+  "Instructor": "Davis, Michael (Primary)",
+  "MeetingDays": "Monday,Wednesday",
+  "MeetingTimes": "01:50 PM - 03:15 PM",
+  "Campus": "Arlington",
+  "Seats": "25 of 25 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 17:04:13"
+}

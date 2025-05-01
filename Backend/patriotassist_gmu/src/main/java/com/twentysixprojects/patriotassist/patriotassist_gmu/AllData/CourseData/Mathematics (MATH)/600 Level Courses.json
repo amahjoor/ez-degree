@@ -1,0 +1,272 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "MATH 600",
+        "courseName": "Special Topics in Mathematics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 601",
+        "courseName": "Analysis I for Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 602",
+        "courseName": "Analysis II for Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 604",
+        "courseName": "Geometry for Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 605",
+        "courseName": "Discrete/Finite Mathematics for Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 607",
+        "courseName": "Algebraic Structure for Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 608",
+        "courseName": "Problem Solving in Mathematics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 610",
+        "courseName": "Number Systems and Number Theory for K-8 Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 611",
+        "courseName": "Geometry and Measurement for K-8 Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 612",
+        "courseName": "Probability and Statistics for K-8 Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 613",
+        "courseName": "Algebra and Functions for K-8 Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 614",
+        "courseName": "Rational Numbers and Proportional Reasoning for K-8 Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 619",
+        "courseName": "Topics in Mathematical Logic",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 621",
+        "courseName": "Algebra I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 624",
+        "courseName": "Euclidean Geometry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 625",
+        "courseName": "Numerical Linear Algebra",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 629",
+        "courseName": "Topics in Algebra",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 631",
+        "courseName": "Topology I: Topology of Metric Spaces",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 639",
+        "courseName": "Topics in Geometry and Topology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 641",
+        "courseName": "Combinatorics and Graph Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 644",
+        "courseName": "Convex and Discrete Geometry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 649",
+        "courseName": "Topics in Combinatorics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 653",
+        "courseName": "Construction and Evaluation of Actuarial Models I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 654",
+        "courseName": "Construction and Evaluation of Actuarial Models II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 655",
+        "courseName": "Pension Valuation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 661",
+        "courseName": "Complex Analysis I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 662",
+        "courseName": "Mathematics of Machine Learning and Industrial Applications I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 663",
+        "courseName": "Mathematics of Machine Learning and Industrial Applications II",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (MATH 662*B- or 662*XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 664",
+        "courseName": "Linear Algebra with Data Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 665",
+        "courseName": "Mathematics of Data Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 664B- or 664XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 671",
+        "courseName": "Fourier Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 673",
+        "courseName": "Dynamical Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 674",
+        "courseName": "Stochastic Differential Equations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 675",
+        "courseName": "Linear Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 677",
+        "courseName": "Ordinary Differential Equations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 678",
+        "courseName": "Partial Differential Equations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 679",
+        "courseName": "Topics in Analysis and Potential Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 680",
+        "courseName": "Industrial Mathematics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 683",
+        "courseName": "Modern Optimization Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 685",
+        "courseName": "Numerical Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 686",
+        "courseName": "Numerical Solutions of Differential Equations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 687",
+        "courseName": "Variational Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 689",
+        "courseName": "Topics in Applied and Computational Mathematics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 690",
+        "courseName": "Graduate Internship",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisite: MATH 675B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MATH 697",
+        "courseName": "Independent Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

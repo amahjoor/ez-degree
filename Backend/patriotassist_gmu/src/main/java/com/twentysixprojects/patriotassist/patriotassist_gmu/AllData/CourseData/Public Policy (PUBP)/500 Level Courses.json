@@ -1,0 +1,74 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "PUBP 500",
+        "courseName": "Theory and Practice in Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 501",
+        "courseName": "Policy and Organizational Analysis",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 502",
+        "courseName": "Governance and Policy Processes",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 503",
+        "courseName": "Culture, Organization, and Technology",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 504",
+        "courseName": "Grand Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 505",
+        "courseName": "Politics and Practice of International Security Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 506",
+        "courseName": "Ethics and the Use of Force",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 533",
+        "courseName": "Topics in Public Policy Processes",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 550",
+        "courseName": "Topics in Public Policy",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 555",
+        "courseName": "Economics Math Workshop",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 556",
+        "courseName": "Writing Workshop",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 570",
+        "courseName": "Policy Writing Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,50 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "CHEM 101",
+        "courseName": "Introduction to Modern Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 102",
+        "courseName": "Chemistry for Changing Times",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 103",
+        "courseName": "Chemical Science in a Modern Society",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 104",
+        "courseName": "Chemistry for Changing Times",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 105",
+        "courseName": "Introductory Chemistry Laboratory I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 106",
+        "courseName": "Introductory Chemistry Laboratory II",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 155",
+        "courseName": "Introduction to Environmental Chemistry I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 156",
+        "courseName": "Introduction to Environmental Chemistry II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

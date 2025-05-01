@@ -1,0 +1,14 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "HE 886",
+        "courseName": "Doctoral Internship in College Teaching and Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 897",
+        "courseName": "Directed Reading in Higher Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,38 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "INFS 611",
+        "courseName": "Rapid Information Systems Prototyping",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 612",
+        "courseName": "Principles and Practices of Communication Networks",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 622",
+        "courseName": "Information Systems Analysis and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 623",
+        "courseName": "Web Search Engines and Recommender Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 640",
+        "courseName": "Introduction to Electronic Commerce",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 697",
+        "courseName": "Topics in Information Systems",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

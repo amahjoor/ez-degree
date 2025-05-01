@@ -1,0 +1,20 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "PUAD 821",
+        "courseName": "Doctoral Seminar in Theories of Organization and Bureaucracy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 840",
+        "courseName": "Research Seminar in Policy Governance I",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 841",
+        "courseName": "Research Seminar in Policy Governance II",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

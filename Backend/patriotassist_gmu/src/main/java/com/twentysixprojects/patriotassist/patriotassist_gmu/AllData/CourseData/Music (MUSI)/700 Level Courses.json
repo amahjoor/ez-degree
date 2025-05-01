@@ -1,0 +1,122 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MUSI 710",
+        "courseName": "Advanced Topics in Music Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 712",
+        "courseName": "Composition for Conductors and Performers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 720",
+        "courseName": "Advanced Topics in Applied Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 721",
+        "courseName": "Applied Music",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 722",
+        "courseName": "Applied Music in Keyboard",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 723",
+        "courseName": "Applied Music in Voice",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 724",
+        "courseName": "Applied Music in Woodwind",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 725",
+        "courseName": "Applied Music in Brass",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 726",
+        "courseName": "Applied Music in String",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 727",
+        "courseName": "Applied Music in Percussion",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 728",
+        "courseName": "Applied Music in Composition",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 729",
+        "courseName": "Applied Music in Conducting",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 730",
+        "courseName": "Advanced Topics in Music History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 760",
+        "courseName": "Advanced Topics in Music Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 770",
+        "courseName": "Advanced Topics in Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 777",
+        "courseName": "Music and Consciousness 2",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 780",
+        "courseName": "Doctoral Research Methods in Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 790",
+        "courseName": "Graduate Recital",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 796",
+        "courseName": "Directed Reading/Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

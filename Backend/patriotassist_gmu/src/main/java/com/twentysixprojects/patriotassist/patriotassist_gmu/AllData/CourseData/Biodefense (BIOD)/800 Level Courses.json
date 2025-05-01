@@ -1,0 +1,20 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "BIOD 810",
+        "courseName": "Advanced Seminar in Biodefense",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 890",
+        "courseName": "Doctoral Supervised Internship",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 899",
+        "courseName": "Directed Research in Biodefense",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

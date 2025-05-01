@@ -1,0 +1,62 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "TECM 601",
+        "courseName": "Business Models",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 603",
+        "courseName": "IT Leadership and the Global CIO",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 611",
+        "courseName": "Leadership and Change Management",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 614",
+        "courseName": "Financial and Cost Accounting",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 620",
+        "courseName": "Economics of Global Technology Management",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 635",
+        "courseName": "Decision Models for Technology Management",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 641",
+        "courseName": "Negotiation and Conflict Management",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 643",
+        "courseName": "Managerial Finance",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 696",
+        "courseName": "Directed Studies in Technical Management",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 697",
+        "courseName": "Special Topics in Technology Management",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

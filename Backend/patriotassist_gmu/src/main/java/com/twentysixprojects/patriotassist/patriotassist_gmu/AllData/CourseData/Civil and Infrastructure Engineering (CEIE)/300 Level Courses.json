@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CEIE 301",
+        "courseName": "Engineering and Economic Models in Civil Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 344C, 344XS, L344, 260C or 260XS) and (ENGL 302C, ENGH 302C, 302XS, ENGL L302, ENGH L302, HNRS 353C, 360C or 360XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 310",
+        "courseName": "Mechanics of Materials",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGR 210C, CEIE 210C, 210XS, ME 211C or 211XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 311",
+        "courseName": "Structural Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGR 310C, L310, CEIE 310C, L310 or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 331",
+        "courseName": "Soil Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGR 210C, CEIE 210C or 210XS) and (CEIE 230C, 240C or 240XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 332",
+        "courseName": "Soil Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGR 210C, CEIE 210C or 210XS) and (CEIE 230C, 240C or 240XS) and (CEIE 333*C).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 333",
+        "courseName": "Soil Mechanics Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (ENGR 210C, CEIE 210C or 210XS) and (CEIE 230C, 240C or 240XS) and (CEIE 332*C).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 340",
+        "courseName": "Water Resource Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 230C, U230, 240C, 240XS or U240).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 355",
+        "courseName": "Environmental Engineering and Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 211C, U211, 211XS, 251C, U251, 271C or 271XS) and (CEIE 230C, U230, 240C, U240 or 240XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 360",
+        "courseName": "Introduction to Transportation Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 290C, U290, 203C, 203XS or U203) and (ENGR 210C, U210, CEIE 210C, 210XS or U210).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 370",
+        "courseName": "Construction Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CEIE 290C, 203C, 203XS or U290.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 395",
+        "courseName": "Mentored Research in Civil and Environmental Engineering",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,26 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "AII 600",
+        "courseName": "Foundations and Practice of Machine Learning for Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AII 601",
+        "courseName": "Planning and Decision Making for Intelligent Agents",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AII 602",
+        "courseName": "Foundations and Practice of Deep Learning for Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: AII 600B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "AII 603",
+        "courseName": "Engineering Artificial Intelligence Systems and Pipelines",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: AII 602B-.\nB- Requires minimum grade of B-."
+    }
+]}

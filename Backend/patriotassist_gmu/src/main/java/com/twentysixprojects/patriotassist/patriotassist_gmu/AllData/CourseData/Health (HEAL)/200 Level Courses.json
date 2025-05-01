@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "HEAL 200",
+        "courseName": "School and Community Safety",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 220",
+        "courseName": "Dimensions of Mental Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 230",
+        "courseName": "Introduction to Health Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 250",
+        "courseName": "Introduction to School Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

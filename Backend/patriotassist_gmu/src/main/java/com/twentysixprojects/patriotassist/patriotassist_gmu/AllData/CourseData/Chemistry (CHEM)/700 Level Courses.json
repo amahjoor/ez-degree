@@ -1,0 +1,50 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "CHEM 728",
+        "courseName": "Introduction to Solid Surfaces",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 735",
+        "courseName": "Astrophysical Chemistry of Planetary Bodies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 736",
+        "courseName": "Computational Quantum Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 767",
+        "courseName": "Industrial Biochemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 790",
+        "courseName": "Graduate Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 796",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 798",
+        "courseName": "Research Project",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

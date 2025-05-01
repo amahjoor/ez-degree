@@ -1,0 +1,38 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CHEM 211",
+        "courseName": "General Chemistry I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CHEM 213*C, U213*, 213T* or 213XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 212",
+        "courseName": "General Chemistry II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 211C, 211T, U211 or 211XS) and (CHEM 213C, 213T, U213 or 213XS) and (CHEM 214*C, 214T*, U214* or 214XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 213",
+        "courseName": "General Chemistry Laboratory I",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: CHEM 211*C, U211*, 211T* or 211XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 214",
+        "courseName": "General Chemistry Laboratory II",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (CHEM 212*C, U212*, 212T* or 212XS) and (CHEM 211C, 211T, U211 or 211XS) and (CHEM 213C, 213T, U213 or 213XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 271",
+        "courseName": "General Chemistry for Engineers Lecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CHEM 272*C or 272XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 272",
+        "courseName": "General Chemistry for Engineers Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: CHEM 271*C or 271XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

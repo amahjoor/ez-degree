@@ -1,0 +1,248 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EDUC 800",
+        "courseName": "Ways of Knowing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 801",
+        "courseName": "Seminar for Teaching in Teacher Education",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 802",
+        "courseName": "Leadership Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 803",
+        "courseName": "Teacher Preparation and Professional Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 804",
+        "courseName": "Seminar for Supervision in Teacher Education",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 815",
+        "courseName": "Research Inquiries in International Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 825",
+        "courseName": "Gender, Education and Schooling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 845",
+        "courseName": "Multilingual Learners With Diverse Educational Needs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 850",
+        "courseName": "The Study of Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 851",
+        "courseName": "Research on Teacher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 852",
+        "courseName": "Technology and Teacher Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 853",
+        "courseName": "Global Perspectives in Teacher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 854",
+        "courseName": "Working in Schools: Spanning Boundaries/Expanding Roles",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 855",
+        "courseName": "Critical Perspectives in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 856",
+        "courseName": "Critical Praxis in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDUC 855B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDUC 860",
+        "courseName": "STEM Education Research and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 861",
+        "courseName": "Critical Studies in Education Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDUC 855B- and 856B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDUC 865",
+        "courseName": "Curriculum Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 870",
+        "courseName": "Education Policy: Process, Context, and Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 871",
+        "courseName": "Advanced Policy Issues in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 872",
+        "courseName": "Social Science Research and Education Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 873",
+        "courseName": "Education Policy: Comparative and International Perspectives",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 874",
+        "courseName": "The Achievement Gap",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 875",
+        "courseName": "Contemporary and Emerging Issues in Education Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 876",
+        "courseName": "Teacher Development and Education Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 877",
+        "courseName": "Teacher Policy in Historic Perspective",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 878",
+        "courseName": "Intercultural Competence: Theory and Research Application to International Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 879",
+        "courseName": "Critical Perspectives in Language and Second Language Acquisition Research for Global Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 880",
+        "courseName": "Introduction to International Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 881",
+        "courseName": "Seminar in Bilingual Education: Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 882",
+        "courseName": "Second Language Acquisition: Theory, Research, and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 883",
+        "courseName": "Seminar in Sociocultural Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 885",
+        "courseName": "History of Education in the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 886",
+        "courseName": "School Reform in the United States: Politics and Policies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 887",
+        "courseName": "Neighborhood, Community, Education Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 890",
+        "courseName": "Doctoral Internship in Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 892",
+        "courseName": "Social Justice and Equity in International Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 893",
+        "courseName": "Seminar in Educational Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 894",
+        "courseName": "Seminar in Multicultural Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 896",
+        "courseName": "Special Topics in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 897",
+        "courseName": "Independent Study for the Doctor of Philosophy in Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

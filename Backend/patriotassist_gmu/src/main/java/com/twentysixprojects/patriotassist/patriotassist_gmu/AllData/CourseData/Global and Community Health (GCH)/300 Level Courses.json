@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "GCH 300",
+        "courseName": "Introduction to Public Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 305",
+        "courseName": "Introduction to OneHealth",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 310",
+        "courseName": "Health Behavior Theories",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 325",
+        "courseName": "Stress and Well-Being",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 332",
+        "courseName": "Health and Disease",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 335",
+        "courseName": "Applied Health Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 350",
+        "courseName": "Health Promotion and Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 360",
+        "courseName": "Health and Environment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 370",
+        "courseName": "Sexuality and Human Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 376",
+        "courseName": "Health Ethics, Leadership, and Advocacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 380",
+        "courseName": "Public Health Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: GCH 300C or 300XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

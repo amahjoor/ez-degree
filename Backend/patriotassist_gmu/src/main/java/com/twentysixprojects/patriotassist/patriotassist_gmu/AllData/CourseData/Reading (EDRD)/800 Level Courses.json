@@ -1,0 +1,44 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EDRD 829",
+        "courseName": "Advanced Foundations of Literacy Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 830",
+        "courseName": "Theory, Research, and Practice in Literacy: Birth through Middle Childhood",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 831",
+        "courseName": "Theory, Research, and Practice in Literacy: Early Adolescence through Young Adulthood",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 832",
+        "courseName": "Research Methodologies and Trends in Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 833",
+        "courseName": "Literacy and Learning in the Digital Age",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 834",
+        "courseName": "Research in Reading Motivation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 800*B- or 800*XS) and (EDRS 810*B- or 810*XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRD 835",
+        "courseName": "Literacy for Multilingual Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

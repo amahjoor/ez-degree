@@ -1,0 +1,50 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SEED 667",
+        "courseName": "Advanced Methods of Teaching Social Sciences in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 567B) and (EDRD 619*B and SEED 677*B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 669",
+        "courseName": "Advanced Methods of Teaching English in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 569B) and (EDRD 619*B and SEED 677*B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 672",
+        "courseName": "Advanced Methods of Teaching Mathematics in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SEED 572B, EDRD 619*B and SEED 677*B).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 673",
+        "courseName": "Advanced Methods of Teaching Science in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SEED 573B, EDRD 619*B and SEED 677*B).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 675",
+        "courseName": "Research in Secondary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SEED 569B, 572B, 573B, 567B or 566B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 676",
+        "courseName": "Advanced Methods of Teaching Computer Science in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SEED 566B, EDRD 619*B and SEED 677*B).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 677",
+        "courseName": "Action Research Methods in Secondary Education",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: ((SEED 522B- and 540B-) and (SEED 566B-, 567B-, 569B-, 572B- or 573B-)).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SEED 678",
+        "courseName": "Action Research Seminar in Secondary Education",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (SEED 677B- and (SEED 792*B-, 793*B-, 794*B-, 795*B- or 796*B-)).\n* May be taken concurrently.\nB- Requires minimum grade of B-."
+    }
+]}

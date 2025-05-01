@@ -1,0 +1,14 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EDRD 501",
+        "courseName": "Literacy in Fine Arts, Health, and Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 515",
+        "courseName": "Language and Literacy in Global Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

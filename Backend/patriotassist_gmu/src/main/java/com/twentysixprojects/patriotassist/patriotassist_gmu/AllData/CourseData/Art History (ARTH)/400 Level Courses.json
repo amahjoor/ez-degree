@@ -1,0 +1,98 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ARTH 400",
+        "courseName": "Historiography and Methods of Research in Art History (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 420",
+        "courseName": "Advanced Studies in Ancient Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 430",
+        "courseName": "Advanced Studies in Medieval or Islamic Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 440",
+        "courseName": "RS: Advanced Studies in Renaissance and Baroque Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 460",
+        "courseName": "RS: Advanced Studies in 20th-Century European Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 471",
+        "courseName": "Advanced Studies in Art of the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 472",
+        "courseName": "RS: Advanced Studies in 20th-Century Latin American Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 474",
+        "courseName": "Advanced Studies in Contemporary Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 482",
+        "courseName": "RS: Advanced Studies in Asian Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 490",
+        "courseName": "Independent Study in Art History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 491",
+        "courseName": "Independent Study in Art History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 492",
+        "courseName": "Honors Directed Readings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 493",
+        "courseName": "Honors Directed Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 494",
+        "courseName": "The Museum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 495",
+        "courseName": "RS: Curating an Exhibit",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 499",
+        "courseName": "Advanced Studies in Art History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

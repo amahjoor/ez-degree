@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "EDEP 794",
+        "courseName": "Internship in Educational Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (EDEP 602B-, 603B-, EDRS 590B-, 620B-, 621B- and 622*B-).\n* May be taken concurrently.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDEP 796",
+        "courseName": "Scholarly Project in Educational Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (EDEP 602B-, 603B-, EDRS 590B-, 620B-, 621B- and 622B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDEP 798",
+        "courseName": "Directed Inquiry in Educational Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 799",
+        "courseName": "Thesis in Educational Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (EDEP 602B-, 603B-, EDRS 590B-, 620B-, 621B- and 622B-).\nB- Requires minimum grade of B-."
+    }
+]}

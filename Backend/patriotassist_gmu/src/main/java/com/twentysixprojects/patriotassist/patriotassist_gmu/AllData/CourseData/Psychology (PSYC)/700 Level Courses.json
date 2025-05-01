@@ -1,0 +1,134 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "PSYC 701",
+        "courseName": "Cognitive Bases of Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 702",
+        "courseName": "Biological Bases of Human Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 703",
+        "courseName": "Social Bases of Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 704",
+        "courseName": "Life-Span Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 707",
+        "courseName": "Emotional Bases of Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 730",
+        "courseName": "Practicum in Applied Psychology",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 733",
+        "courseName": "Issues in Personnel Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 734",
+        "courseName": "Seminar in Human Factors and Applied Cognition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 737",
+        "courseName": "Psychology of Human-Technology Interaction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 738",
+        "courseName": "IO Psychology and Legal Issues in Employment Discrimination",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 739",
+        "courseName": "Seminar in Industrial/Organizational Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 741",
+        "courseName": "Psychology of Work Motivation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 742",
+        "courseName": "Careers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 743",
+        "courseName": "Behavior and Performance at Work",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 754",
+        "courseName": "Multiple Regression",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PSYC 611B- or 611XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PSYC 756",
+        "courseName": "Quantitative Methods IV: Multivariate Techniques in Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 757",
+        "courseName": "Advanced Topics in Statistical Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 768",
+        "courseName": "Advanced Topics in Cognitive Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 780",
+        "courseName": "Applied Developmental Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 792",
+        "courseName": "Psychology Practicum",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 798",
+        "courseName": "Thesis Proposal",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

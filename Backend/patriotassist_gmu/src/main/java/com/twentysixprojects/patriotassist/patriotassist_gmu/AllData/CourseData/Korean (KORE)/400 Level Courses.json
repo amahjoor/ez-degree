@@ -1,0 +1,44 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "KORE 410",
+        "courseName": "Special Topics in Korean Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 440",
+        "courseName": "Special Topics in Translation of Korean",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 450",
+        "courseName": "Korean Cultural Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 455",
+        "courseName": "Korean Diasporas in a Global World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 460",
+        "courseName": "Gender and Society of Korea",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 470",
+        "courseName": "Capstone in Korean Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 490",
+        "courseName": "Internship in Korean Studies",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

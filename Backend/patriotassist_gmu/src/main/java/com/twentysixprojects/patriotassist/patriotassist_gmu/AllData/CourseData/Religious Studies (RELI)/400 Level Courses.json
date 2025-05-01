@@ -1,0 +1,44 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "RELI 403",
+        "courseName": "Scripture and Authority in Religious Traditions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 405",
+        "courseName": "Religion, Values, and Globalization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 407",
+        "courseName": "Women in Religious Traditions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 420",
+        "courseName": "Capstone Seminar in Studies of Religion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 425",
+        "courseName": "Directed Readings in Religious Studies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 426",
+        "courseName": "Religious Studies Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 490",
+        "courseName": "Comparative Study of Religions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

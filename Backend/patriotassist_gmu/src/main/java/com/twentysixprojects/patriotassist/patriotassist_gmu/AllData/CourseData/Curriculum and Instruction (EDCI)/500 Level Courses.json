@@ -1,0 +1,152 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EDCI 510",
+        "courseName": "Linguistics for PreK-12 ESOL Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRD 515B- or 515XS) and (EDUC 511B- or 511XS) and (EDUC 537B- or 537XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCI 516",
+        "courseName": "Bilingualism and Language Acquisition Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRD 515*B- or 515*XS) and (EDUC 511B- or 511XS) and (EDUC 537B- or 537XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCI 519",
+        "courseName": "Methods of Teaching Culturally and Linguistically Diverse Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDCI 510*B- or 510*XS) and (EDCI 516B- or 516XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCI 520",
+        "courseName": "Assessment of Language Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCI 519*B-, 519*XS, 560*B- or 560*XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCI 544",
+        "courseName": "Curriculum and Methods of Teaching in Elementary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 545",
+        "courseName": "Assessment and Differentiation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 552",
+        "courseName": "Mathematics Methods for the Elementary Classroom",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 553",
+        "courseName": "Science Methods for the Elementary Classroom",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 554",
+        "courseName": "Methods of Teaching Social Studies and Integrating Fine Arts in the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 555",
+        "courseName": "Literacy Teaching and Learning in Diverse Elementary Classrooms I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 556",
+        "courseName": "Literacy Teaching and Learning in Diverse Elementary Classrooms II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 557",
+        "courseName": "Integrating Technology in PreK-6",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 559",
+        "courseName": "Research and Assessment in Elementary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 560",
+        "courseName": "Methods of Teaching in Foreign/World Languages",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCI 516*B-, 516*XS, SPAN 502B- or 502XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCI 580",
+        "courseName": "Human Development and Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 581",
+        "courseName": "Understanding Culturally and Linguistically Diverse Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 582",
+        "courseName": "Foundations in Language and Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 583",
+        "courseName": "Research and Practice with Bi-Multilingual Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 584",
+        "courseName": "Linguistics for TESOL Professionals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 585",
+        "courseName": "TESOL Methodology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 586",
+        "courseName": "Assessment in English Language Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 587",
+        "courseName": "Content Literacy in English Language Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 588",
+        "courseName": "Consultation and Collaboration in Educational Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 589",
+        "courseName": "Cultural and Linguistic Inquiry in TESOL",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 597",
+        "courseName": "Special Topics in Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

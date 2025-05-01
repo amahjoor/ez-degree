@@ -1,0 +1,32 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "GAME 710",
+        "courseName": "Graduate Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 796",
+        "courseName": "Directed Reading",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 797",
+        "courseName": "Proposal Writing",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 798",
+        "courseName": "Project and Applied Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 799",
+        "courseName": "Thesis",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

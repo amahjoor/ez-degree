@@ -2,13 +2,44 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { CourseOverlayProps, CourseDetails } from './types';
+import { CourseOverlayProps, CourseDetails, SectionInfo } from './types';
+import type { ClassSession } from '../SemesterCalendar';
+import { getRandomColor } from '../SemesterCalendar';
 
+const CourseOverlay: React.FC<CourseOverlayProps> = ({
+  courseCode,
+  position,
+  onClose,
+  onAddSessions,
+}) => {
+
+<<<<<<< Updated upstream
 const CourseOverlay: React.FC<CourseOverlayProps> = ({ courseCode, onClose, position }) => {
   const [loading, setLoading] = useState(true);
   const [courseData, setCourseData] = useState<CourseDetails | null>(null);
   const [error, setError] = useState<string | null>(null);
   
+=======
+  // --- TABS ---
+  const [activeTab, setActiveTab] = useState<'summary' | 'add'>('add');
+
+  // --- COURSE SUMMARY STATES ---
+  const [loading, setLoading] = useState(false);
+  const [courseData, setCourseData] = useState<CourseDetails | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  // --- ADD-CLASS STATES ---
+  const [terms, setTerms] = useState<string[]>([]);
+  const [termsLoading, setTermsLoading] = useState(false);
+  const [termsError, setTermsError] = useState<string | null>(null);
+  const [selectedTerm, setSelectedTerm] = useState<string>('');
+
+  const [codeData, setCodeData] = useState<SectionInfo[]>([]);
+  const [codeDataLoading, setCodeDataLoading] = useState(false);
+  const [codeDataError, setCodeDataError] = useState<string | null>(null);
+
+  // Fetch course details when switching into summary
+>>>>>>> Stashed changes
   useEffect(() => {
     async function fetchCourseDetails() {
       try {
@@ -26,11 +57,93 @@ const CourseOverlay: React.FC<CourseOverlayProps> = ({ courseCode, onClose, posi
         setLoading(false);
       }
     }
+<<<<<<< Updated upstream
     
     fetchCourseDetails();
   }, [courseCode]);
   
   // Calculate total reviews and most common grade if available
+=======
+
+    setCourseData(prev =>
+      prev && ({ ...prev, mostCommonGrade: mcg, totalReviews: total })
+    );
+  }, [courseData?.professors]);
+
+  const professors = courseData?.professors ?? [];
+
+  const parseTimeToDecimal = (t: string) => {
+    // e.g. "01:30 PM" → 13.5
+    const [time, meridiem] = t.split(' ');
+    let [hh, mm] = time.split(':').map(Number);
+    if (meridiem === 'PM' && hh < 12) hh += 12;
+    if (meridiem === 'AM' && hh === 12) hh = 0;
+    return hh + mm/60;
+  };
+  
+  const dayIndexMap: Record<string,number> = {
+    Monday: 0, Tuesday: 1, Wednesday: 2,
+    Thursday: 3, Friday: 4
+  };
+
+  const fetchAndAdd = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const resp = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data`
+      + `?Term=${encodeURIComponent(selectedTerm)}`
+      + `&CourseCode=${encodeURIComponent(courseCode)}`
+      );
+      if (!resp.ok) throw new Error(resp.statusText);
+      const data = await resp.json() as Array<{
+        CourseTitle: string;
+        CourseSubject: string;
+        CourseNumber: string;
+        CourseSection: string;
+        CreditHours: string;
+        CRN: string;
+        MeetingDays: string;
+        MeetingTimes: string;
+        Campus: string;
+        Instructor: string;
+      }>;
+  
+      // flatten into ClassSession[]
+      const sessions: ClassSession[] = [];
+      data.forEach(item => {
+        const days = item.MeetingDays.split(',').map(d => d.trim());
+        const [start, end] = item.MeetingTimes.split(' - ').map(s => s.trim());
+        days.forEach(dayName => {
+          const day = dayIndexMap[dayName];
+          if (day == null) return;
+          sessions.push({
+            id: `${item.CourseNumber}-${item.CourseSection}-${day}`,
+            courseCode: `${item.CourseSubject} ${item.CourseNumber}`,
+            title: item.CourseTitle,
+            day,
+            startTime: parseTimeToDecimal(start),
+            endTime: parseTimeToDecimal(end),
+            location: item.Campus,
+            instructor: item.Instructor,
+            color: getRandomColor(),     // import or re-use your existing getRandomColor()
+            credits: Number(item.CreditHours),
+          });
+        });
+      });
+  
+      onAddSessions(sessions);
+      onClose();
+    } catch (err: any) {
+      setError(err.message || 'Failed to load course data');
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+
+  // Fetch term list on mount
+>>>>>>> Stashed changes
   useEffect(() => {
     if (courseData?.professors) {
       // Calculate most common grade
@@ -47,6 +160,7 @@ const CourseOverlay: React.FC<CourseOverlayProps> = ({ courseCode, onClose, posi
           });
         }
       });
+<<<<<<< Updated upstream
       
       let mostCommonGrade = "N/A";
       let maxCount = 0;
@@ -56,6 +170,65 @@ const CourseOverlay: React.FC<CourseOverlayProps> = ({ courseCode, onClose, posi
           mostCommonGrade = grade;
           maxCount = count;
         }
+=======
+
+    return () => { cancelled = true; };
+  }, []);
+
+
+  const handleSectionClick = (item: typeof codeData[0]) => {
+    const sessions: ClassSession[] = [];
+    // split out each meeting day, parse times:
+    const days = item.MeetingDays.split(',').map(d => d.trim());
+    const [start, end] = item.MeetingTimes.split(' - ').map(s => s.trim());
+  
+    days.forEach(dayName => {
+      const day = dayIndexMap[dayName];
+      if (day == null) return;
+      sessions.push({
+        id:      `${item.CourseNumber}-${item.CourseSection}-${day}`,
+        courseCode: `${item.CourseSubject} ${item.CourseNumber}`,
+        title:   item.CourseTitle,
+        day,
+        startTime: parseTimeToDecimal(start),
+        endTime:   parseTimeToDecimal(end),
+        location:  item.Campus,
+        instructor: item.Instructor,
+        color:     getRandomColor(),
+        credits:   Number(item.CreditHours),
+      });
+    });
+  
+    onAddSessions(sessions);
+    onClose();
+  };
+
+  // Handler for Get Data button
+  const fetchCourseCodeData = () => {
+    if (!selectedTerm) return;
+    setCodeDataLoading(true);
+    setCodeDataError(null);
+    setCodeData([]);
+
+    const url =
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
+      `?Term=${encodeURIComponent(selectedTerm)}` +
+      `&CourseCode=${encodeURIComponent(courseCode)}`;
+
+    fetch(url)
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch course-code-data');
+        return res.json(); // expecting JSON array
+      })
+      .then((data: any[]) => {
+        setCodeData(data);
+      })
+      .catch(() => {
+        setCodeDataError('Failed to load course code data');
+      })
+      .finally(() => {
+        setCodeDataLoading(false);
+>>>>>>> Stashed changes
       });
       
       setCourseData(prev => ({
@@ -224,8 +397,69 @@ const CourseOverlay: React.FC<CourseOverlayProps> = ({ courseCode, onClose, posi
           </div>
         ) : (
           <div className="p-4 text-gray-500">No course data available</div>
+<<<<<<< Updated upstream
         )}
       </div>
+=======
+        )
+      ) : (
+        // --- ADD CLASS TAB ---
+        <div className="p-4 space-y-4">
+          {termsLoading ? (
+            <p>Loading terms…</p>
+          ) : termsError ? (
+            <p className="text-red-500">{termsError}</p>
+          ) : (
+            <select
+              value={selectedTerm}
+              onChange={e => setSelectedTerm(e.target.value)}
+              className="w-full border border-gray-300 rounded px-2 py-1"
+            >
+              <option value="">Select a term</option>
+              {terms.map(term => (
+                <option key={term} value={term}>
+                  {term}
+                </option>
+              ))}
+            </select>
+          )}
+
+        <button
+          onClick={fetchCourseCodeData}
+          disabled={termsLoading}
+          className="px-4 py-2 bg-primary-blue text-white rounded"
+        >
+          {loading ? 'Adding…' : 'Add Class'}
+        </button>
+        {error && <p className="text-red-500 mt-2">{error}</p>}
+
+          {codeDataLoading && <p>Loading data…</p>}
+          {codeDataError && <p className="text-red-500">{codeDataError}</p>}
+
+          {codeData.length > 0 && (
+            <div className="max-h-48 overflow-y-auto border-t pt-2">
+              {codeData.map((row, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => handleSectionClick(row)}
+                  className="cursor-pointer py-2 px-3 hover:bg-gray-100 border-b last:border-none"
+                >
+                  <div className="font-medium text-gray-900">
+                    {`${row.CourseSubject} ${row.CourseNumber}-${row.CourseSection}`}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {row.MeetingDays} @ {row.MeetingTimes}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {row.Seats}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+>>>>>>> Stashed changes
     </div>
   );
 };

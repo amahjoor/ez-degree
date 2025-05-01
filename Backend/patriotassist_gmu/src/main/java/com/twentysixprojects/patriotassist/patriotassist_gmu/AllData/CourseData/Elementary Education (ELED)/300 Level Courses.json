@@ -1,0 +1,26 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ELED 305",
+        "courseName": "Foundations of Elementary Methods and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 357",
+        "courseName": "Integrating Technology in PreK-6",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 390",
+        "courseName": "Clinical Experience: Theory to Practice Integration I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 391",
+        "courseName": "Clinical Experience: Theory to Practice Integration II",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: ELED 390C.\nC Requires minimum grade of C."
+    }
+]}

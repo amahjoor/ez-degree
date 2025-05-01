@@ -1,0 +1,32 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ASTR 301",
+        "courseName": "Astrobiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 302",
+        "courseName": "Foundations of Cosmological Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 303",
+        "courseName": "Black Holes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 328",
+        "courseName": "Stars",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ASTR 210C or 210XS) and (PHYS 260C, 260XS or 270C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 390",
+        "courseName": "Topics in Astronomy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

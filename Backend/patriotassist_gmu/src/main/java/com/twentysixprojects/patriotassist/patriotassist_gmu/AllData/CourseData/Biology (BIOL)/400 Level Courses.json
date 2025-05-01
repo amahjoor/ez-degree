@@ -1,0 +1,386 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "BIOL 401",
+        "courseName": "Phage Discovery",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 305C, L305, 305XS, 246C or 246XS) and (BIOL 306C, L306 or 306XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 402",
+        "courseName": "Applied and Industrial Microbiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BIOL 305C, L305, 305XS, 246C, L246 or 246XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 403",
+        "courseName": "Techniques in Applied and Industrial Microbiology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 404",
+        "courseName": "Medical Microbiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 305C, L305 or 305XS) or (BIOL 246C, L246 or 246XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 405",
+        "courseName": "Microbial Genetics",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 305C, L305 or 305XS) or (BIOL 246C or U246) and (BIOL 306C, L306 or 306XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 407",
+        "courseName": "Microbial Diversity",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 305C, L305, 305XS or 246C) and (BIOL 306C, L306 or 306XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 408",
+        "courseName": "Mushrooms, Molds and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 409",
+        "courseName": "Medical Mycology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 411",
+        "courseName": "Advanced General Genetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 412",
+        "courseName": "Phage Genomics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 413",
+        "courseName": "Histotechniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 417",
+        "courseName": "Selected Topics in Molecular and Cellular Biology",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 418",
+        "courseName": "Current Topics in Microbiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 420",
+        "courseName": "Vaccines",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 305C, 305XS, 246C, 246XS, L305 or L246).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 421",
+        "courseName": "Genetics of Human Diseases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 422",
+        "courseName": "Stem Cell Biology and Regenerative Medicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 423",
+        "courseName": "Biology of Obesity and Weight Loss",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 424",
+        "courseName": "Female Reproductive Biology & Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: BIOL 213C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "BIOL 425",
+        "courseName": "Human Physiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 426",
+        "courseName": "Mechanisms of Aging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 427",
+        "courseName": "Disease Ecology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 428",
+        "courseName": "Planetary Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 429",
+        "courseName": "Biological Foundations of Pharmacology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((BIOL 124C or 124XS) and (BIOL 125C or 125XS)) or ((BIOL 430C or 430XS) and (BIOL 431C or 431XS)) or (BIOL 483C, 483XS, CHEM 463C or 463XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 430",
+        "courseName": "Advanced Human Anatomy and Physiology I",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213XS, U213 or 213C).\nXS Requires minimum grade of XS.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "BIOL 431",
+        "courseName": "Advanced Human Anatomy and Physiology II",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 430C or 430XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 432",
+        "courseName": "Clinical Applications in Human Physiology",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (((BIOL 124C or 124XS) and (BIOL 125C or 125XS)) or ((BIOL 430C or 430XS) and BIOL 431C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 433",
+        "courseName": "Selected Topics in Plant Biology",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 435",
+        "courseName": "Selected Topics in Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 437",
+        "courseName": "Ornithology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 438",
+        "courseName": "Mammalogy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 439",
+        "courseName": "Herpetology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 440",
+        "courseName": "Field Biology",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 442",
+        "courseName": "Urban Ecosystems and Processes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 443",
+        "courseName": "Tropical Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, 300C or 300XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 444",
+        "courseName": "Tropical Ecology Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, 300C or 300XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 446",
+        "courseName": "Ecological and Evolutionary Physiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 449",
+        "courseName": "Marine Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 450",
+        "courseName": "Marine Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 452",
+        "courseName": "Immunology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C, U213 or 213XS) and (BIOL 305C, L305, 305XS, 246C or 246XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 453",
+        "courseName": "Immunology Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (BIOL 306C, 306XS or L306).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 454",
+        "courseName": "Marine Mammal Biology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 457",
+        "courseName": "Reproductive Strategies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 459",
+        "courseName": "Fungi and Ecosystems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 460",
+        "courseName": "Infectious Diseases Wildlife",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 465",
+        "courseName": "Histology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 468",
+        "courseName": "Vertebrate Natural History",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 471",
+        "courseName": "Evolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C or 308XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 472",
+        "courseName": "Introductory Animal Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 473",
+        "courseName": "Introductory Laboratory in Animal Behavior",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 480",
+        "courseName": "The Diversity of Fishes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 482",
+        "courseName": "Introduction to Molecular Genetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 483",
+        "courseName": "General Biochemistry",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C, U213C or 213XS) and (CHEM 313C, L313C or 313XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 484",
+        "courseName": "Cell Signaling and Disease",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 311C, L311 or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 485",
+        "courseName": "Cell Signaling Laboratory",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 486",
+        "courseName": "Molecular Biology and Biotechnology Laboratory",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 489",
+        "courseName": "Teaching Practicum",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 491",
+        "courseName": "Selected Topics in Biology Laboratory Techniques",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 213C, 213XS or U213) and (BIOL 311C, 311XS or L311) and (BIOL 305C, L305, 305XS, 246XS or 246C) and (BIOL 306C, 306XS or L306) and ((CHEM 211C or 211XS) and (CHEM 213C or 213XS)) and ((CHEM 212C or 212XS) and (CHEM 214C or 214XS))).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 492",
+        "courseName": "Senior Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 493",
+        "courseName": "Honors Research in Biology",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 494",
+        "courseName": "Honors Seminar in Biology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 495",
+        "courseName": "Directed Studies in Biology",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 497",
+        "courseName": "Special Problems in Biology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 498",
+        "courseName": "Research Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 499",
+        "courseName": "RS: Research in Biology",
+        "courseCredits": "6-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

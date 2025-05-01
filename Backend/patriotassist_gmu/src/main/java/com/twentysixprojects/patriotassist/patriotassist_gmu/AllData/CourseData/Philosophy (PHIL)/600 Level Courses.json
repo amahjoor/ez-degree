@@ -1,0 +1,110 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PHIL 600",
+        "courseName": "Proseminar in Philosophy",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 603",
+        "courseName": "Aristotle: Selected Works",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 608",
+        "courseName": "Hegel's Phenomenology of the Spirit",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 615",
+        "courseName": "Postmodernist Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 616",
+        "courseName": "Phenomenology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 617",
+        "courseName": "Movements and Issues in the History of Political Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 640",
+        "courseName": "History of Ethical Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 642",
+        "courseName": "Biomedical Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 643",
+        "courseName": "Environmental Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 644",
+        "courseName": "Business and Organizational Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 645",
+        "courseName": "Research Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 654",
+        "courseName": "Critical Philosophies of Race",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 658",
+        "courseName": "Feminist Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 681",
+        "courseName": "Figures and Topics in Ancient Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 682",
+        "courseName": "Figures and Topics in Early Modern Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 683",
+        "courseName": "Contemporary Philosophical Figures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 693",
+        "courseName": "Directed Readings in Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 694",
+        "courseName": "Special Topics in Contemporary Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

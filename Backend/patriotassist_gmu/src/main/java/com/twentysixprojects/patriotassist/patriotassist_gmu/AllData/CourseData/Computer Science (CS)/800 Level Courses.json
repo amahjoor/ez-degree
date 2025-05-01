@@ -1,0 +1,20 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "CS 800",
+        "courseName": "Computer Science Colloquium",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 895",
+        "courseName": "Research Topics in CS",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 896",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

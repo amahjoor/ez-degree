@@ -1,0 +1,104 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "BENG 500",
+        "courseName": "Special Topics",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 501",
+        "courseName": "Bioengineering Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 514",
+        "courseName": "Pathophysiology and the Role of New Technologies in Human Diseases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 520",
+        "courseName": "Biomedical Data Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 521",
+        "courseName": "Cell and Tissue Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 240C or 240XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 526",
+        "courseName": "Neural Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 530",
+        "courseName": "Continuum Biomechanics and Biotransport II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 230C or 230XS) and (BENG 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 535",
+        "courseName": "Multi-Scale Modeling and Simulation in Biomedicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 230C or 230XS) and (BENG 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 537",
+        "courseName": "Medical Image Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 320C or 320XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 538",
+        "courseName": "Medical Imaging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 540",
+        "courseName": "Advanced Biomaterials and Biomimetic Devices for Nanomedicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 541",
+        "courseName": "Biomaterials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 550",
+        "courseName": "Advanced Biomechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 551",
+        "courseName": "Translational Bioengineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 570",
+        "courseName": "Bioinstrumentation and Devices II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 575",
+        "courseName": "Intellectual Property, Regulatory Concepts and Product Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 590",
+        "courseName": "Selected Topics in Bioengineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

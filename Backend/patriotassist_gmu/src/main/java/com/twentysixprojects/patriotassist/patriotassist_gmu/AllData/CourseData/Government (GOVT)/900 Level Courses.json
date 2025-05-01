@@ -1,0 +1,14 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "GOVT 998",
+        "courseName": "Doctoral Dissertation Proposal",
+        "courseCredits": "3,6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 999",
+        "courseName": "Doctoral Dissertation Research",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

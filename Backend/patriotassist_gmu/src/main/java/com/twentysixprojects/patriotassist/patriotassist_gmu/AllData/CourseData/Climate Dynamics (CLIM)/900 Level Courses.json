@@ -1,0 +1,32 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "CLIM 991",
+        "courseName": "Climate Dynamics Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 996",
+        "courseName": "Doctoral Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 997",
+        "courseName": "Doctoral Qualification",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 998",
+        "courseName": "Doctoral Dissertation Proposal",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 999",
+        "courseName": "Doctoral Dissertation",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,26 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "LING 800",
+        "courseName": "Advanced Seminar in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 897",
+        "courseName": "Independent study",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 898",
+        "courseName": "Advanced Qualifying Research 1",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 899",
+        "courseName": "Advanced Qualifying Research 2",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: LING 898B-.\nB- Requires minimum grade of B-."
+    }
+]}

@@ -1,0 +1,110 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CONS 400",
+        "courseName": "Conservation Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, EVPP 301C, 301XS, 302C, 302XS, BIOL 377C, 377XS, EVPP 377C, 377XS, INTS 401C or 401XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 401",
+        "courseName": "Conservation Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 402",
+        "courseName": "Applied Conservation",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 404",
+        "courseName": "Biodiversity Monitoring",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, EVPP 301C, 301XS, 302C, 302XS, BIOL 377C, 377XS, EVPP 377C, 377XS, INTS 401C or 401XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 405",
+        "courseName": "Landscape and Macrosystems Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, EVPP 301C, 301XS, 302C, 302XS, BIOL 377C, 377XS, EVPP 377C, 377XS, INTS 401C or 401XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 406",
+        "courseName": "Small Population Management",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, EVPP 301C, 301XS, 302C, 302XS, BIOL 377C, 377XS, EVPP 377C, 377XS, INTS 401C or 401XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 410",
+        "courseName": "Human Dimensions in Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 440",
+        "courseName": "Ecology Field Skills",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 460",
+        "courseName": "Statistics and Study Design in Ecology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 214C, 214XS, SOCI 213C, 213XS, STAT 250C, 250XS, CONS 404C or 404XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 472",
+        "courseName": "Introduction to Animal Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 480",
+        "courseName": "Primate Behavior, Ecology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 490",
+        "courseName": "RS: Integrated Conservation Strategies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 491",
+        "courseName": "RS: Conservation Management Planning",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, EVPP 301C, 301XS, 302C, 302XS, BIOL 377C, 377XS, EVPP 377C, 377XS, INTS 401C or 401XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 495",
+        "courseName": "Capstone in Conservation Strategies",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 496",
+        "courseName": "Research in Conservation",
+        "courseCredits": "6 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 308C, 308XS, EVPP 301C, 301XS, 302C, 302XS, BIOL 377C, 377XS, EVPP 377C, 377XS, INTS 401C or 401XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 497",
+        "courseName": "Special Topics in Conservation",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 498",
+        "courseName": "Internship",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 499",
+        "courseName": "Independent Study/Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

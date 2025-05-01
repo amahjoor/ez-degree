@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "GCP 602",
+        "courseName": "Global Financial Crises and Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ITRN 503B- or GCP 503B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "GCP 603",
+        "courseName": "Global Trade Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ITRN 504B- or GCP 504B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "GCP 604",
+        "courseName": "New Technologies in the Global Economy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCP 605",
+        "courseName": "Technology, Culture and Commerce",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCP 612",
+        "courseName": "International Business Operations and the Multinational Corporation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

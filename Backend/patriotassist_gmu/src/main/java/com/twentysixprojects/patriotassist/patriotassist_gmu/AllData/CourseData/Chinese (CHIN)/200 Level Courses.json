@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CHIN 201",
+        "courseName": "Intermediate Chinese I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 202",
+        "courseName": "Intermediate Chinese II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

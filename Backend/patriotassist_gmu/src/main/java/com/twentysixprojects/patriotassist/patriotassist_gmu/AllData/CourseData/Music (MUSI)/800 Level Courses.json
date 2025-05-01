@@ -1,0 +1,92 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "MUSI 800",
+        "courseName": "Studies for the Doctor of Philosophy in Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 810",
+        "courseName": "Doctoral Seminar in Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 821",
+        "courseName": "Doctoral Private Music Instruction",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 822",
+        "courseName": "Doctoral Applied Music in Keyboard",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 823",
+        "courseName": "Doctoral Applied Music in Voice",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 824",
+        "courseName": "Doctoral Applied Music in Woodwind",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 825",
+        "courseName": "Doctoral Applied Music in Brass",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 826",
+        "courseName": "Doctoral Applied Music in String",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 827",
+        "courseName": "Doctoral Applied Music in Percussion",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 828",
+        "courseName": "Doctoral Applied Music in Composition",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 829",
+        "courseName": "Doctoral Applied Music in Conducting",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 830",
+        "courseName": "Doctoral Seminar in Music History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 860",
+        "courseName": "Doctoral Seminar in Music Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 880",
+        "courseName": "Doctoral Major Ensemble",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 890",
+        "courseName": "Doctoral Recital",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

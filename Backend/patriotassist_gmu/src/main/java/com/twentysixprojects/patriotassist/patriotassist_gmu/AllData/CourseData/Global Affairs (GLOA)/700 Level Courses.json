@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "GLOA 710",
+        "courseName": "Seminar Abroad",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 720",
+        "courseName": "Capstone Research Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: GLOA 605B-.\nB- Requires minimum grade of B-."
+    }
+]}

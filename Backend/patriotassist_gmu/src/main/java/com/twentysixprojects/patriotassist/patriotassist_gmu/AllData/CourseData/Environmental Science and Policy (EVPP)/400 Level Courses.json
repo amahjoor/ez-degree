@@ -1,0 +1,212 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "EVPP 402",
+        "courseName": "Applied and Industrial Microbiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 408",
+        "courseName": "Mushrooms, Molds and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 413",
+        "courseName": "Histotechniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 419",
+        "courseName": "Marine Mammal Biology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 420",
+        "courseName": "Marine Mammal Biology and Conservation Field Course",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 421",
+        "courseName": "Marine Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 423",
+        "courseName": "Beekeeping and Sustainability",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 427",
+        "courseName": "Conservation Medicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 428",
+        "courseName": "Planetary Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 429",
+        "courseName": "Environmental Science Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 430",
+        "courseName": "Fundamentals of Environmental Geographic Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 432",
+        "courseName": "Energy Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 434",
+        "courseName": "Food-Energy-Water-Climate Nexus",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 435",
+        "courseName": "The Diversity of Fishes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 436",
+        "courseName": "Politics of Climate Change Governance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 437",
+        "courseName": "Ornithology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 438",
+        "courseName": "Mammalogy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 439",
+        "courseName": "Herpetology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 440",
+        "courseName": "Field Environmental Science",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 441",
+        "courseName": "Protist Diversity and Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: ((EVPP 210C or BIOL 213C) and (EVPP 301C or BIOL 300C)).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "EVPP 442",
+        "courseName": "Urban Ecosystems and Processes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 445",
+        "courseName": "Principles of Environmental Toxicology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 449",
+        "courseName": "Marine Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 451",
+        "courseName": "Fungi and Ecosystems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 456",
+        "courseName": "Aquatic Invertebrate Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 460",
+        "courseName": "Infectious Diseases of Wildlife",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 465",
+        "courseName": "Coral Reef Ecology, Health, and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 466",
+        "courseName": "Coral Reef Ecology, Health, and Conservation Lab/Field Experience",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 475",
+        "courseName": "Global Biodiversity Governance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 480",
+        "courseName": "Sustainability in Action",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 485",
+        "courseName": "Quantitative Data Analysis for Environmental Scientists",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 214C, STAT 250C or CDS 101C) and (CDS 102C)).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "EVPP 490",
+        "courseName": "Special Topics in Environmental Science and Policy",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 491",
+        "courseName": "Special Topics Lab",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 494",
+        "courseName": "Internship",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 495",
+        "courseName": "Undergraduate Seminar in Environmental Science",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

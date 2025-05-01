@@ -1,0 +1,32 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "ACCT 520",
+        "courseName": "Fundamentals of Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 531",
+        "courseName": "Foundations of Financial Reporting I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 532",
+        "courseName": "Foundations of Financial Reporting II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 551",
+        "courseName": "Foundations of Taxation of Business Entities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 561",
+        "courseName": "Foundations of Assurance Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

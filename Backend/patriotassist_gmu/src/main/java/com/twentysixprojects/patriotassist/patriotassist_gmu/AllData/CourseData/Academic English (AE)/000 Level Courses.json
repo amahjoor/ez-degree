@@ -1,0 +1,326 @@
+{"000 Level Courses": [
+    {
+        "courseTitle": "AE 000",
+        "courseName": "AE Pre-Registration",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 002",
+        "courseName": "Core Foundations",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 003",
+        "courseName": "Oral Communication Skills Foundations",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 010",
+        "courseName": "Level 1 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 011",
+        "courseName": "Level 1 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 012",
+        "courseName": "Level 1-2 Special Topics",
+        "courseCredits": "1-10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 013",
+        "courseName": "Vocabulary in Daily Life",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 014",
+        "courseName": "Listening in Daily Life",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 015",
+        "courseName": "Writing Daily Life",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 017",
+        "courseName": "Listening and Speaking",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 020",
+        "courseName": "Level 2 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 021",
+        "courseName": "Level 2 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 022",
+        "courseName": "Level 2-3 Special Topics",
+        "courseCredits": "1-10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 024",
+        "courseName": "Basic Pronunciation Skills",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 030",
+        "courseName": "Level 3 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 031",
+        "courseName": "Level 3 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 032",
+        "courseName": "Level 3-4 Special Topics",
+        "courseCredits": "1-10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 033",
+        "courseName": "Reading Plus",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 035",
+        "courseName": "Developing Vocabulary",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 036",
+        "courseName": "American Culture",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 040",
+        "courseName": "Level 4 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 041",
+        "courseName": "Level 4 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 042",
+        "courseName": "Level 4-5 Special Topics",
+        "courseCredits": "1-10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 044",
+        "courseName": "Intro to IELTS Academic",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 046",
+        "courseName": "Developing Pronunciation Skill",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 047",
+        "courseName": "Intro to TOEFL iBT",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 048",
+        "courseName": "Present Yourself",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 050",
+        "courseName": "Level 5 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 051",
+        "courseName": "Level 5 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 052",
+        "courseName": "Level 5-6 Special Topics",
+        "courseCredits": "1-10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 054",
+        "courseName": "TED Talks",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 055",
+        "courseName": "Let's Talk Math",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 056",
+        "courseName": "Business English",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 060",
+        "courseName": "Level 6 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 061",
+        "courseName": "Level 6 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 062",
+        "courseName": "Level 6-7 Special Topics",
+        "courseCredits": "1-10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 063",
+        "courseName": "American TV Comedy",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 064",
+        "courseName": "English through Pop Music",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 065",
+        "courseName": "Advanced Pronunciation Skills",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 068",
+        "courseName": "China 1-2-1 Orientation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 069",
+        "courseName": "China 1-2-1 Orientation",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 070",
+        "courseName": "Level 7 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 071",
+        "courseName": "Level 7 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 072",
+        "courseName": "Level 6-7-8 Special Topics",
+        "courseCredits": "1-10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 073",
+        "courseName": "Dialogue with Americans",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 074",
+        "courseName": "Giving Presentations",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 075",
+        "courseName": "Advanced Vocabulary",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 076",
+        "courseName": "Preparation for GRE",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 077",
+        "courseName": "Preparation for IELTS",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 078",
+        "courseName": "Preparation for TOEFL iBT",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 079",
+        "courseName": "Advanced English Grammar",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 080",
+        "courseName": "Level 8 Core",
+        "courseCredits": "10 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 081",
+        "courseName": "Level 8 Oral Comm Skills",
+        "courseCredits": "6-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AE 082",
+        "courseName": "Level 7-8 Special Topics",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

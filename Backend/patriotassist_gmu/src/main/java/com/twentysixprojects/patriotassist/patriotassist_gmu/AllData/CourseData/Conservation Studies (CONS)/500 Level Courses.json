@@ -1,0 +1,32 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "CONS 503",
+        "courseName": "Conservation Behavior",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 540",
+        "courseName": "Ecology Field Skills",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 560",
+        "courseName": "Statistics and Study Design in Ecology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 214C, 214XS, SOCI 213C, 213XS, STAT 250C, 250XS, CONS 404C or 404XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CONS 580",
+        "courseName": "Primate Behavior, Ecology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 597",
+        "courseName": "Special Topics in Conservation",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

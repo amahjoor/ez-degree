@@ -1,0 +1,110 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PHYS 600",
+        "courseName": "Special Topics in Physics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 611",
+        "courseName": "Electro-optics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PHYS 502B-, 502XS, 684B- or 684XS) and (PHYS 513B-, 513XS, 685B- or 685XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 612",
+        "courseName": "Physics of Modern Imaging",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 513B-, 513XS, 685B- or 685XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 613",
+        "courseName": "Computational Physics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 614",
+        "courseName": "Thermodynamics and Kinetics of Materials",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 113C or 113XS) and (MATH 114C or 114XS) and (MATH 213C or 213XS) and MATH 307C and (PHYS 262C, 262XS, 266C or 266XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 615",
+        "courseName": "Fundamentals of Materials Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 620",
+        "courseName": "Continuum Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 628",
+        "courseName": "Relativity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 630",
+        "courseName": "Introduction to Biophysics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 640",
+        "courseName": "Finite Element Analysis of Solids and Fluids",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 660",
+        "courseName": "Space Weather",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 665",
+        "courseName": "Planetary Atmospheres and Ionospheres",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 683",
+        "courseName": "Mathematical Methods in Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 684",
+        "courseName": "Quantum Mechanics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 685",
+        "courseName": "Classical Electrodynamics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 690",
+        "courseName": "Engineering Thermodynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 694",
+        "courseName": "Applied Mechanics of Solids",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 695",
+        "courseName": "Applied Fluid Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

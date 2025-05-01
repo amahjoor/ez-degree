@@ -1,0 +1,218 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ARTH 303",
+        "courseName": "National Traditions",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 311",
+        "courseName": "Design of Cities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 315",
+        "courseName": "Modern Architecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 317",
+        "courseName": "The Black Pharaohs: Art and Archaeology of Ancient Nubia",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 318",
+        "courseName": "Art and Archaeology of Ancient Egypt",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 319",
+        "courseName": "Art and Archaeology of the Ancient Near East",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 320",
+        "courseName": "Art of the Islamic World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 321",
+        "courseName": "Greek Art and Archaeology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 322",
+        "courseName": "Roman Art and Archaeology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 324",
+        "courseName": "From Alexander the Great to Cleopatra: The Hellenistic World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 333",
+        "courseName": "Early Christian and Byzantine Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 334",
+        "courseName": "Western Medieval Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 335",
+        "courseName": "Arts of Medieval England",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 340",
+        "courseName": "Early Renaissance Art in Italy, 1300-1500",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 341",
+        "courseName": "Northern Renaissance Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 342",
+        "courseName": "High Renaissance Art in Italy, 1480-1570",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 343",
+        "courseName": "The Art of Venice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 344",
+        "courseName": "Baroque Art in Italy, France, and Spain, 1600-1750",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 345",
+        "courseName": "Northern Baroque Art, 1600-1750",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 350",
+        "courseName": "History of Photography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 360",
+        "courseName": "Nineteenth-Century European Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 362",
+        "courseName": "Twentieth-Century European Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 370",
+        "courseName": "Arts of the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 371",
+        "courseName": "American Architecture and Material Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 372",
+        "courseName": "Studies in 18th- and 19th-Century Art of the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 373",
+        "courseName": "Studies in 20th-Century Art of the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 374",
+        "courseName": "Art Now",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 375",
+        "courseName": "Indigenous Arts of the US and Canada",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 376",
+        "courseName": "Twentieth-Century Latin American Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 382",
+        "courseName": "Arts of India",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 383",
+        "courseName": "Arts of Southeast Asia",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 384",
+        "courseName": "Arts of China",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 385",
+        "courseName": "Arts of Japan",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 393",
+        "courseName": "Art History Internships",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 398",
+        "courseName": "Study Abroad in the History of Art",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 399",
+        "courseName": "Special Topics in the History of Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

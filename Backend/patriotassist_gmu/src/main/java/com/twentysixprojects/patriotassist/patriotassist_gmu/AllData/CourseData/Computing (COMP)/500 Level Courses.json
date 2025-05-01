@@ -1,0 +1,62 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "COMP 500",
+        "courseName": "Fundamentals of Mathematics and Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 501",
+        "courseName": "Computer Programming Foundations I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 502",
+        "courseName": "Mathematical Foundations of Computing I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 503",
+        "courseName": "Computer Systems Foundations I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 505",
+        "courseName": "Ethical and Legal Challenges in Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 511",
+        "courseName": "Computer Programming Foundations II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 512",
+        "courseName": "Mathematical Foundations of Computing II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 513",
+        "courseName": "Computer Systems Foundations II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 521",
+        "courseName": "Usable Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 522",
+        "courseName": "Accessibility and Assistive Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "BUS 100",
+        "courseName": "Business and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BUS 103",
+        "courseName": "Develop Professional Skills I: Foundational Elements",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

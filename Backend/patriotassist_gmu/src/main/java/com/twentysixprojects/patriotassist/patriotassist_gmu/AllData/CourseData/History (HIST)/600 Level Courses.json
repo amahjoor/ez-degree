@@ -1,0 +1,272 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "HIST 606",
+        "courseName": "Themes in European History II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 610",
+        "courseName": "The Study and Writing of History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 613",
+        "courseName": "Colonial North America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 615",
+        "courseName": "Problems in American History",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 617",
+        "courseName": "Topics in the American Civil War Era",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 618",
+        "courseName": "The Age of Jackson, 1815-1854",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 620",
+        "courseName": "Development of the Early Republic, 1783-1815",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 622",
+        "courseName": "US South Since 1865",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 623",
+        "courseName": "US Political History 1940-1990",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 625",
+        "courseName": "Civil Rights and Citizenship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 627",
+        "courseName": "Disasters in History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 629",
+        "courseName": "The Gilded Age and Progressive Era",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 630",
+        "courseName": "US Women's History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 631",
+        "courseName": "Era of the American Revolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 633",
+        "courseName": "Reconstruction Era",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 634",
+        "courseName": "Interwar America: 1918-1939",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 635",
+        "courseName": "Problems in European History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 639",
+        "courseName": "Nineteenth-Century Europe",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 640",
+        "courseName": "The Modern Metropolis in Europe and the US",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 646",
+        "courseName": "Stalinism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 647",
+        "courseName": "Nazi Germany",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 648",
+        "courseName": "Germany in the Cold War",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 650",
+        "courseName": "Technology and Power",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 651",
+        "courseName": "History of Disease and Medicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 656",
+        "courseName": "Becoming Modern: Asia/Europe",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 657",
+        "courseName": "Global History of Sexuality and Gender",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 661",
+        "courseName": "Religion in North America to 1870",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 662",
+        "courseName": "US Religion since 1870",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 663",
+        "courseName": "Topics in US Religious History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 664",
+        "courseName": "Indigenous North America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 676",
+        "courseName": "World War II Era",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 677",
+        "courseName": "The Vietnam War",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 678",
+        "courseName": "US Civil-Military Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 679",
+        "courseName": "War and Remembrance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 680",
+        "courseName": "Introduction to Digital Humanities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 688",
+        "courseName": "Topics in History and New Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 689",
+        "courseName": "Teaching and Learning History in the Digital Age",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 690",
+        "courseName": "The Administration of Archives and Manuscripts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 691",
+        "courseName": "Museum Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 692",
+        "courseName": "Historical Editing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 693",
+        "courseName": "Historic Preservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 694",
+        "courseName": "Digital Public History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 696",
+        "courseName": "Clio Wired: An Introduction to History and New Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 697",
+        "courseName": "Data Analysis for History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 698",
+        "courseName": "Creating Software for History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

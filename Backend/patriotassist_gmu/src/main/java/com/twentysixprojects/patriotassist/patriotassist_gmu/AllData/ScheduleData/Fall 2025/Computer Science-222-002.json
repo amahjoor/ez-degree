@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Computer Program for Engineers",
+  "CourseSubject": "Computer Science",
+  "CourseNumber": "222",
+  "CourseSection": "002",
+  "CreditHours": "3",
+  "CRN": "77927",
+  "Term": "Fall 2025",
+  "Instructor": "Wilson, Justin (Primary)",
+  "MeetingDays": "Tuesday,Thursday",
+  "MeetingTimes": "07:30 AM - 08:45 AM",
+  "Campus": "Fairfax",
+  "Seats": "60 of 60 seats remain.\n99 of 99 waitlist seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:30:05"
+}

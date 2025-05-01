@@ -1,0 +1,68 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "UNIV 100",
+        "courseName": "Introduction to Mason",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 101",
+        "courseName": "Extended Transition",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 106",
+        "courseName": "Mason Transitions for Diverse Learners I",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 108",
+        "courseName": "Mason Transition",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 110",
+        "courseName": "Academic Success",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 150",
+        "courseName": "First Year Learning Communities",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 151",
+        "courseName": "First Year Learning Communities Extended Transition",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 160",
+        "courseName": "University Scholars Transition Seminar",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 170",
+        "courseName": "Special Topics",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 180",
+        "courseName": "First Year Bonner Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 190",
+        "courseName": "Introduction to Research Opportunities",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

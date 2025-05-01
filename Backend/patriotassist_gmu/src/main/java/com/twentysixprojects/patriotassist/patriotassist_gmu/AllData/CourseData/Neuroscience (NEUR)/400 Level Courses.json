@@ -1,0 +1,80 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "NEUR 405",
+        "courseName": "RS: Laboratory Methods in Behavioral Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 406",
+        "courseName": "Zebrafish Neurodevelopment Laboratory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (NEUR 327C or 327XS) and (BIOL 214C, 214XS, STAT 250C or 250XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 407",
+        "courseName": "Lab Investigations Using Voltage Clamp Electrophysiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: NEUR 327C or 327XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 410",
+        "courseName": "Current Topics in Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 411",
+        "courseName": "Seminar in Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGH 302C, 302XS, HNRS 110C or 302C and (NEUR 327C, 327XS, 335C or 335XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 422",
+        "courseName": "Glutamatergic Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (NEUR 327C or 327XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 424",
+        "courseName": "Sleep and Circadian Rhythms",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 213C or 213XS) and (PSYC 376C or 376XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 440",
+        "courseName": "Independent Study in Neuroscience",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 450",
+        "courseName": "Honors Thesis Proposal",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 451",
+        "courseName": "Honors Thesis",
+        "courseCredits": "3-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 461",
+        "courseName": "Special Topics in Neuroscience",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 473",
+        "courseName": "Current Neuroscience Research in Germany",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C or 213XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 480",
+        "courseName": "Biological Bases of Alzheimer's Disease",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

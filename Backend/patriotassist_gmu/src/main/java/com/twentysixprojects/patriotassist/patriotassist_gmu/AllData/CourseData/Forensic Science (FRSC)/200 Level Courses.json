@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "FRSC 200",
+        "courseName": "Survey of Forensic Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 201",
+        "courseName": "Introduction to Criminalistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

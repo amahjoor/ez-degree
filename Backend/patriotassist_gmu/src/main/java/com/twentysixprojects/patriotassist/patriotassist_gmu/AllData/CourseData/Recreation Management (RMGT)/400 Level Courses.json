@@ -1,0 +1,74 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "RMGT 402",
+        "courseName": "Human Behavior in Natural Environments",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PRLS 300C, 300XS or RMGT 300C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "RMGT 405",
+        "courseName": "Planning and Operation of Recreation Facilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 410",
+        "courseName": "Administration of SRT Organizations I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 411",
+        "courseName": "Administration of SRT Organizations II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PRLS 410C, 410XS or RMGT 410C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "RMGT 416",
+        "courseName": "Trends and Programming Assessment in Therapeutic Recreation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PRLS 327D, 327XS, 327XP or RMGT 327D).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "RMGT 417",
+        "courseName": "Processes, Techniques and Supervision in Therapeutic Recreation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PRLS 327C, 327XS or RMGT 327D).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nD Requires minimum grade of D."
+    },
+    {
+        "courseTitle": "RMGT 418",
+        "courseName": "Assessment in Therapeutic Recreation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PRLS 327D, 327XS, 327XP or RMGT 327D).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "RMGT 419",
+        "courseName": "Professionalism in Therapeutic Recreation Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: RMGT 416C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "RMGT 460",
+        "courseName": "Sport and Recreation Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 480",
+        "courseName": "Special Topics in Recreation Management",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 490",
+        "courseName": "Recreation Management Internship",
+        "courseCredits": "12 credits",
+        "preRequisite": "Required Prerequisites: (RMGT 310D, 316D, 317D, 323D, 410D, 210D and 241P and (SRST 200D, 200XS or 200XP)).\nD Requires minimum grade of D.\nP Requires minimum grade of P.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "RMGT 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

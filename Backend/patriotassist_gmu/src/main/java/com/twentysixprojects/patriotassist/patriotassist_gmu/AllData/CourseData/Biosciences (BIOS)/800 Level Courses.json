@@ -1,0 +1,14 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "BIOS 898",
+        "courseName": "Directed Studies in Biosciences",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 899",
+        "courseName": "Directed Research in Biosciences",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

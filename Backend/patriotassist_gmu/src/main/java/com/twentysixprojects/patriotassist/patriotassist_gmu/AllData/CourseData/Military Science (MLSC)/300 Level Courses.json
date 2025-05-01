@@ -1,0 +1,14 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "MLSC 300",
+        "courseName": "Applied Leadership I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MLSC 302",
+        "courseName": "Applied Leadership II",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

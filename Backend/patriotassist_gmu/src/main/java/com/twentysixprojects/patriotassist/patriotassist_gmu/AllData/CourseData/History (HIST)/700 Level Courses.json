@@ -1,0 +1,38 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "HIST 794",
+        "courseName": "Internship in Applied History",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 795",
+        "courseName": "Practicum in Digital History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 796",
+        "courseName": "Directed Readings",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 797",
+        "courseName": "Research Seminar in History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 798",
+        "courseName": "Directed Research and Writing in History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

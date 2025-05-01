@@ -1,0 +1,86 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "ECED 501",
+        "courseName": "Developmental Pathways of Diverse Learners, Birth-Adolescence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 502",
+        "courseName": "Foundations of Language and Literacy for Diverse Young Learners, Birth-Age 5",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 503",
+        "courseName": "Inclusive Curriculum for Young Learners: Planning Instruction and Guidance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 504",
+        "courseName": "Engaging Families of Diverse Young Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 505",
+        "courseName": "Introduction to Early Childhood Special Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 506",
+        "courseName": "Medical and Developmental Aspects of Disabilities of Diverse Young Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ECED 401C, 401XS, 501B- or 501XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 511",
+        "courseName": "Assessment of Diverse Young Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ECED 401C, 401XS, 501B- or 501XS) and (ECED 403C, 403XS, 503B- or 503XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 512",
+        "courseName": "Language and Literacy Assessment and Instruction for Diverse Primary Grade Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECED 401C, 401XS, 501B- or 501XS) and (ECED 402C, 402XS, 502B- or 502XS) and (ECED 403C, 403XS, 503B- or 503XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 513",
+        "courseName": "Integrating Social Studies Across the Content Areas for Diverse Young Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECED 401C, 401XS, 501B- or 501XS) and (ECED 403C, 403XS, 503B- or 503XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 515",
+        "courseName": "Mathematics for Diverse Young Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECED 401C, 401XS, 501B- or 501XS) and (ECED 403C, 403XS, 503B- or 503XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 516",
+        "courseName": "Science for Diverse Young Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECED 401C, 401XS, 501B- or 501XS) and (ECED 403C, 403XS, 503B- or 503XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 522",
+        "courseName": "Developing Language, Literacy, and Communication of Diverse Infants and Toddlers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ECED 401C, 401XS, 501B- or 501XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 523",
+        "courseName": "Early Intervention for Infants & Toddlers with Disabilities: Collaborative & Consultative Approaches",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ECED 404C, 404XS, 504B- or 504XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ECED 597",
+        "courseName": "Special Topics in Early Childhood Education",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

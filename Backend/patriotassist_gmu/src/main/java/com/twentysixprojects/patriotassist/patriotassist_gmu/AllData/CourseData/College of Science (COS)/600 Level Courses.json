@@ -1,0 +1,14 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "COS 600",
+        "courseName": "Multidisciplinary Problem Solving and Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 602",
+        "courseName": "Special Topics in Science",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

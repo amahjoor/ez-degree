@@ -1,0 +1,56 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "ECON 611",
+        "courseName": "Microeconomic Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 612",
+        "courseName": "Microeconomic Theory II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 615",
+        "courseName": "Macroeconomic Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 623",
+        "courseName": "American Economic History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 630",
+        "courseName": "Mathematical Economics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 637",
+        "courseName": "Econometrics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 676",
+        "courseName": "Comparative Economic Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 690",
+        "courseName": "MA Economics Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECON 535B- or 535XS) and (ECON 611B- or 611XS) and (ECON 612B- or 612XS) and (ECON 615B- or 615XS) and (ECON 630B- or 630XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECON 695",
+        "courseName": "Special Topics in Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,398 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ENGH 300",
+        "courseName": "Cover to Cover",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 301",
+        "courseName": "The Fields of English",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 302",
+        "courseName": "Advanced Composition",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGH 100C, 100XS, 101C, 101XS, U101, 122C, 122XS, ENGL 100C, 101C, U101, 122C, HNRS 110C, 110XS, NCLC 203C, INTS 203C or 203XS) and (ARAB 325D, 325XS, 325XP, L325, CHIN 310D, 310XS, 310XP, L310, 311D, 311XS, 311XP, 325D, L325, 325XS, 325XP, 328D, 328XS, 328XP, CLAS 250D, U250, 250XS, 250XP, 260D, 260XS, 260XP, 340D, 340XS, 340XP, 350D, 350XS, 350XP, 360D, 360XS, 360XP, 380D, 380XS, 380XP, ENGH 201D, U201, 201XS, 201XP, 202D, U202, 202XS, 202XP, 203D, U203, 203XS, 203XP, 204D, U204, 204XS, 204XP, FREN 325D, L325, 325XS, 325XP, 329D, 329XS, 329XP, FRLN 330D, 330XS, 330XP, L330, GERM 325D, 325XS, 325XP, ITAL 320D, 320XS, 320XP, 325D, L325, 325XS, 325XP, JAPA 340D, 340XS, 340XP, KORE 311D, 311XS, 311XP, PHIL 253D, 253XS, 253XP, RELI 235D, 235XS, 235XP, U235, 333D, 333XS, 333XP, RUSS 325D, 325XS, 325XP, 326D, 326XS, 326XP, 327D, 327XS, 327XP, SPAN 325D, L325, 325XS, 325XP, ENGH 2---, INTS 101D, 101XS, 101XP, NCLC 101D, HNRS 131D, 131XS, 131XP, ELED 258D, U258, 258XS, 258XP, HIST 334D, 334XS, 334XP, RELI 271D, 271XS, 271XP, SEED 370D, 370XS, 370XP, INTS 363D, 363XS, 363XP, RELI 339D, 339XS or 339XP).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nD Requires minimum grade of D.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "ENGH 303",
+        "courseName": "Humanities College to Career",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 304",
+        "courseName": "Topics: Literary Surveys",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 305",
+        "courseName": "Dimensions of Writing and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 307",
+        "courseName": "English Grammar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 308",
+        "courseName": "Theory and Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 309",
+        "courseName": "Topics in Literature",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 310",
+        "courseName": "Topics: Women and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 315",
+        "courseName": "Folklore and Folklife",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 316",
+        "courseName": "Topics in Myth and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 318",
+        "courseName": "Introduction to Cultural Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 319",
+        "courseName": "Popular Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 320",
+        "courseName": "Literature of the Middle Ages",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 321",
+        "courseName": "English Poetry and Prose of the 16th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 322",
+        "courseName": "Introduction to Shakespeare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 323",
+        "courseName": "Studies in Shakespeare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 324",
+        "courseName": "English Renaissance Drama",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 325",
+        "courseName": "English Poetry and Prose of the 17th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 330",
+        "courseName": "Augustan Age: 1660-1745",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 331",
+        "courseName": "Age of Sensibility: 1745-1800",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 332",
+        "courseName": "Restoration and 18th Century Drama",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 333",
+        "courseName": "British Novel of the 18th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 334",
+        "courseName": "British Poetry of the Romantic Period",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 335",
+        "courseName": "Prose and Poetry of the Victorian Period",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 336",
+        "courseName": "British Novel of the 19th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 340",
+        "courseName": "Early American Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 341",
+        "courseName": "Literature of the American Renaissance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 342",
+        "courseName": "Post-Civil War American Literature, 1865-1920",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 343",
+        "courseName": "Development of the American Novel to 1914",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 348",
+        "courseName": "Beginnings of African American Literature Through 1865",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 349",
+        "courseName": "African American Literature: Reconstruction to 1903",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 350",
+        "courseName": "African American Literature Through 1946",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 351",
+        "courseName": "Contemporary African American Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 352",
+        "courseName": "Topics in Ethnic American Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 353",
+        "courseName": "Twentieth-Century Poetry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 354",
+        "courseName": "Twentieth-Century Fiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 355",
+        "courseName": "Contemporary Fiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 356",
+        "courseName": "Contemporary Poetry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 360",
+        "courseName": "Continental Fiction, 1770-1880",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 361",
+        "courseName": "Continental Fiction, 1880-1950",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 362",
+        "courseName": "Global Voices",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 363",
+        "courseName": "Postcolonial Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 366",
+        "courseName": "The Idea of a World Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 367",
+        "courseName": "World Literatures in English",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 368",
+        "courseName": "Modern Drama",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 370",
+        "courseName": "Documentary and Non-Fiction Film/Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 371",
+        "courseName": "Global TV",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 372",
+        "courseName": "Introduction to Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 374",
+        "courseName": "Screening the Global City",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 375",
+        "courseName": "Web Authoring and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 376",
+        "courseName": "Rhetoric and New Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 377",
+        "courseName": "Digital Creative Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 380",
+        "courseName": "Introduction to Writing and Rhetoric",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 382",
+        "courseName": "Rhetoric of the Essay",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 386",
+        "courseName": "Editing for Audience, Style, and Voice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 388",
+        "courseName": "Professional and Technical Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 389",
+        "courseName": "Peer Tutoring in Writing across the Disciplines",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 391",
+        "courseName": "Forms of Poetry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 392",
+        "courseName": "Forms of Fiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 393",
+        "courseName": "Forms of Nonfiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 396",
+        "courseName": "Introduction to Creative Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 397",
+        "courseName": "Poetry Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 398",
+        "courseName": "Fiction Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 399",
+        "courseName": "Creative Nonfiction Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,74 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CHIN 300",
+        "courseName": "Reading Skills Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 301",
+        "courseName": "Advanced Grammar and Syntax",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 305",
+        "courseName": "Chinese for the Business World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 310",
+        "courseName": "Survey of Chinese Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 311",
+        "courseName": "Modern Chinese Literature in Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 318",
+        "courseName": "Introduction to Classical Chinese",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 320",
+        "courseName": "Contemporary Chinese Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 325",
+        "courseName": "Major Chinese Writers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 328",
+        "courseName": "Asian American Women Writers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 338",
+        "courseName": "Gender, Sexuality, and Representation in China",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 355",
+        "courseName": "Readings in Chinese Poetry and Poetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 365",
+        "courseName": "Readings in Chinese Fiction after Mao",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

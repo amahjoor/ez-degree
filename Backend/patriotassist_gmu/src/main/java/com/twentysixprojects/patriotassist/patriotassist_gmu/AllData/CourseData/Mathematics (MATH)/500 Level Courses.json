@@ -1,0 +1,38 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "MATH 551",
+        "courseName": "Regression and Time Series",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 553",
+        "courseName": "Advanced Mathematical Statistics in Actuarial Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 352C, 352XS, STAT 356C, 356XS, MATH 554C or 554XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 554",
+        "courseName": "Financial Mathematics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 555",
+        "courseName": "Actuarial Modeling I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 556",
+        "courseName": "Actuarial Modeling II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 557",
+        "courseName": "Financial Derivatives",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

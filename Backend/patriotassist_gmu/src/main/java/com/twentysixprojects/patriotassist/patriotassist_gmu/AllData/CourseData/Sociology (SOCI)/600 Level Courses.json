@@ -1,0 +1,134 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SOCI 601",
+        "courseName": "Proseminar in Public and Applied Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 602",
+        "courseName": "Writing for Public Sociologists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 605",
+        "courseName": "Gender and Social Structure",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 614",
+        "courseName": "Sociology of Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 616",
+        "courseName": "Practicum in Sociology",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 620",
+        "courseName": "Methods and Logic of Social Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 623",
+        "courseName": "Racial and Ethnic Relations: American and Selected Global Perspectives",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 624",
+        "courseName": "International Migration in the Age of Globalization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 631",
+        "courseName": "Survey Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 632",
+        "courseName": "Evaluation Research for Social Programs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 633",
+        "courseName": "Special Topics in Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 634",
+        "courseName": "Qualitative Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 635",
+        "courseName": "Environment and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 636",
+        "courseName": "Statistical Reasoning for Applied Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 637",
+        "courseName": "Political Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 638",
+        "courseName": "Feminist Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 639",
+        "courseName": "Urban Inequality: From Watts to #Blacklivesmatter",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 641",
+        "courseName": "Micro Sociology: Inequality and Everyday Life",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 655",
+        "courseName": "Ethnography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 660",
+        "courseName": "Historical and Comparative Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 670",
+        "courseName": "Social Networks, New Media, and Inequality",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 696",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

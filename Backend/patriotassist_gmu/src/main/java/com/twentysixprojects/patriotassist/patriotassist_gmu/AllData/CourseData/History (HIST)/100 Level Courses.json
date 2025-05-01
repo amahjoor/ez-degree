@@ -1,0 +1,38 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "HIST 100",
+        "courseName": "History of Western Civilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 101",
+        "courseName": "Foundations of Western Civilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 102",
+        "courseName": "Development of Western Civilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 121",
+        "courseName": "Formation of the American Republic",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 122",
+        "courseName": "Development of Modern America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 125",
+        "courseName": "Introduction to Global History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

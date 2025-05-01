@@ -1,0 +1,314 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "NURS 704",
+        "courseName": "Nursing Administrative Leadership Academy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 713",
+        "courseName": "Decision Making and Pharmacologic Management in Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 714",
+        "courseName": "Health Assessment in Clinical Practice",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 715",
+        "courseName": "Nursing Informatics Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 716",
+        "courseName": "Principles of Assessment and Evaluation in Nursing Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 720",
+        "courseName": "Practicum in Family Primary Care Nursing I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 721",
+        "courseName": "Practicum in Assessment and Management of the Developing Family",
+        "courseCredits": "8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 722",
+        "courseName": "Practicum in Family Primary Care Nursing II",
+        "courseCredits": "8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 724",
+        "courseName": "Health Assessment Practicum",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 725",
+        "courseName": "Hermeneutic Research Methodologies in Health Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 726",
+        "courseName": "Perspectives in Nursing Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 727",
+        "courseName": "Application of Nursing Education Principles to Curriculum and Program Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 728",
+        "courseName": "Practicum and Seminar in Nursing Education I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 729",
+        "courseName": "Practicum and Seminar in Nursing Education II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 730",
+        "courseName": "Leadership Strategies for the Clinical Nurse Leader",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 733",
+        "courseName": "Introduction to Forensic Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 734",
+        "courseName": "Role of the Sexual Assault Nurse Examiner and Interpersonal Violence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 735",
+        "courseName": "Crime Lab and Crime Scene Investigation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 736",
+        "courseName": "Psychological and Legal Aspects of Forensic Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 737",
+        "courseName": "Investigation of Injury and Death",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 738",
+        "courseName": "Family Primary Care I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 739",
+        "courseName": "Family Primary Care II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 740",
+        "courseName": "Clinical Nurse Specialist Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 741",
+        "courseName": "Family Primary Care III",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 742",
+        "courseName": "Family Primary Care Practicum I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 743",
+        "courseName": "Clinical Psychopharmacology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 744",
+        "courseName": "Family Primary Care Practicum II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 746",
+        "courseName": "Practicum in Adult Primary Care Nursing I",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 748",
+        "courseName": "Practicum in Adult Primary Care Nursing II",
+        "courseCredits": "8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 749",
+        "courseName": "Family Primary Care Practicum III",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 757",
+        "courseName": "Nursing Research and Biostatistics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 758",
+        "courseName": "Nursing Research and Biostatistics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 761",
+        "courseName": "Pharmacotherapeutics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 763",
+        "courseName": "Administrative Theory in Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 765",
+        "courseName": "Practicum in Nursing Administration I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 766",
+        "courseName": "Administrative Strategies in Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 768",
+        "courseName": "Practicum in Nursing Administration II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 769",
+        "courseName": "Physiology and Pathophysiology in Advanced Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 773",
+        "courseName": "Clinical Applications of Theory in Advanced Clinical Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 775",
+        "courseName": "Advanced Specialty Practice I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 776",
+        "courseName": "Development of Advanced Practice Nursing Role",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 778",
+        "courseName": "Advanced Specialty Practice II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 782",
+        "courseName": "Psychiatric Nurse Practitioner Practicum I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 783",
+        "courseName": "Psychiatric Nurse Practitioner Seminar I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 784",
+        "courseName": "Psychiatric Nurse Practitioner Practicum II",
+        "courseCredits": "5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 785",
+        "courseName": "Psychiatric Nurse Practitioner Seminar II",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 786",
+        "courseName": "Adult Gerontology Primary Care Practicum I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 787",
+        "courseName": "Adult Gerontology Primary Care I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 788",
+        "courseName": "Adult Gerontology Primary Care Practicum II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 789",
+        "courseName": "Adult Gerontology Primary Care II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 790",
+        "courseName": "Adult Gerontology Primary Care Practicum III",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 791",
+        "courseName": "Adult Gerontology Primary Care III",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

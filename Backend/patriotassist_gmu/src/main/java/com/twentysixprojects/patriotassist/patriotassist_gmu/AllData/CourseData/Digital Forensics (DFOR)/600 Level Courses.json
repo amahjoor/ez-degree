@@ -1,0 +1,74 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "DFOR 637",
+        "courseName": "Cloud Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 660",
+        "courseName": "Network Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 661",
+        "courseName": "Digital Media Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 663",
+        "courseName": "Operations of Intrusion Detection for Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 664",
+        "courseName": "Incident Response Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 670",
+        "courseName": "Fraud Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 671",
+        "courseName": "Digital Forensics Ethics & Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 672",
+        "courseName": "Mobile Device Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 673",
+        "courseName": "Registry Forensics - Windows",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 674",
+        "courseName": "Mac Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 675",
+        "courseName": "Linux Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 698",
+        "courseName": "Independent Reading and Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

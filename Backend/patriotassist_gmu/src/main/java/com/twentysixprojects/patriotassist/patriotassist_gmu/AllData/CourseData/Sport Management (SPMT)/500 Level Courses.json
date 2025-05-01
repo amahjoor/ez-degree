@@ -1,0 +1,20 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "SPMT 551",
+        "courseName": "Sport in the Global Marketplace",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 555",
+        "courseName": "The Australian Model of Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 556",
+        "courseName": "The Global Soccer Industry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

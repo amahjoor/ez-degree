@@ -1,0 +1,20 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "HNRS 302",
+        "courseName": "Principles of Research and Inquiry for Transfer Students",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HNRS 360",
+        "courseName": "Multi-Disciplinary Topics (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HNRS 260C, 260XS, 261C or 261XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HNRS 361",
+        "courseName": "Multi-Disciplinary Practicum (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HNRS 260C, 260XS, 261C or 261XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

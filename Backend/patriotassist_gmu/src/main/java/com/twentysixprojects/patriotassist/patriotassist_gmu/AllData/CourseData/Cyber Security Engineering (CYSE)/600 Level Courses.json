@@ -1,0 +1,80 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CYSE 610",
+        "courseName": "Networks and Cyber Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CYSE 550B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "CYSE 630",
+        "courseName": "Cyber Risk Analysis and Advanced Tools",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 640",
+        "courseName": "Wireless Network Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 650",
+        "courseName": "Topics in Cyber Security Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 670",
+        "courseName": "Secure Design of Connected and Automated Vehicles",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 680",
+        "courseName": "Advanced Manufacturing Automation Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 681",
+        "courseName": "Secure Energy Efficient Supply Chains",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 682",
+        "courseName": "Formal Methods for Cyber Physical Systems Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 683",
+        "courseName": "Reverse Engineering Industrial Automation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 685",
+        "courseName": "Unmanned Aerial Systems Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 689",
+        "courseName": "Artificial Intelligence Methods for Cybersecurity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 690",
+        "courseName": "Cyber Security Engineering Capstone Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 687B- and (CYSE 570B-, CS 571B- or 571XS) and CYSE 580B- and 610B-).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CYSE 698",
+        "courseName": "Independent Study and Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "RUSS 302",
+        "courseName": "Russian Conversation and Composition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 303",
+        "courseName": "Russian Advanced Conversation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 310",
+        "courseName": "Readings in Russian Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 311",
+        "courseName": "Contemporary Russian Short Fiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 325",
+        "courseName": "Major Russian Writers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 326",
+        "courseName": "19th-Century Literature in Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 327",
+        "courseName": "20th-Century Literature in Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 353",
+        "courseName": "Russian Civilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 354",
+        "courseName": "Contemporary Post-Soviet Life",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 380",
+        "courseName": "Advanced Russian I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 381",
+        "courseName": "Advanced Russian II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

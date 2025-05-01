@@ -1,0 +1,38 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ITAL 320",
+        "courseName": "Topics in Italian Film and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ITAL 325",
+        "courseName": "Major Italian Writers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ITAL 330",
+        "courseName": "Advanced Italian: Language and Culture I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ITAL 331",
+        "courseName": "Advanced Italian Language and Culture II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ITAL 340",
+        "courseName": "Italian through Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ITAL 360",
+        "courseName": "Southern Italy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

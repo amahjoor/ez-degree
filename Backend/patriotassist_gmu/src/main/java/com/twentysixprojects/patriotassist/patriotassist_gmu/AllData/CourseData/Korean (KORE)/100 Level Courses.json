@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "KORE 101",
+        "courseName": "Elementary Korean I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 102",
+        "courseName": "Elementary Korean II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 110",
+        "courseName": "Elementary Korean",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,44 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "ISA 763",
+        "courseName": "Security Protocol Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ISA 656B- or 656XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ISA 764",
+        "courseName": "Security Experimentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ISA 564B- or 564XS) and (ISA 656B- or 656XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ISA 785",
+        "courseName": "Research in Digital Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((ISA 562B- or 562XS) and (INFS 612B- or 612XS)) or (CS 555B- or 555XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ISA 796",
+        "courseName": "Directed Readings in Information Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ISA 797",
+        "courseName": "Advanced Topics in Information Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ISA 798",
+        "courseName": "Research Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ISA 799",
+        "courseName": "MS Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

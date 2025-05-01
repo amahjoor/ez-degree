@@ -1,0 +1,26 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "DANC 615",
+        "courseName": "Contemporary Trends",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 627",
+        "courseName": "Advanced Teaching Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 672",
+        "courseName": "Dance Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 680",
+        "courseName": "Dance Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

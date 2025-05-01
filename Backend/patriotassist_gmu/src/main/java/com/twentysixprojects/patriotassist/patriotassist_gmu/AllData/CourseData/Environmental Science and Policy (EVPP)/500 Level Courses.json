@@ -1,0 +1,242 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EVPP 503",
+        "courseName": "Field Mapping Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 505",
+        "courseName": "Selected Topics in Environmental Science",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 506",
+        "courseName": "Science of the Environment I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 507",
+        "courseName": "Science of the Environment II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 515",
+        "courseName": "Molecular Environmental Biology I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 518",
+        "courseName": "Conservation Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 519",
+        "courseName": "Marine Mammal Biology and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 520",
+        "courseName": "Marine Mammal Biology and Conservation Field Course",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 521",
+        "courseName": "Marine Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 524",
+        "courseName": "Introduction to Environmental and Resource Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 527",
+        "courseName": "Conservation Medicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 528",
+        "courseName": "Planetary Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 529",
+        "courseName": "Environmental Science Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 530",
+        "courseName": "Evidence-Based Environmental Policymaking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 531",
+        "courseName": "Land-use Modeling Techniques and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 532",
+        "courseName": "Animal Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 533",
+        "courseName": "Energy Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 534",
+        "courseName": "Food-Energy-Water Nexus",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 536",
+        "courseName": "The Diversity of Fishes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 537",
+        "courseName": "Ornithology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 538",
+        "courseName": "Mammalogy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 539",
+        "courseName": "Herpetology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 542",
+        "courseName": "Urban Ecosystems & Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 543",
+        "courseName": "Tropical Ecosystems",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 544",
+        "courseName": "Urban Ecosystems and Processes-Lab/Fields",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 545",
+        "courseName": "Principles of Environmental Toxicology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 549",
+        "courseName": "Marine Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 550",
+        "courseName": "Waterscape Ecology and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 551",
+        "courseName": "Fungi and Ecosystems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 555",
+        "courseName": "Lab in Waterscape Ecology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 556",
+        "courseName": "Aquatic Invertebrate Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 560",
+        "courseName": "Infectious Diseases of Wildlife",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 563",
+        "courseName": "Coastal Morphology and Processes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 566",
+        "courseName": "Coral Reef Ecology, Health, and Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 567",
+        "courseName": "Coral Reef Ecology, Health, and Conservation Lab/Field Experience",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 575",
+        "courseName": "Global Biodiversity Governance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 577",
+        "courseName": "Biogeochemistry: A Global Perspective",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 581",
+        "courseName": "Estuarine and Coastal Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 582",
+        "courseName": "Estuarine and Coastal Ecology Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 585",
+        "courseName": "Quantitative Data Analysis for Environmental Scientists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

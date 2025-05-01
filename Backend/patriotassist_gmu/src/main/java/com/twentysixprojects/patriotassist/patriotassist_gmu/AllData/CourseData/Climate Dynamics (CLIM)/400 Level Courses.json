@@ -1,0 +1,62 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CLIM 401",
+        "courseName": "Midlatitude Synoptic Meteorology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 408",
+        "courseName": "Senior Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 409",
+        "courseName": "Research Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 411",
+        "courseName": "Atmospheric Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 412",
+        "courseName": "Physical Oceanography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 429",
+        "courseName": "Atmospheric Thermodynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 438",
+        "courseName": "Atmospheric Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 440",
+        "courseName": "Climate Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 456",
+        "courseName": "Introduction to Atmospheric Radiation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 470",
+        "courseName": "Numerical Weather Prediction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "CEIE 100",
+        "courseName": "Environmental Issues and Solutions Around the World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 101",
+        "courseName": "Introduction to Civil Engineering",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,134 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "SPAN 500",
+        "courseName": "History of the Spanish Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 501",
+        "courseName": "Applied Spanish Grammar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 502",
+        "courseName": "Hispanic Sociolinguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 503",
+        "courseName": "Spanish Linguistics for Educators",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 505",
+        "courseName": "Applied Spanish Stylistics in Multilingual and Multimodal Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 510",
+        "courseName": "Methods of Literary and Cultural Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 512",
+        "courseName": "Mass Media and Popular Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 520",
+        "courseName": "Studies in Medieval Spanish Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 525",
+        "courseName": "Studies in Renaissance Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 530",
+        "courseName": "Studies in the Literature of the Golden Age",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 540",
+        "courseName": "Studies in 20th-Century Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 544",
+        "courseName": "Spanish-Language Film, Television, and Digital Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 545",
+        "courseName": "Studies in Hispanic Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 551",
+        "courseName": "Special Topics in Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 570",
+        "courseName": "Language Politics and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 571",
+        "courseName": "Methods and Curriculum Design for Teaching Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 574",
+        "courseName": "Critical Approaches to Teaching Spanish-language Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 575",
+        "courseName": "Teaching Spanish for Social Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 576",
+        "courseName": "Advanced Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 580",
+        "courseName": "Contemporary Hispanic Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 585",
+        "courseName": "Languages in Contact",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 590",
+        "courseName": "Bilingual Education in the Spanish-Speaking World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

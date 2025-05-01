@@ -1,0 +1,50 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "CHIN 500",
+        "courseName": "Chinese Linguistics & Teaching Methodology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 510",
+        "courseName": "Topics in Traditional Chinese Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 518",
+        "courseName": "Approaches to Classical/Literary Chinese",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 520",
+        "courseName": "Chinese and Sinophone Cinema",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 555",
+        "courseName": "Topics in Chinese Poetry and Poetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 575",
+        "courseName": "Chinese Popular Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 576",
+        "courseName": "Advanced Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 585",
+        "courseName": "Chinese Theatrical Dramas in the 20th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

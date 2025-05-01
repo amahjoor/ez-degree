@@ -1,0 +1,170 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "IT 409",
+        "courseName": "Python Web Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 209B or CS 211B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 410",
+        "courseName": "Web Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 206B or CS 211B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 414",
+        "courseName": "Database Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 314C or 314XS) and (IT 214B or 194B).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 415",
+        "courseName": "Information Visualization",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 213B or 193B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 416",
+        "courseName": "Machine Learning for Information Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 250C or 250XS) and (IT 209C, 209XS, CS 211C or 211XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 425",
+        "courseName": "Election Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 223C or 223XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 426",
+        "courseName": "Information Security Risk Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 223B) and ((IT 353C, 357C, 366C or 369C)).\nB Requires minimum grade of B.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "IT 429",
+        "courseName": "Security Accreditation of Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 105C, 105XS, 212C or 212XS) and (IT 223B).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 431",
+        "courseName": "Advanced Web Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 207C or 207XS) and (IT 213B, 213XS, 193B or 193XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 432",
+        "courseName": "Introduction to Network Forensics and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 223B and (IT 341C, 341XS, 357C or 357XS).\nB Requires minimum grade of B.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 442",
+        "courseName": "Cloud Infrastructure",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 341B or L341).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 445",
+        "courseName": "Advanced Networking Principles",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 341B or L341).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 451",
+        "courseName": "Cloud Services Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 442C or 442XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 455",
+        "courseName": "Wireless Communications and Networking",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 101C, 105C or 105XS) and (IT 102C, 102XS, MATH 112C, 125C or 125XS) and (IT 341B or L341).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 461",
+        "courseName": "Application Development in Cloud",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((IT 106C, 106XS, CS 112C, 112XS, IT 196C, 196XS, 109C or 109XS) and (IT 214C, 214XS, 194C or 194XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 462",
+        "courseName": "Applied Cyber Threat Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 105C, 105XS or 212C) and (IT 223B) and (IT 369*C or 369XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 466",
+        "courseName": "Foundations of Cryptography and Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((IT 223B) and (IT 366C or 366XS) and (IT 341C or 341XS) and (IT 206C, 206XS, 209C, 209XS, CS 211C or 211XS) and (IT 102C, 102XS, MATH 112C, 125C or 125XS)).\nB Requires minimum grade of B.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 467",
+        "courseName": "Network Defense",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 366C or 366XS) and (IT 223B).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 471",
+        "courseName": "Big Data on Cloud Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 250C or 250XS) and (IT 442C or 442XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 479",
+        "courseName": "Digital Media and Web Design Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 481",
+        "courseName": "Cloud Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 223C or 223XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 484",
+        "courseName": "Voice Communications Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 300C or 300XS) and (IT 341B or L341).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 485",
+        "courseName": "Cloud Operations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 341B and 442C.\nB Requires minimum grade of B.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "IT 488",
+        "courseName": "Fundamentals of Satellite Communications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 300C or 300XS) and (IT 341B or L341) and (MATH 108C, 108XS, 113C, 113XS, HNRT 225C or 225XS or ((MATH 123C or 123XS) and (MATH 124C or 124XS))).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 492",
+        "courseName": "Senior Design Project I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((IT 206C, 206XS, 209C, 209XS, CS 211C, 211XS or 211) and (IT 207C or 207XS) and (IT 213C, 213XS or 193C) and (IT 214C, 214XS or 194C) and (IT 223C, 223XS or 223) and (IT 300C or 300XS) and (IT 341C, L341, 341XS or 341) and (IT 343C, 343XS, CS 321C or 321XS) and (MBUS 300C, 300XS, MSOM 300C, ACCT 203C, 203XS or 203)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 493",
+        "courseName": "Senior Design Project II",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (IT 492C or 492XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 498",
+        "courseName": "Independent Study in Information Technology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 499",
+        "courseName": "Special Topics in Information Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

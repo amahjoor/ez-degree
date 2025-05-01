@@ -1,0 +1,68 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CDS 403",
+        "courseName": "Machine Learning Applications in Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CDS 230C or 230XS) and (MATH 203C or 203XS) and (CDS 303C or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CDS 410",
+        "courseName": "Numerical Analysis II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 411",
+        "courseName": "Modeling and Simulation II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CDS 230C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CDS 421",
+        "courseName": "Computational Data Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 461",
+        "courseName": "Molecular Dynamics and Monte Carlo Simulations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CDS 251C and PHYS 243C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CDS 465",
+        "courseName": "Modeling Interactive Populations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CDS 230C and 302C).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CDS 468",
+        "courseName": "Image Operators and Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 486",
+        "courseName": "Advanced Topics in Computational and Data Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 490",
+        "courseName": "Directed Study and Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 491",
+        "courseName": "Internship",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 492",
+        "courseName": "Capstone in Data Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,296 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "LAW 102",
+        "courseName": "Contracts I",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 103",
+        "courseName": "Contracts II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 104",
+        "courseName": "Property",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 106",
+        "courseName": "Criminal Law",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 108",
+        "courseName": "Economics for Lawyers",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 110",
+        "courseName": "Torts",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 112",
+        "courseName": "Civil Procedure",
+        "courseCredits": "3-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 116",
+        "courseName": "Administrative Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 117",
+        "courseName": "Legal Issues/Global Pandemic",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 118",
+        "courseName": "Advanced Legal Research",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 120",
+        "courseName": "Civil Rights Prosecutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 121",
+        "courseName": "Const Law I-Structure of Gov't",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 123",
+        "courseName": "Law & Economics",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 124",
+        "courseName": "Compliance Law",
+        "courseCredits": "1,2 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 125",
+        "courseName": "Giles Rich Moot Ct Comp (E,W)",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "Required Prerequisite: LAW 437D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 126",
+        "courseName": "Jessup Intl Moot Ct Comp (E)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 127",
+        "courseName": "Vis Intl Comm Arbitration Mt(E",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "Required Prerequisite: LAW 391D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 129",
+        "courseName": "Federal Sector Employment Law",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 131",
+        "courseName": "Intelligence Law",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 133",
+        "courseName": "Founding of the American Const",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 136",
+        "courseName": "Free Speech Clinic (E)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 138",
+        "courseName": "Death Penalty in America",
+        "courseCredits": "1,2 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 139",
+        "courseName": "Topics in Environmental Policy",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 148",
+        "courseName": "Covert Action Clandestine and Special Operations Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 149",
+        "courseName": "Ethical Issues in National Security Lawyering",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 151",
+        "courseName": "Aviation Law",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 152",
+        "courseName": "Administrative State and the Courts",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 156",
+        "courseName": "Antitrust I: Principles",
+        "courseCredits": "3,4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 158",
+        "courseName": "Const Lw II:14th Amendment",
+        "courseCredits": "2,3 credits",
+        "preRequisite": "Required Prerequisite: LAW 121D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 159",
+        "courseName": "Appellate Advocacy (E W)",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "Required Prerequisite: LAW 098D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 162",
+        "courseName": "Antitrust II: Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: LAW 156D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 163",
+        "courseName": "Advanced Civil Procedure",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 112.\nRequires minimum grade of ."
+    },
+    {
+        "courseTitle": "LAW 164",
+        "courseName": "Freedom of Speech & 1st Amend",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 165",
+        "courseName": "Education Law (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 167",
+        "courseName": "Bankruptcy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 169",
+        "courseName": "Accounting and Financial Concepts for Lawyers",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 171",
+        "courseName": "Congressional Oversight",
+        "courseCredits": "1,2 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 172",
+        "courseName": "Business Associations",
+        "courseCredits": "2,4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 176",
+        "courseName": "Commercial Paper",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 178",
+        "courseName": "Legal Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 179",
+        "courseName": "Supervised Extrn-VA Practice(E",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 180",
+        "courseName": "Govt & Comm Contract Nego",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 181",
+        "courseName": "Communications Law",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 185",
+        "courseName": "Supreme Court Clinic (E)",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 121D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 186",
+        "courseName": "Conflict of Laws",
+        "courseCredits": "2,3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 191",
+        "courseName": "Copyrights",
+        "courseCredits": "3,4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 193",
+        "courseName": "Consumer Financial Protection",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 194",
+        "courseName": "Corporate Acquisitions",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 172D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 198",
+        "courseName": "Corporate Tax",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "Required Prerequisite: LAW 236D-.\nD- Requires minimum grade of D-."
+    }
+]}

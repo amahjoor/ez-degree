@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "GAME 101",
+        "courseName": "Introduction to Game Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 104",
+        "courseName": "Two-Dimensional Design for Games",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 140",
+        "courseName": "Applied Coding for Game Designers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

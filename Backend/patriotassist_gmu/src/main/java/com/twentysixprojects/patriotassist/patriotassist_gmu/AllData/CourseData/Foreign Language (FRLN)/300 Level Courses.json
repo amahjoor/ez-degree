@@ -1,0 +1,38 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "FRLN 309",
+        "courseName": "Humanities College to Career",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 330",
+        "courseName": "Topics in World Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 331",
+        "courseName": "Contexts for Global Cinema",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 380",
+        "courseName": "Topics in the Sociopolitics of Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 385",
+        "courseName": "Multilingualism, Identity, and Power",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 390",
+        "courseName": "Language, Race and Racism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGH 100C or 101C).\nC Requires minimum grade of C."
+    }
+]}

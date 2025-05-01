@@ -1,0 +1,110 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MATH 721",
+        "courseName": "Algebra II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 722",
+        "courseName": "Algebraic Topology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 723",
+        "courseName": "Combinatorial Structures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 724",
+        "courseName": "Commutative Algebra",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 725",
+        "courseName": "Algebraic Geometry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 621B- or 621XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 732",
+        "courseName": "Topology II: Set-Theoretic Topology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 740",
+        "courseName": "Differential Topology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 741",
+        "courseName": "Lie Groups",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 621B- or 621XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 762",
+        "courseName": "Complex Analysis II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 763",
+        "courseName": "Functions of Several Complex Variables",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 772",
+        "courseName": "Wavelet Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 776",
+        "courseName": "Measure and Integration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 781",
+        "courseName": "Advanced Methods in Applied Mathematics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 784",
+        "courseName": "Nonlinear Functional Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 790",
+        "courseName": "Classical Potential Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 795",
+        "courseName": "Graduate Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 798",
+        "courseName": "Directed Reading or Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 799",
+        "courseName": "MS Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

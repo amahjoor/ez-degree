@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "General Chemistry I",
+  "CourseSubject": "Chemistry",
+  "CourseNumber": "211",
+  "CourseSection": "007",
+  "CreditHours": "3",
+  "CRN": "74247",
+  "Term": "Fall 2025",
+  "Instructor": "Van Aken, Benoit (Primary)",
+  "MeetingDays": "Friday",
+  "MeetingTimes": "10:30 AM - 01:10 PM",
+  "Campus": "Fairfax",
+  "Seats": "86 of 86 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:11:11"
+}

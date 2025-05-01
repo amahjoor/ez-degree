@@ -1,0 +1,80 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "INTS 202",
+        "courseName": "Public Speaking and Critical Thinking Skills",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 203",
+        "courseName": "Inquiry for Action: Facilitating Change",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 204",
+        "courseName": "Leadership Theory and Practice",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 210",
+        "courseName": "Sustainable World",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 211",
+        "courseName": "Introduction to Conservation Studies",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 245",
+        "courseName": "Visual Culture and Society",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 249",
+        "courseName": "Digital Literacy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 275",
+        "courseName": "Special Topics",
+        "courseCredits": "1-18 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 291",
+        "courseName": "Living-Learning Community",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 292",
+        "courseName": "Leadership for Sustainability",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 294",
+        "courseName": "Service-Learning Experience",
+        "courseCredits": "0-15 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 295",
+        "courseName": "Field-Based Work",
+        "courseCredits": "1-18 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 299",
+        "courseName": "Study Abroad",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

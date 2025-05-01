@@ -1,0 +1,74 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "SOCI 405",
+        "courseName": "Analysis of Social Data",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 410",
+        "courseName": "Social Surveys and Attitude and Opinion Measurements",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 412",
+        "courseName": "Contemporary Sociological Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SOCI 311C or 311XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCI 416",
+        "courseName": "Internship in Sociology I",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 417",
+        "courseName": "Internship in Sociology II",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 431",
+        "courseName": "Survey Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 480",
+        "courseName": "Honors Seminar in Sociology I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 481",
+        "courseName": "RS: Honors Seminar in Sociology II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 483",
+        "courseName": "The Sociology of Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 485",
+        "courseName": "RS: Sociological Analysis and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 492",
+        "courseName": "Sociology of Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 499",
+        "courseName": "Independent Research in Sociology",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

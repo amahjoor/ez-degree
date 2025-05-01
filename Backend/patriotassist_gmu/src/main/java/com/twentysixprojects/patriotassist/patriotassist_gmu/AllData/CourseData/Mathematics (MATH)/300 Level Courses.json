@@ -1,0 +1,86 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "MATH 300",
+        "courseName": "Introduction to Advanced Mathematics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MATH 114C, 114XS, 114T or 116C) and (MATH 125C, 125XS, 125T or 175C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 301",
+        "courseName": "Number Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 302",
+        "courseName": "Foundations of Geometry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 114C, 114XS, 116C or 116XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 307",
+        "courseName": "Mathematical Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 203C or 203XS) and (MATH 214C, 214XS or 216C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 312",
+        "courseName": "Geometry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 114C, 114XS, 116C or 116XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 313",
+        "courseName": "Introduction to Applied Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 213C, 213XS, 213T, 215C or 215XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 314",
+        "courseName": "Advanced Differential Equations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 214C, U214, 214XS, 216C or U216).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 315",
+        "courseName": "Advanced Calculus I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MATH 213C, 213XS, 215C or 215XS) and (MATH 300C or 300XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 316",
+        "courseName": "Advanced Calculus II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 315C, 315XS or L315).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 321",
+        "courseName": "Abstract Algebra",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MATH 213C, 213XS, 215C or 215XS) and (MATH 300C or 300XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 322",
+        "courseName": "Advanced Linear Algebra",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MATH 203C, 203XS or U203) and (MATH 300C or 300XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 325",
+        "courseName": "Discrete Mathematics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 125C, 125XS or 125T).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 351",
+        "courseName": "Probability",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 213C, 213XS, 215C, 215XS or 215T.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 352",
+        "courseName": "Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 351C, 351XS or L351).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

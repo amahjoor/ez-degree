@@ -1,0 +1,20 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "MLSC 400",
+        "courseName": "Leadership and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MLSC 402",
+        "courseName": "Leadership and Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MLSC 499",
+        "courseName": "Senior Advanced Military Studies",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

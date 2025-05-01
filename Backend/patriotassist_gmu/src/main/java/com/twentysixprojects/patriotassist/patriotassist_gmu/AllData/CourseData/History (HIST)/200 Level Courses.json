@@ -1,0 +1,56 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "HIST 202",
+        "courseName": "Freshman/Sophomore Seminar in Global History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 251",
+        "courseName": "Survey of East Asian History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 252",
+        "courseName": "Survey of East Asian History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 261",
+        "courseName": "Survey of African History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 262",
+        "courseName": "Survey of African History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 271",
+        "courseName": "Survey of Latin American History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 272",
+        "courseName": "Survey of Latin American History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 281",
+        "courseName": "Survey of Middle Eastern Civilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 282",
+        "courseName": "Survey of Middle Eastern Civilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,110 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "DANC 301",
+        "courseName": "What is Dance?",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 304",
+        "courseName": "Intermediate Ballet I",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 305",
+        "courseName": "Intermediate Modern/Contemporary Dance I",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 314",
+        "courseName": "Intermediate Ballet II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 315",
+        "courseName": "Intermediate Modern/Contemporary Dance II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 318",
+        "courseName": "Global Dance Perspectives II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (DANC 118C, 118XS or 119C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 324",
+        "courseName": "Introduction to Dance Conditioning",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 325",
+        "courseName": "Modern/Contemporary Dance III",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 331",
+        "courseName": "Advanced Jazz Dance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 345",
+        "courseName": "Ballet III",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 360",
+        "courseName": "Choreography",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((DANC 150C or 150XS) and (DANC 251C or 251XS) and (DANC 252C or 252XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 362",
+        "courseName": "RS: Directed Choreography",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: ((DANC 150C or 150XS) and (DANC 251C or 251XS) and (DANC 252C or 252XS) and (DANC 360C or 360XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 370",
+        "courseName": "Dance Performance",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 371",
+        "courseName": "Residency Workshop",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 372",
+        "courseName": "Advanced Dance Production",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: ((DANC 170C or 170XS) and (DANC 270C or 270XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 390",
+        "courseName": "Dance History I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 391",
+        "courseName": "Dance History II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 399",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

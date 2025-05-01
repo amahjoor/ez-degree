@@ -1,0 +1,104 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "CRIM 509",
+        "courseName": "Justice Organizations and Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 510",
+        "courseName": "Policing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 511",
+        "courseName": "Evidence-based Crime and Justice Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 512",
+        "courseName": "Implementing Crime and Justice Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 513",
+        "courseName": "Leadership in Justice Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 514",
+        "courseName": "Legal and Ethical Issues in Criminal Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 515",
+        "courseName": "Criminal Justice Research Methods and Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 516",
+        "courseName": "Evaluation of Crime and Justice Policies and Practices",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 517",
+        "courseName": "Research Practicum in Justice Policy and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 521",
+        "courseName": "The Constitution, Criminal Procedure, and Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 523",
+        "courseName": "Law and Social Control",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 541",
+        "courseName": "Conduct of Justice Organizations at the Street Level",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 544",
+        "courseName": "Corrections",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 545",
+        "courseName": "Crime Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 561",
+        "courseName": "Politics of Crime Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 562",
+        "courseName": "Crime and Place",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 595",
+        "courseName": "Special Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

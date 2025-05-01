@@ -1,0 +1,26 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "COS 500",
+        "courseName": "Professional Preparation for STEM Disciplines",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 510",
+        "courseName": "Introduction to Science Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 515",
+        "courseName": "Science Policy Internship Preparation",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: COS 510B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "COS 520",
+        "courseName": "Science Policy in Practice",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: COS 510B-.\nB- Requires minimum grade of B-."
+    }
+]}

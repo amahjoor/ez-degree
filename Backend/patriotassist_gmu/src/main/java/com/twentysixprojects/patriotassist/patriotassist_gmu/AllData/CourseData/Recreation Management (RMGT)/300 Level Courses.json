@@ -1,0 +1,50 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "RMGT 300",
+        "courseName": "People With Nature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 302",
+        "courseName": "Park Management and Operations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 310",
+        "courseName": "Program Planning and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PRLS 210D, RMGT 210D, PRLS 210XS, 210XP, SPMT 201D, 201XS, 201XP, SRST 200D, 200XS, 200XP, TOUR 200D, 200XS or 200XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "RMGT 316",
+        "courseName": "Leadership and Outdoor Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 317",
+        "courseName": "Social Psychology of Play and Recreation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PRLS 210D, 210XS, RMGT 210D, PRLS 210XP, SRST 200D, 200XS or 200XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "RMGT 323",
+        "courseName": "Program Leadership and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PRLS 310D, 310XS, 310XP or RMGT 310D).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "RMGT 327",
+        "courseName": "Foundations of Therapeutic Recreation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 362",
+        "courseName": "Cultural and Environmental Interpretation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

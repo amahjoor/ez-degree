@@ -1,0 +1,98 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "LING 300",
+        "courseName": "Linguistic Variation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 306",
+        "courseName": "Introduction to Linguistic Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 314",
+        "courseName": "Experimental Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 316",
+        "courseName": "Linguistic Field Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 317",
+        "courseName": "Computational and Quantitative Methods in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 321",
+        "courseName": "Applied Linguistics: Teaching English to Speakers of Other Languages (TESOL)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: LING 306C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "LING 322",
+        "courseName": "English Grammar and Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 323",
+        "courseName": "English Pronunciation and Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 331",
+        "courseName": "Phonetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 332",
+        "courseName": "Phonology A",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 333",
+        "courseName": "Phonology B",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 335",
+        "courseName": "Morphology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 336",
+        "courseName": "Syntax A",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 337",
+        "courseName": "Syntax B",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 338",
+        "courseName": "Semantics and Pragmatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 342",
+        "courseName": "Second Language Acquisition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

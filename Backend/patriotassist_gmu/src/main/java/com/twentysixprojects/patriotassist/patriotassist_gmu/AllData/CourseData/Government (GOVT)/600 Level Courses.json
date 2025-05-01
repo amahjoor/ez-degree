@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "GOVT 603",
+        "courseName": "Seminar in the Courts and Constitutionalism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 604",
+        "courseName": "Seminar on Congress and Legislative Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 605",
+        "courseName": "Seminar on the Presidency",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 631",
+        "courseName": "Seminar in Comparative Politics and Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 632",
+        "courseName": "Politics and Societies of the Middle East",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

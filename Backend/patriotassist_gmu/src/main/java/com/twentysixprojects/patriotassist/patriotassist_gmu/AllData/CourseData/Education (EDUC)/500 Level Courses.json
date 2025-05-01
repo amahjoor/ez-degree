@@ -1,0 +1,134 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EDUC 501",
+        "courseName": "Human Development and Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 502",
+        "courseName": "Curriculum and Instruction \u2013 Teaching All Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 503",
+        "courseName": "Assessment of and for Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 504",
+        "courseName": "Foundations of Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 505",
+        "courseName": "Classroom and Behavior Management in PreK-12 Classrooms",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 506",
+        "courseName": "Foundations of Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 511",
+        "courseName": "Child and Adolescent Development in Global Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 512",
+        "courseName": "Teaching Elementary Social Studies in International Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDUC 511B- or 511XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 513",
+        "courseName": "Teaching Elementary Math in International Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDUC 511B- or 511XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 514",
+        "courseName": "Teaching Elementary Science in International Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 511B- or 511XS) and (EDUC 512B- or 512XS) and (EDUC 513B- or 513XS) and (EDUC 537B- or 537XS) and (EDRD 515B- or 515XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 516",
+        "courseName": "Language Across the Elementary International School Curriculum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 511B- or 511XS) and (EDUC 512B- or 512XS) and (EDUC 513B- or 513XS) and (EDUC 537B- or 537XS) and (EDRD 515B- or 515XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 518",
+        "courseName": "Military-Connected Youth",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 520",
+        "courseName": "Elementary Curriculum, Instruction, and Assessment in International Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 511B- or 511XS) and (EDUC 512B- or 512XS) and (EDUC 513B- or 513XS) and (EDUC 537B- or 537XS) and (EDRD 515B- or 515XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 522",
+        "courseName": "Foundations of Secondary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 537",
+        "courseName": "Introduction to Culturally & Linguistically Diverse Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 542",
+        "courseName": "Foundations of Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 543",
+        "courseName": "Children, Family, Culture, and Schools, 4-12 Year Olds",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 547",
+        "courseName": "Scientific Inquiry and the Nature of Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 592",
+        "courseName": "Effective Collaboration for Teaching Diverse Learners in Secondary Social Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 595",
+        "courseName": "Perspectives on Exceptl Tching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 597",
+        "courseName": "Special Topics in Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 598",
+        "courseName": "Directed Reading, Research, and Individual Projects",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

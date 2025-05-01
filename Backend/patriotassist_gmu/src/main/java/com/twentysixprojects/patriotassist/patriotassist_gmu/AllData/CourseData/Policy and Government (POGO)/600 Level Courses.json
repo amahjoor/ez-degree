@@ -1,0 +1,14 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "POGO 611",
+        "courseName": "Advanced Data Analysis for Policy and Government",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (POGO 511B-, 511XS, PUAD 511B-, 511XS, PUBP 511B-, 511XS, GOVT 511B- or 511XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "POGO 646",
+        "courseName": "Policy and Program Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (POGO 511C, 511XS, PUAD 511C, 511XS, PUBP 511C, 511XS, GOVT 511C, 511XS, HAP 602C, 602XS, 719C or 719XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

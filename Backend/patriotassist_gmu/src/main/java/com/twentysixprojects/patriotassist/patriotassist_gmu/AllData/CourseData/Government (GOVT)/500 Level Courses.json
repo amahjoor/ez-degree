@@ -1,0 +1,44 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "GOVT 500",
+        "courseName": "The Scientific Method and Research Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 510",
+        "courseName": "American Government and Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 520",
+        "courseName": "Political Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 530",
+        "courseName": "Comparative Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 540",
+        "courseName": "International Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 550",
+        "courseName": "Seminar in Theories of Public Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 560",
+        "courseName": "Topics in Government and International Affairs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

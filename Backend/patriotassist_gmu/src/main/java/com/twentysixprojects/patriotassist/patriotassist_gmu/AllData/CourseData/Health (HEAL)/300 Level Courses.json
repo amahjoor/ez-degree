@@ -1,0 +1,44 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "HEAL 310",
+        "courseName": "Drugs and Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 325",
+        "courseName": "Human Sexuality",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 327",
+        "courseName": "Women's Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 331",
+        "courseName": "Men's Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 350",
+        "courseName": "Health Interventions for Vulnerable Populations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 351",
+        "courseName": "Relationship Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEAL 372",
+        "courseName": "Health Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

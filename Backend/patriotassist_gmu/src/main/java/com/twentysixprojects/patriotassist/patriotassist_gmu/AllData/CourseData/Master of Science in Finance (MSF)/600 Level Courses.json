@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "MSF 603",
+        "courseName": "Managerial Economics and Decisions of the Firm",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSF 632",
+        "courseName": "Statistical and Quantitative Methods for Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSF 643",
+        "courseName": "Financial Economics and Statement Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSF 672",
+        "courseName": "Corporate Finance and Governance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MSF 632B and 643B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MSF 683",
+        "courseName": "Ethical and Professional Standards in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

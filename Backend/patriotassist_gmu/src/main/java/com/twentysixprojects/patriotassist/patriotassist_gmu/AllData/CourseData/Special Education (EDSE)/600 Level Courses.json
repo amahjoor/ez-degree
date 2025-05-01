@@ -1,0 +1,140 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDSE 613",
+        "courseName": "Teaching Methods for Students with Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 615",
+        "courseName": "Cortical and Cerebral Visual Impairment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 616",
+        "courseName": "Braille Reading and Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 311C, 311XS, 511B- or 511XS) and (EDSE 412B-, 512B- or 512XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDSE 619",
+        "courseName": "Principles and Procedures of Behavior Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 620",
+        "courseName": "Supporting the Behavior and Sensory Needs of Individuals with Autism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 621",
+        "courseName": "Applied Behavior Analysis: Empirical Bases",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 619*B- or 619*XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 622",
+        "courseName": "Philosophical and Conceptual Issues in Behavior Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 619*B- or 619*XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 623",
+        "courseName": "Applied Behavior Analysis: Assessments and Interventions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 619B- or 619XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 624",
+        "courseName": "Applied Behavior Analysis: Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 619B- or 619XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 625",
+        "courseName": "Applied Behavior Analysis: Verbal Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 619B- or 619XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 627",
+        "courseName": "Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 634",
+        "courseName": "Characteristics of Individuals with Autism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 635",
+        "courseName": "Interventions for Individuals with Autism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 636",
+        "courseName": "Supporting Communication and Literacy for Individuals with Autism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 637",
+        "courseName": "Autism Across the Lifespan: Collaboration with Critical Partners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 638",
+        "courseName": "Autism Spectrum Disorder: Issues in Assessment and Intersectionality",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 641",
+        "courseName": "Instructional Strategies for Reading and Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 643",
+        "courseName": "Instructional Strategies for Math",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 661",
+        "courseName": "Curriculum and Methods: Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 662",
+        "courseName": "Consultation and Collaboration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 663",
+        "courseName": "Collaborative Teamwork to Support Students with Significant Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 664",
+        "courseName": "Ethical and Professional Conduct for Behavior Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 619B- or 619XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 669",
+        "courseName": "Individualized Supports and Specialized Care of Students with Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

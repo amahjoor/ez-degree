@@ -1,0 +1,56 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "ATEP 600",
+        "courseName": "Pathopharmacology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ATEP 650",
+        "courseName": "Administration and Management in Athletic Training",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ATEP 560B- or 560XS) and (ATEP 565B- or 565XS) and (ATEP 566B- or 566XS) and (ATEP 570B- or 570XS) and (ATEP 575B- or 575XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 656",
+        "courseName": "Athletic Training Practicum 2",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (ATEP 560B- or 560XS) and (ATEP 565B- or 565XS) and (ATEP 566B- or 566XS) and (ATEP 570B- or 570XS) and (ATEP 575B- or 575XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 660",
+        "courseName": "Pediatric Sports Medicine",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ATEP 667",
+        "courseName": "Preseason Practicum",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (ATEP 650B- or 650XS) and (ATEP 656B- or 656XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 670",
+        "courseName": "Post Rehabilitative Therapeutic Interventions",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (ATEP 650B- or 650XS) and (ATEP 656B- or 656XS) and (ATEP 667B- or 667XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 676",
+        "courseName": "Patient Centered Athletic Training Practice",
+        "courseCredits": "5 credits",
+        "preRequisite": "Required Prerequisites: ((ATEP 650B- or 650XS) and (ATEP 656B- or 656XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 680",
+        "courseName": "Athletic Training Organization & Professional Responsibility",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ATEP 660B- or 660XS) and (ATEP 670B- or 670XS) and (ATEP 676B- or 676XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 686",
+        "courseName": "Advanced Athletic Training Practice",
+        "courseCredits": "6 credits",
+        "preRequisite": "Required Prerequisites: (ATEP 660B- or 660XS) and (ATEP 670B- or 670XS) and (ATEP 676B- or 676XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

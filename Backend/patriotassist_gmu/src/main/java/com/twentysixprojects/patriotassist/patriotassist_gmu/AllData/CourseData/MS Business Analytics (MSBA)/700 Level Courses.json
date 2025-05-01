@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MSBA 738",
+        "courseName": "Data Mining for Business Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 743",
+        "courseName": "Business Forecasting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 757",
+        "courseName": "Prescriptive Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 795",
+        "courseName": "Business Analytics Applied Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

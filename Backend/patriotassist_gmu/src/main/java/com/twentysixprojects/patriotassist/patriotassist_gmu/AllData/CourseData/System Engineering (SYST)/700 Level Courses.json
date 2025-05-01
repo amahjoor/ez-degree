@@ -1,0 +1,44 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "SYST 735",
+        "courseName": "Simulation and Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 740",
+        "courseName": "Advances in Multi-Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 750",
+        "courseName": "Advanced Topics in Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 763",
+        "courseName": "Research Methods in Systems Engineering and Information Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 781",
+        "courseName": "Data Mining and Knowledge Discovery",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 787",
+        "courseName": "Cyber Security Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

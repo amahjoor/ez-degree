@@ -1,0 +1,14 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "SRTM 303",
+        "courseName": "Introduction to Wine & Craft Beverage Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SRTM 342",
+        "courseName": "Wine & Craft Beverage Field Experience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

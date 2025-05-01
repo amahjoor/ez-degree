@@ -1,0 +1,20 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "EDCI 423",
+        "courseName": "Methods for Teaching PK-6 English Learners in Inclusive Classrooms",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 490",
+        "courseName": "Student Teaching in Education",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCI 491",
+        "courseName": "Internship Seminar in Secondary Training",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

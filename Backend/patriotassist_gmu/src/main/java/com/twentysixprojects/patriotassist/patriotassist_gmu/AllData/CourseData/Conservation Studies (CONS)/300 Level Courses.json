@@ -1,0 +1,26 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CONS 320",
+        "courseName": "Conservation in Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 332",
+        "courseName": "Insect Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 340",
+        "courseName": "Introduction to Ecological Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 360",
+        "courseName": "Qualitative Research and Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 214C or STAT 250C).\nC Requires minimum grade of C."
+    }
+]}

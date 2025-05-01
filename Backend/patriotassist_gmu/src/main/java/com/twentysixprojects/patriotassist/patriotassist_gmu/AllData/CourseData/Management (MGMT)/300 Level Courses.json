@@ -1,0 +1,26 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "MGMT 303",
+        "courseName": "Principles of Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MGMT 313",
+        "courseName": "Organizational Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 303C, 303XS, L303 or 303T.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 321",
+        "courseName": "Introduction to Human Resource Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 325",
+        "courseName": "Creating Value for Business Stakeholders",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

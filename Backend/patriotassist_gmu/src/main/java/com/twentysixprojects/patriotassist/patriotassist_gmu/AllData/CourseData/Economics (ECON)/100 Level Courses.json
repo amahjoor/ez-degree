@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ECON 100",
+        "courseName": "Economics for the Citizen",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 103",
+        "courseName": "Contemporary Microeconomic Principles",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 104",
+        "courseName": "Contemporary Macroeconomic Principles",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 105",
+        "courseName": "Environmental Economics for the Citizen",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

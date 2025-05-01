@@ -1,0 +1,56 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "OR 531",
+        "courseName": "Introduction to Analytics and Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 538",
+        "courseName": "Analytics for Financial Engineering and Econometrics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 541",
+        "courseName": "Operations Research: Deterministic Optimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 542",
+        "courseName": "Operations Research: Stochastic Models",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 568",
+        "courseName": "Applied Predictive Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 574",
+        "courseName": "Quality Control and Process Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 576",
+        "courseName": "Manufacturing Systems Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 584",
+        "courseName": "Heterogeneous Data Fusion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 588",
+        "courseName": "Financial Systems Engineering I: Introduction to Options, Futures, and Derivatives",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

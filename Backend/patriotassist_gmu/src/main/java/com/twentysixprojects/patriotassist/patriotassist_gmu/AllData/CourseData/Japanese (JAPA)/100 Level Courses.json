@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "JAPA 101",
+        "courseName": "Introduction to the Japanese Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 102",
+        "courseName": "Introduction to the Japanese Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 110",
+        "courseName": "Elementary Japanese",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

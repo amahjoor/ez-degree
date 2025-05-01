@@ -1,0 +1,86 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "FREN 500",
+        "courseName": "Study Abroad in France or Francophone Region",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 516",
+        "courseName": "Topics in Early Modern French Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 520",
+        "courseName": "Modern and Contemporary French Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 550",
+        "courseName": "Special Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 551",
+        "courseName": "Topics in Francophone African Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 554",
+        "courseName": "Topics in Francophone Caribbean Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 555",
+        "courseName": "Special Topics related to Francophone Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 561",
+        "courseName": "Linguistic Structure of Modern French",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 563",
+        "courseName": "History of the French Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 564",
+        "courseName": "Advanced Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 565",
+        "courseName": "Special Topics Related to the French Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 567",
+        "courseName": "Special Topics related to French and Francophone Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 570",
+        "courseName": "French and Francophone Cinema",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 575",
+        "courseName": "Grammatical Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

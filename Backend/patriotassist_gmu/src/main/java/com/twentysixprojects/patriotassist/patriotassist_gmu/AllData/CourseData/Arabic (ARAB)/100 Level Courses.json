@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ARAB 101",
+        "courseName": "Introduction to the Arabic Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 102",
+        "courseName": "Introduction to the Arabic Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 110",
+        "courseName": "Elementary Arabic",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

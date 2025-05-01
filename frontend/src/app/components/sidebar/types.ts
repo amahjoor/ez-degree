@@ -1,4 +1,5 @@
 import { Major, Concentration, Requirements } from '@/types/course';
+import type { ClassSession } from '../SemesterCalendar';
 
 export interface CourseDetails {
   course_code: string;
@@ -42,6 +43,7 @@ export interface DegreeRequirementsSidebarProps {
   isApiAvailable: boolean;
   onCourseSelect?: (courseCode: string, title: string, credits: number) => void;
   onApiConnectionRetry?: () => void;
+  onAddSessions: (sessions: ClassSession[]) => void;
 }
 
 export interface MajorSelectorProps {
@@ -81,4 +83,19 @@ export interface CourseOverlayProps {
   courseCode: string;
   position: { x: number; y: number };
   onClose: () => void;
-} 
+  onAddSessions: (sessions: ClassSession[]) => void;
+}
+
+export interface SectionInfo {
+  CourseTitle:   string;
+  CourseSubject: string;
+  CourseNumber:  string;
+  CourseSection: string;
+  CreditHours:   string;
+  CRN:           string;
+  MeetingDays:   string;
+  MeetingTimes:  string;
+  Campus:        string;
+  Seats:         string; 
+  Instructor:    string;
+}

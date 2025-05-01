@@ -1,0 +1,230 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "THR 300",
+        "courseName": "Voice and Speech",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 210C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 301",
+        "courseName": "Advanced Study in Voice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 300C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 303",
+        "courseName": "Movement for Actors",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 210C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 304",
+        "courseName": "Advanced Movement for Actors",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 210C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 305",
+        "courseName": "Unarmed Stage Combat",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 210C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 306",
+        "courseName": "Movement in Musical Theater",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 210C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 310",
+        "courseName": "Acting II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 210C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 313",
+        "courseName": "Event Technical Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 314",
+        "courseName": "Lighting Stagecraft",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 315",
+        "courseName": "Sound Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 316",
+        "courseName": "Scene Painting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 320",
+        "courseName": "Performance Studio",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 210C, 310C and 350C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 321",
+        "courseName": "Acting Shakespeare",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (THR 210C and 310C).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 329",
+        "courseName": "Directing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (THR 210C or 210XS) and (THR 350C or 350XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 330",
+        "courseName": "Seminar in Technical Theater",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 331",
+        "courseName": "Drafting and Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 332",
+        "courseName": "History of Fashion and Dress",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 333",
+        "courseName": "Scenic Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((THR 230C, 230XS, FAVS 204C or 204XS) and (THR 240C, 240XS, FAVS 255C or 255XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 334",
+        "courseName": "Lighting Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((THR 230C, 230XS, FAVS 204C or 204XS) and (THR 240C, 240XS, FAVS 255C or 255XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 335",
+        "courseName": "Costume Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((THR 230C, 230XS, FAVS 204C or 204XS) and (THR 240C, 240XS, FAVS 255C or 255XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 336",
+        "courseName": "Technical Direction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 337",
+        "courseName": "Sound Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 338",
+        "courseName": "Production Stage Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 339",
+        "courseName": "Principles of Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (THR 333C, 333XS, 334C, 334XS, 335C, 337C, 335XS or 337XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 340",
+        "courseName": "Advanced Studies in Directing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 329C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 342",
+        "courseName": "Makeup Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 343",
+        "courseName": "Costume Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 350",
+        "courseName": "Script Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (THR 210C or 230C).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 351",
+        "courseName": "Dramatic Theory and Criticism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 352",
+        "courseName": "Dramatic Literature Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 353",
+        "courseName": "Advanced Studies in Theater History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 354",
+        "courseName": "American Voices",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 355",
+        "courseName": "Moral Vision in American Theater",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 359",
+        "courseName": "World Stages",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 365",
+        "courseName": "Characterization",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 210C and 310C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 380",
+        "courseName": "Playwriting I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 381",
+        "courseName": "Playwriting II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 380C or FAVS 280C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 382",
+        "courseName": "Screenplay Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

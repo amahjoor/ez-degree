@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "BENG 214",
+        "courseName": "Physiology for Engineers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BENG 101C or 101XS) and (BIOL 213C or 213XS) and MATH 114B-).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "BENG 230",
+        "courseName": "Continuum Biomechanics and Transport I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PHYS 160C or 160XS) and (PHYS 260*C or 260XS) and (MATH 203C or 203XS) and (MATH 213C or 213XS) and (MATH 214*C or 214XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 240",
+        "courseName": "Biomaterials",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 211C, 211XS, 271C or 271XS) and (MATH 113C or 113XS) and (BIOL 213C or 213XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BENG 241",
+        "courseName": "Biomechanics and Biomaterials Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: ((BENG 230*C or 230XS) and (BENG 240*C or 240XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

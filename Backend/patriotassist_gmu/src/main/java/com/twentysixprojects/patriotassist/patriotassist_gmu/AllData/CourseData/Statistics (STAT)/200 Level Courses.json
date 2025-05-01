@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "STAT 250",
+        "courseName": "Introductory Statistics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 260",
+        "courseName": "Introduction to Statistical Practice I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 113*C, 113*XS, 115*C, 115*XS, 124*C or 124*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

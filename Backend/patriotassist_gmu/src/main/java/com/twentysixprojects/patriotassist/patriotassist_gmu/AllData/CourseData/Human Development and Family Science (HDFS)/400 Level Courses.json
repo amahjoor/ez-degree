@@ -1,0 +1,32 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "HDFS 400",
+        "courseName": "Advanced Family Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HDFS 401",
+        "courseName": "Family Law and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HDFS 480",
+        "courseName": "Special Topics in Human Development and Family Science",
+        "courseCredits": "3-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HDFS 498",
+        "courseName": "Internship and Analysis in Human Development and Family Science",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HDFS 499",
+        "courseName": "Advanced Internship and Analysis in Human Development and Family Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((HDFS 300D or 498XS) and (PSYC 301*D, 301XS, SOCI 303*D, 303XS, INTS 434*D or 434XS)).\n* May be taken concurrently.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS."
+    }
+]}

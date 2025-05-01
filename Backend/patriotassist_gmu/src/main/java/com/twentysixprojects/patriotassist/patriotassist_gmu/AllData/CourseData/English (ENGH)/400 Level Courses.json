@@ -1,0 +1,266 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ENGH 400",
+        "courseName": "Honors Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 401",
+        "courseName": "RS: Honors Thesis Writing Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 402",
+        "courseName": "Honors Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 408",
+        "courseName": "Topics in Criticism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 409",
+        "courseName": "Literary Modes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 412",
+        "courseName": "Topics in Folklore Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 414",
+        "courseName": "Folklore and the Supernatural",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 415",
+        "courseName": "Folk Art and Folk Artists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 416",
+        "courseName": "Folklore and Migration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 417",
+        "courseName": "RS: Topics in Folklore Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 418",
+        "courseName": "Cultural Constructions of Sexualities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 419",
+        "courseName": "Topics in Popular Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 421",
+        "courseName": "Topics in Medieval and Renaissance Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 422",
+        "courseName": "Chaucer",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 428",
+        "courseName": "Milton",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 431",
+        "courseName": "Topics: British Literary Periods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 432",
+        "courseName": "Topics: British Authors",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 441",
+        "courseName": "Topics: American Authors",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 442",
+        "courseName": "Topics: American Literary Periods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 451",
+        "courseName": "Science Fiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 452",
+        "courseName": "Critical Study of Children's Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 453",
+        "courseName": "Topics in Fiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 454",
+        "courseName": "Topics in Poetry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 455",
+        "courseName": "Topics in Drama",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 456",
+        "courseName": "Topics in Literary Nonfiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 458",
+        "courseName": "RS: Topics in Literary Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 459",
+        "courseName": "Internship",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 470",
+        "courseName": "RS: Topics in Screen Cultures Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 472",
+        "courseName": "Topics in Film/Media Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 474",
+        "courseName": "Topics in Screen Cultures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 482",
+        "courseName": "Community and Public Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 483",
+        "courseName": "Technical Editing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 484",
+        "courseName": "RS: Writing Ethnography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 485",
+        "courseName": "Document Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 486",
+        "courseName": "RS: Writing Nonfiction for the Public",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 487",
+        "courseName": "Advanced Technical Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGH 388C or 388XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ENGH 488",
+        "courseName": "Topics in Writing and Rhetoric",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 489",
+        "courseName": "Proposal Writing and Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 492",
+        "courseName": "Advanced Fiction Writing Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 493",
+        "courseName": "Advanced Workshop in Nonfiction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 494",
+        "courseName": "Advanced Poetry Writing Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 495",
+        "courseName": "Capstone and Thesis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 497",
+        "courseName": "Topics in Creative Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

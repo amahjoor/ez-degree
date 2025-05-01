@@ -1,0 +1,20 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "OSCM 721",
+        "courseName": "Seminar in Operations and Supply Chain Management",
+        "courseCredits": "1.5 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OSCM 731",
+        "courseName": "Seminar in Supply Chain Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OSCM 732",
+        "courseName": "Seminar in Innovation and New Product Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

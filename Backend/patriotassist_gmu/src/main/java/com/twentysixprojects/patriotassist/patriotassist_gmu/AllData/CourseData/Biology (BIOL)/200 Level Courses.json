@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "BIOL 213",
+        "courseName": "Cell Structure and Function",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 103C, CHEM 211C or 271C).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "BIOL 214",
+        "courseName": "Biostatistics for Biology Majors",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 246",
+        "courseName": "Introductory Microbiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 295",
+        "courseName": "Summer Research in Biology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

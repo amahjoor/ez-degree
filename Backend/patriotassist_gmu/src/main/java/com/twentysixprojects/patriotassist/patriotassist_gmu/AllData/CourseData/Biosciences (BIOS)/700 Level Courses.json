@@ -1,0 +1,86 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "BIOS 701",
+        "courseName": "Systems Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 702",
+        "courseName": "Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 703",
+        "courseName": "Laboratory Rotation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 704",
+        "courseName": "Topics in Biosciences",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 710",
+        "courseName": "Current Topics in Bioscience",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 715",
+        "courseName": "Molecular Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 716",
+        "courseName": "Methods in Evolutionary Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 740",
+        "courseName": "Laboratory Methods in Functional Genomics and Biotechnology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 741",
+        "courseName": "Genomics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 742",
+        "courseName": "Biotechnology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 743",
+        "courseName": "Genomics, Proteomics, and Bioinformatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 744",
+        "courseName": "Molecular Genetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 761",
+        "courseName": "Dispersal Patterns of Biological Agents",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOS 767",
+        "courseName": "Molecular Evolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

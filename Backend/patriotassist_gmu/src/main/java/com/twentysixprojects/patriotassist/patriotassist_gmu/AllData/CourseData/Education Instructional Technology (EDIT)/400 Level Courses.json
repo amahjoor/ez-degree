@@ -1,0 +1,14 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "EDIT 401",
+        "courseName": "Introduction to Learning Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDIT 426",
+        "courseName": "Web Accessibility and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

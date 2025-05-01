@@ -1,0 +1,128 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDRD 610",
+        "courseName": "Content Literacy for English Language Learners, PK-12",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDCI 519B- or 519XS) and (EDCI 520*B- or 520*XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRD 619",
+        "courseName": "Disciplinary Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 566B, 567B, 569B, 572B or 573B) and (SEED 667*B, 669*B, 672*B or 673*B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDRD 620",
+        "courseName": "Reading/Writing in Foreign/World Languages",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDCI 520*B- or 520*XS) and (EDCI 560B- or 560XS) and (EDCI 684*B- or 684*XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRD 625",
+        "courseName": "Integrating Literacy and Technology for K-12 Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 626",
+        "courseName": "Writing Development and Instruction for K-12 Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 627",
+        "courseName": "Comprehension and Vocabulary Development for K-12 Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 628",
+        "courseName": "Word Analysis: Phonics, Vocabulary, and Spelling for K-12 Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 629",
+        "courseName": "Literacy Foundations and Instruction for School Psychologists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 634",
+        "courseName": "School-Based Leadership in Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRD 630B- or 630XS) and (EDRD 631B- or 631XS) and (EDRD 632B- or 632XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRD 640",
+        "courseName": "Trajectory of Literacy Research",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 641",
+        "courseName": "Trends and Issues in Literacy",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 642",
+        "courseName": "Foundations of Literacy Instruction: Code-Based Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 643",
+        "courseName": "Foundations of Literacy Instruction: Meaning-Based Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 644",
+        "courseName": "Literacy Assessment and Intervention",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRD 642B-, 643B- and 645*B-).\n* May be taken concurrently.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDRD 645",
+        "courseName": "Supervised Literacy Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 646",
+        "courseName": "School-Based Leadership in Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRD 640B-, 641B-, 642B- and 643B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDRD 647",
+        "courseName": "Introduction to Literacy Coaching",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (EDRD 640B-, 641B-, 642B- and 643B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDRD 680",
+        "courseName": "Foundations of Coaching and Fostering Professional Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 681",
+        "courseName": "Collaboration and Communication in Literacy Coaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 682",
+        "courseName": "Creating Change through Data-Oriented Coaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRD 683",
+        "courseName": "Trends and Issues in Literacy Instruction and Literacy Coaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

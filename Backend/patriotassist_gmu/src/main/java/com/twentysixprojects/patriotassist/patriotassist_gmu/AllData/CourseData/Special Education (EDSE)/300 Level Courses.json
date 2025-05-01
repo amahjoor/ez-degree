@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "EDSE 311",
+        "courseName": "Characteristics of Students with Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 315",
+        "courseName": "American Sign Language (ASL) IV",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisite: EDSE 219C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "EDSE 316",
+        "courseName": "American Sign Language (ASL) V",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDSE 219B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDSE 341",
+        "courseName": "Language Acquisition and Reading and Writing Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 201C or 201XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 351",
+        "courseName": "Technology Integration for Specialized Instruction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 352",
+        "courseName": "Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 353",
+        "courseName": "Individualized Behavior Supports",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 354",
+        "courseName": "Consultation and Collaboration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 361",
+        "courseName": "Characteristics of Students with Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 362",
+        "courseName": "Communication with Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 381",
+        "courseName": "Exploratory Field Experience in Special Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 201C or 201XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

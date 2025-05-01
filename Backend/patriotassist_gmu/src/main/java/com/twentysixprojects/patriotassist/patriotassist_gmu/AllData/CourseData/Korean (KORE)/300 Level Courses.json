@@ -1,0 +1,98 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "KORE 300",
+        "courseName": "Korean Culture and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 301",
+        "courseName": "Advanced Korean Language and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 305",
+        "courseName": "Business Korean",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 310",
+        "courseName": "Traditional Korean Literature in Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 311",
+        "courseName": "Modern Korean Literature in Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 320",
+        "courseName": "Korean Popular Culture in a Global World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 321",
+        "courseName": "Korean Proficiency through Visual Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 325",
+        "courseName": "Major North and South Korean Writers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 331",
+        "courseName": "Special Topics in Advanced Korean Reading",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 332",
+        "courseName": "Special Topics in Advanced Korean Speaking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 340",
+        "courseName": "Transformation of Language and Culture in North and South Korea",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 350",
+        "courseName": "Korean Cinema in Global Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 361",
+        "courseName": "Korean History before 1876",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 362",
+        "courseName": "Modern Korean History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 370",
+        "courseName": "Advanced Korean Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KORE 385",
+        "courseName": "Introduction to Korean Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

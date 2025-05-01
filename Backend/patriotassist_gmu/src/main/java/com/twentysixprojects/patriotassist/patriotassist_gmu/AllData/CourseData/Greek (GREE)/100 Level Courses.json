@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "GREE 150",
+        "courseName": "Classical Greek I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GREE 160",
+        "courseName": "Classical Greek II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

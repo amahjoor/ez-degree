@@ -1,0 +1,80 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "STAT 455",
+        "courseName": "Experimental Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 350C or 350XS) or (STAT 354C or 354XS) or (STAT 360C or 360XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 456",
+        "courseName": "Applied Regression Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 350C or 350XS) or (STAT 354C or 354XS) or (STAT 360C or 360XS) or (BUS 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 460",
+        "courseName": "Introduction to Biostatistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 350C, 350XS, 354C, 354XS, 360C or 360XS) and (STAT 362*C or 362XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 462",
+        "courseName": "Applied Multivariate Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 350C or 350XS) or (STAT 354C or 354XS) or (STAT 360C or 360XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 463",
+        "courseName": "Introduction to Exploratory Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 350C or 350XS) or (STAT 354C or 354XS) or (STAT 360C or 360XS) or (BUS 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 465",
+        "courseName": "Nonparametric Statistics and Categorical Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 350C or 350XS) or (STAT 354C or 354XS) or (STAT 360C or 360XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 472",
+        "courseName": "Introduction to Statistical Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: STAT 456C or 456XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 474",
+        "courseName": "Introduction to Survey Sampling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 350C, 350XS, 354C, 354XS, 360C or 360XS) and (STAT 362*C or 362XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 489",
+        "courseName": "Pre-Capstone Professional Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 354C, 354XS, 360C or 360XS) and (STAT 362C or 362XS) and (ENGH 302C or 302XS) and (COMM 100C, 100XS, 101C or 101XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 490",
+        "courseName": "Capstone in Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: STAT 489C or 489XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 494",
+        "courseName": "Internship In Statistics",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 498",
+        "courseName": "Independent Study in Statistics",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 499",
+        "courseName": "Special Topics in Statistics",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

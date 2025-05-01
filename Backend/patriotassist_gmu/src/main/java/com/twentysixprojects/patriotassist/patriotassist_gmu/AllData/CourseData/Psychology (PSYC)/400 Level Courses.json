@@ -1,0 +1,158 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "PSYC 405",
+        "courseName": "Mystery, Madness, and Murder",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 406",
+        "courseName": "Psychology of Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 408",
+        "courseName": "Psychological Fitness",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 410",
+        "courseName": "The Psychology of Environmental Stewardship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 414",
+        "courseName": "Behavior Disorders of Childhood",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 415",
+        "courseName": "Psychological Factors in Aging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 417",
+        "courseName": "Science of Well Being",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 418",
+        "courseName": "Death, Dying, and Grieving",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 423",
+        "courseName": "Group Psychotherapy Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 427",
+        "courseName": "Community Engagement for Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 430",
+        "courseName": "Clinical Practicum in Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 435",
+        "courseName": "Personnel Training and Development: A Psychological Perspective",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 440",
+        "courseName": "Forensic Psychology: Science and Pseudoscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 441",
+        "courseName": "Criminal Behavior: Psychological and Neurological Aspects",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 460",
+        "courseName": "Independent Study in Psychology",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 461",
+        "courseName": "Special Topics",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 462",
+        "courseName": "Selected Topics in Forensic Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 465",
+        "courseName": "Pioneering Ideas in Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 466",
+        "courseName": "Psychology of Intimate Relationships",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 467",
+        "courseName": "The Psychology of Working in Groups and Teams",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 472",
+        "courseName": "Current Topics in Brain and Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 480",
+        "courseName": "Biological Bases of Alzheimer's Disease",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 490",
+        "courseName": "Psychology Honors I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 491",
+        "courseName": "Psychology Honors II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 492",
+        "courseName": "RS: Psychology Honors III",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 499",
+        "courseName": "Senior Thesis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,32 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "SOCI 711",
+        "courseName": "Classical Sociological Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 712",
+        "courseName": "Contemporary Sociological Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 730",
+        "courseName": "Analytic Techniques of Social Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 797",
+        "courseName": "Master's Capstone Paper",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

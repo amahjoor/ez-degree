@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CYSE 211",
+        "courseName": "Operating Systems and Lab",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 222C and CYSE 101C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CYSE 230",
+        "courseName": "Computer Networking",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 112C, 112XS, 109C or 109XS) and (CYSE 101C or 101XS) and (MATH 113C or 113XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

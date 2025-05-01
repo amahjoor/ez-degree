@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "LATN 101",
+        "courseName": "Elementary Latin",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LATN 102",
+        "courseName": "Elementary Latin",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

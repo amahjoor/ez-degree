@@ -1,0 +1,62 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "GCH 500",
+        "courseName": "Foundations of Public Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 515",
+        "courseName": "Lesbian, Gay, Bisexual, Transgender, and Queer Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 535",
+        "courseName": "Public Health Preparedness and Response",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 543",
+        "courseName": "Global Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 551",
+        "courseName": "Rural Public Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 560",
+        "courseName": "Environmental Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 565",
+        "courseName": "Public Health Toxicology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 571",
+        "courseName": "HIV/AIDS: Concepts, Principles, and Interventions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 591",
+        "courseName": "Study Abroad in Public Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 594",
+        "courseName": "Special Topics in Global and Community Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

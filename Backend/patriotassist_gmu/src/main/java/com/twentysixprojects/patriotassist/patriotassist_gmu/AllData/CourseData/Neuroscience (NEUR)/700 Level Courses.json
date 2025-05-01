@@ -1,0 +1,68 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "NEUR 701",
+        "courseName": "Neuroscience Laboratory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 702",
+        "courseName": "Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 703",
+        "courseName": "Laboratory Rotation and Readings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 709",
+        "courseName": "Neuroscience Seminars",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 710",
+        "courseName": "Special Topics in Neuroscience",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 734",
+        "courseName": "Computational Neurobiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 735",
+        "courseName": "Computational Neuroscience Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 741",
+        "courseName": "Introduction to Neuroimaging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 742",
+        "courseName": "Cognitive Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 751",
+        "courseName": "Applied Dynamics in Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 752",
+        "courseName": "Modern Instrumentation in Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

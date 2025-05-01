@@ -1,0 +1,50 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "RUSS 401",
+        "courseName": "Readings in the Social Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 407",
+        "courseName": "Russian Drama and Theater",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 410",
+        "courseName": "Russian Poetry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 470",
+        "courseName": "Topics in (Post) Soviet Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 480",
+        "courseName": "Fourth-Year Russian",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 481",
+        "courseName": "Fourth-Year Russian",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 490",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 491",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,50 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EDLE 801",
+        "courseName": "Contemporary Organization Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 802",
+        "courseName": "Leadership and Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 812",
+        "courseName": "Education Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 813",
+        "courseName": "Social and Political Forces in Education Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 814",
+        "courseName": "Education Finance and Human Resources",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 816",
+        "courseName": "Instructional Leadership-Curriculum Policy and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 818",
+        "courseName": "Instructional Leadership-Supervision Policy and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 895",
+        "courseName": "Emerging Issues in Administration and Supervision",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

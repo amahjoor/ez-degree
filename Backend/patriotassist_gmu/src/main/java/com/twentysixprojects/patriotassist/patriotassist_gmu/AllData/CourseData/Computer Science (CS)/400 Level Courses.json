@@ -1,0 +1,158 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CS 405",
+        "courseName": "Synthesis of Ethics and Law for the Computing Professional",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 105C, 105XS, 110C or 110XS) and ((COMM 100C, 100XS, 101C or 101XS) and (ENGH 302C or 302XS)) or (HNRS 260C, 260XS, 261C or 261XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 425",
+        "courseName": "Game Programming I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 351C or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 426",
+        "courseName": "Game Programming II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 325C or 325XS) and (CS 425C or 425XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 440",
+        "courseName": "Compilers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 330C or 330XS) and (CS 367C or 367XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 450",
+        "courseName": "Database Concepts",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 451",
+        "courseName": "Computer Graphics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 203C or 203XS) and (CS 310C or 310XS) and (CS 367C or 367XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 452",
+        "courseName": "Virtual Reality",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 325C, 325, 325XS, 351C, 351, 351XS, 451C, 451 or 451XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 455",
+        "courseName": "Computer Communications and Networking",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 367C or 367XS) and (STAT 344C or 344XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 463",
+        "courseName": "Comparative Programming Languages",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 330C or 330XS) and (CS 367C or 367XS) and (CS 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 465",
+        "courseName": "Computer Systems Architecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 367C or 367XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 468",
+        "courseName": "Secure Programming and Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 367C or 367XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 469",
+        "courseName": "Security Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 330C or 330XS) and (CS 367C or 367XS) and (STAT 344C or 344XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 471",
+        "courseName": "Operating Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 310C, 310XS, ECE 340C or 340XS) and (CS 367C, 367XS, ECE 445C or 445XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 475",
+        "courseName": "Concurrent and Distributed Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 367C or 367XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 477",
+        "courseName": "Mobile Application Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 367C or 367XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 478",
+        "courseName": "Natural Language Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 310C, 310XS or 310) and (CS 330C, 330XS or 330)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 480",
+        "courseName": "Introduction to Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 482",
+        "courseName": "Computer Vision",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (MATH 203C or 203XS) and (STAT 344C or 344XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 483",
+        "courseName": "Analysis of Algorithms",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 330C or 330XS) and (MATH 125C or 125XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 484",
+        "courseName": "Data Mining",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 310C or 310XS) and ((STAT 344C, 344XS, 334C, 334XS or 346C) or (MATH 351C and 352C))).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 485",
+        "courseName": "Autonomous Robotics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 262C or 262XS) and (CS 310C or 310XS) and (MATH 203C or 203XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 487",
+        "courseName": "Introduction to Cryptography",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 310C or 310XS) and (CS 330C or 330XS) and (STAT 344C or 344XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 490",
+        "courseName": "Design Exhibition",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 321C, 321XS or 421C) and (CS 483C or 483XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 491",
+        "courseName": "Industry-Sponsored Senior Design Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 321C, 321XS or 321).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 498",
+        "courseName": "Independent Study in Computer Science",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 499",
+        "courseName": "Special Topics in Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 310C or 310XS) and (CS 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

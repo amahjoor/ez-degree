@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "FREN 201",
+        "courseName": "Intermediate French I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 202",
+        "courseName": "Intermediate French II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

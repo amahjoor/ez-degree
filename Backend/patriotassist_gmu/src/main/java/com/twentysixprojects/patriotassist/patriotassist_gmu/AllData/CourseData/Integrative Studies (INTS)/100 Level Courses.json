@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "INTS 101",
+        "courseName": "Narratives of Identity",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 102",
+        "courseName": "Global Networks and Communities",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 103",
+        "courseName": "Human Creativity: Science and Art",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 195",
+        "courseName": "Field-Based Work",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

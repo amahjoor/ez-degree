@@ -1,0 +1,530 @@
+package com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.TimeFoldCustom;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.twentysixprojects.patriotassist.patriotassist_gmu.Models.GenerateScheduleCustomModel;
+import java.io.File;
+import java.time.Duration;
+import java.util.*;
+import java.util.stream.Collectors;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import ai.timefold.solver.core.api.solver.Solver;
+import ai.timefold.solver.core.api.solver.SolverFactory;
+import ai.timefold.solver.core.config.solver.EnvironmentMode;
+import ai.timefold.solver.core.config.solver.SolverConfig;
+
+@Component
+public class CustomTimefoldScheduler {
+
+    private static final boolean DEBUG = true;
+
+    @Value("${project.data.path}")
+    private String AllData_Path;
+
+    // Helper inner class representing one variant configuration.
+    private static class VariantConfig {
+        boolean minimizeGap;
+        boolean minimizeDaysOnCampus;
+        boolean preferEarlier; // true: Early; false: Late
+        String label;
+        double creditMultiplier;
+        double professorRatingMultiplier;
+        double gapMultiplier;
+        double maxCreditRewardMultiplier;
+        double timePreferenceMultiplier;
+        double minDaysOnCampusMultiplier;
+    
+        VariantConfig(boolean minimizeGap, boolean minimizeDaysOnCampus, boolean preferEarlier, 
+                      String label, double creditMultiplier, double professorRatingMultiplier,
+                      double gapMultiplier, double maxCreditRewardMultiplier, double timePreferenceMultiplier, double minDaysOnCampusMultiplier) {
+            this.minimizeGap = minimizeGap;
+            this.minimizeDaysOnCampus = minimizeDaysOnCampus;
+            this.preferEarlier = preferEarlier;
+            this.label = label;
+            this.creditMultiplier = creditMultiplier;
+            this.professorRatingMultiplier = professorRatingMultiplier;
+            this.gapMultiplier = gapMultiplier;
+            this.maxCreditRewardMultiplier = maxCreditRewardMultiplier;
+            this.timePreferenceMultiplier = timePreferenceMultiplier;
+            this.minDaysOnCampusMultiplier = minDaysOnCampusMultiplier;
+        }
+    }
+
+    // New class to hold the variant result.
+    public static class ScheduleVariantResult {
+        private String variantLabel;
+        private CustomTimefoldSchedule schedule;
+
+        public ScheduleVariantResult(String variantLabel, CustomTimefoldSchedule schedule) {
+            this.variantLabel = variantLabel;
+            this.schedule = schedule;
+        }
+
+        public String getVariantLabel() {
+            return variantLabel;
+        }
+
+        public void setVariantLabel(String variantLabel) {
+            this.variantLabel = variantLabel;
+        }
+
+        public CustomTimefoldSchedule getSchedule() {
+            return schedule;
+        }
+
+        public void setSchedule(CustomTimefoldSchedule schedule) {
+            this.schedule = schedule;
+        }
+    }
+
+    /**
+     * Generates eight schedule variants based on three soft preferences:
+     * minimizeGap, minimizeDaysOnCampus, and time preference (Early vs. Late).
+     *
+     * The variants use the following settings:
+     * <ul>
+     *   <li>ID 1: minimizeGap=false, preferEarlier=true, minimizeDaysOnCampus=false, label="☀️ Early Bird – Start early, chill pace"</li>
+     *   <li>ID 2: minimizeGap=true,  preferEarlier=true, minimizeDaysOnCampus=false, label="🧘‍♂️ Focused Mornings – Early + no gaps"</li>
+     *   <li>ID 3: minimizeGap=false, preferEarlier=false, minimizeDaysOnCampus=false, label="🌙 Late Riser – Sleep in, spread out"</li>
+     *   <li>ID 4: minimizeGap=true,  preferEarlier=false, minimizeDaysOnCampus=false, label="🎯 Night Owl Focus – Late with tight blocks"</li>
+     *   <li>ID 5: minimizeGap=false, preferEarlier=true, minimizeDaysOnCampus=true,  label="🚗 Efficient Early – Early + fewer trips"</li>
+     *   <li>ID 6: minimizeGap=true,  preferEarlier=true, minimizeDaysOnCampus=true,  label="⏱ Ultra Efficient AM – Min gaps + early + fewer days"</li>
+     *   <li>ID 7: minimizeGap=false, preferEarlier=false, minimizeDaysOnCampus=true,  label="🌆 Compact Late – Late starts, fewer days"</li>
+     *   <li>ID 8: minimizeGap=true,  preferEarlier=false, minimizeDaysOnCampus=true,  label="📆 Late & Tight – Max efficiency for late peeps"</li>
+     * </ul>
+     *
+     * The solver is configured to run up to 10 seconds but stops early if no improvement is seen for 3 seconds.
+     *
+     * @param courseFiles List of eligible course file names.
+     * @param scheduleData Custom schedule data containing course codes and other constraints.
+     * @param creditMultiplier Multiplier for credit limit constraint.
+     * @param professorRatingMultiplier Multiplier for professor rating objective.
+     * @param gapMultiplier Multiplier for gap minimization objective.
+     * @param degreeRequirementMultiplier (retained for compatibility; not used in this implementation)
+     * @param maxCreditRewardMultiplier Multiplier for the credit maximization soft objective.
+     * @return JSON string representing the generated schedule variants.
+     */
+    public String generateSchedules(List<String> courseFiles, GenerateScheduleCustomModel scheduleData) {
+        try {
+            // Load course abbreviation mapping.
+            CustomCourseAbbrUtil.loadMapping(AllData_Path);
+
+            // Initialize ObjectMapper.
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.registerModule(new JavaTimeModule());
+            mapper.disable(com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+
+            // Build a mapping from normalized course code to list of courses loaded from courseFiles.
+            Map<String, List<CustomTimefoldCourse>> courseMap = new HashMap<>();
+            for (String fileName : courseFiles) {
+                File file = new File(AllData_Path 
+                        + File.separator + "ScheduleData" 
+                        + File.separator + scheduleData.getTerm() 
+                        + File.separator + fileName);
+                CustomTimefoldCourse course = mapper.readValue(file, CustomTimefoldCourse.class);
+                course.parseMeetingTimes();
+                String normalized = normalizeCourseCode(course);
+                courseMap.computeIfAbsent(normalized, k -> new ArrayList<>()).add(course);
+            }
+            
+            // Build a map from normalized course code to the user-provided labOnly flag,
+            // and build the final course list.
+            Map<String, Boolean> userLabOnlyMap = new HashMap<>();
+            List<CustomTimefoldCourse> finalCourseList = new ArrayList<>();
+            for (String codeEntry : scheduleData.getCourseCodes()) {
+                String[] parts = codeEntry.split(":");
+                String courseCodeStr = parts[0].trim();
+                boolean labOnlyFlag = false;
+                if (parts.length > 1) {
+                    labOnlyFlag = Boolean.parseBoolean(parts[1].trim());
+                }
+                String normalizedCode = courseCodeStr.toUpperCase();
+                userLabOnlyMap.put(normalizedCode, labOnlyFlag);
+                
+                List<CustomTimefoldCourse> availableCourses = courseMap.get(normalizedCode);
+                if (availableCourses == null || availableCourses.isEmpty()) {
+                    continue;
+                }
+                // Separate candidate sections by type.
+                List<CustomTimefoldCourse> lectures = availableCourses.stream()
+                        .filter(c -> "Lecture".equalsIgnoreCase(c.getScheduleType()))
+                        .collect(Collectors.toList());
+                List<CustomTimefoldCourse> labs = availableCourses.stream()
+                        .filter(c -> "Laboratory".equalsIgnoreCase(c.getScheduleType()))
+                        .collect(Collectors.toList());
+                
+                if (labOnlyFlag) {
+                    finalCourseList.addAll(labs);
+                } else {
+                    finalCourseList.addAll(lectures);
+                    finalCourseList.addAll(labs);
+                }
+            }
+            
+            if (DEBUG) {
+                List<String> finalCodes = finalCourseList.stream()
+                        .map(c -> normalizeCourseCode(c))
+                        .collect(Collectors.toList());
+                System.out.println("DEBUG: Final course list (normalized codes): " + finalCodes);
+            }
+
+            // Load professor ratings.
+            File rmpFile = new File(AllData_Path 
+                    + File.separator + "RMP" 
+                    + File.separator + "RMPData_All.json");
+            CustomTimefoldProfessorRating[] ratingsArray = mapper.readValue(rmpFile, CustomTimefoldProfessorRating[].class);
+            Map<String, CustomTimefoldProfessorRating> professorRatingMap = new HashMap<>();
+            for (CustomTimefoldProfessorRating pr : ratingsArray) {
+                String normalizedName = normalizeInstructorName(pr.getName());
+                professorRatingMap.put(normalizedName, pr);
+            }
+            
+            // Define the 4 variant configurations (matching your table).
+            List<VariantConfig> variants = new ArrayList<>();
+            
+                variants.add(new VariantConfig(
+                true,  // minimizeGap enabled
+                false, // minimizeDaysOnCampus disabled
+                true,  // prefer earlier classes
+                "Minimize Gaps Between Classes | Prefer Earlier Classes", 
+                1.0,   // creditMultiplier
+                2.0,   // professorRatingMultiplier
+                3,     // gapMultiplier enabled
+                2.0,   // maxCreditRewardMultiplier
+                3.5,   // timePreferenceMultiplier enabled
+                0      // minDaysOnCampusMultiplier inactive
+            ));
+
+            // Variant: Minimize Gaps Between Classes | Prefer Later Classes
+            variants.add(new VariantConfig(
+                true,  // minimizeGap enabled
+                false, // minimizeDaysOnCampus disabled
+                false, // prefer later classes (i.e., not prefer earlier)
+                "Minimize Gaps Between Classes | Prefer Later Classes", 
+                1.0,
+                2.0,
+                3,     // gapMultiplier enabled
+                2.0,
+                3.5,     // timePreferenceMultiplier disabled
+                0
+            ));
+
+            // Variant: Minimize Days On Campus | Prefer Earlier Classes
+            variants.add(new VariantConfig(
+                false, // minimizeGap disabled
+                true,  // minimizeDaysOnCampus enabled
+                true,  // prefer earlier classes
+                "Minimize Days On Campus | Prefer Earlier Classes", 
+                1.0,
+                1.0,
+                0,     // gapMultiplier disabled
+                2.0,
+                2,   // timePreferenceMultiplier enabled
+                3.0    // minDaysOnCampusMultiplier active
+            ));
+
+            // Variant: Minimize Days On Campus | Prefer Later Classes
+            variants.add(new VariantConfig(
+                false, // minimizeGap disabled
+                true,  // minimizeDaysOnCampus enabled
+                false, // prefer later classes
+                "Minimize Days On Campus | Prefer Later Classes", 
+                1.0,
+                1.0,
+                0,     // gapMultiplier disabled
+                2.0,
+                3,     // timePreferenceMultiplier disabled
+                3.0
+            ));
+            
+            // Prepare list to collect schedule variant results.
+            List<ScheduleVariantResult> scheduleVariantResults = new ArrayList<>();
+            
+            // For each variant, create a new solver instance with updated soft preference settings.
+            for (VariantConfig variant : variants) {
+                // Create and configure a new CustomTimefoldConstraintProvider instance.
+                CustomTimefoldConstraintProvider customProvider = new CustomTimefoldConstraintProvider();
+                customProvider.setProfessorRatingMap(professorRatingMap);
+                customProvider.setCreditMultiplier(variant.creditMultiplier);
+                customProvider.setProfessorRatingMultiplier(variant.professorRatingMultiplier);
+                // If minimizeGap is enabled for this variant, use its gap multiplier; otherwise, disable gap minimization.
+                customProvider.setGapMultiplier(variant.minimizeGap ? variant.gapMultiplier : 0);
+                customProvider.setMaxCreditRewardMultiplier(variant.maxCreditRewardMultiplier);
+                customProvider.setLabOnlyCourseMap(userLabOnlyMap);
+                customProvider.setPreferEarlier(variant.preferEarlier);
+                customProvider.setMinimizeDaysOnCampus(variant.minimizeDaysOnCampus);
+                // NEW: Set the weight for the time preference objective.
+                customProvider.setTimePreferenceMultiplier(variant.timePreferenceMultiplier);
+                // NEW: Set the weight for the minimize days on campus objective.
+                customProvider.setMinDaysOnCampusMultiplier(variant.minDaysOnCampusMultiplier);
+                CustomTimefoldConstraintProvider.setConfiguredInstance(customProvider);
+                
+                // Build solver configuration with termination: up to 10 seconds, but stop if unimproved for 3 seconds.
+                SolverConfig solverConfig = new SolverConfig()
+                        .withSolutionClass(CustomTimefoldSchedule.class)
+                        .withEntityClasses(CustomTimefoldCourseAssignment.class)
+                        .withConstraintProviderClass(CustomTimefoldConstraintProvider.class)
+                        .withTerminationSpentLimit(Duration.ofSeconds(12))
+                        .withEnvironmentMode(EnvironmentMode.NON_REPRODUCIBLE);
+                        
+                solverConfig.getTerminationConfig().setUnimprovedSpentLimit(Duration.ofSeconds(4));
+                SolverFactory<CustomTimefoldSchedule> solverFactory = SolverFactory.create(solverConfig);
+                Solver<CustomTimefoldSchedule> solver = solverFactory.buildSolver();
+            
+                // Create the initial schedule.
+                List<CustomTimefoldCourseAssignment> assignmentList = new ArrayList<>();
+                for (CustomTimefoldCourse course : finalCourseList) {
+                    CustomTimefoldCourseAssignment assignment = new CustomTimefoldCourseAssignment();
+                    assignment.setCourse(course);
+                    assignment.setSelected(Boolean.TRUE);
+                    assignmentList.add(assignment);
+                }
+                CustomTimefoldSchedule schedule = new CustomTimefoldSchedule();
+                schedule.setCourseAssignmentList(assignmentList);
+                schedule.setSelectionRange(List.of(Boolean.TRUE, Boolean.FALSE));
+                CustomTimefoldCreditLimits creditLimits = new CustomTimefoldCreditLimits(scheduleData.getMinCredits(), scheduleData.getMaxCredits());
+                schedule.setCreditLimits(creditLimits);
+                
+                // Solve using the configured solver.
+                CustomTimefoldSchedule solvedSchedule = solver.solve(schedule);
+                
+                // Post-process: attach professor ratings.
+                List<CustomTimefoldCourseAssignment> selectedAssignments = solvedSchedule.getCourseAssignmentList()
+                        .stream()
+                        .filter(a -> Boolean.TRUE.equals(a.getSelected()))
+                        .peek(a -> {
+                            CustomTimefoldCourse course = a.getCourse();
+                            String normalizedName = normalizeInstructorName(course.getInstructor());
+                            CustomTimefoldProfessorRating rating = professorRatingMap.get(normalizedName);
+                            if (rating != null) {
+                                course.setProfessorRating(rating.getQualityRating());
+                                course.setProfessorRatingCount(rating.getRatingCount());
+                            } else {
+                                course.setProfessorRating(null);
+                                course.setProfessorRatingCount(null);
+                            }
+                        })
+                        .collect(Collectors.toList());
+                solvedSchedule.setCourseAssignmentList(selectedAssignments);
+                
+                // Log the variant label.
+                System.out.println("DEBUG: Generated variant (" + variant.label + ")");
+                
+                // Wrap the solved schedule with its variant label.
+                ScheduleVariantResult variantResult = new ScheduleVariantResult(variant.label, solvedSchedule);
+                scheduleVariantResults.add(variantResult);
+            }
+            
+            String resultJson = mapper.writeValueAsString(scheduleVariantResults);
+            return resultJson;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+        /**
+     * NEW FUNCTION: Generates a single schedule using the user-provided weight multipliers.
+     * It uses the following weights from scheduleData:
+     * <ul>
+     *   <li>minimizeGapMultiplier: applied if minimizeGap is true; otherwise 0.</li>
+     *   <li>maximizeProfessorRatingsMultiplier: applied if considerProfessorRatings is true; otherwise 0.</li>
+     *   <li>maximizeTimePreferenceMultiplier: applied if preferEarlierClasses or preferLaterClasses is true; otherwise 0.</li>
+     *   <li>minimizeDaysOnCampusMultiplier: applied if minimizeDaysOnCampus is true; otherwise 0.</li>
+     * </ul>
+     *
+     * @param courseFiles List of eligible course file names.
+     * @param scheduleData Custom schedule data containing course codes, constraints, and weight multipliers.
+     * @return JSON string representing the generated schedule.
+     */
+    public String generateSingleWeightedSchedule(List<String> courseFiles, GenerateScheduleCustomModel scheduleData) {
+        try {
+            // Load course abbreviation mapping.
+            CustomCourseAbbrUtil.loadMapping(AllData_Path);
+
+            // Initialize ObjectMapper.
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.registerModule(new JavaTimeModule());
+            mapper.disable(com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+
+            // Build a mapping from normalized course code to list of courses loaded from courseFiles.
+            Map<String, List<CustomTimefoldCourse>> courseMap = new HashMap<>();
+            for (String fileName : courseFiles) {
+                File file = new File(AllData_Path 
+                        + File.separator + "ScheduleData" 
+                        + File.separator + scheduleData.getTerm() 
+                        + File.separator + fileName);
+                CustomTimefoldCourse course = mapper.readValue(file, CustomTimefoldCourse.class);
+                course.parseMeetingTimes();
+                String normalized = normalizeCourseCode(course);
+                courseMap.computeIfAbsent(normalized, k -> new ArrayList<>()).add(course);
+            }
+            
+            // Build a map from normalized course code to the user-provided labOnly flag,
+            // and build the final course list.
+            Map<String, Boolean> userLabOnlyMap = new HashMap<>();
+            List<CustomTimefoldCourse> finalCourseList = new ArrayList<>();
+            for (String codeEntry : scheduleData.getCourseCodes()) {
+                String[] parts = codeEntry.split(":");
+                String courseCodeStr = parts[0].trim();
+                boolean labOnlyFlag = false;
+                if (parts.length > 1) {
+                    labOnlyFlag = Boolean.parseBoolean(parts[1].trim());
+                }
+                String normalizedCode = courseCodeStr.toUpperCase();
+                userLabOnlyMap.put(normalizedCode, labOnlyFlag);
+                
+                List<CustomTimefoldCourse> availableCourses = courseMap.get(normalizedCode);
+                if (availableCourses == null || availableCourses.isEmpty()) {
+                    continue;
+                }
+                // Separate candidate sections by type.
+                List<CustomTimefoldCourse> lectures = availableCourses.stream()
+                        .filter(c -> "Lecture".equalsIgnoreCase(c.getScheduleType()))
+                        .collect(Collectors.toList());
+                List<CustomTimefoldCourse> labs = availableCourses.stream()
+                        .filter(c -> "Laboratory".equalsIgnoreCase(c.getScheduleType()))
+                        .collect(Collectors.toList());
+                
+                if (labOnlyFlag) {
+                    finalCourseList.addAll(labs);
+                } else {
+                    finalCourseList.addAll(lectures);
+                    finalCourseList.addAll(labs);
+                }
+            }
+            
+            if (DEBUG) {
+                List<String> finalCodes = finalCourseList.stream()
+                        .map(c -> normalizeCourseCode(c))
+                        .collect(Collectors.toList());
+                System.out.println("DEBUG: Final course list (normalized codes): " + finalCodes);
+            }
+
+            // Load professor ratings.
+            File rmpFile = new File(AllData_Path 
+                    + File.separator + "RMP" 
+                    + File.separator + "RMPData_All.json");
+            CustomTimefoldProfessorRating[] ratingsArray = mapper.readValue(rmpFile, CustomTimefoldProfessorRating[].class);
+            Map<String, CustomTimefoldProfessorRating> professorRatingMap = new HashMap<>();
+            for (CustomTimefoldProfessorRating pr : ratingsArray) {
+                String normalizedName = normalizeInstructorName(pr.getName());
+                professorRatingMap.put(normalizedName, pr);
+            }
+            
+            // Configure constraint provider using the user-provided weights.
+            CustomTimefoldConstraintProvider customProvider = new CustomTimefoldConstraintProvider();
+            customProvider.setProfessorRatingMap(professorRatingMap);
+            // Use a default credit multiplier.
+            customProvider.setCreditMultiplier(1.0);
+            // Set professor rating multiplier if considerProfessorRatings is true.
+            if (scheduleData.getConsiderProfessorRatings()) {
+                customProvider.setProfessorRatingMultiplier(scheduleData.getMaximizeProfessorRatingsMultiplier());
+            } else {
+                customProvider.setProfessorRatingMultiplier(0);
+            }
+            // Set gap multiplier based on minimizeGap flag.
+            if (scheduleData.getMinimizeGap()) {
+                customProvider.setGapMultiplier(scheduleData.getMinimizeGapMultiplier());
+            } else {
+                customProvider.setGapMultiplier(0);
+            }
+            // Set max credit reward multiplier (constant value, e.g., 3.0).
+            customProvider.setMaxCreditRewardMultiplier(3.0);
+            // Set lab only course map.
+            customProvider.setLabOnlyCourseMap(userLabOnlyMap);
+            // For time preference, if either preferEarlierClasses or preferLaterClasses is true, use the provided multiplier; otherwise 0.
+            if (scheduleData.getPreferEarlierClasses() || scheduleData.getPreferLaterClasses()) {
+                customProvider.setTimePreferenceMultiplier(scheduleData.getMaximizeTimePreferenceMultiplier());
+            } else {
+                customProvider.setTimePreferenceMultiplier(0);
+            }
+            // Set minimize days on campus multiplier based on flag.
+            if (scheduleData.getMinimizeDaysOnCampus()) {
+                customProvider.setMinDaysOnCampusMultiplier(scheduleData.getMinimizeDaysOnCampusMultiplier());
+            } else {
+                customProvider.setMinDaysOnCampusMultiplier(0);
+            }
+            // Also set time preference and minimize days on campus flags.
+            customProvider.setPreferEarlier(scheduleData.getPreferEarlierClasses());
+            customProvider.setMinimizeDaysOnCampus(scheduleData.getMinimizeDaysOnCampus());
+            CustomTimefoldConstraintProvider.setConfiguredInstance(customProvider);
+            
+            // Build solver configuration with termination: up to 10 seconds and stop if unimproved for 3 seconds.
+            SolverConfig solverConfig = new SolverConfig()
+                    .withSolutionClass(CustomTimefoldSchedule.class)
+                    .withEntityClasses(CustomTimefoldCourseAssignment.class)
+                    .withConstraintProviderClass(CustomTimefoldConstraintProvider.class)
+                    .withTerminationSpentLimit(Duration.ofSeconds(12))
+                    .withEnvironmentMode(EnvironmentMode.NON_REPRODUCIBLE);
+            solverConfig.getTerminationConfig().setUnimprovedSpentLimit(Duration.ofSeconds(4));
+            SolverFactory<CustomTimefoldSchedule> solverFactory = SolverFactory.create(solverConfig);
+            Solver<CustomTimefoldSchedule> solver = solverFactory.buildSolver();
+        
+            // Create the initial schedule.
+            List<CustomTimefoldCourseAssignment> assignmentList = new ArrayList<>();
+            for (CustomTimefoldCourse course : finalCourseList) {
+                CustomTimefoldCourseAssignment assignment = new CustomTimefoldCourseAssignment();
+                assignment.setCourse(course);
+                assignment.setSelected(Boolean.TRUE);
+                assignmentList.add(assignment);
+            }
+            CustomTimefoldSchedule schedule = new CustomTimefoldSchedule();
+            schedule.setCourseAssignmentList(assignmentList);
+            schedule.setSelectionRange(List.of(Boolean.TRUE, Boolean.FALSE));
+            CustomTimefoldCreditLimits creditLimits = new CustomTimefoldCreditLimits(scheduleData.getMinCredits(), scheduleData.getMaxCredits());
+            schedule.setCreditLimits(creditLimits);
+            
+            // Solve using the configured solver.
+            CustomTimefoldSchedule solvedSchedule = solver.solve(schedule);
+            
+            // Post-process: attach professor ratings.
+            List<CustomTimefoldCourseAssignment> selectedAssignments = solvedSchedule.getCourseAssignmentList()
+                    .stream()
+                    .filter(a -> Boolean.TRUE.equals(a.getSelected()))
+                    .peek(a -> {
+                        CustomTimefoldCourse course = a.getCourse();
+                        String normalizedName = normalizeInstructorName(course.getInstructor());
+                        CustomTimefoldProfessorRating rating = professorRatingMap.get(normalizedName);
+                        if (rating != null) {
+                            course.setProfessorRating(rating.getQualityRating());
+                            course.setProfessorRatingCount(rating.getRatingCount());
+                        } else {
+                            course.setProfessorRating(null);
+                            course.setProfessorRatingCount(null);
+                        }
+                    })
+                    .collect(Collectors.toList());
+            solvedSchedule.setCourseAssignmentList(selectedAssignments);
+            
+            String resultJson = mapper.writeValueAsString(solvedSchedule);
+            return resultJson;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    // Utility: Normalize instructor names.
+    private String normalizeInstructorName(String instructor) {
+        if (instructor == null) return "";
+        String namePart = instructor.split("\\(")[0].trim();
+        if (namePart.contains(",")) {
+            String[] parts = namePart.split(",");
+            return parts[1].trim() + " " + parts[0].trim();
+        }
+        return namePart;
+    }
+    
+    // Utility: Normalize course code.
+    private String normalizeCourseCode(CustomTimefoldCourse course) {
+        if (course.getCourseSubject() == null || course.getCourseNumber() == null) {
+            return "";
+        }
+        String subject = course.getCourseSubject().trim();
+        String abbreviatedSubject = CustomCourseAbbrUtil.getCourseAbbr(subject);
+        String number = course.getCourseNumber().trim();
+        return abbreviatedSubject + " " + number;
+    }
+}

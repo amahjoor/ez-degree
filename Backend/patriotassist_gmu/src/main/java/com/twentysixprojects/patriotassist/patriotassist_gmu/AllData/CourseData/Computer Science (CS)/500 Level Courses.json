@@ -1,0 +1,86 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "CS 500",
+        "courseName": "Special Topics",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 504",
+        "courseName": "Principles of Data Management and Mining",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 530",
+        "courseName": "Mathematical Foundations of Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 531",
+        "courseName": "Computer Systems and Fundamentals of Systems Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 540",
+        "courseName": "Compilers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 550",
+        "courseName": "Database Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 551",
+        "courseName": "Computer Graphics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 555",
+        "courseName": "Computer Communications and Networking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 571",
+        "courseName": "Operating Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 580",
+        "courseName": "Introduction to Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 583",
+        "courseName": "Analysis of Algorithms",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 584",
+        "courseName": "Theory and Applications of Data Mining",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 587",
+        "courseName": "Introduction to Cryptography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 595",
+        "courseName": "Basic Topics in Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

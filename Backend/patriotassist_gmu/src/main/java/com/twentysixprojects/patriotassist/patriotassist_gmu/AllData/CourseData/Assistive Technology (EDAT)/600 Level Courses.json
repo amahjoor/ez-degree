@@ -1,0 +1,14 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDAT 610",
+        "courseName": "Designing Adapted Environments",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDAT 510B- or 510XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDAT 649",
+        "courseName": "Assistive Technology Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDAT 510B- or 510XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

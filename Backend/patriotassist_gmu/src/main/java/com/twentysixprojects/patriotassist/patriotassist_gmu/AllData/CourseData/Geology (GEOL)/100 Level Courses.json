@@ -1,0 +1,44 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "GEOL 101",
+        "courseName": "Physical Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 102",
+        "courseName": "Historical Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 103",
+        "courseName": "Physical Geology Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: GEOL 101*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "GEOL 104",
+        "courseName": "Historical Geology Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (GEOL 102*C, 134*C, 102XS or 134XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GEOL 120",
+        "courseName": "The Changing Ocean",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 121",
+        "courseName": "The Changing Ocean Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: GEOL 120*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "GEOL 134",
+        "courseName": "Evolution and Extinction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

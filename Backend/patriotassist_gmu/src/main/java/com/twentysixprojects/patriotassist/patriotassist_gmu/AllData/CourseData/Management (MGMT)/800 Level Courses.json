@@ -1,0 +1,14 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "MGMT 892",
+        "courseName": "Special Topics in Strategic Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MGMT 893",
+        "courseName": "Special Topics in Organizational Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

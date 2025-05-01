@@ -1,0 +1,38 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "GLOA 400",
+        "courseName": "Global Affairs Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 480",
+        "courseName": "Study Abroad",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 490",
+        "courseName": "Independent Study in Global Affairs",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 491",
+        "courseName": "Honors Seminar in Global Affairs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 492",
+        "courseName": "Honors Research Project in Global Affairs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 495",
+        "courseName": "Global Experiential Learning",
+        "courseCredits": "1-18 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

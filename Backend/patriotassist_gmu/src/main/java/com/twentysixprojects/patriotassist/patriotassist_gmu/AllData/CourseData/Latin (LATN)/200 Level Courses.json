@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "LATN 201",
+        "courseName": "Intermediate Latin I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LATN 202",
+        "courseName": "Intermediate Latin II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

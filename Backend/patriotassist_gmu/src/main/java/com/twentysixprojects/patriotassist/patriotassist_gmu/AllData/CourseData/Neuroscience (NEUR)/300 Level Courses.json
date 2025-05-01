@@ -1,0 +1,26 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "NEUR 327",
+        "courseName": "Cellular Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 211C or 211XS) and (CHEM 213C or 213XS) and (BIOL 213C or 213XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 328",
+        "courseName": "Cellular Neuroscience Lab",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (NEUR 327*C or 327XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NEUR 335",
+        "courseName": "Developmental and Systems Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 355",
+        "courseName": "Cross-Cultural Studies in Scientific Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,248 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "MUSI 419",
+        "courseName": "Orchestration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 421",
+        "courseName": "Applied Music III",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 424",
+        "courseName": "Senior Recital",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 431",
+        "courseName": "Music History in Society III",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 432",
+        "courseName": "Music History in Society IV",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 438",
+        "courseName": "Music History in Society B",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 439",
+        "courseName": "Music History in Society C",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 440",
+        "courseName": "Applied Music in Music Technology",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 441",
+        "courseName": "Private Music Instruction III",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 442",
+        "courseName": "Applied Music in Keyboard",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 443",
+        "courseName": "Applied Music in Voice",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 444",
+        "courseName": "Applied Music in Woodwind",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 445",
+        "courseName": "Applied Music in Brass",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 446",
+        "courseName": "Applied Music in String",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 447",
+        "courseName": "Applied Music in Percussion",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 448",
+        "courseName": "Applied Music in Composition",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 450",
+        "courseName": "Jazz Improvisation I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 451",
+        "courseName": "Keyboard Pedagogy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 452",
+        "courseName": "Jazz Improvisation II",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 454",
+        "courseName": "Jazz Arranging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 455",
+        "courseName": "Music as a Healing Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 456",
+        "courseName": "Pedagogy II",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 457",
+        "courseName": "Pedagogy III",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 458",
+        "courseName": "Pedagogy IV",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 461",
+        "courseName": "The Teaching of General Music in the Elementary and Middle School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 463",
+        "courseName": "The Teaching of Vocal Music in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 464",
+        "courseName": "Instrumental Music Methods I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 466",
+        "courseName": "Instrumental Music Methods II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 467",
+        "courseName": "Instrumental Music Methods I: Orchestra",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 477",
+        "courseName": "Music and Consciousness",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 485",
+        "courseName": "Chamber Ensembles",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 489",
+        "courseName": "Music Technology Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 490",
+        "courseName": "RS: Musical Communication in Context",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 491",
+        "courseName": "Musical Communication in Performance",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 492",
+        "courseName": "Selected Topics in Music",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 493",
+        "courseName": "Topics in Music Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 494",
+        "courseName": "Pedagogy Internship",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 495",
+        "courseName": "Internship in Music Education",
+        "courseCredits": "6-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 496",
+        "courseName": "Internship",
+        "courseCredits": "2-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 497",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 498",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

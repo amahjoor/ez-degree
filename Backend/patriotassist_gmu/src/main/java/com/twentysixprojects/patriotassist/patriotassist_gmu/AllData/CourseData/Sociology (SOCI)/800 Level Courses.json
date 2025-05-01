@@ -1,0 +1,74 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "SOCI 803",
+        "courseName": "Institutions and Inequalities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 804",
+        "courseName": "Sociology of Globalization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 833",
+        "courseName": "Special Topics in Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 840",
+        "courseName": "Work Organizations and Social Inequality",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 845",
+        "courseName": "Society and Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 850",
+        "courseName": "Sociology of Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 851",
+        "courseName": "Globalization and Social Movements",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 853",
+        "courseName": "Cities in a Global Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 857",
+        "courseName": "Sociology of Human Rights",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 860",
+        "courseName": "Historical and Comparative Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 870",
+        "courseName": "Directed Readings Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 880",
+        "courseName": "Independent Study in Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

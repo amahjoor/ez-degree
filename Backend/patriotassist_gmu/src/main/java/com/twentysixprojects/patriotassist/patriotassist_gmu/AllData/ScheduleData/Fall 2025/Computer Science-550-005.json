@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Database Systems",
+  "CourseSubject": "Computer Science",
+  "CourseNumber": "550",
+  "CourseSection": "005",
+  "CreditHours": "3",
+  "CRN": "78027",
+  "Term": "Fall 2025",
+  "Instructor": "Luo, Juan (Primary)",
+  "MeetingDays": "Friday",
+  "MeetingTimes": "10:30 AM - 01:10 PM",
+  "Campus": "Fairfax",
+  "Seats": "60 of 60 seats remain.\n35 of 35 waitlist seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:31:22"
+}

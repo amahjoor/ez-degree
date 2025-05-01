@@ -1,0 +1,80 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "ME 500",
+        "courseName": "Mechanical Engineering Seminar",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 521",
+        "courseName": "Energy Transfer",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 531",
+        "courseName": "Energy Transmission",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 541",
+        "courseName": "Power Generation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 542",
+        "courseName": "Energy Utilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 551",
+        "courseName": "Naval Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 552",
+        "courseName": "Fundamentals of Naval Architecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 553",
+        "courseName": "Ship Design Process and Tools",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 554",
+        "courseName": "Naval Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 575",
+        "courseName": "AI Design and Deployment Risks",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 576",
+        "courseName": "AI: Ethics, Policy, and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 577",
+        "courseName": "Emerging AI & Robotics Tech Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 585",
+        "courseName": "Human Robot Interaction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

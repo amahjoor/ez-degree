@@ -1,0 +1,110 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "ACCT 611",
+        "courseName": "Advanced Issues in Managerial Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 621",
+        "courseName": "GovCon Acquisition Regulations and Reporting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 623",
+        "courseName": "Project Accounting and Cost Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ACCT 621B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ACCT 624",
+        "courseName": "GovCon Business Systems and Control",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ACCT 623B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ACCT 625",
+        "courseName": "GovCon Audit and Compliance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ACCT 624B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ACCT 630",
+        "courseName": "Advanced Financial Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 332C or 332XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 633",
+        "courseName": "Advanced Issues in Financial Reporting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 636",
+        "courseName": "Fraud Examination",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 641",
+        "courseName": "Estate Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 651",
+        "courseName": "Advanced Issues in Taxation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 661",
+        "courseName": "Advanced Accounting Analytics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 665",
+        "courseName": "Advanced Accounting Analytics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 661C, 661XS or 661XP).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "ACCT 670",
+        "courseName": "International Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BUS 200C, ACCT 303C, 330C, FNAN 303C, BUS 200XS, ACCT 303XS, 330XS or FNAN 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 672",
+        "courseName": "Governmental and Nonprofit Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 673",
+        "courseName": "Advanced Accounting Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 695",
+        "courseName": "Graduate Field Experience",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 696",
+        "courseName": "Directed Studies in Accounting",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 697",
+        "courseName": "Special Topics in Accounting",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

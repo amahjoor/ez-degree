@@ -1,0 +1,62 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "KINE 310",
+        "courseName": "Exercise Physiology I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 124C or 124XS) and (BIOL 125C or 125XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 311",
+        "courseName": "Exercise Physiology Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (BIOL 124C or 124XS) and (BIOL 125C or 125XS) and (KINE 310*C or 310XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 330",
+        "courseName": "Seminar in Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 100C or 100XS) and (KINE 200C or 200XS) and (KINE 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 340",
+        "courseName": "Exercise Testing and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 124C or 124XS) and (BIOL 125C or 125XS) and (KINE 310*C or 310XS)) and (ATEP 300C or 300XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 341",
+        "courseName": "Kinesiology Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 200C or 200XS) and (KINE 310C or 310XS) and (KINE 330C or 330XS) and (KINE 350C or 350XS) and (KINE 340C or 340XS) and (KINE 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 350",
+        "courseName": "Exercise Prescription and Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 370C, 370XS or 340C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 355",
+        "courseName": "Introduction to Biomechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 124C, 125C and ATEP 300C).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "KINE 360",
+        "courseName": "Strength Training: Concepts and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 124C or 124XS) and (BIOL 125C or 125XS) and (KINE 310C or 310XS)) and (ATEP 300C or 300XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 361",
+        "courseName": "Advanced Resistance Training Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: KINE 360*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "KINE 380",
+        "courseName": "Exercise Prescription and Programming for Special Populations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 200C or 200XS) and (KINE 310C or 310XS) and (KINE 330C or 330XS) and (KINE 350C or 350XS) and (KINE 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

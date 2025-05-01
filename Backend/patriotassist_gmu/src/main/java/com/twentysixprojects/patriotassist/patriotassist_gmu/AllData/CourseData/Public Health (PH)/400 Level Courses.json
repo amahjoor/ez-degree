@@ -1,0 +1,50 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "PH 432",
+        "courseName": "Healthy Aging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 440",
+        "courseName": "Independent Study in Public and Population Health",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 450",
+        "courseName": "Study Abroad in Public and Population Health",
+        "courseCredits": "0-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 491",
+        "courseName": "Foundations of Clinical Research",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 492",
+        "courseName": "RS: Internship in Clinical Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 493",
+        "courseName": "Research Internship in Public and Population Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 495",
+        "courseName": "Internship in Public and Population Health",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 496",
+        "courseName": "Directed Research in Public and Population Health",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

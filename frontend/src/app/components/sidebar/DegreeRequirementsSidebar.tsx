@@ -7,14 +7,16 @@ import MajorSelector from './MajorSelector';
 import CourseOverlay from './CourseOverlay';
 import RequirementsList from './RequirementsList';
 import { DegreeRequirementsSidebarProps, RequirementGroup, Requirement } from './types';
+import type { ClassSession } from '../SemesterCalendar';
 
 // API configuration
 const API_BASE_URL = '/api';
 
-const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({ 
+const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
   isApiAvailable,
+  onApiConnectionRetry,
   onCourseSelect,
-  onApiConnectionRetry
+  onAddSessions,
 }) => {
   const [loading, setLoading] = useState(false);
   const [majors, setMajors] = useState<Major[]>([]);
@@ -211,12 +213,13 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
       
       {/* Course overlay */}
       {overlayVisible && (
-        <CourseOverlay 
-          courseCode={selectedCourseCode}
-          position={overlayPosition}
-          onClose={() => setOverlayVisible(false)}
-        />
-      )}
+  <CourseOverlay
+        courseCode={selectedCourseCode}
+        position={overlayPosition}
+        onClose={() => setOverlayVisible(false)}
+        onAddSessions={onAddSessions}      // ← now correctly typed
+      />
+    )}
     </div>
   );
 };

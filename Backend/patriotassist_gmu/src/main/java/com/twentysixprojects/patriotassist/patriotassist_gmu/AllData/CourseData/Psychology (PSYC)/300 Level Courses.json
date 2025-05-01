@@ -1,0 +1,194 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "PSYC 300",
+        "courseName": "Statistics in Psychology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 301",
+        "courseName": "Research Methods in Psychology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 304",
+        "courseName": "Principles of Learning",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 309",
+        "courseName": "Sensation, Perception, and Information Processing",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 312",
+        "courseName": "Educational Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 313",
+        "courseName": "Child Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 314",
+        "courseName": "Adolescent Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 317",
+        "courseName": "Cognitive Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 320",
+        "courseName": "Psychological Tests and Measurements",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 321",
+        "courseName": "Clinical Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 322",
+        "courseName": "Behavior Modification",
+        "courseCredits": "3-5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 324",
+        "courseName": "Personality Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 325",
+        "courseName": "Psychopathology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 326",
+        "courseName": "Therapeutic Communication Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PSYC 325C-, 325XS or L325.\nC- Requires minimum grade of C-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PSYC 327",
+        "courseName": "Psychology in the Community",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 328",
+        "courseName": "Psychology in the Community Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 333",
+        "courseName": "Psychology in the Workplace",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 335",
+        "courseName": "Psychology of Creativity and Innovation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 340",
+        "courseName": "Human Factors Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 350",
+        "courseName": "Directed Reading and Research in Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 351",
+        "courseName": "Introduction to Health Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 362",
+        "courseName": "Psychology of Gender",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 365",
+        "courseName": "Psychology of Stress and Coping",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 372",
+        "courseName": "Biopsychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 373",
+        "courseName": "Biopsychology Laboratory",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 375",
+        "courseName": "Brain and Sensory Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 376",
+        "courseName": "Brain and Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PSYC 372C, 372XS, 375C, 375XS, L372 or L375.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PSYC 379",
+        "courseName": "Applied Cross-Cultural Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 380",
+        "courseName": "Introduction to Forensic Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 381",
+        "courseName": "Mental Illness and Criminal Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 382",
+        "courseName": "Psychology of Crime Victims",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 399",
+        "courseName": "Psychology: College to Career",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

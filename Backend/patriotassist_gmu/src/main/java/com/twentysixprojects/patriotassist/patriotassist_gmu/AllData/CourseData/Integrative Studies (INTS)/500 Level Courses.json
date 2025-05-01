@@ -1,0 +1,68 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "INTS 503",
+        "courseName": "Conservation Behavior",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 534",
+        "courseName": "Research for Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 535",
+        "courseName": "Leadership in a Changing Environment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 537",
+        "courseName": "Critical Race Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 538",
+        "courseName": "Representations of Race",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 539",
+        "courseName": "Genealogy of Black Feminist Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 540",
+        "courseName": "Contemporary Issues in Social Justice & Human Rights",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 541",
+        "courseName": "Policing Black Bodies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 550",
+        "courseName": "Social Innovation In Action",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 575",
+        "courseName": "Special Topics",
+        "courseCredits": "3-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 595",
+        "courseName": "Experiential Learning",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

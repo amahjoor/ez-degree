@@ -1,0 +1,14 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PROV 601",
+        "courseName": "Thriving in Your Graduate Program",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PROV 699",
+        "courseName": "Special Topics in Graduate Education",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

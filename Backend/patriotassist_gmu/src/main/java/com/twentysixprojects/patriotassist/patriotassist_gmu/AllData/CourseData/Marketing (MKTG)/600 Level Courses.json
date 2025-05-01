@@ -1,0 +1,80 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "MKTG 601",
+        "courseName": "Marketing Essentials",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 602",
+        "courseName": "Basic Statistics for Marketing",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 610",
+        "courseName": "Consultative Sales",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 612",
+        "courseName": "Consumer Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 615",
+        "courseName": "Digital Marketing Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 623",
+        "courseName": "Marketing Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 625",
+        "courseName": "Marketing Data Visualization and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 633",
+        "courseName": "Business to Business Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 637",
+        "courseName": "Marketing for a Better World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 651",
+        "courseName": "Marketing Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 652",
+        "courseName": "Customer Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 653",
+        "courseName": "Retailing and Pricing Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 690",
+        "courseName": "Applied Client Project",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,44 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "ENGH 820",
+        "courseName": "Studies in Rhetorical Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 821",
+        "courseName": "Writing Program Design and Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 822",
+        "courseName": "Studies in Composition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 824",
+        "courseName": "Studies in Professional Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 826",
+        "courseName": "Studies in Public Rhetorics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 897",
+        "courseName": "Directed Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 898",
+        "courseName": "Qualifying Exams Seminar",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "RUSS 201",
+        "courseName": "Intermediate Russian I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 202",
+        "courseName": "Intermediate Russian II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

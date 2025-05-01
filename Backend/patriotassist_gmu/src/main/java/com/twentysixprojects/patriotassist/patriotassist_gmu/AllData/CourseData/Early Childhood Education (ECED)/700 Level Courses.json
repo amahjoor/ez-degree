@@ -1,0 +1,44 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "ECED 781",
+        "courseName": "Seminar in Early Childhood Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 788",
+        "courseName": "Internship in Early Childhood Education Prekindergarten-Third Grade",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 789",
+        "courseName": "Internship in Early Childhood Special Education Birth - Five",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 790",
+        "courseName": "Internship with Diverse Preschool Children",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 791",
+        "courseName": "Internship with Diverse Infants and Toddlers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 793",
+        "courseName": "Internship in Preschool Early Childhood Special Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 795",
+        "courseName": "Internship in Kindergarten - Third Grade",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

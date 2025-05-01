@@ -1,0 +1,38 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "THR 200",
+        "courseName": "Play Production Practicum",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 201",
+        "courseName": "Stage Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 210",
+        "courseName": "Acting I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 211",
+        "courseName": "Mason Cabaret",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 230",
+        "courseName": "Fundamentals of Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 240",
+        "courseName": "Introduction to Theatrical Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

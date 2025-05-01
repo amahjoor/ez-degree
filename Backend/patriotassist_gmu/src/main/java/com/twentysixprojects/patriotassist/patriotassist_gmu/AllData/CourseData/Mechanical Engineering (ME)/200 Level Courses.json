@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "ME 211",
+        "courseName": "Statics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PHYS 160C or 160XS) and (MATH 114C, 114XS, 116C or 116XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 212",
+        "courseName": "Solid Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGR 210C, CEIE 210C, 210XS, ME 211C or 211XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 221",
+        "courseName": "Thermodynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PHYS 160C or 160XS) and (PHYS 161C or 161XS) and (MATH 114C, 114XS, 116C or 116XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 231",
+        "courseName": "Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 211C, 211XS, CEIE 210C or 210XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

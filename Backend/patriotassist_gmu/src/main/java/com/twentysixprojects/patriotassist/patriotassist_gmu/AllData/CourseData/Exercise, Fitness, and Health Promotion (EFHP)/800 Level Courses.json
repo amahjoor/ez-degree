@@ -1,0 +1,56 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EFHP 810",
+        "courseName": "Neuromuscular Responses to Exercise",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 811",
+        "courseName": "Motor Learning and Control",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 813",
+        "courseName": "Musculoskeletal Biomechanics in Human Movement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 815",
+        "courseName": "Measurement Techniques and Instrumentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 820",
+        "courseName": "Careers in the Academy Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 825",
+        "courseName": "Data Analytics in Exercise, Fitness, and Health Promotion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 840",
+        "courseName": "Doctoral Seminar in Exercise, Fitness, and Health Promotion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 860",
+        "courseName": "Critical Perspectives in Exercise, Fitness, and Health Promotion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 880",
+        "courseName": "Grant Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

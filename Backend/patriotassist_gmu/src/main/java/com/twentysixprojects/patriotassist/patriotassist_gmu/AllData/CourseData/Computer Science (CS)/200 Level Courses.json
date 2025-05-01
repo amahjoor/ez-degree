@@ -1,0 +1,20 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CS 211",
+        "courseName": "Object-Oriented Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 112C, 112XS or 109C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 222",
+        "courseName": "Computer Programming for Engineers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 112C, 112XS, 109C, 109XS or L109).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 262",
+        "courseName": "Introduction to Low-Level Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 110*C, 110XS or 101*) and (CS 211C, 211XS, 222C or 222XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

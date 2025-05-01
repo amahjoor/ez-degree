@@ -1,0 +1,20 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "HDFS 300",
+        "courseName": "Individual and Family Services Delivery",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HDFS 301",
+        "courseName": "The Hospitalized Child and Family",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HDFS 302",
+        "courseName": "Therapeutic Benefits of Play",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

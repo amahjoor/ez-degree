@@ -1,0 +1,56 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "GAME 300",
+        "courseName": "Portfolio Preparation",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (GAME 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 310",
+        "courseName": "Digital Game Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((GAME 231C or 231XS) and (GAME 210C or 210XS) and (GAME 240C or 240XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 320",
+        "courseName": "Digital Painting for Games",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((GAME 104C or 104XS) and (AVT 222C, 222XS, 232C or 232XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 330",
+        "courseName": "Computer Game Platform Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (GAME 310C or 310XS) and (GAME 331*C or 331XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 331",
+        "courseName": "Consumer Gaming Platform Analysis Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (GAME 310C or 310XS) and (GAME 330*C or 330XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 332",
+        "courseName": "RS: Story Design for Computer Games",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 367",
+        "courseName": "Writing and Editing Music and Sound",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: GAME 250C or 250XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 398",
+        "courseName": "Three-Dimensional Game Art II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: GAME 231C or 231XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 399",
+        "courseName": "Special Topics",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

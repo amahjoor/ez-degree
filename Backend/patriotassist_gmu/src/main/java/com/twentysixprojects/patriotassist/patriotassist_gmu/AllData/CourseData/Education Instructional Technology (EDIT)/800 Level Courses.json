@@ -1,0 +1,32 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EDIT 801",
+        "courseName": "Nature and Process of Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDIT 802",
+        "courseName": "Cognition and Technology: A Multidisciplinary Approach",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDIT 803",
+        "courseName": "Design-Based Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 810B- or 810XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDIT 891",
+        "courseName": "Design Research Independent Study",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDIT 895",
+        "courseName": "Emerging Trends in Learning Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

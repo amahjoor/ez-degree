@@ -1,0 +1,98 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "AIT 500",
+        "courseName": "Quantitative Foundations for Information Systems Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 502",
+        "courseName": "Programming Essentials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 504",
+        "courseName": "Issues of Cyberspace",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 510",
+        "courseName": "Learning Technology: Theory, Application and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 512",
+        "courseName": "Algorithms and Data Structures Essentials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 516",
+        "courseName": "Introduction to Human-Computer Interaction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 518",
+        "courseName": "Introduction to Interaction Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 521",
+        "courseName": "Software Engineering Essentials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 524",
+        "courseName": "Database Management Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 526",
+        "courseName": "Introduction to Natural Language Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 542",
+        "courseName": "Fundamentals of Computing Platforms",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 580",
+        "courseName": "Analytics: Big Data to Information",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 581",
+        "courseName": "Problem Formation and Solving in Big Data",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 582",
+        "courseName": "Metadata Analytics for Big Data",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 590",
+        "courseName": "Topics in Applied Information Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AIT 597",
+        "courseName": "Developing IT Leaders of Integrity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

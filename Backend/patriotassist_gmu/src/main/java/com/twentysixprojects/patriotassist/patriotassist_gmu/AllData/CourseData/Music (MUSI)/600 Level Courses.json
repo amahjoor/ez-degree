@@ -1,0 +1,236 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "MUSI 605",
+        "courseName": "Graduate Jazz Improvisation",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 610",
+        "courseName": "Topics in Music Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 611",
+        "courseName": "Analytical Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 613",
+        "courseName": "Graduate Orchestration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 614",
+        "courseName": "Music Theory Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 615",
+        "courseName": "Advanced Jazz Improvisation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 616",
+        "courseName": "Graduate Jazz Arranging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 621",
+        "courseName": "Graduate Applied Music",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 622",
+        "courseName": "Applied Music in Keyboard",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 623",
+        "courseName": "Applied Music in Voice",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 624",
+        "courseName": "Applied Music in Woodwind",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 625",
+        "courseName": "Applied Music in Brass",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 626",
+        "courseName": "Applied Music in String",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 627",
+        "courseName": "Applied Music in Percussion",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 628",
+        "courseName": "Applied Music in Composition",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 629",
+        "courseName": "Applied Music in Conducting",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 630",
+        "courseName": "Topics in Music History and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 640",
+        "courseName": "Topics in World Musics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 650",
+        "courseName": "Topics in Jazz Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 651",
+        "courseName": "Keyboard Pedagogy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 652",
+        "courseName": "Vocal Pedagogy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 653",
+        "courseName": "Instrumental Pedagogy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 654",
+        "courseName": "Graduate Conducting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 660",
+        "courseName": "Topics in Music Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 661",
+        "courseName": "Psychology of Music Teaching and Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 662",
+        "courseName": "Introduction to Research in Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 663",
+        "courseName": "Philosophy of Music Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 664",
+        "courseName": "Advanced Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 681",
+        "courseName": "Graduate Choral Ensembles",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 682",
+        "courseName": "Wind Symphony",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 683",
+        "courseName": "Symphonic Band",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 685",
+        "courseName": "Graduate Chamber Ensemble",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 687",
+        "courseName": "Symphony Orchestra",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 688",
+        "courseName": "Opera and Musical Theater Ensemble",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 689",
+        "courseName": "Jazz Ensemble",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 690",
+        "courseName": "Graduate Lecture Recital",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 695",
+        "courseName": "Teaching Internship",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 698",
+        "courseName": "Comprehensive Exit Exam/Portfolio",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 699",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

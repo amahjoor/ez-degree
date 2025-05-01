@@ -1,0 +1,14 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CVPA 600",
+        "courseName": "CVPA Graduate ProSeminar",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CVPA 620",
+        "courseName": "Communication in the Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CVPA 520B- or 580B-.\nB- Requires minimum grade of B-."
+    }
+]}

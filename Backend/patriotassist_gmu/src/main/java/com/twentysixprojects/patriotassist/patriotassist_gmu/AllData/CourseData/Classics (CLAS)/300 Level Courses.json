@@ -1,0 +1,38 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CLAS 330",
+        "courseName": "Roman Law and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLAS 340",
+        "courseName": "Greek and Roman Epic",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLAS 350",
+        "courseName": "Greek and Roman Tragedy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLAS 360",
+        "courseName": "Greek and Roman Comedy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLAS 380",
+        "courseName": "Greek and Roman Novels",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLAS 390",
+        "courseName": "Topics in Classical Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

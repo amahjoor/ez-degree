@@ -1,0 +1,14 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "ECON 998",
+        "courseName": "Doctoral Dissertation Proposal Research",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 999",
+        "courseName": "Doctoral Dissertation Research",
+        "courseCredits": "1-15 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

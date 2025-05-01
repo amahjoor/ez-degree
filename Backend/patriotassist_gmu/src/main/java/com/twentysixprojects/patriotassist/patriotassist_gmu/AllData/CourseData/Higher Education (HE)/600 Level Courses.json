@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "HE 601",
+        "courseName": "The Community College",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 602",
+        "courseName": "College Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 605",
+        "courseName": "Learning Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 606",
+        "courseName": "Cultural Pluralism in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 610",
+        "courseName": "Research Methods in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 624",
+        "courseName": "Finance and Fiscal Management in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 641",
+        "courseName": "Introduction to Helping Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 644",
+        "courseName": "Organization and Administration of Student Affairs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 645",
+        "courseName": "College Students Today",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 646",
+        "courseName": "Student Development Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 685",
+        "courseName": "Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

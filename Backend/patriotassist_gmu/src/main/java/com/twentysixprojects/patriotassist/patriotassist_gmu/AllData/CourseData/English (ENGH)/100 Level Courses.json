@@ -1,0 +1,32 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ENGH 100",
+        "courseName": "Composition for Multilingual Writers",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 101",
+        "courseName": "Composition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 121",
+        "courseName": "Enhanced Composition For Multilingual Writers of English I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 122",
+        "courseName": "Enhanced Composition For Multilingual Writers of English II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 123",
+        "courseName": "Language-Enhanced Composition for Multilingual Writers",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

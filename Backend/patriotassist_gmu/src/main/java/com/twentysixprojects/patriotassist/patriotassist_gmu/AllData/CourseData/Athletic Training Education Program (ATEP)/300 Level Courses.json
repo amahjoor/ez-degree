@@ -1,0 +1,50 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ATEP 300",
+        "courseName": "Functional Anatomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ATEP 310",
+        "courseName": "Advanced Functional Anatomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ATEP 300C or 300XS) and (KINE 310C or 310XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 325",
+        "courseName": "Athletic Training Foundations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ATEP 120C or 120XS) and ATEP 150C and (ATEP 201C or 201XS) and (ATEP 300C or 300XS) and (BIOL 124C or 124XS) and (BIOL 125C or 125XS) and (HEAL 230C or 230XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ATEP 361",
+        "courseName": "Upper Body Therapeutic Interventions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ATEP 351C, 354C, 330C, 340C and 345C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ATEP 365",
+        "courseName": "Athletic Training Clinical Techniques 4",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ATEP 367",
+        "courseName": "Athletic Training Practicum 1",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ATEP 330C, 340C, 345C, 351C and 354C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ATEP 370",
+        "courseName": "Upper Body Physical Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ATEP 330C, 340C, 345C, 351C and 354C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ATEP 375",
+        "courseName": "Athletic Training Clinical Techniques 3",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ATEP 330C, 340C, 345C, 351C and 354C.\nC Requires minimum grade of C."
+    }
+]}

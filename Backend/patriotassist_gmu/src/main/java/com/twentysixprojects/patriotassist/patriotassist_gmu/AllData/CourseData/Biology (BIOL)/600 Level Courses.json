@@ -1,0 +1,164 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "BIOL 607",
+        "courseName": "Fundamentals of Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 608",
+        "courseName": "Topics in Biology",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 638",
+        "courseName": "Sensory Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 639",
+        "courseName": "Community Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 643",
+        "courseName": "Microbial Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 644",
+        "courseName": "Wetland Ecology and Management",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 645",
+        "courseName": "Freshwater Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 648",
+        "courseName": "Population Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 649",
+        "courseName": "Biological Resource Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 650",
+        "courseName": "Environment Analysis and Modeling",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 665",
+        "courseName": "Environmental Hazards to Human Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 666",
+        "courseName": "Human Genetics Concepts for Health Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 667",
+        "courseName": "Signal Transduction in Cancer",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 668",
+        "courseName": "Advanced Techniques in Molecular Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 669",
+        "courseName": "Pathogenic Microbiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 671",
+        "courseName": "Fundamental Concepts in Evolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 311C and 308C).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "BIOL 675",
+        "courseName": "Aerosol Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 678",
+        "courseName": "Cell-Based Assays",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 680",
+        "courseName": "Experimental Design and Analysis for the Life Sciences",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 682",
+        "courseName": "Advanced Eukaryotic Cell Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 685",
+        "courseName": "Emerging Infectious Diseases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 689",
+        "courseName": "Interdisciplinary Tools in the Biosciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 690",
+        "courseName": "Introduction to Graduate Studies in Biology",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 691",
+        "courseName": "Current Topics in Biology",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 692",
+        "courseName": "Seminar in Biology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 693",
+        "courseName": "Directed Studies in Biology",
+        "courseCredits": "1-8 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 695",
+        "courseName": "Seminar in Molecular, Microbial, and Cellular Biology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

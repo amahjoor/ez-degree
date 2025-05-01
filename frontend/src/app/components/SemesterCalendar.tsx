@@ -5,11 +5,12 @@ import Select from 'react-select';
 import CourseSelectionModal from './CourseSelectionModal';
 import AIScheduleGenerator from './ai/AIScheduleGenerator';
 import { Course } from '@/types/course';
+import { DayName, TimeInterval } from './ai/selectors/WeekAvailability';
 
 // API configuration
 const API_BASE_URL = '/api';
 
-interface ClassSession {
+export interface ClassSession {
   id: string;
   courseCode: string;
   title: string;
@@ -26,23 +27,29 @@ interface WeeklyCalendarProps {
   onCourseSelect?: (courseCode: string, title: string, credits: number) => void;
 }
 
+
+const allDays: DayName[] = [
+  'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'
+];
+
+const defaultAvailability: Record<DayName, TimeInterval[]> = allDays.reduce((acc, day, idx) => {
+  acc[day] = idx < 5
+    ? [{ start: '08:00', end: '22:00' }]
+    : [];
+  return acc;
+}, {} as Record<DayName, TimeInterval[]>);
+
 interface SchedulePreferences {
-  locations: {
-    fairfax: boolean;
-    arlington: boolean;
-    virtual: boolean;
-  };
-  creditLimits: {
-    min: number;
-    max: number;
-  };
+  locations: { fairfax: boolean; arlington: boolean; virtual: boolean };
+  creditLimits: { min: number; max: number };
   considerSeats: boolean;
   considerRMP: boolean;
   professorsToAvoid: string[];
+  availability: Record<DayName, TimeInterval[]>;
 }
 
 // Generate a random pastel color for new courses
-const getRandomColor = () => {
+export const getRandomColor = () => {
   const colors = [
     'bg-blue-100 border-blue-300',
     'bg-green-100 border-green-300',
@@ -59,6 +66,7 @@ const getRandomColor = () => {
 const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
   const [classes, setClasses] = useState<ClassSession[]>([
     // Example classes with corrected positioning
+    /*
     {
       id: 'math113-001',
       courseCode: 'MATH 113',
@@ -83,24 +91,20 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
       color: 'bg-blue-100 border-blue-300',
       credits: 4
     }
+      */
   ]);
 
   // State declarations
   const [isAIGeneratorOpen, setIsAIGeneratorOpen] = useState<boolean>(false);
   const [preferences, setPreferences] = useState<SchedulePreferences>({
-    locations: {
-      fairfax: true,
-      arlington: false,
-      virtual: false,
-    },
-    creditLimits: {
-      min: 12,
-      max: 18,
-    },
+    locations: { fairfax: true, arlington: false, virtual: false },
+    creditLimits: { min: 12, max: 18 },
     considerSeats: true,
     considerRMP: false,
     professorsToAvoid: [],
+    availability: defaultAvailability,   // ← seed with defaults
   });
+  
   
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
@@ -424,7 +428,7 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              AI
+              Generate Schedule For You
             </button>
           </div>
         </div>

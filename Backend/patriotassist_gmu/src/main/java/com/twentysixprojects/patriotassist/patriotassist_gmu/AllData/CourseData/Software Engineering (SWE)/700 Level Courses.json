@@ -1,0 +1,56 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "SWE 721",
+        "courseName": "Reusable Software Architectures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 724",
+        "courseName": "Program Analysis for Software Testing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 737",
+        "courseName": "Advanced Software Testing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 760",
+        "courseName": "Software Analysis and Design of Real-Time Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 763",
+        "courseName": "Software Engineering Experimentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 795",
+        "courseName": "Advanced Topics in Software Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 796",
+        "courseName": "Directed Readings in Software Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 798",
+        "courseName": "Research Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 799",
+        "courseName": "MS Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

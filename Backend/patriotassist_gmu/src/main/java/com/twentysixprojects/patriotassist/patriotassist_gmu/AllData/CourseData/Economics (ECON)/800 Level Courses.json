@@ -1,0 +1,164 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "ECON 811",
+        "courseName": "Microeconomic Theory I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 812",
+        "courseName": "Microeconomic Theory II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 816",
+        "courseName": "Macroeconomic Theory II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 817",
+        "courseName": "Monetary Theory and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 823",
+        "courseName": "Topics in Economic History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 827",
+        "courseName": "Economic Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 829",
+        "courseName": "Economics of Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 830",
+        "courseName": "Mathematical Economics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 831",
+        "courseName": "Mathematical Economics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 838",
+        "courseName": "Econometrics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 840",
+        "courseName": "Law and Economics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 841",
+        "courseName": "Law and Economics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 843",
+        "courseName": "Smithian Political Economy I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 844",
+        "courseName": "Industrial Organization and Public Policy I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 845",
+        "courseName": "Smithian Political Economy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 846",
+        "courseName": "Industrial Organization and Public Policy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 852",
+        "courseName": "Public Choice I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 854",
+        "courseName": "Public Choice II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 856",
+        "courseName": "Non-Market Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 866",
+        "courseName": "Economic Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 871",
+        "courseName": "International Monetary Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 880",
+        "courseName": "Theory of the Market Process I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 881",
+        "courseName": "Theory of Market Process II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 885",
+        "courseName": "Experimental Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 886",
+        "courseName": "Experimental Economics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 895",
+        "courseName": "Special Topics in Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 896",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

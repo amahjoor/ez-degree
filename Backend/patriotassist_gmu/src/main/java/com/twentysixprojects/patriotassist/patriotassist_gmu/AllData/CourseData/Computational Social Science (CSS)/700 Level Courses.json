@@ -1,0 +1,32 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "CSS 710",
+        "courseName": "Advanced Agent-based Modeling and Simulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSS 717",
+        "courseName": "Verification and Validation of Models",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSS 739",
+        "courseName": "Topics in Computational Social Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSS 796",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSS 798",
+        "courseName": "Research Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

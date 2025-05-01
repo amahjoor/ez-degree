@@ -1,0 +1,176 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "NURS 300",
+        "courseName": "Nursing Care of Adults I",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((NURS 241C+ or 241XS) and (NURS 244C+ or 244XS)).\nC+ Requires minimum grade of C+.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 305",
+        "courseName": "Application of Basic Nursing Techniques",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 306",
+        "courseName": "Clinical Management: Adults I",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((NURS 241C+ or 241XS) and (NURS 244C+ or 244XS)).\nC+ Requires minimum grade of C+.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 309",
+        "courseName": "Introduction to Basic Nursing Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 310",
+        "courseName": "Application of Basic Nursing Care",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 311",
+        "courseName": "Nursing Care: Mental Health and Well-Being",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 312",
+        "courseName": "Basic Nursing Care of Adults",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 314",
+        "courseName": "Clinical Management: Mental Hlth & Well Being",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 315",
+        "courseName": "Nursing Care of the Community III",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (NURS 215 or 215XS).\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 316",
+        "courseName": "Nursing Care of the Community IV",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (NURS 315 or 315XS).\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 319",
+        "courseName": "Pathophysiological Basis for Nursing Care of Individuals and Small Groups",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 320",
+        "courseName": "Nursing Care: Women and Childbearing Families",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 324",
+        "courseName": "Clinical Management: Women and Childbearing Families",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 330",
+        "courseName": "Nursing Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 331",
+        "courseName": "Nursing Care: Children and Adolescents",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 334",
+        "courseName": "Nursing as a Health Profession and Discipline",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 335",
+        "courseName": "Clinical Management: Children and Adolescents",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 336",
+        "courseName": "Concepts in Professional Nursing as a Discipline",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 337",
+        "courseName": "Application of Nursing Fundamental Technologies",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 343",
+        "courseName": "Pharmacology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 344",
+        "courseName": "Intermediate Nursing Technologies",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 347",
+        "courseName": "Adult Pathophysiology and Nursing Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 348",
+        "courseName": "Maternal-Newborn Physiology, Pathophysiology, and Nursing Care",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 349",
+        "courseName": "Pediatric Pathophysiology and Nursing Care",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 350",
+        "courseName": "Application of Nursing Care for Individuals and Small Groups",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 351",
+        "courseName": "Application of Intermediate Nursing Technologies",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 358",
+        "courseName": "Health Promotion and Disease Prevention in Maternal/Infant Nursing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 359",
+        "courseName": "Health Promotion and Disease Prevention in Pediatric Nursing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 388",
+        "courseName": "Problem-Based Clinical Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

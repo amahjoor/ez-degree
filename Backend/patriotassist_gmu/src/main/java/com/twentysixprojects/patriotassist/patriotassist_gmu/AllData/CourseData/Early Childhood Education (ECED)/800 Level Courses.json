@@ -1,0 +1,26 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "ECED 801",
+        "courseName": "Current Research and Trends in Early Childhood Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 803",
+        "courseName": "Teacher Preparation and Professional Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 804",
+        "courseName": "Critical Perspectives on Families in Education Research and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECED 812",
+        "courseName": "Early Writing: Cognition, Language, and Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

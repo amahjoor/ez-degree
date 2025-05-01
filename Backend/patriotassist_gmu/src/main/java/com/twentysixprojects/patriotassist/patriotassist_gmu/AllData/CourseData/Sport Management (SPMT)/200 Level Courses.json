@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "SPMT 201",
+        "courseName": "Introduction to Sport Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 210",
+        "courseName": "Foundations of Sport Coaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 241",
+        "courseName": "Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XS or 201XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "SPMT 250",
+        "courseName": "Introduction to Esports Industry Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "EDSE 783",
+        "courseName": "Internship: Special Education in General Curriculum",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 784",
+        "courseName": "Internship: Adapted Curriculum",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 785",
+        "courseName": "Internship: Blindness and Visual Impairments",
+        "courseCredits": "2-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 794",
+        "courseName": "Special Topics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

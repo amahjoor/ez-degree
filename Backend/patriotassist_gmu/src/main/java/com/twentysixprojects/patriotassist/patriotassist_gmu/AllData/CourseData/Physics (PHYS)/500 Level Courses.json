@@ -1,0 +1,74 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "PHYS 502",
+        "courseName": "Introduction to Quantum Mechanics and Atomic Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 510",
+        "courseName": "Computational Physics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 512",
+        "courseName": "Solid State Physics and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 513",
+        "courseName": "Applied Electromagnetic Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 533",
+        "courseName": "Modern Instrumentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 534",
+        "courseName": "Introduction to Quantum Computation and Quantum Information",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 540",
+        "courseName": "Nuclear and Particle Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 575",
+        "courseName": "Atmospheric Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 580",
+        "courseName": "Selected Interdisciplinary Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 581",
+        "courseName": "Topics in Renewable Energy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 590",
+        "courseName": "Selected Topics in Physics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 591",
+        "courseName": "Systems for Quantum Scientists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,26 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "POGO 801",
+        "courseName": "Research Design for the Social Sciences and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "POGO 840",
+        "courseName": "Policy, Politics, and American Government Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "POGO 841",
+        "courseName": "US Political Behavior and the Process of Policymaking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "POGO 850",
+        "courseName": "PhD Professional Development Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

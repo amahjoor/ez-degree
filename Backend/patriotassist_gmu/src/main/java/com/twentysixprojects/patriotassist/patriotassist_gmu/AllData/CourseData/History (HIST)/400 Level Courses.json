@@ -1,0 +1,56 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "HIST 401",
+        "courseName": "Colonial America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 403",
+        "courseName": "Revolutionary Era in American History, 1763-1812",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 461",
+        "courseName": "Arab-Israeli Conflict",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 462",
+        "courseName": "Women in Islamic Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 465",
+        "courseName": "The Middle East in the 20th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 490",
+        "courseName": "Honors Directed Readings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 491",
+        "courseName": "Honors Directed Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 498",
+        "courseName": "Directed Readings/Research in History",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 499",
+        "courseName": "RS: Senior Seminar in History",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HIST 300C or 300XS) and (ENGH 302C, ENGL 302C, ENGH 302XS, HNRS 110C, 110XS, 210C, 302C or 302XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

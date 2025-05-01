@@ -1,0 +1,80 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "NURS 804",
+        "courseName": "Advanced Quantitative Data Analysis for Healthcare Research I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 805",
+        "courseName": "Advanced Quantitative Data Analysis for Healthcare Research II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 806",
+        "courseName": "Advanced Multivariate Statistics and Data Analysis for Health Care Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 808",
+        "courseName": "Translating Nursing and Health Care Research into Evidence-Based Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 810",
+        "courseName": "Evaluation Research in Nursing Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 811",
+        "courseName": "Nurse as Educator and Scholar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 814",
+        "courseName": "Theory and Design in Health Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 820",
+        "courseName": "Human Genetics Concepts for Health Care",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 860",
+        "courseName": "Measurement in Nursing and Health Care Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 870",
+        "courseName": "Nursing and Health Care Administration I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 871",
+        "courseName": "Nursing and Health Care Administration II",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 874",
+        "courseName": "Internship in Health Care Administration/Policy/Education",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 883",
+        "courseName": "Evidence-Based Practice in Nursing and Healthcare",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

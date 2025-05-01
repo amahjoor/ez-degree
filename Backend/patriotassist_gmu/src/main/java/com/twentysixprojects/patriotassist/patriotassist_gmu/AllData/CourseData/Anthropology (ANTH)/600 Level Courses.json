@@ -1,0 +1,56 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "ANTH 616",
+        "courseName": "Anthropology of the City",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 619",
+        "courseName": "Disrupting Nature: Queer, Feminist, and Indigenous Science Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 635",
+        "courseName": "Regional Ethnography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 640",
+        "courseName": "Applied Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 650",
+        "courseName": "Methods in Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 684",
+        "courseName": "Independent Study in Sociocultural Anthropology",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 687",
+        "courseName": "Medical Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 690",
+        "courseName": "Internship",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 698",
+        "courseName": "Study Abroad",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

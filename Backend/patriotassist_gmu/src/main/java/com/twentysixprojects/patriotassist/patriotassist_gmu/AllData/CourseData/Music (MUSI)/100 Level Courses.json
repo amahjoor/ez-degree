@@ -1,0 +1,80 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "MUSI 100",
+        "courseName": "Fundamentals of Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 101",
+        "courseName": "Introduction to Classical Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 102",
+        "courseName": "Popular Music in America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 103",
+        "courseName": "Musics of the World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 106",
+        "courseName": "Fundamentals of Rock, Blues, and Jazz",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 107",
+        "courseName": "Jazz and Blues in America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 108",
+        "courseName": "Practical Musicianship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 109",
+        "courseName": "Songwriting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 113",
+        "courseName": "Aural Skills I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 114",
+        "courseName": "Aural Skills II",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "Required Prerequisite: MUSI 113C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MUSI 115",
+        "courseName": "Introduction to Music Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 171",
+        "courseName": "Keyboard Skills I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 172",
+        "courseName": "Keyboard Skills II",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,284 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "RECR 100",
+        "courseName": "Brazilian Jiu-Jitsu: Intro",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 101",
+        "courseName": "Brazilian Jiu-Jitsu: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (RECR 100*C or 100XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "RECR 102",
+        "courseName": "Judo: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 103",
+        "courseName": "Judo: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (RECR 102C or 102XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "RECR 106",
+        "courseName": "Krav Maga: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 107",
+        "courseName": "Krav Maga: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 108",
+        "courseName": "Self Defense: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 109",
+        "courseName": "Self Defense: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 110",
+        "courseName": "Tae Kwon Do: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 111",
+        "courseName": "Tae Kwon Do: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 113",
+        "courseName": "Fencing",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 118",
+        "courseName": "Cardio Conditioning",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 119",
+        "courseName": "Fitness Walking",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 120",
+        "courseName": "Weight Training/ Body Conditioning",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 121",
+        "courseName": "Backpacking: Introduction",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 124",
+        "courseName": "Horsemanship: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 125",
+        "courseName": "Horsemanship: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 129",
+        "courseName": "Mountain Biking",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 130",
+        "courseName": "Introduction to Marksmanship",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 133",
+        "courseName": "Indoor Rock Climbing: Intro",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 134",
+        "courseName": "Rock Climbing: Introduction",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 136",
+        "courseName": "Pistol Marksmanship",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 137",
+        "courseName": "Trap and Skeet Shooting: Intro",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 139",
+        "courseName": "Archery: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 140",
+        "courseName": "Rifle Marksmanship",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 141",
+        "courseName": "Basketball: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 142",
+        "courseName": "Cricket",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 143",
+        "courseName": "Soccer: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 144",
+        "courseName": "Soccer: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 145",
+        "courseName": "Volleyball: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 151",
+        "courseName": "Badminton: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 152",
+        "courseName": "Pickleball",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 155",
+        "courseName": "Tennis: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 156",
+        "courseName": "Tennis: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 157",
+        "courseName": "Squash: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 161",
+        "courseName": "Scuba Diving: Basic",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 162",
+        "courseName": "Swimming: Beginning",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 163",
+        "courseName": "Swimming: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 169",
+        "courseName": "Golf: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 171",
+        "courseName": "Latin Dance",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 172",
+        "courseName": "Social Dance",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 181",
+        "courseName": "Meditation: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 182",
+        "courseName": "Pilates: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 183",
+        "courseName": "Pilates: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 184",
+        "courseName": "Tai Chi: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 186",
+        "courseName": "Yoga: Introduction",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RECR 187",
+        "courseName": "Yoga: Intermediate",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

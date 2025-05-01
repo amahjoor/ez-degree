@@ -1,0 +1,110 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "LING 500",
+        "courseName": "Linguistic Variation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 506",
+        "courseName": "Introduction to Linguistic Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 507",
+        "courseName": "Field Work in Applied Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 514",
+        "courseName": "Experimental Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 515",
+        "courseName": "Statistical Methods in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 516",
+        "courseName": "Linguistic Field Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 517",
+        "courseName": "Computational and Quantitative Methods in Lingusitics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 521",
+        "courseName": "Applied Linguistics: Teaching English to Speakers of Other Languages (TESOL)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 522",
+        "courseName": "English Grammar and Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 523",
+        "courseName": "English Pronunciation and Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 531",
+        "courseName": "Phonetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 532",
+        "courseName": "Phonology A",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 533",
+        "courseName": "Phonology B",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 535",
+        "courseName": "Morphology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 536",
+        "courseName": "Syntax A",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 537",
+        "courseName": "Syntax B",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 538",
+        "courseName": "Semantics and Pragmatics 1",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 542",
+        "courseName": "Second Language Acquisition 1",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

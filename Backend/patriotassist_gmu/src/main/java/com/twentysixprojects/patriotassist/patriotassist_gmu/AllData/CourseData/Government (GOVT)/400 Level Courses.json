@@ -1,0 +1,206 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "GOVT 400",
+        "courseName": "Issues in Political Analysis",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: GOVT 300C or 300XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GOVT 407",
+        "courseName": "Law and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 409",
+        "courseName": "Virginia Government and Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 412",
+        "courseName": "Politics and the Mass Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 414",
+        "courseName": "Politics of Race and Gender",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 420",
+        "courseName": "American Political Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 422",
+        "courseName": "Constitutional Interpretation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 423",
+        "courseName": "Constitutional Law: Civil Rights and Liberties",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 426",
+        "courseName": "Political Theory of Autonomous Algorithms",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 427",
+        "courseName": "Feminist Political Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 428",
+        "courseName": "Advanced Democratic Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 430",
+        "courseName": "Comparative Political Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 433",
+        "courseName": "Political Economy of East Asia",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 434",
+        "courseName": "Democracy in Global Perspective",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 435",
+        "courseName": "Data Analysis for Comparative and International Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 441",
+        "courseName": "Grand Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 443",
+        "courseName": "Law and Ethics of War",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 444",
+        "courseName": "Issues in International Studies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 445",
+        "courseName": "Human Rights",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 446",
+        "courseName": "International Law and Organization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 447",
+        "courseName": "Revolution and International Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 448",
+        "courseName": "Ethics and International Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 452",
+        "courseName": "Administrative Law and Procedures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 460",
+        "courseName": "Surveillance and Privacy in Contemporary Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 461",
+        "courseName": "Governance in Space",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 462",
+        "courseName": "Public Interest Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 464",
+        "courseName": "Issues in Public Policy and Administration",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 467",
+        "courseName": "How Washington Really Works",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 469",
+        "courseName": "Philosophy, Politics, and Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 480",
+        "courseName": "Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 490",
+        "courseName": "Synthesis Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 491",
+        "courseName": "Honors Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 492",
+        "courseName": "Computing Ethics, Law and Policy Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 496",
+        "courseName": "Directed Readings and Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

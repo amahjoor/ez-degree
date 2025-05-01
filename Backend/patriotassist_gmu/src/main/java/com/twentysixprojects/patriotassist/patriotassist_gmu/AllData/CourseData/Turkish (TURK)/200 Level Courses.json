@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "TURK 201",
+        "courseName": "Intermediate Turkish I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TURK 202",
+        "courseName": "Intermediate Turkish II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,50 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "COS 300",
+        "courseName": "Professional Preparation for STEM Disciplines",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 301",
+        "courseName": "Great Ideas in Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 302",
+        "courseName": "College of Science Transfer Transition",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 310",
+        "courseName": "Introduction to Science Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 315",
+        "courseName": "Science Policy Internship Preparation",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (COS 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COS 320",
+        "courseName": "Science Policy in Practice",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (COS 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COS 390",
+        "courseName": "Learning Assistant Seminar",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 391",
+        "courseName": "Continuing Learning Assistant Seminar",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

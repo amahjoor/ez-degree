@@ -1,0 +1,26 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "BUS 303",
+        "courseName": "Develop Professional Skills II: Advanced Elements",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BUS 103C, U103 or 103XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BUS 310",
+        "courseName": "Business Analytics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BUS 210C, U210, 210T or 210XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BUS 315",
+        "courseName": "Introduction to the Government Contracting Industry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BUS 325",
+        "courseName": "Creating Value for Business Stakeholders",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

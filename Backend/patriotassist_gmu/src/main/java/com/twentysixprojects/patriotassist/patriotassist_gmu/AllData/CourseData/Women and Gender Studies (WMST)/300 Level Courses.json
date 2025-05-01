@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "WMST 300",
+        "courseName": "Current Issues in Women and Gender Studies",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 307",
+        "courseName": "Women and Work",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 309",
+        "courseName": "Black Social Movements: Gendering of Violence and Activism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 315",
+        "courseName": "Women During the Enslavement Era",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 317",
+        "courseName": "Women's Activism: From Jim Crow to Black Power",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 319",
+        "courseName": "Gender, Health, and Culture in the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 320",
+        "courseName": "Violence, Gender, and Sexuality",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 330",
+        "courseName": "Feminist Theories of Gender, Sexuality, and Race",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 375",
+        "courseName": "Gender, Race, Sexuality, and TV",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 390",
+        "courseName": "Study Abroad",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 399",
+        "courseName": "Current Topics in LGBTQ Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

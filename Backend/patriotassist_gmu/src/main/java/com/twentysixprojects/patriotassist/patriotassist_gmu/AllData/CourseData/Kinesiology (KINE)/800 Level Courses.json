@@ -1,0 +1,20 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "KINE 890",
+        "courseName": "Research Experience I",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 891",
+        "courseName": "Research Experience II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 897",
+        "courseName": "Independent Study",
+        "courseCredits": "3,6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

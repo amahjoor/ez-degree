@@ -1,0 +1,146 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EDSE 501",
+        "courseName": "Introduction to Special Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 502",
+        "courseName": "Classroom Management and Individualized Behavior Supports",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 503",
+        "courseName": "Language Development and Reading",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 511",
+        "courseName": "Characteristics of Students with Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 512",
+        "courseName": "Braille Code",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 513",
+        "courseName": "Medical and Educational Implications of Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 514",
+        "courseName": "Orientation and Mobility for Students with Blindness and Visual Impairments",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 517",
+        "courseName": "Computer Applications for Special Populations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 518",
+        "courseName": "Curriculum and Assessment of Students with Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 531",
+        "courseName": "Transition and Community-Based Instruction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 532",
+        "courseName": "Positive Behavior Supports",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 533",
+        "courseName": "Assessment and Program Planning for Adapted Curriculum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 534",
+        "courseName": "Communication and Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 540",
+        "courseName": "Characteristics of Students with Disabilities who Access the General Curriculum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 544",
+        "courseName": "Adapted Instructional Methods and Transition for Secondary Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 547",
+        "courseName": "Characteristics of Students with Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 557",
+        "courseName": "Foundations of Language and Literacy for Individuals with Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 562",
+        "courseName": "Foundations of Literacy Development for Students with Specific Learning Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 563",
+        "courseName": "Oral Language, Phonemic Awareness, and Phonology for Students with Specific Learning Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 564",
+        "courseName": "Phonics and Word Recognition for Students with Specific Learning Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 565",
+        "courseName": "Vocabulary, Text Comprehension & Written Expression for Students with Specific Learning Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 567",
+        "courseName": "Practicum for Specialized Reading Instruction for Students with Specific Learning Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 562B-, 563B-, 564B- and 565B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDSE 590",
+        "courseName": "Special Education Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 597",
+        "courseName": "Special Topics in Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

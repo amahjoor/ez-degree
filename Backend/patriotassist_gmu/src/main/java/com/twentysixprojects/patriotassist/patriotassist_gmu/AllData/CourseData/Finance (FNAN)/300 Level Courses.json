@@ -1,0 +1,44 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "FNAN 300",
+        "courseName": "Personal Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FNAN 303",
+        "courseName": "Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 203C, 203XS, 204C, 204XS, U203 or U204) and (BUS 210C, 210XS or U210) and (MATH 108C, 108XS, 113C, 113XS, 114C, 114XS, HNRT 225C, 225XS, MATH U108, U113, U114 or HNRT U225).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 311",
+        "courseName": "Principles of Investment",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 301B- or L301) or (FNAN 303B- or L303).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 321",
+        "courseName": "Financial Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 301B- or L301) or (FNAN 303B- or L303).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 341",
+        "courseName": "Introduction to Firm Valuation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 301B- or L301) or (FNAN 303B- or L303).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 351",
+        "courseName": "Principles of Real Estate",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 301C or L301) or FNAN 303C, 303XS or L303.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 390",
+        "courseName": "Introduction to Financial Planning and Wealth Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 303B- or L303) and ((ACCT 303C, 303XS or L303) or (ACCT 330C, 330XS or L330)).\nB- Requires minimum grade of B-.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

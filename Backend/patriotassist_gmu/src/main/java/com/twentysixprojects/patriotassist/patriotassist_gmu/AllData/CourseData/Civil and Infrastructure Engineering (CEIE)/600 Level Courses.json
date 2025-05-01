@@ -1,0 +1,242 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CEIE 601",
+        "courseName": "Infrastructure Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 603",
+        "courseName": "Research Methods in Civil Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 605",
+        "courseName": "Risk and Uncertainty in Civil Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 607",
+        "courseName": "Public Infrastructure Management and Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 611",
+        "courseName": "Structural Analysis II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 612",
+        "courseName": "Mechanics of Materials II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 613",
+        "courseName": "Structural Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 619",
+        "courseName": "Special Topics in Structural Engineering",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 620",
+        "courseName": "Intelligent Systems in Civil Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 623",
+        "courseName": "Reinforced Concrete Design II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 631",
+        "courseName": "Soil Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 632",
+        "courseName": "Soil Remediation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 633",
+        "courseName": "Designing with Geosynthetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 634",
+        "courseName": "Geoenvironmental Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 635",
+        "courseName": "Advanced Soil Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 636",
+        "courseName": "Sources of Geotechnical Data",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 637",
+        "courseName": "Tunneling and Ground Improvement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 638",
+        "courseName": "Advanced Foundation Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 639",
+        "courseName": "Special Topics in Geotechnical Engineering",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 641",
+        "courseName": "Water Resources Engineering I: Principles and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 643",
+        "courseName": "Coastal Flood Hazards",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 644",
+        "courseName": "Groundwater Systems Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 645",
+        "courseName": "Flood Hazards Engineering and Adaptation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 649",
+        "courseName": "Special Topics in Water Resources Engineering",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 657",
+        "courseName": "Environmental Engineering Microbiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 658",
+        "courseName": "Water Quality",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 659",
+        "courseName": "Hazardous Waste",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 662",
+        "courseName": "Travel Demand Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 663",
+        "courseName": "Intelligent Transportation Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 664",
+        "courseName": "Transportation Engineering and the Environment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 665",
+        "courseName": "Travel Survey Methods and Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 667",
+        "courseName": "Multi-modal Transportation Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 668",
+        "courseName": "Transportation Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 669",
+        "courseName": "Special Topics in Transportation Engineering",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 677",
+        "courseName": "Construction Simulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 678",
+        "courseName": "Infrastructure Asset Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 679",
+        "courseName": "Special Topics in Construction Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 683",
+        "courseName": "Water and Wastewater Systems Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 686",
+        "courseName": "Transportation System Security and Safety",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 690",
+        "courseName": "Topics in Civil Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

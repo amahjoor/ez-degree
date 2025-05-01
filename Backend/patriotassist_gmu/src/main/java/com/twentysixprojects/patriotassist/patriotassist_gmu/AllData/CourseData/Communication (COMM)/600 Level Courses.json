@@ -1,0 +1,146 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "COMM 600",
+        "courseName": "Introduction to Graduate Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 602",
+        "courseName": "Theories and Research of Mass Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 605",
+        "courseName": "Intercultural Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 615",
+        "courseName": "Political Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 620",
+        "courseName": "Health Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 630",
+        "courseName": "Theories of Public Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 632",
+        "courseName": "Persuasion Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 634",
+        "courseName": "Theories of Interpersonal Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 635",
+        "courseName": "Organizational Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 636",
+        "courseName": "Communication Consulting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 637",
+        "courseName": "Risk Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 639",
+        "courseName": "Science Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 640",
+        "courseName": "The Issues of Science and Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 641",
+        "courseName": "Environmental Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 642",
+        "courseName": "Science and the Public",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 644",
+        "courseName": "Analysis and Criticism of Science Journalism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 650",
+        "courseName": "Intro to Research Methods in Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 653",
+        "courseName": "Graduate Seminar in Instructional Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 660",
+        "courseName": "Climate Change and Sustainability Communication Campaigns",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 670",
+        "courseName": "Social Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 682",
+        "courseName": "Popular Culture and Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 690",
+        "courseName": "Special Topics in Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 694",
+        "courseName": "Communication Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 696",
+        "courseName": "Directed Readings and Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

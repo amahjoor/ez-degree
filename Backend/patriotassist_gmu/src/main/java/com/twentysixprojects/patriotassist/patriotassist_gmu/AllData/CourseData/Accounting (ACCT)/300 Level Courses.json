@@ -1,0 +1,62 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ACCT 303",
+        "courseName": "Accounting for Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 203C, U203, 203XS, 204C or U204) and (BUS 210C, U210 or 210XS) and (MATH 108C, U108, 108XS, 113C, U113, 113XS, 114C, U114, 114XS, HNRT 225C, 225XS or U225).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 311",
+        "courseName": "Managerial and Cost Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 303C, L303, 303XS, 301C, L301, 330C, L330 or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 315",
+        "courseName": "Personal Financial Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ACCT 203C, U203, 203XS, 204C or U204) and (BUS 210C, 210XS or U210) and (MATH 108C, U108, 108XS, 113C, U113, 113XS, 114C, U114, 114XS, HNRT 225C, 225XS or U225)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 331",
+        "courseName": "Intermediate Accounting I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 303C, L303, 303XS, 330C, L330, 330XS, 301C or L301).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 332",
+        "courseName": "Intermediate Accounting II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ACCT 331C or 331XS) and (FNAN 301C, L301, 303C, L303 or 303XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 351",
+        "courseName": "Taxation and Managerial Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ACCT 301C or L301) or (ACCT 303C, L303 or 303XS) or (ACCT 330C, L330 or 330XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 361",
+        "courseName": "Accounting Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ACCT 301C, L301, 303C, L303, 303XS, 330C, L330 or 330XS) and (MIS 301C, L301, 303C, L303 or 303XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 370",
+        "courseName": "International Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 301C, 303C, 330C, 303XS, 330XS, L301, L303 or L330).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 372",
+        "courseName": "Financial Statement Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 301C, L301, 303C, 303XS, L303, 330C, 330XS or L330).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 390",
+        "courseName": "Introduction to Financial Planning and Wealth Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 303B- or L303) and ((ACCT 303C or L303) or (ACCT 330C, 330XS or L330)).\nB- Requires minimum grade of B-.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

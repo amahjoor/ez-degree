@@ -1,0 +1,26 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "INFS 501",
+        "courseName": "Discrete and Logical Structures for Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 515",
+        "courseName": "Computer Organization Course and Operating Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 519",
+        "courseName": "Program Design and Data Structures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 580",
+        "courseName": "Analytics: Big Data to Information ",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

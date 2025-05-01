@@ -1,0 +1,92 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "FREN 300",
+        "courseName": "Study Tour in France",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 309",
+        "courseName": "Reading and Writing Skills Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 310",
+        "courseName": "Oral Proficiency in French",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 320",
+        "courseName": "Contemporary Tour de France",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 325",
+        "courseName": "Major French Writers (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 329",
+        "courseName": "Problems of Western Civilization in French Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 340",
+        "courseName": "Francophone Identities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 357",
+        "courseName": "Introduction to Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 370",
+        "courseName": "French Civilization, Culture, and Literature: Ancient Gaul to 1789",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 371",
+        "courseName": "French Civilization, Culture, and Literature: 1789 to the Present",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 380",
+        "courseName": "The Making of Modern France",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 381",
+        "courseName": "Introduction to Literary Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 385",
+        "courseName": "Introduction to French Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 390",
+        "courseName": "French for the Professions: Fashion, Food, and Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 392",
+        "courseName": "French for International Development and Aid Work",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

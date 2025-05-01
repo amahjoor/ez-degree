@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ENGR 107",
+        "courseName": "Introduction to Engineering",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGR 110",
+        "courseName": "Engineering, Computing, and Social Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

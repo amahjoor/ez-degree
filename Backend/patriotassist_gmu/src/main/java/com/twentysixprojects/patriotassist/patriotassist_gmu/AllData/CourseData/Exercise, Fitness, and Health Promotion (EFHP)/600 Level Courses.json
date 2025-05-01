@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EFHP 610",
+        "courseName": "Advanced Exercise Physiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 611",
+        "courseName": "Movement and Fitness Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 612",
+        "courseName": "Scientific Foundation of Applied Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 613",
+        "courseName": "Advanced Applied Biomechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 614",
+        "courseName": "Advanced Exercise Nutrition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 617",
+        "courseName": "Corrective and Preventative Exercise Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 618",
+        "courseName": "Exercise and Sport Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 620",
+        "courseName": "Research Methods for Applied Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 621",
+        "courseName": "Statistical Methods for Applied Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 640",
+        "courseName": "Principles of Strength and Conditioning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 690",
+        "courseName": "Scientific Communications Seminar",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

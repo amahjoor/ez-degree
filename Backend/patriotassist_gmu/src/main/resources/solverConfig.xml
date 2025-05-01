@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+    <solutionClass>com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.OptaPlanner.Schedule</solutionClass>
+    <entityClass>com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.OptaPlanner.CourseAssignment</entityClass>
+    <scoreDirectorFactory>
+        <constraintProviderClass>com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.OptaPlanner.ScheduleConstraintProvider</constraintProviderClass>
+    </scoreDirectorFactory>
+    <termination>
+        <secondsSpentLimit>5</secondsSpentLimit>
+    </termination>
+</solver>

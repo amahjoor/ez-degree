@@ -1,0 +1,20 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "SPAN 790",
+        "courseName": "Seminar in Bilingual Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 798",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

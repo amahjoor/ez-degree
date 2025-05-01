@@ -1,0 +1,128 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SYST 611",
+        "courseName": "System Methodology and Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 618",
+        "courseName": "Model-based Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 621",
+        "courseName": "Systems Architecture Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 630",
+        "courseName": "Systems Engineering Management II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 638",
+        "courseName": "Machine Learning for Financial Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: OR 438B- or 538B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SYST 659",
+        "courseName": "Topics in Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 660",
+        "courseName": "Air Transportation Systems Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 664",
+        "courseName": "Bayesian Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 669",
+        "courseName": "Human Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 670",
+        "courseName": "Metaheuristics for Optimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 674",
+        "courseName": "Dynamic Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 675",
+        "courseName": "Reliability Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 680",
+        "courseName": "Principles of Command, Control, Communications, Computing, and Intelligence (C4I)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 681",
+        "courseName": "Secure Energy Efficient Supply Chains",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 682",
+        "courseName": "Space Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 683",
+        "courseName": "Modeling, Simulation, and Gaming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 685",
+        "courseName": "Unmanned Aerial Systems Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 687",
+        "courseName": "Cyber Security Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 688",
+        "courseName": "Financial Systems Engineering II: Derivative Products and Risk Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 698",
+        "courseName": "Independent Study and Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 699",
+        "courseName": "Masters Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

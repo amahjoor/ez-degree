@@ -1,0 +1,80 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "WMST 400",
+        "courseName": "Internship in Women and Gender Studies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 401",
+        "courseName": "Experiential Learning in Women and Gender Studies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 402",
+        "courseName": "Queer Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 404",
+        "courseName": "Gender, Sexuality, and Disability",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 407",
+        "courseName": "Transnational Sexualities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 408",
+        "courseName": "Gender, Sexuality, and Human Rights",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 409",
+        "courseName": "Sexuality, Race, and Immigration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 410",
+        "courseName": "Feminist Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 412",
+        "courseName": "Race, Class, and LGBTQ Communities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 413",
+        "courseName": "LGBTQ Issues in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 416",
+        "courseName": "Policing Black Bodies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 450",
+        "courseName": "Current Topics in Women and Gender Studies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 490",
+        "courseName": "Independent Study in Women and Gender Studies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

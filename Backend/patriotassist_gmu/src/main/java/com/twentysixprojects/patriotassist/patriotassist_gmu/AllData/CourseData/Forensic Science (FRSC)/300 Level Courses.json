@@ -1,0 +1,38 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "FRSC 302",
+        "courseName": "Forensic Trace Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FRSC 200C or 200XS) and (FRSC 201C or 201XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 303",
+        "courseName": "Forensic Evidence and Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((FRSC 200C or 200XS) and (CRIM 100C or 100XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 304",
+        "courseName": "Forensic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FRSC 200C or 200XS) and (FRSC 201C or 201XS) and (CHEM 211C or 211XS) and (CHEM 213C or 213XS) and (CHEM 212C or 212XS) and (CHEM 214C or 214XS) and (CHEM 313C or 313XS) and (CHEM 315C or 315XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 305",
+        "courseName": "Forensic Chemistry Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: ((FRSC 200C or 200XS) and (FRSC 201C or 201XS) and (FRSC 304*C or 304XS) and (CHEM 211C or 211XS) and (CHEM 212C or 212XS) and (CHEM 213C or 213XS) and (CHEM 214C or 214XS) and (CHEM 313C or 313XS) and (CHEM 315C or 315XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 325",
+        "courseName": "Molecular Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C or 213XS) and (BIOL 214C, 214XS, STAT 250C or 250XS) and (BIOL 311C or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 326",
+        "courseName": "Molecular Biology Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (BIOL 213C or 213XS) and (BIOL 214C, 214XS, STAT 250C or 250XS) and (BIOL 311C or 311XS) and (FRSC 325*C or 325*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

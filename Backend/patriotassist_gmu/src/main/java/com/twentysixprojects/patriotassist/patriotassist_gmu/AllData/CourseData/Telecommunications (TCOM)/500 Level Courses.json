@@ -1,0 +1,56 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "TCOM 500",
+        "courseName": "Modern Telecommunications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 514",
+        "courseName": "Basic Switching: Lecture and Laboratory Course",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 515",
+        "courseName": "Internet Protocol Routing: Lecture and Laboratory Course",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 535",
+        "courseName": "The TCP/IP Suite of Internet Protocols",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 551",
+        "courseName": "Digital Communication Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 552",
+        "courseName": "Introduction to Mobile Communications Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 570",
+        "courseName": "Network Automation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 590",
+        "courseName": "Selected Topics in Telecommunications",
+        "courseCredits": "1.5-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 598",
+        "courseName": "Independent Study in Telecommunications",
+        "courseCredits": "1.5-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

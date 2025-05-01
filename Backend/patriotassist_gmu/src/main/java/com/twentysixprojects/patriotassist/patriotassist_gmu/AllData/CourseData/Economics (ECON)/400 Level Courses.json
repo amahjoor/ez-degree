@@ -1,0 +1,128 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ECON 403",
+        "courseName": "Austrian Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 410",
+        "courseName": "Public Choice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 412",
+        "courseName": "Game Theory and Economics of Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 415",
+        "courseName": "Law and Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 420",
+        "courseName": "International Money and Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 421",
+        "courseName": "Financial Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 435",
+        "courseName": "Economics of Energy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 445",
+        "courseName": "Design and Analysis of Experiments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 460",
+        "courseName": "Senior Seminar in Philosophy, Politics, and Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 470",
+        "courseName": "Economics of Regulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 471",
+        "courseName": "Airline Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 481",
+        "courseName": "The Development of Economic Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 485",
+        "courseName": "Smithian Political Economy I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 486",
+        "courseName": "Smithian Political Economy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 491",
+        "courseName": "Capstone in Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECON 306C or 306XS) and (ECON 311C or 311XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECON 492",
+        "courseName": "Study Abroad",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 493",
+        "courseName": "Capstone Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECON 306C or 306XS) and (ECON 311C or 311XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECON 494",
+        "courseName": "Introduction to Independent Research in Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 495",
+        "courseName": "RS: Honors Thesis in Economics",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 496",
+        "courseName": "Special Topics in Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,14 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "PH 940",
+        "courseName": "Independent Study in Public and Population Health",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 960",
+        "courseName": "Directed Research in Public and Population Health",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

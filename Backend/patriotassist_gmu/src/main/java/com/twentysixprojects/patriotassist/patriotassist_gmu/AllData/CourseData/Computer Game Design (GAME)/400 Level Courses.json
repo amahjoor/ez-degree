@@ -1,0 +1,50 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "GAME 400",
+        "courseName": "Game Design Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 410",
+        "courseName": "Advanced Game Design Studio",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (GAME 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 431",
+        "courseName": "Advanced Game Animation I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 489",
+        "courseName": "Pre-Internship Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 490",
+        "courseName": "Senior Game Design Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 491",
+        "courseName": "Internship",
+        "courseCredits": "3-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 492",
+        "courseName": "Independent Study",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 499",
+        "courseName": "Advanced Studies in Game Design",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,20 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "BINF 530",
+        "courseName": "Introduction to Bioinformatics Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 531",
+        "courseName": "Molecular Cell Biology for Bioinformatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 550",
+        "courseName": "Introduction to Bioinformatics Database Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

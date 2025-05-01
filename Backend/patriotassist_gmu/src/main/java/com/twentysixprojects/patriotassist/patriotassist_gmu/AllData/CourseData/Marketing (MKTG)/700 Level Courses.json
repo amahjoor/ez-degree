@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MKTG 751",
+        "courseName": "Seminar in Marketing Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 752",
+        "courseName": "Seminar in Marketing Methods and Models",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,20 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "STAT 800",
+        "courseName": "Statistics Colloquium",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 889",
+        "courseName": "Advanced Topics in Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 896",
+        "courseName": "Advanced Directed Reading",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

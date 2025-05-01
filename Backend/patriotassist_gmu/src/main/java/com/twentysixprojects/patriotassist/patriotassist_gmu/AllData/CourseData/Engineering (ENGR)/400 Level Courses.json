@@ -1,0 +1,14 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ENGR 498",
+        "courseName": "Independent Study in Engineering",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGR 499",
+        "courseName": "Special Topics in Engineering",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

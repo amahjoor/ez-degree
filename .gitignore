@@ -46,3 +46,5 @@ output/*
 
 # Data directory
 data/
+
+/Backend/patriotassist_gmu/src/main/java/com/twentysixprojects/patriotassist/patriotassist_gmu/AllData/

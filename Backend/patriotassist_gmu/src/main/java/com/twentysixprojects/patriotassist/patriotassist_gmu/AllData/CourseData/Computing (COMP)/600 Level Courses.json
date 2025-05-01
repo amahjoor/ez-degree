@@ -1,0 +1,14 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "COMP 642",
+        "courseName": "Interaction Design and Accessibility",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMP 690",
+        "courseName": "Computing Capstone Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,44 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "ASTR 601",
+        "courseName": "Computer Simulation in Astronomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 602",
+        "courseName": "Methods of Observational Astronomy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 603",
+        "courseName": "Planetary Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 604",
+        "courseName": "Galaxies and Cosmology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 620",
+        "courseName": "Exoplanets",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 660",
+        "courseName": "Plasma Physics for Space and Astrophysics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 680",
+        "courseName": "Physics of Interstellar Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

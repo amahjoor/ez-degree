@@ -1,0 +1,62 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SPMT 611",
+        "courseName": "Sport Marketing and Sales",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 612",
+        "courseName": "Economics and Financial Management in the Sport Industry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 613",
+        "courseName": "Strategic Leadership in Sport Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 614",
+        "courseName": "Legal Issues in Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 616",
+        "courseName": "Sport Operations, Venues, and Event Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 618",
+        "courseName": "Psychology of Coaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 620",
+        "courseName": "Ethical Issues in Global Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 631",
+        "courseName": "Theoretical Models of Sport Coaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 651",
+        "courseName": "Sport and International Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 652",
+        "courseName": "Governance and Policy in International Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

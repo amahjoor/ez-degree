@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "PHIL 721",
+        "courseName": "Advanced Seminar in Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

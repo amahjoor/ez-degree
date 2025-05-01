@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "RUSS 101",
+        "courseName": "Elementary Russian I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 102",
+        "courseName": "Elementary Russian II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RUSS 110",
+        "courseName": "Elementary Russian",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

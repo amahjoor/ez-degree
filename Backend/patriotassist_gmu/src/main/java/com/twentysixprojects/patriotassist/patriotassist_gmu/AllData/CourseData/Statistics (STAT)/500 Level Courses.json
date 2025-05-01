@@ -1,0 +1,110 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "STAT 500",
+        "courseName": "Special Topics",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 507",
+        "courseName": "Introduction to Statistical Data Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 508",
+        "courseName": "Quantitative Foundation for Statistical Data Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 515",
+        "courseName": "Applied Statistics and Visualization for Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 517",
+        "courseName": "Experimental Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 535B-, 535XS, 554B- or 554XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 521",
+        "courseName": "Applied Probability and Statistical Inference",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 522",
+        "courseName": "Applied Multivariate Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 535B-, 535XS, 554B- or 554XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 525",
+        "courseName": "Nonparametric Statistics and Categorical Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 535B-, 535XS, 554B- or 554XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 526",
+        "courseName": "Applied Regression Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 535B-, 535XS, 554B- or 554XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 532",
+        "courseName": "Introduction to Statistical Software Packages",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 535",
+        "courseName": "Analysis of Experimental Data",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 539",
+        "courseName": "Topics in Applied Statistics",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 544",
+        "courseName": "Applied Probability",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 554",
+        "courseName": "Applied Statistics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 556",
+        "courseName": "Statistical Computing for Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 560",
+        "courseName": "Biostatistical Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 572",
+        "courseName": "Applied Statistical Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 520B- or 250XS) or (STAT 521B- or 521XS) or (STAT 554B- or 554XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 574",
+        "courseName": "Survey Sampling I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

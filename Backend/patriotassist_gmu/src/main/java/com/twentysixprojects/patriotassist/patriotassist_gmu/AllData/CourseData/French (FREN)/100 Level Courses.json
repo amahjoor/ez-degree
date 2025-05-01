@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "FREN 101",
+        "courseName": "Elementary French I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 102",
+        "courseName": "Elementary French II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 110",
+        "courseName": "Elementary French",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 115",
+        "courseName": "Review of Elementary French",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

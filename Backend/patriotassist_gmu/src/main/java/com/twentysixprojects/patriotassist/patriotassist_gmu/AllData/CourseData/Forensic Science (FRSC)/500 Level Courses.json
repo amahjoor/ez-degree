@@ -1,0 +1,134 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "FRSC 500",
+        "courseName": "Introduction to Forensic Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 510",
+        "courseName": "Basic Crime Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 511",
+        "courseName": "Advanced Crime Scene Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FRSC 510B- or 510XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 512",
+        "courseName": "Physical Evidence Laboratory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FRSC 510B- or 510XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 513",
+        "courseName": "Forensic Photography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 514",
+        "courseName": "Survey of Forensic Chemistry, Biology, and DNA Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 515",
+        "courseName": "Selected Topics in Forensic Science",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 516",
+        "courseName": "Forensic Drone Photography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 517",
+        "courseName": "Questioned Document Examination",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 518",
+        "courseName": "Analytical Thinking & Violent Crime Profiling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 520",
+        "courseName": "Toxicology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 525",
+        "courseName": "Molecular Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 526",
+        "courseName": "Molecular Biology Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: FRSC 525*B.\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "FRSC 530",
+        "courseName": "Law and Forensic Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 540",
+        "courseName": "Advanced Forensic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((FRSC 541*B- or 541XS) and (FRSC 514B- or 514XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 541",
+        "courseName": "Forensic Chemistry Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: FRSC 540*B- or 540*XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 550",
+        "courseName": "Issues in Forensic Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 560",
+        "courseName": "Advanced Forensic DNA Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((FRSC 561*B- or 561XS) and (FRSC 514B- or 514XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 561",
+        "courseName": "Forensic DNA Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: FRSC 560*B- or 560*XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 570",
+        "courseName": "Trace and Physical Evidence Concepts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 580",
+        "courseName": "Facial Reconstruction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 590",
+        "courseName": "Medicolegal Death Investigation and Pathology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FRSC 510B- or 510XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

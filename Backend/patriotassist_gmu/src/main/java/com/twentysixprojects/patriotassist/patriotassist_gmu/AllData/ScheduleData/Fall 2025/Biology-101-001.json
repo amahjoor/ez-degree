@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Biology Freshman Seminar",
+  "CourseSubject": "Biology",
+  "CourseNumber": "101",
+  "CourseSection": "001",
+  "CreditHours": "1",
+  "CRN": "77177",
+  "Term": "Fall 2025",
+  "Instructor": "",
+  "MeetingDays": "Monday",
+  "MeetingTimes": "12:00 PM - 01:15 PM",
+  "Campus": "Fairfax",
+  "Seats": "60 of 60 seats remain.\n99 of 99 waitlist seats remain.",
+  "ScheduleType": "Seminar",
+  "createdAt": "2025-03-10 16:05:36"
+}

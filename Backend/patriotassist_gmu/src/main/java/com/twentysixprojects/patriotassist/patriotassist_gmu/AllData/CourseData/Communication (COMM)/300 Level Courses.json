@@ -1,0 +1,350 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "COMM 300",
+        "courseName": "Rhetorical Theory and Criticism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: COMM 200C, U200 or 200XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 301",
+        "courseName": "Relational Communication Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 302",
+        "courseName": "Media Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 304",
+        "courseName": "Foundations of Health Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 305",
+        "courseName": "Foundations of Intercultural Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 306",
+        "courseName": "Issues in Intercultural Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 307",
+        "courseName": "Field Study in Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 308",
+        "courseName": "Writing for Public Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: COMM 204C or 204XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 309",
+        "courseName": "Writing across the Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 310",
+        "courseName": "Performance for Communication Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 320",
+        "courseName": "Business and Professional Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 326",
+        "courseName": "Rhetoric of Social Movements and Political Controversy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 327",
+        "courseName": "Political Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 331",
+        "courseName": "Public Relations Campaigns",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 308C, L308, 303C or L303).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "COMM 332",
+        "courseName": "Nonverbal Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 334",
+        "courseName": "Family and Health Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 335",
+        "courseName": "Organizational Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 340",
+        "courseName": "Forensics Seminar III",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 341",
+        "courseName": "Forensics Seminar IV",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 342",
+        "courseName": "Debate Seminar III",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 343",
+        "courseName": "Debate Seminar IV",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 345",
+        "courseName": "Newspaper Workshop II",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 347",
+        "courseName": "Cable TV Programming and Marketing",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 348",
+        "courseName": "Podcasting and Radio Workshop II",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 350",
+        "courseName": "Mass Communication and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 351",
+        "courseName": "News Writing and Reporting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 303C, L303, 303XS, 309C, L309, 309XS, 203C, 203XS or L203).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 352",
+        "courseName": "News Editing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 303C, L303, 303XS, 309C, L309, 309XS, 203C, L203 or 203XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 353",
+        "courseName": "Broadcast Journalism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 309C, L309, 309XS, 303C, L303, 203C, L203 or 203XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 354",
+        "courseName": "Radio Production and Podcasting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 356",
+        "courseName": "Video: Performance and Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 358",
+        "courseName": "Multi-Camera Studio Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: COMM 355C, FAVS 255C, 255XS, COMM 208C, 208XS, L355, FAVS U255 or COMM U208.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 359",
+        "courseName": "Media Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 360",
+        "courseName": "Digital Postproduction",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: COMM 355C, FAVS 255C, 255XS, COMM 208C, 208XS, L355, FAVS U255 or COMM U208.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 362",
+        "courseName": "Argument and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 363",
+        "courseName": "Media Career Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 364",
+        "courseName": "Videography",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: COMM 355C, FAVS 255C, 255XS, COMM 208C, 208XS, L355, FAVS U255 or COMM U208.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 365",
+        "courseName": "Gender, Race, and Class in the Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 367",
+        "courseName": "Children and Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 369",
+        "courseName": "Multimedia Storytelling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 309C, L309, 203C, L203, 303C or L303).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "COMM 370",
+        "courseName": "Feature Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 309C, L309, 309XS, 303C, L303, 203C or L203).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 371",
+        "courseName": "Sports Writing and Reporting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 309C, L309, 309XS, 303C, L303, 203C, L203 or 203XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 372",
+        "courseName": "Sports and the Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 374",
+        "courseName": "Political Journalism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 309C, L309, 309XS, 303C, L303, 203C, L203 or 203XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 375",
+        "courseName": "Digital Advertising and Promotions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 380",
+        "courseName": "Media Criticism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 384",
+        "courseName": "Public Relations and Social Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 385",
+        "courseName": "Special Topics in Interpersonal and Organizational Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 386",
+        "courseName": "Special Topics in Political Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 387",
+        "courseName": "Special Topics in Journalism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 388",
+        "courseName": "Special Topics in Public Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 389",
+        "courseName": "Public Relations for Associations and Nonprofits",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 390",
+        "courseName": "Case Studies in Public Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 204C, 204XS or U204).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 392",
+        "courseName": "Public Relations Study Abroad",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 395",
+        "courseName": "Special Topics in Health Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 396",
+        "courseName": "Special Topics in Mass Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 397",
+        "courseName": "Special Topics in Production",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 398",
+        "courseName": "Research Practicum in Communication",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 399",
+        "courseName": "Special Topics in Communication",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

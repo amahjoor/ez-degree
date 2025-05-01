@@ -1,0 +1,110 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDCD 601",
+        "courseName": "Introduction to Research in Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCD 602",
+        "courseName": "Foundations in Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCD 603",
+        "courseName": "Counseling Theories and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCD 604",
+        "courseName": "Assessment and Appraisal in Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 601B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 606",
+        "courseName": "Counseling Children and Adolescents",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 603B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 608",
+        "courseName": "Group Processes and Analyses",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: EDCD 603B, 606*B or 609*B.\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 609",
+        "courseName": "Counseling Skills and Strategies for Adults",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCD 611B or 654B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 610",
+        "courseName": "Career and Educational Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCD 606B, 609B or 604B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 611",
+        "courseName": "Introduction to Ethical and Legal Issues in School Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCD 613",
+        "courseName": "Introduction to School Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 602*B.\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 619",
+        "courseName": "Trauma and Crisis Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCD 525B, 606B or 609B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 626",
+        "courseName": "Principles and Practices of School Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 613B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 628",
+        "courseName": "Counseling and Social Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCD 660B and (EDCD 654B or 611B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 652",
+        "courseName": "Introduction to Substance Abuse Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCD 606*B-, 606XS, 609*B- or 609XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCD 654",
+        "courseName": "Counseling and Ethics in Community Agencies",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDCD 602B- or 602XS) and (EDCD 603B- or 603XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCD 656",
+        "courseName": "Diagnosis and Treatment Planning for Mental Health Professionals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCD 658",
+        "courseName": "Couples and Family Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCD 606B or 609*B.\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 660",
+        "courseName": "Multicultural Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDCD 608*B and (EDCD 606B or 609B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    }
+]}

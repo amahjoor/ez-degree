@@ -1,0 +1,56 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CSI 600",
+        "courseName": "Quantitative Foundations for Computational Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSI 639",
+        "courseName": "Ethics in Scientific Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSI 672",
+        "courseName": "Statistical Inference",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 544B- or 544XS) and (STAT 554*B- or 554XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CSI 674",
+        "courseName": "Bayesian Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSI 676",
+        "courseName": "Regression Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 544*B- or 544XS) and (STAT 554B- or 554XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CSI 678",
+        "courseName": "Times Series Analysis and Forecasting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 544B- or 544XS) and (STAT 554B- or 554XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CSI 685",
+        "courseName": "Fundamentals of Materials Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSI 690",
+        "courseName": "Numerical Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSI 695",
+        "courseName": "Scientific Databases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

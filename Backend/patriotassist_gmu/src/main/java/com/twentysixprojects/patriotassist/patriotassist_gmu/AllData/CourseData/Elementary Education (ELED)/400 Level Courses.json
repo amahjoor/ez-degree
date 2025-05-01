@@ -1,0 +1,104 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ELED 401",
+        "courseName": "Classroom Management and Instructional Strategies for Diverse Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ELED 305C or 305XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ELED 402",
+        "courseName": "Differentiating Elementary Methods and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ELED 401C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ELED 410",
+        "courseName": "Emergent and Early Literacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 411",
+        "courseName": "Reading Development, Processes, Assessment, and Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ELED 410C or 410XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ELED 412",
+        "courseName": "Writing Development, Processes and Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 421",
+        "courseName": "STEM in the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ELED 452C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ELED 422",
+        "courseName": "Collaboration in PK-6 Inclusive School Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 443",
+        "courseName": "Children, Family, Culture, and Schools, Ages 4-12",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 452",
+        "courseName": "Mathematics Methods for the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 453",
+        "courseName": "Science Methods for the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ELED 390C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ELED 454",
+        "courseName": "Methods of Teaching Social Studies and Integrating Fine Arts in the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 459",
+        "courseName": "Researching Problems of Practice in Elementary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ELED 490*.\n* May be taken concurrently."
+    },
+    {
+        "courseTitle": "ELED 480",
+        "courseName": "Practicum in Elementary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ELED 401C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ELED 485",
+        "courseName": "Advanced Practicum in Elementary Education",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "Required Prerequisite: ELED 480."
+    },
+    {
+        "courseTitle": "ELED 490",
+        "courseName": "Internship in Elementary Education",
+        "courseCredits": "3-9 credits",
+        "preRequisite": "Required Prerequisite: ELED 480."
+    },
+    {
+        "courseTitle": "ELED 495",
+        "courseName": "Internship in Elementary Education (Non-licensure)",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "Required Prerequisite: ELED 480C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ELED 497",
+        "courseName": "Special Topics in Elementary Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

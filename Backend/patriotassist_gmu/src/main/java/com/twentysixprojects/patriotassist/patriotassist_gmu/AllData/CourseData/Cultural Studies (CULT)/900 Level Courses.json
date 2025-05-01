@@ -1,0 +1,14 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "CULT 998",
+        "courseName": "Doctoral Dissertation Proposal",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 999",
+        "courseName": "Doctoral Dissertation",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

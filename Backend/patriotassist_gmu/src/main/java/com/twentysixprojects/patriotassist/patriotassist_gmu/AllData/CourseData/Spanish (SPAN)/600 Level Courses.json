@@ -1,0 +1,44 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SPAN 635",
+        "courseName": "Seminar in Don Quixote",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 650",
+        "courseName": "Seminar in Twentieth-Century Drama",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 655",
+        "courseName": "Seminar in Twentieth-Century Prose",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 670",
+        "courseName": "Seminar in Spanish American Prose",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 675",
+        "courseName": "Seminar in Literature and Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 680",
+        "courseName": "Seminar in Literature, Linguistics or Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 685",
+        "courseName": "Seminar in Literature and Ideas",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

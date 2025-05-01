@@ -1,0 +1,92 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "LAW 705",
+        "courseName": "Emerging Issues in Nat Sec",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 706",
+        "courseName": "Federal Indian Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 707",
+        "courseName": "Death Penalty in VA",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 727",
+        "courseName": "Separate Writings: Form, Function & Effect of Separate Opinions",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 728",
+        "courseName": "Separation of Powers Clinic (E)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 730",
+        "courseName": "Derivatives Law & Policy (W)",
+        "courseCredits": "1,2 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 731",
+        "courseName": "Surveillance Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 734",
+        "courseName": "Administrative State and its Critics",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 740",
+        "courseName": "Financial Services Workshop",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 745",
+        "courseName": "Topics in Securities & Governance",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 746",
+        "courseName": "Energy Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 749",
+        "courseName": "Presidential Criminal Liability",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 750",
+        "courseName": "Federal Consumer Protection Litigation",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 753",
+        "courseName": "Administrative Law: Adjudication",
+        "courseCredits": "1,3 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 758",
+        "courseName": "Emerging Law of Artificial Intelligence",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Data Structures",
+  "CourseSubject": "Computer Science",
+  "CourseNumber": "310",
+  "CourseSection": "001",
+  "CreditHours": "3",
+  "CRN": "79451",
+  "Term": "Fall 2025",
+  "Instructor": "Destine, Archange (Primary)",
+  "MeetingDays": "Monday,Wednesday",
+  "MeetingTimes": "10:30 AM - 11:45 AM",
+  "Campus": "Fairfax",
+  "Seats": "244 of 244 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:30:20"
+}

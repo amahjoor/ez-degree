@@ -1,0 +1,86 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "DANC 410",
+        "courseName": "Introduction to Contemporary Movement Theories",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: DANC 210C or 210XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 418",
+        "courseName": "Global Dance Intensive",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 420",
+        "courseName": "Special Topics in Dance II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 424",
+        "courseName": "Advanced Ballet I",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 425",
+        "courseName": "Advanced Modern/Contemporary Dance I",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 434",
+        "courseName": "Advanced Ballet II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 435",
+        "courseName": "Advanced Modern/ Contemporary Dance II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 445",
+        "courseName": "Ballet IV",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 453",
+        "courseName": "Teaching Creative Movement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 454",
+        "courseName": "Methods of Teaching Dance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 462",
+        "courseName": "Independent Choreography",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (DANC 150C or 150XS) and (DANC 251C or 251XS) and (DANC 252C or 252XS) and (DANC 360C or 360XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 470",
+        "courseName": "Advanced Dance Performance",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: DANC 370C or 370XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 471",
+        "courseName": "Advanced Residency Workshop",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: DANC 371C or 371XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 490",
+        "courseName": "Senior Dance Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

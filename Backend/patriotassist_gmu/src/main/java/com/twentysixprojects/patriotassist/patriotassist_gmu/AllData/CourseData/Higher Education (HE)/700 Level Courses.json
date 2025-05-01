@@ -1,0 +1,116 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "HE 701",
+        "courseName": "Higher Education Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 702",
+        "courseName": "Contemporary Issues and Fundamental Theories in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 703",
+        "courseName": "Higher Education in the Digital Age",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 704",
+        "courseName": "The Scholarship of Teaching and Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 705",
+        "courseName": "Access and Social Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 706",
+        "courseName": "Research and Theories on College Students",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 707",
+        "courseName": "Scholarly Digital Storytelling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 710",
+        "courseName": "Leadership in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 711",
+        "courseName": "Policy Studies in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 712",
+        "courseName": "Assessment and Program Evaluation in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 713",
+        "courseName": "The Internationalization of Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 721",
+        "courseName": "History of Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 722",
+        "courseName": "Organization and Administration in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 780",
+        "courseName": "Higher Education Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 781",
+        "courseName": "Research Seminar in Higher Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 786",
+        "courseName": "Research Apprenticeship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 792",
+        "courseName": "Special Topics in Higher Education",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 797",
+        "courseName": "Higher Education Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HE 799",
+        "courseName": "Higher Education Thesis",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

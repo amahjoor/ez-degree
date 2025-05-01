@@ -1,0 +1,86 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "TOUR 301",
+        "courseName": "Hotel Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 230D, 230XS or 230XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "TOUR 310",
+        "courseName": "Food and Beverage Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 230D, 230XS or 230XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "TOUR 311",
+        "courseName": "Women and Tourism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TOUR 313",
+        "courseName": "Event Technical Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 220D or 220XS.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TOUR 320",
+        "courseName": "Hospitality, Tourism and Event Management Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (TOUR 200D, 200XS or 200XP) or (TOUR 220D, 220XS or 220XP) or (TOUR 230D, 230XS or 230XP).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "TOUR 330",
+        "courseName": "Resort Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (TOUR 200D, 200XS or 200XP) or (TOUR 230D, 230XS or 230XP).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "TOUR 331",
+        "courseName": "Cruise Ship Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (TOUR 200C or 200XS) and (TOUR 230C or 230XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TOUR 340",
+        "courseName": "Sustainable Tourism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (TOUR 200D, 200XS or 200XP) or (TOUR 210D, 210XS or 210XP) or (RMGT 210D, 210XS or 210XP).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "TOUR 341",
+        "courseName": "Film and Medical Tourism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 200C or 200XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TOUR 342",
+        "courseName": "Sacred Spaces and Dark Tourism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 200C or 200XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TOUR 343",
+        "courseName": "Wine and Food Tourism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 200C or 200XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TOUR 352",
+        "courseName": "Heritage and Cultural Tourism",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 200D, 200XS or 200XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "TOUR 355",
+        "courseName": "Event Logistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 220C or 220XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TOUR 362",
+        "courseName": "Cultural and Environmental Interpretation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PRLS 300C, RMGT 300C or PRLS 300XS) or (TOUR 352C or 352XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

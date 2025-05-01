@@ -1,0 +1,32 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "PH 810",
+        "courseName": "Systematic Reviews of Health Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 816",
+        "courseName": "Efficacy and Effectiveness Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 818",
+        "courseName": "Advanced Ethics of Health Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 825",
+        "courseName": "Conducting and Publishing Health Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 850",
+        "courseName": "Teaching Practicum in Public and Population Health",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

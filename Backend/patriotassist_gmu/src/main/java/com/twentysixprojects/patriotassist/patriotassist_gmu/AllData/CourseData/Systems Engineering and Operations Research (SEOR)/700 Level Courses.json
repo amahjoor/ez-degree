@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "SEOR 750",
+        "courseName": "Advanced Topics in Systems Engineering and Operations Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEOR 796",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

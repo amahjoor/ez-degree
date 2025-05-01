@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SPSY 617",
+        "courseName": "Child Psychopathology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 619",
+        "courseName": "Consultation and Applied Behavioral Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 671",
+        "courseName": "Role and Function of the School Psychologist",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 672",
+        "courseName": "Schools as Systems Practicum in School Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 692",
+        "courseName": "Counseling in the Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDCD 603B- or 603XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

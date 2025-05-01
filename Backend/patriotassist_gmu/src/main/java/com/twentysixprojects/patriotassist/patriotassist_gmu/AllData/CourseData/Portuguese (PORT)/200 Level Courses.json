@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "PORT 201",
+        "courseName": "Intermediate Portuguese I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PORT 202",
+        "courseName": "Intermediate Portuguese II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

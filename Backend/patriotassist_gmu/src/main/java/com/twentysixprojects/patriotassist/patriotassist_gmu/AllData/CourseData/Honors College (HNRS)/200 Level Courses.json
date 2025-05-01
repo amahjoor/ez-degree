@@ -1,0 +1,20 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "HNRS 240",
+        "courseName": "Reading the Past (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HNRS 110C, 110XS, 302C, 302XS, 109C or 109XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HNRS 260",
+        "courseName": "Society and Community Engagement Topics (Topics Vary)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HNRS 109C, 109XS, 110C, 110XS, 302C or 302XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HNRS 261",
+        "courseName": "Community Connection Practicum (Topics Vary)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HNRS 109C, 109XS, 110C, 110XS, 302C or 302XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

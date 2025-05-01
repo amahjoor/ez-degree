@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "ACCT 203",
+        "courseName": "Survey of Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 204",
+        "courseName": "Honors Survey of Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

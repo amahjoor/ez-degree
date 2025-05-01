@@ -1,0 +1,80 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "GERM 301",
+        "courseName": "Culture and Civilization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 310",
+        "courseName": "Conversation and Composition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 312",
+        "courseName": "Great Cities in Germany, Austria and Switzerland",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 315",
+        "courseName": "German for the Global World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 316",
+        "courseName": "German for the Business World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 318",
+        "courseName": "Translation of Texts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 325",
+        "courseName": "Major Writers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 329",
+        "courseName": "Representations of the Holocaust",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 340",
+        "courseName": "Topics in German Literature and Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 355",
+        "courseName": "Readings in Poetry (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 365",
+        "courseName": "Topics in German History and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 370",
+        "courseName": "German Through the Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 375",
+        "courseName": "Readings in Drama",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,50 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "EVPP 730",
+        "courseName": "Environmental Policy Research in Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 738",
+        "courseName": "Sustainable Enterprise Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 741",
+        "courseName": "Advanced Topics in Environmental Science and Public Policy",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 745",
+        "courseName": "Environmental Toxicology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 793",
+        "courseName": "Research in Environmental Science and Public Policy",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 797",
+        "courseName": "Master's Thesis Proposal",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 798",
+        "courseName": "Master's Research Project in Environmental Science and Public Policy",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 799",
+        "courseName": "Master's Thesis in Environmental Science and Public Policy",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

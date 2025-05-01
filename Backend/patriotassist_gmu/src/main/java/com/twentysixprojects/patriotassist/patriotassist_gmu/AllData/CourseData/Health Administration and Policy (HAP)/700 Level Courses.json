@@ -1,0 +1,248 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "HAP 700",
+        "courseName": "Introduction to Health Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 701",
+        "courseName": "Health Data: Vocabulary and Standards",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 702",
+        "courseName": "Managerial Accounting in Health Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 703",
+        "courseName": "Financial Management in Health Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 704",
+        "courseName": "Contemporary Issues in Health Systems Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HAP 602B-, 652B-, 707B-, 715B- and 750B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "HAP 705",
+        "courseName": "Strategic Management and Marketing in Health Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HAP 602B-, 652B-, 715B- and 750B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "HAP 706",
+        "courseName": "Integrated Health Systems Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 707",
+        "courseName": "Human Resource Management in Healthcare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 708",
+        "courseName": "Quantitative Methods in Health Care Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: HAP 602B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "HAP 709",
+        "courseName": "Health Care Databases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 711",
+        "courseName": "Quality Improvement in Health Services",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 712",
+        "courseName": "Topics in Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 713",
+        "courseName": "Project Management in Health Information Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 715",
+        "courseName": "Health Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 717",
+        "courseName": "Population Health Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 718",
+        "courseName": "Consumer Health Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 719",
+        "courseName": "Advanced Statistics in Health Services Research I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 720",
+        "courseName": "Health Data Integration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 721",
+        "courseName": "Project in Data Analysis",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 725",
+        "courseName": "Statistical Process Control in Healthcare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 730",
+        "courseName": "Health Care Decision Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 740",
+        "courseName": "Management of Health Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 742",
+        "courseName": "Health Policy Development and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 745",
+        "courseName": "Health Care Security Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 746",
+        "courseName": "Health Policy Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 750",
+        "courseName": "Legal Issues in Health Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 760",
+        "courseName": "Philosophy of Science in Health Services Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 761",
+        "courseName": "Philosophy of Science and Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 764",
+        "courseName": "Health Policy and Government Payment Systems for Health Care Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 770",
+        "courseName": "Medical Decision Making and Decision Support Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 774",
+        "courseName": "Artificial Intelligence in Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 777",
+        "courseName": "Health Data Visualization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 780",
+        "courseName": "Data Mining in Health Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 786",
+        "courseName": "Workshop in Health Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HAP 618B-, 671B- and 672B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "HAP 789",
+        "courseName": "Pre-Capstone Professional Development Seminar",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 790",
+        "courseName": "Capstone Practicum in Health Systems Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: HAP 789*B-.\n* May be taken concurrently.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "HAP 793",
+        "courseName": "Final Project in Applied Health Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 795",
+        "courseName": "Health Informatics Pre-Capstone",
+        "courseCredits": "0 credits",
+        "preRequisite": "Required Prerequisite: HAP 786*B-.\n* May be taken concurrently.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "HAP 796",
+        "courseName": "Health Informatics Capstone Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HAP 786B- and 795).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "HAP 797",
+        "courseName": "Radiology Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

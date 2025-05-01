@@ -1,0 +1,32 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "AMGT 504",
+        "courseName": "Professional Development Arts Management",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 511",
+        "courseName": "Introduction to Grant Writing",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 512",
+        "courseName": "Grant Writing in the Arts",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 513",
+        "courseName": "Technology in the Arts",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 599",
+        "courseName": "Special Topics in Arts Management",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

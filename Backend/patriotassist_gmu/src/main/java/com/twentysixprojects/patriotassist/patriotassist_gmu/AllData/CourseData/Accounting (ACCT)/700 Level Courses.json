@@ -1,0 +1,80 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "ACCT 701",
+        "courseName": "Business Valuation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 702",
+        "courseName": "Tax Practice, Procedure, and Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 706",
+        "courseName": "Partnership Taxation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ACCT 651C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ACCT 708",
+        "courseName": "Taxes and Business Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 712",
+        "courseName": "Special Topics in Taxation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ACCT 651C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ACCT 737",
+        "courseName": "Fraud and the Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 738",
+        "courseName": "Advanced Topics in Fraud",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ACCT 636C, 636XS, 636XP, MBA 744C, 744XS or 744XP.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "ACCT 742",
+        "courseName": "Governance and Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 771",
+        "courseName": "Audit Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ACCT 661B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ACCT 772",
+        "courseName": "Federal Accounting and Reporting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ACCT 672C, 672XS, 672XP, 472C or 472XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "ACCT 781",
+        "courseName": "Tax Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ACCT 661B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ACCT 795",
+        "courseName": "Global Accounting Environment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 796",
+        "courseName": "Independent Studies/Directed Readings",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

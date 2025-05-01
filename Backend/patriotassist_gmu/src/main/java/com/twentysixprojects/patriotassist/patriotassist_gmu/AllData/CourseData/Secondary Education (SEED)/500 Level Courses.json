@@ -1,0 +1,74 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "SEED 502",
+        "courseName": "Young Adult Literature in Multicultural Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 505",
+        "courseName": "Teaching and Learning Difficult Histories",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 507",
+        "courseName": "Assessing Learning and Teaching in the Secondary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SEED 567B, 569B, 572B, 573B or 566B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 508",
+        "courseName": "Creating Advocacy with Adolescent Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 509",
+        "courseName": "Perspectives on Extraordinary Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 522",
+        "courseName": "Foundations of Secondary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 540",
+        "courseName": "Human Development and Learning: Secondary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 566",
+        "courseName": "Teaching Computer Science in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 567",
+        "courseName": "Teaching Social Studies in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 569",
+        "courseName": "Teaching English in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 572",
+        "courseName": "Teaching Mathematics in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 573",
+        "courseName": "Teaching Science in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

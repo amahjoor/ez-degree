@@ -1,0 +1,50 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "STAT 334",
+        "courseName": "Introduction to Probability Models and Simulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 260C or 260XS) and (MATH 114C, 114XS, 116C or 116XS) and (STAT 362*C or 362*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 344",
+        "courseName": "Probability and Statistics for Engineers and Scientists I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 114C, 114XS or 116C) or MATH 116XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 346",
+        "courseName": "Probability for Engineers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 213C, 213XS, 215C or 215XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 350",
+        "courseName": "Introductory Statistics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: STAT 250C, 250XS, 260C or 260XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 354",
+        "courseName": "Probability and Statistics for Engineers and Scientists II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 334C or 334XS) or STAT 344C, L344 or 344XS or ((STAT 346C or 346XS) and (STAT 362C or 362XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 356",
+        "courseName": "Statistical Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: STAT 346C, 346XS, MATH 351C or 351XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 360",
+        "courseName": "Introduction to Statistical Practice II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 250C, 250XS, 260C, 260XS, BENG 241C or 241XS) and (MATH 114*C, 114XS, 116*C or 116XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 362",
+        "courseName": "Introduction to Computer Statistical Packages",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: STAT 250C, 250XS, 260C, 260XS, BUS 310C, 310XS, STAT 344C, 344XS or L344.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

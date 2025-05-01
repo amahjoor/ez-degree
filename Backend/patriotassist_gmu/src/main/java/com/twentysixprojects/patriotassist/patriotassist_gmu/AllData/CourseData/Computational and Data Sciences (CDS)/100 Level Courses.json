@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "CDS 101",
+        "courseName": "Introduction to Computational and Data Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 102",
+        "courseName": "Introduction to Computational and Data Sciences Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 130",
+        "courseName": "Computing for Scientists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 151",
+        "courseName": "Data Ethics in an Information Society",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

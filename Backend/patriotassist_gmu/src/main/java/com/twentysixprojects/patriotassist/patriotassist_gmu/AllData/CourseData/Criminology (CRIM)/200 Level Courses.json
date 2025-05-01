@@ -1,0 +1,20 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CRIM 210",
+        "courseName": "Introduction to Criminology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 220",
+        "courseName": "Introduction to Law and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 230",
+        "courseName": "Introduction to Homeland Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

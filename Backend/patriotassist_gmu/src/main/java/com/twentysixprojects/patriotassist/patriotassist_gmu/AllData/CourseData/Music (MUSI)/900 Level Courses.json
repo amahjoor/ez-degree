@@ -1,0 +1,14 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "MUSI 998",
+        "courseName": "Dissertation Proposal",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 999",
+        "courseName": "Dissertation",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "SPAN 201",
+        "courseName": "Intermediate Spanish I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 202",
+        "courseName": "Intermediate Spanish II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 212",
+        "courseName": "Intermediate Spanish II: Local and Global Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 215",
+        "courseName": "Intermediate Spanish for Heritage Speakers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

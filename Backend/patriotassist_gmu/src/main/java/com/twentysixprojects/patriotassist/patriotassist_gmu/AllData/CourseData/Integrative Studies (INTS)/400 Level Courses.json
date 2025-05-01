@@ -1,0 +1,206 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "INTS 400",
+        "courseName": "Temptress: Sexuality and Power",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 401",
+        "courseName": "Conservation Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 403",
+        "courseName": "Conservation Behavior",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 404",
+        "courseName": "Ethics and Leadership",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 405",
+        "courseName": "Women and Leadership",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 406",
+        "courseName": "Global Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 410",
+        "courseName": "Contemporary Health: Intersections in Science and Society",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 416",
+        "courseName": "Refugee and Internal Displacement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 417",
+        "courseName": "Human Trafficking and Smuggling",
+        "courseCredits": "3,6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 419",
+        "courseName": "Youth Resistance and Advocacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 420",
+        "courseName": "College to Career Skills",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 431",
+        "courseName": "Principles of Fund Raising",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 434",
+        "courseName": "Research for Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 435",
+        "courseName": "Leadership in a Changing Environment",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 436",
+        "courseName": "Social Justice Education",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 437",
+        "courseName": "Critical Race Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 438",
+        "courseName": "Representations of Race",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 439",
+        "courseName": "Genealogy of Black Feminist Thought",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 441",
+        "courseName": "Policing Black Bodies",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 450",
+        "courseName": "Social Innovation in Action",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 451",
+        "courseName": "Leadership and Organizational Problem-Solving",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 455",
+        "courseName": "Well-Being in Action",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 456",
+        "courseName": "Self-Care and Well-Being for Helping Professionals",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 465",
+        "courseName": "Independent Study",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 470",
+        "courseName": "Professional Pathways in Sustainable Food Systems",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 475",
+        "courseName": "Special Topics",
+        "courseCredits": "1-18 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 490",
+        "courseName": "Internship",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 491",
+        "courseName": "Senior Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: INTS 391D.\nD Requires minimum grade of D."
+    },
+    {
+        "courseTitle": "INTS 492",
+        "courseName": "Graduation Portfolio",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 494",
+        "courseName": "Service-Learning Experience",
+        "courseCredits": "1-15 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 495",
+        "courseName": "Field-Based Work",
+        "courseCredits": "1-18 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 496",
+        "courseName": "Teaching Assistant Experience",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 497",
+        "courseName": "Add-On Experiential Learning",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INTS 498",
+        "courseName": "Experiential Learning",
+        "courseCredits": "1-15 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,92 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "DFOR 710",
+        "courseName": "Memory Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 720",
+        "courseName": "Digital Audio Video Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 730",
+        "courseName": "Forensic Deep Packet Inspection",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 740",
+        "courseName": "Advanced Offensive & Defensive Strategies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 761",
+        "courseName": "Malware Reverse Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 767",
+        "courseName": "Penetration Testing in Digital Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 768",
+        "courseName": "Digital Warfare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 769",
+        "courseName": "Anti-Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 771",
+        "courseName": "Digital Forensic Profiling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 772",
+        "courseName": "Forensic Artifact Extraction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 773",
+        "courseName": "Mobile Application Forensics and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 775",
+        "courseName": "Kernel Forensics and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 780",
+        "courseName": "Advanced Topics in Digital Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 790",
+        "courseName": "Advanced Digital Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 798",
+        "courseName": "Research Project",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

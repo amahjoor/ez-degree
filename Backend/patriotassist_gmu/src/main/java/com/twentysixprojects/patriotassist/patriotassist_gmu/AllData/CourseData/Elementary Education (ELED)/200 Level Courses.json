@@ -1,0 +1,20 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "ELED 242",
+        "courseName": "Foundations of Elementary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 257",
+        "courseName": "Integrating Technology in PreK-6",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 258",
+        "courseName": "Children's Literature for Teaching in Diverse Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

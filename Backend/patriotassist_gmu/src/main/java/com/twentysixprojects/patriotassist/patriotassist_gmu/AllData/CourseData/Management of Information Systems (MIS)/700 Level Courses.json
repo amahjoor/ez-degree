@@ -1,0 +1,20 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MIS 721",
+        "courseName": "Seminar in Information Systems",
+        "courseCredits": "1.5 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MIS 722",
+        "courseName": "Seminar in Economics of Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MIS 723",
+        "courseName": "Seminar in Technology Research in Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

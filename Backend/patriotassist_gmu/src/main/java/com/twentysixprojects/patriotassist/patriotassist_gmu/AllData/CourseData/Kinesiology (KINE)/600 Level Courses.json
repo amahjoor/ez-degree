@@ -1,0 +1,74 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "KINE 600",
+        "courseName": "Scientific Foundation of Applied Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 601",
+        "courseName": "Advanced Exercise Physiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 602",
+        "courseName": "Movement and Fitness Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 603",
+        "courseName": "Applied Biomechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 604",
+        "courseName": "Motor Control and Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 605",
+        "courseName": "Research Methods in Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 606",
+        "courseName": "Applied Sport and Exercise Nutrition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 607",
+        "courseName": "Exercise Programming: Movement Selection and Progression",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 608",
+        "courseName": "Data Science in Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 609",
+        "courseName": "Applied Strength and Conditioning Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 610",
+        "courseName": "Corrective and Preventative Exercise Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 615",
+        "courseName": "Advanced Technology to Measure Human Movement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

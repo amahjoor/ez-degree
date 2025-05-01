@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "GAME 600",
+        "courseName": "Research Methodologies in Game Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 605",
+        "courseName": "Game Design Graduate Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 610",
+        "courseName": "Game Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 617",
+        "courseName": "Teaching Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 626",
+        "courseName": "Game Business, Entrepreneurship and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 628",
+        "courseName": "Advanced Game Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 630",
+        "courseName": "Advanced Game Animation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 635",
+        "courseName": "Issues in Interactive Entertainment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 638",
+        "courseName": "Game Studio Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 650",
+        "courseName": "Advanced Music and Sound for Games",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 658",
+        "courseName": "Interactive Game Systems Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

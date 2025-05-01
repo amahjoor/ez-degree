@@ -1,0 +1,188 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "NURS 400",
+        "courseName": "Nursing Care of Adults II",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((NURS 300C+ or 300XS) and (NURS 306C+ or 306XS)).\nC+ Requires minimum grade of C+.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 406",
+        "courseName": "Clinical Management: Adults II",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((NURS 300C+ or 300XS) and (NURS 306 or 306XS)).\nC+ Requires minimum grade of C+.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 410",
+        "courseName": "Nursing Care of Clients with Pathological Conditions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 413",
+        "courseName": "Transition to Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (NURS 331C+ and 335C+).\nC+ Requires minimum grade of C+."
+    },
+    {
+        "courseTitle": "NURS 419",
+        "courseName": "Pathophysiological Basis for Nursing Care of Individuals and Small Groups II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 425",
+        "courseName": "Comprehensive Health Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 427",
+        "courseName": "Advanced Technologies for the Accelerated Pathway",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 428",
+        "courseName": "Community Health Clinical for the Accelerated Pathway",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 429",
+        "courseName": "Preceptorship for the Accelerated Pathway",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 434",
+        "courseName": "Vulnerable Populations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 435",
+        "courseName": "Public Health Preceptorship for Nurses",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 436",
+        "courseName": "Leadership and Management of Health Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 440",
+        "courseName": "Community Health and Epidemiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 450",
+        "courseName": "Evidence Based Practice in Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 451",
+        "courseName": "Advanced Clinical Preceptorship",
+        "courseCredits": "5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 453",
+        "courseName": "Research in Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 455",
+        "courseName": "Advanced Technologies in Nursing",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 457",
+        "courseName": "Introduction to Nursing Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 460",
+        "courseName": "Leadership in Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 465",
+        "courseName": "Examination and Integration of Professional and Health Care Issues",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 466",
+        "courseName": "Community Health Nursing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 467",
+        "courseName": "Clinical in Community Health Nursing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 468",
+        "courseName": "Psychiatric and Mental Health Nursing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 469",
+        "courseName": "Clinical in Psychiatric and Mental Health Nursing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 470",
+        "courseName": "Clinical Reasoning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 480",
+        "courseName": "Professional Issues in Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 488",
+        "courseName": "Inquiry-Based Clinical Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 490",
+        "courseName": "Health Policy and Advocacy in Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (NURS 316 or 316XS).\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 491",
+        "courseName": "Critical Thinking and Analysis of Test Taking Strategies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 493",
+        "courseName": "Clinical Reasoning and Test Taking Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (NURS 330C or 330XS) and (NURS 347C or 347XS) and (NURS 425C or 425XS) and (NURS 343C or 343XS) and (NURS 348C or 348XS) and (NURS 349C or 349XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "NURS 499",
+        "courseName": "Independent Study in Nursing",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

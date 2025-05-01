@@ -1,0 +1,38 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDEP 602",
+        "courseName": "Fundamentals of Educational Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 603",
+        "courseName": "Applications of Educational Psychology in Developmental Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: (EDEP 602B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDEP 632",
+        "courseName": "Human Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 653",
+        "courseName": "Culture and Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 654",
+        "courseName": "Learning, Motivation, and Self-Regulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 694",
+        "courseName": "Practicum in Educational Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 590B-, EDEP 602B- and 603B-).\nB- Requires minimum grade of B-."
+    }
+]}

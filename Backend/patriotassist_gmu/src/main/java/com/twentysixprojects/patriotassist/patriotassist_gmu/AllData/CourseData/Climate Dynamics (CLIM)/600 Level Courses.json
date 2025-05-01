@@ -1,0 +1,50 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CLIM 601",
+        "courseName": "Midlatitude Synoptic Meteorology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 610",
+        "courseName": "Introduction to the Physical Climate System",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 614",
+        "courseName": "Land-Climate Interactions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 631",
+        "courseName": "Urban Climate",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 636",
+        "courseName": "Atmospheric Aerosols",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 670",
+        "courseName": "Earth System Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 680",
+        "courseName": "Climate Data",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 690",
+        "courseName": "Scientific Basis of Climate Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

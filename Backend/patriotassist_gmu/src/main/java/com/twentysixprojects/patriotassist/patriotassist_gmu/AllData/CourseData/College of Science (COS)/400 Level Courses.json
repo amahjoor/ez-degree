@@ -1,0 +1,20 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "COS 400",
+        "courseName": "Problem Solving and Leadership in STEAM",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 401",
+        "courseName": "RS: Discipline-Based Research in STEM",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COS 402",
+        "courseName": "Special Topics in Science",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

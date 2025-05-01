@@ -1,0 +1,152 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EDRS 810",
+        "courseName": "Problems and Methods in Education Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 811",
+        "courseName": "Quantitative Methods in Educational Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 810B- or 810XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 812",
+        "courseName": "Qualitative Methods in Educational Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 810B- or 810XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 814",
+        "courseName": "Anti-Colonial Methodologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 818",
+        "courseName": "Critical Discourse Analysis in Education Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 820",
+        "courseName": "Evaluation Methods for Educational Programs and Curricula",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 810B- or 810XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 821",
+        "courseName": "Advanced Applications of Quantitative Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 810B- or 810XS) and (EDRS 811B- or 811XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 822",
+        "courseName": "Advanced Applications of Qualitative Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 810B- or 810XS) and (EDRS 812B- or 812XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 823",
+        "courseName": "Advanced Research Methods in Single Subject/Case Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 810B- or 810XS) and (EDRS 811B- or 811XS) and (EDRS 812B- or 812XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 824",
+        "courseName": "Mixed Methods Research: Integrating Qualitative and Quantitative Approaches",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 810B- or 810XS) and (EDRS 811B- or 811XS) and (EDRS 812B- or 812XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 825",
+        "courseName": "Advanced Research Methods in Self-Study of Professional Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 810B- or 810XS) and (EDRS 811B- or 811XS) and (EDRS 812B- or 812XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 826",
+        "courseName": "Qualitative Case Study Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 812B- or 812XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 827",
+        "courseName": "Introduction to Measurement and Survey Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 811B- or 811XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 828",
+        "courseName": "Item Response Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 821B-, 821XS, 827B- or 827XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 829",
+        "courseName": "Bayesian Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDRS 821B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDRS 830",
+        "courseName": "Hierarchical Linear Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 821B- or 821XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 831",
+        "courseName": "Structural Equation Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 821B- or 821XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 832",
+        "courseName": "Document Analysis and Archival Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 810B- or 810XS) and (EDRS 811B- or 811XS) and (EDRS 812B- or 812XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 833",
+        "courseName": "Participatory Action Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 812B- or 812XS) and (EDRS 822B- or 822XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 836",
+        "courseName": "Narrative Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 812B- or 812XS) and (EDRS 822B- or 822XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDRS 850",
+        "courseName": "Grounded Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 880",
+        "courseName": "Advanced Evaluation Methods and Internship",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 892",
+        "courseName": "Anti-Racist and Decolonizing Research Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 895",
+        "courseName": "Qualitative Methods Capstone Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 897",
+        "courseName": "Special Topics in Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

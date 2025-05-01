@@ -1,0 +1,56 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "AMGT 706",
+        "courseName": "Festivals and Special Events",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 710",
+        "courseName": "Arts Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AMGT 602B- or 602XS) and (AMGT 603B- or 603XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AMGT 711",
+        "courseName": "Directed Readings and Project",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 720",
+        "courseName": "Governance and Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: (AMGT 605B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "AMGT 730",
+        "courseName": "Arts Entrepreneurship",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 742",
+        "courseName": "Internship I",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 752",
+        "courseName": "Arts Entrepreneurship",
+        "courseCredits": "3,6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 792",
+        "courseName": "Internship II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 795",
+        "courseName": "Capstone in Arts Management",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

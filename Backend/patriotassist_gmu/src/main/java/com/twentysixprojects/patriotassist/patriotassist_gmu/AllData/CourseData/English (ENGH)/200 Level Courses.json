@@ -1,0 +1,44 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "ENGH 201",
+        "courseName": "Reading and Writing about Texts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 202",
+        "courseName": "Texts and Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 203",
+        "courseName": "Western Literary Tradition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 204",
+        "courseName": "Western Literary Traditions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 206",
+        "courseName": "Literature in the Creation of Just Societies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 210",
+        "courseName": "Equitable AI",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGH 270",
+        "courseName": "Introduction to Screen Cultures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,230 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SOCW 600",
+        "courseName": "Foundations of Social Work and Social Welfare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 623",
+        "courseName": "Human Behavior and Social Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 624",
+        "courseName": "Human Behavior and Social Systems II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 630",
+        "courseName": "Clinical Social Work in Forensic Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 640",
+        "courseName": "Clinical Practice with Adults",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 644",
+        "courseName": "Community Practice Across the Life Course",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 650",
+        "courseName": "Advanced Social Work Policy Practice Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 653",
+        "courseName": "Immigration Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 654",
+        "courseName": "Social Policy for Children and Youth",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 655",
+        "courseName": "Aging Programs and Policies",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 671B- or 671XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 656",
+        "courseName": "Poverty, Oppression, and Inequity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 659",
+        "courseName": "Organizing and Advocating for Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 660",
+        "courseName": "Foundations of Direct Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 661",
+        "courseName": "Social Work Practice in Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 663",
+        "courseName": "Global Human Rights Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 664",
+        "courseName": "Creative Arts in Social Work Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 667",
+        "courseName": "Advanced Group Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 668",
+        "courseName": "Interpersonal Violence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 671",
+        "courseName": "Research Methods for Social Workers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 672",
+        "courseName": "Generalist Social Work Practicum and Seminar I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 673",
+        "courseName": "Generalist Social Work Practicum Education and Seminar II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 674",
+        "courseName": "Psychopathology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 675",
+        "courseName": "Selected Topics in Clinical Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 676",
+        "courseName": "Selected Topics in Social Work and Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 677",
+        "courseName": "Family Therapy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 678",
+        "courseName": "Trauma and Recovery",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 679",
+        "courseName": "Military Social Work",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 671B- or 671XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 682",
+        "courseName": "Substance Use Interventions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 683",
+        "courseName": "Clinical Practice with Children, Youth, and Families",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 684",
+        "courseName": "Social Work and the Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 671B- or 671XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 685",
+        "courseName": "Organizational Leadership for Social Workers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 671B- or 671XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 686",
+        "courseName": "Advanced Trauma Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B-, 674B- and 678B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 687",
+        "courseName": "Empowering Communities for Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 688",
+        "courseName": "Program Evaluation for Social Workers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SOCW 600B- or 600XS) and (SOCW 623B- or 623XS) and (SOCW 644B- or 644XS) and (SOCW 656B- or 656XS) and (SOCW 659B- or 659XS) and (SOCW 660B- or 660XS) and (SOCW 672B- or 672XS) and (SOCW 673B- or 673XS) and (SOCW 674B- or 674XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 689",
+        "courseName": "Clinical Practice with Older Adults",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 696",
+        "courseName": "Specialization Practicum Education and Seminar I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 698",
+        "courseName": "Specialization Social Work Practicum and Seminar II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 699",
+        "courseName": "Independent Study in Social Work",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

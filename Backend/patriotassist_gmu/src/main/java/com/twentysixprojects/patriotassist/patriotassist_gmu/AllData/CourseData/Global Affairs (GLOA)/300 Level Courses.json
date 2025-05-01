@@ -1,0 +1,32 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "GLOA 305",
+        "courseName": "Global Affairs College-to-Career",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 386",
+        "courseName": "Media, Technology, and Globalization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 387",
+        "courseName": "Human Security, Globalization, and Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 388",
+        "courseName": "Global Health and Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GLOA 396",
+        "courseName": "Topics in Global Affairs",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

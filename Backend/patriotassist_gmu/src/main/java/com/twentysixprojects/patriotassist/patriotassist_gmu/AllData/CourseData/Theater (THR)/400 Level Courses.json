@@ -1,0 +1,206 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "THR 401",
+        "courseName": "Professional Presentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 405",
+        "courseName": "Advanced Stage Combat",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 305C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 406",
+        "courseName": "Advanced Movement in Musical Theater",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (THR 306C or 306XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 410",
+        "courseName": "Acting for the Camera",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 310C or 310XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 411",
+        "courseName": "Great Film Directors",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 412",
+        "courseName": "Great Film Performances",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 415",
+        "courseName": "Advanced Sound Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 420",
+        "courseName": "Advanced Performance Studio",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 320C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 421",
+        "courseName": "One-Person Show",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 210C and 310C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 422",
+        "courseName": "Performance: Process and Portfolio",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 423",
+        "courseName": "Audition Techniques: Stage and Camera",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 310C or 310XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 424",
+        "courseName": "Contemporary Women Playwrights",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 425",
+        "courseName": "Applied Techniques in Voice and Speech",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 210C, 310C and 301C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 427",
+        "courseName": "Musical Theater Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 428",
+        "courseName": "Musical Theater Ensemble",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 429",
+        "courseName": "Advanced Musical Theater Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: THR 427C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 434",
+        "courseName": "Advanced Lighting Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 437",
+        "courseName": "Advanced Sound Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 337C or 337XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 440",
+        "courseName": "Advanced Studies in Directing/Dramaturgy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 329*C or 329*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "THR 448",
+        "courseName": "Foundations of Theater Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 449",
+        "courseName": "Elementary Theater Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 450",
+        "courseName": "Secondary Theater Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 455",
+        "courseName": "Theater Education Internship",
+        "courseCredits": "6-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 480",
+        "courseName": "Advanced Playwriting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 482",
+        "courseName": "Advanced Screenplay Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 484",
+        "courseName": "Translation & Adaptation for Stage & Screen",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 490",
+        "courseName": "Special Topics in Theater",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 491",
+        "courseName": "Seminar on the Profession",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 492",
+        "courseName": "Advanced Practicum",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 493",
+        "courseName": "Collaborative Lab Experience",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 494",
+        "courseName": "Field Experience",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 495",
+        "courseName": "Senior Capstone Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 496",
+        "courseName": "Text in Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: THR 350*XS or 350*C.\n* May be taken concurrently.\nXS Requires minimum grade of XS.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "THR 497",
+        "courseName": "Independent Study",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

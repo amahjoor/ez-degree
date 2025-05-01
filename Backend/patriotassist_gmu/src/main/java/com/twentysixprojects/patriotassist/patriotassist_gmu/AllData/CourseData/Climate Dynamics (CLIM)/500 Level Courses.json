@@ -1,0 +1,14 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "CLIM 511",
+        "courseName": "Atmospheric Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 512",
+        "courseName": "Physical Oceanography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

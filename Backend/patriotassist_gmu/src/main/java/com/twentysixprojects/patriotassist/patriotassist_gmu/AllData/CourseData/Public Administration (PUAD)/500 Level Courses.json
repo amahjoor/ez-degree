@@ -1,0 +1,38 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "PUAD 502",
+        "courseName": "Administration in Public and Nonprofit Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 504",
+        "courseName": "Managing in the International Arena: Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 505",
+        "courseName": "Introduction to Management of Nonprofits",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 509",
+        "courseName": "Justice Organizations and Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 520",
+        "courseName": "Organization Theory and Management Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 540",
+        "courseName": "Public Policy Process",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

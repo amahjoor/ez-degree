@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import { CourseInfo } from './CourseSelector';
 
 interface CreditLimits {
   min: number;
@@ -10,202 +11,161 @@ interface CreditLimits {
 interface CreditLimitsSelectorProps {
   creditLimits: CreditLimits;
   onChange: (creditLimits: CreditLimits) => void;
+  selectedCourses: CourseInfo[];
+  selectedTerm: string;
 }
+
+interface CourseAmount {
+  Lecture: { courses: number; credits: string };
+  Laboratory: { courses: number; credits: string };
+}
+
+const API_BASE_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder`;
 
 const CreditLimitsSelector: React.FC<CreditLimitsSelectorProps> = ({
   creditLimits,
-  onChange
+  onChange,
+  selectedCourses,
+  selectedTerm
 }) => {
-  const [minValue, setMinValue] = useState(creditLimits.min);
-  const [maxValue, setMaxValue] = useState(creditLimits.max);
-  
+  const [minValue, setMinValue] = useState<number>(creditLimits.min);
+  const [maxValue, setMaxValue] = useState<number>(creditLimits.max);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const minHandleRef = useRef<HTMLDivElement>(null);
-  const maxHandleRef = useRef<HTMLDivElement>(null);
-  
-  // Values for the range
+
+  const isDisabled = selectedCourses.length === 0;
   const min = 0;
   const max = 21;
   const step = 1;
-  
+  const getPercentage = (v: number) => ((v - min) / (max - min)) * 100;
+
+  // Recalculate auto-min when courses or term change
+  useEffect(() => {
+    if (!selectedTerm || selectedCourses.length === 0) return;
+    (async () => {
+      try {
+        const results = await Promise.all(
+          selectedCourses.map(course =>
+            fetch(
+              `${API_BASE_URL}/credit-course-amount?TermAndCourseCode=${encodeURIComponent(
+                selectedTerm + ':' + course.code
+              )}`
+            ).then(r => r.json() as Promise<CourseAmount>)
+          )
+        );
+        let autoMin = 0;
+        results.forEach(({ Lecture, Laboratory }) => {
+          if (Lecture.courses > 0 && Lecture.credits !== 'N/A') {
+            autoMin += parseInt(Lecture.credits) || 0;
+          }
+          if (Laboratory.courses > 0 && Laboratory.credits !== 'N/A') {
+            autoMin += parseInt(Laboratory.credits) || 0;
+          }
+        });
+        // subtract 3 from total minimum, but not below 0
+        const rawMin = autoMin - 3;
+        const newMin = Math.max(0, rawMin);
+        const newMax = newMin + 4;
+        setMinValue(newMin);
+        setMaxValue(newMax);
+        onChange({ min: newMin, max: newMax });
+      } catch (e) {
+        console.error('Failed to fetch credit-course-amount', e);
+      }
+    })();
+  }, [selectedCourses, selectedTerm]);
+
+  // Sync when parent creditLimits change
   useEffect(() => {
     setMinValue(creditLimits.min);
     setMaxValue(creditLimits.max);
   }, [creditLimits.min, creditLimits.max]);
-  
-  // Calculate percentages for positioning
-  const getPercentage = (value: number) => ((value - min) / (max - min)) * 100;
-  const minPercentage = getPercentage(minValue);
-  const maxPercentage = getPercentage(maxValue);
 
-  // Get value from position
-  const getValueFromPosition = (position: number): number => {
-    if (!sliderRef.current) return 0;
-    
-    const sliderRect = sliderRef.current.getBoundingClientRect();
-    const sliderWidth = sliderRect.width;
-    const percentage = Math.min(Math.max(0, position / sliderWidth), 1);
-    const rawValue = percentage * (max - min) + min;
-    
-    // Round to nearest step
-    return Math.round(rawValue / step) * step;
-  };
-  
-  // Handle click on the track
-  const handleTrackClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!sliderRef.current) return;
-    
-    const sliderRect = sliderRef.current.getBoundingClientRect();
-    const position = e.clientX - sliderRect.left;
-    const value = getValueFromPosition(position);
-    
-    // Determine which handle to move based on position
-    const minHandlePos = (minValue - min) / (max - min) * sliderRect.width;
-    const maxHandlePos = (maxValue - min) / (max - min) * sliderRect.width;
-    
-    // Click is closer to min handle
-    if (Math.abs(position - minHandlePos) < Math.abs(position - maxHandlePos)) {
-      if (value <= maxValue) {
-        setMinValue(value);
-        onChange({ min: value, max: maxValue });
-      }
-    } 
-    // Click is closer to max handle
-    else {
-      if (value >= minValue) {
-        setMaxValue(value);
-        onChange({ min: minValue, max: value });
-      }
-    }
-  };
-
-  // Setup mouse event listeners for handle dragging
+  // Handle dragging of max handle only if enabled
   useEffect(() => {
-    const minHandle = minHandleRef.current;
-    const maxHandle = maxHandleRef.current;
-    
-    const handleMouseMove = (e: MouseEvent, isMin: boolean) => {
+    if (isDisabled) return;
+    const handleMouseMove = (e: MouseEvent) => {
       if (!sliderRef.current) return;
-      
-      const sliderRect = sliderRef.current.getBoundingClientRect();
-      const position = e.clientX - sliderRect.left;
-      const value = getValueFromPosition(position);
-      
-      if (isMin) {
-        // Don't allow min to go past max
-        const newValue = Math.min(value, maxValue);
-        setMinValue(newValue);
-        onChange({ min: newValue, max: maxValue });
-      } else {
-        // Don't allow max to go below min
-        const newValue = Math.max(value, minValue);
-        setMaxValue(newValue);
-        onChange({ min: minValue, max: newValue });
-      }
+      const rect = sliderRef.current.getBoundingClientRect();
+      const pct = Math.min(Math.max(0, e.clientX - rect.left), rect.width) / rect.width;
+      let value = Math.round(((pct * (max - min) + min) / step)) * step;
+      value = Math.max(value, minValue + 4);
+      setMaxValue(value);
+      onChange({ min: minValue, max: value });
     };
-    
-    // Setup function for handle dragging
-    const setupDragHandler = (handle: HTMLDivElement | null, isMin: boolean) => {
-      if (!handle) return;
-      
-      const onMouseDown = (e: MouseEvent) => {
-        e.preventDefault();
-        
-        const onMouseMove = (e: MouseEvent) => handleMouseMove(e, isMin);
-        
-        const onMouseUp = () => {
-          document.removeEventListener('mousemove', onMouseMove);
-          document.removeEventListener('mouseup', onMouseUp);
-        };
-        
-        document.addEventListener('mousemove', onMouseMove);
-        document.addEventListener('mouseup', onMouseUp);
-      };
-      
-      handle.addEventListener('mousedown', onMouseDown);
-      
-      return () => {
-        handle.removeEventListener('mousedown', onMouseDown);
-      };
+    const maxHandle = document.getElementById('max-handle');
+    if (!maxHandle) return;
+    const onMouseDown = (e: MouseEvent) => {
+      e.preventDefault();
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
     };
-    
-    const cleanupMin = setupDragHandler(minHandle, true);
-    const cleanupMax = setupDragHandler(maxHandle, false);
-    
+    const onMouseUp = () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    };
+    maxHandle.addEventListener('mousedown', onMouseDown);
     return () => {
-      cleanupMin?.();
-      cleanupMax?.();
+      maxHandle.removeEventListener('mousedown', onMouseDown);
     };
-  }, [minValue, maxValue, onChange]);
-  
+  }, [minValue, isDisabled]);
+
+  // Track click adjusts max only
+  const handleTrackClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isDisabled || !sliderRef.current) return;
+    const rect = sliderRef.current.getBoundingClientRect();
+    const pct = Math.min(Math.max(0, e.clientX - rect.left), rect.width) / rect.width;
+    let value = Math.round(((pct * (max - min) + min) / step)) * step;
+    value = Math.max(value, minValue + 4);
+    setMaxValue(value);
+    onChange({ min: minValue, max: value });
+  };
+
+  const minPct = getPercentage(minValue);
+  const maxPct = getPercentage(maxValue);
+
   return (
-    <div className="bg-white rounded-lg mb-2">
+    <div className={'bg-white rounded-lg mb-2 ' + (isDisabled ? 'opacity-50' : '')}>
       <div className="flex justify-between items-center mb-1">
         <h4 className="text-sm font-medium text-gray-800">Semester Credits</h4>
-        <div className="text-sm text-primary-blue font-medium">
-          {minValue === maxValue ? `${minValue} credits` : `${minValue}-${maxValue} credits`}
-        </div>
+        {!isDisabled && (
+          <div className="text-sm text-primary-blue font-medium">
+            {minValue}-{maxValue} credits
+          </div>
+        )}
       </div>
-      
-      <div className="relative h-10" ref={sliderRef}>
+      <div className="relative h-10" ref={sliderRef} onClick={handleTrackClick}>
         {/* Track */}
-        <div 
-          className="absolute h-2 top-4 left-0 right-0 bg-gray-200 rounded-full cursor-pointer"
-          onClick={handleTrackClick}
-        >
-          {/* Reference lines */}
-          {[3, 6, 9, 12, 15, 18].map((value) => {
-            const percentage = getPercentage(value);
-            return (
-              <div
-                key={`line-${value}`}
-                className="absolute w-px h-4 -top-1 bg-gray-300"
-                style={{ left: `${percentage}%` }}
-              />
-            );
-          })}
-
-          {/* Filled area */}
-          <div 
-            className="absolute h-full bg-primary-blue rounded-full" 
-            style={{
-              left: `${minPercentage}%`,
-              width: `${maxPercentage - minPercentage}%`
-            }}
-          />
+        <div className="absolute h-2 top-4 left-0 right-0 bg-gray-200 rounded-full">
+          {!isDisabled && (
+            <div
+              className="absolute h-full bg-primary-blue rounded-full"
+              style={{ left: minPct + '%', width: (maxPct - minPct) + '%' }}
+            />
+          )}
         </div>
-        
-        {/* Min handle */}
-        <div
-          ref={minHandleRef}
-          className="absolute w-4 h-4 top-3 -ml-2 bg-white border-2 border-primary-blue rounded-full cursor-grab shadow-sm hover:scale-110 transition-transform"
-          style={{
-            left: `${minPercentage}%`,
-            zIndex: 10
-          }}
-        />
-        
-        {/* Max handle */}
-        <div
-          ref={maxHandleRef}
-          className="absolute w-4 h-4 top-3 -ml-2 bg-white border-2 border-primary-blue rounded-full cursor-grab shadow-sm hover:scale-110 transition-transform"
-          style={{
-            left: `${maxPercentage}%`,
-            zIndex: 10
-          }}
-        />
-        
-        {/* Value labels */}
+
+        {/* Handles (only when enabled) */}
+        {!isDisabled && (
+          <>
+            <div
+              className="absolute w-4 h-4 top-3 -ml-2 bg-white border-2 border-gray-400 rounded-full pointer-events-none"
+              style={{ left: minPct + '%', zIndex: 10 }}
+            />
+            <div
+              id="max-handle"
+              className="absolute w-4 h-4 top-3 -ml-2 bg-white border-2 border-primary-blue rounded-full cursor-grab shadow-sm hover:scale-110 transition-transform"
+              style={{ left: maxPct + '%', zIndex: 10 }}
+            />
+          </>
+        )}
+
+        {/* Tick labels */}
         <div className="absolute top-7 left-0 right-0 h-4 text-xs text-gray-500">
-          {[0, 3, 6, 9, 12, 15, 18, 21].map((value) => {
-            const percentage = getPercentage(value);
+          {[0,4,8,12,16,20].map(v => {
+            const p = getPercentage(v);
             return (
-              <span
-                key={value}
-                className="absolute transform -translate-x-1/2"
-                style={{ left: `${percentage}%` }}
-              >
-                {value}
+              <span key={v} className="absolute transform -translate-x-1/2" style={{ left: p + '%' }}>
+                {v}
               </span>
             );
           })}
@@ -215,4 +175,4 @@ const CreditLimitsSelector: React.FC<CreditLimitsSelectorProps> = ({
   );
 };
 
-export default CreditLimitsSelector; 
+export default CreditLimitsSelector;

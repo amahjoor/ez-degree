@@ -1,0 +1,86 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "SWE 619",
+        "courseName": "Object-Oriented Software Specification and Construction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 620",
+        "courseName": "Software Requirements Analysis and Specification",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 621",
+        "courseName": "Software Design and Architecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 622",
+        "courseName": "Distributed Software Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 625",
+        "courseName": "Software Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 626",
+        "courseName": "Software Project Laboratory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 631",
+        "courseName": "Software Design Patterns",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 632",
+        "courseName": "User Interface Design and Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 637",
+        "courseName": "Software Testing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 642",
+        "courseName": "Software Engineering for the World Wide Web",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 645",
+        "courseName": "Component-Based Software Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 660",
+        "courseName": "Software Engineering for Real-Time Embedded Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 681",
+        "courseName": "Secure Software Design and Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SWE 699",
+        "courseName": "Special Topics in Software Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

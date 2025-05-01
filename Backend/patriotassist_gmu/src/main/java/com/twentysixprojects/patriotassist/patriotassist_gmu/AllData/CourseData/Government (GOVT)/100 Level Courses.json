@@ -1,0 +1,38 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "GOVT 101",
+        "courseName": "Democratic Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 103",
+        "courseName": "Introduction to American Government",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 132",
+        "courseName": "Introduction to International Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 133",
+        "courseName": "Introduction to Comparative Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 134",
+        "courseName": "Grand Challenges to Human Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GOVT 150",
+        "courseName": "Introduction to Technology Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

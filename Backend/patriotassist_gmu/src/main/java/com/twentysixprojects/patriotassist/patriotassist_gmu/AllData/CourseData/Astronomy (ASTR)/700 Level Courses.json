@@ -1,0 +1,44 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "ASTR 730",
+        "courseName": "Stellar Astrophysics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 765",
+        "courseName": "High-Energy and Accretion Astrophysics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 790",
+        "courseName": "Topics in Astronomy and Astrophysics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 794",
+        "courseName": "Astronomy Internship",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 796",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 798",
+        "courseName": "Research Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

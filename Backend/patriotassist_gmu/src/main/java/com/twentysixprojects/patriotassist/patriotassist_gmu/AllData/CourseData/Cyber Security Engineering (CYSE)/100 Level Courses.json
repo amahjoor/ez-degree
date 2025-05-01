@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "CYSE 101",
+        "courseName": "Introduction to Cyber Security Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 130",
+        "courseName": "Introduction to Computing for Digital Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

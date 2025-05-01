@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Database Concepts",
+  "CourseSubject": "Computer Science",
+  "CourseNumber": "450",
+  "CourseSection": "001",
+  "CreditHours": "3",
+  "CRN": "77985",
+  "Term": "Fall 2025",
+  "Instructor": "Deng, Ping (Primary)",
+  "MeetingDays": "Wednesday",
+  "MeetingTimes": "04:30 PM - 07:10 PM",
+  "Campus": "Fairfax",
+  "Seats": "100 of 100 seats remain.\n99 of 99 waitlist seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:30:47"
+}

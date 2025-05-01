@@ -1,0 +1,152 @@
+{"000 Level Courses": [
+    {
+        "courseTitle": "LAW 010",
+        "courseName": "Professional Responsibility-CA",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 011",
+        "courseName": "Const Originalism",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 012",
+        "courseName": "Law and Economics",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 021",
+        "courseName": "WIPO-C-IP2 Summer School on Intellectual Property",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 022",
+        "courseName": "Interbranch Conflicts in National Security: War, Intelligence, and Negotiations",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 025",
+        "courseName": "Field Study for Int'l Students",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 070",
+        "courseName": "Intro to US Law (JMs Only)",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 071",
+        "courseName": "Lgl Resch & Writing (JMs Only)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 072",
+        "courseName": "Prelaw Int'l Academic Prep",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 075",
+        "courseName": "Contracts (JMs Only)",
+        "courseCredits": "3,4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 076",
+        "courseName": "JM Capstone I (JMs Only)",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 077",
+        "courseName": "JM Capstone II (JMs Only)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 078",
+        "courseName": "Contracts (LLM Only)",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 081",
+        "courseName": "Legal Writing Under Pressure",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 082",
+        "courseName": "Leadership & Mgmt for Lawyers",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 083",
+        "courseName": "Business Bootcamp",
+        "courseCredits": "1,2 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 084",
+        "courseName": "DE&I: Law and Strategies",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 085",
+        "courseName": "Diversity & Inclusion",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 087",
+        "courseName": "State Constitutional Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 089",
+        "courseName": "Introduction to United States Law & Professional Responsibility",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 093",
+        "courseName": "Intro to US Law",
+        "courseCredits": "1,2 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 096",
+        "courseName": "Intro to Lgl Res Writ &",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 097",
+        "courseName": "Trial-Level Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 098",
+        "courseName": "Appellate Writing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 099",
+        "courseName": "Legal Drafting",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

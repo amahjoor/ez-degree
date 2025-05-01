@@ -1,0 +1,26 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CONS 625",
+        "courseName": "Generalized Linear and Mixed Models in Ecology and Conservation Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 630",
+        "courseName": "Species Monitoring & Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 645",
+        "courseName": "Estimating Animal Abundance and Occupancy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 697",
+        "courseName": "Special Topics in Conservation",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

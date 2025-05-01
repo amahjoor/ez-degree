@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "ARAB 201",
+        "courseName": "Intermediate Arabic I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 202",
+        "courseName": "Intermediate Arabic II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

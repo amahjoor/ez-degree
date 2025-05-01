@@ -1,0 +1,32 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "ARTH 593",
+        "courseName": "Internship in Art History",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 594",
+        "courseName": "The Museum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 595",
+        "courseName": "Curating an Exhibit",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 596",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 599",
+        "courseName": "Special Topics in Art History",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

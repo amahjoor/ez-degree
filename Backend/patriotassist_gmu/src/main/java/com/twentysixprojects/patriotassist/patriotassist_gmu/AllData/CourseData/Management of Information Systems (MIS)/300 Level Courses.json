@@ -1,0 +1,38 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "MIS 303",
+        "courseName": "Introduction to Business Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MIS 310",
+        "courseName": "Database Management Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MIS 301C or L301) or MIS 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MIS 320",
+        "courseName": "Networks and Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MIS 301C or L301) or MIS 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MIS 330",
+        "courseName": "Systems Analysis and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MIS 310C, 310XS, IT 214C or 214XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MIS 341",
+        "courseName": "Cloud Computing Essentials",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MIS 303C, L303 or 303XS) or (MIS 301C or L301).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MIS 350",
+        "courseName": "Introduction to Programming for Business Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MIS 303C or L303) or (MIS 301C or L301)).\nC Requires minimum grade of C."
+    }
+]}

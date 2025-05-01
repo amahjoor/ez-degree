@@ -1,0 +1,38 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "ME 620",
+        "courseName": "Mechanical Engineering Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 621",
+        "courseName": "Foundations of Fluid Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 631",
+        "courseName": "Advanced Dynamics of Mechanical Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 641",
+        "courseName": "Robot System Integration",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ME 631B-, ECE 521B-, CS 580B- and CYSE 550B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "ME 698",
+        "courseName": "Research Study in Selected Mechanical Engineering Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 699",
+        "courseName": "Advanced Special Topics in Mechanical Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "SPMT 100",
+        "courseName": "Current Events in Sport Business",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 110",
+        "courseName": "Basketball Officiating",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 112",
+        "courseName": "Soccer Officiating",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

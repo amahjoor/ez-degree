@@ -1,0 +1,3209 @@
+{"categories": [
+    {
+        "courses": [
+            {
+                "code": "ENGH 100",
+                "credits": 4,
+                "title": "Composition for Multilingual Writers (Mason Core)"
+            },
+            {
+                "code": "ENGH 101",
+                "credits": 3,
+                "title": "Composition (Mason Core)"
+            },
+            {
+                "code": "ENGH 123",
+                "credits": 4,
+                "title": "Language-Enhanced Composition for Multilingual Writers (Mason Core)"
+            }
+        ],
+        "description": "The Mason Core curriculum offers students a unique opportunity to develop writing competencies across their educational experience that prepares them to participate in academic, professional, and civic communities. It does so in part by providing students with a \u201cvertical\u201d writing curriculum: a carefully sequenced series of courses designed to facilitate the long-term growth of writers as they develop expertise in the production and circulation of knowledge across a range of contexts and audiences. Students begin this process at the Foundation level and build higher-level skills at the Integration level in upper-level written communication and in Writing Intensive courses in their majors. ",
+        "learningOutcomes": "As the first course in Mason\u2019s vertical writing curriculum, students learn to see writing as a social, rhetorical act and are taught to effectively analyze and respond to a variety of writing situations in academic and non-academic contexts through analyzing, researching, and producing texts of varying genres that engage a range of audiences.   ",
+        "category": "Written Communication (lower-level, 3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "",
+                "credits": "",
+                "title": ""
+            },
+            {
+                "code": "COMM 100",
+                "credits": 3,
+                "title": "Public Speaking (Mason Core)"
+            },
+            {
+                "code": "COMM 101",
+                "credits": 3,
+                "title": "Fundamentals of Communication (Mason Core)"
+            },
+            {
+                "code": "DANC 454",
+                "credits": 3,
+                "title": "Methods of Teaching Dance (Mason Core)"
+            },
+            {
+                "code": "INTS 101",
+                "credits": 6,
+                "title": "Narratives of Identity (Mason Core)"
+            },
+            {
+                "code": "INTS 202",
+                "credits": 4,
+                "title": "Public Speaking and Critical Thinking Skills (Mason Core)"
+            }
+        ],
+        "description": "Oral Communication focuses on developing students\u2019 ability to create and deliver a variety of message types. Students will learn to monitor and ethically practice their own verbal and nonverbal communication to become an effective communicator, demonstrating respect and consideration for a multitude of audiences with whom they will communicate in a range of intercultural, personal, and professional contexts. They will learn to use oral communication as a way of thinking and learning, as well as to share ideas. ",
+        "learningOutcomes": "Upon completing an Oral Communication course, students will be able to: ",
+        "category": "Oral Communication (3 credits)\nEXPAND",
+        "required": "COMM 101 should be taken by all students unless their degree program specifies a different requirement. Students will be expected to continue developing oral communication skills in additional Mason Core courses as appropriate."
+    },
+    {
+        "courses": [
+            {
+                "code": "",
+                "credits": "",
+                "title": ""
+            },
+            {
+                "code": "BUS 210",
+                "credits": 3,
+                "title": "Business Analytics I (Mason Core)"
+            },
+            {
+                "code": "CDS 292",
+                "credits": 3,
+                "title": "Introduction to Social Network Analysis (Mason Core)"
+            },
+            {
+                "code": "EDRS 220",
+                "credits": 3,
+                "title": "Introduction to Applied Quantitative Analysis (Mason Core)"
+            },
+            {
+                "code": "HNRT 125",
+                "credits": 3,
+                "title": "Applied Quantitative Reasoning (Mason Core)"
+            },
+            {
+                "code": "MATH 106",
+                "credits": 3,
+                "title": "Quantitative Reasoning (Mason Core)"
+            },
+            {
+                "code": "MATH 108",
+                "credits": 3,
+                "title": "Introductory Calculus with Business Applications (Mason Core)"
+            },
+            {
+                "code": "MATH 110",
+                "credits": 3,
+                "title": "Introductory Probability (Mason Core)"
+            },
+            {
+                "code": "MATH 111",
+                "credits": 4,
+                "title": "Linear Mathematical Modeling (Mason Core)"
+            },
+            {
+                "code": "MATH 113",
+                "credits": 4,
+                "title": "Analytic Geometry and Calculus I (Mason Core)"
+            },
+            {
+                "code": "MATH 115",
+                "credits": 4,
+                "title": "Analytic Geometry and Calculus I (Honors) (Mason Core)"
+            },
+            {
+                "code": "MATH 124",
+                "credits": 3,
+                "title": "Calculus with Algebra/Trigonometry, Part B (Mason Core)"
+            },
+            {
+                "code": "MATH 125",
+                "credits": 3,
+                "title": "Discrete Mathematics I (Mason Core)"
+            },
+            {
+                "code": "MATH 272",
+                "credits": 3,
+                "title": "Mathematics for the Elementary School Teachers II (Mason Core)"
+            },
+            {
+                "code": "SOCI 213",
+                "credits": 4,
+                "title": "Statistics for the Behavioral Sciences (Mason Core)"
+            },
+            {
+                "code": "STAT 250",
+                "credits": 3,
+                "title": "Introductory Statistics I (Mason Core)"
+            }
+        ],
+        "description": "Quantitative Reasoning courses develop critical thinking skills using mathematical and statistical concepts (i.e., formulas, graphs, tables, models, and schematics) to analyze and make sense of data, patterns, and relationships. By learning to evaluate problems using quantitative reasoning, students will be better equipped to make well-supported decisions in personal, academic, and workplace situations.   ",
+        "learningOutcomes": "Upon completing a Quantitative Reasoning course, students will be able to: ",
+        "category": "Quantitative Reasoning (3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "",
+                "credits": "",
+                "title": ""
+            },
+            {
+                "code": "ANTH 395",
+                "credits": 3,
+                "title": "Work, Technology, and Society: An IT Perspective (Mason Core)"
+            },
+            {
+                "code": "AVT 110",
+                "credits": 3,
+                "title": "Digital Design Studio (Mason Core)"
+            },
+            {
+                "code": "AVT 180",
+                "credits": 3,
+                "title": "New Media in the Creative Arts (Mason Core)"
+            },
+            {
+                "code": "CDS 130",
+                "credits": 3,
+                "title": "Computing for Scientists (Mason Core)"
+            },
+            {
+                "code": "CS 100",
+                "credits": 3,
+                "title": "Principles of Computing (Mason Core)"
+            },
+            {
+                "code": "CS 108",
+                "credits": 3,
+                "title": "Intro to Computer Programming, Part A (Mason Core)"
+            },
+            {
+                "code": "CS 112",
+                "credits": 4,
+                "title": "Introduction to Computer Programming (Mason Core)"
+            },
+            {
+                "code": "CYSE 130",
+                "credits": 3,
+                "title": "Introduction to Computing for Digital Systems Engineering (Mason Core)"
+            },
+            {
+                "code": "ELED 257",
+                "credits": 3,
+                "title": "Integrating Technology in PreK-6 (Mason Core)"
+            },
+            {
+                "code": "ENGH 210",
+                "credits": 3,
+                "title": "Equitable AI (Mason Core)"
+            },
+            {
+                "code": "GOVT 300",
+                "credits": 4,
+                "title": "Research Methods and Analysis (Mason Core)"
+            },
+            {
+                "code": "HIST 390",
+                "credits": 3,
+                "title": "The Digital Past (Mason Core)"
+            },
+            {
+                "code": "INTS 203",
+                "credits": 6,
+                "title": "Inquiry for Action: Facilitating Change (Mason Core)"
+            },
+            {
+                "code": "INTS 249",
+                "credits": 4,
+                "title": "Digital Literacy (Mason Core)"
+            },
+            {
+                "code": "IT 104",
+                "credits": 3,
+                "title": "Introduction to Computing (Mason Core)"
+            },
+            {
+                "code": "MIS 303",
+                "credits": 3,
+                "title": "Introduction to Business Information Systems (Mason Core)"
+            },
+            {
+                "code": "MUSI 259",
+                "credits": 3,
+                "title": "Music in Computer Technology (Mason Core)"
+            },
+            {
+                "code": "PHYS 251",
+                "credits": 3,
+                "title": "Introduction to Computer Methods in Physics (Mason Core)"
+            },
+            {
+                "code": "SOCI 410",
+                "credits": 3,
+                "title": "Social Surveys and Attitude and Opinion Measurements (Mason Core)"
+            },
+            {
+                "code": "SYST 130",
+                "credits": 3,
+                "title": "Introduction to Computing for Digital Systems Engineering (Mason Core)"
+            },
+            {
+                "code": "PSYC 300",
+                "credits": 4,
+                "title": "Statistics in Psychology"
+            },
+            {
+                "code": "PSYC 301",
+                "credits": 4,
+                "title": "Research Methods in Psychology (Mason Core)"
+            },
+            {
+                "code": "PSYC 372",
+                "credits": 3,
+                "title": "Biopsychology"
+            }
+        ],
+        "description": "Information technology and computing can significantly augment humans' ability to produce, consume, process, and communicate information.  Thus, students need to understand ways to use such technology to enhance their lives, careers, and society, while being mindful of challenges such as security, source reliability, automation, and ethical implications.  These factors have made it essential for students to understand how to effectively navigate the evolving technological landscape.  IT courses offered in the majors may focus on disciplinary applications and concerns of information technology. ",
+        "learningOutcomes": "",
+        "category": "Information Technology and Computing (3 credits)\nEXPAND",
+        "required": "One approved course that meets all IT requirements or an approved sequence of courses that meet all IT requirements."
+    },
+    {
+        "courses": [
+            {
+                "code": "ARTH 101",
+                "credits": 3,
+                "title": "Introduction to the Visual Arts (Mason Core)"
+            },
+            {
+                "code": "ARTH 102",
+                "credits": 3,
+                "title": "Symbols and Stories in Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 103",
+                "credits": 3,
+                "title": "Introduction to Architecture (Mason Core)"
+            },
+            {
+                "code": "ARTH 104",
+                "credits": 3,
+                "title": "Design in the 20th Century (Mason Core)"
+            },
+            {
+                "code": "ARTH 200",
+                "credits": 3,
+                "title": "History of Western Art I (Mason Core)"
+            },
+            {
+                "code": "ARTH 201",
+                "credits": 3,
+                "title": "History of Western Art II (Mason Core)"
+            },
+            {
+                "code": "ARTH 203",
+                "credits": 3,
+                "title": "Survey of Asian Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 204",
+                "credits": 3,
+                "title": "Survey of Latin American Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 206",
+                "credits": 3,
+                "title": "Survey of African Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 303",
+                "credits": "1-3",
+                "title": "National Traditions (Mason Core)"
+            },
+            {
+                "code": "ARTH 311",
+                "credits": 3,
+                "title": "Design of Cities (Mason Core)"
+            },
+            {
+                "code": "ARTH 315",
+                "credits": 3,
+                "title": "Modern Architecture (Mason Core)"
+            },
+            {
+                "code": "ARTH 317",
+                "credits": 3,
+                "title": "The Black Pharaohs: Art and Archaeology of Ancient Nubia (Mason Core)"
+            },
+            {
+                "code": "ARTH 321",
+                "credits": 3,
+                "title": "Greek Art and Archaeology (Mason Core)"
+            },
+            {
+                "code": "ARTH 322",
+                "credits": 3,
+                "title": "Roman Art and Archaeology (Mason Core)"
+            },
+            {
+                "code": "ARTH 324",
+                "credits": 3,
+                "title": "From Alexander the Great to Cleopatra: The Hellenistic World (Mason Core)"
+            },
+            {
+                "code": "ARTH 333",
+                "credits": 3,
+                "title": "Early Christian and Byzantine Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 334",
+                "credits": 3,
+                "title": "Western Medieval Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 335",
+                "credits": 3,
+                "title": "Arts of Medieval England (Mason Core)"
+            },
+            {
+                "code": "ARTH 340",
+                "credits": 3,
+                "title": "Early Renaissance Art in Italy, 1300-1500 (Mason Core)"
+            },
+            {
+                "code": "ARTH 341",
+                "credits": 3,
+                "title": "Northern Renaissance Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 342",
+                "credits": 3,
+                "title": "High Renaissance Art in Italy, 1480-1570 (Mason Core)"
+            },
+            {
+                "code": "ARTH 343",
+                "credits": 3,
+                "title": "The Art of Venice (Mason Core)"
+            },
+            {
+                "code": "ARTH 344",
+                "credits": 3,
+                "title": "Baroque Art in Italy, France, and Spain, 1600-1750 (Mason Core)"
+            },
+            {
+                "code": "ARTH 345",
+                "credits": 3,
+                "title": "Northern Baroque Art, 1600-1750 (Mason Core)"
+            },
+            {
+                "code": "ARTH 350",
+                "credits": 3,
+                "title": "History of Photography (Mason Core)"
+            },
+            {
+                "code": "ARTH 360",
+                "credits": 3,
+                "title": "Nineteenth-Century European Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 362",
+                "credits": 3,
+                "title": "Twentieth-Century European Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 370",
+                "credits": 3,
+                "title": "Arts of the United States (Mason Core) JS"
+            },
+            {
+                "code": "ARTH 371",
+                "credits": 3,
+                "title": "American Architecture and Material Culture (Mason Core)"
+            },
+            {
+                "code": "ARTH 372",
+                "credits": 3,
+                "title": "Studies in 18th- and 19th-Century Art of the United States (Mason Core)"
+            },
+            {
+                "code": "ARTH 373",
+                "credits": 3,
+                "title": "Studies in 20th-Century Art of the United States (Mason Core)"
+            },
+            {
+                "code": "ARTH 375",
+                "credits": 3,
+                "title": "Indigenous Arts of the US and Canada (Mason Core)"
+            },
+            {
+                "code": "ARTH 376",
+                "credits": 3,
+                "title": "Twentieth-Century Latin American Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 382",
+                "credits": 3,
+                "title": "Arts of India (Mason Core)"
+            },
+            {
+                "code": "ARTH 383",
+                "credits": 3,
+                "title": "Arts of Southeast Asia (Mason Core)"
+            },
+            {
+                "code": "ARTH 384",
+                "credits": 3,
+                "title": "Arts of China (Mason Core)"
+            },
+            {
+                "code": "AVT 103",
+                "credits": 3,
+                "title": "Introduction to the Artist's Studio (Mason Core)"
+            },
+            {
+                "code": "AVT 104",
+                "credits": 3,
+                "title": "Two-Dimensional Design and Color (Mason Core)"
+            },
+            {
+                "code": "AVT 105",
+                "credits": 3,
+                "title": "Three-Dimensional Design and Beyond (Mason Core)"
+            },
+            {
+                "code": "AVT 215",
+                "credits": 3,
+                "title": "Typography (Mason Core)"
+            },
+            {
+                "code": "AVT 222",
+                "credits": 3,
+                "title": "Drawing I (Mason Core)"
+            },
+            {
+                "code": "AVT 232",
+                "credits": 3,
+                "title": "Painting I (Mason Core)"
+            },
+            {
+                "code": "AVT 243",
+                "credits": 3,
+                "title": "Printmaking I (Mason Core)"
+            },
+            {
+                "code": "AVT 252",
+                "credits": 3,
+                "title": "Darkroom Photography I (Mason Core)"
+            },
+            {
+                "code": "AVT 253",
+                "credits": 3,
+                "title": "Digital Photography I (Mason Core)"
+            },
+            {
+                "code": "AVT 262",
+                "credits": 3,
+                "title": "Sculpture I (Mason Core)"
+            },
+            {
+                "code": "AVT 385",
+                "credits": 3,
+                "title": "EcoArt (Mason Core)"
+            },
+            {
+                "code": "DANC 101",
+                "credits": 3,
+                "title": "Dance Appreciation (Mason Core)"
+            },
+            {
+                "code": "DANC 119",
+                "credits": 3,
+                "title": "Dance in Popular Culture (Mason Core)"
+            },
+            {
+                "code": "DANC 125",
+                "credits": 3,
+                "title": "Modern/Contemporary Dance I (Mason Core)"
+            },
+            {
+                "code": "DANC 131",
+                "credits": 3,
+                "title": "Beginning Jazz Technique (Mason Core)"
+            },
+            {
+                "code": "DANC 145",
+                "credits": 3,
+                "title": "Ballet I (Mason Core)"
+            },
+            {
+                "code": "DANC 161",
+                "credits": 3,
+                "title": "Beginning Tap Dance (Mason Core)"
+            },
+            {
+                "code": "DANC 225",
+                "credits": 3,
+                "title": "Modern/Contemporary Dance II (Mason Core)"
+            },
+            {
+                "code": "DANC 231",
+                "credits": 3,
+                "title": "Intermediate Jazz Technique (Mason Core)"
+            },
+            {
+                "code": "DANC 245",
+                "credits": 3,
+                "title": "Ballet II (Mason Core)"
+            },
+            {
+                "code": "DANC 301",
+                "credits": 3,
+                "title": "What is Dance? (Mason Core)"
+            },
+            {
+                "code": "DANC 331",
+                "credits": 3,
+                "title": "Advanced Jazz Dance (Mason Core)"
+            },
+            {
+                "code": "DANC 390",
+                "credits": 3,
+                "title": "Dance History I (Mason Core)"
+            },
+            {
+                "code": "DANC 391",
+                "credits": 3,
+                "title": "Dance History II (Mason Core)"
+            },
+            {
+                "code": "DANC 425",
+                "credits": "1-3",
+                "title": "Advanced Modern/Contemporary Dance I (Mason Core)"
+            },
+            {
+                "code": "DSGN 102",
+                "credits": 3,
+                "title": "Design in the Modern World (Mason Core)"
+            },
+            {
+                "code": "ENGH 270",
+                "credits": 3,
+                "title": "Introduction to Screen Cultures (Mason Core)"
+            },
+            {
+                "code": "ENGH 315",
+                "credits": 3,
+                "title": "Folklore and Folklife (Mason Core) JS"
+            },
+            {
+                "code": "ENGH 370",
+                "credits": 3,
+                "title": "Documentary and Non-Fiction Film/Media (Mason Core)"
+            },
+            {
+                "code": "ENGH 371",
+                "credits": 3,
+                "title": "Global TV (Mason Core)"
+            },
+            {
+                "code": "ENGH 372",
+                "credits": 3,
+                "title": "Introduction to Film (Mason Core)"
+            },
+            {
+                "code": "ENGH 374",
+                "credits": 3,
+                "title": "Screening the Global City (Mason Core)"
+            },
+            {
+                "code": "ENGH 396",
+                "credits": 3,
+                "title": "Introduction to Creative Writing (Mason Core)"
+            },
+            {
+                "code": "FAVS 204",
+                "credits": 3,
+                "title": "Film Art (Mason Core)"
+            },
+            {
+                "code": "FAVS 225",
+                "credits": 3,
+                "title": "Introduction to World Cinema (Mason Core)"
+            },
+            {
+                "code": "FAVS 280",
+                "credits": 3,
+                "title": "Writing for the Moving Image (Mason Core)"
+            },
+            {
+                "code": "GAME 101",
+                "credits": 3,
+                "title": "Introduction to Game Design (Mason Core)"
+            },
+            {
+                "code": "HIST 316",
+                "credits": 3,
+                "title": "History of Modern Architecture (Mason Core)"
+            },
+            {
+                "code": "INTS 103",
+                "credits": 6,
+                "title": "Human Creativity: Science and Art (Mason Core)"
+            },
+            {
+                "code": "INTS 245",
+                "credits": 4,
+                "title": "Visual Culture and Society (Mason Core)"
+            },
+            {
+                "code": "INTS 346",
+                "credits": 4,
+                "title": "Art as Social Action (Mason Core)"
+            },
+            {
+                "code": "MUSI 100",
+                "credits": 3,
+                "title": "Fundamentals of Music (Mason Core)"
+            },
+            {
+                "code": "MUSI 101",
+                "credits": 3,
+                "title": "Introduction to Classical Music (Mason Core)"
+            },
+            {
+                "code": "MUSI 102",
+                "credits": 3,
+                "title": "Popular Music in America (Mason Core)"
+            },
+            {
+                "code": "MUSI 106",
+                "credits": 3,
+                "title": "Fundamentals of Rock, Blues, and Jazz (Mason Core)"
+            },
+            {
+                "code": "MUSI 107",
+                "credits": 3,
+                "title": "Jazz and Blues in America (Mason Core)"
+            },
+            {
+                "code": "MUSI 280",
+                "credits": "0-1",
+                "title": "Athletic and Ceremonial Ensemble (Mason Core)"
+            },
+            {
+                "code": "MUSI 301",
+                "credits": 3,
+                "title": "Music in Motion Pictures (Mason Core)"
+            },
+            {
+                "code": "MUSI 302",
+                "credits": 3,
+                "title": "American Musical Theater (Mason Core)"
+            },
+            {
+                "code": "MUSI 380",
+                "credits": "0-1",
+                "title": "Wind Symphony (Mason Core)"
+            },
+            {
+                "code": "MUSI 381",
+                "credits": "0-1",
+                "title": "University Chorale (Mason Core)"
+            },
+            {
+                "code": "MUSI 382",
+                "credits": 1,
+                "title": "Piano Ensemble (Mason Core)"
+            },
+            {
+                "code": "MUSI 383",
+                "credits": "0-1",
+                "title": "Symphonic Band (Mason Core)"
+            },
+            {
+                "code": "MUSI 385",
+                "credits": "0-1",
+                "title": "Chamber Singers (Mason Core)"
+            },
+            {
+                "code": "MUSI 387",
+                "credits": "0-1",
+                "title": "Symphony Orchestra (Mason Core)"
+            },
+            {
+                "code": "MUSI 389",
+                "credits": "0-1",
+                "title": "Jazz Ensemble (Mason Core)"
+            },
+            {
+                "code": "MUSI 485",
+                "credits": "0-1",
+                "title": "Chamber Ensembles (Mason Core)"
+            },
+            {
+                "code": "PHIL 156",
+                "credits": 3,
+                "title": "What Is Art? (Mason Core)"
+            },
+            {
+                "code": "RELI 237",
+                "credits": 3,
+                "title": "Religion and Art (Mason Core)"
+            },
+            {
+                "code": "THR 101",
+                "credits": 3,
+                "title": "Theatrical Medium (Mason Core)"
+            },
+            {
+                "code": "THR 115",
+                "credits": 3,
+                "title": "Staging Activism (Mason Core)"
+            },
+            {
+                "code": "THR 150",
+                "credits": 3,
+                "title": "Global Theater Histories I (Mason Core)"
+            },
+            {
+                "code": "THR 151",
+                "credits": 3,
+                "title": "Global Theater Histories II (Mason Core)"
+            },
+            {
+                "code": "THR 195",
+                "credits": 3,
+                "title": "Play Production Technical Practicum (Mason Core)"
+            },
+            {
+                "code": "THR 210",
+                "credits": 3,
+                "title": "Acting I (Mason Core)"
+            },
+            {
+                "code": "THR 230",
+                "credits": 3,
+                "title": "Fundamentals of Production (Mason Core)"
+            },
+            {
+                "code": "THR 411",
+                "credits": 3,
+                "title": "Great Film Directors (Mason Core)"
+            },
+            {
+                "code": "THR 412",
+                "credits": 3,
+                "title": "Great Film Performances (Mason Core)"
+            }
+        ],
+        "description": "Mason courses in the film making, visual, and performing arts stress generative, inquiry based learning through direct aesthetic and creative experience in the studio environment. Art history courses address the intrinsic relationship of personal and cultural creativity, and the manifestation of aesthetics, visual culture, and visual narrative within historical contexts.",
+        "learningOutcomes": "One approved course.",
+        "category": "Arts (3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "HIST 125",
+                "credits": 3,
+                "title": "Introduction to Global History (Mason Core)"
+            },
+            {
+                "code": "HIST 394",
+                "credits": 3,
+                "title": "Globalization and History (Mason Core) 1"
+            }
+        ],
+        "description": "By focusing on historical experiences that reflect the diversity of Mason\u2019s student body, students will be able to see how their families and communities fit within, and contribute to, global history from the pre-modern period to our present day. These courses offer a long-term historical perspective on structural issues challenging our world today, including demographic and environmental changes, national and global inequalities, and the underrepresentation of marginalized groups. Students will gain an understanding of how interconnections and inter-dependencies have been forged through the global movement of people, pathogens, goods, and ideas.   ",
+        "learningOutcomes": "Upon completing a Global History course, students will be able to:",
+        "category": "Global History (3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "ANTH 309",
+                "credits": 3,
+                "title": "Peoples and Cultures of India (Mason Core) JS"
+            },
+            {
+                "code": "ANTH 382",
+                "credits": 3,
+                "title": "Urban Anthropology (Mason Core)"
+            },
+            {
+                "code": "ARTH 320",
+                "credits": 3,
+                "title": "Art of the Islamic World (Mason Core) JS"
+            },
+            {
+                "code": "BUS 200",
+                "credits": 3,
+                "title": "Global Environment of Business (Mason Core)"
+            },
+            {
+                "code": "CEIE 100",
+                "credits": 3,
+                "title": "Environmental Issues and Solutions Around the World (Mason Core) JS"
+            },
+            {
+                "code": "COMM 305",
+                "credits": 3,
+                "title": "Foundations of Intercultural Communication (Mason Core) JS"
+            },
+            {
+                "code": "CRIM 405",
+                "credits": 3,
+                "title": "Law and Justice around the World (Mason Core)"
+            },
+            {
+                "code": "CULT 320",
+                "credits": 3,
+                "title": "Globalization and Culture (Mason Core) JS"
+            },
+            {
+                "code": "ENGH 270",
+                "credits": 3,
+                "title": "Introduction to Screen Cultures (Mason Core)"
+            },
+            {
+                "code": "ENGH 374",
+                "credits": 3,
+                "title": "Screening the Global City (Mason Core)"
+            },
+            {
+                "code": "EVPP 336",
+                "credits": 3,
+                "title": "Tackling Wicked Problems in Society the Environment (Mason Core) JS"
+            },
+            {
+                "code": "GCH 205",
+                "credits": 3,
+                "title": "Global Health (Mason Core) JS"
+            },
+            {
+                "code": "GEOC 150",
+                "credits": 0,
+                "title": "International Experience: Global Contexts (Mason Core)"
+            },
+            {
+                "code": "GGS 101",
+                "credits": 3,
+                "title": "Major World Regions (Mason Core)"
+            },
+            {
+                "code": "GGS 317",
+                "credits": 3,
+                "title": "Geography of China (Mason Core)"
+            },
+            {
+                "code": "GLOA 101",
+                "credits": 3,
+                "title": "Introduction to Global Affairs (Mason Core) JS"
+            },
+            {
+                "code": "GOVT 133",
+                "credits": 3,
+                "title": "Introduction to Comparative Politics (Mason Core)"
+            },
+            {
+                "code": "GOVT 134",
+                "credits": 3,
+                "title": "Grand Challenges to Human Security (Mason Core)"
+            },
+            {
+                "code": "HIST 261",
+                "credits": 3,
+                "title": "Survey of African History (Mason Core)"
+            },
+            {
+                "code": "HIST 262",
+                "credits": 3,
+                "title": "Survey of African History (Mason Core)"
+            },
+            {
+                "code": "HIST 271",
+                "credits": 3,
+                "title": "Survey of Latin American History (Mason Core)"
+            },
+            {
+                "code": "HIST 272",
+                "credits": 3,
+                "title": "Survey of Latin American History (Mason Core) JS"
+            },
+            {
+                "code": "HIST 308",
+                "credits": 3,
+                "title": "Nineteenth-Century Europe (Mason Core)"
+            },
+            {
+                "code": "HIST 329",
+                "credits": 3,
+                "title": "Modern Russia and the Soviet Union (Mason Core) JS"
+            },
+            {
+                "code": "HIST 356",
+                "credits": 3,
+                "title": "Modern Japan (Mason Core)"
+            },
+            {
+                "code": "HIST 357",
+                "credits": 3,
+                "title": "Postwar Japan (Mason Core)"
+            },
+            {
+                "code": "HIST 377",
+                "credits": 3,
+                "title": "The Vietnam War (Mason Core)"
+            },
+            {
+                "code": "HIST 384",
+                "credits": 3,
+                "title": "Global History of Christianity (Mason Core) JS"
+            },
+            {
+                "code": "INTS 390",
+                "credits": "1-6",
+                "title": "International Internship (Mason Core)"
+            },
+            {
+                "code": "INYO 261",
+                "credits": 3,
+                "title": "Mentoring Multilingual Learners (Mason Core) JS"
+            },
+            {
+                "code": "NEUR 355",
+                "credits": 3,
+                "title": "Cross-Cultural Studies in Scientific Inquiry (Mason Core)"
+            },
+            {
+                "code": "RELI 100",
+                "credits": 3,
+                "title": "The Human Religious Experience (Mason Core)"
+            },
+            {
+                "code": "RELI 211",
+                "credits": 3,
+                "title": "Introduction to Religions of the \"West\" (Mason Core) JS"
+            },
+            {
+                "code": "RELI 212",
+                "credits": 3,
+                "title": "Introduction to Religions of Asia (Mason Core) JS"
+            },
+            {
+                "code": "RELI 310",
+                "credits": 3,
+                "title": "Judaism (Mason Core) JS"
+            },
+            {
+                "code": "RELI 312",
+                "credits": 3,
+                "title": "Islam (Mason Core)"
+            },
+            {
+                "code": "RELI 313",
+                "credits": 3,
+                "title": "Hinduism (Mason Core) JS"
+            },
+            {
+                "code": "RELI 322",
+                "credits": 3,
+                "title": "Religions of Africa (Mason Core)"
+            },
+            {
+                "code": "RELI 368",
+                "credits": 3,
+                "title": "Islam, Democracy, and Human Rights (Mason Core) JS"
+            },
+            {
+                "code": "RELI 384",
+                "credits": 3,
+                "title": "Global History of Christianity (Mason Core) JS"
+            },
+            {
+                "code": "SOCI 320",
+                "credits": 3,
+                "title": "Globalization and Social Change (Mason Core) JS"
+            },
+            {
+                "code": "SOCI 332",
+                "credits": 3,
+                "title": "The Urban World (Mason Core)"
+            },
+            {
+                "code": "SPAN 212",
+                "credits": 3,
+                "title": "Intermediate Spanish II: Local and Global Contexts (Mason Core)"
+            },
+            {
+                "code": "SYST 202",
+                "credits": 3,
+                "title": "Engineering Systems in a Complex World (Mason Core) JS"
+            },
+            {
+                "code": "TOUR 210",
+                "credits": 3,
+                "title": "Global Understanding through Travel and Tourism (Mason Core)"
+            },
+            {
+                "code": "WMST 100",
+                "credits": 3,
+                "title": "Global Representations of Women (Mason Core)"
+            }
+        ],
+        "description": "The goal of the Global Contexts (GC) Mason Core requirement is to enable students to explore global\u202fconnections through a disciplinary lens and to understand how global systems have created both\u202finterdependence and inequalities that engaged citizens must understand\u202fin order to\u202fwork toward\u202fan equitable and sustainable future.\u202f   ",
+        "learningOutcomes": "",
+        "category": "Global Contexts (3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "ARAB 325",
+                "credits": 3,
+                "title": "Major Arab Writers/Stories (Mason Core)"
+            },
+            {
+                "code": "ARAB 365",
+                "credits": 3,
+                "title": "Black and Minority Cultures in Arabic Literature (Mason Core)"
+            },
+            {
+                "code": "CHIN 310",
+                "credits": 3,
+                "title": "Survey of Chinese Literature (Mason Core)"
+            },
+            {
+                "code": "CHIN 311",
+                "credits": 3,
+                "title": "Modern Chinese Literature in Translation (Mason Core)"
+            },
+            {
+                "code": "CHIN 325",
+                "credits": 3,
+                "title": "Major Chinese Writers (Mason Core)"
+            },
+            {
+                "code": "CHIN 328",
+                "credits": 3,
+                "title": "Asian American Women Writers (Mason Core)"
+            },
+            {
+                "code": "CLAS 250",
+                "credits": 3,
+                "title": "Classical Mythology (Mason Core)"
+            },
+            {
+                "code": "CLAS 260",
+                "credits": 3,
+                "title": "The Legacy of Greece and Rome (Mason Core)"
+            },
+            {
+                "code": "CLAS 340",
+                "credits": 3,
+                "title": "Greek and Roman Epic (Mason Core)"
+            },
+            {
+                "code": "CLAS 350",
+                "credits": 3,
+                "title": "Greek and Roman Tragedy (Mason Core)"
+            },
+            {
+                "code": "CLAS 360",
+                "credits": 3,
+                "title": "Greek and Roman Comedy (Mason Core)"
+            },
+            {
+                "code": "CLAS 380",
+                "credits": 3,
+                "title": "Greek and Roman Novels (Mason Core)"
+            },
+            {
+                "code": "ELED 258",
+                "credits": 3,
+                "title": "Children's Literature for Teaching in Diverse Settings (Mason Core)"
+            },
+            {
+                "code": "ENGH 201",
+                "credits": 3,
+                "title": "Reading and Writing about Texts (Mason Core)"
+            },
+            {
+                "code": "ENGH 202",
+                "credits": 3,
+                "title": "Texts and Contexts (Mason Core)"
+            },
+            {
+                "code": "ENGH 203",
+                "credits": 3,
+                "title": "Western Literary Tradition (Mason Core)"
+            },
+            {
+                "code": "ENGH 204",
+                "credits": 3,
+                "title": "Western Literary Traditions (Mason Core)"
+            },
+            {
+                "code": "ENGH 206",
+                "credits": 3,
+                "title": "Literature in the Creation of Just Societies (Mason Core)"
+            },
+            {
+                "code": "FREN 325",
+                "credits": 3,
+                "title": "Major French Writers (Topic Varies) (Mason Core)"
+            },
+            {
+                "code": "FREN 329",
+                "credits": 3,
+                "title": "Problems of Western Civilization in French Literature (Mason Core)"
+            },
+            {
+                "code": "FRLN 330",
+                "credits": 3,
+                "title": "Topics in World Literature (Mason Core)"
+            },
+            {
+                "code": "GERM 325",
+                "credits": 3,
+                "title": "Major Writers (Mason Core)"
+            },
+            {
+                "code": "HIST 334",
+                "credits": 3,
+                "title": "American Scriptures (Mason Core)"
+            },
+            {
+                "code": "HIST 381",
+                "credits": 3,
+                "title": "Remembering Histories of Violence: Narrative Engagements with Difficult Pasts (Mason Core)"
+            },
+            {
+                "code": "INTS 101",
+                "credits": 6,
+                "title": "Narratives of Identity (Mason Core)"
+            },
+            {
+                "code": "INTS 363",
+                "credits": 3,
+                "title": "Social Justice Narratives (Mason Core)"
+            },
+            {
+                "code": "ITAL 320",
+                "credits": 3,
+                "title": "Topics in Italian Film and Literature (Mason Core)"
+            },
+            {
+                "code": "ITAL 325",
+                "credits": 3,
+                "title": "Major Italian Writers (Mason Core)"
+            },
+            {
+                "code": "JAPA 340",
+                "credits": 3,
+                "title": "Topics in Japanese Literature (Mason Core)"
+            },
+            {
+                "code": "KORE 311",
+                "credits": 3,
+                "title": "Modern Korean Literature in Translation (Mason Core)"
+            },
+            {
+                "code": "PHIL 253",
+                "credits": 3,
+                "title": "Philosophy and Literature (Mason Core)"
+            },
+            {
+                "code": "RELI 235",
+                "credits": 3,
+                "title": "Religion and Literature (Mason Core)"
+            },
+            {
+                "code": "RELI 333",
+                "credits": 3,
+                "title": "Spiritual Autobiography (Mason Core)"
+            },
+            {
+                "code": "RELI 334",
+                "credits": 3,
+                "title": "American Scriptures (Mason Core)"
+            },
+            {
+                "code": "RELI 339",
+                "credits": 3,
+                "title": "The Bible as Literature (Mason Core)"
+            },
+            {
+                "code": "RUSS 325",
+                "credits": 3,
+                "title": "Major Russian Writers (Mason Core)"
+            },
+            {
+                "code": "RUSS 326",
+                "credits": 3,
+                "title": "19th-Century Literature in Translation (Mason Core)"
+            },
+            {
+                "code": "RUSS 327",
+                "credits": 3,
+                "title": "20th-Century Literature in Translation (Mason Core)"
+            },
+            {
+                "code": "SEED 370",
+                "credits": 3,
+                "title": "Young Adult Literature in Multicultural Settings (Mason Core)"
+            },
+            {
+                "code": "SPAN 325",
+                "credits": 3,
+                "title": "Major Hispanic Writers (Mason Core)"
+            }
+        ],
+        "description": "Courses in the Literature category develop students\u2019 abilities to read for comprehension, detail, and nuance; identify specific literary qualities of language as employed in texts they read; analyze the ways specific literary devices contribute to the meaning of a text; identify and evaluate the contribution of the social, political, historical, and cultural contexts in which a literary text is produced; and evaluate a critical argument in others\u2019 and one\u2019s own context. ",
+        "learningOutcomes": "Courses in the Literature category must meet a minimum of three learning outcomes. Upon completing the Literature category, students will be able to: ",
+        "category": "Literature (3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "ANTH 135\n& ANTH 136",
+                "credits": "",
+                "title": "Introduction to Biological Anthropology (Mason Core)\nand Introduction to Biological Anthropology Lab (Mason Core) JS"
+            },
+            {
+                "code": "ASTR 103\n& ASTR 112",
+                "credits": "",
+                "title": "Astronomy (Mason Core)\nand The Solar System Lab (Mason Core)"
+            },
+            {
+                "code": "ASTR 103\n& ASTR 114",
+                "credits": "",
+                "title": "Astronomy (Mason Core)\nand Stars, Galaxies, and the Universe Lab (Mason Core)"
+            },
+            {
+                "code": "ASTR 111\n& ASTR 112",
+                "credits": "",
+                "title": "The Solar System (Mason Core)\nand The Solar System Lab (Mason Core)"
+            },
+            {
+                "code": "ASTR 113\n& ASTR 114",
+                "credits": "",
+                "title": "Stars, Galaxies, and the Universe (Mason Core)\nand Stars, Galaxies, and the Universe Lab (Mason Core)"
+            },
+            {
+                "code": "BIOL 103\n& BIOL 105",
+                "credits": "",
+                "title": "Introductory Biology II-Survey of Cell and Molecular Biology (Mason Core)\nand Introductory Biology II Laboratory (Mason Core)"
+            },
+            {
+                "code": "BIOL 107\n& BIOL 106",
+                "credits": "",
+                "title": "Intro Biology II Lecture (Mason Core)\nand Introductory Biology I Laboratory (Mason Core)"
+            },
+            {
+                "code": "CDS 101\n& CDS 102",
+                "credits": "",
+                "title": "Introduction to Computational and Data Sciences (Mason Core)\nand Introduction to Computational and Data Sciences Lab (Mason Core)"
+            },
+            {
+                "code": "CHEM 211\n& CHEM 213",
+                "credits": "",
+                "title": "General Chemistry I (Mason Core)\nand General Chemistry Laboratory I (Mason Core)"
+            },
+            {
+                "code": "CHEM 212\n& CHEM 214",
+                "credits": "",
+                "title": "General Chemistry II (Mason Core)\nand General Chemistry Laboratory II (Mason Core)"
+            },
+            {
+                "code": "CHEM 271\n& CHEM 272",
+                "credits": "",
+                "title": "General Chemistry for Engineers Lecture (Mason Core)\nand General Chemistry for Engineers Lab (Mason Core)"
+            },
+            {
+                "code": "CLIM 111\n& CLIM 112",
+                "credits": "",
+                "title": "Introduction to the Fundamentals of Atmospheric Science (Mason Core)\nand Introduction to the Fundamentals of Atmospheric Science Lab (Mason Core)"
+            },
+            {
+                "code": "CLIM 111\n& PHYS 112",
+                "credits": "",
+                "title": "Introduction to the Fundamentals of Atmospheric Science (Mason Core)\nand Introduction to the Fundamentals of Atmospheric Science Lab (Mason Core)"
+            },
+            {
+                "code": "EVPP 108\n& EVPP 109",
+                "credits": "",
+                "title": "Ecosphere - Introduction to Environmental Science I-Lecture (Mason Core)\nand Ecosphere- Introduction to Environmental Science I- Lab (Mason Core)"
+            },
+            {
+                "code": "EVPP 112\n& EVPP 113",
+                "credits": "",
+                "title": "Ecosphere: Introduction to Environmental Science II-Lecture (Mason Core)\nand Ecosphere: Introduction to Environmental Science II\u2013Lab (Mason Core)"
+            },
+            {
+                "code": "GEOL 101\n& GEOL 103",
+                "credits": "",
+                "title": "Physical Geology (Mason Core)\nand Physical Geology Lab (Mason Core)"
+            },
+            {
+                "code": "GEOL 102\n& GEOL 104",
+                "credits": "",
+                "title": "Historical Geology (Mason Core)\nand Historical Geology Laboratory (Mason Core)"
+            },
+            {
+                "code": "GEOL 120\n& GEOL 121",
+                "credits": "",
+                "title": "The Changing Ocean (Mason Core)\nand The Changing Ocean Laboratory (Mason Core)"
+            },
+            {
+                "code": "PHYS 111\n& CLIM 112",
+                "credits": "",
+                "title": "Introduction to the Fundamentals of Atmospheric Science (Mason Core)\nand Introduction to the Fundamentals of Atmospheric Science Lab (Mason Core)"
+            },
+            {
+                "code": "PHYS 111\n& PHYS 112",
+                "credits": "",
+                "title": "Introduction to the Fundamentals of Atmospheric Science (Mason Core)\nand Introduction to the Fundamentals of Atmospheric Science Lab (Mason Core)"
+            },
+            {
+                "code": "PHYS 160\n& PHYS 161",
+                "credits": "",
+                "title": "University Physics I (Mason Core)\nand University Physics I Laboratory (Mason Core)"
+            },
+            {
+                "code": "PHYS 170\n& PHYS 161",
+                "credits": "",
+                "title": "Introductory and Modern Physics I (Mason Core)\nand University Physics I Laboratory (Mason Core)"
+            },
+            {
+                "code": "PHYS 243\n& PHYS 244",
+                "credits": "",
+                "title": "College Physics I (Mason Core)\nand College Physics I Lab (Mason Core)"
+            },
+            {
+                "code": "PHYS 245\n& PHYS 246",
+                "credits": "",
+                "title": "College Physics II (Mason Core)\nand College Physics II Lab (Mason Core)"
+            },
+            {
+                "code": "PHYS 260\n& PHYS 261",
+                "credits": "",
+                "title": "University Physics II (Mason Core)\nand University Physics II Laboratory (Mason Core)"
+            },
+            {
+                "code": "PHYS 262\n& PHYS 263",
+                "credits": "",
+                "title": "University Physics III (Mason Core)\nand University Physics III Laboratory (Mason Core)"
+            },
+            {
+                "code": "PHYS 270\n& PHYS 261",
+                "credits": "",
+                "title": "Introductory and Modern Physics II (Mason Core)\nand University Physics II Laboratory (Mason Core)"
+            }
+        ],
+        "description": "Natural Science courses engage students in scientific exploration; foster their curiosity; enhance their enthusiasm for science; and enable them to apply scientific knowledge and reasoning to personal, professional, and public decision-making. Natural Science Lab courses must meet all five learning outcomes. Natural Science Overview (non-lab) courses must meet learning outcomes 1 through 4.",
+        "learningOutcomes": "Upon completing the Natural Science courses, students will be able to:  ",
+        "category": "Natural Science (7 credits total)\nEXPAND",
+        "required": "Two approved science courses. At least one course will include laboratory experience."
+    },
+    {
+        "courses": [
+            {
+                "code": "AFAM 200",
+                "credits": 3,
+                "title": "Introduction to African American Studies (Mason Core)"
+            },
+            {
+                "code": "ANTH 114",
+                "credits": 3,
+                "title": "Introduction to Cultural Anthropology (Mason Core)"
+            },
+            {
+                "code": "ANTH 120",
+                "credits": 3,
+                "title": "Unearthing the Past: Prehistory, Culture and Evolution (Mason Core)"
+            },
+            {
+                "code": "ANTH 121",
+                "credits": 3,
+                "title": "People of the Earth: Humanity's First Five Million Years (Mason Core)"
+            },
+            {
+                "code": "ANTH 135",
+                "credits": 3,
+                "title": "Introduction to Biological Anthropology (Mason Core) JS"
+            },
+            {
+                "code": "ANTH 363",
+                "credits": 3,
+                "title": "Humans, Disease, and Death (Mason Core)"
+            },
+            {
+                "code": "ANTH 365",
+                "credits": 3,
+                "title": "Scientific Racism and Human Variation (Mason Core) JS"
+            },
+            {
+                "code": "ANTH 396",
+                "credits": 3,
+                "title": "Issues in Anthropology: Social Sciences (Mason Core)"
+            },
+            {
+                "code": "BUS 100",
+                "credits": 3,
+                "title": "Business and Society (Mason Core)"
+            },
+            {
+                "code": "CONF 101",
+                "credits": 3,
+                "title": "Conflict and Our World (Mason Core)"
+            },
+            {
+                "code": "CONS 410",
+                "credits": 3,
+                "title": "Human Dimensions in Conservation (Mason Core)"
+            },
+            {
+                "code": "CRIM 100",
+                "credits": 3,
+                "title": "Introduction to Criminal Justice (Mason Core)"
+            },
+            {
+                "code": "ECON 100",
+                "credits": 3,
+                "title": "Economics for the Citizen (Mason Core)"
+            },
+            {
+                "code": "ECON 103",
+                "credits": 3,
+                "title": "Contemporary Microeconomic Principles (Mason Core)"
+            },
+            {
+                "code": "ECON 104",
+                "credits": 3,
+                "title": "Contemporary Macroeconomic Principles (Mason Core)"
+            },
+            {
+                "code": "ECON 105",
+                "credits": 3,
+                "title": "Environmental Economics for the Citizen (Mason Core)"
+            },
+            {
+                "code": "ECON 367",
+                "credits": 3,
+                "title": "Money, Markets, and Economic Policy (Mason Core)"
+            },
+            {
+                "code": "EDEP 110",
+                "credits": 3,
+                "title": "Academic Success Through Self-Regulated Learning (Mason Core)"
+            },
+            {
+                "code": "EDEP 350",
+                "credits": 3,
+                "title": "Perspectives on Achievement Motivation (Mason Core)"
+            },
+            {
+                "code": "EDSE 203",
+                "credits": 3,
+                "title": "Disability in American Culture (Mason Core)"
+            },
+            {
+                "code": "EDUC 200",
+                "credits": 3,
+                "title": "Introduction to Education: Teaching, Learning and Schools (Mason Core)"
+            },
+            {
+                "code": "GCH 325",
+                "credits": 3,
+                "title": "Stress and Well-Being (Mason Core)"
+            },
+            {
+                "code": "GGS 103",
+                "credits": 3,
+                "title": "Human Geography (Mason Core)"
+            },
+            {
+                "code": "GGS 301",
+                "credits": 3,
+                "title": "Political Geography (Mason Core) JS"
+            },
+            {
+                "code": "GOVT 101",
+                "credits": 3,
+                "title": "Democratic Theory and Practice (Mason Core)"
+            },
+            {
+                "code": "GOVT 103",
+                "credits": 3,
+                "title": "Introduction to American Government (Mason Core) JS"
+            },
+            {
+                "code": "GOVT 150",
+                "credits": 3,
+                "title": "Introduction to Technology Policy (Mason Core) JS"
+            },
+            {
+                "code": "GOVT 367",
+                "credits": 3,
+                "title": "Money, Markets and Economic Policy (Mason Core)"
+            },
+            {
+                "code": "HDFS 200",
+                "credits": 3,
+                "title": "Individual and Family Development (Mason Core)"
+            },
+            {
+                "code": "HEAL 230",
+                "credits": 3,
+                "title": "Introduction to Health Behavior (Mason Core)"
+            },
+            {
+                "code": "HIST 121",
+                "credits": 3,
+                "title": "Formation of the American Republic (Mason Core)"
+            },
+            {
+                "code": "HIST 122",
+                "credits": 3,
+                "title": "Development of Modern America (Mason Core)"
+            },
+            {
+                "code": "HIST 314",
+                "credits": 3,
+                "title": "History of Germany (Mason Core)"
+            },
+            {
+                "code": "INTS 203",
+                "credits": 6,
+                "title": "Inquiry for Action: Facilitating Change (Mason Core)"
+            },
+            {
+                "code": "INTS 300",
+                "credits": 3,
+                "title": "Law and Justice (Mason Core)"
+            },
+            {
+                "code": "INTS 304",
+                "credits": 4,
+                "title": "Social Movements and Community Activism (Mason Core)"
+            },
+            {
+                "code": "INTS 316",
+                "credits": 4,
+                "title": "Introduction to Childhood Studies (Mason Core)"
+            },
+            {
+                "code": "INTS 317",
+                "credits": 4,
+                "title": "Issues in Family Relationships (Mason Core)"
+            },
+            {
+                "code": "INTS 319",
+                "credits": 3,
+                "title": "Contemporary Youth Studies (Mason Core) JS"
+            },
+            {
+                "code": "INTS 321",
+                "credits": 4,
+                "title": "Parent-Child Relations (Mason Core)"
+            },
+            {
+                "code": "INTS 331",
+                "credits": 4,
+                "title": "The Nonprofit Sector (Mason Core)"
+            },
+            {
+                "code": "INTS 334",
+                "credits": 4,
+                "title": "Environmental Justice (Mason Core)"
+            },
+            {
+                "code": "INTS 336",
+                "credits": 3,
+                "title": "Poverty, Wealth and Inequality in the US (Mason Core)"
+            },
+            {
+                "code": "INTS 347",
+                "credits": "3-6",
+                "title": "Gender Representation in Popular Culture (Mason Core)"
+            },
+            {
+                "code": "INTS 362",
+                "credits": 3,
+                "title": "Social Justice and Human Rights (Mason Core)"
+            },
+            {
+                "code": "INTS 371",
+                "credits": 3,
+                "title": "Food Systems and Policy (Mason Core)"
+            },
+            {
+                "code": "INTS 434",
+                "credits": 3,
+                "title": "Research for Social Change (Mason Core)"
+            },
+            {
+                "code": "INTS 436",
+                "credits": 4,
+                "title": "Social Justice Education (Mason Core)"
+            },
+            {
+                "code": "INTS 437",
+                "credits": 3,
+                "title": "Critical Race Studies (Mason Core)"
+            },
+            {
+                "code": "INTS 438",
+                "credits": 4,
+                "title": "Representations of Race (Mason Core)"
+            },
+            {
+                "code": "LING 100",
+                "credits": 3,
+                "title": "Human Language (Mason Core)"
+            },
+            {
+                "code": "LING 306",
+                "credits": 3,
+                "title": "Introduction to Linguistic Analysis (Mason Core)"
+            },
+            {
+                "code": "PSYC 100",
+                "credits": 3,
+                "title": "Introduction to Psychology (Mason Core)"
+            },
+            {
+                "code": "PSYC 211",
+                "credits": 3,
+                "title": "Lifespan Development (Mason Core)"
+            },
+            {
+                "code": "PSYC 231",
+                "credits": 3,
+                "title": "Social Psychology (Mason Core)"
+            },
+            {
+                "code": "PSYC 333",
+                "credits": 3,
+                "title": "Psychology in the Workplace (Mason Core)"
+            },
+            {
+                "code": "SOCI 101",
+                "credits": 3,
+                "title": "Introductory Sociology (Mason Core) JS"
+            },
+            {
+                "code": "SOCI 308",
+                "credits": 3,
+                "title": "Race and Ethnicity in a Changing World (Mason Core)"
+            },
+            {
+                "code": "SOCI 315",
+                "credits": 3,
+                "title": "Contemporary Gender Relations (Mason Core)"
+            },
+            {
+                "code": "SOCI 352",
+                "credits": 3,
+                "title": "Social Problems and Solutions (Mason Core)"
+            },
+            {
+                "code": "SOCI 355",
+                "credits": 3,
+                "title": "Social Inequality (Mason Core)"
+            },
+            {
+                "code": "SOCI 360",
+                "credits": 3,
+                "title": "Youth Culture and Society (Mason Core)"
+            },
+            {
+                "code": "SOCI 371",
+                "credits": 3,
+                "title": "The Individual and Society (Mason Core)"
+            },
+            {
+                "code": "SOCW 200",
+                "credits": 3,
+                "title": "Introduction to Social Work (Mason Core)"
+            },
+            {
+                "code": "SPAN 430",
+                "credits": 3,
+                "title": "Spanish in the United States (Mason Core)"
+            },
+            {
+                "code": "TOUR 311",
+                "credits": 3,
+                "title": "Women and Tourism (Mason Core)"
+            },
+            {
+                "code": "UNIV 381",
+                "credits": 3,
+                "title": "Foundations for Building a Just Society (Mason Core)"
+            },
+            {
+                "code": "WMST 200",
+                "credits": 3,
+                "title": "Introduction to Women and Gender Studies (Mason Core)"
+            },
+            {
+                "code": "WMST 208",
+                "credits": 3,
+                "title": "Introduction to Lesbian, Gay, Bisexual, Transgender, and Queer Studies (Mason Core) JS"
+            }
+        ],
+        "description": "Students will develop the ability to explain how individuals, groups, or institutions are influenced by contextual factors; demonstrate awareness of changes in social and cultural constructs; and use appropriate methods and resources to apply social and behavioral science concepts, terminology, principles, and theories in analysis of significant human issues, past or present. ",
+        "learningOutcomes": "Upon completing a Social and Behavioral course, students will be able to:",
+        "category": "Social and Behavioral Sciences (3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "ANTH 135",
+                "credits": 3,
+                "title": "Introduction to Biological Anthropology (Mason Core)"
+            },
+            {
+                "code": "ANTH 309",
+                "credits": 3,
+                "title": "Peoples and Cultures of India (Mason Core)"
+            },
+            {
+                "code": "ANTH 365",
+                "credits": 3,
+                "title": "Scientific Racism and Human Variation (Mason Core)"
+            },
+            {
+                "code": "ARTH 370",
+                "credits": 3,
+                "title": "Arts of the United States (Mason Core)"
+            },
+            {
+                "code": "CEIE 100",
+                "credits": 3,
+                "title": "Environmental Issues and Solutions Around the World (Mason Core)"
+            },
+            {
+                "code": "COMM 305",
+                "credits": 3,
+                "title": "Foundations of Intercultural Communication (Mason Core)"
+            },
+            {
+                "code": "CULT 320",
+                "credits": 3,
+                "title": "Globalization and Culture (Mason Core)"
+            },
+            {
+                "code": "ENGH 206",
+                "credits": 3,
+                "title": "Literature in the Creation of Just Societies (Mason Core)"
+            },
+            {
+                "code": "ENGH 315",
+                "credits": 3,
+                "title": "Folklore and Folklife (Mason Core)"
+            },
+            {
+                "code": "EVPP 336",
+                "credits": 3,
+                "title": "Tackling Wicked Problems in Society the Environment (Mason Core)"
+            },
+            {
+                "code": "GCH 205",
+                "credits": 3,
+                "title": "Global Health (Mason Core)"
+            },
+            {
+                "code": "GGS 102",
+                "credits": 3,
+                "title": "Physical Geography (Mason Core)"
+            },
+            {
+                "code": "GGS 301",
+                "credits": 3,
+                "title": "Political Geography (Mason Core)"
+            },
+            {
+                "code": "GLOA 101",
+                "credits": 3,
+                "title": "Introduction to Global Affairs (Mason Core)"
+            },
+            {
+                "code": "GOVT 103",
+                "credits": 3,
+                "title": "Introduction to American Government (Mason Core)"
+            },
+            {
+                "code": "GOVT 150",
+                "credits": 3,
+                "title": "Introduction to Technology Policy (Mason Core)"
+            },
+            {
+                "code": "HIST 272",
+                "credits": 3,
+                "title": "Survey of Latin American History (Mason Core)"
+            },
+            {
+                "code": "HIST 329",
+                "credits": 3,
+                "title": "Modern Russia and the Soviet Union (Mason Core)"
+            },
+            {
+                "code": "HIST 384",
+                "credits": 3,
+                "title": "Global History of Christianity (Mason Core)"
+            },
+            {
+                "code": "INTS 319",
+                "credits": 3,
+                "title": "Contemporary Youth Studies (Mason Core)"
+            },
+            {
+                "code": "INYO 261",
+                "credits": 3,
+                "title": "Mentoring Multilingual Learners (Mason Core)"
+            },
+            {
+                "code": "RELI 211",
+                "credits": 3,
+                "title": "Introduction to Religions of the \"West\" (Mason Core)"
+            },
+            {
+                "code": "RELI 212",
+                "credits": 3,
+                "title": "Introduction to Religions of Asia (Mason Core)"
+            },
+            {
+                "code": "RELI 310",
+                "credits": 3,
+                "title": "Judaism (Mason Core)"
+            },
+            {
+                "code": "RELI 313",
+                "credits": 3,
+                "title": "Hinduism (Mason Core)"
+            },
+            {
+                "code": "RELI 368",
+                "credits": 3,
+                "title": "Islam, Democracy, and Human Rights (Mason Core)"
+            },
+            {
+                "code": "RELI 384",
+                "credits": 3,
+                "title": "Global History of Christianity (Mason Core)"
+            },
+            {
+                "code": "SOCI 101",
+                "credits": 3,
+                "title": "Introductory Sociology (Mason Core)"
+            },
+            {
+                "code": "SOCI 320",
+                "credits": 3,
+                "title": "Globalization and Social Change (Mason Core)"
+            },
+            {
+                "code": "SYST 202",
+                "credits": 3,
+                "title": "Engineering Systems in a Complex World (Mason Core)"
+            },
+            {
+                "code": "WMST 208",
+                "credits": 3,
+                "title": "Introduction to Lesbian, Gay, Bisexual, Transgender, and Queer Studies (Mason Core)"
+            }
+        ],
+        "description": "Exploration-level courses that are marked with a Just Societies \"flag\" are specifically designed to help students learn how to interact effectively with others from all walks of life, including those with backgrounds and beliefs that differ from their own. These courses focus on understanding key terms commonly used in society and the workplace today, engaging with peers effectively while using these terms, and collaboratively identifying processes for change when warranted.",
+        "learningOutcomes": "Upon completing a Just Societies course, students will be able to demonstrate the following competencies: ",
+        "category": "Just Societies (optional)\nEXPAND",
+        "required": ""
+    },
+    {
+        "courses": [
+            {
+                "code": "",
+                "credits": "",
+                "title": ""
+            },
+            {
+                "code": "ENGH 302",
+                "credits": 3,
+                "title": "Advanced Composition (Mason Core)"
+            }
+        ],
+        "description": "As the second course in Mason\u2019s vertical writing curriculum, students build on their understanding of rhetorical and genre awareness and writing processes begun in Foundation-level Written Communication through advanced rhetorical analysis, inquiry-based research into a variety of scholarly and public perspectives, and writing oriented toward investigating, engaging with, and responding to meaningful disciplinary questions in a variety of academic and non-academic writing contexts. Across the Foundation and Integration-level Written Communication courses, students learn to use writing to explore, construct, and communicate knowledge. These skills are built upon in Writing Intensive courses where students engage with increasingly complex rhetorical and field-specific problems, issues, or areas of inquiry and creativity.  ",
+        "learningOutcomes": "As the second course in Mason\u2019s vertical writing curriculum, students build on their understanding of rhetorical and genre awareness and writing processes begun in Foundation-level Written Communication through advanced rhetorical analysis, inquiry-based research into a variety of scholarly and public perspectives, and writing oriented toward investigating, engaging with, and responding to meaningful disciplinary questions in a variety of academic and non-academic writing contexts. Across the Foundation and Integration-level Written Communication courses, students learn to use writing to explore, construct, and communicate knowledge. These skills are built upon in Writing Intensive courses where students engage with increasingly complex rhetorical and field-specific problems, issues, or areas of inquiry and creativity.  ",
+        "category": "Written Communication (upper-level, 3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "",
+                "credits": "",
+                "title": ""
+            },
+            {
+                "code": "ACCT 461",
+                "credits": 3,
+                "title": "Assurance and Audit Services (Mason Core)"
+            },
+            {
+                "code": "ACCT 493",
+                "credits": 3,
+                "title": "Financial Planning and Wealth Management Capstone (Mason Core)"
+            },
+            {
+                "code": "ANTH 490",
+                "credits": 3,
+                "title": "History of Anthropological Theory (Mason Core)"
+            },
+            {
+                "code": "ARAB 331",
+                "credits": 3,
+                "title": "Reading and Conversation II (Mason Core)"
+            },
+            {
+                "code": "ARTH 400",
+                "credits": 3,
+                "title": "Historiography and Methods of Research in Art History (Topic Varies) (Mason Core)"
+            },
+            {
+                "code": "ARTH 420",
+                "credits": 3,
+                "title": "Advanced Studies in Ancient Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 430",
+                "credits": 3,
+                "title": "Advanced Studies in Medieval or Islamic Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 440",
+                "credits": 3,
+                "title": "RS: Advanced Studies in Renaissance and Baroque Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 460",
+                "credits": 3,
+                "title": "RS: Advanced Studies in 20th-Century European Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 471",
+                "credits": 3,
+                "title": "Advanced Studies in Art of the United States (Mason Core)"
+            },
+            {
+                "code": "ARTH 472",
+                "credits": 3,
+                "title": "RS: Advanced Studies in 20th-Century Latin American Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 474",
+                "credits": 3,
+                "title": "Advanced Studies in Contemporary Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 482",
+                "credits": 3,
+                "title": "RS: Advanced Studies in Asian Art (Mason Core)"
+            },
+            {
+                "code": "ARTH 495",
+                "credits": 3,
+                "title": "RS: Curating an Exhibit (Mason Core)"
+            },
+            {
+                "code": "ARTH 499",
+                "credits": 3,
+                "title": "Advanced Studies in Art History (Mason Core)"
+            },
+            {
+                "code": "ASTR 402",
+                "credits": 4,
+                "title": "RS: Methods of Observational Astronomy (Mason Core)"
+            },
+            {
+                "code": "AVT 395",
+                "credits": 3,
+                "title": "Writing for Artists (Mason Core)"
+            },
+            {
+                "code": "AVT 396",
+                "credits": 3,
+                "title": "Writing for Designers (Mason Core)"
+            },
+            {
+                "code": "BENG 360",
+                "credits": 3,
+                "title": "Biomedical Imaging (Mason Core)"
+            },
+            {
+                "code": "BIOL 308",
+                "credits": 5,
+                "title": "Foundations of Ecology and Evolution (Mason Core)"
+            },
+            {
+                "code": "BIOL 338",
+                "credits": 2,
+                "title": "Lab for Fundamentals of Ecology and Evolution (Mason Core)"
+            },
+            {
+                "code": "BIS 390",
+                "credits": 3,
+                "title": "The Research Process (Mason Core)"
+            },
+            {
+                "code": "CDS 302",
+                "credits": 3,
+                "title": "Scientific Data and Databases (Mason Core)"
+            },
+            {
+                "code": "CEIE 301",
+                "credits": 3,
+                "title": "Engineering and Economic Models in Civil Engineering (Mason Core)"
+            },
+            {
+                "code": "CHEM 336",
+                "credits": 2,
+                "title": "Physical Chemistry Lab I (Mason Core)"
+            },
+            {
+                "code": "CHEM 465",
+                "credits": 2,
+                "title": "Biochemistry Lab (Mason Core)"
+            },
+            {
+                "code": "CHIN 480",
+                "credits": 3,
+                "title": "Fourth-Year Chinese I (Mason Core)"
+            },
+            {
+                "code": "CLIM 408",
+                "credits": 3,
+                "title": "Senior Research (Mason Core)"
+            },
+            {
+                "code": "COMM 300",
+                "credits": 3,
+                "title": "Rhetorical Theory and Criticism (Mason Core)"
+            },
+            {
+                "code": "CONF 302",
+                "credits": 3,
+                "title": "Culture, Identity, and Conflict (Mason Core)"
+            },
+            {
+                "code": "CRIM 495",
+                "credits": 3,
+                "title": "Capstone in Criminology, Law and Society (Mason Core)"
+            },
+            {
+                "code": "CS 306",
+                "credits": 3,
+                "title": "Synthesis of Ethics and Law for the Computing Professional (Mason Core)"
+            },
+            {
+                "code": "CS 321",
+                "credits": 3,
+                "title": "Software Engineering (Mason Core)"
+            },
+            {
+                "code": "CYSE 491",
+                "credits": 3,
+                "title": "Engineering Senior Seminar (Mason Core)"
+            },
+            {
+                "code": "DANC 390",
+                "credits": 3,
+                "title": "Dance History I (Mason Core)"
+            },
+            {
+                "code": "DANC 391",
+                "credits": 3,
+                "title": "Dance History II (Mason Core)"
+            },
+            {
+                "code": "ECE 333",
+                "credits": 3,
+                "title": "Linear Electronics I (Mason Core)"
+            },
+            {
+                "code": "ECED 411",
+                "credits": 3,
+                "title": "Assessment of Diverse Young Learners (Mason Core)"
+            },
+            {
+                "code": "ECON 355",
+                "credits": 3,
+                "title": "The Political Economy of Nonprofit Institutions (Mason Core)"
+            },
+            {
+                "code": "ECON 365",
+                "credits": 3,
+                "title": "Topics in Economic History (Mason Core)"
+            },
+            {
+                "code": "ECON 395",
+                "credits": 3,
+                "title": "Effective Writing in Economics (Mason Core)"
+            },
+            {
+                "code": "ECON 435",
+                "credits": 3,
+                "title": "Economics of Energy (Mason Core)"
+            },
+            {
+                "code": "ECON 470",
+                "credits": 3,
+                "title": "Economics of Regulation (Mason Core)"
+            },
+            {
+                "code": "ECON 485",
+                "credits": 3,
+                "title": "Smithian Political Economy I (Mason Core)"
+            },
+            {
+                "code": "EDSE 452",
+                "credits": 3,
+                "title": "Intersectionality and Disability (Mason Core)"
+            },
+            {
+                "code": "ELED 459",
+                "credits": 3,
+                "title": "Researching Problems of Practice in Elementary Education"
+            },
+            {
+                "code": "ENGH 305",
+                "credits": 3,
+                "title": "Dimensions of Writing and Literature (Mason Core)"
+            },
+            {
+                "code": "EVPP 337",
+                "credits": 3,
+                "title": "Environmental Policy Making in Developing Countries (Mason Core)"
+            },
+            {
+                "code": "FAVS 304",
+                "credits": 3,
+                "title": "Film Forms (Mason Core)"
+            },
+            {
+                "code": "FAVS 380",
+                "credits": 3,
+                "title": "TV Writing (Mason Core)"
+            },
+            {
+                "code": "FAVS 496",
+                "credits": 3,
+                "title": "Advanced Visual Storytelling (Mason Core)"
+            },
+            {
+                "code": "FAVS 498",
+                "credits": 3,
+                "title": "Development for Senior Project (Mason Core)"
+            },
+            {
+                "code": "FNAN 477",
+                "credits": 3,
+                "title": "Student Managed Investment Fund (Mason Core)"
+            },
+            {
+                "code": "FNAN 493",
+                "credits": 3,
+                "title": "Financial Planning and Wealth Management Capstone (Mason Core)"
+            },
+            {
+                "code": "FNAN 498",
+                "credits": 3,
+                "title": "RS: Contemporary Topics in Finance (Mason Core)"
+            },
+            {
+                "code": "FREN 309",
+                "credits": 3,
+                "title": "Reading and Writing Skills Development (Mason Core)"
+            },
+            {
+                "code": "FRSC 302",
+                "credits": 3,
+                "title": "Forensic Trace Analysis (Mason Core)"
+            },
+            {
+                "code": "FRSC 304",
+                "credits": 3,
+                "title": "Forensic Chemistry (Mason Core)"
+            },
+            {
+                "code": "GAME 332",
+                "credits": 3,
+                "title": "RS: Story Design for Computer Games (Mason Core)"
+            },
+            {
+                "code": "GCH 411",
+                "credits": 3,
+                "title": "Health Program Planning and Evaluation (Mason Core)"
+            },
+            {
+                "code": "GCH 611",
+                "credits": 3,
+                "title": "Health Program Planning and Evaluation (Mason Core)"
+            },
+            {
+                "code": "GEOL 305",
+                "credits": 3,
+                "title": "Environmental Geology (Mason Core)"
+            },
+            {
+                "code": "GEOL 317",
+                "credits": 4,
+                "title": "Geomorphology (Mason Core)"
+            },
+            {
+                "code": "GEOL 334",
+                "credits": 4,
+                "title": "Vertebrate Paleontology (Mason Core)"
+            },
+            {
+                "code": "GGS 415",
+                "credits": 3,
+                "title": "Seminar in Geographic Thought and Methodology (Mason Core)"
+            },
+            {
+                "code": "GOVT 490",
+                "credits": 3,
+                "title": "Synthesis Seminar (Mason Core)"
+            },
+            {
+                "code": "GOVT 491",
+                "credits": 3,
+                "title": "Honors Seminar (Mason Core)"
+            },
+            {
+                "code": "GOVT 492",
+                "credits": 3,
+                "title": "Computing Ethics, Law and Policy Seminar (Mason Core)"
+            },
+            {
+                "code": "HAP 465",
+                "credits": 3,
+                "title": "Integration of Professional Skills and Issues (Mason Core)"
+            },
+            {
+                "code": "HIST 300",
+                "credits": 3,
+                "title": "Introduction to Historical Method (Mason Core)"
+            },
+            {
+                "code": "HIST 499",
+                "credits": 3,
+                "title": "RS: Senior Seminar in History (Mason Core)"
+            },
+            {
+                "code": "INTS 321",
+                "credits": 4,
+                "title": "Parent-Child Relations (Mason Core)"
+            },
+            {
+                "code": "INTS 334",
+                "credits": 4,
+                "title": "Environmental Justice (Mason Core)"
+            },
+            {
+                "code": "INTS 491",
+                "credits": 3,
+                "title": "Senior Capstone (Mason Core)"
+            },
+            {
+                "code": "IT 343",
+                "credits": 3,
+                "title": "IT Project Management (Mason Core)"
+            },
+            {
+                "code": "KINE 450",
+                "credits": 3,
+                "title": "Research Methods (Mason Core)"
+            },
+            {
+                "code": "KORE 370",
+                "credits": 3,
+                "title": "Advanced Korean Writing (Mason Core)"
+            },
+            {
+                "code": "LAS 499",
+                "credits": 3,
+                "title": "Research Seminar in Latin American Studies (Mason Core)"
+            },
+            {
+                "code": "MATH 300",
+                "credits": 3,
+                "title": "Introduction to Advanced Mathematics (Mason Core)"
+            },
+            {
+                "code": "ME 444",
+                "credits": 3,
+                "title": "Mechanical Design II (Mason Core)"
+            },
+            {
+                "code": "MGMT 313",
+                "credits": 3,
+                "title": "Organizational Behavior (Mason Core)"
+            },
+            {
+                "code": "MIS 330",
+                "credits": 3,
+                "title": "Systems Analysis and Design (Mason Core)"
+            },
+            {
+                "code": "MIS 431",
+                "credits": 3,
+                "title": "Data Mining for Business Applications (Mason Core)"
+            },
+            {
+                "code": "MKTG 471",
+                "credits": 3,
+                "title": "Marketing Management (Mason Core)"
+            },
+            {
+                "code": "MLAB 300",
+                "credits": 2,
+                "title": "Science Writing (Mason Core)"
+            },
+            {
+                "code": "MUSI 332",
+                "credits": 3,
+                "title": "Music History in Society II (Mason Core)"
+            },
+            {
+                "code": "MUSI 438",
+                "credits": 3,
+                "title": "Music History in Society B (Mason Core)"
+            },
+            {
+                "code": "NEUR 410",
+                "credits": 3,
+                "title": "Current Topics in Neuroscience (Mason Core)"
+            },
+            {
+                "code": "NEUR 411",
+                "credits": 3,
+                "title": "Seminar in Neuroscience (Mason Core)"
+            },
+            {
+                "code": "NURS 465",
+                "credits": 3,
+                "title": "Examination and Integration of Professional and Health Care Issues (Mason Core)"
+            },
+            {
+                "code": "NURS 480",
+                "credits": 3,
+                "title": "Professional Issues in Nursing (Mason Core)"
+            },
+            {
+                "code": "NUTR 326",
+                "credits": 3,
+                "title": "Food Systems (Mason Core)"
+            },
+            {
+                "code": "OSCM 456",
+                "credits": 3,
+                "title": "Quality Management (Mason Core)"
+            },
+            {
+                "code": "PHED 340",
+                "credits": 3,
+                "title": "Social and Cultural Issues in Physical Education (Mason Core)"
+            },
+            {
+                "code": "PHIL 421",
+                "credits": 3,
+                "title": "Seminar (Mason Core)"
+            },
+            {
+                "code": "PHIL 422",
+                "credits": 3,
+                "title": "Honors Seminar (Mason Core)"
+            },
+            {
+                "code": "PHYS 407",
+                "credits": 4,
+                "title": "Senior Laboratory in Modern Physics (Mason Core)"
+            },
+            {
+                "code": "PHYS 410",
+                "credits": 4,
+                "title": "Computational Physics Capstone (Mason Core)"
+            },
+            {
+                "code": "PSYC 301",
+                "credits": 4,
+                "title": "Research Methods in Psychology (Mason Core)"
+            },
+            {
+                "code": "PSYC 304",
+                "credits": 4,
+                "title": "Principles of Learning (Mason Core)"
+            },
+            {
+                "code": "PSYC 309",
+                "credits": 4,
+                "title": "Sensation, Perception, and Information Processing (Mason Core)"
+            },
+            {
+                "code": "RELI 420",
+                "credits": 3,
+                "title": "Capstone Seminar in Studies of Religion (Mason Core)"
+            },
+            {
+                "code": "RUSS 325",
+                "credits": 3,
+                "title": "Major Russian Writers (Mason Core)"
+            },
+            {
+                "code": "SOCI 303",
+                "credits": 3,
+                "title": "Methods and Logic of Inquiry (Mason Core)"
+            },
+            {
+                "code": "SOCI 412",
+                "credits": 3,
+                "title": "Contemporary Sociological Theory (Mason Core)"
+            },
+            {
+                "code": "SOCI 485",
+                "credits": 3,
+                "title": "RS: Sociological Analysis and Practice (Mason Core)"
+            },
+            {
+                "code": "SOCW 471",
+                "credits": 3,
+                "title": "Research in Social Work (Mason Core)"
+            },
+            {
+                "code": "SPAN 370",
+                "credits": 3,
+                "title": "Spanish Writing and Stylistics (Mason Core)"
+            },
+            {
+                "code": "SRST 450",
+                "credits": 3,
+                "title": "Research Methods (Mason Core)"
+            },
+            {
+                "code": "STAT 489",
+                "credits": 3,
+                "title": "Pre-Capstone Professional Development (Mason Core)"
+            },
+            {
+                "code": "SYST 489",
+                "credits": 3,
+                "title": "Senior Seminar (Mason Core)"
+            },
+            {
+                "code": "THR 350",
+                "credits": 3,
+                "title": "Script Analysis (Mason Core)"
+            },
+            {
+                "code": "THR 351",
+                "credits": 3,
+                "title": "Dramatic Theory and Criticism (Mason Core)"
+            },
+            {
+                "code": "THR 482",
+                "credits": 3,
+                "title": "Advanced Screenplay Workshop (Mason Core)"
+            }
+        ],
+        "description": "As part of the university's commitment to student writers in all undergraduate programs, at least one upper-division course in each major is designated as fulfilling the Writing Intensive (WI) requirement. As the third course in Mason\u2019s vertical writing curriculum, WI courses build upon the knowledge and skills that students develop in their written communication courses at the Foundation level and at the Integration level. To do so, WI courses further integrate rhetorical and field-specific knowledge as students engage the specific writing, critical thinking, and problem-solving methods of their chosen fields across a range of academic, professional, and civic contexts. ",
+        "learningOutcomes": "One approved course.",
+        "category": "Writing Intensive (usually 3 credits)\nEXPAND",
+        "required": "One approved course."
+    },
+    {
+        "courses": [
+            {
+                "code": "",
+                "credits": "",
+                "title": ""
+            },
+            {
+                "code": "ANTH 400",
+                "credits": 3,
+                "title": "Engaging the World: Anthropological Perspectives (Mason Core)"
+            },
+            {
+                "code": "ARAB 351",
+                "credits": 3,
+                "title": "Media Arabic (Spoken and Written) (Mason Core)"
+            },
+            {
+                "code": "ARAB 440",
+                "credits": 3,
+                "title": "Topics in Arabic Religious Thought and Texts (Mason Core)"
+            },
+            {
+                "code": "ARTH 494",
+                "credits": 3,
+                "title": "The Museum (Mason Core)"
+            },
+            {
+                "code": "ASTR 402",
+                "credits": 4,
+                "title": "RS: Methods of Observational Astronomy (Mason Core)"
+            },
+            {
+                "code": "ATEP 441",
+                "credits": 3,
+                "title": "Senior Seminar in Athletic Training (Mason Core)"
+            },
+            {
+                "code": "AVT 385",
+                "credits": 3,
+                "title": "EcoArt (Mason Core)"
+            },
+            {
+                "code": "AVT 453",
+                "credits": 3,
+                "title": "Professional Practices (Mason Core)"
+            },
+            {
+                "code": "AVT 497",
+                "credits": 3,
+                "title": "Senior Project (Mason Core)"
+            },
+            {
+                "code": "AVT 498",
+                "credits": 3,
+                "title": "Senior Design Project (Mason Core)"
+            },
+            {
+                "code": "BAS 491",
+                "credits": 3,
+                "title": "Applied Sciences Capstone (Mason Core)"
+            },
+            {
+                "code": "BAS 493",
+                "credits": 3,
+                "title": "BAS Capstone (Mason Core)"
+            },
+            {
+                "code": "BENG 492",
+                "credits": 3,
+                "title": "Senior Advanced Design Project I (Mason Core)"
+            },
+            {
+                "code": "BINF 354",
+                "credits": 3,
+                "title": "Foundations in Mathematical Biology (Mason Core)"
+            },
+            {
+                "code": "BIOL 301",
+                "credits": 3,
+                "title": "Biology and Society (Mason Core)"
+            },
+            {
+                "code": "BIOL 379",
+                "credits": 4,
+                "title": "RS: Ecological Sustainability (Mason Core)"
+            },
+            {
+                "code": "BIS 490",
+                "credits": 3,
+                "title": "RS: Senior Project (Mason Core)"
+            },
+            {
+                "code": "BUS 498",
+                "credits": 3,
+                "title": "Capstone Course: Advanced Business Models (Mason Core)"
+            },
+            {
+                "code": "CDS 492",
+                "credits": 3,
+                "title": "Capstone in Data Science (Mason Core)"
+            },
+            {
+                "code": "CEIE 490",
+                "credits": "1-3",
+                "title": "Civil Engineering Senior Design Project I (Mason Core)"
+            },
+            {
+                "code": "CEIE 491",
+                "credits": 3,
+                "title": "Civil Engineering Senior Design Project II (Mason Core)"
+            },
+            {
+                "code": "CHEM 460",
+                "credits": 3,
+                "title": "Chemistry in the Kitchen (Mason Core)"
+            },
+            {
+                "code": "CHIN 318",
+                "credits": 3,
+                "title": "Introduction to Classical Chinese (Mason Core)"
+            },
+            {
+                "code": "CHIN 355",
+                "credits": 3,
+                "title": "Readings in Chinese Poetry and Poetics (Mason Core)"
+            },
+            {
+                "code": "CHIN 475",
+                "credits": 3,
+                "title": "Chinese Popular Culture (Mason Core)"
+            },
+            {
+                "code": "COMM 326",
+                "credits": 3,
+                "title": "Rhetoric of Social Movements and Political Controversy (Mason Core)"
+            },
+            {
+                "code": "COMM 362",
+                "credits": 3,
+                "title": "Argument and Public Policy (Mason Core)"
+            },
+            {
+                "code": "COMM 454",
+                "credits": 3,
+                "title": "Free Speech and Ethics (Mason Core)"
+            },
+            {
+                "code": "CONF 490",
+                "credits": 3,
+                "title": "RS: Integration (Mason Core)"
+            },
+            {
+                "code": "CONS 490",
+                "credits": 3,
+                "title": "RS: Integrated Conservation Strategies (Mason Core)"
+            },
+            {
+                "code": "CONS 491",
+                "credits": 4,
+                "title": "RS: Conservation Management Planning (Mason Core)"
+            },
+            {
+                "code": "CONS 496",
+                "credits": 6,
+                "title": "Research in Conservation (Mason Core)"
+            },
+            {
+                "code": "COS 310",
+                "credits": 3,
+                "title": "Introduction to Science Policy (Mason Core)"
+            },
+            {
+                "code": "CRIM 495",
+                "credits": 3,
+                "title": "Capstone in Criminology, Law and Society (Mason Core)"
+            },
+            {
+                "code": "CS 306",
+                "credits": 3,
+                "title": "Synthesis of Ethics and Law for the Computing Professional (Mason Core)"
+            },
+            {
+                "code": "CYSE 493",
+                "credits": 3,
+                "title": "Senior Advanced Design Project II (Mason Core)"
+            },
+            {
+                "code": "DANC 490",
+                "credits": 3,
+                "title": "Senior Dance Seminar (Mason Core)"
+            },
+            {
+                "code": "ECE 492",
+                "credits": 1,
+                "title": "Senior Advanced Design Project I (Mason Core)"
+            },
+            {
+                "code": "ECE 493",
+                "credits": 2,
+                "title": "RS: Senior Advanced Design Project II (Mason Core)"
+            },
+            {
+                "code": "ECED 490",
+                "credits": "6-12",
+                "title": "Internship in Early Childhood Education (Mason Core)"
+            },
+            {
+                "code": "ECED 492",
+                "credits": "6-12",
+                "title": "Internship in Early Childhood Education (Non-Licensure) (Mason Core)"
+            },
+            {
+                "code": "ECON 491",
+                "credits": 3,
+                "title": "Capstone in Economics (Mason Core)"
+            },
+            {
+                "code": "ECON 493",
+                "credits": 3,
+                "title": "Capstone Internship (Mason Core)"
+            },
+            {
+                "code": "ECON 495",
+                "credits": "3-6",
+                "title": "RS: Honors Thesis in Economics (Mason Core)"
+            },
+            {
+                "code": "EDSE 481",
+                "credits": 12,
+                "title": "Internship: Professional Services (Mason Core)"
+            },
+            {
+                "code": "EDSE 482",
+                "credits": 12,
+                "title": "Internship: General Curriculum (Mason Core)"
+            },
+            {
+                "code": "EDSE 483",
+                "credits": 12,
+                "title": "Internship: Adapted (Severe Disabilities) (Mason Core)"
+            },
+            {
+                "code": "EDSE 484",
+                "credits": 12,
+                "title": "Internship: Blindness and Visual Impairments (Mason Core)"
+            },
+            {
+                "code": "ELED 490",
+                "credits": "3-9",
+                "title": "Internship in Elementary Education (Mason Core)"
+            },
+            {
+                "code": "ENGH 401",
+                "credits": 3,
+                "title": "RS: Honors Thesis Writing Seminar (Mason Core)"
+            },
+            {
+                "code": "ENGH 417",
+                "credits": 3,
+                "title": "RS: Topics in Folklore Research (Mason Core)"
+            },
+            {
+                "code": "ENGH 458",
+                "credits": 3,
+                "title": "RS: Topics in Literary Research (Mason Core)"
+            },
+            {
+                "code": "ENGH 470",
+                "credits": 3,
+                "title": "RS: Topics in Screen Cultures Research (Mason Core)"
+            },
+            {
+                "code": "ENGH 484",
+                "credits": 3,
+                "title": "RS: Writing Ethnography (Mason Core)"
+            },
+            {
+                "code": "ENGH 486",
+                "credits": 3,
+                "title": "RS: Writing Nonfiction for the Public (Mason Core)"
+            },
+            {
+                "code": "ENGH 495",
+                "credits": 3,
+                "title": "Capstone and Thesis (Mason Core)"
+            },
+            {
+                "code": "EVPP 378",
+                "credits": 4,
+                "title": "RS: Ecological Sustainability (Mason Core)"
+            },
+            {
+                "code": "EVPP 480",
+                "credits": 4,
+                "title": "Sustainability in Action (Mason Core)"
+            },
+            {
+                "code": "FAVS 352",
+                "credits": 3,
+                "title": "Ethics of Film and Video (Mason Core)"
+            },
+            {
+                "code": "FAVS 496",
+                "credits": 3,
+                "title": "Advanced Visual Storytelling (Mason Core)"
+            },
+            {
+                "code": "FAVS 497",
+                "credits": 3,
+                "title": "Senior Film Practicum (Mason Core)"
+            },
+            {
+                "code": "FAVS 499",
+                "credits": 3,
+                "title": "Senior Project (Mason Core)"
+            },
+            {
+                "code": "FRLN 385",
+                "credits": 3,
+                "title": "Multilingualism, Identity, and Power (Mason Core)"
+            },
+            {
+                "code": "GAME 490",
+                "credits": 3,
+                "title": "Senior Game Design Capstone (Mason Core)"
+            },
+            {
+                "code": "GCH 465",
+                "credits": 3,
+                "title": "Community Health Capstone (Mason Core)"
+            },
+            {
+                "code": "GCH 466",
+                "credits": 3,
+                "title": "Physical Activity in Public Health Capstone (Mason Core)"
+            },
+            {
+                "code": "GEOL 420",
+                "credits": 3,
+                "title": "Earth Science and Policy (Mason Core)"
+            },
+            {
+                "code": "GGS 303",
+                "credits": 3,
+                "title": "Geography of Resource Conservation (Mason Core)"
+            },
+            {
+                "code": "GGS 304",
+                "credits": 3,
+                "title": "Population Geography (Mason Core)"
+            },
+            {
+                "code": "GLOA 400",
+                "credits": 3,
+                "title": "Global Affairs Capstone (Mason Core)"
+            },
+            {
+                "code": "GLOA 492",
+                "credits": 3,
+                "title": "Honors Research Project in Global Affairs (Mason Core)"
+            },
+            {
+                "code": "GOVT 490",
+                "credits": 3,
+                "title": "Synthesis Seminar (Mason Core)"
+            },
+            {
+                "code": "GOVT 491",
+                "credits": 3,
+                "title": "Honors Seminar (Mason Core)"
+            },
+            {
+                "code": "GOVT 492",
+                "credits": 3,
+                "title": "Computing Ethics, Law and Policy Seminar (Mason Core)"
+            },
+            {
+                "code": "HAP 465",
+                "credits": 3,
+                "title": "Integration of Professional Skills and Issues (Mason Core)"
+            },
+            {
+                "code": "HAP 498",
+                "credits": 4,
+                "title": "Health Administration Internship (Mason Core)"
+            },
+            {
+                "code": "HDFS 400",
+                "credits": 3,
+                "title": "Advanced Family Processes (Mason Core)"
+            },
+            {
+                "code": "HDFS 499",
+                "credits": 3,
+                "title": "Advanced Internship and Analysis in Human Development and Family Science (Mason Core)"
+            },
+            {
+                "code": "HIST 300",
+                "credits": 3,
+                "title": "Introduction to Historical Method (Mason Core)"
+            },
+            {
+                "code": "HIST 499",
+                "credits": 3,
+                "title": "RS: Senior Seminar in History (Mason Core)"
+            },
+            {
+                "code": "IT 492",
+                "credits": 3,
+                "title": "Senior Design Project I (Mason Core)"
+            },
+            {
+                "code": "IT 493",
+                "credits": 4,
+                "title": "Senior Design Project II (Mason Core)"
+            },
+            {
+                "code": "KINE 490",
+                "credits": "6-12",
+                "title": "Kinesiology Internship (Mason Core)"
+            },
+            {
+                "code": "LAS 499",
+                "credits": 3,
+                "title": "Research Seminar in Latin American Studies (Mason Core)"
+            },
+            {
+                "code": "LING 480",
+                "credits": 3,
+                "title": "RS: First Language Acquisition (Mason Core)"
+            },
+            {
+                "code": "MATH 400",
+                "credits": 3,
+                "title": "History of Math (Topic Varies) (Mason Core)"
+            },
+            {
+                "code": "MATH 401",
+                "credits": 3,
+                "title": "Mathematics through 3D Printing (Mason Core)"
+            },
+            {
+                "code": "ME 444",
+                "credits": 3,
+                "title": "Mechanical Design II (Mason Core)"
+            },
+            {
+                "code": "MUSI 324",
+                "credits": 1,
+                "title": "Junior Recital (Mason Core)"
+            },
+            {
+                "code": "MUSI 424",
+                "credits": 1,
+                "title": "Senior Recital (Mason Core)"
+            },
+            {
+                "code": "MUSI 489",
+                "credits": 3,
+                "title": "Music Technology Capstone (Mason Core)"
+            },
+            {
+                "code": "MUSI 490",
+                "credits": 3,
+                "title": "RS: Musical Communication in Context (Mason Core)"
+            },
+            {
+                "code": "MUSI 491",
+                "credits": 1,
+                "title": "Musical Communication in Performance (Mason Core)"
+            },
+            {
+                "code": "MUSI 495",
+                "credits": "6-12",
+                "title": "Internship in Music Education (Mason Core)"
+            },
+            {
+                "code": "NEUR 424",
+                "credits": 3,
+                "title": "Sleep and Circadian Rhythms (Mason Core)"
+            },
+            {
+                "code": "NEUR 473",
+                "credits": 3,
+                "title": "Current Neuroscience Research in Germany (Mason Core)"
+            },
+            {
+                "code": "NURS 465",
+                "credits": 3,
+                "title": "Examination and Integration of Professional and Health Care Issues (Mason Core)"
+            },
+            {
+                "code": "NURS 490",
+                "credits": 3,
+                "title": "Health Policy and Advocacy in Nursing (Mason Core)"
+            },
+            {
+                "code": "PHED 415",
+                "credits": 12,
+                "title": "Student Teaching in Physical Education (Mason Core)"
+            },
+            {
+                "code": "PHIL 309",
+                "credits": 3,
+                "title": "Bioethics (Mason Core)"
+            },
+            {
+                "code": "PHIL 343",
+                "credits": 3,
+                "title": "Topics in Environmental Philosophy (Mason Core)"
+            },
+            {
+                "code": "PHIL 379",
+                "credits": 3,
+                "title": "Perspectives on Time (Mason Core)"
+            },
+            {
+                "code": "PHIL 421",
+                "credits": 3,
+                "title": "Seminar (Mason Core)"
+            },
+            {
+                "code": "PHIL 422",
+                "credits": 3,
+                "title": "Honors Seminar (Mason Core)"
+            },
+            {
+                "code": "PHYS 346",
+                "credits": 3,
+                "title": "Quarks to Strings (Mason Core)"
+            },
+            {
+                "code": "PHYS 407",
+                "credits": 4,
+                "title": "Senior Laboratory in Modern Physics (Mason Core)"
+            },
+            {
+                "code": "PHYS 410",
+                "credits": 4,
+                "title": "Computational Physics Capstone (Mason Core)"
+            },
+            {
+                "code": "PROV 342",
+                "credits": 3,
+                "title": "The George Mason Debates in Current Affairs (Mason Core)"
+            },
+            {
+                "code": "PSYC 405",
+                "credits": 3,
+                "title": "Mystery, Madness, and Murder (Mason Core)"
+            },
+            {
+                "code": "PSYC 406",
+                "credits": 3,
+                "title": "Psychology of Communication (Mason Core)"
+            },
+            {
+                "code": "PSYC 427",
+                "credits": 3,
+                "title": "Community Engagement for Social Change (Mason Core)"
+            },
+            {
+                "code": "PSYC 492",
+                "credits": 3,
+                "title": "RS: Psychology Honors III (Mason Core)"
+            },
+            {
+                "code": "RELI 490",
+                "credits": 3,
+                "title": "Comparative Study of Religions (Mason Core)"
+            },
+            {
+                "code": "RMGT 490",
+                "credits": 12,
+                "title": "Recreation Management Internship (Mason Core)"
+            },
+            {
+                "code": "RUSS 353",
+                "credits": 3,
+                "title": "Russian Civilization (Mason Core)"
+            },
+            {
+                "code": "SEED 492",
+                "credits": 9,
+                "title": "Internship: Secondary Education English (Mason Core)"
+            },
+            {
+                "code": "SEED 493",
+                "credits": 9,
+                "title": "Internship: Secondary Education Math (Mason Core)"
+            },
+            {
+                "code": "SEED 494",
+                "credits": 9,
+                "title": "Internship: Secondary Education Science (Mason Core)"
+            },
+            {
+                "code": "SEED 496",
+                "credits": 9,
+                "title": "Internship: Secondary Education Computer Science (Mason Core)"
+            },
+            {
+                "code": "SOCI 377",
+                "credits": 3,
+                "title": "Art and Society (Mason Core)"
+            },
+            {
+                "code": "SOCI 416",
+                "credits": "3-6",
+                "title": "Internship in Sociology I (Mason Core)"
+            },
+            {
+                "code": "SOCI 483",
+                "credits": 3,
+                "title": "The Sociology of Higher Education (Mason Core)"
+            },
+            {
+                "code": "SOCI 485",
+                "credits": 3,
+                "title": "RS: Sociological Analysis and Practice (Mason Core)"
+            },
+            {
+                "code": "SOCW 375",
+                "credits": 3,
+                "title": "Human Behavior from an Anti-Oppressive Lens (Mason Core)"
+            },
+            {
+                "code": "SOCW 472",
+                "credits": 3,
+                "title": "RS: Integrative Methods in Social Action and Social Change (Mason Core)"
+            },
+            {
+                "code": "SPAN 388",
+                "credits": 3,
+                "title": "Introduction to Latina/o Studies (Mason Core)"
+            },
+            {
+                "code": "SPMT 490",
+                "credits": 12,
+                "title": "Internship (Mason Core)"
+            },
+            {
+                "code": "STAT 490",
+                "credits": 3,
+                "title": "Capstone in Statistics (Mason Core)"
+            },
+            {
+                "code": "SYST 495",
+                "credits": 3,
+                "title": "Senior Design Project II (Mason Core)"
+            },
+            {
+                "code": "THR 440",
+                "credits": 3,
+                "title": "Advanced Studies in Directing/Dramaturgy (Mason Core)"
+            },
+            {
+                "code": "THR 496",
+                "credits": 3,
+                "title": "Text in Production (Mason Core)"
+            },
+            {
+                "code": "TOUR 490",
+                "credits": 12,
+                "title": "Hospitality, Tourism, and Events Management Internship (Mason Core)"
+            }
+        ],
+        "description": "Mason Apex courses or in some cases, sequence of courses, will provide Mason students with a high-impact culminating experience, requiring students to utilize critical thinking skills and preparing them for life-long learning. Students are challenged to draw connections across their Mason undergraduate academic experience. Mason Apex courses provide students opportunities to apply and communicate their knowledge, and involve integrative, applied or experiential projects.",
+        "learningOutcomes": "Upon completing a Mason Apex course, students will be able to: ",
+        "category": "Mason Apex (minimum 3 credits)\nEXPAND",
+        "required": " A minimum of 3 credits at the 400-level. It is suggested that students enroll after completing 85 credits. These courses maintain a faculty/instructor/mentor-to-student ratio of no more than 1:35. "
+    }
+]}

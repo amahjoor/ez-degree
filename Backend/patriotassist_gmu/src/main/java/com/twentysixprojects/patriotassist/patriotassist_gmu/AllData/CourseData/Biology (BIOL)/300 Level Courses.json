@@ -1,0 +1,242 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "BIOL 300",
+        "courseName": "BioDiversity",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C, U213 or 213XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 301",
+        "courseName": "Biology and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 302",
+        "courseName": "Alternative Careers in Biology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 303",
+        "courseName": "Animal Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 304",
+        "courseName": "Plant Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 305",
+        "courseName": "Biology of Microorganisms",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C, U213 or 213XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 306",
+        "courseName": "Biology of Microorganisms Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 308",
+        "courseName": "Foundations of Ecology and Evolution",
+        "courseCredits": "5 credits",
+        "preRequisite": "Required Prerequisites: ((BIOL 213C, U213 or 213XS) and (BIOL 214C or 214XS)) or (((EVPP 108C or 108XS) and (EVPP 109C or 109XS) and (BIOL 214C) or BIOL 214XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 309",
+        "courseName": "Oceanography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 311",
+        "courseName": "General Genetics",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 213C, U213 or 213XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 312",
+        "courseName": "Biostatistics for Bioinformatics",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 214C or 214XS) and (CDS 130C or 130XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 314",
+        "courseName": "Introduction to Research Design and Analysis",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 318",
+        "courseName": "Conservation Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 320",
+        "courseName": "Comparative Chordate Anatomy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 322",
+        "courseName": "Developmental Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 323",
+        "courseName": "Lab for Developmental Biology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 326",
+        "courseName": "Animal Physiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 331",
+        "courseName": "Invertebrate Zoology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 332",
+        "courseName": "Insect Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 334",
+        "courseName": "Vertebrate Paleontology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 335",
+        "courseName": "Forensic Entomology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 336",
+        "courseName": "Invertebrate Paleontology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 338",
+        "courseName": "Lab for Fundamentals of Ecology and Evolution",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 340",
+        "courseName": "Introductory Botany",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 344",
+        "courseName": "Plant Diversity and Evolution",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 345",
+        "courseName": "Plant Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 350",
+        "courseName": "Freshwater Ecosystems",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 351",
+        "courseName": "Conservation Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 352",
+        "courseName": "Monitoring and Assessment of Biodiversity",
+        "courseCredits": "4-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 353",
+        "courseName": "Small Population Management",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 354",
+        "courseName": "Research in Conservation",
+        "courseCredits": "5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 355",
+        "courseName": "Ecological Engineering and Ecosystem Restoration",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 356",
+        "courseName": "Landscape and Macrosystems Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 357",
+        "courseName": "Ecology Field Skills",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 374",
+        "courseName": "Biogeography: Space, Time, and Life",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 377",
+        "courseName": "Applied Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 378",
+        "courseName": "Applied Ecology Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 379",
+        "courseName": "RS: Ecological Sustainability",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 382",
+        "courseName": "Introduction to Virology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 305C, L305 or 305XS) or (BIOL L246, 246C or 246XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 385",
+        "courseName": "Biotechnology and Genetic Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BIOL 311C, L311 or 311XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

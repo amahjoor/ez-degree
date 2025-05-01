@@ -1,0 +1,32 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "MBUS 300",
+        "courseName": "Accounting in a Global Economy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBUS 304",
+        "courseName": "Entrepreneurship: Starting and Managing a New Enterprise",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBUS 305",
+        "courseName": "Introduction to International Business",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBUS 306",
+        "courseName": "Managing Projects and Operations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBUS 308",
+        "courseName": "Corporate Finance and Investments in a Global Economy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

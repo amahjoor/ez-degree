@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "IT 700",
+        "courseName": "Doctoral Seminar I: Intro to Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 701",
+        "courseName": "Doctoral Seminar II: Research Experience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 796",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 797",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

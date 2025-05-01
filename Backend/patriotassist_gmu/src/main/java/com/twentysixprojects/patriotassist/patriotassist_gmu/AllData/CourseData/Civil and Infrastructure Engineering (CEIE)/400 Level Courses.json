@@ -1,0 +1,200 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CEIE 401",
+        "courseName": "Sustainable Land Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 355C, 355XS or L355) and (CEIE 340C or 340XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 402",
+        "courseName": "Highway Design and Construction",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CEIE 310C, 310XS or L310) and (CEIE 360C or 360XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 403",
+        "courseName": "Experimental Methods in Civil Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 409",
+        "courseName": "Professional Practice and Management in Engineering",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 412",
+        "courseName": "Structural Steel Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 311C, L311 or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 413",
+        "courseName": "Reinforced Concrete Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 311C, L311 or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 414",
+        "courseName": "Structural Modeling for Engineers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 432",
+        "courseName": "Foundation Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 305C, 331C, 331XS or L331).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 435",
+        "courseName": "Engineering Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 305C, 331C, 331XS or L331).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 440",
+        "courseName": "Water Supply and Distribution",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 340C, 340XS or U340).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 441",
+        "courseName": "Engineering for Climate Adaptation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CEIE 340C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CEIE 442",
+        "courseName": "Open Channel Flow",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 340C, L340 or 340XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 444",
+        "courseName": "Water Resources Planning and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 445",
+        "courseName": "Flood Hazards Engineering and Adaptation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CEIE 340C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CEIE 450",
+        "courseName": "Environmental Engineering Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 355C, L355 or 355XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 451",
+        "courseName": "Air Pollution Formation and Control",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CEIE 355C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CEIE 452",
+        "courseName": "Climate Change Engineering and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CEIE 355C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CEIE 453",
+        "courseName": "Water and Wastewater Treatment Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 355C, 355XS or L355).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 454",
+        "courseName": "Water and Sanitation in Low-income Communities",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 355C, 355XS or L355).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 457",
+        "courseName": "Remote Sensing in Civil Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 461",
+        "courseName": "Traffic Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 360C, 360XS or L360).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 462",
+        "courseName": "Urban Transportation Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 360C, 360XS or L360).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 471",
+        "courseName": "Construction Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 370C, 370XS or L370).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 472",
+        "courseName": "Building Information Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 370C, 370XS or L370).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 473",
+        "courseName": "Legal Aspects of the Construction Process",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 474",
+        "courseName": "Construction Computer Application and Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 370C, 370XS, CDS 130C, 130XS, CS 112C, 112XS, IT 104C, 104XS or ENGR 125T) and (STAT 344C, 344XS, 260C or 260XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 476",
+        "courseName": "Construction Cost Estimating",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 301C or 301XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 477",
+        "courseName": "Construction Safety and Risk Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 344C, 344XS, 260C or 260XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 478",
+        "courseName": "Construction Planning and Scheduling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 490",
+        "courseName": "Civil Engineering Senior Design Project I",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 301C, 301XS or L301) and (CEIE 311C, 311XS or L311) and (CEIE 340C, 340XS or L340) and (CEIE 355C, 355XS or L355) and (CEIE 360C or 360XS) and (CEIE 305C, L305, 331C, 331XS or L331) and (CEIE 370C or 370XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 491",
+        "courseName": "Civil Engineering Senior Design Project II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CEIE 490C or 490XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 498",
+        "courseName": "Independent Study in Civil Engineering",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CEIE 499",
+        "courseName": "Special Topics in Civil Engineering",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

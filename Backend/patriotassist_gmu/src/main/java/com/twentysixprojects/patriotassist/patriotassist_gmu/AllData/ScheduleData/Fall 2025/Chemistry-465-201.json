@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Biochemistry Laboratory",
+  "CourseSubject": "Chemistry",
+  "CourseNumber": "465",
+  "CourseSection": "201",
+  "CreditHours": "2",
+  "CRN": "74346",
+  "Term": "Fall 2025",
+  "Instructor": "Erb, Megan (Primary)",
+  "MeetingDays": "Tuesday",
+  "MeetingTimes": "12:00 PM - 03:50 PM",
+  "Campus": "Fairfax",
+  "Seats": "10 of 10 seats remain.",
+  "ScheduleType": "Laboratory",
+  "createdAt": "2025-03-10 16:12:31"
+}

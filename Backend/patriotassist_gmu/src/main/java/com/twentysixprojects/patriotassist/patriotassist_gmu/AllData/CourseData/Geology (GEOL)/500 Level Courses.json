@@ -1,0 +1,128 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "GEOL 500",
+        "courseName": "Selected Topics in Modern Geology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 501",
+        "courseName": "Selected Topics in Modern Geology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 503",
+        "courseName": "Special Topics in Earth Science",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 504",
+        "courseName": "Sedimentary Geology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 506",
+        "courseName": "Soil Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 508",
+        "courseName": "Igneous and Metamorphic Petrology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 510",
+        "courseName": "Advanced Structural Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 512",
+        "courseName": "Invertebrate Paleontology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 513",
+        "courseName": "Hydrogeology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 521",
+        "courseName": "Geology of Energy Resources",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 525",
+        "courseName": "Modeling Earth Signals and Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 532",
+        "courseName": "Paleoclimatology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 534",
+        "courseName": "Vertebrate Paleontology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 535",
+        "courseName": "Quantitative Stratigraphy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 536",
+        "courseName": "Paleontology Seminar",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 540",
+        "courseName": "Modern Methods in Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 541",
+        "courseName": "Great Events in Earth History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 545",
+        "courseName": "Planetary Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 553",
+        "courseName": "Field Mapping Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 563",
+        "courseName": "Coastal Morphology and Processes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 565",
+        "courseName": "Paleoceanography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

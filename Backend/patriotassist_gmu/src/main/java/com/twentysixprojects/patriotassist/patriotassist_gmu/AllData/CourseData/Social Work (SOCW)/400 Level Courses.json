@@ -1,0 +1,74 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "SOCW 400",
+        "courseName": "Legal and Ethical Issues in Human Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 410",
+        "courseName": "Substance Use, Misuse, and Disorder: Programs and Policies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 415",
+        "courseName": "Child and Family Welfare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 435",
+        "courseName": "Introduction to Gerontology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 445",
+        "courseName": "Social Determinants of Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 471",
+        "courseName": "Research in Social Work",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 472",
+        "courseName": "RS: Integrative Methods in Social Action and Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 475",
+        "courseName": "Selected Topics in Social Work Policy",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 483",
+        "courseName": "Selected Topics in Social Work Intervention",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 495",
+        "courseName": "Social Work Practicum and Seminar I",
+        "courseCredits": "5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 496",
+        "courseName": "Social Work Practicum and Seminar II",
+        "courseCredits": "5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 499",
+        "courseName": "Independent Study in Social Work",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

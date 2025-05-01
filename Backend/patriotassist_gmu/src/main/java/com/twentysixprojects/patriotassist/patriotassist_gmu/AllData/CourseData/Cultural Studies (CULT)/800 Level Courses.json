@@ -1,0 +1,86 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "CULT 802",
+        "courseName": "Histories of Cultural Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 804",
+        "courseName": "Histories of Cultural Studies II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 806",
+        "courseName": "Research Seminar in Cultural Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 808",
+        "courseName": "Student/Faculty Colloquium in Cultural Studies",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 810",
+        "courseName": "Culture and Political Economy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 812",
+        "courseName": "Visual Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 814",
+        "courseName": "Gender and Sexuality",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 816",
+        "courseName": "Science/Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 818",
+        "courseName": "Social Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 820",
+        "courseName": "After Colonialism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 822",
+        "courseName": "Race and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 860",
+        "courseName": "Special Topics in Cultural Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 870",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CULT 880",
+        "courseName": "Field Concentration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

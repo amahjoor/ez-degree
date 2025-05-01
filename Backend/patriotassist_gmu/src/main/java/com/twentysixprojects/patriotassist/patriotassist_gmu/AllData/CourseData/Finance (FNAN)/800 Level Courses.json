@@ -1,0 +1,26 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "FNAN 881",
+        "courseName": "PhD Seminar in Empirical Corporate Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FNAN 882",
+        "courseName": "PhD Seminar in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FNAN 883",
+        "courseName": "PhD Seminar in Empirical Asset Pricing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FNAN 884",
+        "courseName": "PhD Seminar in Asset Pricing Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

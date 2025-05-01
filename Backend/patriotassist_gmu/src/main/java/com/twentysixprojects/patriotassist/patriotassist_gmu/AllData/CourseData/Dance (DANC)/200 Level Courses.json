@@ -1,0 +1,44 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "DANC 210",
+        "courseName": "Anatomy and Kinesiology for Dance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 225",
+        "courseName": "Modern/Contemporary Dance II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 231",
+        "courseName": "Intermediate Jazz Technique",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 245",
+        "courseName": "Ballet II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 251",
+        "courseName": "Dance Composition I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (DANC 150C or 150XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 252",
+        "courseName": "Dance Composition II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((DANC 150C or 150XS) and (DANC 251C or 251XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "DANC 270",
+        "courseName": "Dance Production Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (DANC 170C or 170XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

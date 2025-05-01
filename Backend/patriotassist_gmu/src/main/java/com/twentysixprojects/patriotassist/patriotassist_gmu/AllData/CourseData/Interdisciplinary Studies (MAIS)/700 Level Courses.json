@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MAIS 793",
+        "courseName": "Integrated Learning Experience",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MAIS 797",
+        "courseName": "Interdisciplinary Studies Proposal",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MAIS 798",
+        "courseName": "Interdisciplinary Studies Project",
+        "courseCredits": "1-5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MAIS 799",
+        "courseName": "Interdisciplinary Studies Thesis",
+        "courseCredits": "1-5 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

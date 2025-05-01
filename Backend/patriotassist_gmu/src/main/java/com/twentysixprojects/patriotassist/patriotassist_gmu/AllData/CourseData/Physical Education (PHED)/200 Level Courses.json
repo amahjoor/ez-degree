@@ -1,0 +1,38 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "PHED 202",
+        "courseName": "Teaching Skillful Movement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 218",
+        "courseName": "Technology in Health and Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 273",
+        "courseName": "Net and Target Games",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 274",
+        "courseName": "Dance and Educational Gymnastics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 275",
+        "courseName": "Field and Invasion Games",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 276",
+        "courseName": "Health-Related Fitness Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,62 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "GBUS 601",
+        "courseName": "Statistics for Management",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 613",
+        "courseName": "Financial Reporting and Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 623",
+        "courseName": "Marketing Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 638",
+        "courseName": "Operations Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: GBUS 601B-, MBA 633B-, STAT 515B- or 554B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "GBUS 643",
+        "courseName": "Managerial Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 653",
+        "courseName": "Organizational Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 662",
+        "courseName": "Management of Information Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 692",
+        "courseName": "Professional Development Experience",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 696",
+        "courseName": "Directed Studies in Graduate School of Business",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GBUS 697",
+        "courseName": "Special Topics in Graduate School of Business",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

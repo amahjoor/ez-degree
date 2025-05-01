@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Property",
+  "CourseSubject": "Law",
+  "CourseNumber": "104",
+  "CourseSection": "001",
+  "CreditHours": "4",
+  "CRN": "70029",
+  "Term": "Fall 2025",
+  "Instructor": "Mossoff, Adam (Primary)",
+  "MeetingDays": "Monday,Wednesday",
+  "MeetingTimes": "01:50 PM - 03:50 PM",
+  "Campus": "Arlington",
+  "Seats": "50 of 50 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 17:02:42"
+}

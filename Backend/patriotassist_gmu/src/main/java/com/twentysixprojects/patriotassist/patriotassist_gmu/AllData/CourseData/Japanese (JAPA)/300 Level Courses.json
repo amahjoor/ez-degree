@@ -1,0 +1,56 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "JAPA 310",
+        "courseName": "Japanese Culture in a Global World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 320",
+        "courseName": "Japanese Cinema",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 330",
+        "courseName": "Advanced Reading and Speaking I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 331",
+        "courseName": "Advanced Reading and Speaking II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 340",
+        "courseName": "Topics in Japanese Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 350",
+        "courseName": "Readings in Japanese Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 360",
+        "courseName": "Topics in Japanese Popular Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 370",
+        "courseName": "Video Games and Japan",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 380",
+        "courseName": "Japan in Motion",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGH 101C or 101XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

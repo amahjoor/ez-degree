@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PHED 660",
+        "courseName": "Research Reading Seminar in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 670",
+        "courseName": "Analysis of Teaching in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 672",
+        "courseName": "Curriculum and Assessment in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 673",
+        "courseName": "Motor Development for Special Populations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 680",
+        "courseName": "Mentoring and Supervising in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

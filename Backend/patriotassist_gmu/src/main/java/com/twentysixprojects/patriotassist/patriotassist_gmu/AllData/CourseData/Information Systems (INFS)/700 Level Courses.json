@@ -1,0 +1,56 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "INFS 740",
+        "courseName": "Database Programming for the World Wide Web",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 760",
+        "courseName": "Advanced Database Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 770",
+        "courseName": "Knowledge Management for E-Business",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 772",
+        "courseName": "Intelligent Agents and the Semantic Web",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 774",
+        "courseName": "Enterprise Architecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 796",
+        "courseName": "Directed Readings in Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 797",
+        "courseName": "Advanced Topics in Information Systems",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 798",
+        "courseName": "Research Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INFS 799",
+        "courseName": "MS Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

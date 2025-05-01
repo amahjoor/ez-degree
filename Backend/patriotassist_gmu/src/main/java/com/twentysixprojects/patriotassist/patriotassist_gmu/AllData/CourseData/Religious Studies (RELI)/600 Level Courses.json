@@ -1,0 +1,80 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "RELI 600",
+        "courseName": "Interdisciplinary Pathways in the Study of Religion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 630",
+        "courseName": "Theories and Methods in the Study of Religion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 632",
+        "courseName": "Interreligious Dialogue",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 633",
+        "courseName": "Issues in Religious Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 634",
+        "courseName": "Topics in American Religion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 635",
+        "courseName": "World Religions in Transition and Transformation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 636",
+        "courseName": "Religion and the Natural Environment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 637",
+        "courseName": "Religion and Secularity in State and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 640",
+        "courseName": "Religion and Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 644",
+        "courseName": "Islamic Texts and Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 645",
+        "courseName": "Muslim Comparative Theologies: Sunni-Shi`i Religious Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 646",
+        "courseName": "Islam and Human Rights",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 660",
+        "courseName": "Islamic Biomedical Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

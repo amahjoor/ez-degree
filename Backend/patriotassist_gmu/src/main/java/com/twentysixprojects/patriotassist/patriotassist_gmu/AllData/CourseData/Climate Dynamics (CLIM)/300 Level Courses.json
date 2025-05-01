@@ -1,0 +1,32 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CLIM 301",
+        "courseName": "Weather Analysis and Prediction",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 312",
+        "courseName": "Physical Climatology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 314",
+        "courseName": "Severe and Extreme Weather",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 319",
+        "courseName": "Air Pollution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 390",
+        "courseName": "Topics in Climate Research",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "LING 600",
+        "courseName": "Special Topics in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 624",
+        "courseName": "Practicum in TESOL",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 638",
+        "courseName": "Semantics and Pragmatics 1",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 641",
+        "courseName": "First Language Acquisition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 642",
+        "courseName": "Second Language Acquisition 1",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 643",
+        "courseName": "Psycholinguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 651",
+        "courseName": "Sociolinguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 653",
+        "courseName": "Typology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 661",
+        "courseName": "Historical Studies of the English Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 671",
+        "courseName": "Computational Linguistics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 692",
+        "courseName": "Phonology II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

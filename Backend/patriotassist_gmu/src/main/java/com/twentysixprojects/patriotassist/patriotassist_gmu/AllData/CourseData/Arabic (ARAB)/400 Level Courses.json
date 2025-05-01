@@ -1,0 +1,32 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ARAB 420",
+        "courseName": "Survey of Arabic Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 430",
+        "courseName": "Advanced Arabic Grammar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 440",
+        "courseName": "Topics in Arabic Religious Thought and Texts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 470",
+        "courseName": "Special Topics in Modern Arabic Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 498",
+        "courseName": "Independent Study",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

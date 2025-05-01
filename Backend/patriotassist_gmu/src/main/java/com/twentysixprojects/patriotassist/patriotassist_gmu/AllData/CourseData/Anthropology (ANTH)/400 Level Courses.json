@@ -1,0 +1,38 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ANTH 400",
+        "courseName": "Engaging the World: Anthropological Perspectives",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 440",
+        "courseName": "Applied Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 450",
+        "courseName": "Ethnographic Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 490",
+        "courseName": "History of Anthropological Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 495",
+        "courseName": "Internship",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 499",
+        "courseName": "Independent Research",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,74 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "PSYC 518",
+        "courseName": "Death, Dying, and Grieving",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 530",
+        "courseName": "Cognitive Engineering: Cognitive Science Applied to Human Factors",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 531",
+        "courseName": "Mammalian Neurobiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 555",
+        "courseName": "Neuroimaging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 557",
+        "courseName": "Psychometric Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 558",
+        "courseName": "Neuronal Bases of Learning and Memory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 559",
+        "courseName": "Behavioral Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 563",
+        "courseName": "Laboratory Methods in Cognitive and Behavioral Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 566",
+        "courseName": "Cognitive and Perceptual Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 592",
+        "courseName": "Special Topics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 597",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 598",
+        "courseName": "Introduction to the Science and Practice of Industrial and Organizational Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

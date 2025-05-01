@@ -1,0 +1,104 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "CLIM 700",
+        "courseName": "Climate Comprehensive Exam",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 711",
+        "courseName": "Introduction to Atmospheric Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 712",
+        "courseName": "Physical and Dynamical Oceanography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 713",
+        "courseName": "Atmosphere-Ocean Interactions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 715",
+        "courseName": "Numerical Methods for Climate Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 750",
+        "courseName": "Geophysical Fluid Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 751",
+        "courseName": "Predictability and Prediction of Weather and Climate",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CLIM 711B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "CLIM 752",
+        "courseName": "Ocean General Circulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 753",
+        "courseName": "General Circulation of the Atmosphere",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 754",
+        "courseName": "Elements of the Tropical Climate System",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 759",
+        "courseName": "Topics in Climate Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 761",
+        "courseName": "Advanced Atmospheric Predictability and Prediction",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CLIM 711B- or 711XS) and (CLIM 751B- or 751XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CLIM 762",
+        "courseName": "Statistical Methods in Climate Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 763",
+        "courseName": "Advanced Statistical Methods in Climate Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 796",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 798",
+        "courseName": "Master's Climate Research Project",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 799",
+        "courseName": "Master's Thesis in Climate",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

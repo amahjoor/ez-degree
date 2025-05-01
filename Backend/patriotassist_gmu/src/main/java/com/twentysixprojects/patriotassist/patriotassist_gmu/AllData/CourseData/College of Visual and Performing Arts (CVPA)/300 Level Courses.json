@@ -1,0 +1,14 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CVPA 308",
+        "courseName": "Cross-Cultural Arts Appreciation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CVPA 399",
+        "courseName": "Special Topics in the Arts",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

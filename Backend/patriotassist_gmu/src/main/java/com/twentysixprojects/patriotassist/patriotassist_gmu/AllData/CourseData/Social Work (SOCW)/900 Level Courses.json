@@ -1,0 +1,14 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "SOCW 998",
+        "courseName": "Doctoral Dissertation Proposal",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 999",
+        "courseName": "Doctoral Dissertation",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

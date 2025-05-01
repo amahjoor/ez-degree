@@ -1,0 +1,164 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ME 409",
+        "courseName": "Data Center Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 410",
+        "courseName": "Biosafety Laboratories",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ME 323C or BENG 230C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ME 413",
+        "courseName": "A Seat at the Table",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 414",
+        "courseName": "Fatigue Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 313C or 313XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 415",
+        "courseName": "Composite Materials",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 313C or 313XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 421",
+        "courseName": "HVAC Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 323C or 323XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 422",
+        "courseName": "Computational Fluid Dynamics (CFD) for Mechanical Engineers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 112C, 109C or ENGR 125T) and ME 322C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ME 423",
+        "courseName": "Microfluidics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ME 322C or BENG 230C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ME 425",
+        "courseName": "Renewable Energy Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 260C or 260XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 432",
+        "courseName": "Systems Dynamics and Controls",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (ME 351C or 351XS) and (ECE 285C, 285XS, 330C or 330XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 443",
+        "courseName": "Mechanical Design I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 212C, 313C and 323C and (((ME 341C or 342C) and ME 351C) or CS 367C)).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ME 444",
+        "courseName": "Mechanical Design II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ME 443C or 443XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 445",
+        "courseName": "Finite Element Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 351C or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 446",
+        "courseName": "Energetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 447",
+        "courseName": "Computer-Aided Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ME 151C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ME 453",
+        "courseName": "Developing the Societal Engineer",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ME 443*C or 443*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 454",
+        "courseName": "Project Mgmt for Engineers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 466",
+        "courseName": "Advanced Materials Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ME 313C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ME 467",
+        "courseName": "Nanosensors",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 211XS, 211C, 271XS or 271C).\nXS Requires minimum grade of XS.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ME 471",
+        "courseName": "Introduction to Astronautics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 231C or 231XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 472",
+        "courseName": "Spacecraft Subsystems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 231C or 231XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 473",
+        "courseName": "Space Systems Propulsion",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 221C or 221XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 475",
+        "courseName": "Aeronautics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ME 212C or 212XS) and (ME 322C or 322XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 476",
+        "courseName": "Aeronautics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 475C or 475XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 477",
+        "courseName": "Aircraft Propulsion",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 221C or 221XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 498",
+        "courseName": "Independent Study in Mechanical Engineering",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 499",
+        "courseName": "Special Topics in Mechanical Engineering",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

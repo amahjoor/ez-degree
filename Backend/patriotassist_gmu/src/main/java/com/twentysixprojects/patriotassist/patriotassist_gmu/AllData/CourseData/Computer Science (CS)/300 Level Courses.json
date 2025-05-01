@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CS 306",
+        "courseName": "Synthesis of Ethics and Law for the Computing Professional",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 105C, 105XS, 110C or 110XS) and ((COMM 100C, 100XS, 101C or 101XS) and (ENGH 302C or 302XS)) or (HNRS 260XS, 260C, 261C or 261XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 310",
+        "courseName": "Data Structures",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 211C or 211XS) and MATH 125C and (MATH 113C, 113XS, 124C, 124XS or 115C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 321",
+        "courseName": "Software Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 310C or 310XS) and (ENGH 302C, 302XS, HNRS 260C, 260XS, 261C or 261XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 325",
+        "courseName": "Introduction to Game Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 211C or 211XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 330",
+        "courseName": "Formal Methods and Models",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 211C or 211XS) and (MATH 125C or 125XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 351",
+        "courseName": "Visual Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 262C or 262XS) and (CS 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 367",
+        "courseName": "Computer Systems and Programming",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: ((CS 262C, 262XS, 222XS or 222C) and (MATH 125C or 125XS) and (CS 110C or 110XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 390",
+        "courseName": "Research and Project Design Principles in Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 262C or 262XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 391",
+        "courseName": "Advanced Programming Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: CS 310C or 310XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 395",
+        "courseName": "Student Initiated Special Topics",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (CS 211C or 211XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 399",
+        "courseName": "Special Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 211C or 211XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

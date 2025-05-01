@@ -1,0 +1,26 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "HIST 803",
+        "courseName": "Doctoral Readings for Major Field",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 804",
+        "courseName": "Doctoral Readings for Minor Field",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 810",
+        "courseName": "History Doctoral Colloquium",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HIST 811",
+        "courseName": "Doctoral Research Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

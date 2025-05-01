@@ -1,0 +1,122 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "CS 700",
+        "courseName": "Research Methodology in Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 701",
+        "courseName": "Research Experience in Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 706",
+        "courseName": "Concurrent Software Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 571B- or 571XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 719",
+        "courseName": "Scalable Internet Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 555B- or 555XS) and (CS 571B- or 571XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 747",
+        "courseName": "Deep Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 580B-, 580XS, 584B- or 584XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 752",
+        "courseName": "Interactive Graphics Software",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 551B- or 551XS) and (CS 583B- or 583XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 755",
+        "courseName": "Advanced Computer Networks",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 555B- or 555XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 756",
+        "courseName": "Performance Analysis of Computer Networks",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 555B- or 555XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 757",
+        "courseName": "Generative Deep Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CS 688B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "CS 773",
+        "courseName": "Real-Time Systems Design and Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 571B- or 571XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 774",
+        "courseName": "Computational Vision",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 682B- or 682XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 775",
+        "courseName": "Advanced Pattern Recognition",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 688B- or 688XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 777",
+        "courseName": "Human-Computer Intelligent Interaction",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 580B- or 580XS) and (CS 551B- or 551XS)) or (CS 682B- or 682XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 779",
+        "courseName": "Topics in Resilient and Secure Computer Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 571B-, 571XS, ISA 562B- or 562XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 782",
+        "courseName": "Advanced Machine Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 681B-, 681XS, 687B-, 687XS, 688B- or 688XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 787",
+        "courseName": "Decision Guidance Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: INFS 614B-, 614XS, CS 550B- or 550XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 788",
+        "courseName": "Autonomic Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 555B-, 555XS, 571B-, 571XS, ISA 562B- or 562XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 795",
+        "courseName": "Advanced Topics in CS",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 798",
+        "courseName": "Research Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 799",
+        "courseName": "MS Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

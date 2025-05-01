@@ -1,0 +1,44 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "REAL 710",
+        "courseName": "Real Estate Entrepreneurship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (REAL 615C, 615XS or 615XP) and (REAL 625C, 625XS or 625XP).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "REAL 720",
+        "courseName": "Real Estate Leadership and Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "REAL 730",
+        "courseName": "Financing Real Estate Projects",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: REAL 625C, 625XS or 625XP.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "REAL 740",
+        "courseName": "Real Estate Investments",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (REAL 615C, 615XS or 615XP) and (REAL 625C, 625XS or 625XP) and (REAL 635C, 635XS or 635XP) and (REAL 645C, 645XS or 645XP).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "REAL 750",
+        "courseName": "MSRED Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (REAL 605C, 605XS or 605XP) and (REAL 615C, 615XS or 615XP) and (REAL 625C, 625XS or 625XP) and (REAL 635C, 635XS or 635XP) and (REAL 645C, 645XS or 645XP) and (REAL 655C, 655XS or 655XP).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "REAL 790",
+        "courseName": "Special Topics in Real Estate",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "REAL 796",
+        "courseName": "Directed Reading",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

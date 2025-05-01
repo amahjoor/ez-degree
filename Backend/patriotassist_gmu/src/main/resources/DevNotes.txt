@@ -1,0 +1,24 @@
+Current Situation:
+    - Schedule is given with no regard to whether the course is set as LabOnly or not
+    - There is no logic for linked courses, courses with labs must be scheduled together, right now each lab and each course is logically seperate
+    - Program schedules all eligible courses with no regard to overlap and course credit min/max threshold
+    - There is no logic for degree completion progression (Science Courses) if a student has already taken BIOL 102 they should take the next biology course to complete the credit and not something else
+    - Program takes insanely long to generate schedules
+    - Implement Summer 2025 Supported Term Data
+    - Re haul frontend to be more professional and intuitive
+
+Future Implementations:
+    - If student already knows which courses to take and wants to generate a schedule they may do that.
+    - If Program optimizations are done, generate multiple schedules with comprehensive data list for generated schedule frontend.
+    - API Implementation
+
+    https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/computer-science-bs/#requirementstext
+
+Arsh Courses:
+    - BIOL 213
+    - CHEM 212
+    - CHEM 214
+    - CDS 130
+    - COMM 101
+
+    - Stat 344

@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Virginia Remedies",
+  "CourseSubject": "Law",
+  "CourseNumber": "333",
+  "CourseSection": "001",
+  "CreditHours": "3",
+  "CRN": "70120",
+  "Term": "Fall 2025",
+  "Instructor": "Cummings, Mark (Primary)",
+  "MeetingDays": "Monday,Wednesday",
+  "MeetingTimes": "08:10 PM - 09:35 PM",
+  "Campus": "Arlington",
+  "Seats": "16 of 16 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 17:04:12"
+}

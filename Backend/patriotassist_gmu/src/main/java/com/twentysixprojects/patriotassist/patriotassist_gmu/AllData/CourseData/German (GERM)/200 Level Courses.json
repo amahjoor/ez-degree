@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "GERM 201",
+        "courseName": "Intermediate German I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 202",
+        "courseName": "Intermediate German II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

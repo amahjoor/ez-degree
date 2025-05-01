@@ -1,0 +1,20 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "KINE 500",
+        "courseName": "Special Topics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 501",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 506",
+        "courseName": "Exercise Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

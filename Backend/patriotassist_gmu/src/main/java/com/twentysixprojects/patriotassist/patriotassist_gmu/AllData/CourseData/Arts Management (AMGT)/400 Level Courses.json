@@ -1,0 +1,38 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "AMGT 402",
+        "courseName": "Professional Development",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 405",
+        "courseName": "Introduction to Arts Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 410",
+        "courseName": "The Arts and Community Engagement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 471",
+        "courseName": "Introduction to Grant Writing",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 472",
+        "courseName": "Technology in the Arts",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 489",
+        "courseName": "Internship in Arts Management",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,50 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "IT 206",
+        "courseName": "Object Oriented Techniques for IT Problem Solving",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 106C, 106XS or 196C) and (IT 102C, 102XS, MATH 112C, 125C or 125XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 207",
+        "courseName": "Applied IT Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 106C, 106XS, 109C, 109XS, 196C, CS 112C or 112XS) and (IT 102C, 102XS, MATH 112C, 125C or 125XS) and (IT 214C, 214XS or 194C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 209",
+        "courseName": "Introduction to Object Oriented Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((IT 109C, 109XS, CS 112C or 112XS) and (IT 102C, 102XS, MATH 112C, 125C or 125XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 213",
+        "courseName": "Multimedia and Web Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 103C, 103T, 103X, 104C, 104XS or 104T).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 214",
+        "courseName": "Database Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 103C, 103X, 103T, 104C, 104XS, 104T, CS 112C or 112XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 216",
+        "courseName": "Systems Analysis and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 106C, 106XS, 109C, 109XS, 196C, CS 112C or 112XS) and (IT 206C, 206XS, 209C, 209XS, CS 211C or 211XS) and (IT 194C, 214C or 214XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 223",
+        "courseName": "Information Security Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 103C, 103T, 103X, 104C, 104XS or 104T) and (IT 101C, 105C or 105XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 293",
+        "courseName": "Applied IT: Junior Transition",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

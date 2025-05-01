@@ -1,0 +1,44 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "SYST 320",
+        "courseName": "Dynamical Systems II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 220C or 220XS) and (MATH 203C or 203XS) and (MATH 214C or 214XS) and (PHYS 260C or 260XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 330",
+        "courseName": "Systems Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 114C, 114XS, 116C or 116XS) and (STAT 334C, 334XS, 344C, 344XS, 346C, 346XS, MATH 351C or 351XS) and (SYST 221*C or 221XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 335",
+        "courseName": "Discrete Systems Modeling and Simulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 130C, 130XS, CDS 130C, 130XS, CS 112C, 112XS or ENGR 125T) and (STAT 334C, 334XS, 344C, 344XS, 346C, 346XS, MATH 351C or 351XS) and (SYST 230*C, 230XS, CS 211*C or 211XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 370",
+        "courseName": "Systems Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 371",
+        "courseName": "Systems Engineering Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SYST 210*C or 210*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 375",
+        "courseName": "Engineering Economy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 130C, CYSE 130C, ENGR 125, CS 112C or 109C) and (STAT 250C or 250XS) or (STAT 260C or 260XS) or (STAT 334C or 334XS) or (STAT 344C or 344XS) or (STAT 346C or 346XS) or (MATH 351C or 351XS) or (BIOL 214C or 214XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 395",
+        "courseName": "Applied Systems and Industrial Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SYST 210C or 210XS) and (SYST 101C or 101XS)) and ((SYST 220*C or 220XS) and (SYST 221*C or 221XS) and (SYST 335*C or 335XS) and (SYST 371*C or 371XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

@@ -1,0 +1,38 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "SYST 202",
+        "courseName": "Engineering Systems in a Complex World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 205",
+        "courseName": "Systems Engineering Principles",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 210",
+        "courseName": "Systems Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 220",
+        "courseName": "Dynamical Systems I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 114C, 114XS, 116C or 116XS) and (PHYS 160C or 160XS) and ((SYST 221*C or 221XS) and (MATH 203*C or 203XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 221",
+        "courseName": "Systems Modeling Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (SYST 101C or 101XS) and (SYST 130C, 130XS, CDS 130C, 130XS, CS 112C, 112XS or ENGR 125T) and (SYST 220*C or 220XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 230",
+        "courseName": "Object-oriented Modeling and Design",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (CDS 130C, 130XS, SYST 130C, 130XS, CYSE 130C, 130XS, CS 112C, 112XS or ENGR 125T) and (SYST 210*C, 210*XS, 205*C or 205*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

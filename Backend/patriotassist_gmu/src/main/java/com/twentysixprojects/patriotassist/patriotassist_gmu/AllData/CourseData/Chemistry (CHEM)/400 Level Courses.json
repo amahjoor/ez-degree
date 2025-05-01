@@ -1,0 +1,164 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CHEM 413",
+        "courseName": "Synthetic and Mechanistic Organic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 314C, L314 or 314XS) and (CHEM 318C, L318 or 318XS) and (CHEM 331C or 331XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 422",
+        "courseName": "Instrumental Methods of Chemical Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 321C or 321XS) and (CHEM 332C or 332XS) and (CHEM 336C or 336XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 423",
+        "courseName": "Instrumental Methods of Chemical Analysis Laboratory",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 422C or 422XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 424",
+        "courseName": "Principles of Chemical Separation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 425",
+        "courseName": "Electroanalytical Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 427",
+        "courseName": "Aquatic Environmental Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 321C or 321XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 438",
+        "courseName": "Atmospheric Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 332C or 332XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 439",
+        "courseName": "RS: Atmospheric Chemistry II: Air Analysis Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 441",
+        "courseName": "Properties and Bonding of Inorganic Compounds",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 332C or 332XS) and (CHEM 336C or 336XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 445",
+        "courseName": "Inorganic Preparations and Techniques",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 441C or 441XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 446",
+        "courseName": "Bioinorganic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 463C, 463XS, BIOL 483C or 483XS) and (CHEM 331C or 331XS) and (CHEM 336C or 336XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 451",
+        "courseName": "Special Projects in Chemistry",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 314C or 314XS) and (CHEM 318C or 318XS) and (CHEM 321C or 321XS) and (CHEM 331C or 331XS) and (CHEM 336C or 336XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 452",
+        "courseName": "Special Projects in Chemistry",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 451C or 451XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 455",
+        "courseName": "Honors Research in Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 313C or 313XS) and (CHEM 314C or 314XS) and (CHEM 315C or 315XS) and (CHEM 318C or 318XS) and (CHEM 331C or 331XS) and (CHEM 336C or 336XS) and (CHEM 490*C or 490XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 456",
+        "courseName": "Honors Research in Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CHEM 455C and (CHEM 490*C or 490XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 458",
+        "courseName": "Chemical Oceanography",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 211C or 211XS) and (CHEM 212C or 212XS) and (CHEM 321C, 321XS, GEOL 309C or 309XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 460",
+        "courseName": "Chemistry in the Kitchen",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((((CHEM 211C and 213C) and (CHEM 212C and 214C)) or (CHEM 271C and 272C)) and ((CHEM 313C and 315C) or (CHEM 310C) and CHEM 463C)).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CHEM 463",
+        "courseName": "General Biochemistry I",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 313C, 313XS or L313) and (BIOL 213C or 213XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 464",
+        "courseName": "General Biochemistry II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 463C or 463XS) or ((BIOL 483C or 483XS) and (CHEM 314C, 314XS or L314)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 465",
+        "courseName": "Biochemistry Lab",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 463*C, 463XS, BIOL 483C or 483XS) and (CHEM 315C, 315XS or L315).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 467",
+        "courseName": "The Chemistry of Enzyme-Catalyzed Reactions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 463C or 463XS) and (CHEM 464C or 464XS) and (CHEM 314C or 314XS) and (CHEM 331C or 331XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 468",
+        "courseName": "Bioorganic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 463C, 463XS, BIOL 483C or 483XS) and (CHEM 314C or 314XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 470",
+        "courseName": "Laboratory Instructional Methods for Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 471",
+        "courseName": "Solid State Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 441C or 441XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 472",
+        "courseName": "Modern Polymer Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 313C or 313XS) and (CHEM 314C or 314XS) and (CHEM 321C or 321XS) and (CHEM 331C or 331XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 480",
+        "courseName": "Fundamentals of Nanoscience and Nanomaterials",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 331C or 331XS) and (CHEM 332C or 332XS) and (MATH 113C or 113XS) and (MATH 114C or 114XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 490",
+        "courseName": "Undergraduate Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (CHEM 331C, 331XS, 336C or 336XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

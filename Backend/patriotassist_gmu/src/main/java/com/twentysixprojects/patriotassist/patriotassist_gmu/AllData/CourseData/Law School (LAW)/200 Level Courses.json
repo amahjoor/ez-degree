@@ -1,0 +1,380 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "LAW 201",
+        "courseName": "LglWriting for Lw Clerks(E)(W)",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 202",
+        "courseName": "Poverty Law Field Program (E)",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 203",
+        "courseName": "Immigration Litigation Field Program (E)",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 204",
+        "courseName": "eDiscovery",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 205",
+        "courseName": "Lit & Dispute Res Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 206",
+        "courseName": "Crim Procedure: Investigation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 207",
+        "courseName": "Adv Criminal Procedure (E W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 206D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 208",
+        "courseName": "Law & Economics Colloquium(W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 209",
+        "courseName": "Entertainment Law (W)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 210",
+        "courseName": "Discrimination in Employment",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 211",
+        "courseName": "Law of Armed Conflict and Miiitary Operational Law",
+        "courseCredits": "2,3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 212",
+        "courseName": "Family Law",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 214",
+        "courseName": "Racial Equity Audits",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 216",
+        "courseName": "Music Law (W)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 217",
+        "courseName": "Public Interest Litigation (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 218",
+        "courseName": "Environmental Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 219",
+        "courseName": "Estate & Gift Tax",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisites: LAW 236D- and 330D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 221",
+        "courseName": "Constitutional Law (LLM only)",
+        "courseCredits": "3-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 222",
+        "courseName": "Evidence",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "Required Prerequisite: LAW 112D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 223",
+        "courseName": "Role of the Prosecutor (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 224",
+        "courseName": "Arts&Entertain Adv Clin(E)(W)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisites: LAW 191D-, 209D- or 367D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 225",
+        "courseName": "Water Resource Law (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 226",
+        "courseName": "Federal Courts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 230",
+        "courseName": "Government Contracts",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 235",
+        "courseName": "Immigration Law",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 236",
+        "courseName": "Income Tax",
+        "courseCredits": "3-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 237",
+        "courseName": "Antitrust Economics",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: LAW 108D- or 114D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 238",
+        "courseName": "Independent Study",
+        "courseCredits": "0-5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 239",
+        "courseName": "Law & Literature (W)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 240",
+        "courseName": "Law & Reg of Financial Instit",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 242",
+        "courseName": "Insurance Law",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 243",
+        "courseName": "Priv & Info Security",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 245",
+        "courseName": "Intl Commercial Transact (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 246",
+        "courseName": "Private Equity",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 247",
+        "courseName": "Automated Vehicles Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 248",
+        "courseName": "International Law",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 250",
+        "courseName": "International Taxation",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisite: LAW 236D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 251",
+        "courseName": "Class Action & Mass Litigation",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 112D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 252",
+        "courseName": "Cryptocurrency (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 253",
+        "courseName": "Intl Trade Law & Regulat",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 256",
+        "courseName": "Labor Law",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 259",
+        "courseName": "European Union Competition Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 156D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 261",
+        "courseName": "Space Law (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 264",
+        "courseName": "Lgl & Econ Theory-IP",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 266",
+        "courseName": "Legislation & Statutory Interp",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 269",
+        "courseName": "Nonprofit Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 270",
+        "courseName": "Bankruptcy Court Externship(E)",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: LAW 167D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 272",
+        "courseName": "Virginia Local Government Law",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 275",
+        "courseName": "Asset Management Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 276",
+        "courseName": "Advanced Federal Courts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 279",
+        "courseName": "Mediation (E)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 282",
+        "courseName": "Ptnrship & Subchap S Tax",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 283",
+        "courseName": "Copyright Claims Board Field Program",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 284",
+        "courseName": "Patent Law I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 285",
+        "courseName": "Patent Remedies",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 286",
+        "courseName": "Patent Lic & Know-How Lic (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 284D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 289",
+        "courseName": "Perspctves on Regulation",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 290",
+        "courseName": "Select Issues in Jurisprudence",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 292",
+        "courseName": "Patent Law II",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "Required Prerequisite: LAW 284D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 294",
+        "courseName": "Patent Prosecution (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: LAW 284D- and 292D- or LAW 338D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 295",
+        "courseName": "Real Estate Finance",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "Required Prerequisite: LAW 104D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 298",
+        "courseName": "Professional Responsibility",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 299",
+        "courseName": "Adv Public Interest Lit (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 217.\nRequires minimum grade of ."
+    }
+]}

@@ -1,0 +1,32 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "HNRS 110",
+        "courseName": "Principles of Research and Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: (HNRS 111*C).\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "HNRS 111",
+        "courseName": "Honors College Colloquium",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: (HNRS 110*C).\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "HNRS 122",
+        "courseName": "Reading the Arts (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HNRS 130",
+        "courseName": "Identity, Community, and Difference (Topics Vary)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HNRS 131",
+        "courseName": "Contemporary Social Issues (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HNRS 110C, 110XS, 302C, 302XS, 108C or 108XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

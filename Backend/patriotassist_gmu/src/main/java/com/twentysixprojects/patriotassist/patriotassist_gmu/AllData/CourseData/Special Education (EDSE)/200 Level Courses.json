@@ -1,0 +1,44 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "EDSE 201",
+        "courseName": "Introduction to Special Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 203",
+        "courseName": "Disability in American Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 204",
+        "courseName": "Disability in Global Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 219",
+        "courseName": "American Sign Language (ASL) III",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: EDSE 116C or 116XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 230",
+        "courseName": "Introduction to Autism Spectrum Disorders",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 241",
+        "courseName": "Characteristics of Students with Disabilities who Access the General Curriculum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 251",
+        "courseName": "Classroom Management and Positive Behavior Supports",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

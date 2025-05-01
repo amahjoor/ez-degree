@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "CHIN 101",
+        "courseName": "Elementary Chinese",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 102",
+        "courseName": "Elementary Chinese",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 110",
+        "courseName": "Elementary Chinese",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

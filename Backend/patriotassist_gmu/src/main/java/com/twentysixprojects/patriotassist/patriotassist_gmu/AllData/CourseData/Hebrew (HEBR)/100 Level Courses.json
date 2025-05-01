@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "HEBR 101",
+        "courseName": "Elementary Hebrew I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEBR 102",
+        "courseName": "Elementary Hebrew II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEBR 150",
+        "courseName": "Introduction to Biblical Hebrew",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HEBR 160",
+        "courseName": "Readings in Biblical Hebrew",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,20 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "BUS 491",
+        "courseName": "Special Topics in Business",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BUS 492",
+        "courseName": "Internship in Business",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MIS 301B- or 303B-) and (OM 301B- or 303B-)) or (ACCT 301B- or 330B-) or (MKTG 301C, 303C or 303XS).\nB- Requires minimum grade of B-.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BUS 498",
+        "courseName": "Capstone Course: Advanced Business Models",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 301C, 301XS, 303C, 303XS, 330C, 330XS, L301, L303 or L330) and (BULE 302C, 303C, 303XS, L302 or L303) and (BUS 303C, 303XS, L303, SOM 301C or L301) and (FNAN 301C, 301XS, 303C, 303XS, L301 or L303) and (MGMT 301C, 301XS, 303C, 303XS, L301 or L303) and (MIS 301C, 303C, 303XS, L301 or L303) and (MKTG 301C, 303C, 303XS, L301 or L303) and (OM 301C, 301XS, 303C, 303XS, OSCM 303C, 303XS, OM L301, DESC 301C, L301 or OM L303) and (BUS 310C, 310XS or L310).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

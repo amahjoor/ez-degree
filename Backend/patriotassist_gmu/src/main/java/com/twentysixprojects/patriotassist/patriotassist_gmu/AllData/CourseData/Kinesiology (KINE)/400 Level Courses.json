@@ -1,0 +1,62 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "KINE 404",
+        "courseName": "Motor Control Theory and Application",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 310C and 355C).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "KINE 405",
+        "courseName": "Health and Fitness Facility Administration and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: KINE 341C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "KINE 409",
+        "courseName": "Strength and Conditioning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 360C or 360XS) and (KINE 361C or 361XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 410",
+        "courseName": "Exercise Physiology II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 124C or 124XS) and (BIOL 125C or 125XS) and (KINE 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 420",
+        "courseName": "Sport and Exercise Nutrition",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 310C or 310XS) and (KINE 320C or 320XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 441",
+        "courseName": "Kinesiology Internship II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (KINE 341C or 341XS) and (KINE 360C or 360XS) and (KINE 380C or 380XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 450",
+        "courseName": "Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 250C, 250XS, SOCI 313C, 313XS, EDRS 220C or 220XS) and (ENGH 302C or 302XS) and (KINE 350C and 355C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 480",
+        "courseName": "Special Topics in Kinesiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 490",
+        "courseName": "Kinesiology Internship",
+        "courseCredits": "6-12 credits",
+        "preRequisite": "Required Prerequisites: ((KINE 341C or 341XS) and (KINE 400C or 400XS) and (KINE 410C or 410XS) and (KINE 420C or 420XS) and (KINE 441C or 441XS) and (KINE 404C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 499",
+        "courseName": "Independent Study in Kinesiology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

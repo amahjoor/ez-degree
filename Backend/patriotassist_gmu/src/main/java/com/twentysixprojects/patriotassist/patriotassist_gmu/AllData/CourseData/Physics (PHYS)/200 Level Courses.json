@@ -1,0 +1,74 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "PHYS 225",
+        "courseName": "Problems in Physics I",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 260C, 260XS or 270C.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 243",
+        "courseName": "College Physics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 244",
+        "courseName": "College Physics I Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: PHYS 243*C or 243XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 245",
+        "courseName": "College Physics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 243C or 243XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 246",
+        "courseName": "College Physics II Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: PHYS 244C or 244XS and PHYS 245*C or 245XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 251",
+        "courseName": "Introduction to Computer Methods in Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 160C, 160XS or 170C.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 260",
+        "courseName": "University Physics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 160C or 160XS) and (MATH 213*C, 213*XS, 215*C or 215*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 261",
+        "courseName": "University Physics II Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: ((PHYS 161C or 161XS) and (PHYS 260*C, 260XS, 270*C or 270XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 262",
+        "courseName": "University Physics III",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 260C or 260XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 263",
+        "courseName": "University Physics III Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (PHYS 261C or 261XS) and (PHYS 262*C or 262XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 266",
+        "courseName": "Introduction to Thermodynamics",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: PHYS 260C or 260XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 270",
+        "courseName": "Introductory and Modern Physics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 170C and (MATH 114*C or 114XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

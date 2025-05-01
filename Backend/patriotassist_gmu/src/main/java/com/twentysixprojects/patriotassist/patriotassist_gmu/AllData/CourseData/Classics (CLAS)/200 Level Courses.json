@@ -1,0 +1,20 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CLAS 240",
+        "courseName": "Greek and Latin Elements in English",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLAS 250",
+        "courseName": "Classical Mythology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLAS 260",
+        "courseName": "The Legacy of Greece and Rome",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

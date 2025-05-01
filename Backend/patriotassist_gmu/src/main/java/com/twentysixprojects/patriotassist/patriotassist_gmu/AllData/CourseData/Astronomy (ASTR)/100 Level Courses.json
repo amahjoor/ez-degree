@@ -1,0 +1,44 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ASTR 103",
+        "courseName": "Astronomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 111",
+        "courseName": "The Solar System",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 112",
+        "courseName": "The Solar System Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 113",
+        "courseName": "Stars, Galaxies, and the Universe",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 114",
+        "courseName": "Stars, Galaxies, and the Universe Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 115",
+        "courseName": "Finding New Worlds",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ASTR 124",
+        "courseName": "Introduction to Observational Astronomy",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

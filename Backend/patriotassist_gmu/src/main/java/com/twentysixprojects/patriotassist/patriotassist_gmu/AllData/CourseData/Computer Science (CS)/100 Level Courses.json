@@ -1,0 +1,38 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "CS 100",
+        "courseName": "Principles of Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 105",
+        "courseName": "Computer Ethics and Society",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 108",
+        "courseName": "Intro to Computer Programming, Part A",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 109",
+        "courseName": "Intro to Computer Programming, Part B",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 108C and (minimum score of 80 in 'Math Placement Aleks', MATH 104C, 105C, 113C, 115C or 123C)).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CS 110",
+        "courseName": "Essentials of Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 112",
+        "courseName": "Introduction to Computer Programming",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: ((minimum score of 80 in 'Math Placement Aleks', MATH 104C, 104T, 105C, 105T, 105XS, 113C, 113XS, 115C, 123C or 123XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

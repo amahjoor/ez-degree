@@ -1,0 +1,104 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "TCOM 607",
+        "courseName": "Satellite Communications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 608",
+        "courseName": "Optical Communications Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 610",
+        "courseName": "Border Gateway Protocol (BGP) Routing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 611",
+        "courseName": "Multi-Protocol Label Switching (MPLS)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 614",
+        "courseName": "Advanced Routing Lab",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 616",
+        "courseName": "Cloud Network Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 617",
+        "courseName": "Enterprise Network Architecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 631",
+        "courseName": "Voice Over IP",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 652",
+        "courseName": "5G Service, Technology and Network",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 660",
+        "courseName": "Network Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 661",
+        "courseName": "Digital Media Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 662",
+        "courseName": "Advanced Secure Networking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 663",
+        "courseName": "Operations of Intrusion Detection for Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 664",
+        "courseName": "Incident Response Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 690",
+        "courseName": "Advanced Topics in Telecommunications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 696",
+        "courseName": "Independent Reading and Research",
+        "courseCredits": "1.5-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TCOM 698",
+        "courseName": "Telecommunications Projects Course",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

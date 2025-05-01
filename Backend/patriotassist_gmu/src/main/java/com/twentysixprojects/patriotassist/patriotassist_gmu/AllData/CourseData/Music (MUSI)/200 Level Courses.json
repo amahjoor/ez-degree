@@ -1,0 +1,212 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "MUSI 213",
+        "courseName": "Aural Skills III",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: MUSI 114C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MUSI 214",
+        "courseName": "Aural Skills IV",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: MUSI 213C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MUSI 215",
+        "courseName": "Theory for Pop and Jazz Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: MUSI 115C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MUSI 216",
+        "courseName": "Theory for 20th- and 21st-Century Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: MUSI 115C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MUSI 217",
+        "courseName": "Theory for 18th-Century Music",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: MUSI 115C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MUSI 220",
+        "courseName": "Applied Music in Music Technology",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 221",
+        "courseName": "Applied Music I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 222",
+        "courseName": "Applied Music in Keyboard",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 223",
+        "courseName": "Applied Music in Voice",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 224",
+        "courseName": "Applied Music in Woodwind",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 225",
+        "courseName": "Applied Music in Brass",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 226",
+        "courseName": "Applied Music in String",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 227",
+        "courseName": "Applied Music in Percussion",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 228",
+        "courseName": "Applied Music in Composition",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 229",
+        "courseName": "Non-Major Applied Music I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 240",
+        "courseName": "Applied Music in Music Technology",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 241",
+        "courseName": "Applied Music II",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 242",
+        "courseName": "Applied Music in Keyboard",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 243",
+        "courseName": "Applied Music in Voice",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 244",
+        "courseName": "Applied Music in Woodwind",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 245",
+        "courseName": "Applied Music in Brass",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 246",
+        "courseName": "Applied Music in String",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 247",
+        "courseName": "Applied Music in Percussion",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 248",
+        "courseName": "Applied Music in Composition",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 249",
+        "courseName": "Non-Major Applied Music II",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 251",
+        "courseName": "Musical/Oral Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 252",
+        "courseName": "Popular Music Arranging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 254",
+        "courseName": "Music and Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 259",
+        "courseName": "Music in Computer Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 260",
+        "courseName": "Composition I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 261",
+        "courseName": "Composition II",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 262",
+        "courseName": "Composition III",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 273",
+        "courseName": "Keyboard Skills III",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 274",
+        "courseName": "Jazz/Commercial Piano",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MUSI 280",
+        "courseName": "Athletic and Ceremonial Ensemble",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

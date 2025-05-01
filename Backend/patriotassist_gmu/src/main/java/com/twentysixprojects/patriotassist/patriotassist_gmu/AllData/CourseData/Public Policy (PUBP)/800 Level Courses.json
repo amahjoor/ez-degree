@@ -1,0 +1,152 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "PUBP 800",
+        "courseName": "Culture and Public Policy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 801",
+        "courseName": "Research Design for Public Policy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 802",
+        "courseName": "The Logic of Policy Inquiry",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 804",
+        "courseName": "Multivariate Statistical Analysis in Public Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (POGO 511B- or 511XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PUBP 805",
+        "courseName": "Foundations of Social Science for Public Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 806",
+        "courseName": "Advanced Management Science for Public Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 810",
+        "courseName": "Regional Development and Transportation Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 811",
+        "courseName": "Applied Methods in Regional Development and Transportation Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 817",
+        "courseName": "Policy Research Topics: Transportation Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 820",
+        "courseName": "Technology, Science, and Innovation: Institutions and Governance",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 821",
+        "courseName": "Analytic Methods for Technology, Science, and Innovation Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 830",
+        "courseName": "Comparative Socioeconomic Policy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 833",
+        "courseName": "Topics in Public Policy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 834",
+        "courseName": "Entrepreneurship, Growth, and Public Policy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 835",
+        "courseName": "Entrepreneurship, Creativity, and Innovation",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 840",
+        "courseName": "US Policy-Making Institutions",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 841",
+        "courseName": "US Policy-Making Processes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 860",
+        "courseName": "Social Theory, Culture, and Public Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 861",
+        "courseName": "Culture and Social Policy Analysis",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 862",
+        "courseName": "Institutional Analysis and Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 870",
+        "courseName": "Organizational and Policy Aspects of Informatics",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 871",
+        "courseName": "Organizational and Information Technology Challenges of the Knowledge Society",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 872",
+        "courseName": "Managing Knowledge-Based, Information-Intensive Organizations",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 880",
+        "courseName": "Global and International Public Policy I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 881",
+        "courseName": "International Trade Policy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

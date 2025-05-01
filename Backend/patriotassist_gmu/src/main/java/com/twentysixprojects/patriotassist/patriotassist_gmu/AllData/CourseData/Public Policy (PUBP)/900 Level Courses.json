@@ -1,0 +1,20 @@
+{"900 Level Courses": [
+    {
+        "courseTitle": "PUBP 997",
+        "courseName": "Field Statement",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 998",
+        "courseName": "Research/Proposal for Dissertation",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 999",
+        "courseName": "Dissertation",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

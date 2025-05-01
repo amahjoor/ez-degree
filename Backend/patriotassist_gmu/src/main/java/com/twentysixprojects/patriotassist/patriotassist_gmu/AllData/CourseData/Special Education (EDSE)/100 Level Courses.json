@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "EDSE 115",
+        "courseName": "American Sign Language (ASL) I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 116",
+        "courseName": "American Sign Language (ASL) II",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: EDSE 115C or 115XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

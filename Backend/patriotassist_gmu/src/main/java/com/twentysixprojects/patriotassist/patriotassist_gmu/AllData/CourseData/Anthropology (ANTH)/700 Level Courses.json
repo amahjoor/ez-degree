@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "ANTH 721",
+        "courseName": "Culture, Power, and Conflict",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 796",
+        "courseName": "Master's Research Project",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 798",
+        "courseName": "Thesis or Project Proposal",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,62 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ASTR 401",
+        "courseName": "Computer Simulation in Astronomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ASTR 210C or 210XS) and (PHYS 251C or 251XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 402",
+        "courseName": "RS: Methods of Observational Astronomy",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 260C, 260XS or 270C) and (ASTR 124C or 124XS) and (ASTR 210C or 210XS) and ASTR 401*C and (ASTR 328C, 328XS, 403C, 420C, 420XS, 480C or 480XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 403",
+        "courseName": "Planetary Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ASTR 210C or 210XS) and (PHYS 260C, 260XS or 270C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 404",
+        "courseName": "Galaxies and Cosmology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ASTR 328C or 328XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 405",
+        "courseName": "Honors Thesis in Astronomy I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((ASTR 210C or 210XS) and (ASTR 328C or 328XS)) or ASTR 402C, 402XS, PHYS 303C, 303XS, 305C or 305XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 406",
+        "courseName": "Honors Thesis in Astronomy II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: ASTR 405C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ASTR 408",
+        "courseName": "Senior Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ASTR 210C or 210XS) and (ASTR 328C, 328XS, 402C, 402XS, PHYS 303C, 303XS, 305C or 305XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 409",
+        "courseName": "Astronomy Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ASTR 210C or 210XS) and (ASTR 328C, 328XS, 402C, 402XS, PHYS 303C, 303XS, 305C or 305XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 420",
+        "courseName": "Exoplanets",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ASTR 210C or 210XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ASTR 480",
+        "courseName": "The Interstellar Medium",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ASTR 210C or 210XS) and (PHYS 260C, 260XS or 270C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

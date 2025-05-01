@@ -1,0 +1,152 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "SYST 414",
+        "courseName": "Systems Thinking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 420",
+        "courseName": "Network Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (OR 441*C or 441*XS) and (MATH 213C, 213XS, 215C or 215XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 421",
+        "courseName": "Classical Systems and Control Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ECE 220C or 220XS) or (ECE 321C or 321XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 438",
+        "courseName": "Analytics for Financial Engineering and Econometrics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 250C or 250XS) or (STAT 260C or 260XS) or (STAT 334C or 334XS) or (STAT 344C or 344XS) or (STAT 346C or 346XS) or (MATH 351C or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 440",
+        "courseName": "Digital Twin for Systems and Industrial Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 230C or 230XS) or (CS 211C or 211XS) or (CS 222C or 222XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 448",
+        "courseName": "Technologies and Security for Cryptocurrencies and Financial Transactions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 250C or 250XS) or (STAT 260C or 260XS) or (STAT 334C or 334XS) or (STAT 344C or 344XS) or (STAT 346C or 346XS) or (MATH 351C or 351XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 460",
+        "courseName": "Introduction to Air Traffic Control",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 461",
+        "courseName": "Air Transportation System Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 462",
+        "courseName": "Flight Training Lab I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 463",
+        "courseName": "Flight Training Lab II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: SYST 462C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SYST 465",
+        "courseName": "Pricing in Optimization and Game Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 468",
+        "courseName": "Applied Predictive Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 334C, 334XS, 344C, 344XS, 346C, 346XS, 250C, 250XS, 260C, 260XS, MATH 351C or 351XS) and (SYST 130C, 130XS, CDS 130C, 130XS, IT 206C, 206XS, 209C, 209XS, CS 112C, 112XS or ENGR 125T).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 469",
+        "courseName": "Human Computer Interaction",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 250C, 250XS, 260C, 260XS, 334C, 334XS, 344C, 344XS, 346C, 346XS, MATH 351C or 351XS) and (IT 106C, 106XS, 109C, 109XS, 196C, 196XS, CS 112C, 112XS, CDS 130C or 130XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 470",
+        "courseName": "Human Factors Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 210C or 210XS) and (STAT 334C, 334XS, 344C, 346C, 344XS, 346XS, MATH 351C or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 473",
+        "courseName": "Decision and Risk Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 250C or 250XS) or (STAT 260C or 260XS) or (STAT 334C or 334XS) or (STAT 344C or 344XS) or (STAT 346C or 346XS) or (MATH 351C or 351XS) or (BIOL 214C or 214XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 475",
+        "courseName": "Production Systems Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 370C or 370XS) or (SYST 371C or 371XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 488",
+        "courseName": "Financial Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((STAT 250C or 250XS) or (STAT 260C or 260XS) or (STAT 334C or 334XS) or (STAT 344C or 344XS) or (STAT 346C or 346XS) or (MATH 351C or 351XS) or (BIOL 214C or 214XS)) and ((SYST 130 or 130XS) or (CDS 130C or 130XS) or (CS 112C or 112XS) or (CS 109C or 109XS) or ENGR 125T)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nRequires minimum grade of ."
+    },
+    {
+        "courseTitle": "SYST 489",
+        "courseName": "Senior Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SYST 490*C or 490*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 490",
+        "courseName": "Senior Design Project I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SYST 335C or 335XS) and (SYST 371C or 371XS) and (SYST 395C or 395XS)) and (SYST 320*C or 320*XS) and (SYST 470*C or 470*XS) and (SYST 473*C or 473*XS) and (SYST 489*C or 489*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 491",
+        "courseName": "Industrial Project",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 495",
+        "courseName": "Senior Design Project II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 320C or 320XS) and (SYST 470C or 470XS) and (SYST 473C or 473XS) and (SYST 489C or 489XS) and (SYST 490C or 490XS) and ((SYST 330*C or 330XS) and (STAT 354*C or 354XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 496",
+        "courseName": "Sustainable Systems Methods Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SYST 414C or EVPP 434C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SYST 497",
+        "courseName": "Applied Engineering Abroad",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 498",
+        "courseName": "Independent Study in Systems Engineering",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 499",
+        "courseName": "Special Topics in Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

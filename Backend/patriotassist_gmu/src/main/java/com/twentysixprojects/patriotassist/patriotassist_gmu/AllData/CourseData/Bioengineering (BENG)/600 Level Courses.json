@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "BENG 600",
+        "courseName": "Bioengineering Seminar",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 601",
+        "courseName": "Collaborative Bioengineering Basic Science Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 602",
+        "courseName": "Collaborative Bioengineering Clinical Science Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 641",
+        "courseName": "Advanced Nanotechnology in Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BENG 699",
+        "courseName": "Advanced Topics in Bioengineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

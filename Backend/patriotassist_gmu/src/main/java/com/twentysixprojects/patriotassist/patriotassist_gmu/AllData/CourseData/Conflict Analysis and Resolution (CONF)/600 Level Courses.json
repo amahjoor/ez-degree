@@ -1,0 +1,170 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CONF 600",
+        "courseName": "Foundations of Conflict Analysis and Resolution",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 605",
+        "courseName": "Foundations of Peacebuilding",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 610",
+        "courseName": "Conflict Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 620",
+        "courseName": "Reflective Practice in Interpersonal-Multiparty Conflicts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 625",
+        "courseName": "Engaging Conflict",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 631",
+        "courseName": "Mediation in Diverse Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 632",
+        "courseName": "Coaching through Conflict",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 640",
+        "courseName": "Practicum in Contemporary Dispute Resolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 650",
+        "courseName": "Conflict Analysis and Resolution Advanced Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 651",
+        "courseName": "Collaborative Community Action & Participatory Governance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 652",
+        "courseName": "Conflict Analysis and Resolution for Prevention, Reconstruction, and Stabilization Contexts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 653",
+        "courseName": "World Religions, Diplomacy, and Conflict Resolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 654",
+        "courseName": "Mass Atrocity: Early Warning and Prevention",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 657",
+        "courseName": "Facilitation Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 658",
+        "courseName": "Diversity and Difference in Conflict Analysis and Resolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 659",
+        "courseName": "Leadership in Conflict Analysis and Resolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 660",
+        "courseName": "Conflict Assessment and Program Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 661",
+        "courseName": "Program Design and Monitoring",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 662",
+        "courseName": "Funding and Managing Peacebuilding Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 665",
+        "courseName": "Special Topics in Conflict Analysis and Resolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 668",
+        "courseName": "Applied Integration for Graduate Certificates",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 670",
+        "courseName": "Conflict Sensitive and Inclusive Peacebuilding",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 675",
+        "courseName": "Peacebuilding Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 682",
+        "courseName": "Principles of Environmental Conflict Resolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 683",
+        "courseName": "Environmental Conflict Resolution: Situation Assessment, Process Design and Best Practices",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 694",
+        "courseName": "Internship",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 695",
+        "courseName": "Selected Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONF 697",
+        "courseName": "Directed Readings and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,62 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "CHEM 500",
+        "courseName": "Selected Topics in Modern Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 513",
+        "courseName": "Synthetic and Mechanistic Organic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 529",
+        "courseName": "Instrumental Techniques of Analysis",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 531",
+        "courseName": "Elements of Physical Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 560",
+        "courseName": "Environmental Biotechnology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 211C or 211XS) and (CHEM 213C or 213XS) and (CHEM 212C or 212XS) and (CHEM 214C or 214XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 563",
+        "courseName": "General Biochemistry I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 564",
+        "courseName": "General Biochemistry II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 567",
+        "courseName": "The Chemistry of Enzyme-Catalyzed Reactions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 568",
+        "courseName": "Bioorganic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 579",
+        "courseName": "Special Topics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

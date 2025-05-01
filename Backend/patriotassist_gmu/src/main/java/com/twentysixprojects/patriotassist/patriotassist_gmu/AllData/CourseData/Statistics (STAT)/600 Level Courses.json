@@ -1,0 +1,98 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "STAT 634",
+        "courseName": "Case Studies in Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 654B- or 654XS) and (STAT 544B- or 544XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 646",
+        "courseName": "Probabilistic Machine Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 652",
+        "courseName": "Statistical Inference",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 544B- or 544XS) and (STAT 554*B- or 554XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 654",
+        "courseName": "Applied Statistics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 554B- or 554XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 656",
+        "courseName": "Regression Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 544*B- or 544XS) and (STAT 554B- or 554XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 657",
+        "courseName": "Nonparametric Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 544B- or 544XS) and (STAT 554B- or 554XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 658",
+        "courseName": "Time Series Analysis and Forecasting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 544B- or 544XS) and (STAT 554B- or 554XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 660",
+        "courseName": "Advanced Biostatistical Methods I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 652B- or 652XS) and (STAT 654B- and 654XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 661",
+        "courseName": "Advanced Biostatistical Methods II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 652B- or 652XS) and (STAT 654B- or 654XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 662",
+        "courseName": "Multivariate Analysis and Statistical Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 544B- and (STAT 554B- or 535B-)).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "STAT 663",
+        "courseName": "Statistical Graphics and Data Visualization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "STAT 665",
+        "courseName": "Categorical Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 654B- or 654XS) and (STAT 544*B- or 544XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 672",
+        "courseName": "Statistical Learning and Data Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((STAT 544B- or 544XS) and (STAT 554B- or 554XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 674",
+        "courseName": "Survey Sampling II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 574B- or 574XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 676",
+        "courseName": "Linear Models and Advanced Regression Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 654B- or 654XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "STAT 689",
+        "courseName": "Topics in Statistics",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

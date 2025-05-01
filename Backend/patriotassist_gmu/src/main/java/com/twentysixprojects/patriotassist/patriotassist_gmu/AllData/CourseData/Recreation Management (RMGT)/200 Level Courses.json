@@ -1,0 +1,50 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "RMGT 200",
+        "courseName": "Wilderness First Responder",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 210",
+        "courseName": "Recreation and Leisure in Life",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 220",
+        "courseName": "Experiential Education Theory and Application",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 221",
+        "courseName": "Challenge Course Facilitation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 241",
+        "courseName": "Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PRLS 210D, 210XS, 210XP, RMGT 210D, PRLS 220D, RMGT 220D, PRLS 316D, 316XS, 316XP, RMGT 316D or SRST 200D).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "RMGT 250",
+        "courseName": "Wilderness Travel and Sustainability",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 260",
+        "courseName": "Foundations of Campus Recreation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 290",
+        "courseName": "Aquatic Operation and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

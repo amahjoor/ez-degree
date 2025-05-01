@@ -1,0 +1,74 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "LING 400",
+        "courseName": "Special Topics in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 424",
+        "courseName": "Practicum in TESOL",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: LING 321B-, 321XS, 521B- or 521XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "LING 441",
+        "courseName": "First Language Acquisition",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: LING 300C or 306C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "LING 443",
+        "courseName": "Psycholinguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 451",
+        "courseName": "Sociolinguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 453",
+        "courseName": "Typology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 461",
+        "courseName": "Historical Studies of the English Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 471",
+        "courseName": "Computational Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 480",
+        "courseName": "RS: First Language Acquisition",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (LING 306C or 306XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "LING 495",
+        "courseName": "Laboratory Research Experience",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: LING 314C, 315C, 316C or 317C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "LING 496",
+        "courseName": "Special Topics in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,50 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EDSE 841",
+        "courseName": "Evaluating Intervention Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 842",
+        "courseName": "Application of Research Standards for Individuals with Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 843",
+        "courseName": "Leading Change in Special Education and Disability Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 844",
+        "courseName": "Current Issues in Special Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 845",
+        "courseName": "Personnel Preparation Programs in Special Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 846",
+        "courseName": "Assessment, Evaluation, and Instrumentation in Special Education Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 847",
+        "courseName": "Policy-driven Initiatives in Special Education and Disability Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 885",
+        "courseName": "Writing Grants",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

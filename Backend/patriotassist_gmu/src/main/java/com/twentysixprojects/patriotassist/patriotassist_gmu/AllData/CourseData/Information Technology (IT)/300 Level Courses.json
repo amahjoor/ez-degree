@@ -1,0 +1,122 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "IT 300",
+        "courseName": "Modern Telecommunications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((IT 101C and 212C) or IT 105C or 105XS) and (MATH 108C, 108XS, 113C, 113XS, HNRT 225C or 225XS or ((MATH 123C or 123XS) and (MATH 124C or 124XS))) and (IT 102C, 102XS, MATH 112C, 125C or 125XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 304",
+        "courseName": "IT in the Global Economy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 103C, 103T, 103X, 104C, 104T or 104XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 306",
+        "courseName": "Data Structures and Algorithms in Java",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 206B or CS 211B) and (IT 102C, 102XS, MATH 112C, 112XS, 125C or 125XS) and (IT 216C or 216XS).\nB Requires minimum grade of B.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 309",
+        "courseName": "Data Structures and Algorithms in Python",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 209B or CS 211B) and (IT 102C, 102XS, MATH 112C, 112XS, 125C or 125XS) and (IT 216C or 216XS).\nB Requires minimum grade of B.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 314",
+        "courseName": "Database Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 106C, 106XS, 109C, 109XS, 196C, CS 112C or 112XS) and (IT 214B or 194B).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 315",
+        "courseName": "Mobile Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 206C, 206XS, 209C, 209XS, CS 211C or 211XS) and (IT 213B or 193B).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 322",
+        "courseName": "Health Data Challenges",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 214B or 194B) and (STAT 250C, 250XS, 344C or 344XS).\nB Requires minimum grade of B.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 324",
+        "courseName": "Health Information Technology Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 214B or 194B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 331",
+        "courseName": "Front-End Web Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 106C, 106XS, 109C, 109XS, CS 112C, 112XS or IT 196C) or IT 196XS and (IT 213B or 193B).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 332",
+        "courseName": "Web Server Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 213B or 193B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 335",
+        "courseName": "Web Development using Content Management Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 213B or 193B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 341",
+        "courseName": "Data Communications and Network Principles",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((IT 101C and 212C) or (IT 105C or 105XS)) and (IT 106C, 106XS, 109C, 109XS, 196C, CS 112C or 112XS) and (MATH 108C, 108XS, 113C, 113XS, HNRT 225C or 225XS or ((MATH 123C or 123XS) and (MATH 124C or 124XS))) and (IT 300*C or 300XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 342",
+        "courseName": "Operating Systems Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((IT 101C and 212C) or (IT 105C or 105XS)) and (IT 106C, 106XS, 109C, 109XS, 196C, CS 112C or 112XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 343",
+        "courseName": "IT Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 293C or 293XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 352",
+        "courseName": "Security Administration of Linux Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: IT 223B and ((IT 101C and 212C) or IT 105C or 105XS) and (IT 106C, 106XS, 109C, 109XS, 196C, CS 112C or 112XS) and (IT 342C or 342XS).\nB Requires minimum grade of B.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 353",
+        "courseName": "Information Defense Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: IT 223B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 357",
+        "courseName": "Computer Crime, Forensics, and Auditing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: IT 223B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 366",
+        "courseName": "Network Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 206C, 206XS, 209C, 209XS, CS 211C or 211XS) and (IT 223B).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 369",
+        "courseName": "Cyber Security of Data and Software",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 207*C or 207XS) and (IT 223B).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "IT 390",
+        "courseName": "Rapid Development of Scalable Cloud Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 206B, 209B or CS 211B) and (IT 213C, 213XS or 193C) and (IT 214C, 214XS or 194C).\nB Requires minimum grade of B.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

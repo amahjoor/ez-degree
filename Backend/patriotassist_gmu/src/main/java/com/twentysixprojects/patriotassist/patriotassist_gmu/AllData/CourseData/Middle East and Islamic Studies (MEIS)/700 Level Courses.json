@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MEIS 794",
+        "courseName": "Graduate Internship in Middle East and Islamic Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MEIS 796",
+        "courseName": "Directed Readings in Middle East and Islamic Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MEIS 798",
+        "courseName": "Research Project in Middle East and Islamic Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MEIS 799",
+        "courseName": "Thesis Research and Writing in Middle East and Islamic Studies",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

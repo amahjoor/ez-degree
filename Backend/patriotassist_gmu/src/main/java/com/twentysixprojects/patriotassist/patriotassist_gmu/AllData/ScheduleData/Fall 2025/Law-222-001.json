@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "Evidence",
+  "CourseSubject": "Law",
+  "CourseNumber": "222",
+  "CourseSection": "001",
+  "CreditHours": "3",
+  "CRN": "70081",
+  "Term": "Fall 2025",
+  "Instructor": "Davis, Michael (Primary)",
+  "MeetingDays": "Monday,Wednesday",
+  "MeetingTimes": "09:50 AM - 11:15 AM",
+  "Campus": "Arlington",
+  "Seats": "50 of 50 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 17:03:36"
+}

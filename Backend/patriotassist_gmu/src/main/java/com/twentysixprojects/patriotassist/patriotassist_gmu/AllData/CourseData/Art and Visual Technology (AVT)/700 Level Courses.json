@@ -1,0 +1,26 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "AVT 794",
+        "courseName": "Graphic Design Project",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 796",
+        "courseName": "Directed Reading",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 798",
+        "courseName": "Directed Project and Exhibition",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

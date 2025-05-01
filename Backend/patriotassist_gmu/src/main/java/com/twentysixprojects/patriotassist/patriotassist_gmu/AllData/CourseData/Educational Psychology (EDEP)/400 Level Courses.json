@@ -1,0 +1,14 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "EDEP 494",
+        "courseName": "Practicum in Educational Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 497",
+        "courseName": "Special Topics in Educational Psychology",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

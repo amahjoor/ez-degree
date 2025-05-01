@@ -1,0 +1,116 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "PHYS 301",
+        "courseName": "Analytical Methods of Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 214C or 214XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 303",
+        "courseName": "Classical Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 260C, 260XS or 270C) and (PHYS 301*C or 301*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 305",
+        "courseName": "Electromagnetic Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 260C, 260XS or 270C) and (PHYS 301*C or 301*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 306",
+        "courseName": "Wave Motion and Electromagnetic Radiation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PHYS 305C or 305XS) and (PHYS 301C or 301XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 307",
+        "courseName": "Thermal Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 260C, 260XS or 270C.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 308",
+        "courseName": "Modern Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 260C, 260XS or 270C.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 310",
+        "courseName": "Physics of Semiconductor Materials and Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 262C, 262XS, 307C or 307XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 311",
+        "courseName": "Instrumentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 261C or 261XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 312",
+        "courseName": "Waves and Optics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 261C or 261XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 325",
+        "courseName": "Intermediate Computer Methods in Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 261C or 261XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 326",
+        "courseName": "Problems in Physics II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 301*C, 301*XS, 307*C or 307*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 331",
+        "courseName": "Physics of Renewable Energy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 260C, 260XS or 270C.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 332",
+        "courseName": "Solar Cells",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PHYS 260C, 260XS or 270C) and (PHYS 261C or 261XS)) or ((PHYS 245C or 245XS) and (PHYS 246C or 246XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 334",
+        "courseName": "Introduction to Quantum Computation and Quantum Information",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 260C, 260XS or 270C) and ((MATH 203C or 203XS) or (PHYS 301C or 301XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 346",
+        "courseName": "Quarks to Strings",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 262C, 262XS, 270C, 308C or 308XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 370",
+        "courseName": "Molecular Biophysics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 307C or 307XS) or ((CHEM 331C or 331XS) and (CHEM 332C or 332XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 385",
+        "courseName": "Materials Science with Applications to Renewable Energy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 262C, 262XS, 266C, 266XS, 307C, 307XS, ME 221C or 221XS or ((PHYS 245C or 245XS) and (MATH 113C or 113XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 390",
+        "courseName": "Topics in Physics",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 391",
+        "courseName": "Special Topics in Physics",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

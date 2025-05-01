@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CM 201",
+        "courseName": "Blueprint Reading and Introduction to BIM",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CM 202",
+        "courseName": "Construction Materials",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (CM 101C or 101XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

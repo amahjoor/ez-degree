@@ -1,0 +1,44 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "RMGT 501",
+        "courseName": "Introduction to Natural Resources Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 503",
+        "courseName": "Administration and Disability Rights in Therapeutic Recreation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 526",
+        "courseName": "Environmental Education and Resource Interpretation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 531",
+        "courseName": "Natural Resources Recreation Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 533",
+        "courseName": "Visitor Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 535",
+        "courseName": "Evaluating Recreation Outcomes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 598",
+        "courseName": "Special Topics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

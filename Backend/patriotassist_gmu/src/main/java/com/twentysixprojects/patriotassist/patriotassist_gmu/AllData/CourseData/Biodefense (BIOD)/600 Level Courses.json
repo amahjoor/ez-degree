@@ -1,0 +1,44 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "BIOD 604",
+        "courseName": "Emerging Infectious Diseases I: Bacteria and Toxins",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 605",
+        "courseName": "Emerging Infectious Diseases II: Viral Agents",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 609",
+        "courseName": "Biodefense Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 610",
+        "courseName": "Advanced Topics in Global Health Security",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 620",
+        "courseName": "Global Health Security Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 621",
+        "courseName": "Ethics and International Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOD 622",
+        "courseName": "Negotiating in the International Arena",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

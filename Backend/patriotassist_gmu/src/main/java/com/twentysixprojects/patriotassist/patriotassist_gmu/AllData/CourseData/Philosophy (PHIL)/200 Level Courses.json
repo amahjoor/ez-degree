@@ -1,0 +1,32 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "PHIL 241",
+        "courseName": "Foundations of Ethics and AI",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 243",
+        "courseName": "Global Environmental Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 251",
+        "courseName": "Happiness and the Good Life",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 253",
+        "courseName": "Philosophy and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 271",
+        "courseName": "How Science Works",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

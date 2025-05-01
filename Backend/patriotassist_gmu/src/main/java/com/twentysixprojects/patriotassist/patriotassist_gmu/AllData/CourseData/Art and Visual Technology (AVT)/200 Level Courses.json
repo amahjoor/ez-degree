@@ -1,0 +1,80 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "AVT 202",
+        "courseName": "Sophomore Core",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 101C or 101XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 204",
+        "courseName": "Visual Thinking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 206",
+        "courseName": "Color",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 215",
+        "courseName": "Typography",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 110C or 110XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 217",
+        "courseName": "Introduction to Web Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 110C or 110XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 222",
+        "courseName": "Drawing I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 232",
+        "courseName": "Painting I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 243",
+        "courseName": "Printmaking I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 252",
+        "courseName": "Darkroom Photography I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 253",
+        "courseName": "Digital Photography I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 254",
+        "courseName": "Photography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 262",
+        "courseName": "Sculpture I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 280",
+        "courseName": "Introduction to New Media Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

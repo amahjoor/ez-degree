@@ -1,0 +1,26 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "EDAT 410",
+        "courseName": "Introduction to Assistive Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 421",
+        "courseName": "Augmentative Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 422",
+        "courseName": "Assistive Technology for Individuals with Sensory Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 423",
+        "courseName": "Accessibility and Input Modifications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

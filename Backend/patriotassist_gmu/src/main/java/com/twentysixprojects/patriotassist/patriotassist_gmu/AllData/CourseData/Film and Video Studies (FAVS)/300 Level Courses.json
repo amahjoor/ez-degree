@@ -1,0 +1,110 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "FAVS 300",
+        "courseName": "Global Horror Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 304",
+        "courseName": "Film Forms",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 311",
+        "courseName": "Producing I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FAVS 250C or 250XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 312",
+        "courseName": "Film Lab",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((FAVS 311C or 311XS) and (FAVS 255C or 255XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 320",
+        "courseName": "Afrofuturism and Their Kin",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 331",
+        "courseName": "Cinematography",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FAVS 204C or 204XS) and (FAVS 255C or 255XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 333",
+        "courseName": "Sound Editing and Recording",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 352",
+        "courseName": "Ethics of Film and Video",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ENGH 302C, 302XS, HNRS 360C, 360XS, 361C or 361XS) and (FAVS 255C or 255XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 356",
+        "courseName": "Film Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FAVS 250C or 250XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 365",
+        "courseName": "Documentary Filmmaking",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FAVS 250C or 250XS) and (FAVS 260C or 260XS) and (FAVS 255C or 255XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 366",
+        "courseName": "Video Production for Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 367",
+        "courseName": "Radical Camera",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 375",
+        "courseName": "Fiction Film Directing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FAVS 255C or 255XS) and (FAVS 280C or 280XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 377",
+        "courseName": "Interactive Storytelling for Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FAVS 255C or 255XS) and (FAVS 280C or 280XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 378",
+        "courseName": "Web Series",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FAVS 255C or 255XS) and (FAVS 280C or 280XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 380",
+        "courseName": "TV Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FAVS 280C or 280XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 383",
+        "courseName": "Feature-Length Scriptwriting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FAVS 280C or 280XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FAVS 399",
+        "courseName": "Special Topics in Film and Video Studies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

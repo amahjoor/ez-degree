@@ -1,0 +1,32 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CDS 301",
+        "courseName": "Scientific Information and Data Visualization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 302",
+        "courseName": "Scientific Data and Databases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 303",
+        "courseName": "Scientific Data Mining",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CDS 321",
+        "courseName": "Elements of Natural Language Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CDS 101C, 130C and 230C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "CDS 351",
+        "courseName": "Elements of High Performance Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CDS 251C.\nC Requires minimum grade of C."
+    }
+]}

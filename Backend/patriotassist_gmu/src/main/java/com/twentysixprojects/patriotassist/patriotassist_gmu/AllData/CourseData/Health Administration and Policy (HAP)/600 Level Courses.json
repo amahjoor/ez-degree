@@ -1,0 +1,146 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "HAP 601",
+        "courseName": "E-Commerce and On-line Marketing for Health Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 602",
+        "courseName": "Statistics in Health Services Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 609",
+        "courseName": "Comparative International Health Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 618",
+        "courseName": "Computational Tools in Health Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 621",
+        "courseName": "Leadership and Organizational Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 622",
+        "courseName": "Healthcare Information Systems Analysis and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 635",
+        "courseName": "Role of Government in Health Care and Public Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 640",
+        "courseName": "Current Issues in Health Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 645",
+        "courseName": "Introduction to Health Services Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 647",
+        "courseName": "Regulatory Requirements for Health Care Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 652",
+        "courseName": "Essentials of Health Insurance and Managed Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 655",
+        "courseName": "Computer Programming in Health Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HAP 618B- or 618XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 661",
+        "courseName": "Policy Development and Analysis for Community Health Programs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 670",
+        "courseName": "Introduction to Health Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 671",
+        "courseName": "Health Care Databases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 672",
+        "courseName": "Health Data: Vocabulary and Standards",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 675",
+        "courseName": "Project in Health Data Analysis",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 678",
+        "courseName": "Introduction to the US Health System",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 680",
+        "courseName": "Applied Public Health Leadership and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 686",
+        "courseName": "Quality Improvement in Health Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 690",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 697",
+        "courseName": "The Healthcare Quality Environment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 698",
+        "courseName": "Quality Measurement and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 699",
+        "courseName": "Liability in Health Care Quality and Patient Safety",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

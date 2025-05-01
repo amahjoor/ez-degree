@@ -1,0 +1,86 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "NURS 605",
+        "courseName": "Clinical Nurse Educator Academy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 632",
+        "courseName": "Pathogenesis of Mental Disorders",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 633",
+        "courseName": "Individual Psychotherapy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 634",
+        "courseName": "Group, Family and Couple Psychotherapy",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 643",
+        "courseName": "Community-Oriented Primary Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 648",
+        "courseName": "Aging and Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 654",
+        "courseName": "Nursing Administration Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 660",
+        "courseName": "Seminar in the Ethics of Health Care",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 665",
+        "courseName": "Theoretical and Ethical Foundations Related to Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 680",
+        "courseName": "Theoretical Foundations Related to Nursing",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 685",
+        "courseName": "Advanced Nursing Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 686",
+        "courseName": "Projects in Nursing Research",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 688",
+        "courseName": "Organization of Nursing and Health Care Delivery Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 690",
+        "courseName": "Independent Study in Nursing",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

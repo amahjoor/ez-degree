@@ -1,0 +1,194 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CS 600",
+        "courseName": "Theory of Computation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 630",
+        "courseName": "Advanced Algorithms",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 633",
+        "courseName": "Computational Geometry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 635",
+        "courseName": "Foundations of Parallel Computation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 583B- or 583XS) and (CS 571B- or 571XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 640",
+        "courseName": "Advanced Compilers",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 540B- or 540XS) and (CS 583B- or 583XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 650",
+        "courseName": "Advanced Database Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 550B-, 550XS, INFS 614B- or 614XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 655",
+        "courseName": "Wireless and Mobile Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 555B- or 555XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 657",
+        "courseName": "Mining Massive Datasets with MapReduce",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 584B- or 584XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 658",
+        "courseName": "Networked Virtual Environments",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 555B- or 555XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 662",
+        "courseName": "Computer Graphics Game Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 551B- or 551XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 663",
+        "courseName": "Computational Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 667",
+        "courseName": "Biometrics and Identity Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 580B- or 580XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 672",
+        "courseName": "Computer System Performance Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 571B- or 571XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 673",
+        "courseName": "Multimedia Computing and Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 571B- or 571XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 675",
+        "courseName": "Distributed Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 571B- or 571XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 678",
+        "courseName": "Advanced Natural Language Processing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 580B-, 580XS, 584B- or 584XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 681",
+        "courseName": "Instructable Cognitive Agents",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 580B- or 580XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 682",
+        "courseName": "Computer Vision",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 580B-, 580XS, 584B- or 584XS) and (CS 583B- or 583XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 683",
+        "courseName": "Parallel Algorithms",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 684",
+        "courseName": "Graph Algorithms",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 685",
+        "courseName": "Autonomous Robotics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 580B- or 580XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 686",
+        "courseName": "Image Processing and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 687",
+        "courseName": "Advanced Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 580B- or 580XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 688",
+        "courseName": "Machine Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 580B-, 580XS, 584B- or 584XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 689",
+        "courseName": "Planning Motions of Robots and Molecules",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CS 583B- or 583XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CS 690",
+        "courseName": "Special Topics in Artificial Intelligence and Databases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 691",
+        "courseName": "Special Topics in Programming Languages and Software Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 692",
+        "courseName": "Special Topics in Systems and Networks",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 693",
+        "courseName": "Special Topics in Theoretical Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 694",
+        "courseName": "Special Topics in Visual Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 695",
+        "courseName": "Special Topics in Computer Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CS 697",
+        "courseName": "Independent Reading and Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

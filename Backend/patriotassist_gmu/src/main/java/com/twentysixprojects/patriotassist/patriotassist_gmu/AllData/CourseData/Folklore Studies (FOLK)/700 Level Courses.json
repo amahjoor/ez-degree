@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "FOLK 790",
+        "courseName": "Project",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FOLK 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

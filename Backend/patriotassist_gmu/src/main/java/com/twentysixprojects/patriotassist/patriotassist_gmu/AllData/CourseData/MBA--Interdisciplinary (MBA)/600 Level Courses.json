@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "MBA 601",
+        "courseName": "Online MBA Orientation",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 603",
+        "courseName": "Managerial Economics and Decisions of the Firm",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 612",
+        "courseName": "Managing Costs and Evaluating Performance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MBA 613B-, 613XS, GBUS 613B- or 613XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 613",
+        "courseName": "Financial Reporting and Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 623",
+        "courseName": "Marketing Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 633",
+        "courseName": "Statistics for Business Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 638",
+        "courseName": "Operations Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MBA 633B- or 633XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 643",
+        "courseName": "Managerial Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 653",
+        "courseName": "Organizational Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 662",
+        "courseName": "Management of Information Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 678",
+        "courseName": "Strategic Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MBA 643*B-, 643*XS, GBUS 643*B- or 643*XS) and (MBA 603B- or 603XS) and (MBA 613B-, 613XS, GBUS 613B- or 613XS) and (MBA 638B- or 638XS) and (MBA 653B-, 653XS, GBUS 653B- or 653XS) and (MBA 623B-, 623XS, GBUS 623B- or 623XS)).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

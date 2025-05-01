@@ -1,0 +1,44 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "PHIL 411",
+        "courseName": "Theories of Decision",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 421",
+        "courseName": "Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 422",
+        "courseName": "Honors Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 425",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 429",
+        "courseName": "Advanced Topics in Social and Political Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 441",
+        "courseName": "Ethics and AI: Practice and Projects",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: PHIL 241C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "PHIL 460",
+        "courseName": "Senior Seminar in Philosophy, Politics, and Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,20 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "FOLK 601",
+        "courseName": "Folklore Theory and History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FOLK 690",
+        "courseName": "Field School for Cultural Documentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FOLK 699",
+        "courseName": "Internship",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

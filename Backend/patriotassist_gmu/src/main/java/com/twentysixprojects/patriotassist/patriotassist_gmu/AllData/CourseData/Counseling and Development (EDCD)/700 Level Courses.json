@@ -1,0 +1,68 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "EDCD 750",
+        "courseName": "Practicum in Mental Health Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 608B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 751",
+        "courseName": "Practicum in School Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 608B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 752",
+        "courseName": "Internship in Mental Health Counseling I & II",
+        "courseCredits": "6 credits",
+        "preRequisite": "Required Prerequisite: EDCD 750B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 755",
+        "courseName": "Practicum in Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCD 791",
+        "courseName": "Internship in Counseling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDCD 792",
+        "courseName": "Internship in Mental Health Counseling I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 750B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 793",
+        "courseName": "Internship in Mental Health Counseling II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDCD 792B- or 792XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCD 794",
+        "courseName": "Internship in School Counseling I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 751B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDCD 795",
+        "courseName": "Internship in School Counseling II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCD 794B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDCD 796",
+        "courseName": "Internship in School Counseling I & II",
+        "courseCredits": "6 credits",
+        "preRequisite": "Required Prerequisites: EDCD 751B- or 751XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDCD 797",
+        "courseName": "Advanced Topics in Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisites: (EDCD 603B- or 603XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

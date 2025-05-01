@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "FREN 798",
+        "courseName": "Directed Reading and Thesis Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FREN 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

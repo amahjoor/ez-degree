@@ -1,0 +1,62 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "BINF 630",
+        "courseName": "Bioinformatics Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 631",
+        "courseName": "Molecular Cell Biology for Bioinformatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 633",
+        "courseName": "Molecular Biotechnology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 634",
+        "courseName": "Bioinformatics Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 636",
+        "courseName": "Microarray Methodology and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 637",
+        "courseName": "Forensic DNA Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 639",
+        "courseName": "Introduction to Biometrics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 641",
+        "courseName": "Biomolecular Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 650",
+        "courseName": "Introduction to Bioinformatics Database Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 690",
+        "courseName": "Numerical Methods for Bioinformatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

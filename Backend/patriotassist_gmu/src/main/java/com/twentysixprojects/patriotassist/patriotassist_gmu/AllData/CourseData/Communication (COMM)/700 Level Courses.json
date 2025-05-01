@@ -1,0 +1,80 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "COMM 700",
+        "courseName": "Building Social Science Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 701",
+        "courseName": "Communication Science Research Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (COMM 650B- or 650XS) and (COMM 700B- or 700XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 705",
+        "courseName": "Intercultural Health and Risk Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 706",
+        "courseName": "Strategic Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 716",
+        "courseName": "Global Public Relations Strategy and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 720",
+        "courseName": "Consumer-Provider Health Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 721",
+        "courseName": "E-Health Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 725",
+        "courseName": "Qualitative Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 735",
+        "courseName": "Crisis Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 750",
+        "courseName": "Quantitative Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 775",
+        "courseName": "Media Content Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 798",
+        "courseName": "Communication Studies Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

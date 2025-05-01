@@ -1,0 +1,56 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "SOCW 311",
+        "courseName": "Building Professional Social Work Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 312",
+        "courseName": "Knowledge Building for Helping Professionals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 357",
+        "courseName": "Methods of Social Work Intervention I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SOCW 361*C or 361*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 358",
+        "courseName": "Methods of Social Work Intervention II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SOCW 362*C or 362*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 361",
+        "courseName": "Methods of Social Work Intervention I: Laboratory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SOCW 357*C or 357*XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 362",
+        "courseName": "Methods of Social Work Intervention II: Laboratory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 200C or 200XS) and (SOCW 357C or 357XS) and (SOCW 361C or 361XS) and (SOCW 358*C or 358*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SOCW 375",
+        "courseName": "Human Behavior from an Anti-Oppressive Lens",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 380",
+        "courseName": "Changing Social Policies and Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 390",
+        "courseName": "Analytic Methods for Social Work Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

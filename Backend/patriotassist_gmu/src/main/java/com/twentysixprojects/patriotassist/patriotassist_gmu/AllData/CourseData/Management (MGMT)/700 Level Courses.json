@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MGMT 711",
+        "courseName": "Seminar in Organizational Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MGMT 712",
+        "courseName": "Seminar in Strategic Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

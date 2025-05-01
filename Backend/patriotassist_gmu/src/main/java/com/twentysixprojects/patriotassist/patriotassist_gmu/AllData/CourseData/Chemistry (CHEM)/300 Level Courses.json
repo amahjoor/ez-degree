@@ -1,0 +1,80 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CHEM 310",
+        "courseName": "Survey of Organic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 271C or 271XS) and (CHEM 272C or 272XS) or ((CHEM 211C or 211XS) and (CHEM 213C or 213XS) and (CHEM 212C or 212XS) and (CHEM 214C or 214XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 313",
+        "courseName": "Organic Chemistry I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 212C, U212 or 212XS) and (CHEM 211C or 211XS) and (CHEM 213C or 213XS) and (CHEM 214C or 214XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 314",
+        "courseName": "Organic Chemistry II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 313C, L313 or 313XS) and (CHEM 211C or 211XS) and (CHEM 212C or 212XS) and (CHEM 213C or 213XS) and (CHEM 214C or 214XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 315",
+        "courseName": "Organic Chemistry Lab I",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 313*C, 313XS or L313*) and (CHEM 211C or 211XS) and (CHEM 213C or 213XS) and (CHEM 212C or 212XS) and (CHEM 214C or 214XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 318",
+        "courseName": "Organic Chemistry Lab II",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 211C, 211XS or U211) and (CHEM 213C, 213XS or U213) and (CHEM 212C, 212XS or U212) and (CHEM 214C, 214XS or U214) and (CHEM 313C, 313XS or L313) and (CHEM 314*C, 314XS or L314) and (CHEM 315C, 315XS or L315)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 321",
+        "courseName": "Quantitative Chemical Analysis",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 212C or 212XS) and (MATH 113C or 113XS) and (CHEM 211C or 211XS) and (MATH 114*C or 114XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 322",
+        "courseName": "Quantitative Chemical Analysis Lecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 211C or 211XS) and (CHEM 212C or 212XS) and (CHEM 213C or 213XS) and (CHEM 214C or 214XS) and (MATH 113C or 113XS) and (MATH 114C or 114XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 323",
+        "courseName": "Quantitative Chemical Analysis Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (CHEM 322C or 322XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 331",
+        "courseName": "Physical Chemistry I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 212C or 212XS) and (CHEM 211C or 211XS) and (CHEM 213C or 213XS) and (CHEM 214C or 214XS) and (MATH 114C, 114XS, 116C or 116XS) and (PHYS 243*C, 243XS, 160*C or 160XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 332",
+        "courseName": "Physical Chemistry II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((MATH 114C or 114XS) and (CHEM 331C or 331XS)) and (PHYS 243C, 243XS, 160C or 160XS) and (PHYS 244*C, 244XS, 260XS or 260*C).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 336",
+        "courseName": "Physical Chemistry Lab I",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 212C or 212XS) and (CHEM 321C or 321XS) and (CHEM 331*C or 331XS) and (PHYS 243*C, 243XS, 160*C or 160XS) and (MATH 114C, 114XS, 116C or 116XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 337",
+        "courseName": "Physical Chemistry Lab II",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((CHEM 331C, 331XS or L331) and (CHEM 332*C, 332XS or L332*) and (CHEM 336C, 336XS or L336)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CHEM 355",
+        "courseName": "Undergraduate Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (CHEM 313C or 313XS) and (CHEM 315C or 315XS) and (MATH 113C or 113XS) and (PHYS 243C or 243XS) and (PHYS 244C or 244XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

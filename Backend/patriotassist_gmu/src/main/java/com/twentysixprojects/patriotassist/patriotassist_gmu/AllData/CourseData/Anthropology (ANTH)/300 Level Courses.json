@@ -1,0 +1,284 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ANTH 300",
+        "courseName": "Civilizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 302",
+        "courseName": "Peoples and Cultures of Latin America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 307",
+        "courseName": "Ancient Mesoamerica",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 308",
+        "courseName": "Peoples and Cultures of the Middle East",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 309",
+        "courseName": "Peoples and Cultures of India",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 312",
+        "courseName": "Political Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 313",
+        "courseName": "Myth, Magic, and Mind",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 314",
+        "courseName": "Zombies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 317",
+        "courseName": "East Asian Cultures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 320",
+        "courseName": "Global Africa",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 321",
+        "courseName": "The Cultures of Death",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 322",
+        "courseName": "Pirates, Conquest, and Death: Archaeology and Globalism since 1500",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 324",
+        "courseName": "Warfare, Violence, and Sacrifice in Antiquity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 325",
+        "courseName": "Field Techniques in Archaeology",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 330",
+        "courseName": "Peoples and Cultures of Selected Regions: Non-Western",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 331",
+        "courseName": "Refugees",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 332",
+        "courseName": "Cross-Cultural Perspectives on Globalization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 350",
+        "courseName": "Human Growth and Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 353",
+        "courseName": "Anthropological Genomics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 355",
+        "courseName": "Human Origins",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 357",
+        "courseName": "Bioarchaeology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 363",
+        "courseName": "Humans, Disease, and Death",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 365",
+        "courseName": "Scientific Racism and Human Variation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 366",
+        "courseName": "Food and Human Evolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 367",
+        "courseName": "DNA, Identity, and Power",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 370",
+        "courseName": "Environment and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 373",
+        "courseName": "Archaeological Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ANTH 120C, 120XS, 135C or 135XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ANTH 374",
+        "courseName": "Archaeology of Hunter-Gatherers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 376",
+        "courseName": "Food and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 377",
+        "courseName": "Mortuary Archaeology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 379",
+        "courseName": "Andean Archaeology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 380",
+        "courseName": "Language and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 381",
+        "courseName": "Medical Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 382",
+        "courseName": "Urban Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 386",
+        "courseName": "Quantitative Methods in Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 387",
+        "courseName": "Zooarchaeology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 388",
+        "courseName": "Human Osteology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 389",
+        "courseName": "Human Osteology Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 390",
+        "courseName": "History of Anthropological Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 391",
+        "courseName": "Forensic Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 392",
+        "courseName": "Forensic Anthropology Lab",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 393",
+        "courseName": "Paleopathology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 394",
+        "courseName": "Archaeology of Climate Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 395",
+        "courseName": "Work, Technology, and Society: An IT Perspective",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 396",
+        "courseName": "Issues in Anthropology: Social Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 398",
+        "courseName": "Study Abroad",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 399",
+        "courseName": "Issues in Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

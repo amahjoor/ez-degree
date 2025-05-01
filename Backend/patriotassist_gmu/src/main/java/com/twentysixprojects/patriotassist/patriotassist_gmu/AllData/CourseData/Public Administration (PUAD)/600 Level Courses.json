@@ -1,0 +1,230 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PUAD 613",
+        "courseName": "Economic Analysis in Public Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PUAD 511B-, GOVT 511B- or PUBP 511B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "PUAD 615",
+        "courseName": "Administrative Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 621",
+        "courseName": "Principles and Practices in Government Organization and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 622",
+        "courseName": "Program Planning and Implementation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 623",
+        "courseName": "Managing Government Contracting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 624",
+        "courseName": "Public and Private Partnerships",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 625",
+        "courseName": "Higher Education Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 626",
+        "courseName": "Consulting Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 630",
+        "courseName": "Emergency Planning and Preparedness",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 631",
+        "courseName": "Disaster Response Operations and Recovery",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 632",
+        "courseName": "Terrorism: Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 633",
+        "courseName": "Hazard Mitigation Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 634",
+        "courseName": "Management of International Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 635",
+        "courseName": "Emergency Preparedness: Interagency Communication and Coordination",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 636",
+        "courseName": "The NGO: Policy and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 637",
+        "courseName": "Managing Homeland Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 642",
+        "courseName": "Environmental Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 644",
+        "courseName": "Public Policy Models",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 645",
+        "courseName": "Policy Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: GOVT 511B- or PUBP 511B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "PUAD 649",
+        "courseName": "Advocacy and Lobbying",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 651",
+        "courseName": "Virginia Politics, Policy, and Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 652",
+        "courseName": "Leading in the Nonprofit Sector",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 654",
+        "courseName": "The Community, Marketing, and Public Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 655",
+        "courseName": "Nonprofit Fund Raising and Resource Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 657",
+        "courseName": "Association Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 658",
+        "courseName": "Social Entrepreneurship and Social Enterprise",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 659",
+        "courseName": "Nonprofit Law, Governance, and Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 660",
+        "courseName": "Public and Nonprofit Accounting and Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 661",
+        "courseName": "Public Budgeting Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 662",
+        "courseName": "National Budgeting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 663",
+        "courseName": "State and Local Budgeting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 664",
+        "courseName": "Nonprofit Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 670",
+        "courseName": "Human Resources Management in the Public Sector",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 671",
+        "courseName": "Public Employee Labor Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 672",
+        "courseName": "Human Resources Reforms for Public Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 679",
+        "courseName": "Leadership Skills for the 21st Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 680",
+        "courseName": "Public Technology Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 691",
+        "courseName": "Justice Program Planning and Implementation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

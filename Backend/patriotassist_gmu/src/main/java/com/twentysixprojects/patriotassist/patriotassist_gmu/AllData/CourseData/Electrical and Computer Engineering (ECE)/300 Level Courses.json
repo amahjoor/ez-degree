@@ -1,0 +1,80 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ECE 301",
+        "courseName": "Digital Electronics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 125C, 125XS, 114C, 114XS, IT 102C, 102XS, MATH 116C or 116XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 305",
+        "courseName": "Electromagnetic Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 214C, 214XS, U214 or 216C) and (PHYS 260C or 260XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 311",
+        "courseName": "Energy Infrastructure, Market, and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECE 321",
+        "courseName": "Continuous-Time Signals and Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ECE 201C or 201XS) and (ENGR 107C or 107XS) and (MATH 203*C or 203XS) and (MATH 214*C, U214, 214XS, 216XS or 216*C)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 330",
+        "courseName": "Circuit Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 260C or 260XS) and (PHYS 261C or 261XS) and (MATH 214C or 214XS) and (MATH 203*C, 203XS, ME 351*C or 351XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 333",
+        "courseName": "Linear Electronics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ECE 285C or 285XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 334",
+        "courseName": "Linear Electronics Lab I",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (PHYS 261C, 261XS or 265C) and (ECE 333*C or 333XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 340",
+        "courseName": "Data Structures and Systems Programming in C",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 211C or 211XS) and (ECE 240C, 240XS, CS 222C or 222XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 350",
+        "courseName": "Embedded Systems and Hardware Interfaces",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 222C, 222XS, ECE 240C, 240XS, CS 262C or 262XS) and (ECE 280C, 280XS, 285C, 285XS, 330C or 330XS) and ((ECE 301C, 301XS or L301) or ((ECE 331C, 331XS, 231C or 231XS) and (ECE 332C, 332XS, 232C or 232XS)))).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 370",
+        "courseName": "Introduction to Robotics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 112C, ENGR 125 or CS 109C) and ((MATH 203C or ME 351C) and (MATH 213C)).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ECE 390",
+        "courseName": "Engineering Design and Fabrication",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BENG 380C, ECE 280C, 285C or 285XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 391",
+        "courseName": "Professional Development for Engineers",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (COMM 100C, 100XS, 101C, 101XS, HNRS 353C, 360C or 361C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECE 395",
+        "courseName": "Electrical and Computer Engineering Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

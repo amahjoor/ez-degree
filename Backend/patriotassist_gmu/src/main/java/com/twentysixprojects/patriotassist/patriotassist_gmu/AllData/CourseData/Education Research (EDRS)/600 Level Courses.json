@@ -1,0 +1,38 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDRS 620",
+        "courseName": "Quantitative Inquiry in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: (EDRS 590B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDRS 621",
+        "courseName": "Qualitative Inquiry in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 622",
+        "courseName": "Educational and Psychological Measurement",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 620C and 621*C).\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "EDRS 630",
+        "courseName": "Educational Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 631",
+        "courseName": "Program Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDRS 590B and 620B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "EDRS 680",
+        "courseName": "Advanced Evaluation Methods and Internship",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

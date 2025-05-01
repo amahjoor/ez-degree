@@ -1,0 +1,32 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "OR 438",
+        "courseName": "Analytics for Financial Engineering and Econometrics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (STAT 250C or 250XS) or (STAT 260C or 260XS) or (STAT 334C or 334XS) or (STAT 344C or 344XS) or (STAT 346C or 346XS) or (MATH 351C or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "OR 441",
+        "courseName": "Deterministic Optimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 203C or 203XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "OR 442",
+        "courseName": "Stochastic Models",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: STAT 334C, 334XS, 344XS, 344C, 346C, 346XS, MATH 351C or 351XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "OR 481",
+        "courseName": "Numerical Methods in Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 203C or 203XS) and (CS 112C, 112XS, SYST 130C, 130XS, CDS 130C, 130XS or ENGR 125T).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "OR 498",
+        "courseName": "Independent Study in Operations Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

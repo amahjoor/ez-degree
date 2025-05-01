@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ME 311",
+        "courseName": "Mechanical Experimentation I",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: ME 212C or 212XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 313",
+        "courseName": "Material Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((((CHEM 211C or 211XS) and (CHEM 213C or 213XS)) or (CHEM 251C or 251XS) or ((CHEM 271C or 271XS) and (CHEM 272C or 272XS))) and (ME 212C, 212XS, BENG 230C, 230XS, CEIE 310C or L310)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 321",
+        "courseName": "Mechanical Experimentation II",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (ME 322C or 322XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 322",
+        "courseName": "Fluid Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 221C or 221XS) and (ME 231C or 231XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 323",
+        "courseName": "Heat Transfer",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 322C or 322XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 331",
+        "courseName": "Mechatronics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ECE 330C or 330XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 341",
+        "courseName": "Design of Mechanical Elements",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 212C, 212XS, CEIE 310C or L310C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 342",
+        "courseName": "Design of Thermal Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ME 221C or 221XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 351",
+        "courseName": "Analytical Methods in Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ME 151C or 151XS) and (MATH 214C, 214XS, 216C, 216XS or U214C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ME 352",
+        "courseName": "Entrepreneurship in Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 395",
+        "courseName": "Mechanical Engineering Internship",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisites: ((ME 212C or 212XS) and (ME 221C or 221XS) and (ME 231C or 231XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

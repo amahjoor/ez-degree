@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "EDLE 791",
+        "courseName": "Internship in Educational Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 792",
+        "courseName": "Internship in Independent School Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

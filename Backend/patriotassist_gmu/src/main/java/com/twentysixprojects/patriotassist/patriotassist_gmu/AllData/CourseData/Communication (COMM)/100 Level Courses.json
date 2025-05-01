@@ -1,0 +1,50 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "COMM 100",
+        "courseName": "Public Speaking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 101",
+        "courseName": "Fundamentals of Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 140",
+        "courseName": "Forensics Seminar I",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 141",
+        "courseName": "Forensics Seminar II",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 142",
+        "courseName": "Debate Seminar I",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 143",
+        "courseName": "Debate Seminar II",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 145",
+        "courseName": "Newspaper Workshop I",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 148",
+        "courseName": "Podcasting and Radio Workshop I",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

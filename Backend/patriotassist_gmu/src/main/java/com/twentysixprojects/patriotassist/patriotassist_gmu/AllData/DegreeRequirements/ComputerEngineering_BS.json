@@ -1,0 +1,840 @@
+{
+    "Computer Science Core": {
+      "CreditsRequired": 35,
+      "Requirements": {
+        "Description": "",
+        "Operator": "AND",
+        "Items": [
+          {
+            "Code": "CS 110",
+            "Title": "Essentials of Computer Science",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Description": "",
+            "Operator": "OR",
+            "Items": [
+              {
+                "Code": "CS 112",
+                "Title": "Introduction to Computer Programming",
+                "Credits": 4,
+                "Notes": "((minimum score of 80 in 'Math Placement Aleks', MATH 104C, 104T, 105C, 105T, 105XS, 113C, 113XS, 115C, 123C or 123XS)).",
+                "Completed": false,
+                "HasLab": true,
+                "LabOnly": false,
+                "ForceNoPreReq": true
+              },
+              {
+                "Description": "",
+                "Operator": "AND",
+                "Items": [
+                  {
+                    "Code": "CS 108",
+                    "Title": "Intro to Computer Programming, Part A",
+                    "Credits": 3,
+                    "Notes": "",
+                    "Completed": false,
+                    "HasLab": false,
+                    "LabOnly": false,
+                    "ForceNoPreReq": false
+                  },
+                  {
+                    "Code": "CS 109",
+                    "Title": "and Intro to Computer Programming, Part B",
+                    "Credits": 3,
+                    "Notes": "",
+                    "Completed": false,
+                    "HasLab": true,
+                    "LabOnly": false,
+                    "ForceNoPreReq": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Code": "CS 211",
+            "Title": "Object-Oriented Programming",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": true,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 262",
+            "Title": "Introduction to Low-Level Programming",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": true,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 306",
+            "Title": "Synthesis of Ethics and Law for the Computing Professional",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 310",
+            "Title": "Data Structures",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 321",
+            "Title": "Software Engineering",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 330",
+            "Title": "Formal Methods and Models",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 367",
+            "Title": "Computer Systems and Programming",
+            "Credits": 4,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 471",
+            "Title": "Operating Systems",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 483",
+            "Title": "Analysis of Algorithms",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          }
+        ]
+      }
+    },
+    "Senior Computer Science": {
+      "CreditsRequired": 15,
+      "Requirements": {
+        "Description": "",
+        "Operator": "AND",
+        "Items": [
+          {
+            "Description": "",
+            "Operator": "OR",
+            "Items": [
+              {
+                "Code": "CS 455",
+                "Title": "Computer Communications and Networking",
+                "Credits": 3,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              },
+              {
+                "Code": "CS 468",
+                "Title": "Secure Programming and Systems",
+                "Credits": 3,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              },
+              {
+                "Code": "CS 475",
+                "Title": "Concurrent and Distributed Systems",
+                "Credits": 3,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              },
+              {
+                "Code": "CS 487",
+                "Title": "Introduction to Cryptography",
+                "Credits": 3,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              }
+            ]
+          },
+          {
+            "Code": "CS 425",
+            "Title": "Game Programming I",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 440",
+            "Title": "Compilers",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 450",
+            "Title": "Database Concepts",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 451",
+            "Title": "Computer Graphics",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 452",
+            "Title": "Virtual Reality",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 455",
+            "Title": "Computer Communications and Networking",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 463",
+            "Title": "Comparative Programming Languages",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 465",
+            "Title": "Computer Systems Architecture",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 468",
+            "Title": "Secure Programming and Systems",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 469",
+            "Title": "Security Engineering",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 475",
+            "Title": "Concurrent and Distributed Systems",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 477",
+            "Title": "Mobile Application Development",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 478",
+            "Title": "Natural Language Processing",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 480",
+            "Title": "Introduction to Artificial Intelligence",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 482",
+            "Title": "Computer Vision",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 484",
+            "Title": "Data Mining",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 485",
+            "Title": "Autonomous Robotics",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 487",
+            "Title": "Introduction to Cryptography",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 490",
+            "Title": "Design Exhibition",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 491",
+            "Title": "Industry-Sponsored Senior Design Project",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "CS 499",
+            "Title": "Special Topics in Computer Science",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Description": "",
+            "Operator": "OR",
+            "Items": [
+              {
+                "Code": "MATH 446",
+                "Title": "Numerical Analysis I",
+                "Credits": 3,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              },
+              {
+                "Code": "OR 481",
+                "Title": "Numerical Methods in Engineering",
+                "Credits": 3,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Mathematics": {
+      "CreditsRequired": 17,
+      "Requirements": {
+        "Description": "",
+        "Operator": "AND",
+        "Items": [
+          {
+            "Description": "",
+            "Operator": "OR",
+            "Items": [
+              {
+                "Code": "MATH 113",
+                "Title": "Analytic Geometry and Calculus I",
+                "Credits": 4,
+                "Notes": "(minimum score of 07 in 'Math Placement Transcendentals', MATH 105C, 105XS, 104C or minimum score of 80 in 'Math Placement Aleks').",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": true
+              },
+              {
+                "Description": "",
+                "Operator": "AND",
+                "Items": [
+                  {
+                    "Code": "MATH 123",
+                    "Title": "Calculus with Algebra/Trigonometry, Part A",
+                    "Credits": 3,
+                    "Notes": " (((minimum score of 13 in 'Math Placement Algebra I' and minimum score of 07 in 'Math Placement Algebra II') or minimum score of 65 in 'Math Placement Aleks') or MATH 105C, 105XS or 104C).",
+                    "Completed": false,
+                    "HasLab": false,
+                    "LabOnly": false,
+                    "ForceNoPreReq": true
+                  },
+                  {
+                    "Code": "MATH 124",
+                    "Title": "Calculus with Algebra/Trigonometry, Part B",
+                    "Credits": 3,
+                    "Notes": "",
+                    "Completed": false,
+                    "HasLab": false,
+                    "LabOnly": false,
+                    "ForceNoPreReq": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Code": "MATH 114",
+            "Title": "Analytic Geometry and Calculus II",
+            "Credits": 4,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "MATH 125",
+            "Title": "Discrete Mathematics I",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "MATH 203",
+            "Title": "Linear Algebra",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "MATH 213",
+            "Title": "Analytic Geometry and Calculus III",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          }
+        ]
+      }
+    },
+    "Statistics": {
+      "CreditsRequired": 3,
+      "Requirements": {
+        "Code": "STAT 344",
+        "Title": "Probability and Statistics for Engineers and Scientists I",
+        "Credits": 3,
+        "Notes": "",
+        "Completed": false,
+        "HasLab": false,
+        "LabOnly": false,
+        "ForceNoPreReq": false
+      }
+    },
+    "Computer Science-Related Courses": {
+      "CreditsRequired": 6,
+      "Requirements": {
+        "Description": "Any MATH or CS course numbered above 300 (except MATH 351)\nAny SWE course numbered 300 or above except SWE 301, SWE 401 and SWE 510",
+        "Operator": "AND",
+        "Items": [
+          {
+            "Code": "STAT 354",
+            "Title": "Probability and Statistics for Engineers and Scientists II",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "OR 335",
+            "Title": "Discrete Systems Modeling and Simulation",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "OR 441",
+            "Title": "Deterministic Optimization",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "OR 442",
+            "Title": "Stochastic Models",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Operator": "OR",
+            "Items": [
+              {
+                "Code": "ECE 301",
+                "Title": "Digital Electronics",
+                "Credits": 3,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              },
+              {
+                "Operator": "AND",
+                "Items": [
+                  {
+                    "Code": "ECE 231",
+                    "Title": "Digital System Design",
+                    "Credits": 3,
+                    "Notes": "",
+                    "Completed": false,
+                    "HasLab": false,
+                    "LabOnly": false,
+                    "ForceNoPreReq": false
+                  },
+                  {
+                    "Code": "ECE 232",
+                    "Title": "Digital System Design Lab",
+                    "Credits": 3,
+                    "Notes": "",
+                    "Completed": false,
+                    "HasLab": false,
+                    "LabOnly": false,
+                    "ForceNoPreReq": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Code": "ECE 350",
+            "Title": "Embedded Systems and Hardware Interfaces",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "ECE 446",
+            "Title": "Device Driver Development",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "ECE 447",
+            "Title": "Microcontrollers",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "ECE 455",
+            "Title": "GPU Architecture and Programming",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "ECE 511",
+            "Title": "Computer Architecture",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "SWE 419",
+            "Title": "Object-Oriented Software Design and Implementation",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "SWE 432",
+            "Title": "Web Application Development",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "SWE 437",
+            "Title": "Software Testing and Maintenance",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "SWE 443",
+            "Title": "Software Architectures",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "SYST 371",
+            "Title": "Systems Engineering Management",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "SYST 470",
+            "Title": "Human Factors Engineering",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "PHIL 371",
+            "Title": "Philosophy of the Natural Sciences",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "PHIL 376",
+            "Title": "Symbolic Logic",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          },
+          {
+            "Code": "ENGH 388",
+            "Title": "Professional and Technical Writing",
+            "Credits": 3,
+            "Notes": "",
+            "Completed": false,
+            "HasLab": false,
+            "LabOnly": false,
+            "ForceNoPreReq": false
+          }
+        ]
+      }
+    },
+    "Natural Science": {
+      "CreditsRequired": 12,
+      "Requirements": {
+        "Description": "The courses should be intended for science and engineering students and must include a two course sequence with laboratories. Some approved combinations have a total of more than 12 hours.",
+        "Operator": "OR",
+        "Items": [
+          {
+            "Operator": "AND",
+            "Items": [
+              {
+                "Code": "BIOL 102",
+                "Title": "Introductory Biology I-Survey of Biodiversity and Ecology",
+                "Credits": 4,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              },
+              {
+                "Code": "BIOL 106",
+                "Title": "Introductory Biology I Laboratory",
+                "Credits": 1,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Items": [
+              {
+                "Code": "BIOL 107",
+                "Title": "Intro Biology II Lecture",
+                "Credits": 4,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              },
+              {
+                "Code": "BIOL 106",
+                "Title": "Introductory Biology I Laboratory",
+                "Credits": 1,
+                "Notes": "",
+                "Completed": false,
+                "HasLab": false,
+                "LabOnly": false,
+                "ForceNoPreReq": false
+              }
+            ]
+          },
+          {
+
+          }
+        ]
+    }
+  }
+}
+  

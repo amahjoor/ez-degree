@@ -1,0 +1,32 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "INYO 501",
+        "courseName": "Graduate Transitions for International Students I",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 502",
+        "courseName": "Graduate Transitions for International Students II",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 504",
+        "courseName": "Transitions for International Graduate Students",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 505",
+        "courseName": "Intercultural Competence and Professional Development for Multilingual Graduate Students",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 508",
+        "courseName": "Special Topics Content Support in the Disciplines",
+        "courseCredits": "0-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

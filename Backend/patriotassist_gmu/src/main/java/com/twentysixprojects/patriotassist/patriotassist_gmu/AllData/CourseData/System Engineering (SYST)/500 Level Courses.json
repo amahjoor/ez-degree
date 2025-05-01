@@ -1,0 +1,140 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "SYST 500",
+        "courseName": "Quantitative Foundations for Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 505",
+        "courseName": "Systems Engineering Principles",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 508",
+        "courseName": "Complex Systems Engineering Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 510",
+        "courseName": "Systems Definition and Cost Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 513",
+        "courseName": "Total Systems Engineering, Reengineering and Enterprise Integration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 514",
+        "courseName": "Systems Thinking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 520",
+        "courseName": "System Engineering Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 521",
+        "courseName": "Network Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 523",
+        "courseName": "Engineering Resilient and Agile Enterprise Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 530",
+        "courseName": "Systems Engineering Management I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 538",
+        "courseName": "Analytics for Financial Engineering and Econometrics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 542",
+        "courseName": "Decision Support Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SYST 573*B-, 573XS, 473*B-, OR 681*B- or 681XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SYST 548",
+        "courseName": "Technologies and Security for Cryptocurrencies and Financial Transactions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 560",
+        "courseName": "Introduction to Air Traffic Control",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 563",
+        "courseName": "Evidence-Based Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 568",
+        "courseName": "Applied Predictive Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 573",
+        "courseName": "Decision and Risk Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 574",
+        "courseName": "Quality Control and Process Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 575",
+        "courseName": "AI Design and Deployment Risks",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 576",
+        "courseName": "Manufacturing Systems Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 578",
+        "courseName": "Systems Engineering and Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 584",
+        "courseName": "Heterogeneous Data Fusion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 588",
+        "courseName": "Financial Systems Engineering I: Introduction to Options, Futures, and Derivatives",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

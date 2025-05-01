@@ -1,0 +1,80 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "NUTR 513",
+        "courseName": "Advanced Community Nutrition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 514",
+        "courseName": "Food, Culture, Nutrition and the Mediterranean Diet",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 515",
+        "courseName": "Fundamentals of Cooking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 522",
+        "courseName": "Nutrition Across the Lifespan",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 530",
+        "courseName": "Introduction to Wine and Beer",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 535",
+        "courseName": "Urban Agriculture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 537",
+        "courseName": "Food Service Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 553",
+        "courseName": "Nutrients",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 566",
+        "courseName": "Nutrition and Weight Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 570",
+        "courseName": "Food Science for Nutritionists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 583",
+        "courseName": "Food and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 587",
+        "courseName": "Profession of Dietetics",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NUTR 594",
+        "courseName": "Special Topics in Nutrition and Food Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

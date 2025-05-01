@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "KINE 200",
+        "courseName": "Methods of Exercise Instruction",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 124*C or 124*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "KINE 250",
+        "courseName": "Endurance Sport Program Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 260",
+        "courseName": "Behavior Modification for Physical Activity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "KINE 295",
+        "courseName": "Principles of Human Nutrition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

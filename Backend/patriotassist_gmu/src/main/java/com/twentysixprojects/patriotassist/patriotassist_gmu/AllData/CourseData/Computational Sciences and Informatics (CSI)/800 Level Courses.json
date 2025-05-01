@@ -1,0 +1,20 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "CSI 873",
+        "courseName": "Computational Learning and Discovery",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSI 898",
+        "courseName": "Research Colloquium in Computational Sciences and Informatics",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CSI 899",
+        "courseName": "Colloquium in Computational and Data Sciences",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

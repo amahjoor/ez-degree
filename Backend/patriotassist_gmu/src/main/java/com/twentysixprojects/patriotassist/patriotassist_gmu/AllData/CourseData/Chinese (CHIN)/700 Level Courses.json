@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "CHIN 797",
+        "courseName": "Capstone Project",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

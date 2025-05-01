@@ -1,0 +1,170 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDUC 606",
+        "courseName": "Education and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 612B- or 612XS) and (EDUC 613B- or 613XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 608",
+        "courseName": "Teacher Leadership for Professional Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 612",
+        "courseName": "Inquiry into Practice",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 613",
+        "courseName": "How Students Learn",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDUC 612B- or 612XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 614",
+        "courseName": "Designing and Assessing Teaching and Learning",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 612B- or 612XS) and (EDUC 613*B- or 613*XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 615",
+        "courseName": "Educational Change",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 612B- or 612XS) and (EDUC 613B- or 613XS) and (EDUC 614B- or 614XS) and (EDUC 606*B- or 606*XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 621",
+        "courseName": "Teaching and Learning in the International Baccalaureate Programme",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 622",
+        "courseName": "Curriculum Development across IB Programs",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDUC 621*B- or 621*XS.\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 623",
+        "courseName": "Models and Strategies for Teaching and Learning in IB Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 621B- or 621XS) and (EDUC 622B- or 622XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 624",
+        "courseName": "Assessment and Learning in IB Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 621*B- or 621*XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 626",
+        "courseName": "Inquiry into Action: IB Teachers, Learners, and Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 621B- or 621XS) and (EDUC 622B- or 622XS) and (EDUC 623*B- or 623*XS) and (EDUC 624B- or 624XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDUC 627",
+        "courseName": "Contemporary Issues and Trends in IB",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 628",
+        "courseName": "Curriculum for IB Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 647",
+        "courseName": "Critical Reflective Practice",
+        "courseCredits": "1.5 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 649",
+        "courseName": "Critical Dialogue in Education",
+        "courseCredits": "1.5 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 651",
+        "courseName": "Critical Theories and Pedagogies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 653",
+        "courseName": "Technology and Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 655",
+        "courseName": "Teacher Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 657",
+        "courseName": "Teaching for Democracy and Social Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 659",
+        "courseName": "Teacher Leadership",
+        "courseCredits": "1.5 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 661",
+        "courseName": "Teacher Empowerment and Policy",
+        "courseCredits": "1.5 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 663",
+        "courseName": "Culturally Relevant Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 665",
+        "courseName": "Teacher Inquiry in Practice I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 667",
+        "courseName": "Teacher Inquiry in Practice II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 669",
+        "courseName": "Teaching and Learning in Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 672",
+        "courseName": "Human Development and Learning: Secondary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 674",
+        "courseName": "Assessing Learning and Teaching in the Secondary School Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDUC 675",
+        "courseName": "Research in Secondary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDCI 790."
+    }
+]}

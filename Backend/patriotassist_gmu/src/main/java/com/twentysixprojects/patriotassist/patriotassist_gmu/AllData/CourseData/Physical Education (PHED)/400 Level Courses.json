@@ -1,0 +1,26 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "PHED 403",
+        "courseName": "Elementary School Instruction in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BIOL 124C, 125D and PHED 202C.\nC Requires minimum grade of C.\nD Requires minimum grade of D."
+    },
+    {
+        "courseTitle": "PHED 404",
+        "courseName": "Middle and High School Instruction in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BIOL 124C, 125D and PHED 202C.\nC Requires minimum grade of C.\nD Requires minimum grade of D."
+    },
+    {
+        "courseTitle": "PHED 415",
+        "courseName": "Student Teaching in Physical Education",
+        "courseCredits": "12 credits",
+        "preRequisite": "Required Prerequisites: ((ATEP 300D, 300XS or 300XP) and (BIOL 124C or 124XS) and (BIOL 125D, 125XS or 125XP) and (EDRD 300D, 300XS or 300XP) and (EDUC 302D, 302XS or 302XP) and (HEAL 110D, 110XS or 110XP) and (HEAL 200D, 200XS or 200XP) and (HEAL 405C or 405XS) and (KINE 310D, 310XS or 310XP) and (PHED 202C or 202XS) and (PHED 218D, 218XS or 218XP) and (PHED 273D, 273XS or 273XP) and (PHED 274D, 274XS or 274XP) and (PHED 275C, 275XS or 275XP) and (PHED 276D, 276XS or 276XP) and (PHED 306D, 306XS or 306XP) and (PHED 308C, 308XS or 308XP) and (PHED 320D, 320XS or 320XP) and (PHED 340D, 340XS or 340XP) and (PHED 403C or 403XS) and (PHED 404C or 404XS) and (PRLS 316D, 316XS or 316XP) and (RMGT 316D)).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "PHED 499",
+        "courseName": "Independent Study in Physical Education and Fitness",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

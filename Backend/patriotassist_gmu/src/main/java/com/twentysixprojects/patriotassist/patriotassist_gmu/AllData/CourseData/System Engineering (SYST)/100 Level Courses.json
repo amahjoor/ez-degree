@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "SYST 101",
+        "courseName": "Understanding Systems and Industrial Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 130",
+        "courseName": "Introduction to Computing for Digital Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SYST 198",
+        "courseName": "Independent Study in Systems Engineering",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

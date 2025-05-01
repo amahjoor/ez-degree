@@ -1,0 +1,14 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "DAEN 500",
+        "courseName": "Data Analytics Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DAEN 527",
+        "courseName": "Learning From Data",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

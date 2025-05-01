@@ -1,0 +1,14 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "BINF 334",
+        "courseName": "Perl for Bioinformatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 354",
+        "courseName": "Foundations in Mathematical Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

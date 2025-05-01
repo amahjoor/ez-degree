@@ -1,0 +1,80 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ARAB 300",
+        "courseName": "Advanced Arabic",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 325",
+        "courseName": "Major Arab Writers/Stories",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 330",
+        "courseName": "Reading and Conversation I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 331",
+        "courseName": "Reading and Conversation II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 351",
+        "courseName": "Media Arabic (Spoken and Written)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 355",
+        "courseName": "Advanced Arabic Media: Debates & Context",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ARAB 202C or 202XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ARAB 360",
+        "courseName": "Topics in Arabic Cultural Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 365",
+        "courseName": "Black and Minority Cultures in Arabic Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 370",
+        "courseName": "Arabic for the Professions",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ARAB 202C or 202XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ARAB 375",
+        "courseName": "Study Abroad - Arab World",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 380",
+        "courseName": "Arabic Dialects",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 385",
+        "courseName": "Migrating Voices in Arabic Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARAB 390",
+        "courseName": "Translation Methods: Arabic to English",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

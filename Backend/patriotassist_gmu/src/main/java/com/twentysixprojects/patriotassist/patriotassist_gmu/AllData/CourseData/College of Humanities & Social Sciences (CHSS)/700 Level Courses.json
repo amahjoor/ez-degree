@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "CHSS 780",
+        "courseName": "Applied Research Portfolio",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHSS 790",
+        "courseName": "Applied Research Experience",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

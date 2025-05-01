@@ -1,0 +1,32 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "CYSE 521",
+        "courseName": "Industrial Control Systems Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 550",
+        "courseName": "Cyber Security Engineering Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 570",
+        "courseName": "Fundamentals of Operating Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 580",
+        "courseName": "Hardware and Cyber Physical Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CYSE 587",
+        "courseName": "Cyber Security Systems Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

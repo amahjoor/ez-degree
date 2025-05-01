@@ -1,0 +1,164 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "LAW 407",
+        "courseName": "FinTech Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 409",
+        "courseName": "Constitutional Theory Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 416",
+        "courseName": "Cybersecurity Law Seminar",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 418",
+        "courseName": "International IP & Policy Sem",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 419",
+        "courseName": "Prosecuting Terrorism Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 422",
+        "courseName": "Immigration Policy Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 425",
+        "courseName": "Structure of Liberty Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 426",
+        "courseName": "Homeland Sec & Law Sem",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 427",
+        "courseName": "Health Law Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 429",
+        "courseName": "Persp on Indiv Family &",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 432",
+        "courseName": "Intel Prop & Antitrust Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 435",
+        "courseName": "Jurisprudence Seminar",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 437",
+        "courseName": "Federal Cir Prac Sem (E)",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 438",
+        "courseName": "Pat Lit & Disp Res Sem (E)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisite: LAW 284D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 439",
+        "courseName": "Comparative Law Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 442",
+        "courseName": "Advanced Constitutional Law: Freedom of Religion Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 444",
+        "courseName": "Legal Practicum: Global Antitrust Regulatory Comments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 445",
+        "courseName": "Public Choice/Public",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 446",
+        "courseName": "Tax Policy Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 448",
+        "courseName": "Lw of Govt Oversight & Int Inv",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 450",
+        "courseName": "Wrongful Convictions Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 454",
+        "courseName": "Bankruptcy Reorg Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 167D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 475",
+        "courseName": "Adv Antitrust Sem",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: LAW 156D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 481",
+        "courseName": "Food Law & Policy Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 492",
+        "courseName": "Intelligence Law Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 493",
+        "courseName": "Computer Crime Seminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 497",
+        "courseName": "Emerging Lw of Internet Sem",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

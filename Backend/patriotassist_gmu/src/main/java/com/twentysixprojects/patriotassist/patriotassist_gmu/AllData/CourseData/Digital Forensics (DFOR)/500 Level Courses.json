@@ -1,0 +1,20 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "DFOR 500",
+        "courseName": "Introduction to Forensic Technology and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 510",
+        "courseName": "Digital Forensics Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DFOR 590",
+        "courseName": "Special Topics in Digital Forensics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

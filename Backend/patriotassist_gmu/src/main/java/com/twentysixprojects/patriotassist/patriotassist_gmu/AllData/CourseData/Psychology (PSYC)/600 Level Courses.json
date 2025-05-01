@@ -1,0 +1,200 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PSYC 601",
+        "courseName": "Applied Data Analysis in Psychology I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 602",
+        "courseName": "Applied Data Analysis in Psychology II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 603",
+        "courseName": "Psychological Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 611",
+        "courseName": "Advanced Statistics",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 614",
+        "courseName": "The Psychology of Aging",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 615",
+        "courseName": "Language Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 616",
+        "courseName": "Employee Selection",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 618",
+        "courseName": "Applied Leadership in the Workplace",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 620",
+        "courseName": "Motivation and Well-Being",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 622",
+        "courseName": "Applied Teamwork in the Workplace",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 626",
+        "courseName": "Organizational Change and Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 627",
+        "courseName": "Performance Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 629",
+        "courseName": "Workplace Training",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 631",
+        "courseName": "Industrial and Personnel Testing and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 633",
+        "courseName": "Evaluative Research in Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 636",
+        "courseName": "Survey of Industrial-Organizational Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 637",
+        "courseName": "Foundations of Industrial Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 638",
+        "courseName": "Training: Psychological Contributions to Theory, Design, and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 639",
+        "courseName": "Survey of Organizational Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 640",
+        "courseName": "Techniques in Industrial/Organizational Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 641",
+        "courseName": "Foundations of Organizational Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 642",
+        "courseName": "General Linear Modeling I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 643",
+        "courseName": "General Linear Modeling II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 644",
+        "courseName": "Methods for Social Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 645",
+        "courseName": "Research Methods in Human Factors and Applied Cognition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 646",
+        "courseName": "Longitudinal Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 648",
+        "courseName": "Developmental Psychopathology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 651",
+        "courseName": "Doing Social Network Research in Psychological Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 652",
+        "courseName": "Quantitative Methods II: Analysis of Variance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PSYC 611B- or 611XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PSYC 667",
+        "courseName": "Behavior in Small Groups and Teams",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 668",
+        "courseName": "Personality: Theoretical and Empirical Approaches",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 669",
+        "courseName": "Social and Emotional Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PSYC 685",
+        "courseName": "Cognitive Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

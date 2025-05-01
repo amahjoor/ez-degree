@@ -1,0 +1,14 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "EDLE 412",
+        "courseName": "Schools and the Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 420",
+        "courseName": "Organization and Management of Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDUC 300C or L300).\nC Requires minimum grade of C."
+    }
+]}

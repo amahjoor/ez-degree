@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "MLSC 200",
+        "courseName": "Self/Team Development",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MLSC 202",
+        "courseName": "Leadership Skills IV",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

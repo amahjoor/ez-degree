@@ -1,0 +1,50 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "GEOL 700",
+        "courseName": "Comprehensive Exam",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 720",
+        "courseName": "Bayesian Methods in Geology and Earth Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (GEOL 525B-, 525XS, 540B- or 540XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GEOL 734",
+        "courseName": "Paleobiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 741",
+        "courseName": "Isotopes in Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 752",
+        "courseName": "Earth Sciences in Academia",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 792",
+        "courseName": "Seminar in Earth Systems Science, Geology, & Earth Science",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 798",
+        "courseName": "Master's Research Project in Earth Systems Science",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 799",
+        "courseName": "Master's Thesis in Earth Systems Science",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

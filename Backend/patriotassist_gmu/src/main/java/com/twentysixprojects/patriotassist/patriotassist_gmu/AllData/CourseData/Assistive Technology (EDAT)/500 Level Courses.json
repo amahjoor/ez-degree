@@ -1,0 +1,50 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EDAT 510",
+        "courseName": "Introduction to Assistive Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 521",
+        "courseName": "Augmentative Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 522",
+        "courseName": "Assistive Technology for Individuals with Sensory Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 523",
+        "courseName": "Accessibility and Input Modifications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 524",
+        "courseName": "Universal Design for Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 526",
+        "courseName": "Adapted Positioning and Functional Mobility",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 527",
+        "courseName": "Assistive Technology for Independent Living and Employment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDAT 599",
+        "courseName": "Independent Study in Assistive Technology",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

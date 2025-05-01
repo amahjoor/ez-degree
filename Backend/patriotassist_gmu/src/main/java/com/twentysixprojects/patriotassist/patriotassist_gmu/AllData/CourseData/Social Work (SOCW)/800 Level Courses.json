@@ -1,0 +1,38 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "SOCW 801",
+        "courseName": "Epistemological Approaches in Social Work",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 802",
+        "courseName": "Theory-Driven Conceptual Model-Building",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: SOCW 801B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 810",
+        "courseName": "Technology Innovations to Power Social Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SOCW 600B-, 623B-, 644B-, 656B-, 659B-, 660B-, 672B-, 673B- and 674B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "SOCW 820",
+        "courseName": "Multivariate Statistical Methods for Social Work Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 830",
+        "courseName": "Social Work Applied Research Practicum I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCW 831",
+        "courseName": "Social Work Applied Research Practicum II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: SOCW 830B-.\nB- Requires minimum grade of B-."
+    }
+]}

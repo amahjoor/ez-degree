@@ -1,0 +1,26 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "BAS 490",
+        "courseName": "Introduction to Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BAS 300C or 300XS) and ENGH 302*C.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BAS 491",
+        "courseName": "Applied Sciences Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BAS 490C or 490XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BAS 492",
+        "courseName": "Capstone Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BAS 300C or 300XS) and ENGH 302*C.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BAS 493",
+        "courseName": "BAS Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (BAS 492C or 492XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

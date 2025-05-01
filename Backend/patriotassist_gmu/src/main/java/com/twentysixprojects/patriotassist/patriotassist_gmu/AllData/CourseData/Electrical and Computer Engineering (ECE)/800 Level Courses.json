@@ -1,0 +1,14 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "ECE 896",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECE 899",
+        "courseName": "Research Topics in ECE",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

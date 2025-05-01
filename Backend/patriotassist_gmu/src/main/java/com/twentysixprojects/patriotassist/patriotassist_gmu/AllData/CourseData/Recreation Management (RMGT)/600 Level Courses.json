@@ -1,0 +1,44 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "RMGT 601",
+        "courseName": "History of Leisure and Sport in American Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 610",
+        "courseName": "Recreation Administration and Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 611",
+        "courseName": "Social Psychology of Leisure",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 612",
+        "courseName": "Philosophy of Leisure and Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 613",
+        "courseName": "Strategic Leadership in Recreation Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 614",
+        "courseName": "Legal Issues in Recreation Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RMGT 670",
+        "courseName": "Environmental Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

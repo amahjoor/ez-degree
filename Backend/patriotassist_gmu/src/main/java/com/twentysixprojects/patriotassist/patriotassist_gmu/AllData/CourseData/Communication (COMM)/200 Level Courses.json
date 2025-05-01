@@ -1,0 +1,68 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "COMM 200",
+        "courseName": "Communication Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 201",
+        "courseName": "Small Group Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 202",
+        "courseName": "Media and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 203",
+        "courseName": "Introduction to Journalism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 204",
+        "courseName": "Introduction to Public Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 208",
+        "courseName": "Introduction to Media Production",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 210",
+        "courseName": "Voice and Articulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 230",
+        "courseName": "Case Studies in Persuasion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 249",
+        "courseName": "Communication Field Experience",
+        "courseCredits": "1-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 260",
+        "courseName": "Basic Debate Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 261",
+        "courseName": "Theories of Argumentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

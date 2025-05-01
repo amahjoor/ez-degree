@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "General Chemistry II",
+  "CourseSubject": "Chemistry",
+  "CourseNumber": "212",
+  "CourseSection": "001",
+  "CreditHours": "3",
+  "CRN": "74251",
+  "Term": "Fall 2025",
+  "Instructor": "Tan, Xiaoyan (Primary)",
+  "MeetingDays": "Tuesday,Thursday",
+  "MeetingTimes": "01:30 PM - 02:45 PM",
+  "Campus": "Fairfax",
+  "Seats": "150 of 150 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:11:13"
+}

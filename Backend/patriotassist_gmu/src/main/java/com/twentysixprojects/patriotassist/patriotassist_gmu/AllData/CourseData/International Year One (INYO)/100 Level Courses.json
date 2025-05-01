@@ -1,0 +1,44 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "INYO 100",
+        "courseName": "Transition INTO Mason I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 101",
+        "courseName": "Transition INTO Mason II",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: INYO 100C or 100XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "INYO 102",
+        "courseName": "Transition INTO Mason II: Peer-Supported",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 103",
+        "courseName": "Precalculus Support for INTO Mason Year One",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 104",
+        "courseName": "Linear Modeling Support for INTO Mason Year One",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: MATH 111*C or 111XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "INYO 105",
+        "courseName": "US American Cultures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "INYO 106",
+        "courseName": "Introduction to Research Methods for International Students",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

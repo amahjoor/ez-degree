@@ -1,0 +1,32 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "FOLK 501",
+        "courseName": "Advanced Introduction to Folklore and Folklife",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FOLK 510",
+        "courseName": "Folklore and Ethnographic Research Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FOLK 550",
+        "courseName": "Topics in Public and Applied Folklore",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FOLK 560",
+        "courseName": "Topics in Genre and Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FOLK 570",
+        "courseName": "Topics in Regional Folklore Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

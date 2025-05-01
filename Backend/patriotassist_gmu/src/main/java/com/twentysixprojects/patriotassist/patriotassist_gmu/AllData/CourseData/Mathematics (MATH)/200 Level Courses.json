@@ -1,0 +1,44 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "MATH 203",
+        "courseName": "Linear Algebra",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 114C, 114XS, 114T, 116C or 116XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 213",
+        "courseName": "Analytic Geometry and Calculus III",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 114C, 114XS, 114T, 116C or 116XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 214",
+        "courseName": "Elementary Differential Equations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 213C, 213XS, 213T, 215C or 215XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 215",
+        "courseName": "Analytic Geometry and Calculus III (Honors)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 114C, 114XS, 116C or 116XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 216",
+        "courseName": "Theory of Differential Equations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 203C, 203XS or U203) and (MATH 213C, 213XS, U213, 215C, 215XS or U215).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 271",
+        "courseName": "Mathematics for the Elementary School Teachers I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 272",
+        "courseName": "Mathematics for the Elementary School Teachers II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 271C or 271XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

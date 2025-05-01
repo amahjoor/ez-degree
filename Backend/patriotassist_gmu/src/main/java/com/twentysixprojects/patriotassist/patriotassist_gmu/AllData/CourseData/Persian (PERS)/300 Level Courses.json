@@ -1,0 +1,14 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "PERS 330",
+        "courseName": "Advanced Persian I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PERS 331",
+        "courseName": "Advanced Persian II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

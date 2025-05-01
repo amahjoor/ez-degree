@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ATEP 120",
+        "courseName": "First Aid and Emergency Care",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ATEP 150",
+        "courseName": "Introduction to Athletic Training and Preventative Care Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

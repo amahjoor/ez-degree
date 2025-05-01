@@ -1,0 +1,50 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CHIN 400",
+        "courseName": "Chinese Pedagogical Grammar & Teaching Methodology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 470",
+        "courseName": "Special Topics in Chinese Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 475",
+        "courseName": "Chinese Popular Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 476",
+        "courseName": "Translation Theories and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 480",
+        "courseName": "Fourth-Year Chinese I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 481",
+        "courseName": "Fourth-Year Chinese II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 485",
+        "courseName": "China on Stage: Introduction to Chinese Theatrical Dramas in the 20th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHIN 490",
+        "courseName": "Internship in Chinese Studies",
+        "courseCredits": "1-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

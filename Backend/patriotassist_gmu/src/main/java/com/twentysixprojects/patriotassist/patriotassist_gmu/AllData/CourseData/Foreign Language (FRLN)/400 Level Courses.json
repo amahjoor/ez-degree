@@ -1,0 +1,20 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "FRLN 430",
+        "courseName": "Topics in Comparative World Literatures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 431",
+        "courseName": "Medieval Intellectual Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 490",
+        "courseName": "Internship in Foreign Language Studies",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

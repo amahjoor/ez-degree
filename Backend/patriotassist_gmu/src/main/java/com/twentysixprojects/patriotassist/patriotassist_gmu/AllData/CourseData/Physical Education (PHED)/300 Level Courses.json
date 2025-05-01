@@ -1,0 +1,38 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "PHED 306",
+        "courseName": "Psychomotor Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 308",
+        "courseName": "Adapted Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BIOL 124C, 125D and PHED 202C.\nC Requires minimum grade of C.\nD Requires minimum grade of D."
+    },
+    {
+        "courseTitle": "PHED 320",
+        "courseName": "Student Assessment in Health and Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 330",
+        "courseName": "Health and Physical Activity for Classroom Teachers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 340",
+        "courseName": "Social and Cultural Issues in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 360",
+        "courseName": "Sport Based Youth Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "WMST 200",
+        "courseName": "Introduction to Women and Gender Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "WMST 208",
+        "courseName": "Introduction to Lesbian, Gay, Bisexual, Transgender, and Queer Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

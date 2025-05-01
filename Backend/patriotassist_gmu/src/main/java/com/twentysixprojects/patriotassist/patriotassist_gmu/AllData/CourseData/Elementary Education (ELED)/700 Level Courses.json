@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "ELED 790",
+        "courseName": "Internship in Elementary Education",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 791",
+        "courseName": "Internship in Elementary Education\u202f(Non-Licensure)",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisite: ELED 544B.\nB Requires minimum grade of B."
+    }
+]}

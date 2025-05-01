@@ -1,0 +1,224 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MBA 701",
+        "courseName": "Business Valuation",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisites: MBA 613B or GBUS 613B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MBA 702",
+        "courseName": "Corporate Financial Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MBA 643B-, 643XS, GBUS 643B- or 643XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 703",
+        "courseName": "Financial Markets",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 705",
+        "courseName": "Venture Capital and Private Finance",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 706",
+        "courseName": "Investment Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MBA 643B-, 643XS, GBUS 643B- or 643XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 707",
+        "courseName": "Futures, Options and Other Derivatives",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 708",
+        "courseName": "Taxes and Business Strategy",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 709",
+        "courseName": "Risk and Portfolio Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 711",
+        "courseName": "Entrepreneurship",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 712",
+        "courseName": "Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 713",
+        "courseName": "Managing Human Capital",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 715",
+        "courseName": "Advanced Project and Program Management",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisite: MBA 712B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MBA 716",
+        "courseName": "International Business Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 717",
+        "courseName": "International Finance",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisites: (MBA 643B-, 643XS, GBUS 643B- or 643XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 718",
+        "courseName": "International Marketing",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisites: MBA 623B-, 623XS, GBUS 623B- or 623XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 720",
+        "courseName": "Marketing Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MBA 738B-, 738XS, GBUS 738B- or 738XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 721",
+        "courseName": "Marketing Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MBA 633C, 633XS or 633XP.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "MBA 722",
+        "courseName": "Consumer Behavior",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 723",
+        "courseName": "Supply Chain Management",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 724",
+        "courseName": "Marketing Communications",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 725",
+        "courseName": "Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 726",
+        "courseName": "Negotiations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 727",
+        "courseName": "Management Consulting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 728",
+        "courseName": "Organizational Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 729",
+        "courseName": "Business Issues in Government Contracting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 730",
+        "courseName": "Management of Technology and Innovation Processes",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 736",
+        "courseName": "Environmentally Sustainable Business Models and Strategies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 738",
+        "courseName": "Data Mining for Business Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MBA 633C, 633XS or 633XP.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "MBA 739",
+        "courseName": "Advanced Data Mining for Business Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MBA 738B-, 738XS, GBUS 738B- or 738XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 740",
+        "courseName": "People Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MBA 738B or GBUS 738B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MBA 742",
+        "courseName": "Governance and Ethics",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 744",
+        "courseName": "Fraud Examination",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 746",
+        "courseName": "Real Estate Analysis and Valuation",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 752",
+        "courseName": "Turning Ideas into Successful Companies",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 795",
+        "courseName": "Global Business Perspectives",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MBA 678*B- or 678XS).\n* May be taken concurrently.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MBA 796",
+        "courseName": "Directed Studies in Business Administration",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MBA 797",
+        "courseName": "Special Topics in Business",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

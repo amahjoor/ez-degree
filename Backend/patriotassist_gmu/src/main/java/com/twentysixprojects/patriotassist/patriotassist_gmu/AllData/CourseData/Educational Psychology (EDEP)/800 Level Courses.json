@@ -1,0 +1,32 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "EDEP 820",
+        "courseName": "Teaching, Learning, and Cognition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 821",
+        "courseName": "Sociocultural Processes in Learning, Instruction, and Motivation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 822",
+        "courseName": "Advanced Learning, Motivation, and Self-Regulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 823",
+        "courseName": "Research Project: Designing your Study",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 810B-, 811B- and 812B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDEP 824",
+        "courseName": "Research Project: Analyzing your Data and Disseminating Findings",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDRS 810B-, 811B- and 812B-.\nB- Requires minimum grade of B-."
+    }
+]}

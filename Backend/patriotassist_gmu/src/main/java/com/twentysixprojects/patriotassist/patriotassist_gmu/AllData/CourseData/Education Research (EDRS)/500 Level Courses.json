@@ -1,0 +1,14 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EDRS 531",
+        "courseName": "Educational and Psychological Measurement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDRS 590",
+        "courseName": "Education Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

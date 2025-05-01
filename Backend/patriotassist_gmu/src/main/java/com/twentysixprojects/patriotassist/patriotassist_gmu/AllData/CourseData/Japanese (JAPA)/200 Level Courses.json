@@ -1,0 +1,20 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "JAPA 201",
+        "courseName": "Intermediate Japanese I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 202",
+        "courseName": "Intermediate Japanese II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "JAPA 240",
+        "courseName": "Introduction to Japanese Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

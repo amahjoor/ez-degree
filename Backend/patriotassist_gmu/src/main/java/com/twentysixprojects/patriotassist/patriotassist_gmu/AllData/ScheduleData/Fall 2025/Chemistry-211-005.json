@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "General Chemistry I",
+  "CourseSubject": "Chemistry",
+  "CourseNumber": "211",
+  "CourseSection": "005",
+  "CreditHours": "3",
+  "CRN": "74246",
+  "Term": "Fall 2025",
+  "Instructor": "Wang, Fei (Primary)",
+  "MeetingDays": "Monday,Wednesday",
+  "MeetingTimes": "10:30 AM - 11:45 AM",
+  "Campus": "Fairfax",
+  "Seats": "115 of 115 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:11:10"
+}

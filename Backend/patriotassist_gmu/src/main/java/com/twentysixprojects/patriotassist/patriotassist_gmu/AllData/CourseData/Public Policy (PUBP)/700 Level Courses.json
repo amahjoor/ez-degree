@@ -1,0 +1,404 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "PUBP 700",
+        "courseName": "Theory and Practice in Public Policy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 702",
+        "courseName": "Comparing Political Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 704",
+        "courseName": "Statistical Methods in Policy Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 707",
+        "courseName": "Budget Decision Making: Concepts and Practices in Economic and Financial Analyses",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 709",
+        "courseName": "Professional Writing for Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 710",
+        "courseName": "Topics in Public Policy",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 712",
+        "courseName": "Policy Systems Analysis and Management Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 714",
+        "courseName": "Topics in Transportation Policy, Operations, and Logistics",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 715",
+        "courseName": "Introduction to Transportation Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 716",
+        "courseName": "Transportation Operations and Logistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 717",
+        "courseName": "Analysis for Transportation Managers",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 718",
+        "courseName": "Transportation Planning and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 719",
+        "courseName": "Transportation Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 720",
+        "courseName": "Microeconomics for Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 721",
+        "courseName": "Transportation Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 722",
+        "courseName": "Practicum in Transportation Policy, Operations, and Logistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 723",
+        "courseName": "Metropolitan Transportation Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 726",
+        "courseName": "Telecommunications Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 730",
+        "courseName": "US Institutions and the Policy Process",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 731",
+        "courseName": "Macroeconomic Policy Assessment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 732",
+        "courseName": "Labor Markets and Policies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 733",
+        "courseName": "Urban Politics and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 734",
+        "courseName": "Administrative Law and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 735",
+        "courseName": "Lobbying and Interest Representation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 736",
+        "courseName": "International Migration and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 737",
+        "courseName": "Cases and Concepts in E-Government",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 739",
+        "courseName": "Media and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 740",
+        "courseName": "US Foreign Policy: Formulation and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 741",
+        "courseName": "Public Sector Economics for Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 742",
+        "courseName": "Transportation Safety and Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 743",
+        "courseName": "National Security Management and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 744",
+        "courseName": "Federal Institutions and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 745",
+        "courseName": "Transportation and the Environment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 747",
+        "courseName": "Air Transportation Policy, Operations and Logistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 748",
+        "courseName": "Public Transportation Policy, Operations and Logistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 750",
+        "courseName": "History of Military Operations Other than War",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 751",
+        "courseName": "International Police Operations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 752",
+        "courseName": "Infrastructure Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 753",
+        "courseName": "Ethics in Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 754",
+        "courseName": "Geographic Information Systems and Spatial Analysis for Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (POGO 511B- or 511XS) or (GCP 501B- or 501XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PUBP 755",
+        "courseName": "National Security Decision-Making Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 756",
+        "courseName": "Global Medical Systems Policy Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 757",
+        "courseName": "Public Policy in Global Health and Medical Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 758",
+        "courseName": "Global Threats and Medical Policies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 759",
+        "courseName": "National Security Law and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 760",
+        "courseName": "Science and Technology Policy in the 21st Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 761",
+        "courseName": "Social Entrepreneurship and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 762",
+        "courseName": "Social Institutions and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 763",
+        "courseName": "Illicit Trade",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 764",
+        "courseName": "Transnational Crime and Corruption",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 765",
+        "courseName": "Human Smuggling and Trafficking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 766",
+        "courseName": "Modern Counterinsurgency: Theory and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 767",
+        "courseName": "Ethics in Health Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 768",
+        "courseName": "Education and Public Policy (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 769",
+        "courseName": "Political Violence and Terrorism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 770",
+        "courseName": "Health Policy Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 775",
+        "courseName": "Economics of Electronic Commerce",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 777",
+        "courseName": "Critical Infrastructure Protection: Policy and Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 780",
+        "courseName": "Evolution of the Washington Metropolitan Economy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 781",
+        "courseName": "Entrepreneurship and Economic Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 782",
+        "courseName": "International Financial Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 783",
+        "courseName": "Global Governance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 784",
+        "courseName": "Entrepreneurship, Economics, and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 791",
+        "courseName": "Advanced Field Research for Policy: Theory and Method",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 792",
+        "courseName": "Advanced Economic Analysis for Policy Research",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 795",
+        "courseName": "Final Project",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

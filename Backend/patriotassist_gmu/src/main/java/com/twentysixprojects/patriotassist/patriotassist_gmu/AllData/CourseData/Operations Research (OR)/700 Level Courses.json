@@ -1,0 +1,68 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "OR 719",
+        "courseName": "Graphical Models for Inference and Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 735",
+        "courseName": "Simulation and Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 741",
+        "courseName": "Advanced Linear Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 750",
+        "courseName": "Advanced Topics in Operations Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 751",
+        "courseName": "Advanced Topics in Operations Research for Planning and Scheduling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 763",
+        "courseName": "Research Methods in Systems Engineering and Information Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 774",
+        "courseName": "Reinforcement Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 782",
+        "courseName": "Advanced Topics in Combinatorial Optimizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 783",
+        "courseName": "Advanced Topics in Network Optimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 784",
+        "courseName": "Advanced Topics in Nonlinear Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

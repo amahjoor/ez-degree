@@ -1,0 +1,56 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "IT 102",
+        "courseName": "Discrete Structures",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 108*C, 108XS, 113*C, 113XS, HNRT 225C or 225XS or ((MATH 123C or 123XS) and (MATH 124*C or 124XS))).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 104",
+        "courseName": "Introduction to Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 105",
+        "courseName": "IT Architecture Fundamentals",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 106",
+        "courseName": "Introduction to IT Problem Solving Using Computer Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 103C, 103T, 103X, 104C, 104XS or 104T) and (MATH 112*C, 125*C, 125XS, IT 102*C or 102XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 109",
+        "courseName": "Introduction to Computer Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (IT 103C, 103T, 103X, 104C, 104XS or 104T) and (MATH 112*C, 125*C, 125XS, IT 102*C or 102XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "IT 191",
+        "courseName": "Review of Computing Fundamentals",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 193",
+        "courseName": "Review of Multimedia and Web Design",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 194",
+        "courseName": "Review of Database Fundamentals",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "IT 196",
+        "courseName": "Review of IT Problem Solving Using Computer Programming",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,80 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "BMED 601",
+        "courseName": "Biochemistry and Molecular Biology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 602",
+        "courseName": "Biomedical Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 603",
+        "courseName": "Cell Biology and Microscopic Anatomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 604",
+        "courseName": "Fundamentals of Human Physiology",
+        "courseCredits": "5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 605",
+        "courseName": "Introduction to Human Anatomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 610",
+        "courseName": "Principles of Systems Biology",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 611",
+        "courseName": "Molecular Genetics",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 612",
+        "courseName": "Principles of Gross Anatomy",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 613",
+        "courseName": "Pathophysiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 614",
+        "courseName": "Introduction to Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 651",
+        "courseName": "Physician and Society",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 652",
+        "courseName": "Biomedical Career Pathways",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BMED 653",
+        "courseName": "Forum and Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

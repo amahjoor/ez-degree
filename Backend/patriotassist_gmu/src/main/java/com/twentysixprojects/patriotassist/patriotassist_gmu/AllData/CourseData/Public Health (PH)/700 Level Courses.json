@@ -1,0 +1,14 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "PH 702",
+        "courseName": "Public Health Promotion and Disease Prevention",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 720",
+        "courseName": "Principles of Clinical Trials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

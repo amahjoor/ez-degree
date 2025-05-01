@@ -1,0 +1,140 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "EDSE 410",
+        "courseName": "Deaf History",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 315*C or 315XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 412",
+        "courseName": "Braille Code",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 413",
+        "courseName": "Medical and Educational Implications of Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 414",
+        "courseName": "Orientation and Mobility for Students with Blindness and Visual Impairments",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 417",
+        "courseName": "Teaching Methods for Students with Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 418",
+        "courseName": "Curriculum and Assessment of Students with Blindness and Visual Impairments",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 419",
+        "courseName": "Braille Reading and Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((EDSE 311C or 311XS) and (EDSE 412B-)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "EDSE 420",
+        "courseName": "Deaf History and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 316C or 316XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 441",
+        "courseName": "Instructional Strategies for Reading and Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 341C or 341XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 443",
+        "courseName": "Instructional Strategies for Math",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 445",
+        "courseName": "Clinical Practice and Seminar 1: General",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 381C or 381XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 446",
+        "courseName": "Clinical Practice and Seminar 2: General",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 445C or 445XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 451",
+        "courseName": "Transition and Self-Determination",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 452",
+        "courseName": "Intersectionality and Disability",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDSE 201C or 201XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 463",
+        "courseName": "Curriculum and Methods in Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 465",
+        "courseName": "Clinical Practice and Seminar 1: Adapted (Severe Disabilities)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 381C or 381XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 466",
+        "courseName": "Clinical Practice and Seminar 2: Adapted (Severe Disabilities)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: EDSE 465C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "EDSE 467",
+        "courseName": "Foundations of Language and Literacy for Individuals with Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 469",
+        "courseName": "Individualized Supports and Specialized Care of Students with Severe Disabilities",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDSE 481",
+        "courseName": "Internship: Professional Services",
+        "courseCredits": "12 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 381C or 381XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 482",
+        "courseName": "Internship: General Curriculum",
+        "courseCredits": "12 credits",
+        "preRequisite": "Required Prerequisites: EDSE 446C or 446XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "EDSE 483",
+        "courseName": "Internship: Adapted (Severe Disabilities)",
+        "courseCredits": "12 credits",
+        "preRequisite": "Required Prerequisite: EDSE 466C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "EDSE 484",
+        "courseName": "Internship: Blindness and Visual Impairments",
+        "courseCredits": "12 credits",
+        "preRequisite": "Required Prerequisites: (EDSE 413C and 417C and (EDSE 418C or 418XS) and EDSE 419C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

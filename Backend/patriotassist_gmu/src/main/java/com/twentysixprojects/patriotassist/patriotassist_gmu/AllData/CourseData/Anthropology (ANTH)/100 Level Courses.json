@@ -1,0 +1,32 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ANTH 114",
+        "courseName": "Introduction to Cultural Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 120",
+        "courseName": "Unearthing the Past: Prehistory, Culture and Evolution",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 121",
+        "courseName": "People of the Earth: Humanity's First Five Million Years",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 135",
+        "courseName": "Introduction to Biological Anthropology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ANTH 136",
+        "courseName": "Introduction to Biological Anthropology Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisite: ANTH 135*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    }
+]}

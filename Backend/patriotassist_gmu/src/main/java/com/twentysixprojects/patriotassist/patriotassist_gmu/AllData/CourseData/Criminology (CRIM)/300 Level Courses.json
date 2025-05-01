@@ -1,0 +1,80 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "CRIM 301",
+        "courseName": "Public Law and the Judicial Process",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 302",
+        "courseName": "Delinquency and the Juvenile Justice System",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 304",
+        "courseName": "Computer Crime, Forensics, and Auditing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 305",
+        "courseName": "Crime and Crime Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 306",
+        "courseName": "Criminal Justice Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 307",
+        "courseName": "Social Inequality, Crime, and Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 308",
+        "courseName": "Human Rights and Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 310",
+        "courseName": "Introduction to the Intelligence Community",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 312",
+        "courseName": "Intelligence Analysis Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CRIM 310D, L310, 310XS or 310XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "CRIM 315",
+        "courseName": "Research Methods and Analysis in Criminology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 320",
+        "courseName": "Crime and Place",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 325",
+        "courseName": "Hate Crime",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 350",
+        "courseName": "Counterintelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: CRIM 310D, L310, 310XS or 310XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    }
+]}

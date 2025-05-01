@@ -1,0 +1,20 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ITAL 101",
+        "courseName": "Elementary Italian I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ITAL 102",
+        "courseName": "Elementary Italian II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ITAL 110",
+        "courseName": "Elementary Italian",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

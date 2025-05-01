@@ -1,0 +1,26 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "ARTH 600",
+        "courseName": "Methods and Research in Art History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 601",
+        "courseName": "Colloquium in Art History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 696",
+        "courseName": "Independent Directed Readings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 699",
+        "courseName": "Topics in Art History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

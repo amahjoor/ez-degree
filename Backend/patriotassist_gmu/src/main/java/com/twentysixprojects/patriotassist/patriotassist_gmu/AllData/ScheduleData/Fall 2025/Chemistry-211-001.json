@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "General Chemistry I",
+  "CourseSubject": "Chemistry",
+  "CourseNumber": "211",
+  "CourseSection": "001",
+  "CreditHours": "3",
+  "CRN": "74242",
+  "Term": "Fall 2025",
+  "Instructor": "Roy, Pritha (Primary)",
+  "MeetingDays": "Tuesday,Thursday",
+  "MeetingTimes": "09:00 AM - 10:15 AM",
+  "Campus": "Fairfax",
+  "Seats": "64 of 64 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 16:11:07"
+}

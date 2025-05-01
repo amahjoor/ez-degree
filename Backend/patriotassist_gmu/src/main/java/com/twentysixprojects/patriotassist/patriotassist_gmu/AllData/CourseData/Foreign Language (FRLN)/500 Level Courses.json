@@ -1,0 +1,62 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "FRLN 510",
+        "courseName": "Bibliography and Research in Foreign Languages and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 525",
+        "courseName": "Literary Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 530",
+        "courseName": "Topics in Comparative World Literatures",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 550",
+        "courseName": "Special Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 551",
+        "courseName": "Special Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 565",
+        "courseName": "Theory of Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 572",
+        "courseName": "Integrating Technology into Language Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 573",
+        "courseName": "Basic Issues in Language Pedagogy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 575",
+        "courseName": "Heritage Language Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 590",
+        "courseName": "Internship and Seminar in Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

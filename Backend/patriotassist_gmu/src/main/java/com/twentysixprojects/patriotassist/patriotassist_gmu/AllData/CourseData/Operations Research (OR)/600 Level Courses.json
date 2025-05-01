@@ -1,0 +1,164 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "OR 603",
+        "courseName": "Sports Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 604",
+        "courseName": "Data-driven Large-scale Optimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 610",
+        "courseName": "Deep Learning for Predictive Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 635",
+        "courseName": "Discrete System Simulation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 638",
+        "courseName": "Machine Learning for Financial Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: OR 438B- or 538B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "OR 640",
+        "courseName": "Global Optimization and Computational Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 641",
+        "courseName": "Linear Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 642",
+        "courseName": "Integer Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 643",
+        "courseName": "Network Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 644",
+        "courseName": "Nonlinear Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 645",
+        "courseName": "Stochastic Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 646",
+        "courseName": "Stochastic Optimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 647",
+        "courseName": "Queuing Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 649",
+        "courseName": "Topics in Operations Research",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 651",
+        "courseName": "Military Operations Research I: Cost Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 652",
+        "courseName": "Military Operations Research Modeling II: Effectiveness Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 660",
+        "courseName": "Air Transportation Systems Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 664",
+        "courseName": "Bayesian Artificial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 670",
+        "courseName": "Metaheuristics for Optimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 674",
+        "courseName": "Dynamic Programming",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 675",
+        "courseName": "Reliability Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 681",
+        "courseName": "Decision and Risk Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 682",
+        "courseName": "Computational Methods in Engineering and Statistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 683",
+        "courseName": "Principles of Command, Control, Communications, Computing, and Intelligence (C4I)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 688",
+        "courseName": "Financial Systems Engineering II: Derivative Products and Risk Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 690",
+        "courseName": "Optimization of Supply Chains",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "OR 699",
+        "courseName": "Masters Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "NURS 103",
+        "courseName": "Introduction to Professional Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NURS 113",
+        "courseName": "Population Health Nursing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (NURS 103*C+ or 103XS).\n* May be taken concurrently.\nC+ Requires minimum grade of C+.\nXS Requires minimum grade of XS."
+    }
+]}

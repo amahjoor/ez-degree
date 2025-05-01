@@ -1,0 +1,68 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "THR 100",
+        "courseName": "Seminar for New Majors",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 101",
+        "courseName": "Theatrical Medium",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 115",
+        "courseName": "Staging Activism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 150",
+        "courseName": "Global Theater Histories I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 151",
+        "courseName": "Global Theater Histories II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 191",
+        "courseName": "Production Seminar",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 195",
+        "courseName": "Play Production Technical Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 196",
+        "courseName": "Production Practicum",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 197",
+        "courseName": "Literary Management Practicum",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 198",
+        "courseName": "Construction or Admin Practicum",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 199",
+        "courseName": "Production Run Crew Practicum",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

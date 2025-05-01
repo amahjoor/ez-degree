@@ -1,0 +1,38 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "MSF 705",
+        "courseName": "Venture Capital, Private Finance, and Alternative Investments",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MSF 632B and 643B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MSF 706",
+        "courseName": "Investment Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MSF 632B and 643B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MSF 707",
+        "courseName": "Futures, Options and Other Derivatives",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: MSF 706B.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MSF 717",
+        "courseName": "International Finance and Financial Markets",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MSF 632B and 643B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MSF 732",
+        "courseName": "Fixed Income Securities",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MSF 632B and 643B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MSF 777",
+        "courseName": "Student Managed Investment Fund",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: MSF 707B.\nB Requires minimum grade of B."
+    }
+]}

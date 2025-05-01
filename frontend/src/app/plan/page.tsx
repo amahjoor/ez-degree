@@ -3,13 +3,14 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import SemesterPlanner, { SemesterPlannerHandle } from "../components/FourYearPlanner";
 import DegreeRequirementsSidebar from "../components/sidebar/DegreeRequirementsSidebar";
-import WeeklyCalendar from "../components/SemesterCalendar";
+import WeeklyCalendar, { WeeklyCalendarHandle } from '../components/SemesterCalendar';
 import { SkeletonCard } from '../components/ui';
 
 // API configuration
 const API_BASE_URL = '/api';
 
 export default function PlanPage() {
+  const weeklyCalendarRef = useRef<WeeklyCalendarHandle>(null);
   // State to track API availability
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -79,11 +80,9 @@ export default function PlanPage() {
 
   // Function to handle adding a course from the requirements list
   const handleCourseSelect = (courseCode: string, courseTitle: string, courseCredits: number) => {
-    // Add the selected course to the semester planner or weekly calendar
     if (activeView === 'long-term' && semesterPlannerRef.current) {
       semesterPlannerRef.current.addCourse(courseCode, courseTitle, courseCredits);
     }
-    // For weekly view, we could implement a different way to add courses
   };
 
   return (
@@ -183,25 +182,33 @@ export default function PlanPage() {
           <div className="flex flex-1 overflow-hidden">
             {/* Main content area */}
             <div className="flex-1 h-full overflow-hidden">
-              {activeView === 'long-term' ? (
-                <div className="h-full overflow-auto">
-                  <SemesterPlanner ref={semesterPlannerRef} />
-                </div>
-              ) : (
-                <div className="h-full overflow-auto">
-                  <WeeklyCalendar onCourseSelect={handleCourseSelect} />
-                </div>
-              )}
+            <div className="h-full overflow-auto">
+            {/* 4-Year Plan */}
+            <div className={activeView === 'long-term' ? 'block' : 'hidden'}>
+              <SemesterPlanner ref={semesterPlannerRef} />
+            </div>
+
+            {/* Semester Schedule */}
+            <div className={activeView === 'weekly' ? 'block' : 'hidden'}>
+              <WeeklyCalendar ref={weeklyCalendarRef} />
+            </div>
+        </div>
             </div>
             
             {/* Sidebar - preserve state but toggle display instantly */}
             <div className={`${isSidebarCollapsed ? 'w-0 overflow-hidden border-0' : 'w-1/4 border-l border-gray-200'} h-full`}>
               <div className={`${isSidebarCollapsed ? 'invisible' : 'visible'} w-full h-full`}>
-                <DegreeRequirementsSidebar 
-                  onCourseSelect={handleCourseSelect}
-                  isApiAvailable={isApiAvailable}
-                  onApiConnectionRetry={checkApiConnection}
-                />
+              <DegreeRequirementsSidebar
+                onCourseSelect={handleCourseSelect}
+                onAddSessions={(sessions) => {
+                  // only inject into the weekly calendar if that's active
+                  if (activeView === 'weekly' && weeklyCalendarRef.current) {
+                    weeklyCalendarRef.current.addSessions(sessions);
+                  }
+                }}
+                isApiAvailable={isApiAvailable}
+                onApiConnectionRetry={checkApiConnection}
+              />
               </div>
             </div>
           </div>

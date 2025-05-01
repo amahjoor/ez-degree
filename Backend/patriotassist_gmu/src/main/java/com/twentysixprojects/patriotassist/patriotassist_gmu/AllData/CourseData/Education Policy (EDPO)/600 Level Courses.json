@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDPO 600",
+        "courseName": "History of Education Reform",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDPO 601",
+        "courseName": "P-12 Policy Challenges",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDPO 602",
+        "courseName": "Higher Education Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDPO 603",
+        "courseName": "Conflict and Consensus: Education, Interest Groups and Advocacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDPO 604",
+        "courseName": "Education Policy Implementation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

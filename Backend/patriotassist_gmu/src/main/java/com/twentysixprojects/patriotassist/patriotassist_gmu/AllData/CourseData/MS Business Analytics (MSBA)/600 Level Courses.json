@@ -1,0 +1,62 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "MSBA 601",
+        "courseName": "Statistics and Software for Business Analytics",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 610",
+        "courseName": "Essentials for Business Analytics: From Data Ethics to Data Driven Decision-making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 615",
+        "courseName": "Database Management for Business Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 618",
+        "courseName": "Programming for Business Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 625",
+        "courseName": "Exploratory Data Analysis and Visualization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 639",
+        "courseName": "Supply Chain Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 655",
+        "courseName": "Retailing Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 663",
+        "courseName": "Pricing Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 692",
+        "courseName": "Practicum in Business Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MSBA 697",
+        "courseName": "Special Topics in Business Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

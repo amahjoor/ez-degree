@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "DSGN 101",
+        "courseName": "Introduction to Design Thinking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DSGN 102",
+        "courseName": "Design in the Modern World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

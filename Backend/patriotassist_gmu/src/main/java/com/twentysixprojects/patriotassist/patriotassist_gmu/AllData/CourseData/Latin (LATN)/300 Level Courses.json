@@ -1,0 +1,14 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "LATN 351",
+        "courseName": "Roman Prose Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LATN 352",
+        "courseName": "Roman Poetry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

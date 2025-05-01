@@ -1,0 +1,20 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "CVPA 700",
+        "courseName": "Academic Writing in the Arts",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CVPA 701",
+        "courseName": "Thesis and Project Writing",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CVPA 705",
+        "courseName": "Questions and Frameworks in the Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CVPA 620B-.\nB- Requires minimum grade of B-."
+    }
+]}

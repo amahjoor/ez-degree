@@ -1,0 +1,32 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "CLIM 101",
+        "courseName": "Global Warming: Weather, Climate, and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 102",
+        "courseName": "Introduction to Global Climate Change Science",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 103",
+        "courseName": "Global Warming: Weather, Climate, and Society Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: CLIM 101C or 101XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CLIM 111",
+        "courseName": "Introduction to the Fundamentals of Atmospheric Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CLIM 112",
+        "courseName": "Introduction to the Fundamentals of Atmospheric Science Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (PHYS 111*C, CLIM 111*C, PHYS 111XS or CLIM 111XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

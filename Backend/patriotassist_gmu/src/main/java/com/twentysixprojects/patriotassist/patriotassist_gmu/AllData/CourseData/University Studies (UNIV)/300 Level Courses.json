@@ -1,0 +1,104 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "UNIV 300",
+        "courseName": "Transfer Transition",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 302",
+        "courseName": "College of Science Transfer Transition",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 303",
+        "courseName": "Veteran Transition",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 306",
+        "courseName": "Mason Transitions for Diverse Learners III",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 308",
+        "courseName": "Mason Transition",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 310",
+        "courseName": "Academic Success",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 320",
+        "courseName": "Internship and Career Readiness",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 330",
+        "courseName": "Peer Leadership: Peer Advisors",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 331",
+        "courseName": "Peer Leadership: Patriot Leaders",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 332",
+        "courseName": "Peer Leadership: Resident Advisors",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 333",
+        "courseName": "Peer Leadership: Peer Mentors",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 350",
+        "courseName": "Third Year Living Learning Communities",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 370",
+        "courseName": "Special Topics",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 372",
+        "courseName": "Mental Health First Aid",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 380",
+        "courseName": "Bonner Seminar Continuation",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 381",
+        "courseName": "Foundations for Building a Just Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 391",
+        "courseName": "Students as Scholars Scholarly Inquiry",
+        "courseCredits": "0-9 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

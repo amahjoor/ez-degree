@@ -1,0 +1,128 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "PUAD 700",
+        "courseName": "Ethics and Public Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PUAD 502B) and (PUAD 511B, POGO 511B, PUBP 511B or PUAD 611B) and (PUAD 520B or 620B) and (PUAD 540B or 640B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "PUAD 701",
+        "courseName": "Cross-Cultural and Ethical Dimensions of International Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 703",
+        "courseName": "Collaborative Public Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PUAD 502B) and (PUAD 511B, POGO 511B, PUBP 511B or PUAD 611B) and (PUAD 520B or 620B) and (PUAD 540B or 640B).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "PUAD 720",
+        "courseName": "Performance Measurement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 727",
+        "courseName": "Seminar in Risk Assessment and Decision Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 729",
+        "courseName": "Issues in Public Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 730",
+        "courseName": "Professional Development Workshop",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 731",
+        "courseName": "Homeland/Transportation Security Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 738",
+        "courseName": "Issues in International Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 739",
+        "courseName": "Issues in International Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 749",
+        "courseName": "Issues in Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 758",
+        "courseName": "Environmental Politics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 759",
+        "courseName": "Issues in Local Government Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 769",
+        "courseName": "Issues in Public Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 781",
+        "courseName": "Information Management: Technology and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 790",
+        "courseName": "Justice Organization and Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 791",
+        "courseName": "Justice Program Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 792",
+        "courseName": "Advanced Seminar in Applied Public Administration Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 793",
+        "courseName": "Conduct of Justice Organizations at the Street Level",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 795",
+        "courseName": "Leadership in Justice and Security Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUAD 797",
+        "courseName": "Changing Justice and Security Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

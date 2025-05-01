@@ -1,0 +1,74 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "PHYS 103",
+        "courseName": "Physics and Everyday Phenomena I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 104",
+        "courseName": "Physics and Everyday Phenomena II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 106",
+        "courseName": "The Quantum World: A Continuous Revolution in What We Know and How We Live",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 111",
+        "courseName": "Introduction to the Fundamentals of Atmospheric Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 112",
+        "courseName": "Introduction to the Fundamentals of Atmospheric Science Lab",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (PHYS 111*C, CLIM 111*C, PHYS 111XS or CLIM 111XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 122",
+        "courseName": "Inside Relativity",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 123",
+        "courseName": "Inside the Quantum World",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 124",
+        "courseName": "Experimental Explorations in Physics",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 131",
+        "courseName": "Introduction to Renewable Energy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 160",
+        "courseName": "University Physics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 114*C, 114XS, 116*C or 116XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 161",
+        "courseName": "University Physics I Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (PHYS 160*C, 160XS, 170*C or 170XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 170",
+        "courseName": "Introductory and Modern Physics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 113*C or 113XS.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

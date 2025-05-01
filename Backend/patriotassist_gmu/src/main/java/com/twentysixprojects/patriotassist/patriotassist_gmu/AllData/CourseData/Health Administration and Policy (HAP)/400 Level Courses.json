@@ -1,0 +1,164 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "HAP 403",
+        "courseName": "Assisted Living/Senior Housing Management and Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 404",
+        "courseName": "Senior Housing Sales and Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 408",
+        "courseName": "Societal and Health Related Needs of the Aging Population",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 410",
+        "courseName": "Introduction to Health/Medical Practice Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HAP 301C or 301XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 411",
+        "courseName": "Introduction to Revenue Cycle Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 416",
+        "courseName": "Leadership and Management of Health Systems I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 417",
+        "courseName": "Leadership and Management of Health Systems II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HAP 416C or 416XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 425",
+        "courseName": "Health Economics and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HAP 301C or 301XS) and (ECON 103C or 103XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 430",
+        "courseName": "Process Improvement in Healthcare Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HAP 301C or 301XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 436",
+        "courseName": "Electronic Health Data in Process Improvement",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 440",
+        "courseName": "Mobile Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 442",
+        "courseName": "Introduction to Health Care Politics and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HAP 301C or 301XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 445",
+        "courseName": "Introduction to Health Services Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HAP 301C or 301XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 455",
+        "courseName": "Computer Programming in Health Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((HAP 318C, 318XS, IT 106C, 106XS, 109C or 109XS) and (HAP 361C, 361XS, IT 214C or 214XS) and (HAP 464C or 464XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 456",
+        "courseName": "Health Data Mining and Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 458",
+        "courseName": "Clinical Informatics Applications in a Health Care Setting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((HAP 318C or 318XS) and (HAP 360C or 360XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 459",
+        "courseName": "Health Data Standards and Interoperability",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 460",
+        "courseName": "Information Technology Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 461",
+        "courseName": "Internet and Web Technology Applications for Healthcare",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 462",
+        "courseName": "Privacy and Security in Health Informatics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 464",
+        "courseName": "Electronic Health Record Configuration and Data Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 465",
+        "courseName": "Integration of Professional Skills and Issues",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (HAP 301C or 301XS) and (ENGH 302C or 302XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 467",
+        "courseName": "Advanced Information Technology Project Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 489",
+        "courseName": "Pre-Internship Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: HAP 301C or 301XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 494",
+        "courseName": "Special Topics in Health Administration and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "HAP 498",
+        "courseName": "Health Administration Internship",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: HAP 489 or 489XS.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "HAP 499",
+        "courseName": "Independent Study in Health Administration and Policy",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

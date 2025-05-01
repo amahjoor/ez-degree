@@ -1,0 +1,224 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "PHIL 301",
+        "courseName": "History of Western Philosophy: Ancient",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 303",
+        "courseName": "History of Western Philosophy: Modern",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 305",
+        "courseName": "Business Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 306",
+        "courseName": "Philosophy Internship",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 309",
+        "courseName": "Bioethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 311",
+        "courseName": "Philosophy of Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 323",
+        "courseName": "Classical Western Political Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 324",
+        "courseName": "Modern Western Political Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 325",
+        "courseName": "Karl Marx's Social and Political Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 327",
+        "courseName": "Contemporary Western Political Theory",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 329",
+        "courseName": "Philosophy after Auschwitz",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 332",
+        "courseName": "Issues in Analytic Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 333",
+        "courseName": "American Philosophy: Pragmatism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 335",
+        "courseName": "Nineteenth-Century Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 336",
+        "courseName": "Twentieth-Century Continental Thought: Existentialism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 337",
+        "courseName": "Twentieth-Century Continental Thought: Phenomenology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 338",
+        "courseName": "Philosophy, Race, and Gender",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 339",
+        "courseName": "Recent Continental Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 340",
+        "courseName": "Hermeneutic Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 343",
+        "courseName": "Topics in Environmental Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 344",
+        "courseName": "Ethical Issues in Global Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 345",
+        "courseName": "Topics in Philosophy of Technology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 353",
+        "courseName": "Theories of Justice",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 355",
+        "courseName": "Theories of Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 356",
+        "courseName": "Philosophy of Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 357",
+        "courseName": "Philosophy of the Social Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 358",
+        "courseName": "Ethics and Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 371",
+        "courseName": "Philosophy of the Natural Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 372",
+        "courseName": "Conceptual Foundations of the Life Sciences",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 373",
+        "courseName": "Theory of Knowledge",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 374",
+        "courseName": "Philosophy of Mind",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 376",
+        "courseName": "Symbolic Logic",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 377",
+        "courseName": "The Darwinian Revolution in Modern Thought",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 379",
+        "courseName": "Perspectives on Time",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 391",
+        "courseName": "Special Topics in Philosophy",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 393",
+        "courseName": "Humanities College to Career",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 398",
+        "courseName": "Study Abroad",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

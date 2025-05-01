@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PUBP 601",
+        "courseName": "Theory and Practice of Regional Economic Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 602",
+        "courseName": "Regional Economic Development: Strategies and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 605",
+        "courseName": "State and Local Government Policy and Economic Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 610",
+        "courseName": "Organizations, Management, and Work: Theory and Practice",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 611",
+        "courseName": "Critical Infrastructure Protection in Theory, Policy and Practice",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 650",
+        "courseName": "International Conflict and Crisis Response",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 651",
+        "courseName": "Peace and Stabilization Operations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 652",
+        "courseName": "Strategies for Peace and Stabilization Operations",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 653",
+        "courseName": "Interagency Operations in Conflict and Post-Conflict Settings",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 654",
+        "courseName": "Analysis for Peace Operations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PUBP 655",
+        "courseName": "State- and Institution-Building",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

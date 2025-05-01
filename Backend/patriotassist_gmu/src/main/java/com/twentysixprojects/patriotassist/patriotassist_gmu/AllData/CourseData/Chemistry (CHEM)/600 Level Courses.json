@@ -1,0 +1,98 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "CHEM 613",
+        "courseName": "Modern Polymer Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 614",
+        "courseName": "Physical Organic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 620",
+        "courseName": "Modern Instrumentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 624",
+        "courseName": "Principles of Chemical Separation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 625",
+        "courseName": "Electroanalytical Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 627",
+        "courseName": "Aquatic Environmental Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 633",
+        "courseName": "Chemical Thermodynamics and Kinetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 641",
+        "courseName": "Solid State Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 646",
+        "courseName": "Bioinorganic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 651",
+        "courseName": "Environmental Chemistry of Organic Substances",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 660",
+        "courseName": "Protein Biochemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 661",
+        "courseName": "Antibiotic Chemistry and Resistance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 662",
+        "courseName": "Modern Methods of Drug Discovery",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 665",
+        "courseName": "Protein-Protein Interactions: Methods and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 670",
+        "courseName": "Teaching Practicum",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 680",
+        "courseName": "Fundamentals of Nanoscience and Nanomaterials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

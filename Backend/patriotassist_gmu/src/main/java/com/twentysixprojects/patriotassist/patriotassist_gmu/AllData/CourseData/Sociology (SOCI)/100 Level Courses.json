@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "SOCI 101",
+        "courseName": "Introductory Sociology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 120",
+        "courseName": "Globalization and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

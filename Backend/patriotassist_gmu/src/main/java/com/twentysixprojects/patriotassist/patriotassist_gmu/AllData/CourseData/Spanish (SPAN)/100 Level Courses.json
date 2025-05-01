@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "SPAN 101",
+        "courseName": "Elementary Spanish I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 102",
+        "courseName": "Elementary Spanish II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 110",
+        "courseName": "Elementary Spanish",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 115",
+        "courseName": "Review of Elementary Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

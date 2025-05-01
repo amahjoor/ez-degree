@@ -1,0 +1,92 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "MKTG 303",
+        "courseName": "Principles of Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 307",
+        "courseName": "Federal Government Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 310",
+        "courseName": "Consultative Selling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MKTG 311",
+        "courseName": "Sales Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 312",
+        "courseName": "Consumer Behavior",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 313",
+        "courseName": "Advertising and Marketing Communications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 315",
+        "courseName": "Digital Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 316",
+        "courseName": "Social Media Marketing Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 332",
+        "courseName": "Retailing and E-Commerce Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 333",
+        "courseName": "Business to Business Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 335",
+        "courseName": "Strategic Brand Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 303C or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 351",
+        "courseName": "Marketing Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C, L301, 303C, 303XS or L303) and (BUS 310C, L310, 310XS, STAT 250C, 250XS or L250).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 352",
+        "courseName": "Marketing Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or (MKTG 303C, 303XS or L303) or MBUS 303C or 303XS and (BUS 310C, 310XS, STAT 350C or 350XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 353",
+        "courseName": "New Product Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or (MBUS 303C, L303 or 303XS) or (MKTG 303C, L303 or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 355",
+        "courseName": "Direct Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

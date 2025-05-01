@@ -1,0 +1,26 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ENGR 395",
+        "courseName": "Engineering Internship",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGR 396",
+        "courseName": "Engineering Co-Op I",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ENGR 397",
+        "courseName": "Engineering Co-Op II",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "Required Prerequisite: ENGR 396C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ENGR 398",
+        "courseName": "Applied Engineering Abroad",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

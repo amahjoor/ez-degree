@@ -1,0 +1,140 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "ECON 306",
+        "courseName": "Intermediate Microeconomics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 308",
+        "courseName": "Managerial Economics and Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 309",
+        "courseName": "Economic Problems and Public Policies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 310",
+        "courseName": "Money and Banking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 311",
+        "courseName": "Intermediate Macroeconomics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 321",
+        "courseName": "Economics of Labor",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 330",
+        "courseName": "Public Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 335",
+        "courseName": "Environmental Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 340",
+        "courseName": "Introduction to Mathematical Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ECON 306C or 306XS) and (ECON 311C or 311XS) and (MATH 113C or 113XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ECON 345",
+        "courseName": "Introduction to Econometrics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((ECON 306D, 306XS or 306XP) and (ECON 311D, 311XS or 311XP)) and (((STAT 250D, 250XS or 250XP) and (STAT 350D, L350, 350XS or 350XP)) or ((STAT 344D, 344XS or 344XP) and (STAT 354D, 354XS or 354XP)) or ((BUS 210D, 210XS or 210XP) and (BUS 310D, 310XS or 310XP)))).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "ECON 355",
+        "courseName": "The Political Economy of Nonprofit Institutions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 360",
+        "courseName": "Economics of Developing Areas",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 361",
+        "courseName": "Economic Development of Latin America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 362",
+        "courseName": "African Economic Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 365",
+        "courseName": "Topics in Economic History",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 367",
+        "courseName": "Money, Markets, and Economic Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 370",
+        "courseName": "Economics of Industrial Organization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 374",
+        "courseName": "Health Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 380",
+        "courseName": "Economies in Transition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 385",
+        "courseName": "International Economic Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 390",
+        "courseName": "International Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 395",
+        "courseName": "Effective Writing in Economics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ECON 398",
+        "courseName": "Internship",
+        "courseCredits": "3-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

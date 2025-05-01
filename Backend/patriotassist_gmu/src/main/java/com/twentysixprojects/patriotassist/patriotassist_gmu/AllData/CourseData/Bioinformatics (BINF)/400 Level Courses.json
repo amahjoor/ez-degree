@@ -1,0 +1,56 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "BINF 401",
+        "courseName": "Bioinformatics and Computational Biology I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 402",
+        "courseName": "Bioinformatics and Computational Biology II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 403",
+        "courseName": "Bioinformatics and Computational Biology Lab I",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 404",
+        "courseName": "Bioinformatics and Computational Biology Lab II",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 450",
+        "courseName": "Bioinformatics for Life Sciences",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 470",
+        "courseName": "Molecular Biophysics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 490",
+        "courseName": "Independent Senior Research in Bioinformatics and Computational Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 491",
+        "courseName": "Senior Thesis in Bioinformatics",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BINF 492",
+        "courseName": "Senior Thesis in Bioinformatics",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

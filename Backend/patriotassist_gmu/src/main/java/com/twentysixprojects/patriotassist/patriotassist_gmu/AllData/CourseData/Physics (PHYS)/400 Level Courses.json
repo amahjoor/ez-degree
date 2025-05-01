@@ -1,0 +1,98 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "PHYS 402",
+        "courseName": "Introduction to Quantum Mechanics and Atomic Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 303C or 303XS) and (PHYS 305C or 305XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 403",
+        "courseName": "Quantum Mechanics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 402C or 402XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 405",
+        "courseName": "Honors Thesis in Physics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 301C or 301XS) and (PHYS 303C or 303XS) and (PHYS 305C or 305XS) and (PHYS 307C or 307XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 406",
+        "courseName": "Honors Thesis in Physics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: PHYS 405C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "PHYS 407",
+        "courseName": "Senior Laboratory in Modern Physics",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 311C or 311XS) and (PHYS 312C or 312XS) and (PHYS 402C or 402XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 408",
+        "courseName": "Senior Research",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 301C or 301XS) and (PHYS 303C or 303XS) and (PHYS 305C or 305XS) and (PHYS 307C or 307XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 409",
+        "courseName": "Physics Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 301C or 301XS) and (PHYS 303C or 303XS) and (PHYS 305C or 305XS) and (PHYS 307C or 307XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 410",
+        "courseName": "Computational Physics Capstone",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 251C or 251XS) and (PHYS 325C or ASTR 401C) and (PHYS 303C or 303XS) and (PHYS 305C or 305XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 411",
+        "courseName": "Renewable Energy Internship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 131C or 131XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 412",
+        "courseName": "Solid State Physics and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 402C, 402XS, 502B- or 502XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "PHYS 416",
+        "courseName": "Undergraduate Physics Review",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (PHYS 301C or 301XS) and (PHYS 303C or 303XS) and (PHYS 305C or 305XS) and (PHYS 307C or 307XS) and (PHYS 402C or 402XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 417",
+        "courseName": "Geophysics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 428",
+        "courseName": "Relativity",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 303C or 303XS) and (PHYS 305C or 305XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 440",
+        "courseName": "Nuclear and Particle Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 402C, 402XS, 502B- or 502XS) and (PHYS 428*C or 428*XS).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "PHYS 465",
+        "courseName": "Planetary Atmospheres and Ionospheres",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 260C or 260XS) and (PHYS 301C or 301XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 475",
+        "courseName": "Atmospheric Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 170C, 262C, 262XS, 307C or 307XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

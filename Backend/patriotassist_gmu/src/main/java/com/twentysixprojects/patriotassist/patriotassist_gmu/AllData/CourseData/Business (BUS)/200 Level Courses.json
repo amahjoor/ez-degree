@@ -1,0 +1,26 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "BUS 200",
+        "courseName": "Global Environment of Business",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BUS 210",
+        "courseName": "Business Analytics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BUS 292",
+        "courseName": "Internship for Academic Credit",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: BUS 103B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "BUS 295",
+        "courseName": "Business Models For Sustainability",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

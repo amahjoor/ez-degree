@@ -1,0 +1,86 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "MATH 104",
+        "courseName": "Trigonometry and Transcendental Functions",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (minimum score of 07 in 'Math Placement Algebra II' or MATH 103T)."
+    },
+    {
+        "courseTitle": "MATH 105",
+        "courseName": "Precalculus Mathematics",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (minimum score of 13 in 'Math Placement Algebra I', MATH 103T or minimum score of 55 in 'Math Placement Aleks')."
+    },
+    {
+        "courseTitle": "MATH 106",
+        "courseName": "Quantitative Reasoning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 108",
+        "courseName": "Introductory Calculus with Business Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (minimum score of 13 in 'Math Placement Algebra I', MATH 103TC or minimum score of 55 in 'Math Placement Aleks').\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MATH 110",
+        "courseName": "Introductory Probability",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 111",
+        "courseName": "Linear Mathematical Modeling",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MATH 113",
+        "courseName": "Analytic Geometry and Calculus I",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (minimum score of 07 in 'Math Placement Transcendentals', MATH 105C, 105XS, 104C or minimum score of 80 in 'Math Placement Aleks').\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 114",
+        "courseName": "Analytic Geometry and Calculus II",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: ((MATH 113C, 113XS or U113) or ((MATH 123C or 123XS) and (MATH 124C or 124XS) or MATH 115C)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 115",
+        "courseName": "Analytic Geometry and Calculus I (Honors)",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (minimum score of 65 in 'Math Placement Transcendentals' or minimum score of 80 in 'Math Placement Aleks')."
+    },
+    {
+        "courseTitle": "MATH 116",
+        "courseName": "Analytic Geometry and Calculus II (Honors)",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: MATH 115C, 115XS, U115, 113A or 113XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nA Requires minimum grade of A."
+    },
+    {
+        "courseTitle": "MATH 123",
+        "courseName": "Calculus with Algebra/Trigonometry, Part A",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((minimum score of 13 in 'Math Placement Algebra I' and minimum score of 07 in 'Math Placement Algebra II') or minimum score of 65 in 'Math Placement Aleks') or MATH 105C, 105XS or 104C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 124",
+        "courseName": "Calculus with Algebra/Trigonometry, Part B",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MATH 123C or 123XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 125",
+        "courseName": "Discrete Mathematics I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (minimum score of 13 in 'Math Placement Algebra I', MATH 103T, 105C, 105XS, 108C, 108XS, 113XS, 113C, 115C, 123C or minimum score of 65 in 'Math Placement Aleks').\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MATH 175",
+        "courseName": "Mathematics of Cryptography: An Introduction",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

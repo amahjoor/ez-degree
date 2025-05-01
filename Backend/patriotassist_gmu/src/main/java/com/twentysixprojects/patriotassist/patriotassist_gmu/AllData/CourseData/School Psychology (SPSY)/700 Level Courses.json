@@ -1,0 +1,68 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "SPSY 709",
+        "courseName": "Cognitive Assessment",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 710",
+        "courseName": "Social, Emotional, and Behavioral Assessment",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (SPSY 709B-, 709XS, PSYC 810B- or 810XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPSY 722",
+        "courseName": "Advanced Child Assessment",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (((SPSY 709B- or 709XS) and (SPSY 710B- or 710XS) and (SPSY 750B- or 750XS)) or ((PSYC 810B- or 810XS) and (PSYC 811B- or 811XS))).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPSY 750",
+        "courseName": "Cognitive Assessment Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SPSY 709B- or 709XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPSY 751",
+        "courseName": "Advanced Assessment Practicum in School Psychology I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SPSY 709B- or 709XS) and (SPSY 710B- or 710XS) and (SPSY 722B- or 722XS) and (SPSY 750B- or 750XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPSY 752",
+        "courseName": "Advanced Assessment Practicum in School Psychology II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SPSY 709B- or 709XS) and (SPSY 710B- or 710XS) and (SPSY 722B- or 722XS) and (SPSY 750B- or 750XS) and (SPSY 751B- or 751XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPSY 753",
+        "courseName": "Diversity, Equity, and Social Justice in Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 773",
+        "courseName": "Prevention, Intervention, and Consultation in Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 775",
+        "courseName": "Prevention Intervention Consultation Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPSY 773B- or 773XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPSY 790",
+        "courseName": "School Psychology Internship",
+        "courseCredits": "3-5 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPSY 792",
+        "courseName": "Prevention Intervention Consultation Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPSY 773B- or 773XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

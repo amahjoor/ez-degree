@@ -1,0 +1,110 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "LING 714",
+        "courseName": "Experimental Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 715",
+        "courseName": "Statistical Methods in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 716",
+        "courseName": "Linguistic Field Methods",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 717",
+        "courseName": "Computational and Quantitative Methods in Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 731",
+        "courseName": "Phonetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 732",
+        "courseName": "Phonology A",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 733",
+        "courseName": "Phonology B",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 735",
+        "courseName": "Morphology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 736",
+        "courseName": "Syntax A",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 737",
+        "courseName": "Syntax B",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 738",
+        "courseName": "Semantics and Pragmatics 2",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 741",
+        "courseName": "First Language Acquisition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 742",
+        "courseName": "Second Language Acquisition 2",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: LING 542B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "LING 775",
+        "courseName": "Computational Linguistics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (LING 675B- or 675XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "LING 788",
+        "courseName": "Semantics and Pragmatics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 795",
+        "courseName": "Laboratory Research Experience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 798",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LING 799",
+        "courseName": "Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

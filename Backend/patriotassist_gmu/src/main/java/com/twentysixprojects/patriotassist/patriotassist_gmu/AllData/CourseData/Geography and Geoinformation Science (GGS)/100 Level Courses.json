@@ -1,0 +1,38 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "GGS 101",
+        "courseName": "Major World Regions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 102",
+        "courseName": "Physical Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 103",
+        "courseName": "Human Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 110",
+        "courseName": "Introduction to Geoinformation Technologies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 121",
+        "courseName": "Dynamic Atmosphere and Hydrosphere",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 122",
+        "courseName": "Dynamic Geosphere and Ecosphere",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

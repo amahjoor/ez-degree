@@ -1,0 +1,38 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "RELI 211",
+        "courseName": "Introduction to Religions of the \"West\"",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 212",
+        "courseName": "Introduction to Religions of Asia",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 235",
+        "courseName": "Religion and Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 236",
+        "courseName": "Religion and Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 237",
+        "courseName": "Religion and Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "RELI 240",
+        "courseName": "Death and the Afterlife in Religion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

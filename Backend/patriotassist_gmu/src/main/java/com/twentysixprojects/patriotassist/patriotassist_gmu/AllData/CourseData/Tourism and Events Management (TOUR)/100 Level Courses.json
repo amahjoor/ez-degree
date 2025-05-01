@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "TOUR 110",
+        "courseName": "Professionalism and Civility",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TOUR 190",
+        "courseName": "Wedding Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,362 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "LAW 300",
+        "courseName": "Reg Comments Practicum (E)(W)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 301",
+        "courseName": "Statistics for Lawyers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 303",
+        "courseName": "Negotiation&Lgl Settlement(E W",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 304",
+        "courseName": "Legal Practicum: Global Antitrust Regulatory Comments (E, W)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 306",
+        "courseName": "Patent Office Litigation",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 309",
+        "courseName": "Mason Vets&Srvcmemb Clinic (E)",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 310",
+        "courseName": "FDA Regulation",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 312",
+        "courseName": "Sales",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 313",
+        "courseName": "Refugee & Asylum Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 314",
+        "courseName": "Remedies",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 315",
+        "courseName": "Regulated Industries (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 317",
+        "courseName": "Securities Law & Regulat",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 318",
+        "courseName": "Regulation of Tech Economy (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 319",
+        "courseName": "Firearms Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 320",
+        "courseName": "Supervised Externship (E)",
+        "courseCredits": "2,3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 321",
+        "courseName": "Supervised Externship (E)",
+        "courseCredits": "3,4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 322",
+        "courseName": "Sec Fin & Insol I",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 325",
+        "courseName": "Supv Externship-Capitol Hill(E",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 326",
+        "courseName": "Leg Clinic\u2013Innovation Law(E)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 327",
+        "courseName": "Trademark Law",
+        "courseCredits": "2,3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 328",
+        "courseName": "Trial Advocacy (E)",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 329",
+        "courseName": "Trial Advocacy for Competitors (E",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisite: (LAW 222*D-).\n* May be taken concurrently.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 330",
+        "courseName": "Trusts & Estates",
+        "courseCredits": "2-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 331",
+        "courseName": "Advanced Trial Advocacy (E)",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: LAW 222D- and 328CR or LAW 329CR.\nD- Requires minimum grade of D-.\nCR Requires minimum grade of CR."
+    },
+    {
+        "courseTitle": "LAW 332",
+        "courseName": "Consumer Protection Law",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 333",
+        "courseName": "Virginia Remedies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 334",
+        "courseName": "Virginia Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: LAW 112D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 335",
+        "courseName": "Child Welfare Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 337",
+        "courseName": "White Collar Crime",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 338",
+        "courseName": "Patent Law",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 340",
+        "courseName": "History of American Legal Education (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 342",
+        "courseName": "Readings in Legal Thought (W)",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 345",
+        "courseName": "Scientific & Expert Evid",
+        "courseCredits": "2,3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 346",
+        "courseName": "Comparative Constitutional Lw",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 347",
+        "courseName": "Trade Secrets Law",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 348",
+        "courseName": "Alt Dispute Resolution (E,W)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 349",
+        "courseName": "Patent Litigation at ITC (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: LAW 284D- or 338D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 350",
+        "courseName": "Jurisprudence",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 351",
+        "courseName": "Pat Writ Theory & Prac",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: LAW 284D- and 292D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 354",
+        "courseName": "Startup Law (W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 357",
+        "courseName": "Mental Illness Law",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 359",
+        "courseName": "State & Local Tax",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 360",
+        "courseName": "International Criminal Law (W)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 364",
+        "courseName": "Administrative Law Clinic (E)",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "Required Prerequisite: LAW 116D-.\nD- Requires minimum grade of D-."
+    },
+    {
+        "courseTitle": "LAW 365",
+        "courseName": "Employment Law",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 367",
+        "courseName": "Intellectual Property",
+        "courseCredits": "0-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 368",
+        "courseName": "Pretrial Practice (E W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 370",
+        "courseName": "Firearms Law and the Second Amendment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 373",
+        "courseName": "Separation of Powers",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 378",
+        "courseName": "Comparative Reg &Public Policy",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 379",
+        "courseName": "American Legal History (W)",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 382",
+        "courseName": "Election Law",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 384",
+        "courseName": "National Security Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 388",
+        "courseName": "Homeland Security Law",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 389",
+        "courseName": "Crim Procedure: Adjudication",
+        "courseCredits": "0-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 390",
+        "courseName": "Sexuality & the Law",
+        "courseCredits": "2,3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 391",
+        "courseName": "Int'l Commercial Arbitration",
+        "courseCredits": "0-2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 392",
+        "courseName": "Sports Law",
+        "courseCredits": "2-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 393",
+        "courseName": "Financial Crises, Panics & Reg",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "LAW 394",
+        "courseName": "Law Practice Management (E, W)",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

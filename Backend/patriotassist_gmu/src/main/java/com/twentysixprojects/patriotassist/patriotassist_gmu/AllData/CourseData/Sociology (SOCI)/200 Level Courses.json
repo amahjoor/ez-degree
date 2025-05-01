@@ -1,0 +1,20 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "SOCI 208",
+        "courseName": "Introduction to Race and Ethnicity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 213",
+        "courseName": "Statistics for the Behavioral Sciences",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SOCI 215",
+        "courseName": "Gender and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

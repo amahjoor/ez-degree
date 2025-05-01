@@ -1,0 +1,32 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CEIE 203",
+        "courseName": "Geomatics and Engineering Graphics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CDS 130C, 130XS, CS 109C, 109XS, 112C, 112XS, SYST 130C, 130XS or ENGR 125T).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 210",
+        "courseName": "Statics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 160C or 160XS) and (MATH 114C, 114XS, 116C or 116XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 240",
+        "courseName": "Hydraulics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 160C or 160XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 241",
+        "courseName": "Hydraulics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 160C or 160XS) and CEIE 242*C.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "CEIE 242",
+        "courseName": "Hydraulics Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: (PHYS 160C or 160XS) and CEIE 241*C.\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

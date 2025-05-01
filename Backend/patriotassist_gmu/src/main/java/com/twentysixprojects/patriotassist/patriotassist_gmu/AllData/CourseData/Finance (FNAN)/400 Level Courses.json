@@ -1,0 +1,140 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "FNAN 401",
+        "courseName": "Advanced Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 301B- or L301) or (FNAN 303B- or L303).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 411",
+        "courseName": "Investment Analysis and Portfolio Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 311C, 311XS or L311).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 412",
+        "courseName": "Futures and Options Markets",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 311C, 311XS or L311).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 421",
+        "courseName": "Money and Capital Markets",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 321C, 321XS or L321).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 430",
+        "courseName": "Empirical Methods in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 311C, 311XS, 321C or 321XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 431",
+        "courseName": "Venture Capital and Private Financing of Startups",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FNAN 301B- or 303B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 432",
+        "courseName": "Fixed-Income Securities",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 311C or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 436",
+        "courseName": "Probability Methods for Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 301C, L301C, 303C, 303XS or L303C) and (OM 210C, BUS 210C or 210XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 440",
+        "courseName": "International Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FNAN 301B- or 303B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 441",
+        "courseName": "Advanced Topics in Firm Valuation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FNAN 341C, 341XS or 302C.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 444",
+        "courseName": "Sustainable and ESG Investments",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: FNAN 303B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 451",
+        "courseName": "Real Estate Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 351C, 351XS or L351).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 454",
+        "courseName": "Real Estate Development and Investment Fund",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 351C, 351XS or L351).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 462",
+        "courseName": "Honors Seminar in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FNAN 472",
+        "courseName": "Fintech and Blockchain in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FNAN 301B- or 303B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 477",
+        "courseName": "Student Managed Investment Fund",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FNAN 311B- or 341B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 483",
+        "courseName": "Ethical and Professional Standards in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: FNAN 303B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 488",
+        "courseName": "Applied Equity Research",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FNAN 491",
+        "courseName": "Special Topics in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (FNAN 301C or L301) or (FNAN 303C or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 492",
+        "courseName": "Internship in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FNAN 301B- or 303B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "FNAN 493",
+        "courseName": "Financial Planning and Wealth Management Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 390C, 390XS, FNAN 390XS or 390C) and ((FNAN 311C or 311XS) and (ACCT 351C or 351XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 498",
+        "courseName": "RS: Contemporary Topics in Finance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: FNAN 341C, 341XS, 311C, 311XS, 321C, 321XS, 401C or 401XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FNAN 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

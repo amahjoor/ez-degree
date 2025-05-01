@@ -1,0 +1,104 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "MGMT 412",
+        "courseName": "Diversity in Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 413",
+        "courseName": "Organizational Development and Management Consulting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 421",
+        "courseName": "Advanced Human Resource Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MGMT 301C, L301, L303, 303XS or 303C) and (MGMT 321C or 321XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 431",
+        "courseName": "The Legal Environment for Employee and Labor Relations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: BULE 302C, L302, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 441",
+        "courseName": "International Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, 303C, L301, L303, 301T, 303T or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 451",
+        "courseName": "Introduction to Entrepreneurship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 452",
+        "courseName": "Experiential Entrepreneurship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 451C, 451XS, MBUS 304C, 304XS or MGMT L451.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 453",
+        "courseName": "Starting a Business",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MGMT 454",
+        "courseName": "Social Impact and Entrepreneurship",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, 303C, 303XS, MBUS 304C or 304XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 461",
+        "courseName": "Cross Cultural and Global Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 462",
+        "courseName": "Honors Seminar in Management (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MGMT 463",
+        "courseName": "Negotiations in Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 464",
+        "courseName": "Teamwork and Interpersonal Skills",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 471",
+        "courseName": "Competitive Strategy",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301C, L301, 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 491",
+        "courseName": "Current Topics in Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 312C, 313C, L312, L313 or 313XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MGMT 492",
+        "courseName": "Internship in Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MGMT 301B- or 303B-.\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "MGMT 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

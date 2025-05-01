@@ -1,0 +1,86 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "PHYS 701",
+        "courseName": "Theoretical Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 703",
+        "courseName": "Seminar in Physics",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 705",
+        "courseName": "Classical Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 711",
+        "courseName": "Statistical Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 736",
+        "courseName": "Computational Quantum Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((PHYS 502B- or 502XS) and (PHYS 510B- or 510XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 760",
+        "courseName": "Space Plasma Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 513B-, 513XS, 685B- or 685XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 780",
+        "courseName": "Advanced Selected Topics in Physics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 784",
+        "courseName": "Quantum Mechanics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 684B- or 684XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 785",
+        "courseName": "Classical Electrodynamics II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: PHYS 685B- or 685XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 786",
+        "courseName": "Quantum Field Theory of Particles and Condensed Matter",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (PHYS 684B- or 684XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "PHYS 794",
+        "courseName": "Physics Internship",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 796",
+        "courseName": "Directed Reading and Research",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 798",
+        "courseName": "Research Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHYS 799",
+        "courseName": "Master's Thesis",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

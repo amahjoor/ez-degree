@@ -1,0 +1,122 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "SPAN 301",
+        "courseName": "Grammar and Syntax",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 305",
+        "courseName": "Spanish in Context I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 306",
+        "courseName": "Spanish in Context II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 309",
+        "courseName": "Intensive Spanish in Context",
+        "courseCredits": "6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 315",
+        "courseName": "Spanish in Context for Heritage Speakers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 321",
+        "courseName": "Introduction to Spanish Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 322",
+        "courseName": "Introduction to Latin American Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 323",
+        "courseName": "Field Study in Hispanic Culture",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 324",
+        "courseName": "Study Abroad in Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 325",
+        "courseName": "Major Hispanic Writers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 326",
+        "courseName": "Treasures of Spanish-Language Literature and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 329",
+        "courseName": "Special Topics in Spanish and Latin American Literature",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 335",
+        "courseName": "Topics for Proficiency: The Americas",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 336",
+        "courseName": "Topics for Proficiency: Spain",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 351",
+        "courseName": "Oral Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 370",
+        "courseName": "Spanish Writing and Stylistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 375",
+        "courseName": "Introduction to Spanish-Language Cinema",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 385",
+        "courseName": "Introduction to Spanish Linguistics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 388",
+        "courseName": "Introduction to Latina/o Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 390",
+        "courseName": "Introduction to Hispanic Literary Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

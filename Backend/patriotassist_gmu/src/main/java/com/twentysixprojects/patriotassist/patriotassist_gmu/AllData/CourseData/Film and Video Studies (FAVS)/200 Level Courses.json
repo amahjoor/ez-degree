@@ -1,0 +1,44 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "FAVS 204",
+        "courseName": "Film Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 225",
+        "courseName": "Introduction to World Cinema",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 233",
+        "courseName": "Sound Editing and Recording",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 250",
+        "courseName": "Business of Film and Television",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 255",
+        "courseName": "Video Production for Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 260",
+        "courseName": "Video Editing for Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FAVS 280",
+        "courseName": "Writing for the Moving Image",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,140 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "SEED 405",
+        "courseName": "Teaching and Learning Difficult Histories",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 406",
+        "courseName": "LGBTQ Issues in Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 407",
+        "courseName": "Assessing Learning and Teaching in the Secondary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 467C, 472C, 476C, 479C or 483C) and ((SEED 478*C and 492*C) or SEED 493*C, 494*C, 494*C, 495*C or 496*C)).\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 408",
+        "courseName": "Creating Advocacy with Adolescent Learners",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 409",
+        "courseName": "Perspectives on Extraordinary Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 422",
+        "courseName": "Foundations of Secondary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 440",
+        "courseName": "Human Development, Learning, and Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 466",
+        "courseName": "Teaching Computer Science in Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 467",
+        "courseName": "Advanced Methods of Teaching History and Social Science in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SEED 367C, 419*C and 477*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 469",
+        "courseName": "Teaching English in Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 472",
+        "courseName": "Advanced Methods for Teaching Mathematics in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: SEED 372C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 473",
+        "courseName": "Teaching Science in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SEED 476",
+        "courseName": "Advanced Methods of Teaching Computer Science in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SEED 466C, EDRD 419*C and SEED 477*C).\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 477",
+        "courseName": "Studying Teacher Impact on Student Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 367C, 372C, 466C, 469C or 473C) and ((EDRD 419*C and SEED 467*C) or SEED 479*C, 472*C, 483*C or 476*C)).\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 478",
+        "courseName": "Implementing Teacher Impact on Student Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 477C, EDRD 419C and SEED 467C or SEED 479C, 483C, 472C or 496C) and ((SEED 407C, 492C, 493C, 494C, 495C or 496C))).\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 479",
+        "courseName": "Advanced Methods of Teaching English in the Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SEED 469C, EDRD 419*C and SEED 477*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 483",
+        "courseName": "Advanced Methods of Teaching Science in Secondary School",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SEED 473C, EDRD 419*C and SEED 477*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 491",
+        "courseName": "Internship Seminar in Secondary Teaching",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (((SEED 422C or 422XS) and SEED 440C and EDRD 419C) and ((SEED 469C and 479C) or (SEED 372C and 472C) or (SEED 473C and 483C) or (SEED 466C and 476C)) and (SEED 492*C, 493*C, 494*C or 496*C)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SEED 492",
+        "courseName": "Internship: Secondary Education English",
+        "courseCredits": "9 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 422C or 422XS) and SEED 440C, EDRD 419C, SEED 477c and 479C) and ((SEED 478*C and 407*C)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS.\nc Requires minimum grade of c."
+    },
+    {
+        "courseTitle": "SEED 493",
+        "courseName": "Internship: Secondary Education Math",
+        "courseCredits": "9 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 422C or 422XS) and SEED 440C, EDRD 419C, SEED 477C and 472C and (SEED 478*C and 407*C)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SEED 494",
+        "courseName": "Internship: Secondary Education Science",
+        "courseCredits": "9 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 422C or 422XS) and SEED 440C, EDRD 419C, SEED 477C and 483C and (SEED 478*C and 407*C)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SEED 495",
+        "courseName": "Internship: Secondary Education History and Social Science",
+        "courseCredits": "9 credits",
+        "preRequisite": "Required Prerequisites: SEED 422C, 440C, EDRD 419C, SEED 477C, 467C, 478*C and 407*C.\n* May be taken concurrently.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SEED 496",
+        "courseName": "Internship: Secondary Education Computer Science",
+        "courseCredits": "9 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 422C or 422XS) and SEED 440C, EDRD 419C, SEED 477C and 476C and (SEED 478*C and 407*C)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

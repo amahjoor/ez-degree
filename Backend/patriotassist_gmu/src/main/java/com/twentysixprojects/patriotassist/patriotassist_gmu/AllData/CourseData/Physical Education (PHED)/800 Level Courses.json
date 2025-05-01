@@ -1,0 +1,26 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "PHED 860",
+        "courseName": "Doctoral Research Reading Seminar in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 870",
+        "courseName": "Analysis of Teaching in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 872",
+        "courseName": "Curriculum and Assessment in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHED 880",
+        "courseName": "Mentoring and Supervision in Physical Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

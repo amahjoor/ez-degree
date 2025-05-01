@@ -1,0 +1,98 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "TECM 702",
+        "courseName": "Building High Performance Global Teams",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 704",
+        "courseName": "Management of Technology Projects and Portfolios",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 711",
+        "courseName": "Deriving Strategic Value from IT Investments",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 720",
+        "courseName": "Competitive Strategy in Technology Industries",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 721",
+        "courseName": "Digital Transformation",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 735",
+        "courseName": "Technology Management Capstone Project",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 741",
+        "courseName": "Marketing of Innovations and Technology",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 745",
+        "courseName": "Leading and Managing IT Operations",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 746",
+        "courseName": "Enterprise Architecture and IT Governance",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 747",
+        "courseName": "Information Assurance and Security Management",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 749",
+        "courseName": "Developing and Emerging Technologies",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 752",
+        "courseName": "Global Technology Management",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 753",
+        "courseName": "Global Leadership Perspectives",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TECM 760",
+        "courseName": "CIO Applied Project",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (TECM 602B- or 602XS) and (TECM 620B- or 620XS) and (TECM 702B- or 702XS) and (TECM 752B- or 752XS) and (TECM 763B- or 763XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TECM 761",
+        "courseName": "Global IT Leadership Applied Project",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: ((TECM 602B- or 602XS) and (TECM 620B- or 620XS) and (TECM 702B- or 702XS) and (TECM 752B- or 752XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "TECM 762",
+        "courseName": "IT Strategy and Digital Transformation Applied Project",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (TECM 602B- or 602XS) and (TECM 620B- or 620XS) and (TECM 702B- or 702XS) and (TECM 752B- or 752XS).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

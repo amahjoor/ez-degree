@@ -1,0 +1,62 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "MKTG 407",
+        "courseName": "Global Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or (MKTG 303C, L303 or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 437",
+        "courseName": "Fashion Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MKTG 301C or 303C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "MKTG 450",
+        "courseName": "Marketing Consulting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 303C or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 455",
+        "courseName": "Ethnic and Multicultural Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or (MKTG 303C, L303 or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 462",
+        "courseName": "Honors Seminar in Marketing (Topic Varies)",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301B or L301) or (MKTG 303B or L303).\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "MKTG 471",
+        "courseName": "Marketing Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 312C, L312 or 312XS) and (MKTG 351C, L351 or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 481",
+        "courseName": "RS: Marketing in the Nonprofit Sector",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 491",
+        "courseName": "Seminar in Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or MKTG 303C, L303 or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 492",
+        "courseName": "Internship in Marketing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: MKTG 301C, 303C or 303XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "MKTG 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "Required Prerequisites: (MKTG 301C or L301) or (MKTG 303C, L303 or 303XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

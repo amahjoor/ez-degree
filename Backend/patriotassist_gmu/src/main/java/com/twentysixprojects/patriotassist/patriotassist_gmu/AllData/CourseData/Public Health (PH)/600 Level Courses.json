@@ -1,0 +1,38 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "PH 601",
+        "courseName": "Research Design and Methods I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 602",
+        "courseName": "Research Design and Methods II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 603",
+        "courseName": "Approaches to Quantitative Data Analysis in Public and Population Health Research",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 646",
+        "courseName": "Social Gerontology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 648",
+        "courseName": "Aging and Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PH 695",
+        "courseName": "Practicum in Public and Population Health",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

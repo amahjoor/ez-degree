@@ -1,0 +1,38 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "SEED 791",
+        "courseName": "Internship Seminar in Secondary Teaching",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: (((SEED 522B, 540B and EDRD 619B)) and (((SEED 569B and 669B)) or ((SEED 572B and 672B)) or ((SEED 573B and 673B)) or ((SEED 567B and 667B)) or ((SEED 566B and 676B))) and (SEED 792*B, 793*B, 794*B, 795*B, 796[[]] or 796*B)).\n* May be taken concurrently.\nB Requires minimum grade of B.\nRequires minimum grade of ."
+    },
+    {
+        "courseTitle": "SEED 792",
+        "courseName": "Internship: Secondary Education English",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 522B) and (SEED 540B) and (SEED 569B) and (SEED 669B) and (EDRD 619B) and (SEED 677B) and (SEED 678*B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 793",
+        "courseName": "Internship: Secondary Education Math",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisites: (SEED 522B) and (SEED 540B) and (SEED 572B) and (SEED 672B) and (EDRD 619B) and (SEED 677B) and (SEED 678*B).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 794",
+        "courseName": "Internship: Secondary Education Science",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 522B) and (SEED 540B) and (SEED 573B) and (SEED 673B) and (EDRD 619B) and (SEED 677B) and (SEED 678*B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 795",
+        "courseName": "Internship: Secondary Education Social Studies",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 522B) and (SEED 540B) and (SEED 567B) and (SEED 667B) and (EDRD 619B) and (SEED 677B) and (SEED 678*B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    },
+    {
+        "courseTitle": "SEED 796",
+        "courseName": "Internship: Secondary Education Computer Science",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisites: ((SEED 522B) and (SEED 540B) and (SEED 566B) and (SEED 676B) and (EDRD 619B) and (SEED 677B) and (SEED 678*B)).\n* May be taken concurrently.\nB Requires minimum grade of B."
+    }
+]}

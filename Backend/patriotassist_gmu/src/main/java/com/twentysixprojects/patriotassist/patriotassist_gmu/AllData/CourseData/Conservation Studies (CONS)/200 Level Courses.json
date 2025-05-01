@@ -1,0 +1,14 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "CONS 201",
+        "courseName": "How to Succeed in Conservation",
+        "courseCredits": "2 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CONS 210",
+        "courseName": "Inquiry and Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: CONS 120C.\nC Requires minimum grade of C."
+    }
+]}

@@ -1,0 +1,14 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "MLSC 100",
+        "courseName": "Introduction to Army/ROTC",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MLSC 102",
+        "courseName": "Leadership Skills II",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

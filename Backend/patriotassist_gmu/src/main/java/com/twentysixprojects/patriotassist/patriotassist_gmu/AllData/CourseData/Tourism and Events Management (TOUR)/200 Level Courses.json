@@ -1,0 +1,44 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "TOUR 200",
+        "courseName": "Introduction to Tourism Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TOUR 210",
+        "courseName": "Global Understanding through Travel and Tourism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TOUR 214",
+        "courseName": "Hospitality Tourism and Events Management Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TOUR 220",
+        "courseName": "Introduction to Event Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TOUR 221",
+        "courseName": "Event Implementation and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: TOUR 220D, 220XS or 220XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "TOUR 230",
+        "courseName": "Introduction to Hospitality Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "TOUR 241",
+        "courseName": "Hospitality, Tourism, and Events Management Practicum",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (TOUR 200D, 200XS or 200XP) and (TOUR 220D, 220XS or 220XP) and (TOUR 230D, 230XS or 230XP).\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    }
+]}

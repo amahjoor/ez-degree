@@ -1,0 +1,14 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "NEUR 554",
+        "courseName": "Neuroscience of Consciousness",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 592",
+        "courseName": "Special Topics in Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

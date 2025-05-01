@@ -1,0 +1,80 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "ACCT 408",
+        "courseName": "Taxes Insurance and Risk Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((FNAN 303B-, 301B- or L303) and (ACCT 303C, 330C, 301C, L303, L330 or L301)).\nB- Requires minimum grade of B-.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "ACCT 411",
+        "courseName": "Advanced Managerial Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 311C or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 433",
+        "courseName": "Advanced Financial Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 332C or 332XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 441",
+        "courseName": "Estate Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 351C or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 451",
+        "courseName": "Advanced Federal Taxation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 351C or 351XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 461",
+        "courseName": "Assurance and Audit Services",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ACCT 331C or 331XS) and (ACCT 361C or 361XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 462",
+        "courseName": "Honors Seminar in Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ACCT 465",
+        "courseName": "Advanced Accounting Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ACCT 303C or 303XS) and (ACCT 361C, 361XS, MIS 310C or 310XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 472",
+        "courseName": "Government and Not-for-Profit Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 331C or 331XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 491",
+        "courseName": "Seminar in Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 331C or 331XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 492",
+        "courseName": "Internship in Accounting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ACCT 330B-, 330XS or L330) or (ACCT 303B-, 303XS or L303).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 493",
+        "courseName": "Financial Planning and Wealth Management Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((ACCT 390C, FNAN 390XS or 390C) and ((FNAN 311C or 311XS) and (ACCT 351C or 351XS))).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "ACCT 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

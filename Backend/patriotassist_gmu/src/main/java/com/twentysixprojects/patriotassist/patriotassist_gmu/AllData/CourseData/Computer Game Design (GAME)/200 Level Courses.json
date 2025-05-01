@@ -1,0 +1,38 @@
+{"200 Level Courses": [
+    {
+        "courseTitle": "GAME 210",
+        "courseName": "Basic Game Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 230",
+        "courseName": "History of Computer Game Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GAME 231",
+        "courseName": "Three-Dimensional Game Art I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (GAME 104C or 104XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 232",
+        "courseName": "Online and Mobile Gaming",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (GAME 210C or 210XS) and (GAME 230C or 230XS) and (GAME 140C, 140XS, CS 112C or 112XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 240",
+        "courseName": "Gameplay Scripting & Implementation I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (GAME 140C, 140XS or CS 112C).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GAME 250",
+        "courseName": "Music for Film and Video",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

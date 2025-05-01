@@ -1,0 +1,62 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "DANC 501",
+        "courseName": "Graduate Dance Seminar",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 510",
+        "courseName": "Contemporary Movement Theories",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 520",
+        "courseName": "Special Topics in Dance",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 525",
+        "courseName": "Advanced Modern Dance",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 545",
+        "courseName": "Advanced Ballet",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 560",
+        "courseName": "Advanced Choreography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 570",
+        "courseName": "Advanced Dance Performance",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 571",
+        "courseName": "Residency Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 598",
+        "courseName": "Philosophy and Aesthetics of Dance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "DANC 599",
+        "courseName": "Independent Study",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,86 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "THR 525",
+        "courseName": "Advanced Musical Theater Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 530",
+        "courseName": "Topics in Theater Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 539",
+        "courseName": "Aesthetics for the Theater",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 540",
+        "courseName": "Directing Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 548",
+        "courseName": "Advanced Foundations of Theater Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 549",
+        "courseName": "Advanced Elementary Theater Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 550",
+        "courseName": "Advanced Secondary Theater Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 552",
+        "courseName": "Advanced Screen and TV Writing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 555",
+        "courseName": "Theater Education Internship",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 560",
+        "courseName": "Advanced Script Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 571",
+        "courseName": "Advanced Playwriting Workshop",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 590",
+        "courseName": "Special Topics for Graduate Study",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 591",
+        "courseName": "Graduate Seminar",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "THR 599",
+        "courseName": "Independent Study",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

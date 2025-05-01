@@ -1,0 +1,212 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EVPP 607",
+        "courseName": "Fundamentals of Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 608",
+        "courseName": "Introduction to Environmental Social Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 610",
+        "courseName": "Bioremediation: Theory and Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 615",
+        "courseName": "Molecular Environmental Biology II",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 619",
+        "courseName": "The Challenge of Biodiversity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 620",
+        "courseName": "Development of US Environmental Policies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 621",
+        "courseName": "Overview of Biodiversity Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 622",
+        "courseName": "Management of Wild Living Resources",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 623",
+        "courseName": "Translating Environmental Policy into Action",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 626",
+        "courseName": "Environment and Development in Asia",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 627",
+        "courseName": "Environmental Policy in Latin America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 628",
+        "courseName": "Environment and Development in Africa",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 630",
+        "courseName": "Methods and Logic of Social Inquiry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 631",
+        "courseName": "Spatial Agent-based Models of Human-Environment Interactions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 632",
+        "courseName": "Qualitative Research Methods for Environmental Scientists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 635",
+        "courseName": "Environment and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 636",
+        "courseName": "Gender, Race, and the Natural World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 637",
+        "courseName": "Human Dimensions of Climate Change",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 638",
+        "courseName": "Corporate Environmental Management and Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 641",
+        "courseName": "Environmental Science and Public Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 642",
+        "courseName": "Environmental Policy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 643",
+        "courseName": "Microbial Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 646",
+        "courseName": "Wetland Ecology and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 647",
+        "courseName": "Wetland Ecology Lab and Field",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 648",
+        "courseName": "Population Ecology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 650",
+        "courseName": "Ecosystem Analysis and Modeling",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 651",
+        "courseName": "Multivariate Data Analysis for Ecology and Environmental Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 652",
+        "courseName": "The Hydrosphere",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 670",
+        "courseName": "Environmental Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 675",
+        "courseName": "Environmental Planning and Administration",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 677",
+        "courseName": "Applied Ecology and Ecosystem Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 682",
+        "courseName": "Principles of Environmental Conflict",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 683",
+        "courseName": "Environmental Conflict Resolution: Situation Assessment, Process Design and Best Practices",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 692",
+        "courseName": "Master's Seminar in Environmental Science and Public Policy",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EVPP 693",
+        "courseName": "Directed Studies in Environmental Science and Public Policy",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

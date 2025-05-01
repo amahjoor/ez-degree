@@ -1,0 +1,140 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "SPAN 400",
+        "courseName": "Spanish for the Professions",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 425",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 426",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 430",
+        "courseName": "Spanish in the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 452",
+        "courseName": "Advanced Written Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 455",
+        "courseName": "Spanish-English Translation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 461",
+        "courseName": "Spanish Civilization and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 466",
+        "courseName": "Latin American Civilization and Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 472",
+        "courseName": "Spanish Phonetics and Phonology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 474",
+        "courseName": "Spanish Syntax and Semantics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 476",
+        "courseName": "Teaching Spanish in the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 480",
+        "courseName": "Special Topics in Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 481",
+        "courseName": "Special Topics in Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 482",
+        "courseName": "Mass Media and Popular Culture in the Spanish-Speaking World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 483",
+        "courseName": "Medieval and Early Modern Literature of Spain",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 484",
+        "courseName": "Modern and Contemporary Literature of Spain",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 485",
+        "courseName": "Topics in Community-Based Spanish",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 486",
+        "courseName": "Topics in Latin American Literature I: Pre-colonial to Mid-19th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 487",
+        "courseName": "Topics in Latin American Literature II: Late 19th Century to the Present",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 488",
+        "courseName": "The Literature of Spanish America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 490",
+        "courseName": "Internship in Spanish",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 497",
+        "courseName": "Senior Honors Tutorial",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPAN 498",
+        "courseName": "Senior Honors Tutorial",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

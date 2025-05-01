@@ -1,0 +1,38 @@
+{"800 Level Courses": [
+    {
+        "courseTitle": "CHEM 814",
+        "courseName": "Advanced Bioorganic Chemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 817",
+        "courseName": "Organic Structural Spectroscopy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 821",
+        "courseName": "Theory of Analytical Processes",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 833",
+        "courseName": "Physical Chemistry and Biochemistry",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 891",
+        "courseName": "Doctoral Scientific Critique, Writing and Presentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CHEM 896",
+        "courseName": "Doctoral Directed Reading and Research",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

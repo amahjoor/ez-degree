@@ -1,0 +1,62 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "ELED 542",
+        "courseName": "Foundations of Elementary Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 543",
+        "courseName": "Children, Family, Culture, and Schools, ages 4-12 Years",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 544",
+        "courseName": "Introduction to Elementary Methods and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 545",
+        "courseName": "Differentiating Elementary Methods and Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 552",
+        "courseName": "Mathematics Methods for the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 553",
+        "courseName": "Science Methods for the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 554",
+        "courseName": "Methods of Teaching Social Studies and Integrating Fine Arts in the Elementary Classroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 555",
+        "courseName": "Literacy Teaching and Learning in Diverse Elementary Classrooms I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 556",
+        "courseName": "Literacy Teaching and Learning in Diverse Elementary Classrooms II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ELED 559",
+        "courseName": "Research and Assessment in Elementary Education",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

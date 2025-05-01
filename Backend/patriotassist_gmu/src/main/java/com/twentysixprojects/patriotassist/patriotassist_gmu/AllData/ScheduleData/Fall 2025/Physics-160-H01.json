@@ -1,0 +1,16 @@
+{
+  "CourseTitle": "University Physics I",
+  "CourseSubject": "Physics",
+  "CourseNumber": "160",
+  "CourseSection": "H01",
+  "CreditHours": "3",
+  "CRN": "73334",
+  "Term": "Fall 2025",
+  "Instructor": "",
+  "MeetingDays": "Monday,Wednesday",
+  "MeetingTimes": "08:30 AM - 10:20 AM",
+  "Campus": "Fairfax",
+  "Seats": "4 of 4 seats remain.",
+  "ScheduleType": "Lecture",
+  "createdAt": "2025-03-10 17:17:22"
+}

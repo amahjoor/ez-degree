@@ -1,0 +1,14 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "EDEP 310",
+        "courseName": "Teaching Students How to Learn",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDEP 350",
+        "courseName": "Perspectives on Achievement Motivation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

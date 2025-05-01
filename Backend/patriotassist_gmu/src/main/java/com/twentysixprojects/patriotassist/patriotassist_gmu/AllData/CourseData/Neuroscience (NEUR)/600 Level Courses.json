@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "NEUR 600",
+        "courseName": "Chemistry and the Brain",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 601",
+        "courseName": "Developmental Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 602",
+        "courseName": "Cellular Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 603",
+        "courseName": "Mammalian Neuroanatomy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 604",
+        "courseName": "Ethics in Scientific Research",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 611",
+        "courseName": "Philosophical Foundation of Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 612",
+        "courseName": "Bioscience, Neurotechnology & Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 621",
+        "courseName": "Synaptic Plasticity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 634",
+        "courseName": "Neural Modeling",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 651",
+        "courseName": "Molecular Neuropharmacology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "NEUR 689",
+        "courseName": "Topics in Neuroscience",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

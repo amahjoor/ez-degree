@@ -1,0 +1,110 @@
+{"700 Level Courses": [
+    {
+        "courseTitle": "ME 714",
+        "courseName": "Fracture Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 715",
+        "courseName": "Impact Dynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 721",
+        "courseName": "Advanced Fluid Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 722",
+        "courseName": "Introduction to Turbulence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 723",
+        "courseName": "Compressible Flow",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 724",
+        "courseName": "Viscoelastic Flow",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 728",
+        "courseName": "Foundations of Heat Transfer",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 732",
+        "courseName": "Advanced Thermodynamics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 740",
+        "courseName": "Introduction to Continuum Mechanics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 741",
+        "courseName": "Theory of Elasticity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 742",
+        "courseName": "Finite Element Analysis for Solids",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 745",
+        "courseName": "Mechanics and Properties of Materials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 750",
+        "courseName": "Nanomaterials Enabled Renewable Energy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 751",
+        "courseName": "Advanced Materials for Water Treatment",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 753",
+        "courseName": "Tribology and Surface Engineering",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 754",
+        "courseName": "Introduction to Nano-Materials",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 755",
+        "courseName": "Optofluidics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ME 762",
+        "courseName": "Nano Bio Sensors",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

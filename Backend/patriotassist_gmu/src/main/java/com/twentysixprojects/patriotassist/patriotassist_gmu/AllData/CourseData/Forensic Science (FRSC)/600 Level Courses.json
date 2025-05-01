@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "FRSC 600",
+        "courseName": "Forensics Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 601",
+        "courseName": "Quantitative Methods for Forensic Scientists",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 610",
+        "courseName": "Forensic Research Project",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 620",
+        "courseName": "Face and Biometric Pattern Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 630",
+        "courseName": "Fingerprint Identification",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 640",
+        "courseName": "Legal, Privacy and Ethical Issues in Identity Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 650",
+        "courseName": "Identity Analysis Applications",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 660",
+        "courseName": "FARO Forensic 3D Documentation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: FRSC 510B+.\nB+ Requires minimum grade of B+."
+    },
+    {
+        "courseTitle": "FRSC 670",
+        "courseName": "Forensic Genomics",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRSC 690",
+        "courseName": "Capstone - Moot Court & Expert Testimony",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((FRSC 500B- or 500XS) and (FRSC 510B- or 510XS) and (FRSC 530B- or 530XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "FRSC 699",
+        "courseName": "Comprehensive Examination",
+        "courseCredits": "0 credits",
+        "preRequisite": "Required Prerequisites: ((FRSC 500B- or 500XS) and (FRSC 510B- or 510XS) and (FRSC 530B- or 530XS)).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

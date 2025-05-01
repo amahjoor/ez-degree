@@ -1,0 +1,134 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "COMM 400",
+        "courseName": "Research Methods in Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: COMM 200C, U200 or 200XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 401",
+        "courseName": "Interpersonal Communication in the Workplace",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 411",
+        "courseName": "Public Relations in Practice",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: COMM 331C, L331 or 331XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "COMM 412",
+        "courseName": "Politics and the Mass Media",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 430",
+        "courseName": "Persuasion",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 431",
+        "courseName": "New Media and Democracy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 433",
+        "courseName": "Environmental Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 434",
+        "courseName": "Interviewing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 435",
+        "courseName": "Digital Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 440",
+        "courseName": "Ceremonial Speech Writing and Performance",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 450",
+        "courseName": "Internship in Communication",
+        "courseCredits": "0-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 451",
+        "courseName": "Facilitating Communication Education",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 452",
+        "courseName": "Media Production Practicum",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 454",
+        "courseName": "Free Speech and Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 465",
+        "courseName": "Topics in Communication and Gender",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 475",
+        "courseName": "Journalism Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 479",
+        "courseName": "Digital Media and Web Design Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 487",
+        "courseName": "Washington Media Institute",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 490",
+        "courseName": "Honors Research Methods in Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 491",
+        "courseName": "RS: Honors Research Project in Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 498",
+        "courseName": "RS: Research Projects in Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "COMM 499",
+        "courseName": "Independent Study in Communication",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

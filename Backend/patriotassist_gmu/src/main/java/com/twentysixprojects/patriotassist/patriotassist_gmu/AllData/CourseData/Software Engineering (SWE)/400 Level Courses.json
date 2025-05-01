@@ -1,0 +1,32 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "SWE 401",
+        "courseName": "Internship Reflection",
+        "courseCredits": "1 credit",
+        "preRequisite": "Required Prerequisites: SWE 301 or 301XS.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SWE 419",
+        "courseName": "Object-Oriented Software Design and Implementation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((CS 310C or 310XS) and (MATH 125C or 125XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SWE 432",
+        "courseName": "Web Application Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 125C or 125XS) and (CS 321C or 321XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SWE 437",
+        "courseName": "Software Testing and Maintenance",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (MATH 125C or 125XS) and (CS 310C or 310XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SWE 443",
+        "courseName": "Software Architectures",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (CS 321C or 321XS) or CS 421C, SWE 321C or 421C.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

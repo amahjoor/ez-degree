@@ -1,0 +1,32 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "FRLN 600",
+        "courseName": "Workshop in Foreign Languages",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 620",
+        "courseName": "Literary Theory and Criticism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 650",
+        "courseName": "The Teaching of Culture in Foreign Language Programs",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 660",
+        "courseName": "Approaches to the Study of Language",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "FRLN 670",
+        "courseName": "Topics in Language Learning and Teaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

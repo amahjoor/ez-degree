@@ -1,0 +1,14 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "MEIS 500",
+        "courseName": "Critical Issues and Debates in Middle East and Islamic Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "MEIS 599",
+        "courseName": "Issues in Middle East and Islamic Studies",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

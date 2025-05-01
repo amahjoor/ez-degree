@@ -1,0 +1,122 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "GEOL 302",
+        "courseName": "Mineralogy",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 303",
+        "courseName": "Field Mapping Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 304",
+        "courseName": "Sedimentary Geology",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: ((GEOL 101C or 101XS) and (GEOL 102C or 102XS) and (GEOL 103C or 103XS) and (GEOL 302C or 302XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GEOL 305",
+        "courseName": "Environmental Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 306",
+        "courseName": "Soil Science",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 308",
+        "courseName": "Igneous and Metamorphic Petrology",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: ((GEOL 101C or 101XS) and (GEOL 102C or 102XS) and (GEOL 103C or 103XS) and (GEOL 302*C or 302*XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GEOL 309",
+        "courseName": "Oceanography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 312",
+        "courseName": "Invertebrate Paleontology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 313",
+        "courseName": "Hydrogeology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 315",
+        "courseName": "Topics in Geology II",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 317",
+        "courseName": "Geomorphology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 320",
+        "courseName": "Geology of Earth Resources",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 321",
+        "courseName": "Geology of Energy Resources",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 325",
+        "courseName": "Planetary Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (((GEOL 101C or 101XS) and (GEOL 103C or 103XS)) or (GEOL 102C or 102XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GEOL 332",
+        "courseName": "Paleoclimatology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 334",
+        "courseName": "Vertebrate Paleontology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 340",
+        "courseName": "Modern Methods in Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 363",
+        "courseName": "Coastal Morphology and Processes",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 364",
+        "courseName": "Marine Geology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOL 392",
+        "courseName": "Geology and Earth Science Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    }
+]}

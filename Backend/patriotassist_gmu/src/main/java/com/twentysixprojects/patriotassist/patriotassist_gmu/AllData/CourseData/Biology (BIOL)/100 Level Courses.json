@@ -1,0 +1,62 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "BIOL 101",
+        "courseName": "Biology Freshman Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 102",
+        "courseName": "Introductory Biology I-Survey of Biodiversity and Ecology",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 103",
+        "courseName": "Introductory Biology II-Survey of Cell and Molecular Biology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 105",
+        "courseName": "Introductory Biology II Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 106",
+        "courseName": "Introductory Biology I Laboratory",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 107",
+        "courseName": "Intro Biology II Lecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 124",
+        "courseName": "Human Anatomy and Physiology I",
+        "courseCredits": "4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 125",
+        "courseName": "Human Anatomy and Physiology II",
+        "courseCredits": "4 credits",
+        "preRequisite": "Required Prerequisites: (BIOL 124C or 124XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "BIOL 140",
+        "courseName": "Plants and People",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "BIOL 177",
+        "courseName": "Introductory Ecology for Environmental Engineers",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

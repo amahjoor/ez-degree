@@ -1,0 +1,68 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "AMGT 601",
+        "courseName": "Fund Raising/Development I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 602",
+        "courseName": "Seminar in Arts Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 603",
+        "courseName": "The Arts in Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 604",
+        "courseName": "Public Relations and Marketing Strategies for the Arts I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 605",
+        "courseName": "Finance and Budgeting for Arts I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 606",
+        "courseName": "Governance and Financial Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: (AMGT 605B-).\nB- Requires minimum grade of B-."
+    },
+    {
+        "courseTitle": "AMGT 609",
+        "courseName": "Performing Arts Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 610",
+        "courseName": "Visual Arts Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 620",
+        "courseName": "Legal Aspects in Arts Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 640",
+        "courseName": "Programming and Project Arts Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AMGT 660",
+        "courseName": "Legal Aspects of Arts Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "GEOC 100",
+        "courseName": "WSI: Special Topics",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOC 108",
+        "courseName": "Global Gateway",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOC 150",
+        "courseName": "International Experience: Global Contexts",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GEOC 151",
+        "courseName": "International Experience: Natural Science Non-lab",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

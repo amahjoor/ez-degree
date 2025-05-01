@@ -1,0 +1,26 @@
+{"500 Level Courses": [
+    {
+        "courseTitle": "EFHP 500",
+        "courseName": "Workshop in Exercise, Fitness, and Health Promotion",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 526",
+        "courseName": "Prevention, Recognition, and Management of Fitness Related Injuries",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 598",
+        "courseName": "Special Topics",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EFHP 599",
+        "courseName": "Independent Study EFHP",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

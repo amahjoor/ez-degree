@@ -1,0 +1,68 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "SPMT 302",
+        "courseName": "Philosophical and Ethical Dimensions of Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 304",
+        "courseName": "Sport, Culture, and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 305",
+        "courseName": "Managing Intercollegiate Athletics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 307",
+        "courseName": "Sport Diplomacy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 318",
+        "courseName": "Diversity and Inclusion Issues in Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 320",
+        "courseName": "Psychology of Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 321",
+        "courseName": "America Through Baseball",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 322",
+        "courseName": "Football and American Culture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 323",
+        "courseName": "America and the Modern Olympics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 341",
+        "courseName": "Field Experience in Sport Coaching",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 210C or 210XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPMT 346",
+        "courseName": "Sport History and Film",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

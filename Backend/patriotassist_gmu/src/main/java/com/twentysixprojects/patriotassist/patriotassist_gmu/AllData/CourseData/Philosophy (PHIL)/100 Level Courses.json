@@ -1,0 +1,32 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "PHIL 100",
+        "courseName": "Introduction to Philosophy",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 112",
+        "courseName": "Ethics and the Cybersociety",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 151",
+        "courseName": "Introduction to Ethics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 156",
+        "courseName": "What Is Art?",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "PHIL 173",
+        "courseName": "Logic and Critical Thinking",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

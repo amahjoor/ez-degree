@@ -1,0 +1,32 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "GERM 415",
+        "courseName": "Advanced Grammar and Style",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 418",
+        "courseName": "Advanced Composition",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 442",
+        "courseName": "The Age of Goethe",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 444",
+        "courseName": "The Literature of Romanticism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GERM 480",
+        "courseName": "Special Topics",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

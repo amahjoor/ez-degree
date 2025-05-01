@@ -1,0 +1,80 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "SPMT 405",
+        "courseName": "Sport Venues and Events",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XP or 201XS.\nD Requires minimum grade of D.\nXP Requires minimum grade of XP.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPMT 412",
+        "courseName": "Sport Marketing and Sales",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XP, 201XS or RMGT 241C.\nD Requires minimum grade of D.\nXP Requires minimum grade of XP.\nXS Requires minimum grade of XS.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "SPMT 420",
+        "courseName": "Economics and Finance in the Sport Industry",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XS or 201XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "SPMT 425",
+        "courseName": "Sport Analytics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (SPMT 201C or 201XS) and (STAT 250C, 250XS, BUS 210C, 210XS, STAT 260C or 260XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPMT 430",
+        "courseName": "Sport Communication",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XP or 201XS.\nD Requires minimum grade of D.\nXP Requires minimum grade of XP.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPMT 440",
+        "courseName": "Global Perspectives in Sport",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XS or 201XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "SPMT 455",
+        "courseName": "Governance and Policy in Sport Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XS or 201XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "SPMT 462",
+        "courseName": "Sport Business Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XS or 201XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "SPMT 470",
+        "courseName": "Strategic Management and Leadership in Sport Organizations",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 201D, 201XP or 201XS.\nD Requires minimum grade of D.\nXP Requires minimum grade of XP.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPMT 475",
+        "courseName": "Sport Management Professional Development Seminar",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: SPMT 241D, 241XS or 241XP.\nD Requires minimum grade of D.\nXS Requires minimum grade of XS.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "SPMT 480",
+        "courseName": "Special Topics in Sport Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "SPMT 490",
+        "courseName": "Internship",
+        "courseCredits": "12 credits",
+        "preRequisite": "Required Prerequisites: SPMT 241C or 241XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "SPMT 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

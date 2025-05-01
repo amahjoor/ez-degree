@@ -1,0 +1,194 @@
+{"300 Level Courses": [
+    {
+        "courseTitle": "GGS 300",
+        "courseName": "Quantitative Methods for Geographical Analysis",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 301",
+        "courseName": "Political Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 302",
+        "courseName": "Global Environmental Hazards",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 303",
+        "courseName": "Geography of Resource Conservation",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 304",
+        "courseName": "Population Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 305",
+        "courseName": "Economic Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 306",
+        "courseName": "Urban Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 307",
+        "courseName": "Geographic Approaches for Sustainable Development",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 308",
+        "courseName": "Field Mapping Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 309",
+        "courseName": "Introduction to Weather and Climate",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 310",
+        "courseName": "Cartographic Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 311",
+        "courseName": "Geographic Information Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 312",
+        "courseName": "Physical Climatology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 314",
+        "courseName": "Severe and Extreme Weather",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 315",
+        "courseName": "Geography of the United States",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 316",
+        "courseName": "Geography of Latin America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 317",
+        "courseName": "Geography of China",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 320",
+        "courseName": "Geography of Europe",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 321",
+        "courseName": "Biogeography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 325",
+        "courseName": "Geography of North Africa and the Middle East",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 326",
+        "courseName": "Geography of Eastern Europe and Russia",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 333",
+        "courseName": "Issues in Regional Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 340",
+        "courseName": "Health Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 344",
+        "courseName": "Military Geography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 346",
+        "courseName": "Geography of Religions and Belief Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 354",
+        "courseName": "Data Analysis and Global Change Detection Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 357",
+        "courseName": "Urban Planning",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 366",
+        "courseName": "Spatial Computing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 379",
+        "courseName": "Remote Sensing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 380",
+        "courseName": "Geography of Virginia",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 384",
+        "courseName": "Special Topics in Geospatial Intelligence",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GGS 399",
+        "courseName": "Select Topics in GGS",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

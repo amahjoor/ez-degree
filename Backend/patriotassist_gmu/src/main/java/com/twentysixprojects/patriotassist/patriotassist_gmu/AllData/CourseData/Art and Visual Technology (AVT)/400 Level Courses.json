@@ -1,0 +1,272 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "AVT 404",
+        "courseName": "Senior ProSeminar",
+        "courseCredits": "2 credits",
+        "preRequisite": "Required Prerequisites: ((AVT 303C or 303XS) and (AVT 395*C, 395XS, 396*C or 396XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 407",
+        "courseName": "Advanced Aesthetics",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 307C or 307XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 408",
+        "courseName": "Visual Communication Theories",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 409",
+        "courseName": "User Experience Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 215C or 215XS) and (AVT 311C or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 410",
+        "courseName": "Experiential Design History",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ENGH 302C or 302XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 411",
+        "courseName": "Motion Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 217C or 217XS) and (AVT 311C or 311XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 412",
+        "courseName": "Advanced Typography",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 313C or 313XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 413",
+        "courseName": "Professional Design Practices",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 313C or 313XS) and (AVT 414C or 414XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 414",
+        "courseName": "Brand Identity Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 252C, 252XS, 253XS or 253C) and ((AVT 311C or 311XS) and (AVT 396*C or 396*XS)).\n* May be taken concurrently.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 415",
+        "courseName": "Web Design and Usability",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 217C or 217XS) and (AVT 311C or 311XS) and (AVT 313C, 313XS, 414C or 414XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 416",
+        "courseName": "Advertising Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 414C or 414XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 417",
+        "courseName": "Package Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 414C or 414XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 419",
+        "courseName": "Topics in Graphic Design",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "Required Prerequisites: (AVT 311C or 311XS) and (AVT 313C, 313XS, 414C or 414XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 420",
+        "courseName": "Advanced Web Design",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 415C or 415XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 422",
+        "courseName": "Advanced Drawing",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 323C or 323XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 423",
+        "courseName": "Drawing IV",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 422C or 422XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 432",
+        "courseName": "Advanced Painting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 333C or 333XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 433",
+        "courseName": "Advanced Painting I",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 432C or 432XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 434",
+        "courseName": "Advanced Painting II",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 433C or 433XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 435",
+        "courseName": "Advanced Painting III",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 434C or 434XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 442",
+        "courseName": "Advanced Printmaking",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 343C or 343XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 443",
+        "courseName": "Printmaking IV",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 442C or 442XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 444",
+        "courseName": "Printmaking V",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisite: AVT 443C.\nC Requires minimum grade of C."
+    },
+    {
+        "courseTitle": "AVT 446",
+        "courseName": "Dynamic Publishing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 453",
+        "courseName": "Professional Practices",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 455",
+        "courseName": "Digital Printing Techniques",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 457",
+        "courseName": "Documentary Photography",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 458",
+        "courseName": "Advanced Studio Lighting",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 356C or 356XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 462",
+        "courseName": "Advanced Sculpture",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 363C or 363XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 463",
+        "courseName": "Sculpture IV",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 462C or 462XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 464",
+        "courseName": "Sculpture V",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 463C or 463XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 465",
+        "courseName": "Sculpture VI",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: AVT 464C or 464XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 472",
+        "courseName": "Critical Theory in the Visual Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ARTH 374C or 374XS.\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 473",
+        "courseName": "Advanced Performance Studio",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 474",
+        "courseName": "Sound Art II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 479",
+        "courseName": "Digital Media and Web Design Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 482",
+        "courseName": "Advanced Image Making",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 483",
+        "courseName": "RS: Art and Interactivity",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 487",
+        "courseName": "Advanced Topics: New Media Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 489",
+        "courseName": "Internship in Art and Visual Technology",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 491",
+        "courseName": "Independent Study in Art and Visual Technology",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 495",
+        "courseName": "Introduction to Art Teaching and Learning",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (ENGH 302C or 302XS) and (AVT 307C or 307XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "AVT 496",
+        "courseName": "Special Topics",
+        "courseCredits": "1-4 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 497",
+        "courseName": "Senior Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "AVT 498",
+        "courseName": "Senior Design Project",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (AVT 311C or 311XS) and (AVT 313C or 313XS) and (AVT 414C or 414XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    }
+]}

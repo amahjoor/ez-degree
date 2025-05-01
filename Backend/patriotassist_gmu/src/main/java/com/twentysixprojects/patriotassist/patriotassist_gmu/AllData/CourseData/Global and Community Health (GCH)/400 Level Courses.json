@@ -1,0 +1,92 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "GCH 405",
+        "courseName": "Global Health Interventions: History and Systems",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 406",
+        "courseName": "Global Health Interventions: Emerging Issues",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 410",
+        "courseName": "Physical Activity and Public Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 411",
+        "courseName": "Health Program Planning and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (GCH 310C or 310XS) and (GCH 380C or 380XS) and (ENGH 302C or 302XS).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GCH 412",
+        "courseName": "Fundamentals of Epidemiology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 426",
+        "courseName": "Global Emerging Infectious Diseases",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 445",
+        "courseName": "Social Determinants of Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 450",
+        "courseName": "Culture, Sexuality and the Global AIDS Epidemic",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 465",
+        "courseName": "Community Health Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((GCH 380C or 380XS) and (GCH 411C or 411XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GCH 466",
+        "courseName": "Physical Activity in Public Health Capstone",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: ((GCH 376C or 376XS) and (GCH 380C or 380XS) and (GCH 410C or 410XS)).\nC Requires minimum grade of C.\nXS Requires minimum grade of XS."
+    },
+    {
+        "courseTitle": "GCH 491",
+        "courseName": "Study Abroad in Public Health",
+        "courseCredits": "0-6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 494",
+        "courseName": "Special Topics in Global and Community Health",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 497",
+        "courseName": "Pre-Internship Seminar",
+        "courseCredits": "1 credit",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 498",
+        "courseName": "Global and Community Health Internship",
+        "courseCredits": "3,6 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "GCH 499",
+        "courseName": "Independent Study in Global and Community Health",
+        "courseCredits": "1-6 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

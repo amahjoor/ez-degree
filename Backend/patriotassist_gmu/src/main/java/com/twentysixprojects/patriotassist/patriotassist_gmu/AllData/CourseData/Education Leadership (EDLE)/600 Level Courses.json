@@ -1,0 +1,74 @@
+{"600 Level Courses": [
+    {
+        "courseTitle": "EDLE 610",
+        "courseName": "Leading Schools and Communities",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDLE 620B- or 620XS) and (EDLE 690B- or 690XS) and (EDLE 791IP or 792IP).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS.\nIP Requires minimum grade of IP."
+    },
+    {
+        "courseTitle": "EDLE 612",
+        "courseName": "Education Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDLE 620B- or 620XS) and (EDLE 690B- or 690XS) and EDLE 791IP.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS.\nIP Requires minimum grade of IP."
+    },
+    {
+        "courseTitle": "EDLE 613",
+        "courseName": "Education Law for Independent and Nonpublic Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDLE 620B- or 620XS) and (EDLE 690B- or 690XS) and EDLE 792IP.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS.\nIP Requires minimum grade of IP."
+    },
+    {
+        "courseTitle": "EDLE 614",
+        "courseName": "Managing Financial and Human Resources",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDLE 620B- or 620XS) and (EDLE 690B- or 690XS) and EDLE 791IP.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS.\nIP Requires minimum grade of IP."
+    },
+    {
+        "courseTitle": "EDLE 615",
+        "courseName": "Managing Financial and Human Resources for Independent Schools",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDLE 620B- or 620XS) and (EDLE 690B- or 690XS) and EDLE 792IP.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS.\nIP Requires minimum grade of IP."
+    },
+    {
+        "courseTitle": "EDLE 616",
+        "courseName": "Curriculum Development and Evaluation",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDLE 620B- or 620XS) and (EDLE 690B- or 690XS) and (EDLE 791IP or 792IP).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS.\nIP Requires minimum grade of IP."
+    },
+    {
+        "courseTitle": "EDLE 618",
+        "courseName": "Supervision and Evaluation of Instruction",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: (EDLE 620B- or 620XS) and (EDLE 690B- or 690XS) and (EDLE 791IP or 792IP).\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS.\nIP Requires minimum grade of IP."
+    },
+    {
+        "courseTitle": "EDLE 620",
+        "courseName": "Organizational Theory and Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 634",
+        "courseName": "Contemporary Issues in Education Leadership",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 635",
+        "courseName": "Governance and the Independent School Boardroom",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 636",
+        "courseName": "Adult Motivation and Conflict Management in Education Settings: A Case Study Approach",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "EDLE 690",
+        "courseName": "Using Research to Lead School Improvement",
+        "courseCredits": "3 credits",
+        "preRequisite": "Required Prerequisites: EDLE 620B- or 620XS.\nB- Requires minimum grade of B-.\nXS Requires minimum grade of XS."
+    }
+]}

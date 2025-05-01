@@ -1,0 +1,26 @@
+{"100 Level Courses": [
+    {
+        "courseTitle": "ARTH 101",
+        "courseName": "Introduction to the Visual Arts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 102",
+        "courseName": "Symbols and Stories in Art",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 103",
+        "courseName": "Introduction to Architecture",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "ARTH 104",
+        "courseName": "Design in the 20th Century",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

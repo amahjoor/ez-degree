@@ -1,0 +1,194 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "CRIM 400",
+        "courseName": "Applied Criminal Psychology",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 401",
+        "courseName": "Policing in America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 402",
+        "courseName": "Punishment and Corrections",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 403",
+        "courseName": "Community Corrections",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 404",
+        "courseName": "Crime Victims and Victimization",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 405",
+        "courseName": "Law and Justice around the World",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 406",
+        "courseName": "Family Law and the Justice System",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 407",
+        "courseName": "Advanced Topics in Law and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 408",
+        "courseName": "Criminal Courts",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 409",
+        "courseName": "Community Policing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 410",
+        "courseName": "Criminal Investigations",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 411",
+        "courseName": "Innovations in Policing",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 415",
+        "courseName": "Guns and Crime in America",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 421",
+        "courseName": "International Crimes and Accountability",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 422",
+        "courseName": "Controversial Legal Issues",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 423",
+        "courseName": "Constitutional Law: Civil Rights and Liberties",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 424",
+        "courseName": "Constitutional Law: Criminal Process and Rights",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 425",
+        "courseName": "Criminal Justice Management",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 430",
+        "courseName": "Criminal Law",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 460",
+        "courseName": "Surveillance and Privacy in Contemporary Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 462",
+        "courseName": "Law Enforcement and Homeland Security",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 471",
+        "courseName": "Prevention and Deterrence of Crime",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 475",
+        "courseName": "Theory and Politics of Terrorism",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 479",
+        "courseName": "Criminology: College to Career",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 480",
+        "courseName": "Internship",
+        "courseCredits": "6-12 credits",
+        "preRequisite": "Required Prerequisites: (CRIM 479D or 479XP).\nD Requires minimum grade of D.\nXP Requires minimum grade of XP."
+    },
+    {
+        "courseTitle": "CRIM 485",
+        "courseName": "Study Abroad",
+        "courseCredits": "1-12 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 490",
+        "courseName": "Special Topics",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 491",
+        "courseName": "Honors Seminar I",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 492",
+        "courseName": "RS: Honors Seminar II",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 495",
+        "courseName": "Capstone in Criminology, Law and Society",
+        "courseCredits": "3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 498",
+        "courseName": "Research Practicum",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "CRIM 499",
+        "courseName": "Independent Study",
+        "courseCredits": "1-3 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}

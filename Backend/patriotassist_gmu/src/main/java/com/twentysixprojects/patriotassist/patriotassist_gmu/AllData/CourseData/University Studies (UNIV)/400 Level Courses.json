@@ -1,0 +1,56 @@
+{"400 Level Courses": [
+    {
+        "courseTitle": "UNIV 406",
+        "courseName": "Mason Transitions for Diverse Learners IV",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 420",
+        "courseName": "College to Career",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 421",
+        "courseName": "College to Graduate School",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 422",
+        "courseName": "Professional Skills Development",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 480",
+        "courseName": "Bonner Seminar Capstone",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 490",
+        "courseName": "Critical Decisions in Postgraduate Transitions",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 491",
+        "courseName": "RS: Students as Scholars Individualized Scholarly Experience",
+        "courseCredits": "0-9 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 495",
+        "courseName": "RS: Undergraduate Research Scholars Program Seminar",
+        "courseCredits": "0-1 credits",
+        "preRequisite": "NoPreReq"
+    },
+    {
+        "courseTitle": "UNIV 496",
+        "courseName": "RS: Undergraduate Research Scholars Program Continuation",
+        "courseCredits": "0 credits",
+        "preRequisite": "NoPreReq"
+    }
+]}
