@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { forwardRef, useImperativeHandle, useState, useEffect } from 'react';
 import Select from 'react-select';
 import CourseSelectionModal from './CourseSelectionModal';
 import AIScheduleGenerator from './ai/AIScheduleGenerator';
@@ -63,7 +63,12 @@ export const getRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
+export interface WeeklyCalendarHandle {
+  addSessions: (sessions: ClassSession[]) => void;
+}
+
+const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
+  ({ onCourseSelect }, ref) => {
   const [classes, setClasses] = useState<ClassSession[]>([
     // Example classes with corrected positioning
     /*
@@ -104,6 +109,12 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
     professorsToAvoid: [],
     availability: defaultAvailability,   // ← seed with defaults
   });
+
+   useImperativeHandle(ref, () => ({
+       addSessions: (sessions: ClassSession[]) => {
+         setClasses(prev => [...prev, ...sessions]);
+       }
+     }), []);
   
   
   // New filter states
@@ -638,6 +649,6 @@ const WeeklyCalendar: React.FC<WeeklyCalendarProps> = ({ onCourseSelect }) => {
       />
     </div>
   );
-};
-
-export default WeeklyCalendar; 
+}
+);
+ export default WeeklyCalendar;

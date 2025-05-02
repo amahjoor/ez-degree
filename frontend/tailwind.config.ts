@@ -94,7 +94,12 @@ const config: Config = {
     'bg-primary-yellow',
     'text-primary-yellow',
     'border-primary-yellow',
+    "from-primary-green",
+     "to-primary-blue",
+     "scale-x-0",
+     "scale-x-100",
   ],
 };
+
 
 export default config;
