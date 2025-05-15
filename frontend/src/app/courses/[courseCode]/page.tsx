@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import dynamic from 'next/dynamic';
@@ -194,6 +194,21 @@ const calculateGradeDistribution = (professors: Professor[]): Record<string, num
   return gradeOccurrences;
 };
 
+// Add these utility functions at the top near other utility functions
+const calculateAverageRating = (professors: Professor[]): number => {
+  if (!professors || professors.length === 0) return 0;
+  
+  const sum = professors.reduce((acc, prof) => acc + prof.avgRating, 0);
+  return Number((sum / professors.length).toFixed(1));
+};
+
+const calculateAverageDifficulty = (professors: Professor[]): number => {
+  if (!professors || professors.length === 0) return 0;
+  
+  const sum = professors.reduce((acc, prof) => acc + prof.avgDifficulty, 0);
+  return Number((sum / professors.length).toFixed(1));
+};
+
 export default function CourseDetail() {
   const params = useParams();
   const courseCode = params.courseCode as string;
@@ -208,6 +223,70 @@ export default function CourseDetail() {
   const [gradeDistribution, setGradeDistribution] = useState<Record<string, number>>({
     A: 0, B: 0, C: 0, D: 0, F: 0
   });
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState<boolean>(false);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
+  const [isDescriptionOverflowing, setIsDescriptionOverflowing] = useState<boolean>(false);
+
+  // Color coding functions
+  const getGradeColor = useMemo(() => {
+    if (!mostCommonGrade || mostCommonGrade === 'N/A') return 'gray';
+    
+    // Convert letter grades to a color
+    if (['A+', 'A', 'A-', 'B+'].includes(mostCommonGrade)) {
+      return 'green';
+    } else if (['B', 'B-', 'C+', 'C'].includes(mostCommonGrade)) {
+      return 'yellow';
+    } else {
+      return 'red';
+    }
+  }, [mostCommonGrade]);
+
+  const getDifficultyColor = (value: number) => {
+    // Lower difficulty is better (green)
+    if (value <= 2.0) return 'green';
+    if (value <= 3.5) return 'yellow';
+    return 'red';
+  };
+
+  const getQualityColor = (value: number) => {
+    // Higher quality is better (green)
+    if (value >= 4.0) return 'green';
+    if (value >= 3.0) return 'yellow';
+    return 'red';
+  };
+
+  // Get the overall background color based on the average of the three colors
+  const getOverallBackgroundColor = useMemo(() => {
+    const avgDifficulty = calculateAverageDifficulty(sortedProfessors);
+    const avgRating = calculateAverageRating(sortedProfessors);
+    
+    const gradeColorValue = getGradeColor;
+    const difficultyColorValue = getDifficultyColor(avgDifficulty);
+    const qualityColorValue = getQualityColor(avgRating);
+    
+    const colors = [
+      gradeColorValue,
+      difficultyColorValue,
+      qualityColorValue
+    ];
+    
+    const greenCount = colors.filter(c => c === 'green').length;
+    const yellowCount = colors.filter(c => c === 'yellow').length;
+    const redCount = colors.filter(c => c === 'red').length;
+    
+    // If all colors are the same, return that color
+    if (greenCount === 3) return 'bg-green-100';
+    if (yellowCount === 3) return 'bg-yellow-100';
+    if (redCount === 3) return 'bg-red-100';
+    
+    // If two colors are the same, return that color
+    if (greenCount === 2) return 'bg-green-50';
+    if (yellowCount === 2) return 'bg-yellow-50';
+    if (redCount === 2) return 'bg-red-50';
+    
+    // If all colors are different, return yellow
+    return 'bg-yellow-50';
+  }, [getGradeColor, sortedProfessors, calculateAverageDifficulty, calculateAverageRating]);
 
   useEffect(() => {
     const fetchCourse = async () => {
@@ -246,6 +325,17 @@ export default function CourseDetail() {
     }
   }, [courseCode]);
 
+  // Check if description overflows 4 lines
+  useEffect(() => {
+    if (descriptionRef.current) {
+      const lineHeight = parseInt(window.getComputedStyle(descriptionRef.current).lineHeight);
+      const maxHeight = lineHeight * 4; // 4 lines max
+      const actualHeight = descriptionRef.current.scrollHeight;
+      
+      setIsDescriptionOverflowing(actualHeight > maxHeight);
+    }
+  }, [course?.description]);
+
   // Function to toggle professor reviews expansion
   const toggleProfessorReviews = (professorName: string) => {
     if (expandedProfessor === professorName) {
@@ -256,9 +346,9 @@ export default function CourseDetail() {
   };
 
   return (
-    <div className="container mx-auto py-8 px-4">
+    <div className="container mx-auto py-8 px-4 max-w-7xl">
       {loading ? (
-        <div className="max-w-5xl mx-auto space-y-8">
+        <div className="max-w-7xl mx-auto space-y-8">
           <div className="flex flex-col md:flex-row justify-between">
             <div className="md:w-2/3">
               <SkeletonText width="50%" height="3rem" className="mb-2" />
@@ -289,23 +379,47 @@ export default function CourseDetail() {
           {error}
         </div>
       ) : course ? (
-        <div className="max-w-5xl mx-auto">
-          {/* Course Header with Grade */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-            <div>
-              <h1 className="text-5xl font-bold mb-2">{course.course_code}</h1>
-              <h2 className="text-3xl mb-2">{course.title}</h2>
-              <p className="text-lg text-gray-600">{course.credits} credits</p>
-            </div>
-            <div className="mt-4 md:mt-0">
-              <div className="bg-primary-blue text-white text-7xl font-bold px-6 py-3 rounded-lg">
-                {mostCommonGrade}
+        <div className="max-w-6xl mx-auto">
+          {/* New Course Header Section */}
+          <div className="mb-6">
+            <div className="flex flex-col lg:flex-row items-start mb-4">
+              {/* Course Code - Large and Prominent */}
+              <h1 className="text-6xl font-bold whitespace-nowrap mr-6">{course.course_code}</h1>
+              
+              {/* Course Title and Credits */}
+              <div className="mt-2 lg:mt-0">
+                <h2 className="text-2xl font-semibold">{course.title}</h2>
+                <p className="text-lg text-gray-600">{course.credits} credits</p>
               </div>
-              <p className="text-center mt-1 text-gray-600">
-                {totalReviews > 0 ? 
-                  <>based on<br />{totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}</> :
-                  'No reviews yet'
-                }
+            </div>
+            
+            {/* Prerequisites, Corequisites, Notes, and Unlocks */}
+            <div className="text-gray-700 text-lg mt-3">
+              <p>
+                {course.prerequisites && (
+                  <><span className="font-medium">Prerequisites:</span> {parseCourseCodes(course.prerequisites)}</>
+                )}
+                {course.prerequisites && course.corequisites && (
+                  <> • </>
+                )}
+                {course.corequisites && (
+                  <><span className="font-medium">Corequisites:</span> {parseCourseCodes(course.corequisites)}</>
+                )}
+                {(course.prerequisites || course.corequisites) && course.notes && (
+                  <> • </>
+                )}
+                {course.notes && (
+                  <><span className="font-medium">Notes:</span> {course.notes}</>
+                )}
+                {(course.prerequisites || course.corequisites || course.notes) && course.restrictions && (
+                  <> • </>
+                )}
+                {course.restrictions && (
+                  <><span className="font-medium">Unlocks:</span> {course.restrictions}</>
+                )}
+                {!course.prerequisites && !course.corequisites && !course.notes && !course.restrictions && (
+                  <span className="text-gray-500 italic">No prerequisites, corequisites, notes, or unlocks information available.</span>
+                )}
               </p>
             </div>
           </div>
@@ -355,76 +469,81 @@ export default function CourseDetail() {
                 <div className="md:w-2/3">
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold mb-2">Description</h3>
-                    <p className="text-gray-700">{course.description}</p>
+                    <div>
+                      <p 
+                        ref={descriptionRef}
+                        className={`text-gray-700 ${!isDescriptionExpanded ? 'line-clamp-4' : ''}`}
+                      >
+                        {course.description}
+                      </p>
+                      {isDescriptionOverflowing && (
+                        <button 
+                          onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
+                          className="text-blue-500 hover:text-blue-700 hover:underline mt-2 text-sm font-medium"
+                        >
+                          {isDescriptionExpanded ? 'Show less' : 'Show more...'}
+                        </button>
+                      )}
+                    </div>
                   </div>
 
-                  {course.prerequisites && (
-                    <div className="mb-6">
-                      <h3 className="text-xl font-semibold mb-2">Prerequisites</h3>
-                      <p className="text-gray-700">{parseCourseCodes(course.prerequisites)}</p>
-                    </div>
-                  )}
-
-                  {course.corequisites && (
-                    <div className="mb-6">
-                      <h3 className="text-xl font-semibold mb-2">Corequisites</h3>
-                      <p className="text-gray-700">{parseCourseCodes(course.corequisites)}</p>
-                    </div>
-                  )}
-
-                  {course.restrictions && (
-                    <div className="mb-6">
-                      <h3 className="text-xl font-semibold mb-2">Registration Restrictions</h3>
-                      <p className="text-gray-700">{course.restrictions}</p>
-                    </div>
-                  )}
-
-                  {course.notes && (
-                    <div className="mb-6">
-                      <h3 className="text-xl font-semibold mb-2">Notes</h3>
-                      <p className="text-gray-700">{course.notes}</p>
-                    </div>
-                  )}
-
-                  {/* Professor preview section */}
+                  {/* Professor preview section - Updated to table format */}
                   <div className="mt-8">
                     <h3 className="text-xl font-semibold mb-4">Professors</h3>
                     {sortedProfessors.length > 0 ? (
-                      <div className="space-y-4">
-                        {sortedProfessors.slice(0, 3).map((professor) => (
-                          <div key={`${professor.firstName}-${professor.lastName}`} className="flex items-center border-b pb-4">
-                            <div className="mr-4">
-                              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 font-bold">
-                                {professor.firstName[0]}{professor.lastName[0]}
-                              </div>
-                            </div>
-                            <div className="flex-grow">
-                              <h4 className="font-medium">
-                                <Link 
-                                  href={`/professors/${professor.url?.split('/').pop() || ''}`}
-                                  className="text-primary-blue hover:text-blue-800"
-                                >
-                                  {professor.firstName} {professor.lastName}
-                                </Link>
-                              </h4>
-                            </div>
-                            <div className="flex items-center">
-                              <div className="flex items-center text-yellow-500">
-                                {[...Array(5)].map((_, i) => (
-                                  <span key={i} className={i < Math.round(professor.avgRating) ? "text-yellow-500" : "text-gray-300"}>★</span>
-                                ))}
-                              </div>
-                              <span className="ml-2 font-semibold">{professor.avgRating.toFixed(1)}</span>
-                            </div>
+                      <div>
+                        <div className="overflow-x-auto border border-gray-200 rounded-lg">
+                          <table className="min-w-full divide-y divide-gray-200">
+                            <thead className="bg-gray-50">
+                              <tr>
+                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</th>
+                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Difficulty</th>
+                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Would Take Again</th>
+                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reviews</th>
+                              </tr>
+                            </thead>
+                            <tbody className="bg-white divide-y divide-gray-200">
+                              {sortedProfessors.slice(0, 4).map((professor) => (
+                                <tr key={`${professor.firstName}-${professor.lastName}`} className="hover:bg-gray-50">
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <Link 
+                                      href={`/professors/${professor.url?.split('/').pop() || ''}`}
+                                      className="text-sm font-medium text-primary-blue hover:text-blue-700"
+                                    >
+                                      {professor.firstName} {professor.lastName}
+                                    </Link>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-sm text-gray-900">{professor.avgRating.toFixed(1)}</div>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-sm text-gray-900">{professor.avgDifficulty.toFixed(1)}</div>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-sm text-gray-900">
+                                      {professor.wouldTakeAgainPercent === -1 ? 'N/A' : `${Math.round(professor.wouldTakeAgainPercent)}%`}
+                                    </div>
+                                  </td>
+                                  <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="text-sm text-gray-900">
+                                      {professor.reviews.length} {professor.reviews.length === 1 ? 'review' : 'reviews'}
+                                    </div>
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                        {sortedProfessors.length > 4 && (
+                          <div className="mt-3 text-right">
+                            <button 
+                              onClick={() => setActiveTab('professors')}
+                              className="text-primary-blue hover:underline text-sm font-medium"
+                            >
+                              View all {sortedProfessors.length} professors
+                            </button>
                           </div>
-                        ))}
-                        {sortedProfessors.length > 3 && (
-                          <button 
-                            onClick={() => setActiveTab('professors')}
-                            className="text-primary-blue hover:underline text-sm font-medium"
-                          >
-                            View all {sortedProfessors.length} professors
-                          </button>
                         )}
                       </div>
                     ) : (
@@ -435,80 +554,102 @@ export default function CourseDetail() {
 
                 {/* Right column - Stats & Grade Distribution */}
                 <div className="md:w-1/3">
-                  <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                    <div className="flex justify-between mb-4">
+                  {/* Stats grid with background color and border */}
+                  <div className={`${getOverallBackgroundColor} rounded-lg p-6 mb-6 border border-gray-200`}>
+                    <div className="grid grid-cols-3 gap-4">
                       <div>
-                        <h4 className="text-gray-500 text-sm">Credits</h4>
-                        <p className="text-3xl font-semibold">{course.credits}</p>
+                        <h4 className="text-gray-500 text-sm">Avg Grade</h4>
+                        <p className="text-5xl font-bold">{mostCommonGrade !== 'N/A' ? mostCommonGrade : '—'}</p>
                       </div>
                       <div>
-                        <h4 className="text-gray-500 text-sm">Avg, GPA</h4>
-                        <p className="text-3xl font-semibold">{mostCommonGrade !== 'N/A' ? mostCommonGrade : '—'}</p>
+                        <h4 className="text-gray-500 text-sm">Difficulty</h4>
+                        <p className="text-5xl font-semibold">{calculateAverageDifficulty(sortedProfessors)}<span className="text-2xl font-normal">/5</span></p>
+                      </div>
+                      <div>
+                        <h4 className="text-gray-500 text-sm">Quality</h4>
+                        <p className="text-5xl font-semibold">{calculateAverageRating(sortedProfessors)}<span className="text-2xl font-normal">/5</span></p>
                       </div>
                     </div>
-                    
-                    {/* Grade distribution mini preview */}
-                    <div className="mt-8">
-                      <h4 className="text-lg font-semibold mb-4">Grade Distribution</h4>
-                      {course.professors && course.professors.length > 0 && totalReviews > 0 ? (
-                        <div className="space-y-2">
-                          {/* Dynamic grade distribution bars */}
-                          <div className="flex items-center mb-3">
-                            <div className="w-full bg-gray-200 rounded-full h-3.5">
-                              <div className="bg-green-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.A || 0}%` }}></div>
-                            </div>
-                            <div className="ml-3 w-24 flex justify-between">
-                              <span className="text-sm font-medium">{gradeDistribution.A || 0}%</span>
-                              <span className="text-sm text-gray-700">A</span>
-                            </div>
+                  </div>
+                  
+                  {/* Grade distribution in separate container */}
+                  <div className="rounded-lg p-6 mb-6">
+                    <h4 className="text-lg font-semibold mb-5">Grade Distribution</h4>
+                    {course.professors && course.professors.length > 0 && totalReviews > 0 ? (
+                      <div className="space-y-4">
+                        {/* Grade distribution bars */}
+                        <div className="flex items-center mb-3">
+                          <div className="w-full bg-gray-200 rounded-full h-7 overflow-hidden">
+                            <div 
+                              className="bg-green-500 h-7 rounded-full rounded-r-none" 
+                              style={{ width: `${Math.max(gradeDistribution.A || 0, 1)}%` }}
+                            ></div>
                           </div>
-                          <div className="flex items-center mb-3">
-                            <div className="w-full bg-gray-200 rounded-full h-3.5">
-                              <div className="bg-blue-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.B || 0}%` }}></div>
-                            </div>
-                            <div className="ml-3 w-24 flex justify-between">
-                              <span className="text-sm font-medium">{gradeDistribution.B || 0}%</span>
-                              <span className="text-sm text-gray-700">B</span>
-                            </div>
+                          <div className="ml-4 flex items-center">
+                            <span className="text-base font-medium w-10 text-right">{gradeDistribution.A || 0}%</span>
+                            <span className="text-lg font-bold ml-4">A</span>
                           </div>
-                          <div className="flex items-center mb-3">
-                            <div className="w-full bg-gray-200 rounded-full h-3.5">
-                              <div className="bg-yellow-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.C || 0}%` }}></div>
-                            </div>
-                            <div className="ml-3 w-24 flex justify-between">
-                              <span className="text-sm font-medium">{gradeDistribution.C || 0}%</span>
-                              <span className="text-sm text-gray-700">C</span>
-                            </div>
+                        </div>
+                        <div className="flex items-center mb-3">
+                          <div className="w-full bg-gray-200 rounded-full h-7 overflow-hidden">
+                            <div 
+                              className="bg-blue-500 h-7 rounded-full rounded-r-none" 
+                              style={{ width: `${Math.max(gradeDistribution.B || 0, 1)}%` }}
+                            ></div>
                           </div>
-                          <div className="flex items-center mb-3">
-                            <div className="w-full bg-gray-200 rounded-full h-3.5">
-                              <div className="bg-orange-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.D || 0}%` }}></div>
-                            </div>
-                            <div className="ml-3 w-24 flex justify-between">
-                              <span className="text-sm font-medium">{gradeDistribution.D || 0}%</span>
-                              <span className="text-sm text-gray-700">D</span>
-                            </div>
+                          <div className="ml-4 flex items-center">
+                            <span className="text-base font-medium w-10 text-right">{gradeDistribution.B || 0}%</span>
+                            <span className="text-lg font-bold ml-4">B</span>
                           </div>
-                          <div className="flex items-center">
-                            <div className="w-full bg-gray-200 rounded-full h-3.5">
-                              <div className="bg-red-500 h-3.5 rounded-full" style={{ width: `${gradeDistribution.F || 0}%` }}></div>
-                            </div>
-                            <div className="ml-3 w-24 flex justify-between">
-                              <span className="text-sm font-medium">{gradeDistribution.F || 0}%</span>
-                              <span className="text-sm text-gray-700">F</span>
-                            </div>
+                        </div>
+                        <div className="flex items-center mb-3">
+                          <div className="w-full bg-gray-200 rounded-full h-7 overflow-hidden">
+                            <div 
+                              className="bg-yellow-500 h-7 rounded-full rounded-r-none" 
+                              style={{ width: `${Math.max(gradeDistribution.C || 0, 1)}%` }}
+                            ></div>
                           </div>
+                          <div className="ml-4 flex items-center">
+                            <span className="text-base font-medium w-10 text-right">{gradeDistribution.C || 0}%</span>
+                            <span className="text-lg font-bold ml-4">C</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center mb-3">
+                          <div className="w-full bg-gray-200 rounded-full h-7 overflow-hidden">
+                            <div 
+                              className="bg-orange-500 h-7 rounded-full rounded-r-none" 
+                              style={{ width: `${Math.max(gradeDistribution.D || 0, 1)}%` }}
+                            ></div>
+                          </div>
+                          <div className="ml-4 flex items-center">
+                            <span className="text-base font-medium w-10 text-right">{gradeDistribution.D || 0}%</span>
+                            <span className="text-lg font-bold ml-4">D</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center">
+                          <div className="w-full bg-gray-200 rounded-full h-7 overflow-hidden">
+                            <div 
+                              className="bg-red-500 h-7 rounded-full rounded-r-none" 
+                              style={{ width: `${Math.max(gradeDistribution.F || 0, 1)}%` }}
+                            ></div>
+                          </div>
+                          <div className="ml-4 flex items-center">
+                            <span className="text-base font-medium w-10 text-right">{gradeDistribution.F || 0}%</span>
+                            <span className="text-lg font-bold ml-4">F</span>
+                          </div>
+                        </div>
+                        <div className="mt-3">
                           <button 
                             onClick={() => setActiveTab('grade')}
-                            className="text-primary-blue hover:underline text-sm font-medium mt-2"
+                            className="text-blue-500 hover:underline text-sm font-medium"
                           >
                             View full grade distribution
                           </button>
                         </div>
-                      ) : (
-                        <p className="text-gray-500 italic">No grade data available.</p>
-                      )}
-                    </div>
+                      </div>
+                    ) : (
+                      <p className="text-gray-500 italic">No grade data available.</p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -518,113 +659,127 @@ export default function CourseDetail() {
             {activeTab === 'professors' && (
               <div>
                 {sortedProfessors.length > 0 ? (
-                  <div className="space-y-4">
-                    {sortedProfessors.map((professor) => {
-                      // Create a unique identifier for this professor
-                      const professorId = `${professor.firstName}-${professor.lastName}`;
-                      const isExpanded = expandedProfessor === professorId;
-                      
-                      return (
-                        <div key={professorId} className="border rounded-lg overflow-hidden">
-                          {/* Professor Header - Always visible and clickable */}
-                          <div 
-                            className="bg-gray-50 p-4 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors"
-                            onClick={() => toggleProfessorReviews(professorId)}
-                          >
-                            <div>
-                              <h4 className="text-lg font-semibold text-gray-900">
+                  <div>
+                    <div className="overflow-x-auto border border-gray-200 rounded-lg">
+                      <table className="min-w-full divide-y divide-gray-200">
+                        <thead className="bg-gray-50">
+                          <tr>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Difficulty</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Would Take Again</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reviews</th>
+                          </tr>
+                        </thead>
+                        <tbody className="bg-white divide-y divide-gray-200">
+                          {sortedProfessors.map((professor) => (
+                            <tr 
+                              key={`${professor.firstName}-${professor.lastName}`} 
+                              className="hover:bg-gray-50 cursor-pointer"
+                              onClick={() => toggleProfessorReviews(`${professor.firstName}-${professor.lastName}`)}
+                            >
+                              <td className="px-6 py-4 whitespace-nowrap">
                                 <Link 
                                   href={`/professors/${professor.url?.split('/').pop() || ''}`}
-                                  className="text-primary-blue hover:text-blue-800"
-                                  onClick={(e) => e.stopPropagation()} // Prevent toggling when clicking the link
+                                  className="text-sm font-medium text-primary-blue hover:text-blue-700"
+                                  onClick={(e) => e.stopPropagation()} // Prevent triggering row click when clicking link
                                 >
                                   {professor.firstName} {professor.lastName}
                                 </Link>
-                              </h4>
-                              <p className="text-sm text-gray-500">{professor.department}</p>
-                              <p className="text-sm text-gray-500 mt-1">
-                                {professor.reviews.length} {professor.reviews.length === 1 ? 'review' : 'reviews'}
-                              </p>
-                            </div>
-                            
-                            <div className="flex items-center">
-                              <div className="mr-6 text-center">
-                                <div className="flex items-center justify-center">
-                                  <span className="text-yellow-500 mr-1">★</span>
-                                  <span className="text-lg font-semibold">{professor.avgRating.toFixed(1)}</span>
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap">
+                                <div className="text-sm text-gray-900">{professor.department}</div>
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap">
+                                <div className="text-sm text-gray-900">{professor.avgRating.toFixed(1)}</div>
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap">
+                                <div className="text-sm text-gray-900">{professor.avgDifficulty.toFixed(1)}</div>
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap">
+                                <div className="text-sm text-gray-900">
+                                  {professor.wouldTakeAgainPercent === -1 ? 'N/A' : `${Math.round(professor.wouldTakeAgainPercent)}%`}
                                 </div>
-                                <p className="text-xs text-gray-500">Rating</p>
-                              </div>
-                              
-                              <svg 
-                                className={`h-6 w-6 text-gray-500 transform transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
-                                fill="none" 
-                                viewBox="0 0 24 24" 
-                                stroke="currentColor"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                              </svg>
-                            </div>
-                          </div>
-                          
-                          {/* Professor Details - Only visible when expanded */}
-                          {isExpanded && (
-                            <div className="p-4 border-t">
-                              {/* Rating Stats */}
-                              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                                <div className="bg-gray-50 p-3 rounded">
-                                  <p className="text-sm text-gray-500">Difficulty</p>
-                                  <p className="font-semibold">{professor.avgDifficulty.toFixed(1)}</p>
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap">
+                                <div className="text-sm text-gray-900">
+                                  {professor.reviews.length} {professor.reviews.length === 1 ? 'review' : 'reviews'}
                                 </div>
-                                <div className="bg-gray-50 p-3 rounded">
-                                  <p className="text-sm text-gray-500">Would Take Again</p>
-                                  <p className="font-semibold">{professor.wouldTakeAgainPercent === -1 ? 'N/A' : `${professor.wouldTakeAgainPercent.toFixed(1)}%`}</p>
-                                </div>
-                                {professor.clarityRating && (
-                                  <div className="bg-gray-50 p-3 rounded">
-                                    <p className="text-sm text-gray-500">Clarity</p>
-                                    <p className="font-semibold">{professor.clarityRating.toFixed(1)}</p>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {/* Professor Details Section - Show when expanded */}
+                    {expandedProfessor && (
+                      <div className="mt-4 p-4 border rounded-lg bg-gray-50">
+                        {sortedProfessors.map((professor) => {
+                          const professorId = `${professor.firstName}-${professor.lastName}`;
+                          if (professorId === expandedProfessor) {
+                            return (
+                              <div key={`details-${professorId}`}>
+                                <h3 className="text-xl font-semibold mb-4">{professor.firstName} {professor.lastName}</h3>
+                                
+                                {/* Rating Stats */}
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                                  <div className="bg-white p-3 rounded shadow-sm">
+                                    <p className="text-sm text-gray-500">Difficulty</p>
+                                    <p className="font-semibold">{professor.avgDifficulty.toFixed(1)}</p>
                                   </div>
-                                )}
-                                {professor.helpfulRating && (
-                                  <div className="bg-gray-50 p-3 rounded">
-                                    <p className="text-sm text-gray-500">Helpfulness</p>
-                                    <p className="font-semibold">{professor.helpfulRating.toFixed(1)}</p>
+                                  <div className="bg-white p-3 rounded shadow-sm">
+                                    <p className="text-sm text-gray-500">Would Take Again</p>
+                                    <p className="font-semibold">{professor.wouldTakeAgainPercent === -1 ? 'N/A' : `${Math.round(professor.wouldTakeAgainPercent)}%`}</p>
                                   </div>
-                                )}
-                              </div>
-                              
-                              {/* Reviews */}
-                              <h5 className="font-semibold text-gray-800 mb-4">Student Reviews</h5>
-                              <div className="space-y-4">
-                                {professor.reviews.length > 0 ? (
-                                  professor.reviews.map((review, index) => (
-                                    <div key={index} className="border-t pt-4 first:border-t-0 first:pt-0">
-                                      {review.comment && (
-                                        <p className="text-gray-600 mb-2">{review.comment}</p>
-                                      )}
-                                      <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                                        <span>Difficulty: {review.difficultyRating.toFixed(1)}</span>
-                                        <span>Would Take Again: {review.wouldTakeAgain ? 'Yes' : 'No'}</span>
-                                        {review.grade && <span>Grade: {review.grade}</span>}
-                                        {review.date && <span>Date: {new Date(review.date).toLocaleDateString()}</span>}
-                                        {review.clarityRating && <span>Clarity: {review.clarityRating.toFixed(1)}</span>}
-                                        {review.helpfulRating && <span>Helpfulness: {review.helpfulRating.toFixed(1)}</span>}
-                                        {review.textbookUse && <span>Textbook: {review.textbookUse}</span>}
-                                        {review.attendanceMandatory && <span>Attendance: {review.attendanceMandatory}</span>}
-                                        {review.isForOnlineClass && <span>Online Class</span>}
-                                      </div>
+                                  {professor.clarityRating && (
+                                    <div className="bg-white p-3 rounded shadow-sm">
+                                      <p className="text-sm text-gray-500">Clarity</p>
+                                      <p className="font-semibold">{professor.clarityRating.toFixed(1)}</p>
                                     </div>
-                                  ))
-                                ) : (
-                                  <p className="text-gray-500 italic">No reviews available.</p>
-                                )}
+                                  )}
+                                  {professor.helpfulRating && (
+                                    <div className="bg-white p-3 rounded shadow-sm">
+                                      <p className="text-sm text-gray-500">Helpfulness</p>
+                                      <p className="font-semibold">{professor.helpfulRating.toFixed(1)}</p>
+                                    </div>
+                                  )}
+                                </div>
+                                
+                                {/* Reviews */}
+                                <h4 className="font-semibold text-gray-800 mb-4">Student Reviews</h4>
+                                <div className="space-y-4">
+                                  {professor.reviews.length > 0 ? (
+                                    professor.reviews.map((review, index) => (
+                                      <div key={index} className="bg-white p-4 rounded shadow-sm">
+                                        {review.comment && (
+                                          <p className="text-gray-600 mb-2">{review.comment}</p>
+                                        )}
+                                        <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                                          <span>Difficulty: {review.difficultyRating.toFixed(1)}</span>
+                                          <span>Would Take Again: {review.wouldTakeAgain ? 'Yes' : 'No'}</span>
+                                          {review.grade && <span>Grade: {review.grade}</span>}
+                                          {review.date && <span>Date: {new Date(review.date).toLocaleDateString()}</span>}
+                                          {review.clarityRating && <span>Clarity: {review.clarityRating.toFixed(1)}</span>}
+                                          {review.helpfulRating && <span>Helpfulness: {review.helpfulRating.toFixed(1)}</span>}
+                                          {review.textbookUse && <span>Textbook: {review.textbookUse}</span>}
+                                          {review.attendanceMandatory && <span>Attendance: {review.attendanceMandatory}</span>}
+                                          {review.isForOnlineClass && <span>Online Class</span>}
+                                        </div>
+                                      </div>
+                                    ))
+                                  ) : (
+                                    <p className="text-gray-500 italic">No reviews available.</p>
+                                  )}
+                                </div>
                               </div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
+                            );
+                          }
+                          return null;
+                        })}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div className="text-center py-10">
