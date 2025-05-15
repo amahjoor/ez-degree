@@ -119,10 +119,20 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
-  const [timeRange, setTimeRange] = useState<{start: number, end: number}>({start: 8, end: 20}); // 8am-8pm
+  const [timeRange, setTimeRange] = useState<{start: number, end: number}>({start: 8, end: 20}); // Default 8am-8pm
   const [semester, setSemester] = useState<string>("Spring 2025");
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
+  
+  // State for per-day time ranges (initialize with default for all days)
+  const [dayTimeRanges, setDayTimeRanges] = useState<Array<{start: number, end: number}>>([
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23}
+  ]);
+  const [showDayTimeSelector, setShowDayTimeSelector] = useState<number | null>(null);
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const hours = Array.from({ length: 18 }, (_, i) => i + 6); // 6am to 11pm
@@ -327,9 +337,12 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
           return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
         };
         
+        // Use day-specific time range
+        const effectiveTimeRange = dayTimeRanges[index];
+        
         updatedAvailability[dayName] = [{
-          start: formatTimeString(timeRange.start),
-          end: formatTimeString(timeRange.end)
+          start: formatTimeString(effectiveTimeRange.start),
+          end: formatTimeString(effectiveTimeRange.end)
         }];
       } else {
         updatedAvailability[dayName] = []; // No availability for this day
@@ -356,7 +369,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
         availability: updatedAvailability
       }));
     }
-  }, [availableDays, timeRange]);
+  }, [availableDays, dayTimeRanges]);
 
   // Toggle day availability
   const toggleDay = (index: number) => {
@@ -365,18 +378,31 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     setAvailableDays(newAvailableDays);
   };
 
-  // Update time range with react-select
-  const handleTimeRangeChange = (type: 'start' | 'end', selectedOption: any) => {
+  // Handle day-specific time change
+  const handleDayTimeChange = (dayIndex: number, type: 'start' | 'end', selectedOption: any) => {
     if (!selectedOption) return;
     
-    const value = selectedOption.value;
-    if (type === 'start' && value < timeRange.end) {
-      setTimeRange(prev => ({ ...prev, start: value }));
-    } else if (type === 'end' && value > timeRange.start) {
-      setTimeRange(prev => ({ ...prev, end: value }));
-    }
+    const newDayTimeRanges = [...dayTimeRanges];
+    
+    // Update the time range for the specific day
+    newDayTimeRanges[dayIndex] = {
+      ...newDayTimeRanges[dayIndex],
+      [type]: selectedOption.value
+    };
+    
+    setDayTimeRanges(newDayTimeRanges);
   };
-  
+
+  // Helper to get effective time range for a specific day
+  const getEffectiveTimeRangeForDay = (dayIndex: number) => {
+    return dayTimeRanges[dayIndex];
+  };
+
+  // Toggle day time selector
+  const toggleDayTimeSelector = (dayIndex: number) => {
+    setShowDayTimeSelector(showDayTimeSelector === dayIndex ? null : dayIndex);
+  };
+
   // Handle semester change
   const handleSemesterChange = (selectedOption: any) => {
     if (selectedOption) {
@@ -517,57 +543,145 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
         {isFilterExpanded && (
           <div className="p-4 bg-gray-50 border-t border-gray-200 flex-shrink-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Time range section */}
-              <div>
-                <h3 className="text-sm font-medium text-gray-700 mb-2">Time Availability</h3>
-                <div className="flex items-center space-x-3">
-                  <div className="w-full">
-                    <Select
-                      value={timeOptions.find(option => option.value === timeRange.start)}
-                      onChange={(option) => handleTimeRangeChange('start', option)}
-                      options={timeOptions.filter(option => option.value < timeRange.end)}
-                      placeholder="Start time"
-                      className="react-select-container"
-                      classNamePrefix="react-select"
-                      styles={customSelectStyles}
-                      menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
-                      menuPosition="fixed"
-                    />
-                  </div>
-                  <span className="text-gray-500">to</span>
-                  <div className="w-full">
-                    <Select
-                      value={timeOptions.find(option => option.value === timeRange.end)}
-                      onChange={(option) => handleTimeRangeChange('end', option)}
-                      options={timeOptions.filter(option => option.value > timeRange.start)}
-                      placeholder="End time"
-                      className="react-select-container"
-                      classNamePrefix="react-select"
-                      styles={customSelectStyles}
-                      menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
-                      menuPosition="fixed"
-                    />
-                  </div>
-                </div>
-              </div>
               
               {/* Days of week section */}
               <div>
                 <h3 className="text-sm font-medium text-gray-700 mb-2">Available Days</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex items-center gap-2 relative">
                   {days.map((day, index) => (
-                    <button
-                      key={day}
-                      onClick={() => toggleDay(index)}
-                      className={`px-3 py-1.5 text-sm rounded-md ${
-                        availableDays[index] 
-                          ? 'bg-primary-blue text-white' 
-                          : 'bg-gray-200 text-gray-500'
-                      }`}
-                    >
-                      {day.substring(0, 3)}
-                    </button>
+                    <div key={day} className="flex items-center">
+                      <button
+                        onClick={() => toggleDay(index)}
+                        className={`px-4 py-2 text-sm ${
+                          availableDays[index] 
+                            ? 'bg-primary-blue text-white rounded-l-md' 
+                            : 'bg-gray-200 text-gray-500 rounded-md'
+                        }`}
+                      >
+                        {day.substring(0, 3)}
+                      </button>
+                      {availableDays[index] && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleDayTimeSelector(index);
+                          }}
+                          className={`p-2 rounded-r-md ${
+                            showDayTimeSelector === index
+                              ? 'bg-primary-blue text-white' 
+                              : 'bg-blue-300 text-white'
+                          }`}
+                          title={`Set time for ${day}`}
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </button>
+                      )}
+                    </div>
                   ))}
+                  
+                  {/* Time selector positioned at the same level */}
+                  {showDayTimeSelector !== null && availableDays[showDayTimeSelector] && (
+                    <div className="flex-1 ml-4 p-2 bg-white rounded-md border shadow-sm z-10 flex items-center">
+                      <span className="font-medium text-gray-700 mr-3">{days[showDayTimeSelector]}</span>
+                      <div className="flex-1 flex items-center">
+                        <div className="w-32">
+                          <Select
+                            value={timeOptions.find(option => option.value === dayTimeRanges[showDayTimeSelector].start)}
+                            onChange={(option) => handleDayTimeChange(showDayTimeSelector, 'start', option)}
+                            options={timeOptions.filter(option => option.value < dayTimeRanges[showDayTimeSelector].end)}
+                            placeholder="Start"
+                            className="react-select-container"
+                            classNamePrefix="react-select"
+                            styles={{
+                              ...customSelectStyles,
+                              control: (provided) => ({
+                                ...provided,
+                                minHeight: '36px',
+                                height: '36px',
+                                border: '1px solid #D1D5DB',
+                                boxShadow: 'none',
+                                borderRadius: '0.375rem'
+                              }),
+                              valueContainer: (provided) => ({
+                                ...provided,
+                                height: '36px',
+                                padding: '0 8px',
+                                display: 'flex',
+                                alignItems: 'center'
+                              }),
+                              singleValue: (provided) => ({
+                                ...provided,
+                                padding: 0,
+                                margin: 0
+                              }),
+                              // Hide the dropdown indicator (arrow)
+                              dropdownIndicator: () => ({
+                                display: 'none'
+                              }),
+                              indicatorSeparator: () => ({
+                                display: 'none'
+                              })
+                            }}
+                            menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+                            menuPosition="fixed"
+                          />
+                        </div>
+                        <span className="text-gray-500 px-3">to</span>
+                        <div className="w-32">
+                          <Select
+                            value={timeOptions.find(option => option.value === dayTimeRanges[showDayTimeSelector].end)}
+                            onChange={(option) => handleDayTimeChange(showDayTimeSelector, 'end', option)}
+                            options={timeOptions.filter(option => option.value > dayTimeRanges[showDayTimeSelector].start)}
+                            placeholder="End"
+                            className="react-select-container"
+                            classNamePrefix="react-select"
+                            styles={{
+                              ...customSelectStyles,
+                              control: (provided) => ({
+                                ...provided,
+                                minHeight: '36px',
+                                height: '36px',
+                                border: '1px solid #D1D5DB',
+                                boxShadow: 'none',
+                                borderRadius: '0.375rem'
+                              }),
+                              valueContainer: (provided) => ({
+                                ...provided,
+                                height: '36px',
+                                padding: '0 8px',
+                                display: 'flex',
+                                alignItems: 'center'
+                              }),
+                              singleValue: (provided) => ({
+                                ...provided,
+                                padding: 0,
+                                margin: 0
+                              }),
+                              // Hide the dropdown indicator (arrow)
+                              dropdownIndicator: () => ({
+                                display: 'none'
+                              }),
+                              indicatorSeparator: () => ({
+                                display: 'none'
+                              })
+                            }}
+                            menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+                            menuPosition="fixed"
+                          />
+                        </div>
+                        <button 
+                          onClick={() => setShowDayTimeSelector(null)}
+                          className="p-2 ml-3 text-gray-400 hover:text-gray-600"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -621,19 +735,46 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                     key={`day-${index}`}
                     className="h-12 flex items-center justify-center font-semibold border-b border-gray-200 border-r border-gray-200 sticky top-0 bg-gray-100 z-10"
                   >
-                    {day}
+                    <div className="flex items-center">
+                      {day}
+                      {dayTimeRanges[index] && (
+                        <span className="ml-2 text-xs text-primary-blue" title={`Custom time: ${formatTime(dayTimeRanges[index].start)} - ${formatTime(dayTimeRanges[index].end)}`}>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </span>
+                      )}
+                    </div>
                   </div>
                 )
               ))}
               
               {/* Time grid - generates the background grid, filtered by day availability */}
-              {days.map((_, dayIndex) => (
-                availableDays[dayIndex] && (
+              {days.map((_, dayIndex) => {
+                if (!availableDays[dayIndex]) return null;
+                
+                // Get effective time range for this day
+                const dayRange = dayTimeRanges[dayIndex];
+                // Filter visible hours for this specific day
+                const dayVisibleHours = visibleHours.filter(
+                  hour => hour >= dayRange.start && hour <= dayRange.end
+                );
+                
+                return (
                   <div 
                     key={`day-col-${dayIndex}`} 
                     className="relative border-r border-gray-200"
                   >
-                    {visibleHours.map((hour) => (
+                    {/* Add placeholder cells for hours before day's start time */}
+                    {dayRange.start > visibleHours[0] && (
+                      <div 
+                        className="border-b border-gray-200 bg-gray-100"
+                        style={{ height: `${(dayRange.start - visibleHours[0]) * 4}rem` }}
+                      />
+                    )}
+                    
+                    {/* Only show hours within this day's time range */}
+                    {dayVisibleHours.map((hour) => (
                       <div
                         key={`slot-${dayIndex}-${hour}`}
                         className={`h-16 border-b border-gray-200 hover:bg-blue-50 cursor-pointer transition-colors ${
@@ -647,14 +788,27 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                         onDrop={(e) => handleDrop(e, dayIndex, hour)}
                       />
                     ))}
+                    
+                    {/* Add placeholder cells for hours after day's end time */}
+                    {dayRange.end < visibleHours[visibleHours.length - 1] && (
+                      <div 
+                        className="border-b border-gray-200 bg-gray-100"
+                        style={{ height: `${(visibleHours[visibleHours.length - 1] - dayRange.end) * 4}rem` }}
+                      />
+                    )}
                   </div>
-                )
-              ))}
+                );
+              })}
               
               {/* Class blocks - filtered and positioned based on availability */}
               {classes.map((cls) => {
                 // Only show classes for available days and within time range
-                if (!availableDays[cls.day] || cls.startTime > timeRange.end || cls.endTime < timeRange.start) return null;
+                if (!availableDays[cls.day]) return null;
+                
+                // Get effective time range for this day
+                const dayRange = dayTimeRanges[cls.day];
+                
+                if (cls.startTime > dayRange.end || cls.endTime < dayRange.start) return null;
                 
                 // Ensure class has a color
                 const classWithColor = ensureClassHasColor(cls);
@@ -667,8 +821,8 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                   .length;
                 
                 // Calculate adjusted top position based on visible hours
-                const hourOffset = timeRange.start - hours[0]; // How many hours are hidden at the top
-                const adjustedTop = `calc(3rem + ${((cls.startTime - timeRange.start) * 4)}rem)`;
+                const hourOffset = Math.min(dayRange.start, visibleHours[0]) - hours[0]; // How many hours are hidden at the top
+                const adjustedTop = `calc(3rem + ${((cls.startTime - Math.max(dayRange.start, visibleHours[0])) * 4)}rem)`;
                   
                 return (
                   <div
