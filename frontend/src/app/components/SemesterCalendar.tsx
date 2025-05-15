@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useImperativeHandle, useState, useEffect } from 'react';
+import React, { forwardRef, useImperativeHandle, useState, useEffect, useRef } from 'react';
 import Select from 'react-select';
 import CourseSelectionModal from './CourseSelectionModal';
 import AIScheduleGenerator from './ai/AIScheduleGenerator';
@@ -125,13 +125,17 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-  const hours = Array.from({ length: 13 }, (_, i) => i + 8); // 8am to 8pm
+  const hours = Array.from({ length: 18 }, (_, i) => i + 6); // 6am to 11pm
 
   // Define options for select components
   const timeOptions = hours.map(hour => ({
     value: hour,
     label: hour === 12 ? '12pm' : hour > 12 ? `${hour-12}pm` : `${hour}am`
   }));
+  // Add 11pm only if it's not already included
+  if (!timeOptions.some(option => option.value === 23)) {
+    timeOptions.push({ value: 23, label: '11pm' });
+  }
   
   const semesterOptions = ["Summer 2025", "Fall 2025"].map(sem => ({
     value: sem,
@@ -172,6 +176,25 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     const displayHour = hour % 12 || 12;
     return `${displayHour}${minute > 0 ? `:${minute.toString().padStart(2, '0')}` : ''}${ampm}`;
   };
+
+  // Generate the visible hours based on the time range filter
+  const visibleHours = hours.filter(hour => hour >= timeRange.start && hour <= timeRange.end);
+  
+  // Ref for scrolling container
+  const calendarContainerRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to the current time range when it changes
+  useEffect(() => {
+    if (calendarContainerRef.current) {
+      // Calculate position to scroll to (start time - first hour)
+      const scrollIndex = timeRange.start - hours[0];
+      if (scrollIndex >= 0) {
+        // Each hour cell is 4rem (64px) + 1px border
+        const scrollPosition = scrollIndex * 65; 
+        calendarContainerRef.current.scrollTop = scrollPosition;
+      }
+    }
+  }, [timeRange.start, hours]);
 
   // Calculate class position and height
   const getClassStyle = (cls: ClassSession) => {
@@ -288,6 +311,52 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
       console.error('Error handling course drop:', error);
     }
   };
+
+  // Update preferences based on filter changes
+  useEffect(() => {
+    // Convert the availableDays and timeRange to the preferences.availability format
+    const updatedAvailability: Record<DayName, TimeInterval[]> = {} as any;
+    
+    days.forEach((day, index) => {
+      const dayName = day as DayName;
+      if (availableDays[index]) {
+        // Format hours to HH:MM format
+        const formatTimeString = (hour: number) => {
+          const hours = Math.floor(hour);
+          const minutes = Math.round((hour - hours) * 60);
+          return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+        };
+        
+        updatedAvailability[dayName] = [{
+          start: formatTimeString(timeRange.start),
+          end: formatTimeString(timeRange.end)
+        }];
+      } else {
+        updatedAvailability[dayName] = []; // No availability for this day
+      }
+    });
+    
+    // Check if availability has actually changed before updating state
+    const isEqual = Object.keys(updatedAvailability).every(day => {
+      const current = preferences.availability[day as DayName] || [];
+      const updated = updatedAvailability[day as DayName] || [];
+      
+      if (current.length !== updated.length) return false;
+      
+      return current.every((timeSlot, idx) => {
+        const updatedSlot = updated[idx];
+        return timeSlot.start === updatedSlot.start && timeSlot.end === updatedSlot.end;
+      });
+    });
+    
+    // Only update if there's an actual change
+    if (!isEqual) {
+      setPreferences(prev => ({
+        ...prev,
+        availability: updatedAvailability
+      }));
+    }
+  }, [availableDays, timeRange]);
 
   // Toggle day availability
   const toggleDay = (index: number) => {
@@ -439,7 +508,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              Generate Schedule For You
+              AI
             </button>
           </div>
         </div>
@@ -523,14 +592,14 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
       
       {/* Scrollable calendar grid */}
       <div className="relative flex-1 overflow-hidden z-20 isolate">
-        <div className="h-full overflow-auto pointer-events-auto">
+        <div ref={calendarContainerRef} className="h-full overflow-auto pointer-events-auto">
           <div className="grid grid-cols-6 min-h-full">
-            {/* Only show columns for available days */}
+            {/* Only show time column according to time range */}
             <div className="col-span-1 bg-gray-50 border-r border-gray-200 z-20 sticky left-0">
               <div className="h-12 flex items-center justify-center font-semibold border-b border-gray-200 bg-gray-100 sticky top-0">
                 Time
               </div>
-              {hours.map(hour => (
+              {visibleHours.map(hour => (
                 <React.Fragment key={`hour-${hour}`}>
                   <div className="h-16 flex items-center justify-end pr-3 text-sm text-gray-500 border-b border-gray-200">
                     {hour % 12 || 12}{hour >= 12 ? 'pm' : 'am'}
@@ -564,7 +633,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                     key={`day-col-${dayIndex}`} 
                     className="relative border-r border-gray-200"
                   >
-                    {hours.map((hour) => (
+                    {visibleHours.map((hour) => (
                       <div
                         key={`slot-${dayIndex}-${hour}`}
                         className={`h-16 border-b border-gray-200 hover:bg-blue-50 cursor-pointer transition-colors ${
@@ -584,8 +653,8 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               
               {/* Class blocks - filtered and positioned based on availability */}
               {classes.map((cls) => {
-                // Only show classes for available days
-                if (!availableDays[cls.day]) return null;
+                // Only show classes for available days and within time range
+                if (!availableDays[cls.day] || cls.startTime > timeRange.end || cls.endTime < timeRange.start) return null;
                 
                 // Ensure class has a color
                 const classWithColor = ensureClassHasColor(cls);
@@ -596,6 +665,10 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                   .slice(0, cls.day)
                   .filter(Boolean)
                   .length;
+                
+                // Calculate adjusted top position based on visible hours
+                const hourOffset = timeRange.start - hours[0]; // How many hours are hidden at the top
+                const adjustedTop = `calc(3rem + ${((cls.startTime - timeRange.start) * 4)}rem)`;
                   
                 return (
                   <div
@@ -604,7 +677,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                     style={{
                       left: `${(visibleDayIndex * (100 / availableDays.filter(Boolean).length))}%`,
                       width: `calc(${100 / availableDays.filter(Boolean).length}% - 8px)`,
-                      top: `calc(3rem + ${(cls.startTime - 8) * 4}rem)`,
+                      top: adjustedTop,
                       height: `calc(${(cls.endTime - cls.startTime) * 4}rem - 4px)`,
                     }}
                   >

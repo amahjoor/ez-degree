@@ -655,11 +655,28 @@ async def get_course(course_code: str):
                                     print(f"[DEBUG] Found matching course code variant: {variant}")
                                     # Calculate course-specific metrics
                                     reviews = professor_data['reviews'][variant]
-                                    avg_rating = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
-                                    avg_difficulty = sum(review.get('helpfulRating', 0) for review in reviews) / len(reviews)
+                                    
+                                    # Calculate proper quality rating based on helpful and clarity ratings
+                                    helpful_values = [review.get('helpfulRating') for review in reviews if review.get('helpfulRating') is not None]
+                                    clarity_values = [review.get('clarityRating') for review in reviews if review.get('clarityRating') is not None]
+                                    
+                                    # Compute avgRating based on available data
+                                    if helpful_values and clarity_values:
+                                        # If both available, use average of both
+                                        avg_rating = (sum(helpful_values) / len(helpful_values) + sum(clarity_values) / len(clarity_values)) / 2
+                                    elif helpful_values:
+                                        # If only helpful available
+                                        avg_rating = sum(helpful_values) / len(helpful_values)
+                                    elif clarity_values:
+                                        # If only clarity available
+                                        avg_rating = sum(clarity_values) / len(clarity_values)
+                                    else:
+                                        # Fallback to difficulty if neither available
+                                        avg_rating = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
+                                    
+                                    # Calculate other metrics
+                                    avg_difficulty = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
                                     would_take_again = sum(1 for review in reviews if review.get('wouldTakeAgain', False)) / len(reviews) * 100
-                                    avg_clarity = sum(review.get('clarityRating', 0) for review in reviews) / len(reviews) if all('clarityRating' in review for review in reviews) else None
-                                    avg_helpful = sum(review.get('helpfulRating', 0) for review in reviews) / len(reviews) if all('helpfulRating' in review for review in reviews) else None
                                     avg_grade = max(set(review.get('grade', '') for review in reviews), key=lambda x: reviews.count(x)) if reviews else None
                                     
                                     course_professors.append({
