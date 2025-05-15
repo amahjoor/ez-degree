@@ -656,7 +656,7 @@ async def get_course(course_code: str):
                                     # Calculate course-specific metrics
                                     reviews = professor_data['reviews'][variant]
                                     avg_rating = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
-                                    avg_difficulty = sum(review.get('difficultyRating', 0) for review in reviews) / len(reviews)
+                                    avg_difficulty = sum(review.get('helpfulRating', 0) for review in reviews) / len(reviews)
                                     would_take_again = sum(1 for review in reviews if review.get('wouldTakeAgain', False)) / len(reviews) * 100
                                     avg_clarity = sum(review.get('clarityRating', 0) for review in reviews) / len(reviews) if all('clarityRating' in review for review in reviews) else None
                                     avg_helpful = sum(review.get('helpfulRating', 0) for review in reviews) / len(reviews) if all('helpfulRating' in review for review in reviews) else None
@@ -669,8 +669,6 @@ async def get_course(course_code: str):
                                         "avgRating": avg_rating,
                                         "avgDifficulty": avg_difficulty,
                                         "wouldTakeAgainPercent": would_take_again,
-                                        "clarityRating": avg_clarity,
-                                        "helpfulRating": avg_helpful,
                                         "averageGrade": avg_grade,
                                         "reviews": reviews,
                                         "url": professor_data.get('url')

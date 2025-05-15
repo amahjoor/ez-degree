@@ -1,9 +1,16 @@
+import { Professor } from './professor';
+
 export interface Course {
   course_code: string;
   title: string;
   credits: number;
   description: string;
   subject: string;
+  prerequisites: string | null;
+  corequisites: string | null;
+  restrictions: string | null;
+  notes: string | null;
+  professors: Professor[];
 }
 
 export interface Subject {
