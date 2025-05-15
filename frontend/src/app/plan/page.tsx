@@ -154,15 +154,14 @@ export default function PlanPage() {
               {/* Sidebar Toggle Button */}
               <button
                 onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-                className="flex items-center px-5 py-3 text-gray-500 hover:text-gray-700 mr-2"
+                className={`flex items-center px-5 py-3 ${
+                  isSidebarCollapsed ? 'text-gray-500 hover:text-gray-700' : 'text-primary-blue'
+                } mr-2`}
                 title={isSidebarCollapsed ? "Show requirements sidebar" : "Hide requirements sidebar"}
               >
-                <h2 className="font-medium text-lg truncate mr-2">
-                  Requirements
-                </h2>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-5 w-5 mr-2"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -171,9 +170,12 @@ export default function PlanPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d={isSidebarCollapsed ? "M13 5l7 7-7 7" : "M11 19l-7-7 7-7"}
+                    d={isSidebarCollapsed ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"}
                   />
                 </svg>
+                <h2 className="font-medium text-lg truncate">
+                  Requirements
+                </h2>
               </button>
             </div>
           </div>
