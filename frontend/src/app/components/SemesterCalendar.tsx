@@ -117,7 +117,6 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
-  const [timeRange, setTimeRange] = useState<{start: number, end: number}>({start: 8, end: 20}); // Default 8am-8pm
   const [semester, setSemester] = useState<string>("Spring 2025");
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
@@ -159,6 +158,20 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const hours = Array.from({ length: 18 }, (_, i) => i + 6); // 6am to 11pm
+
+  // Calculate dynamic time range based on available days and their time ranges
+  const dynamicTimeRange = React.useMemo(() => {
+    const activeDayRanges = dayTimeRanges.filter((_, index) => availableDays[index]);
+    
+    if (activeDayRanges.length === 0) {
+      return { start: 6, end: 23 }; // Default fallback
+    }
+    
+    const earliestStart = Math.min(...activeDayRanges.map(range => range.start));
+    const latestEnd = Math.max(...activeDayRanges.map(range => range.end));
+    
+    return { start: earliestStart, end: latestEnd };
+  }, [dayTimeRanges, availableDays]);
 
   // Define options for select components
   const timeOptions = hours.map(hour => ({
@@ -210,8 +223,8 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     return `${displayHour}${minute > 0 ? `:${minute.toString().padStart(2, '0')}` : ''}${ampm}`;
   };
 
-  // Generate the visible hours based on the time range filter
-  const visibleHours = hours.filter(hour => hour >= timeRange.start && hour <= timeRange.end);
+  // Generate the visible hours based on the dynamic time range
+  const visibleHours = hours.filter(hour => hour >= dynamicTimeRange.start && hour <= dynamicTimeRange.end);
   
   // Filter classes to only show those for the current semester
   const currentSemesterClasses = classes.filter(cls => 
@@ -225,14 +238,14 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   useEffect(() => {
     if (calendarContainerRef.current) {
       // Calculate position to scroll to (start time - first hour)
-      const scrollIndex = timeRange.start - hours[0];
+      const scrollIndex = dynamicTimeRange.start - hours[0];
       if (scrollIndex >= 0) {
         // Each hour cell is 4rem (64px) + 1px border
         const scrollPosition = scrollIndex * 65; 
         calendarContainerRef.current.scrollTop = scrollPosition;
       }
     }
-  }, [timeRange.start, hours]);
+  }, [dynamicTimeRange.start, hours]);
 
   // Calculate class position and height
   const getClassStyle = (cls: ClassSession) => {
@@ -354,7 +367,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
 
   // Update preferences based on filter changes
   useEffect(() => {
-    // Convert the availableDays and timeRange to the preferences.availability format
+    // Convert the availableDays and dayTimeRanges to the preferences.availability format
     const updatedAvailability: Record<DayName, TimeInterval[]> = {} as any;
     
     days.forEach((day, index) => {

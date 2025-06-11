@@ -85,19 +85,7 @@ export default function PlanPage() {
     }
   }, [activeView]);
 
-  // Add an effect to prevent body scrolling when this page is active
-  useEffect(() => {
-    // Save the original overflow style
-    const originalStyle = document.body.style.overflow;
-    
-    // Disable scrolling on body
-    document.body.style.overflow = 'hidden';
-    
-    // Restore original overflow style when component unmounts
-    return () => {
-      document.body.style.overflow = originalStyle;
-    };
-  }, []);
+
 
   // Function to handle adding a course from the requirements list
   const handleCourseSelect = (courseCode: string, courseTitle: string, courseCredits: number) => {
@@ -107,7 +95,7 @@ export default function PlanPage() {
   };
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
+    <div className="h-[calc(100vh-4rem)] flex flex-col overflow-hidden">
       {/* API Error Message */}
       {!isApiAvailable && !isLoading && (
         <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
