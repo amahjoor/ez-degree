@@ -113,27 +113,7 @@ export default function CourseOverlay({
     Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4,
   };
 
-  // --- Fetch Section Data for Add Tab ---
-  const fetchCourseCodeData = async () => {
-    if (!selectedTerm) return;
-    setCodeDataLoading(true);
-    setCodeDataError(null);
-    try {
-      const resp = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
-        `?Term=${encodeURIComponent(selectedTerm)}` +
-        `&CourseCode=${encodeURIComponent(courseCode)}`
-      );
-      if (!resp.ok) throw new Error(resp.statusText);
-      const data: SectionInfo[] = await resp.json();
-      setCodeData(data);
-    } catch (e) {
-      console.error(e);
-      setCodeDataError('Failed to load course code data');
-    } finally {
-      setCodeDataLoading(false);
-    }
-  };
+
 
   const handleSectionClick = (item: SectionInfo) => {
     const sessions: ClassSession[] = [];
@@ -164,12 +144,30 @@ export default function CourseOverlay({
     const vw = window.innerWidth;
     const vh = window.innerHeight;
     let x = position.x, y = position.y;
-    const offsetY = 10, width = 400, height = 300;
+    const offsetY = 10, width = 400, height = 400; // Increased height estimate for more accurate positioning
+    
+    // Horizontal positioning
     if (x + width/2 > vw) x = vw - width/2 - 10;
     if (x - width/2 < 0) x = width/2 + 10;
-    return y - height < 20
-      ? { top: `${y + offsetY}px`, left: `${x}px`, transform: 'translate(-50%, 0)' }
-      : { top: `${y}px`, left: `${x}px`, transform: 'translate(-50%, -100%)' };
+    
+    // Vertical positioning - improved logic to prevent bleeding off top
+    const spaceAbove = y - height - offsetY;
+    const spaceBelow = vh - y - offsetY;
+    
+    // If there's not enough space above (including a 60px safety margin for tabs), position below
+    if (spaceAbove < 60) {
+      return { 
+        top: `${y + offsetY}px`, 
+        left: `${x}px`, 
+        transform: 'translate(-50%, 0)' 
+      };
+    } else {
+      return { 
+        top: `${y - offsetY}px`, 
+        left: `${x}px`, 
+        transform: 'translate(-50%, -100%)' 
+      };
+    }
   };
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -181,133 +179,176 @@ export default function CourseOverlay({
   }, [onClose]);
 
   const overlayStyle: React.CSSProperties = {
-    position: 'fixed', zIndex: 9999, maxWidth: '400px', width: '100%', ...adjustPosition(),
+    position: 'fixed', 
+    zIndex: 9999, 
+    maxWidth: '400px', 
+    width: '100%',
+    maxHeight: '80vh', // Prevent modal from being taller than 80% of viewport
+    overflow: 'hidden', // Prevent content overflow
+    ...adjustPosition(),
   };
 
   // --- Render ---
   return (
     <div className="course-overlay bg-white rounded-lg shadow-xl border border-gray-200" style={overlayStyle}>
-      {/* Tabs */}
-      <div className="flex border-b">
+      {/* Tabs with close button */}
+      <div className="flex border-b items-center">
         <button onClick={() => setActiveTab('summary')} className={`flex-1 py-2 ${activeTab==='summary'? 'font-bold border-b-2 border-primary-blue':''}`}>Summary</button>
         <button onClick={() => setActiveTab('add')} className={`flex-1 py-2 ${activeTab==='add'? 'font-bold border-b-2 border-primary-blue':''}`}>Add Class</button>
+        <button 
+          className="px-3 py-2 text-gray-500 hover:text-gray-700 transition-colors"
+          onClick={onClose}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
 
       {activeTab === 'summary' ? (
-        loading ? <div className="p-4 animate-pulse">Loading…</div>
-        : error ? <div className="p-4 text-red-500">{error}</div>
-        : courseData ? (
+        loading ? (
+          <div className="p-4 animate-pulse">Loading…</div>
+        ) : error ? (
+          <div className="p-4 text-red-500">{error}</div>
+        ) : courseData ? (
           <>
-           <div className="relative">
-  <button
-    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-    onClick={onClose}
-  >
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
+            {/* Header with course code and grade */}
+            <div className="flex justify-between items-center bg-primary-blue/5 p-4 border-b border-primary-blue/10">
+              <div>
+                <h3 className="font-bold text-lg text-gray-900">{courseData.course_code}</h3>
+                <p className="text-gray-600 text-sm">{courseData.credits} credits</p>
+              </div>
+              {courseData.mostCommonGrade && courseData.mostCommonGrade !== 'N/A' && (
+                <div className="bg-primary-blue text-white text-2xl font-bold px-4 py-2 rounded-lg">
+                  {courseData.mostCommonGrade}
+                </div>
+              )}
+            </div>
 
-  {loading ? (
-    <div className="p-4">
-      <div className="animate-pulse">
-        <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
-        <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
-        <div className="h-20 bg-gray-200 rounded mb-4"></div>
-        <div className="flex space-x-4">
-          <div className="h-8 bg-gray-200 rounded w-1/4"></div>
-          <div className="h-8 bg-gray-200 rounded w-1/4"></div>
-        </div>
-      </div>
-    </div>
-  ) : error ? (
-    <div className="p-4 text-red-500">{error}</div>
-  ) : courseData ? (
-    <>
-      {/* Header with course code and grade */}
-      <div className="flex justify-between items-center bg-primary-blue/5 p-4 border-b border-primary-blue/10">
-        <div>
-          <h3 className="font-bold text-lg text-gray-900">{courseData.course_code}</h3>
-          <p className="text-gray-600 text-sm">{courseData.credits} credits</p>
-        </div>
-        {courseData.mostCommonGrade && courseData.mostCommonGrade !== 'N/A' && (
-          <div className="bg-primary-blue text-white text-2xl font-bold px-4 py-2 rounded-lg">
-            {courseData.mostCommonGrade}
-          </div>
-        )}
-      </div>
+            {/* Course details - scrollable content */}
+            <div className="p-4 overflow-y-auto max-h-60">
+              <h4 className="font-medium text-base mb-2">{courseData.title}</h4>
+              {courseData.description && (
+                <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                  {courseData.description}
+                </p>
+              )}
 
-      {/* Course details */}
-      <div className="p-4">
-        <h4 className="font-medium text-base mb-2">{courseData.title}</h4>
-        {courseData.description && (
-          <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-            {courseData.description}
-          </p>
-        )}
-
-        {/* Professors preview */}
-        {professors.length > 0 && (
-          <div className="mt-2">
-            <p className="text-sm text-gray-500 mb-1">Top Professors:</p>
-            <div className="space-y-1">
-              {professors.slice(0, 2).map((prof, idx) => (
-                <div key={idx} className="flex justify-between items-center">
-                  <span className="text-sm">{prof.firstName} {prof.lastName}</span>
-                  <div className="flex items-center">
-                    <span className="text-yellow-500 mr-1">★</span>
-                    <span className="text-sm font-medium">{prof.avgRating?.toFixed(1) || 'N/A'}</span>
+              {/* Professors preview */}
+              {professors.length > 0 && (
+                <div className="mt-2">
+                  <p className="text-sm text-gray-500 mb-1">Top Professors:</p>
+                  <div className="space-y-1">
+                    {professors.slice(0, 2).map((prof, idx) => (
+                      <div key={idx} className="flex justify-between items-center">
+                        <span className="text-sm">{prof.firstName} {prof.lastName}</span>
+                        <div className="flex items-center">
+                          <span className="text-yellow-500 mr-1">★</span>
+                          <span className="text-sm font-medium">{prof.avgRating?.toFixed(1) || 'N/A'}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
-          </div>
-        )}
 
-        {/* Footer with link to full page */}
-        <div className="mt-4 flex justify-between items-center pt-2 border-t border-gray-100">
-          {courseData.totalReviews !== undefined && (
-            <span className="text-xs text-gray-500">
-              {courseData.totalReviews} {courseData.totalReviews === 1 ? 'review' : 'reviews'}
-            </span>
-          )}
-          <Link
-            href={`/courses/${encodeURIComponent(courseData.course_code)}`}
-            className="text-primary-blue hover:text-blue-700 text-sm font-medium"
-          >
-            View Details →
-          </Link>
-        </div>
-      </div>
-    </>
-  ) : (
-    <div className="p-4 text-gray-500">No course data available</div>
-  )}
-</div>
+            {/* Footer with link to full page - fixed at bottom */}
+            <div className="p-4 pt-2 border-t border-gray-100 bg-white">
+              <div className="flex justify-between items-center">
+                {courseData.totalReviews !== undefined && (
+                  <span className="text-xs text-gray-500">
+                    {courseData.totalReviews} {courseData.totalReviews === 1 ? 'review' : 'reviews'}
+                  </span>
+                )}
+                <Link
+                  href={`/courses/${encodeURIComponent(courseData.course_code)}`}
+                  className="text-primary-blue hover:text-blue-700 text-sm font-medium"
+                >
+                  View Details →
+                </Link>
+              </div>
+            </div>
           </>
-        ) : <div className="p-4 text-gray-500">No data available</div>
+        ) : (
+          <div className="p-4 text-gray-500">No data available</div>
+        )
       ) : (
         <div className="p-4 space-y-4">
-          {termsLoading ? <p>Loading terms…</p>
-          : termsError ? <p className="text-red-500">{termsError}</p>
-          : (
-            <select value={selectedTerm} onChange={e=>setSelectedTerm(e.target.value)} className="w-full border rounded p-2">
-              <option value="">Select a term</option>
-              {terms.map(t=><option key={t} value={t}>{t}</option>)}
-            </select>
-          )}
-          <button onClick={fetchCourseCodeData} disabled={codeDataLoading} className="px-4 py-2 bg-primary-blue text-white rounded">
-            {codeDataLoading?'Loading…':'Load Sections'}
-          </button>
-          {codeDataError && <p className="text-red-500">{codeDataError}</p>}
-          <div className="max-h-48 overflow-y-auto border-t pt-2">
-            {codeData.map((item,i)=>(
-              <div key={i} onClick={()=>handleSectionClick(item)} className="cursor-pointer py-2 px-3 hover:bg-gray-100 border-b last:border-none">
-                <div className="font-medium">{`${item.CourseSubject} ${item.CourseNumber}-${item.CourseSection}`}</div>
-                <div className="text-sm text-gray-600">{item.MeetingDays} @ {item.MeetingTimes}</div>
+          {termsLoading ? (
+            <p>Loading terms…</p>
+          ) : termsError ? (
+            <p className="text-red-500">{termsError}</p>
+          ) : (
+            <div>
+              <p className="text-sm font-medium text-gray-700 mb-2">Select a term:</p>
+              <div className="flex bg-gray-100 rounded-lg p-1">
+                {terms.map(term => (
+                  <button
+                    key={term}
+                    onClick={() => {
+                      setSelectedTerm(term);
+                      // Auto-load sections when term is selected
+                      if (term) {
+                        setCodeDataLoading(true);
+                        setCodeDataError(null);
+                        fetch(
+                          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
+                          `?Term=${encodeURIComponent(term)}` +
+                          `&CourseCode=${encodeURIComponent(courseCode)}`
+                        )
+                        .then(resp => {
+                          if (!resp.ok) throw new Error(resp.statusText);
+                          return resp.json();
+                        })
+                        .then((data: SectionInfo[]) => {
+                          setCodeData(data);
+                        })
+                        .catch(e => {
+                          console.error(e);
+                          setCodeDataError('Failed to load course code data');
+                        })
+                        .finally(() => {
+                          setCodeDataLoading(false);
+                        });
+                      }
+                    }}
+                    disabled={codeDataLoading}
+                    className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                      selectedTerm === term
+                        ? 'bg-primary-blue text-white shadow-sm'
+                        : codeDataLoading 
+                          ? 'text-gray-400 cursor-not-allowed'
+                          : 'text-gray-600 hover:text-gray-800 hover:bg-gray-200'
+                    }`}
+                  >
+                    {codeDataLoading && selectedTerm === term ? 'Loading...' : term}
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          )}
+          {codeDataError && <p className="text-red-500 text-sm mt-2">{codeDataError}</p>}    
+          {/* Sections list or empty state */}
+          {selectedTerm && !codeDataLoading && !codeDataError && (
+            <div className="max-h-48 overflow-y-auto border-t pt-2">
+              {codeData.length > 0 ? (
+                codeData.map((item,i) => (
+                  <div key={i} onClick={() => handleSectionClick(item)} className="cursor-pointer py-2 px-3 hover:bg-gray-100 border-b last:border-none">
+                    <div className="font-medium">{`${item.CourseSubject} ${item.CourseNumber}-${item.CourseSection}`}</div>
+                    <div className="text-sm text-gray-600">{item.MeetingDays} @ {item.MeetingTimes}</div>
+                  </div>
+                ))
+              ) : (
+                <div className="py-8 px-4 text-center">
+                  <p className="text-gray-500 text-sm font-medium mb-1">No sections available</p>
+                  <p className="text-gray-400 text-xs">
+                    {courseCode} is not offered in {selectedTerm}
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>
