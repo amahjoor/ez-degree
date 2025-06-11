@@ -14,6 +14,7 @@ export default function CourseOverlay({
   position,
   onClose,
   onAddSessions,
+  currentSemester,
 }: CourseOverlayProps) {
   // --- TAB STATE ---
   const [activeTab, setActiveTab] = useState<'summary' | 'add'>('summary');
@@ -24,11 +25,6 @@ export default function CourseOverlay({
   const [error, setError] = useState<string | null>(null);
 
   // --- ADD-CLASS STATES ---
-  const [terms, setTerms] = useState<string[]>([]);
-  const [termsLoading, setTermsLoading] = useState(false);
-  const [termsError, setTermsError] = useState<string | null>(null);
-  const [selectedTerm, setSelectedTerm] = useState<string>('');
-
   const [codeData, setCodeData] = useState<SectionInfo[]>([]);
   const [codeDataLoading, setCodeDataLoading] = useState(false);
   const [codeDataError, setCodeDataError] = useState<string | null>(null);
@@ -56,27 +52,32 @@ export default function CourseOverlay({
     fetchCourseDetails();
   }, [courseCode, activeTab]);
 
+  // Auto-load sections when switching to Add Class tab and currentSemester is available
   useEffect(() => {
-    if (activeTab !== 'add') return;
-    setTermsLoading(true);
-    setTermsError(null);
-  
-    fetch(`${API_BASE_URL}/term-list`)
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch term list');
-        return res.json() as Promise<string[]>;
-      })
-      .then((termsData) => {
-        setTerms(termsData);
-      })
-      .catch(err => {
-        console.error(err);
-        setTermsError('Failed to load term list');
-      })
-      .finally(() => {
-        setTermsLoading(false);
-      });
-  }, [activeTab]);
+    if (activeTab !== 'add' || !currentSemester) return;
+    
+    setCodeDataLoading(true);
+    setCodeDataError(null);
+    fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
+      `?Term=${encodeURIComponent(currentSemester)}` +
+      `&CourseCode=${encodeURIComponent(courseCode)}`
+    )
+    .then(resp => {
+      if (!resp.ok) throw new Error(resp.statusText);
+      return resp.json();
+    })
+    .then((data: SectionInfo[]) => {
+      setCodeData(data);
+    })
+    .catch(e => {
+      console.error(e);
+      setCodeDataError('Failed to load course code data');
+    })
+    .finally(() => {
+      setCodeDataLoading(false);
+    });
+  }, [activeTab, currentSemester, courseCode]);
 
   // --- Compute Most Common Grade & Review Count ---
   useEffect(() => {
@@ -135,7 +136,8 @@ export default function CourseOverlay({
         credits: Number(item.CreditHours),
       });
     });
-    onAddSessions(sessions);
+    // Pass the current semester along with the sessions
+    onAddSessions(sessions, currentSemester);
     onClose();
   };
 
@@ -275,79 +277,38 @@ export default function CourseOverlay({
         )
       ) : (
         <div className="p-4 space-y-4">
-          {termsLoading ? (
-            <p>Loading terms…</p>
-          ) : termsError ? (
-            <p className="text-red-500">{termsError}</p>
+          {!currentSemester ? (
+            <p className="text-gray-500">No semester selected</p>
+          ) : codeDataLoading ? (
+            <p>Loading sections for {currentSemester}...</p>
+          ) : codeDataError ? (
+            <p className="text-red-500 text-sm">{codeDataError}</p>
           ) : (
-            <div>
-              <p className="text-sm font-medium text-gray-700 mb-2">Select a term:</p>
-              <div className="flex bg-gray-100 rounded-lg p-1">
-                {terms.map(term => (
-                  <button
-                    key={term}
-                    onClick={() => {
-                      setSelectedTerm(term);
-                      // Auto-load sections when term is selected
-                      if (term) {
-                        setCodeDataLoading(true);
-                        setCodeDataError(null);
-                        fetch(
-                          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
-                          `?Term=${encodeURIComponent(term)}` +
-                          `&CourseCode=${encodeURIComponent(courseCode)}`
-                        )
-                        .then(resp => {
-                          if (!resp.ok) throw new Error(resp.statusText);
-                          return resp.json();
-                        })
-                        .then((data: SectionInfo[]) => {
-                          setCodeData(data);
-                        })
-                        .catch(e => {
-                          console.error(e);
-                          setCodeDataError('Failed to load course code data');
-                        })
-                        .finally(() => {
-                          setCodeDataLoading(false);
-                        });
-                      }
-                    }}
-                    disabled={codeDataLoading}
-                    className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                      selectedTerm === term
-                        ? 'bg-primary-blue text-white shadow-sm'
-                        : codeDataLoading 
-                          ? 'text-gray-400 cursor-not-allowed'
-                          : 'text-gray-600 hover:text-gray-800 hover:bg-gray-200'
-                    }`}
-                  >
-                    {codeDataLoading && selectedTerm === term ? 'Loading...' : term}
-                  </button>
-                ))}
+            <>
+              <div className="text-sm text-gray-600 mb-2">
+                Showing sections for <span className="font-medium">{currentSemester}</span>
               </div>
-            </div>
-          )}
-          {codeDataError && <p className="text-red-500 text-sm mt-2">{codeDataError}</p>}    
-          {/* Sections list or empty state */}
-          {selectedTerm && !codeDataLoading && !codeDataError && (
-            <div className="max-h-48 overflow-y-auto border-t pt-2">
-              {codeData.length > 0 ? (
-                codeData.map((item,i) => (
-                  <div key={i} onClick={() => handleSectionClick(item)} className="cursor-pointer py-2 px-3 hover:bg-gray-100 border-b last:border-none">
-                    <div className="font-medium">{`${item.CourseSubject} ${item.CourseNumber}-${item.CourseSection}`}</div>
-                    <div className="text-sm text-gray-600">{item.MeetingDays} @ {item.MeetingTimes}</div>
+              
+              {/* Sections list or empty state */}
+              <div className="max-h-64 overflow-y-auto border-t pt-2">
+                {codeData.length > 0 ? (
+                  codeData.map((item,i) => (
+                    <div key={i} onClick={() => handleSectionClick(item)} className="cursor-pointer py-2 px-3 hover:bg-gray-100 border-b last:border-none">
+                      <div className="font-medium">{`${item.CourseSubject} ${item.CourseNumber}-${item.CourseSection}`}</div>
+                      <div className="text-sm text-gray-600">{item.MeetingDays} @ {item.MeetingTimes}</div>
+                      <div className="text-xs text-gray-500 mt-1">{item.Instructor}</div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="py-8 px-4 text-center">
+                    <p className="text-gray-500 text-sm font-medium mb-1">No sections available</p>
+                    <p className="text-gray-400 text-xs">
+                      {courseCode} is not offered in {currentSemester}
+                    </p>
                   </div>
-                ))
-              ) : (
-                <div className="py-8 px-4 text-center">
-                  <p className="text-gray-500 text-sm font-medium mb-1">No sections available</p>
-                  <p className="text-gray-400 text-xs">
-                    {courseCode} is not offered in {selectedTerm}
-                  </p>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            </>
           )}
         </div>
       )}

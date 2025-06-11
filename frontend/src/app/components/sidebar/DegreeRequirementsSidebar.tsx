@@ -17,6 +17,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
   onApiConnectionRetry,
   onCourseSelect,
   onAddSessions,
+  currentSemester,
 }) => {
   const [loading, setLoading] = useState(false);
   const [majors, setMajors] = useState<Major[]>([]);
@@ -217,7 +218,8 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
         courseCode={selectedCourseCode}
         position={overlayPosition}
         onClose={() => setOverlayVisible(false)}
-        onAddSessions={onAddSessions}      // ← now correctly typed
+        onAddSessions={onAddSessions}      // ← pass through with term info
+        currentSemester={currentSemester}  // ← pass current semester
       />
     )}
     </div>

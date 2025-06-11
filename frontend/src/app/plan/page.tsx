@@ -24,6 +24,9 @@ export default function PlanPage() {
   // State to track sidebar collapse
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   
+  // State to track current semester for the course overlay
+  const [currentSemester, setCurrentSemester] = useState<string>('Summer 2025');
+  
   // Function to check if the API is available
   const checkApiConnection = useCallback(async () => {
     setIsLoading(true);
@@ -63,6 +66,24 @@ export default function PlanPage() {
   useEffect(() => {
     checkApiConnection();
   }, [checkApiConnection]);
+
+  // Update current semester when on weekly view
+  useEffect(() => {
+    if (activeView === 'weekly' && weeklyCalendarRef.current) {
+      const semester = weeklyCalendarRef.current.getCurrentSemester();
+      setCurrentSemester(semester);
+      
+      // Set up an interval to sync the semester periodically
+      const interval = setInterval(() => {
+        if (weeklyCalendarRef.current) {
+          const currentSem = weeklyCalendarRef.current.getCurrentSemester();
+          setCurrentSemester(currentSem);
+        }
+      }, 1000); // Check every second
+      
+      return () => clearInterval(interval);
+    }
+  }, [activeView]);
 
   // Add an effect to prevent body scrolling when this page is active
   useEffect(() => {
@@ -202,12 +223,36 @@ export default function PlanPage() {
               <div className={`${isSidebarCollapsed ? 'invisible' : 'visible'} w-full h-full`}>
               <DegreeRequirementsSidebar
                 onCourseSelect={handleCourseSelect}
-                onAddSessions={(sessions) => {
-                  // only inject into the weekly calendar if that's active
+                onAddSessions={(sessions, term) => {
                   if (activeView === 'weekly' && weeklyCalendarRef.current) {
+                    // Add to weekly calendar regardless of term for now
+                    // In a more advanced implementation, you could switch to the correct term view
                     weeklyCalendarRef.current.addSessions(sessions);
+                  } else if (activeView === 'long-term' && semesterPlannerRef.current && term) {
+                    // Add to 4-year plan - map term to year/semester
+                    const termMapping: Record<string, { year: number; semester: string }> = {
+                      'Summer 2025': { year: 1, semester: 'Summer' },
+                      'Fall 2025': { year: 1, semester: 'Fall' },
+                      'Spring 2026': { year: 1, semester: 'Spring' },
+                      // Add more mappings as needed
+                    };
+                    
+                    const mapping = termMapping[term];
+                    if (mapping) {
+                      // Add each session as a course to the appropriate semester
+                      sessions.forEach(session => {
+                        semesterPlannerRef.current?.addCourse(
+                          session.courseCode,
+                          session.title,
+                          session.credits || 3,
+                          mapping.year,
+                          mapping.semester
+                        );
+                      });
+                    }
                   }
                 }}
+                currentSemester={activeView === 'weekly' ? currentSemester : undefined}
                 isApiAvailable={isApiAvailable}
                 onApiConnectionRetry={checkApiConnection}
               />

@@ -21,6 +21,7 @@ export interface ClassSession {
   instructor: string;
   color: string;
   credits?: number;
+  semester?: string; // Track which semester this session belongs to
 }
 
 interface WeeklyCalendarProps {
@@ -64,7 +65,8 @@ export const getRandomColor = () => {
 };
 
 export interface WeeklyCalendarHandle {
-  addSessions: (sessions: ClassSession[]) => void;
+  addSessions: (sessions: ClassSession[], term?: string) => void;
+  getCurrentSemester: () => string;
 }
 
 const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
@@ -110,11 +112,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     availability: defaultAvailability,   // ← seed with defaults
   });
 
-   useImperativeHandle(ref, () => ({
-       addSessions: (sessions: ClassSession[]) => {
-         setClasses(prev => [...prev, ...sessions]);
-       }
-     }), []);
+
   
   
   // New filter states
@@ -123,6 +121,31 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const [semester, setSemester] = useState<string>("Spring 2025");
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
+
+  // Expose methods to parent component
+  useImperativeHandle(ref, () => ({
+    addSessions: (sessions: ClassSession[], term?: string) => {
+      // Assign the semester to each session
+      const sessionsWithSemester = sessions.map(session => ({
+        ...session,
+        semester: term || semester // Use provided term or current semester
+      }));
+      
+      setClasses(prev => [...prev, ...sessionsWithSemester]);
+      
+      // Show user feedback about which term was added
+      if (term) {
+        const currentSemesterText = semester; // Current semester from state
+        if (term === currentSemesterText) {
+          console.log(`✅ Added ${sessions.length} session(s) to ${term}`);
+        } else {
+          console.log(`ℹ️ Added ${sessions.length} session(s) for ${term} to ${currentSemesterText} view`);
+          // In the future, could show a toast notification asking if user wants to switch semesters
+        }
+      }
+    },
+    getCurrentSemester: () => semester
+  }), [semester]);
   
   // State for per-day time ranges (initialize with default for all days)
   const [dayTimeRanges, setDayTimeRanges] = useState<Array<{start: number, end: number}>>([
@@ -190,6 +213,11 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   // Generate the visible hours based on the time range filter
   const visibleHours = hours.filter(hour => hour >= timeRange.start && hour <= timeRange.end);
   
+  // Filter classes to only show those for the current semester
+  const currentSemesterClasses = classes.filter(cls => 
+    !cls.semester || cls.semester === semester
+  );
+  
   // Ref for scrolling container
   const calendarContainerRef = useRef<HTMLDivElement>(null);
 
@@ -242,7 +270,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const handleCourseSelect = (course: Course) => {
     if (selectedTimeSlot) {
       const { day, hour } = selectedTimeSlot;
-      const newClass = {
+      const newClass: ClassSession = {
         id: `class-${Date.now()}`,
         day,
         startTime: hour,
@@ -253,6 +281,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
         location: course.subject ? `${course.subject} Bldg` : 'TBD',
         instructor: 'TBD',
         color: getRandomTailwindColor(),
+        semester: semester, // Assign to current semester
       };
       setClasses([...classes, newClass]);
       setIsModalOpen(false);
@@ -309,7 +338,8 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
             location: 'TBD',
             instructor: 'TBD',
             color: getRandomColor(),
-            credits: courseData.credits || 3
+            credits: courseData.credits || 3,
+            semester: semester // Assign to current semester
           };
           
           setClasses(prev => [...prev, newClass]);
@@ -697,9 +727,13 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
         setPreferences={setPreferences}
         existingClasses={classes}
         onGenerateSchedule={(generatedClasses) => {
-          // Handle generated classes
+          // Handle generated classes with semester assignment
           if (generatedClasses && generatedClasses.length > 0) {
-            setClasses(prev => [...prev, ...generatedClasses]);
+            const classesWithSemester = generatedClasses.map(cls => ({
+              ...cls,
+              semester: semester // Assign to current semester
+            }));
+            setClasses(prev => [...prev, ...classesWithSemester]);
           }
         }}
       />
@@ -801,7 +835,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               })}
               
               {/* Class blocks - filtered and positioned based on availability */}
-              {classes.map((cls) => {
+              {currentSemesterClasses.map((cls) => {
                 // Only show classes for available days and within time range
                 if (!availableDays[cls.day]) return null;
                 

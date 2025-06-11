@@ -43,7 +43,8 @@ export interface DegreeRequirementsSidebarProps {
   isApiAvailable: boolean;
   onCourseSelect?: (courseCode: string, title: string, credits: number) => void;
   onApiConnectionRetry?: () => void;
-  onAddSessions: (sessions: ClassSession[]) => void;
+  onAddSessions: (sessions: ClassSession[], term?: string) => void;
+  currentSemester?: string; // Pass current semester from calendar view
 }
 
 export interface MajorSelectorProps {
@@ -83,7 +84,8 @@ export interface CourseOverlayProps {
   courseCode: string;
   position: { x: number; y: number };
   onClose: () => void;
-  onAddSessions: (sessions: ClassSession[]) => void;
+  onAddSessions: (sessions: ClassSession[], term?: string) => void;
+  currentSemester?: string; // Pass the current semester from the calendar view
 }
 
 export interface SectionInfo {
