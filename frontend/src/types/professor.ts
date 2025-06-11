@@ -22,10 +22,9 @@ export interface Professor {
     avgRating: number;
     avgDifficulty: number;
     wouldTakeAgainPercent: number;
-    helpfulRating?: number;
     clarityRating?: number;
+    helpfulRating?: number;
     averageGrade?: string;
-    reviews: { [courseCode: string]: Review[] };
+    reviews: Review[];
     url?: string;
-    isAttendanceMandatory?: number;
 } 
