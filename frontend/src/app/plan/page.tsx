@@ -27,6 +27,16 @@ export default function PlanPage() {
   // State to track current semester for the course overlay
   const [currentSemester, setCurrentSemester] = useState<string>('Summer 2025');
   
+  // State to track time availability data
+  const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]);
+  const [dayTimeRanges, setDayTimeRanges] = useState<Array<{start: number, end: number}>>([
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23}
+  ]);
+  
   // Function to check if the API is available
   const checkApiConnection = useCallback(async () => {
     setIsLoading(true);
@@ -67,17 +77,28 @@ export default function PlanPage() {
     checkApiConnection();
   }, [checkApiConnection]);
 
-  // Update current semester when on weekly view
+  // Update current semester and time availability when on weekly view
   useEffect(() => {
     if (activeView === 'weekly' && weeklyCalendarRef.current) {
       const semester = weeklyCalendarRef.current.getCurrentSemester();
       setCurrentSemester(semester);
       
-      // Set up an interval to sync the semester periodically
+      // Get time availability data
+      const currentAvailableDays = weeklyCalendarRef.current.getAvailableDays();
+      const currentDayTimeRanges = weeklyCalendarRef.current.getDayTimeRanges();
+      setAvailableDays(currentAvailableDays);
+      setDayTimeRanges(currentDayTimeRanges);
+      
+      // Set up an interval to sync the data periodically
       const interval = setInterval(() => {
         if (weeklyCalendarRef.current) {
           const currentSem = weeklyCalendarRef.current.getCurrentSemester();
           setCurrentSemester(currentSem);
+          
+          const newAvailableDays = weeklyCalendarRef.current.getAvailableDays();
+          const newDayTimeRanges = weeklyCalendarRef.current.getDayTimeRanges();
+          setAvailableDays(newAvailableDays);
+          setDayTimeRanges(newDayTimeRanges);
         }
       }, 1000); // Check every second
       
@@ -241,6 +262,8 @@ export default function PlanPage() {
                   }
                 }}
                 currentSemester={activeView === 'weekly' ? currentSemester : undefined}
+                availableDays={activeView === 'weekly' ? availableDays : undefined}
+                dayTimeRanges={activeView === 'weekly' ? dayTimeRanges : undefined}
                 isApiAvailable={isApiAvailable}
                 onApiConnectionRetry={checkApiConnection}
               />

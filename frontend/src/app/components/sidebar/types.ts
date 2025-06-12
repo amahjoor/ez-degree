@@ -45,6 +45,8 @@ export interface DegreeRequirementsSidebarProps {
   onApiConnectionRetry?: () => void;
   onAddSessions: (sessions: ClassSession[], term?: string) => void;
   currentSemester?: string; // Pass current semester from calendar view
+  availableDays?: boolean[];
+  dayTimeRanges?: Array<{start: number, end: number}>;
 }
 
 export interface MajorSelectorProps {
@@ -86,6 +88,8 @@ export interface CourseOverlayProps {
   onClose: () => void;
   onAddSessions: (sessions: ClassSession[], term?: string) => void;
   currentSemester?: string; // Pass the current semester from the calendar view
+  availableDays?: boolean[];
+  dayTimeRanges?: Array<{start: number, end: number}>;
 }
 
 export interface SectionInfo {

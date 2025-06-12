@@ -15,6 +15,8 @@ export default function CourseOverlay({
   onClose,
   onAddSessions,
   currentSemester,
+  availableDays,
+  dayTimeRanges,
 }: CourseOverlayProps) {
   // --- TAB STATE ---
   const [activeTab, setActiveTab] = useState<'summary' | 'add'>('summary');
@@ -114,9 +116,51 @@ export default function CourseOverlay({
     Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4,
   };
 
+  // Helper function to check if a section conflicts with user's time availability
+  const checkTimeConflict = (section: SectionInfo): boolean => {
+    if (!availableDays || !dayTimeRanges || !section.MeetingDays || !section.MeetingTimes) {
+      return false;
+    }
+
+    try {
+      const days = section.MeetingDays.split(',').map(d => d.trim());
+      const [startTime, endTime] = section.MeetingTimes.split(' - ').map(t => t.trim());
+      
+      const sectionStart = parseTimeToDecimal(startTime);
+      const sectionEnd = parseTimeToDecimal(endTime);
+
+      // Check each day the section meets
+      for (const dayName of days) {
+        const dayIndex = dayIndexMap[dayName];
+        if (dayIndex == null) continue;
+
+        // If this day is not available for the user, it's a conflict
+        if (!availableDays[dayIndex]) {
+          return true;
+        }
+
+        // Check if section time conflicts with user's available time range for this day
+        const userDayRange = dayTimeRanges[dayIndex];
+        if (sectionStart < userDayRange.start || sectionEnd > userDayRange.end) {
+          return true;
+        }
+      }
+
+      return false;
+    } catch (error) {
+      console.error('Error parsing section time:', error);
+      return false;
+    }
+  };
+
 
 
   const handleSectionClick = (item: SectionInfo) => {
+    // Check if this section has time conflicts
+    if (checkTimeConflict(item)) {
+      return; // Don't add conflicting sections
+    }
+
     const sessions: ClassSession[] = [];
     const days = item.MeetingDays.split(',').map((d) => d.trim());
     const [start, end] = item.MeetingTimes.split(' - ').map((s) => s.trim());
@@ -174,7 +218,24 @@ export default function CourseOverlay({
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
-      if (!t.closest('.course-overlay') && !t.closest('.course-chip')) onClose();
+      
+      // Don't close if clicking on the overlay itself or course chips
+      if (t.closest('.course-overlay') || t.closest('.course-chip')) return;
+      
+      // Don't close if clicking on time availability controls
+      if (t.closest('.time-dropdown-container')) return;
+      
+      // Don't close if clicking on day toggle buttons or filter controls
+      if (t.closest('[data-day-toggle]') || 
+          t.closest('[data-filter-control]') || 
+          t.closest('[data-semester-nav]')) return;
+      
+      // Don't close if clicking on any specific filter controls
+      if (t.closest('button[title*="Set time"]') || // Time selector buttons
+          t.closest('select') || // Any select dropdowns in filters
+          t.closest('.react-select-container')) return; // React-select components
+      
+      onClose();
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -292,13 +353,40 @@ export default function CourseOverlay({
               {/* Sections list or empty state */}
               <div className="max-h-64 overflow-y-auto border-t pt-2">
                 {codeData.length > 0 ? (
-                  codeData.map((item,i) => (
-                    <div key={i} onClick={() => handleSectionClick(item)} className="cursor-pointer py-2 px-3 hover:bg-gray-100 border-b last:border-none">
-                      <div className="font-medium">{`${item.CourseSubject} ${item.CourseNumber}-${item.CourseSection}`}</div>
-                      <div className="text-sm text-gray-600">{item.MeetingDays} @ {item.MeetingTimes}</div>
-                      <div className="text-xs text-gray-500 mt-1">{item.Instructor}</div>
-                    </div>
-                  ))
+                  codeData.map((item,i) => {
+                    const hasConflict = checkTimeConflict(item);
+                    return (
+                      <div 
+                        key={i} 
+                        onClick={() => handleSectionClick(item)} 
+                        className={`py-2 px-3 border-b last:border-none transition-colors ${
+                          hasConflict 
+                            ? 'bg-gray-100 cursor-not-allowed opacity-60' 
+                            : 'cursor-pointer hover:bg-gray-100'
+                        }`}
+                      >
+                        <div className={`font-medium ${hasConflict ? 'text-gray-500' : ''}`}>
+                          {`${item.CourseSubject} ${item.CourseNumber}-${item.CourseSection}`}
+                          {hasConflict && (
+                            <span className="ml-2 text-xs bg-red-100 text-red-600 px-2 py-1 rounded">
+                              Time Conflict
+                            </span>
+                          )}
+                        </div>
+                        <div className={`text-sm ${hasConflict ? 'text-gray-500' : 'text-gray-600'}`}>
+                          {item.MeetingDays} @ {item.MeetingTimes}
+                        </div>
+                        <div className={`text-xs mt-1 ${hasConflict ? 'text-gray-400' : 'text-gray-500'}`}>
+                          {item.Instructor}
+                        </div>
+                        {hasConflict && (
+                          <div className="text-xs text-gray-500 mt-1">
+                            Conflicts with your available time
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })
                 ) : (
                   <div className="py-8 px-4 text-center">
                     <p className="text-gray-500 text-sm font-medium mb-1">No sections available</p>

@@ -242,27 +242,6 @@ const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
         </div>
       ))}
       
-      <div className="mt-8 mb-8 p-4 bg-white rounded-lg shadow-lg border border-gray-200">
-        <h3 className="font-bold mb-4 text-gray-800">Plan Summary</h3>
-        <div className="grid grid-cols-2 gap-6">
-          <div className="bg-blue-50 p-3 rounded-lg border border-blue-100">
-            <p className="text-sm text-gray-500 mb-1">Total Credits:</p>
-            <p className="font-bold text-xl text-primary-blue">
-              {summaryStats.totalCredits}
-            </p>
-          </div>
-          <div className="bg-green-50 p-3 rounded-lg border border-green-100">
-            <p className="text-sm text-gray-500 mb-1">Total Courses:</p>
-            <p className="font-bold text-xl text-primary-green">
-              {summaryStats.totalCourses}
-            </p>
-          </div>
-        </div>
-        
-        <div className="mt-4 text-sm text-gray-500">
-          <p>Drag and drop courses between semesters to reorganize your plan.</p>
-        </div>
-      </div>
       
       {/* Course Selection Modal */}
       {selectedSemester && (

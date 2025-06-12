@@ -64,6 +64,8 @@ export const getRandomColor = () => {
 export interface WeeklyCalendarHandle {
   addSessions: (sessions: ClassSession[], term?: string) => void;
   getCurrentSemester: () => string;
+  getAvailableDays: () => boolean[];
+  getDayTimeRanges: () => Array<{start: number, end: number}>;
 }
 
 const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
@@ -89,6 +91,17 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const [semester, setSemester] = useState<string>("Spring 2025");
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
+  
+  // State for per-day time ranges (initialize with default for all days)
+  const [dayTimeRanges, setDayTimeRanges] = useState<Array<{start: number, end: number}>>([
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23},
+    {start: 6, end: 23}
+  ]);
+  const [showDayTimeSelector, setShowDayTimeSelector] = useState<number | null>(null);
+  const [activeTimeDropdown, setActiveTimeDropdown] = useState<{day: number, type: 'start' | 'end'} | null>(null);
 
   // Expose methods to parent component
   useImperativeHandle(ref, () => ({
@@ -112,19 +125,10 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
         }
       }
     },
-    getCurrentSemester: () => semester
-  }), [semester]);
-  
-  // State for per-day time ranges (initialize with default for all days)
-  const [dayTimeRanges, setDayTimeRanges] = useState<Array<{start: number, end: number}>>([
-    {start: 6, end: 23},
-    {start: 6, end: 23},
-    {start: 6, end: 23},
-    {start: 6, end: 23},
-    {start: 6, end: 23}
-  ]);
-  const [showDayTimeSelector, setShowDayTimeSelector] = useState<number | null>(null);
-  const [activeTimeDropdown, setActiveTimeDropdown] = useState<{day: number, type: 'start' | 'end'} | null>(null);
+    getCurrentSemester: () => semester,
+    getAvailableDays: () => availableDays,
+    getDayTimeRanges: () => dayTimeRanges
+  }), [semester, availableDays, dayTimeRanges]);
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const hours = Array.from({ length: 18 }, (_, i) => i + 6); // 6am to 11pm
@@ -447,6 +451,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               onClick={handlePrevSemester}
               disabled={currentSemesterIndex === 0}
               className={`p-2 rounded-full hover:bg-gray-100 ${currentSemesterIndex === 0 ? 'text-gray-300' : 'text-gray-600'}`}
+              data-semester-nav
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -459,6 +464,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               onClick={handleNextSemester}
               disabled={currentSemesterIndex === semesterList.length - 1}
               className={`p-2 rounded-full hover:bg-gray-100 ${currentSemesterIndex === semesterList.length - 1 ? 'text-gray-300' : 'text-gray-600'}`}
+              data-semester-nav
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -475,6 +481,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                   ? 'bg-primary-blue hover:bg-primary-blue/90 text-white border-primary-blue' 
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-300'
               }`}
+              data-filter-control
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
@@ -488,6 +495,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                   ? 'bg-primary-blue hover:bg-primary-blue/90 text-white border-primary-blue' 
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-300'
               }`}
+              data-filter-control
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -513,6 +521,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                         <button
                           onClick={() => toggleDay(index)}
                           className="px-4 py-2 text-sm bg-gray-200 text-gray-500 rounded-md"
+                          data-day-toggle
                         >
                           {day.substring(0, 3)}
                         </button>
@@ -522,6 +531,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                           <button
                             onClick={() => toggleDay(index)}
                             className="px-4 py-2 text-sm bg-primary-blue text-white rounded-l-md hover:bg-blue-400 transition-colors"
+                            data-day-toggle
                           >
                             {day.substring(0, 3)}
                           </button>
@@ -611,6 +621,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                               }}
                               className="p-2 rounded-r-md bg-primary-blue text-white hover:bg-blue-400 transition-colors"
                               title={`Set time for ${day}`}
+                              data-day-toggle
                             >
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />

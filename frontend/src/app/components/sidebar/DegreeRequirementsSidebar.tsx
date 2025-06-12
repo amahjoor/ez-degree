@@ -18,6 +18,8 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
   onCourseSelect,
   onAddSessions,
   currentSemester,
+  availableDays,
+  dayTimeRanges,
 }) => {
   const [loading, setLoading] = useState(false);
   const [majors, setMajors] = useState<Major[]>([]);
@@ -220,6 +222,8 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
         onClose={() => setOverlayVisible(false)}
         onAddSessions={onAddSessions}      // ← pass through with term info
         currentSemester={currentSemester}  // ← pass current semester
+        availableDays={availableDays}
+        dayTimeRanges={dayTimeRanges}
       />
     )}
     </div>
