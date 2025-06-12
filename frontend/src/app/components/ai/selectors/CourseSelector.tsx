@@ -213,20 +213,20 @@ const CourseSelector: React.FC<CourseSelectorProps> = ({
                   </button>
                 </div>
 
-                {details && (
-                  <div className="mt-1 text-sm text-gray-700 space-y-1">
-                    <div>
-                      <strong>Lecture:</strong> {details.Lecture.courses}{' '}
-                      course{details.Lecture.courses !== 1 && 's'} –{' '}
-                      {details.Lecture.credits} credits
-                    </div>
-                    <div>
-                      <strong>Lab:</strong> {details.Laboratory.courses}{' '}
-                      course{details.Laboratory.courses !== 1 && 's'} –{' '}
-                      {details.Laboratory.credits} credits
-                    </div>
+                {details?.Lecture && details?.Laboratory ? (
+                <div className="mt-1 text-sm text-gray-700 space-y-1">
+                  <div>
+                    <strong>Lecture:</strong> {details.Lecture.courses} course
+                    {details.Lecture.courses !== 1 && 's'} – {details.Lecture.credits} credits
                   </div>
-                )}
+                  <div>
+                    <strong>Lab:</strong> {details.Laboratory.courses} course
+                    {details.Laboratory.courses !== 1 && 's'} – {details.Laboratory.credits} credits
+                  </div>
+                </div>
+              ) : (
+                <div className="mt-1 text-sm text-gray-500">Loading credits…</div>
+              )}
               </div>
             );
           })}

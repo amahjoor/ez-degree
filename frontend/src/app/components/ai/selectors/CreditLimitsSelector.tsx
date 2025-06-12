@@ -53,14 +53,18 @@ const CreditLimitsSelector: React.FC<CreditLimitsSelectorProps> = ({
           )
         );
         let autoMin = 0;
-        results.forEach(({ Lecture, Laboratory }) => {
-          if (Lecture.courses > 0 && Lecture.credits !== 'N/A') {
-            autoMin += parseInt(Lecture.credits) || 0;
+        results.forEach(detail => {
+          const lec = detail.Lecture;
+          const lab = detail.Laboratory;
+
+          if (lec?.courses > 0 && lec.credits !== 'N/A') {
+            autoMin += parseInt(lec.credits, 10) || 0;
           }
-          if (Laboratory.courses > 0 && Laboratory.credits !== 'N/A') {
-            autoMin += parseInt(Laboratory.credits) || 0;
+          if (lab?.courses > 0 && lab.credits !== 'N/A') {
+            autoMin += parseInt(lab.credits, 10) || 0;
           }
         });
+
         // subtract 3 from total minimum, but not below 0
         const rawMin = autoMin - 3;
         const newMin = Math.max(0, rawMin);

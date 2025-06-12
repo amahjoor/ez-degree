@@ -244,160 +244,170 @@ return (
       </div>
 
       {/* Body */}
-      {scheduleVariants.length > 0 ? (
-        // ==== VARIANT PREVIEW UI ====
-        <div className="px-6 py-4 max-h-[calc(100vh-200px)] overflow-auto">
-          <h4 className="text-lg font-semibold mb-4">Choose a Schedule</h4>
-          {scheduleVariants.map((v, i) => (
-            <div key={i} className="mb-8">
-              <label className="inline-flex items-center mb-2">
-                <input
-                  type="radio"
-                  name="variant"
-                  checked={selectedVariant === i}
-                  onChange={() => setSelectedVariant(i)}
-                  className="mr-2"
-                />
-                <span className="font-medium">{v.label}</span>
-              </label>
-              <ScheduleVisualization classes={v.classes} />
-            </div>
-          ))}
-          <div className="flex justify-end space-x-2">
-            <button
-              onClick={() => {
-                // go back to preferences
-                setScheduleVariants([]);
-                setSelectedVariant(null);
-              }}
-              className="px-4 py-2 bg-gray-200 rounded"
-            >
-              Back
-            </button>
-            <button
-              onClick={() => {
-                if (selectedVariant !== null) {
-                  onGenerateSchedule(scheduleVariants[selectedVariant].classes);
-                  onClose();
-                }
-              }}
-              disabled={selectedVariant === null}
-              className="px-4 py-2 bg-primary-blue text-white rounded disabled:opacity-50"
-            >
-              Use This Schedule
-            </button>
-          </div>
-        </div>
-      ) : (
-        // ==== ORIGINAL PREFERENCES UI ====
-        <div className="px-6 py-4 max-h-[calc(100vh-200px)] overflow-auto">
-          {/* Term selector */}
-          <div className="mb-4">
-            <h5 className="text-sm font-medium mb-2">Term</h5>
-            {termsLoading ? (
-              <p>Loading terms…</p>
-            ) : termsError ? (
-              <p className="text-red-500">{termsError}</p>
-            ) : (
-              <div className="flex flex-wrap gap-2">
-                {terms.map(term => (
-                  <button
-                    key={term}
-                    onClick={() => setSelectedTerm(term)}
-                    className={`px-3 py-1 rounded-md border ${
-                      selectedTerm === term
-                        ? 'bg-primary-blue text-white border-primary-blue'
-                        : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
-                    }`}
-                  >
-                    {term}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+      {/* ==== VARIANT PREVIEW UI ==== */}
+<div
+  className={`px-6 py-4 max-h-[calc(100vh-200px)] overflow-auto ${
+    scheduleVariants.length > 0 ? '' : 'hidden'
+  }`}
+>
+  <h4 className="text-lg font-semibold mb-4">Choose a Schedule</h4>
+  {scheduleVariants.map((v, i) => (
+    <div key={i} className="mb-8">
+      <label className="inline-flex items-center mb-2">
+        <input
+          type="radio"
+          name="variant"
+          checked={selectedVariant === i}
+          onChange={() => setSelectedVariant(i)}
+          className="mr-2"
+        />
+        <span className="font-medium">{v.label}</span>
+      </label>
+      <ScheduleVisualization classes={v.classes} />
+    </div>
+  ))}
+  <div className="flex justify-end space-x-2">
+    <button
+      onClick={() => {
+        setScheduleVariants([]);
+        setSelectedVariant(null);
+        setSelectedCourses([]);  // ← wipe out all selected courses
+      }}
+      className="px-4 py-2 bg-gray-200 rounded"
+    >
+      Back
+    </button>
+    <button
+      onClick={() => {
+        if (selectedVariant !== null) {
+          onGenerateSchedule(scheduleVariants[selectedVariant].classes);
+          onClose();
+        }
+      }}
+      disabled={selectedVariant === null}
+      className="px-4 py-2 bg-primary-blue text-white rounded disabled:opacity-50"
+    >
+      Use This Schedule
+    </button>
+  </div>
+</div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Left Column */}
-            <div className="space-y-6">
-              <CourseSelector
-                selectedCourses={selectedCourses}
-                onChange={setSelectedCourses}
-                selectedTerm={selectedTerm}
-              />
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-6">
-              <CreditLimitsSelector
-                creditLimits={preferences.creditLimits}
-                onChange={handleCreditLimitsChange}
-                selectedCourses={selectedCourses}
-                selectedTerm={selectedTerm}
-              />
-              <CampusPreferencesSelector
-                locations={preferences.locations}
-                onChange={handleCampusPreferencesChange}
-              />
-              <AdditionalPreferencesSelector
-                preferences={{
-                  considerSeats: preferences.considerSeats,
-                  considerRMP: preferences.considerRMP
-                }}
-                onChange={handleAdditionalPreferencesChange}
-              />
-            </div>
-          </div>
-
-          {/* Availability Section */}
-          <div className="mt-6">
-            <WeekAvailability
-              selectedAvailability={preferences.availability}
-              onChange={handleAvailabilityChange}
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Footer */}
-      {scheduleVariants.length === 0 && (
-        <div className="px-6 py-3 bg-gray-50 border-t border-gray-200 flex justify-end">
+{/* ==== ORIGINAL PREFERENCES UI ==== */}
+<div
+  className={`px-6 py-4 max-h-[calc(100vh-200px)] overflow-auto ${
+    scheduleVariants.length === 0 ? '' : 'hidden'
+  }`}
+>
+  {/* Term selector */}
+  <div className="mb-4">
+    <h5 className="text-sm font-medium mb-2">Term</h5>
+    {termsLoading ? (
+      <p>Loading terms…</p>
+    ) : termsError ? (
+      <p className="text-red-500">{termsError}</p>
+    ) : (
+      <div className="flex flex-wrap gap-2">
+        {terms.map(term => (
           <button
-            onClick={handleGenerate}
-            disabled={isGenerating}
-            className={`px-4 py-2 ${
-              isGenerating ? 'bg-gray-400' : 'bg-primary-blue hover:bg-blue-600'
-            } text-white rounded flex items-center`}
+            key={term}
+            onClick={() => setSelectedTerm(term)}
+            className={`px-3 py-1 rounded-md border ${
+              selectedTerm === term
+                ? 'bg-primary-blue text-white border-primary-blue'
+                : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
+            }`}
           >
-            {isGenerating ? (
-              <>
-                <svg
-                  className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth={4}
-                  />
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  />
-                </svg>
-                Generating…
-              </>
-            ) : (
-              'Generate Schedules'
-            )}
+            {term}
           </button>
-        </div>
-      )}
+        ))}
+      </div>
+    )}
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {/* Left Column */}
+    <div className="space-y-6">
+      <CourseSelector
+        selectedCourses={selectedCourses}
+        onChange={setSelectedCourses}
+        selectedTerm={selectedTerm}
+      />
+    </div>
+
+    {/* Right Column */}
+    <div className="space-y-6">
+      <CreditLimitsSelector
+        creditLimits={preferences.creditLimits}
+        onChange={handleCreditLimitsChange}
+        selectedCourses={selectedCourses}
+        selectedTerm={selectedTerm}
+      />
+      <CampusPreferencesSelector
+        locations={preferences.locations}
+        onChange={handleCampusPreferencesChange}
+      />
+      <AdditionalPreferencesSelector
+        preferences={{
+          considerSeats: preferences.considerSeats,
+          considerRMP: preferences.considerRMP
+        }}
+        onChange={handleAdditionalPreferencesChange}
+      />
+    </div>
+  </div>
+
+  {/* Availability Section */}
+  <div className="mt-6">
+    <WeekAvailability
+      selectedAvailability={preferences.availability}
+      onChange={handleAvailabilityChange}
+    />
+  </div>
+</div>
+
+{/* ==== FOOTER ==== */}
+<div
+  className={`px-6 py-3 bg-gray-50 border-t border-gray-200 flex justify-end ${
+    scheduleVariants.length === 0 ? '' : 'hidden'
+  }`}
+>
+  <button
+    onClick={handleGenerate}
+    disabled={isGenerating}
+    className={`px-4 py-2 ${
+      isGenerating ? 'bg-gray-400' : 'bg-primary-blue hover:bg-blue-600'
+    } text-white rounded flex items-center`}
+  >
+    {isGenerating ? (
+      <>
+        <svg
+          className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth={4}
+          />
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          />
+        </svg>
+        Generating…
+      </>
+    ) : (
+      'Generate Schedules'
+    )}
+  </button>
+</div>
+
+  
     </div>
   </div>
 );
