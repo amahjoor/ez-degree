@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import Select from 'react-select';
 
 export type DayName =
   | 'Monday'
@@ -51,9 +50,6 @@ export default function WeekAvailability({
   // State for selected days (true = available, false = unavailable)
   const [selectedDays, setSelectedDays] = useState<boolean[]>(Array(5).fill(false));
   
-  // Default time range (used when initializing a day's time)
-  const defaultTimeRange = {start: 6, end: 23}; // 6 AM to 11 PM
-  
   // State for per-day time ranges (initialize with default for all days)
   const [dayTimeRanges, setDayTimeRanges] = useState<Array<{start: number, end: number}>>([
     {start: 6, end: 23},
@@ -65,35 +61,25 @@ export default function WeekAvailability({
   
   // Track which day's time selector is shown
   const [showDayTimeSelector, setShowDayTimeSelector] = useState<number | null>(null);
-
-  // Custom react-select styles
-  const customSelectStyles = {
-    control: (provided: any) => ({
-      ...provided,
-      borderColor: '#D1D5DB',
-      boxShadow: 'none',
-      '&:hover': {
-        borderColor: '#3B82F6'
-      }
-    }),
-    option: (provided: any, state: any) => ({
-      ...provided,
-      backgroundColor: state.isSelected ? '#3B82F6' : state.isFocused ? '#EFF6FF' : 'white',
-      color: state.isSelected ? 'white' : '#1F2937',
-      cursor: 'pointer'
-    }),
-    menu: (provided: any) => ({
-      ...provided,
-      zIndex: 9999
-    }),
-    menuPortal: (base: any) => ({
-      ...base,
-      zIndex: 9999
-    })
-  };
+  
+  // Track active time dropdown
+  const [activeTimeDropdown, setActiveTimeDropdown] = useState<{day: number, type: 'start' | 'end'} | null>(null);
 
   // Use a ref to track if we've initialized from props
   const initializedRef = useRef(false);
+
+  // Generate time options that include 6 AM through 11 PM (6-23)
+  const hours = Array.from({ length: 18 }, (_, i) => i + 6); // 6 AM through 11 PM (23)
+  
+  // Define options for select components
+  const timeOptions = hours.map(hour => ({
+    value: hour,
+    label: hour === 12 ? '12pm' : hour > 12 ? `${hour-12}pm` : `${hour}am`
+  }));
+  // Add 11pm only if it's not already included
+  if (!timeOptions.some(option => option.value === 23)) {
+    timeOptions.push({ value: 23, label: '11pm' });
+  }
 
   // Initialize from props - only run once
   useEffect(() => {
@@ -120,6 +106,17 @@ export default function WeekAvailability({
     setDayTimeRanges(newDayTimeRanges);
     initializedRef.current = true;
   }, [selectedAvailability]);
+
+  // All possible days (needed for complete availability object)
+  const allDays: DayName[] = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
+  ];
 
   // When user makes changes, update parent with the new availability
   const handleUpdate = () => {
@@ -152,15 +149,13 @@ export default function WeekAvailability({
     newSelectedDays[index] = !newSelectedDays[index];
     setSelectedDays(newSelectedDays);
     
-    // Show time selector for this day if it's selected
-    if (newSelectedDays[index]) {
-      setShowDayTimeSelector(index);
-    } else if (showDayTimeSelector === index) {
-      setShowDayTimeSelector(null);
-    }
-    
     // Call the update function after state change
     setTimeout(handleUpdate, 0);
+  };
+
+  // Toggle day time selector
+  const toggleDayTimeSelector = (dayIndex: number) => {
+    setShowDayTimeSelector(showDayTimeSelector === dayIndex ? null : dayIndex);
   };
 
   // Handle day-specific time change
@@ -181,180 +176,142 @@ export default function WeekAvailability({
     setTimeout(handleUpdate, 0);
   };
 
-  // All possible days (needed for complete availability object)
-  const allDays: DayName[] = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday'
-  ];
+  // Click outside handler for time dropdowns
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeTimeDropdown) {
+        // Close dropdown if clicking outside
+        const target = event.target as Element;
+        if (!target.closest('.time-dropdown-container')) {
+          setActiveTimeDropdown(null);
+        }
+      }
+    };
 
-  // Generate time options that include 6 AM through 11 PM (6-23)
-  const hours = Array.from({ length: 18 }, (_, i) => i + 6); // 6 AM through 11 PM (23)
-  
-  // Define options for select components
-  const timeOptions = hours.map(hour => ({
-    value: hour,
-    label: hour === 12 ? '12pm' : hour > 12 ? `${hour-12}pm` : `${hour}am`
-  }));
-  // Add 11pm only if it's not already included
-  if (!timeOptions.some(option => option.value === 23)) {
-    timeOptions.push({ value: 23, label: '11pm' });
-  }
-
-  // Format time for display (e.g., 13.5 -> "1:30 PM")
-  const formatTimeForDisplay = (time: number) => {
-    const hour = Math.floor(time);
-    const minute = Math.round((time % 1) * 60);
-    const ampm = hour >= 12 ? 'PM' : 'AM';
-    const displayHour = hour % 12 || 12;
-    return `${displayHour}${minute > 0 ? `:${minute.toString().padStart(2, '0')}` : ''} ${ampm}`;
-  };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeTimeDropdown]);
 
   return (
     <div className="space-y-6">
       <div>
         <h4 className="text-sm font-medium text-gray-700 mb-3">Available Days</h4>
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-wrap gap-2 items-center">
-            {days.map((day, index) => (
-              <div key={day} className="flex items-center">
+        <div className="flex items-center gap-2 flex-wrap">
+          {days.map((day, index) => (
+            <div key={day} className="flex items-center">
+              {!selectedDays[index] ? (
+                // Inactive day button
                 <button
                   onClick={() => toggleDay(index)}
-                  className={`px-4 py-2 text-sm ${
-                    selectedDays[index] 
-                      ? 'bg-primary-blue text-white rounded-l-md' 
-                      : 'bg-gray-200 text-gray-500 rounded-md'
-                  }`}
+                  className="px-4 py-2 text-sm bg-gray-200 text-gray-500 rounded-md"
                 >
                   {day.substring(0, 3)}
                 </button>
-                {selectedDays[index] && (
+              ) : (
+                // Active day button with clock icon or time selectors
+                <div className="flex items-center">
                   <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setShowDayTimeSelector(index);
-                    }}
-                    className={`p-2 rounded-r-md ${
-                      showDayTimeSelector === index
-                        ? 'bg-primary-blue text-white' 
-                        : 'bg-blue-300 text-white'
-                    }`}
-                    title={`Set time for ${day}`}
+                    onClick={() => toggleDay(index)}
+                    className="px-4 py-2 text-sm bg-primary-blue text-white rounded-l-md hover:bg-blue-400 transition-colors"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    {day.substring(0, 3)}
                   </button>
-                )}
-              </div>
-            ))}
-          </div>
-          
-          {/* Time selector positioned below the day buttons */}
-          {showDayTimeSelector !== null && selectedDays[showDayTimeSelector] && (
-            <div className="w-full mt-2 p-3 bg-white rounded-md border shadow-sm z-10 flex items-center">
-              <span className="font-medium text-gray-700 mr-3">{days[showDayTimeSelector]}</span>
-              <div className="flex-1 flex items-center">
-                <div className="w-32">
-                  <Select
-                    value={timeOptions.find(option => option.value === dayTimeRanges[showDayTimeSelector].start)}
-                    onChange={(option) => handleDayTimeChange(showDayTimeSelector, 'start', option)}
-                    options={timeOptions.filter(option => option.value < dayTimeRanges[showDayTimeSelector].end)}
-                    placeholder="Start"
-                    className="react-select-container"
-                    classNamePrefix="react-select"
-                    styles={{
-                      ...customSelectStyles,
-                      control: (provided) => ({
-                        ...provided,
-                        minHeight: '36px',
-                        height: '36px',
-                        border: '1px solid #D1D5DB',
-                        boxShadow: 'none',
-                        borderRadius: '0.375rem'
-                      }),
-                      valueContainer: (provided) => ({
-                        ...provided,
-                        height: '36px',
-                        padding: '0 8px',
-                        display: 'flex',
-                        alignItems: 'center'
-                      }),
-                      singleValue: (provided) => ({
-                        ...provided,
-                        padding: 0,
-                        margin: 0
-                      }),
-                      // Hide the dropdown indicator (arrow)
-                      dropdownIndicator: () => ({
-                        display: 'none'
-                      }),
-                      indicatorSeparator: () => ({
-                        display: 'none'
-                      })
-                    }}
-                    menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
-                    menuPosition="fixed"
-                  />
+                  {showDayTimeSelector === index ? (
+                    // Time selection mode - replaces just the clock section
+                    <div className="bg-primary-blue text-white rounded-r-md px-2 py-2 flex items-center text-xs relative time-dropdown-container h-[36px]">
+                      {/* Start time dropdown */}
+                      <div className="relative">
+                        <button
+                          onClick={() => setActiveTimeDropdown(
+                            activeTimeDropdown?.day === index && activeTimeDropdown?.type === 'start' 
+                              ? null 
+                              : {day: index, type: 'start'}
+                          )}
+                          className="bg-white text-black text-xs rounded px-1.5 py-0.5 w-10 hover:bg-gray-100 border-none focus:outline-none focus:ring-1 focus:ring-blue-500 h-5 flex items-center justify-center"
+                        >
+                          {timeOptions.find(opt => opt.value === dayTimeRanges[index].start)?.label || '6am'}
+                        </button>
+                        {activeTimeDropdown?.day === index && activeTimeDropdown?.type === 'start' && (
+                          <div className="absolute top-full left-0 mt-1 bg-white border border-gray-300 rounded shadow-lg z-50 max-h-32 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-400 [&::-webkit-scrollbar-thumb]:rounded">
+                            {timeOptions.filter(option => option.value < dayTimeRanges[index].end).map(option => (
+                              <button
+                                key={option.value}
+                                onClick={() => {
+                                  handleDayTimeChange(index, 'start', { value: option.value });
+                                  setActiveTimeDropdown(null);
+                                }}
+                                className="w-full text-left px-3 py-1 text-xs text-black hover:bg-blue-50 focus:bg-blue-100 focus:outline-none whitespace-nowrap"
+                              >
+                                {option.label}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      
+                      <span className="mx-1 text-white text-xs">to</span>
+                      
+                      {/* End time dropdown */}
+                      <div className="relative">
+                        <button
+                          onClick={() => setActiveTimeDropdown(
+                            activeTimeDropdown?.day === index && activeTimeDropdown?.type === 'end' 
+                              ? null 
+                              : {day: index, type: 'end'}
+                          )}
+                          className="bg-white text-black text-xs rounded px-1.5 py-0.5 w-10 hover:bg-gray-100 border-none focus:outline-none focus:ring-1 focus:ring-blue-500 h-5 flex items-center justify-center"
+                        >
+                          {timeOptions.find(opt => opt.value === dayTimeRanges[index].end)?.label || '11pm'}
+                        </button>
+                        {activeTimeDropdown?.day === index && activeTimeDropdown?.type === 'end' && (
+                          <div className="absolute top-full right-0 mt-1 bg-white border border-gray-300 rounded shadow-lg z-50 max-h-32 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-400 [&::-webkit-scrollbar-thumb]:rounded">
+                            {timeOptions.filter(option => option.value > dayTimeRanges[index].start).map(option => (
+                              <button
+                                key={option.value}
+                                onClick={() => {
+                                  handleDayTimeChange(index, 'end', { value: option.value });
+                                  setActiveTimeDropdown(null);
+                                }}
+                                className="w-full text-left px-3 py-1 text-xs text-black hover:bg-blue-50 focus:bg-blue-100 focus:outline-none whitespace-nowrap"
+                              >
+                                {option.label}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      
+                      <button 
+                        onClick={() => {
+                          setShowDayTimeSelector(null);
+                          setActiveTimeDropdown(null);
+                        }}
+                        className="p-0.5 ml-1 hover:bg-white hover:bg-opacity-20 rounded h-4 w-4 flex items-center justify-center"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </button>
+                    </div>
+                  ) : (
+                    // Clock icon
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleDayTimeSelector(index);
+                      }}
+                      className="p-2 rounded-r-md bg-primary-blue text-white hover:bg-blue-400 transition-colors"
+                      title={`Set time for ${day}`}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </button>
+                  )}
                 </div>
-                <span className="text-gray-500 px-3">to</span>
-                <div className="w-32">
-                  <Select
-                    value={timeOptions.find(option => option.value === dayTimeRanges[showDayTimeSelector].end)}
-                    onChange={(option) => handleDayTimeChange(showDayTimeSelector, 'end', option)}
-                    options={timeOptions.filter(option => option.value > dayTimeRanges[showDayTimeSelector].start)}
-                    placeholder="End"
-                    className="react-select-container"
-                    classNamePrefix="react-select"
-                    styles={{
-                      ...customSelectStyles,
-                      control: (provided) => ({
-                        ...provided,
-                        minHeight: '36px',
-                        height: '36px',
-                        border: '1px solid #D1D5DB',
-                        boxShadow: 'none',
-                        borderRadius: '0.375rem'
-                      }),
-                      valueContainer: (provided) => ({
-                        ...provided,
-                        height: '36px',
-                        padding: '0 8px',
-                        display: 'flex',
-                        alignItems: 'center'
-                      }),
-                      singleValue: (provided) => ({
-                        ...provided,
-                        padding: 0,
-                        margin: 0
-                      }),
-                      // Hide the dropdown indicator (arrow)
-                      dropdownIndicator: () => ({
-                        display: 'none'
-                      }),
-                      indicatorSeparator: () => ({
-                        display: 'none'
-                      })
-                    }}
-                    menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
-                    menuPosition="fixed"
-                  />
-                </div>
-                <button 
-                  onClick={() => setShowDayTimeSelector(null)}
-                  className="p-2 ml-3 text-gray-400 hover:text-gray-600"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
+              )}
             </div>
-          )}
+          ))}
         </div>
       </div>
     </div>

@@ -42,7 +42,6 @@ interface SchedulePreferences {
   creditLimits: { min: number; max: number };
   considerSeats: boolean;
   considerRMP: boolean;
-  professorsToAvoid: string[];
   availability: Record<DayName, TimeInterval[]>;
 }
 
@@ -79,7 +78,6 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     creditLimits: { min: 12, max: 18 },
     considerSeats: true,
     considerRMP: false,
-    professorsToAvoid: [],
     availability: defaultAvailability,   // ← seed with defaults
   });
 

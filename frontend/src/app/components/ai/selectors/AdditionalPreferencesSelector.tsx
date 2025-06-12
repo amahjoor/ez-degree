@@ -37,7 +37,7 @@ const AdditionalPreferencesSelector: React.FC<AdditionalPreferencesSelectorProps
           </button>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-700">RMP professor ratings</span>
+          <span className="text-sm text-gray-700">Professor ratings</span>
           <button 
             onClick={() => onChange({
               ...preferences,

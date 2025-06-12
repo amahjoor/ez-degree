@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import ProfessorsToAvoidSelector from './selectors/ProfessorsToAvoidSelector';
 import CourseSelector from './selectors/CourseSelector';
 import CreditLimitsSelector from './selectors/CreditLimitsSelector';
 import CampusPreferencesSelector from './selectors/CampusPreferencesSelector';
@@ -39,7 +38,6 @@ interface SchedulePreferences {
   creditLimits: { min: number; max: number };
   considerSeats: boolean;
   considerRMP: boolean;
-  professorsToAvoid: string[];
   availability: Record<DayName, TimeInterval[]>;
 }
 
@@ -50,13 +48,6 @@ interface AIScheduleGeneratorProps {
   setPreferences: React.Dispatch<React.SetStateAction<SchedulePreferences>>;
   onGenerateSchedule: (generatedClasses: ClassSession[]) => void;
   existingClasses?: ClassSession[];
-}
-
-interface ProfessorSuggestion {
-  name: string;
-  qualityRating: string;
-  ratingCount: string;
-  category: 'Lecture' | 'Laboratory';
 }
 
 const getRandomTailwindColor = () => {
@@ -88,7 +79,6 @@ const AIScheduleGenerator: React.FC<AIScheduleGeneratorProps> = ({
   const [termsLoading, setTermsLoading] = useState<boolean>(false);
   const [termsError, setTermsError] = useState<string | null>(null);
   const [selectedTerm, setSelectedTerm] = useState<string>('');
-  const [availableProfessors, setAvailableProfessors] = useState<ProfessorSuggestion[]>([]);
 
   type Variant = {
     label: string;
@@ -157,40 +147,6 @@ const AIScheduleGenerator: React.FC<AIScheduleGeneratorProps> = ({
     setSelectedCourses(unique);
   }, [isOpen, existingClasses]);
 
-  // Fetch professors
-  useEffect(() => {
-    if (!isOpen || !selectedTerm || selectedCourses.length === 0) {
-      setAvailableProfessors([]);
-      return;
-    }
-    const queries = selectedCourses.map(c => `${selectedTerm}:${c.code}`);
-    Promise.all(
-      queries.map(q =>
-        fetch(
-          `${API_BASE_URL}/course-code-professor?TermAndCourseCode=${encodeURIComponent(q)}`
-        ).then(r => {
-          if (!r.ok) throw new Error();
-          return r.json() as Promise<Record<'Lecture' | 'Laboratory', { professor: string; qualityRating: string; ratingCount: string; }[]>>;
-        })
-      )
-    )
-      .then(groupObjs => {
-        const all: ProfessorSuggestion[] = [];
-        groupObjs.forEach(obj => {
-          (['Lecture','Laboratory'] as const).forEach(cat => {
-            obj[cat]?.forEach(p => all.push({
-              name: p.professor,
-              qualityRating: p.qualityRating,
-              ratingCount: p.ratingCount,
-              category: cat
-            }));
-          });
-        });
-        setAvailableProfessors(all);
-      })
-      .catch(() => setAvailableProfessors([]));
-  }, [isOpen, selectedTerm, selectedCourses]);
-
   // Fetch terms
   useEffect(() => {
     if (!isOpen) return;
@@ -239,8 +195,7 @@ const handleGenerate = async () => {
       minCredits: preferences.creditLimits.min,
       maxCredits: preferences.creditLimits.max,
       ignoreSeatAvailability: !preferences.considerSeats,
-      considerProfessorRatings: preferences.considerRMP,
-      excludedProfessors: preferences.professorsToAvoid
+      considerProfessorRatings: preferences.considerRMP
     };
 
     // 2) POST to your Spring Boot endpoint
@@ -369,12 +324,6 @@ return (
                 selectedCourses={selectedCourses}
                 onChange={setSelectedCourses}
                 selectedTerm={selectedTerm}
-              />
-              <ProfessorsToAvoidSelector
-                suggestions={availableProfessors}
-                selectedProfessors={preferences.professorsToAvoid}
-                onChange={list => setPreferences(prev => ({ ...prev, professorsToAvoid: list }))}
-                disabled={selectedCourses.length === 0}
               />
             </div>
 
