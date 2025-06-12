@@ -90,6 +90,15 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
   
+  // New drag and drop enhancement states
+  const [isDraggingCourse, setIsDraggingCourse] = useState<boolean>(false);
+  const [draggedCourseCode, setDraggedCourseCode] = useState<string>('');
+  const [courseSections, setCourseSections] = useState<any[]>([]);
+  const [validDropSlots, setValidDropSlots] = useState<{day: number, startHour: number, endHour: number}[]>([]);
+  
+  // State to track when we're already fetching to prevent multiple calls
+  const [isFetchingSections, setIsFetchingSections] = useState<boolean>(false);
+  
   // State for per-day time ranges (initialize with default for all days)
   const [dayTimeRanges, setDayTimeRanges] = useState<Array<{start: number, end: number}>>([
     {start: 6, end: 23},
@@ -243,6 +252,13 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const handleDragOver = (e: React.DragEvent, day: number, hour: number) => {
     e.preventDefault();
     e.stopPropagation();
+    
+    // Only allow drop if this is a valid slot for the course being dragged
+    if (isDraggingCourse && !isValidDropSlot(day, hour)) {
+      e.dataTransfer.dropEffect = 'none';
+      return;
+    }
+    
     // Change the cursor to indicate drop is allowed
     e.dataTransfer.dropEffect = 'copy';
     setDraggedOverSlot({ day, hour });
@@ -257,13 +273,54 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     e.stopPropagation();
     setDraggedOverSlot(null);
     
+    // Check if dropping is allowed for this slot
+    if (isDraggingCourse && !isValidDropSlot(day, hour)) {
+      return; // Prevent dropping on invalid slots
+    }
+    
     try {
       // Try to parse the dragged data from the DegreeRequirementsSidebar
       const data = e.dataTransfer.getData('text/plain');
       if (data) {
         const courseData = JSON.parse(data);
         if (courseData && courseData.code) {
-          // Create a new class session from the dragged course
+          
+          // If we're dragging a course and have section data, use the real section info
+          if (isDraggingCourse && courseSections.length > 0) {
+            const section = getSectionForSlot(day, hour);
+            
+            if (section) {
+              // Create class sessions using the actual section data
+              const sessions: ClassSession[] = [];
+              const days = section.MeetingDays.split(',').map((d: string) => d.trim());
+              const [startTime, endTime] = section.MeetingTimes.split(' - ').map((t: string) => t.trim());
+              
+              days.forEach((dayName: string) => {
+                const dayIndex = dayNameToIndex[dayName];
+                if (dayIndex !== undefined) {
+                  sessions.push({
+                    id: `${section.CourseNumber}-${section.CourseSection}-${dayIndex}`,
+                    courseCode: `${section.CourseSubject} ${section.CourseNumber}`,
+                    title: section.CourseTitle,
+                    day: dayIndex,
+                    startTime: parseTimeToDecimal(startTime),
+                    endTime: parseTimeToDecimal(endTime),
+                    location: section.Campus,
+                    instructor: section.Instructor,
+                    color: getRandomColor(),
+                    credits: Number(section.CreditHours),
+                    semester: semester
+                  });
+                }
+              });
+              
+              setClasses(prev => [...prev, ...sessions]);
+              console.log(`Added ${section.CourseSubject} ${section.CourseNumber} section ${section.CourseSection}`);
+              return;
+            }
+          }
+          
+          // Fallback to the original behavior if no section data available
           const newClass: ClassSession = {
             id: `class-${Date.now()}-${courseData.code}`,
             courseCode: courseData.course_code || courseData.code,
@@ -437,6 +494,182 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [activeTimeDropdown]);
+
+  // Enhanced drag and drop functionality
+
+  // Helper function to parse time from course section data (e.g., "09:00 AM" -> 9.0)
+  const parseTimeToDecimal = (timeStr: string): number => {
+    const [time, meridiem] = timeStr.split(' ');
+    let [hours, minutes] = time.split(':').map(Number);
+    if (meridiem === 'PM' && hours < 12) hours += 12;
+    if (meridiem === 'AM' && hours === 12) hours = 0;
+    return hours + minutes / 60;
+  };
+
+  // Helper function to map day names to indices
+  const dayNameToIndex: Record<string, number> = {
+    Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4,
+  };
+
+  // Function to fetch course sections when dragging starts
+  const fetchCourseSections = async (courseCode: string) => {
+    // Prevent multiple simultaneous fetches for the same course
+    if (isFetchingSections || courseSections.length > 0) {
+      return;
+    }
+    
+    setIsFetchingSections(true);
+    console.log(`🔎 Fetching sections for ${courseCode} in ${semester}`);
+    try {
+      const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
+        `?Term=${encodeURIComponent(semester)}` +
+        `&CourseCode=${encodeURIComponent(courseCode)}`;
+      
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error(`API failed with status: ${response.status}`);
+      }
+      
+      const sections = await response.json();
+      console.log(`📋 Found ${sections.length} sections for ${courseCode}`);
+      setCourseSections(sections);
+      
+      // Calculate valid drop slots from the sections
+      const slots: {day: number, startHour: number, endHour: number}[] = [];
+      
+      sections.forEach((section: any) => {
+        if (section.MeetingDays && section.MeetingTimes) {
+          const days = section.MeetingDays.split(',').map((d: string) => d.trim());
+          const [startTime, endTime] = section.MeetingTimes.split(' - ').map((t: string) => t.trim());
+          
+          const startHour = parseTimeToDecimal(startTime);
+          const endHour = parseTimeToDecimal(endTime);
+          
+          days.forEach((dayName: string) => {
+            const dayIndex = dayNameToIndex[dayName];
+            if (dayIndex !== undefined) {
+              // Check if this time slot already exists to avoid duplicates
+              const exists = slots.some(slot => 
+                slot.day === dayIndex && 
+                slot.startHour === startHour && 
+                slot.endHour === endHour
+              );
+              
+              if (!exists) {
+                slots.push({ day: dayIndex, startHour, endHour });
+              }
+            }
+          });
+        }
+      });
+      
+      console.log(`🎯 Found ${slots.length} valid drop slots:`, slots);
+      setValidDropSlots(slots);
+    } catch (error) {
+      console.error('❌ Error fetching course sections:', error);
+      setCourseSections([]);
+      setValidDropSlots([]);
+    } finally {
+      setIsFetchingSections(false);
+    }
+  };
+
+  // Debug effect to monitor drag state changes
+  useEffect(() => {
+    console.log('🔄 State changed:', {
+      isDraggingCourse,
+      draggedCourseCode,
+      courseSectionsCount: courseSections.length,
+      validDropSlotsCount: validDropSlots.length,
+      isFetchingSections
+    });
+  }, [isDraggingCourse, draggedCourseCode, courseSections.length, validDropSlots.length, isFetchingSections]);
+
+  // Global drag event handlers to detect when course dragging starts/ends
+  useEffect(() => {
+    const handleDragStart = (e: DragEvent) => {
+      console.log('🌐 Global dragstart detected');
+      // Check if this is a course drag by looking at the data types
+      if (e.dataTransfer?.types.includes('application/course-drag')) {
+        // Try to get the course code - this should work in dragstart
+        const courseCode = e.dataTransfer.getData('application/course-drag');
+        console.log('🌐 Global dragstart course code:', courseCode);
+        
+        if (courseCode) {
+          console.log(`🎯 Starting course drag for: ${courseCode}`);
+          setIsDraggingCourse(true);
+          setDraggedCourseCode(courseCode);
+          
+          // Start fetching course sections immediately
+          if (!isFetchingSections) {
+            console.log('🚀 Starting immediate API fetch...');
+            fetchCourseSections(courseCode);
+          }
+        }
+      }
+    };
+
+    const handleDragEnd = () => {
+      console.log('🏁 Drag ended - cleaning up state');
+      setIsDraggingCourse(false);
+      setDraggedCourseCode('');
+      setCourseSections([]);
+      setValidDropSlots([]);
+      setIsFetchingSections(false);
+    };
+
+    // Listen for both dragstart and dragend
+    document.addEventListener('dragstart', handleDragStart);
+    document.addEventListener('dragend', handleDragEnd);
+
+    return () => {
+      document.removeEventListener('dragstart', handleDragStart);
+      document.removeEventListener('dragend', handleDragEnd);
+    };
+  }, [semester, isFetchingSections]);
+
+  // Helper function to check if a time slot is valid for dropping
+  const isValidDropSlot = (day: number, hour: number): boolean => {
+    if (!isDraggingCourse) return true; // Allow dropping anywhere if not dragging a course
+    
+    return validDropSlots.some(slot => 
+      slot.day === day && 
+      hour >= slot.startHour && 
+      hour < slot.endHour
+    );
+  };
+
+  // Helper function to get the course section for a specific drop slot
+  const getSectionForSlot = (day: number, hour: number): any | null => {
+    if (!isDraggingCourse || courseSections.length === 0) return null;
+    
+    const validSlot = validDropSlots.find(slot => 
+      slot.day === day && 
+      hour >= slot.startHour && 
+      hour < slot.endHour
+    );
+    
+    if (!validSlot) return null;
+    
+    // Find the section that matches this time slot
+    return courseSections.find(section => {
+      if (!section.MeetingDays || !section.MeetingTimes) return false;
+      
+      const days = section.MeetingDays.split(',').map((d: string) => d.trim());
+      const [startTime, endTime] = section.MeetingTimes.split(' - ').map((t: string) => t.trim());
+      
+      const startHour = parseTimeToDecimal(startTime);
+      const endHour = parseTimeToDecimal(endTime);
+      
+      return days.some((dayName: string) => {
+        const dayIndex = dayNameToIndex[dayName];
+        return dayIndex === day && 
+               Math.abs(startHour - validSlot.startHour) < 0.1 && 
+               Math.abs(endHour - validSlot.endHour) < 0.1;
+      });
+    });
+  };
 
   return (
     <div className="bg-white h-full w-full overflow-hidden flex flex-col">
@@ -658,6 +891,14 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
       
       {/* Scrollable calendar grid */}
       <div className="relative flex-1 overflow-hidden z-20 isolate">
+        {/* Debug indicator */}
+        {isDraggingCourse && (
+          <div className="absolute top-2 right-2 z-50 bg-blue-600 text-white px-3 py-1 rounded shadow-lg text-sm">
+            🎯 Dragging: {draggedCourseCode} 
+            {isFetchingSections ? ' (Loading...)' : ` (${validDropSlots.length} valid slots)`}
+          </div>
+        )}
+        
         <div ref={calendarContainerRef} className="h-full overflow-auto pointer-events-auto">
           <div className="grid grid-cols-6 min-h-full">
             {/* Only show time column according to time range */}
@@ -717,20 +958,45 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                     )}
                     
                     {/* Only show hours within this day's time range */}
-                    {dayVisibleHours.map((hour) => (
-                      <div
-                        key={`slot-${dayIndex}-${hour}`}
-                        className={`h-16 border-b border-gray-200 hover:bg-blue-50 cursor-pointer transition-colors ${
-                          draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour
-                            ? 'bg-blue-100 border border-blue-400'
-                            : ''
-                        }`}
-                        onClick={() => handleAddClass(dayIndex, hour)}
-                        onDragOver={(e) => handleDragOver(e, dayIndex, hour)}
-                        onDragLeave={handleDragLeave}
-                        onDrop={(e) => handleDrop(e, dayIndex, hour)}
-                      />
-                    ))}
+                    {dayVisibleHours.map((hour) => {
+                      // Determine styling based on drag state and validity
+                      let slotClasses = 'h-16 border-b border-gray-200 transition-colors';
+                      
+                      if (isDraggingCourse) {
+                        // When dragging a course, show course-specific highlights
+                        if (isValidDropSlot(dayIndex, hour)) {
+                          // Valid drop zone - green outline and light green background
+                          slotClasses += ' bg-green-50 border-2 border-green-300 border-dashed cursor-copy';
+                          
+                          // If also being dragged over, make it more prominent
+                          if (draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour) {
+                            slotClasses += ' bg-green-100 border-green-500';
+                          }
+                        } else {
+                          // Invalid drop zone - muted appearance
+                          slotClasses += ' bg-gray-50 opacity-50 cursor-not-allowed';
+                        }
+                      } else {
+                        // Normal behavior when not dragging a course
+                        slotClasses += ' hover:bg-blue-50 cursor-pointer';
+                        
+                        // Regular drag over styling
+                        if (draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour) {
+                          slotClasses += ' bg-blue-100 border border-blue-400';
+                        }
+                      }
+                      
+                      return (
+                        <div
+                          key={`slot-${dayIndex}-${hour}`}
+                          className={slotClasses}
+                          onClick={() => handleAddClass(dayIndex, hour)}
+                          onDragOver={(e) => handleDragOver(e, dayIndex, hour)}
+                          onDragLeave={handleDragLeave}
+                          onDrop={(e) => handleDrop(e, dayIndex, hour)}
+                        />
+                      );
+                    })}
                     
                     {/* Add placeholder cells for hours after day's end time */}
                     {dayRange.end < visibleHours[visibleHours.length - 1] && (

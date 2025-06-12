@@ -179,6 +179,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
     };
     
     e.dataTransfer.setData('text/plain', JSON.stringify(courseData));
+    e.dataTransfer.setData('application/course-drag', requirement.id); // Set the actual course code
     e.dataTransfer.effectAllowed = 'copy';
   };
 
