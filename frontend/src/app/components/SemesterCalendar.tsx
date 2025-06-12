@@ -1,14 +1,13 @@
 "use client";
 
 import React, { forwardRef, useImperativeHandle, useState, useEffect, useRef } from 'react';
-import Select from 'react-select';
+
 import CourseSelectionModal from './CourseSelectionModal';
 import AIScheduleGenerator from './ai/AIScheduleGenerator';
 import { Course } from '@/types/course';
 import { DayName, TimeInterval } from './ai/selectors/WeekAvailability';
 
-// API configuration
-const API_BASE_URL = '/api';
+
 
 export interface ClassSession {
   id: string;
@@ -24,9 +23,7 @@ export interface ClassSession {
   semester?: string; // Track which semester this session belongs to
 }
 
-interface WeeklyCalendarProps {
-  onCourseSelect?: (courseCode: string, title: string, credits: number) => void;
-}
+interface WeeklyCalendarProps {}
 
 
 const allDays: DayName[] = [
@@ -70,36 +67,8 @@ export interface WeeklyCalendarHandle {
 }
 
 const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
-  ({ onCourseSelect }, ref) => {
-  const [classes, setClasses] = useState<ClassSession[]>([
-    // Example classes with corrected positioning
-    /*
-    {
-      id: 'math113-001',
-      courseCode: 'MATH 113',
-      title: 'Analytic Geometry and Calculus I',
-      day: 0, // Monday
-      startTime: 13, // 1pm
-      endTime: 14.5, // 2:30pm
-      location: 'Exploratory Hall 4106',
-      instructor: 'Jane Doe',
-      color: 'bg-green-100 border-green-300',
-      credits: 4
-    },
-    {
-      id: 'cs112-001',
-      courseCode: 'CS 112',
-      title: 'Introduction to Computer Programming',
-      day: 2, // Wednesday
-      startTime: 10, // 10am
-      endTime: 11.5, // 11:30am
-      location: 'Innovation Hall 222',
-      instructor: 'John Smith',
-      color: 'bg-blue-100 border-blue-300',
-      credits: 4
-    }
-      */
-  ]);
+  (props, ref) => {
+  const [classes, setClasses] = useState<ClassSession[]>([]);
 
   // State declarations
   const [isAIGeneratorOpen, setIsAIGeneratorOpen] = useState<boolean>(false);
@@ -184,36 +153,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     timeOptions.push({ value: 23, label: '11pm' });
   }
   
-  const semesterOptions = ["Summer 2025", "Fall 2025"].map(sem => ({
-    value: sem,
-    label: sem
-  }));
-  
-  // Custom react-select styles
-  const customSelectStyles = {
-    control: (provided: any) => ({
-      ...provided,
-      borderColor: '#D1D5DB',
-      boxShadow: 'none',
-      '&:hover': {
-        borderColor: '#3B82F6'
-      }
-    }),
-    option: (provided: any, state: any) => ({
-      ...provided,
-      backgroundColor: state.isSelected ? '#3B82F6' : state.isFocused ? '#EFF6FF' : 'white',
-      color: state.isSelected ? 'white' : '#1F2937',
-      cursor: 'pointer'
-    }),
-    menu: (provided: any) => ({
-      ...provided,
-      zIndex: 9999
-    }),
-    menuPortal: (base: any) => ({
-      ...base,
-      zIndex: 9999
-    })
-  };
+
 
   // Function to format time (e.g., 13.5 -> "1:30pm")
   const formatTime = (time: number) => {
@@ -248,27 +188,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     }
   }, [dynamicTimeRange.start, hours]);
 
-  // Calculate class position and height
-  const getClassStyle = (cls: ClassSession) => {
-    // Each hour is represented by one row in our grid
-    const startHourIndex = cls.startTime - hours[0]; // Convert to index in hours array
-    const startRow = startHourIndex + 2; // +2 because of the header row
-    
-    // Calculate the duration in terms of rows
-    const durationHours = cls.endTime - cls.startTime;
-    
-    return {
-      gridRowStart: startRow,
-      gridRowEnd: `span ${Math.round(durationHours)}`,
-      gridColumnStart: cls.day + 1,
-      gridColumnEnd: `span 1`,
-      top: `${((cls.startTime - Math.floor(cls.startTime)) * 100)}%`,
-      height: `calc(${durationHours * 100}% - 4px)`,
-      margin: '2px 4px',
-      position: 'relative' as const,
-      zIndex: 10
-    };
-  };
+
 
   // Add new states for the course selection modal
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -437,22 +357,14 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     setDayTimeRanges(newDayTimeRanges);
   };
 
-  // Helper to get effective time range for a specific day
-  const getEffectiveTimeRangeForDay = (dayIndex: number) => {
-    return dayTimeRanges[dayIndex];
-  };
+
 
   // Toggle day time selector
   const toggleDayTimeSelector = (dayIndex: number) => {
     setShowDayTimeSelector(showDayTimeSelector === dayIndex ? null : dayIndex);
   };
 
-  // Handle semester change
-  const handleSemesterChange = (selectedOption: any) => {
-    if (selectedOption) {
-      setSemester(selectedOption.value);
-    }
-  };
+
   
   const semesterList = ["Summer 2025", "Fall 2025"];
   const [currentSemesterIndex, setCurrentSemesterIndex] = useState(0);
@@ -485,21 +397,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     };
   }, [isAIGeneratorOpen]);
 
-  // Effect to set up menu portal target on component mount
-  useEffect(() => {
-    // This ensures the dropdown menu has access to document.body
-    document.body.classList.add('react-select-body');
-    
-    return () => {
-      document.body.classList.remove('react-select-body');
-    };
-  }, []);
 
-  // Options for credit limits
-  const creditOptions = Array.from({ length: 18 }, (_, i) => ({
-    value: i + 1,
-    label: `${i + 1} credit${i === 0 ? '' : 's'}`
-  }));
 
   // Add function to ensure every class has a color
   const ensureClassHasColor = (cls: ClassSession): ClassSession => {
@@ -780,16 +678,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                     key={`day-${index}`}
                     className="h-12 flex items-center justify-center font-semibold border-b border-gray-200 border-r border-gray-200 sticky top-0 bg-gray-100 z-10"
                   >
-                    <div className="flex items-center">
-                      {day}
-                      {dayTimeRanges[index] && (
-                        <span className="ml-2 text-xs text-primary-blue" title={`Custom time: ${formatTime(dayTimeRanges[index].start)} - ${formatTime(dayTimeRanges[index].end)}`}>
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        </span>
-                      )}
-                    </div>
+                    {day}
                   </div>
                 )
               ))}
