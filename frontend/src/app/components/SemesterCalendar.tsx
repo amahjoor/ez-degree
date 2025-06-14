@@ -86,7 +86,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
-  const [semester, setSemester] = useState<string>("Spring 2025");
+  const [semester, setSemester] = useState<string>("Summer 2025");
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
   
@@ -437,7 +437,17 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   };
 
   useEffect(() => {
-    setSemester(semesterList[currentSemesterIndex]);
+    const newSemester = semesterList[currentSemesterIndex];
+    console.log(`🗓️ Semester changed to: ${newSemester} (index: ${currentSemesterIndex})`);
+    setSemester(newSemester);
+    
+    // Force clear ALL drag-related state when semester changes
+    console.log('🧹 Clearing all drag cache for semester change');
+    setCourseSections([]);
+    setValidDropSlots([]);
+    setIsFetchingSections(false);
+    setIsDraggingCourse(false);
+    setDraggedCourseCode('');
   }, [currentSemesterIndex]);
 
   // Effect to handle body scroll lock when modal is open
@@ -498,12 +508,32 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   // Enhanced drag and drop functionality
 
   // Helper function to parse time from course section data (e.g., "09:00 AM" -> 9.0)
-  const parseTimeToDecimal = (timeStr: string): number => {
-    const [time, meridiem] = timeStr.split(' ');
-    let [hours, minutes] = time.split(':').map(Number);
-    if (meridiem === 'PM' && hours < 12) hours += 12;
-    if (meridiem === 'AM' && hours === 12) hours = 0;
-    return hours + minutes / 60;
+  const parseTimeToDecimal = (timeStr: string | undefined | null): number => {
+    if (!timeStr || typeof timeStr !== 'string') {
+      console.warn('⚠️ Invalid time string:', timeStr);
+      return 0;
+    }
+    
+    try {
+      const [time, meridiem] = timeStr.split(' ');
+      if (!time || !meridiem) {
+        console.warn('⚠️ Malformed time format:', timeStr);
+        return 0;
+      }
+      
+      let [hours, minutes] = time.split(':').map(Number);
+      if (isNaN(hours) || isNaN(minutes)) {
+        console.warn('⚠️ Invalid time numbers:', timeStr);
+        return 0;
+      }
+      
+      if (meridiem === 'PM' && hours < 12) hours += 12;
+      if (meridiem === 'AM' && hours === 12) hours = 0;
+      return hours + minutes / 60;
+    } catch (error) {
+      console.error('❌ Error parsing time:', timeStr, error);
+      return 0;
+    }
   };
 
   // Helper function to map day names to indices
@@ -513,13 +543,22 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
 
   // Function to fetch course sections when dragging starts
   const fetchCourseSections = async (courseCode: string) => {
-    // Prevent multiple simultaneous fetches for the same course
-    if (isFetchingSections || courseSections.length > 0) {
+    // Prevent multiple simultaneous fetches for the same course and semester
+    if (isFetchingSections) {
+      console.log('⏳ Already fetching sections, skipping...');
       return;
+    }
+    
+    // If we have cached data for a different course, clear it
+    if (courseSections.length > 0 && draggedCourseCode !== courseCode) {
+      console.log('🧹 Clearing cache for new course:', courseCode);
+      setCourseSections([]);
+      setValidDropSlots([]);
     }
     
     setIsFetchingSections(true);
     console.log(`🔎 Fetching sections for ${courseCode} in ${semester}`);
+    console.log(`🌐 API URL: ${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data?Term=${encodeURIComponent(semester)}&CourseCode=${encodeURIComponent(courseCode)}`);
     try {
       const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
         `?Term=${encodeURIComponent(semester)}` +
@@ -538,13 +577,42 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
       // Calculate valid drop slots from the sections
       const slots: {day: number, startHour: number, endHour: number}[] = [];
       
-      sections.forEach((section: any) => {
-        if (section.MeetingDays && section.MeetingTimes) {
+      sections.forEach((section: any, index: number) => {
+        console.log(`📝 Processing section ${index + 1}:`, {
+          MeetingDays: section.MeetingDays,
+          MeetingTimes: section.MeetingTimes,
+          CourseSection: section.CourseSection
+        });
+        
+        if (!section.MeetingDays || !section.MeetingTimes) {
+          console.warn(`⚠️ Section ${index + 1} missing schedule data:`, section);
+          return;
+        }
+        
+        try {
           const days = section.MeetingDays.split(',').map((d: string) => d.trim());
-          const [startTime, endTime] = section.MeetingTimes.split(' - ').map((t: string) => t.trim());
+          const timeParts = section.MeetingTimes.split(' - ');
+          
+          if (timeParts.length !== 2) {
+            console.warn(`⚠️ Section ${index + 1} invalid time format:`, section.MeetingTimes);
+            return;
+          }
+          
+          const [startTime, endTime] = timeParts.map((t: string) => t.trim());
+          
+          if (!startTime || !endTime) {
+            console.warn(`⚠️ Section ${index + 1} empty time parts:`, { startTime, endTime });
+            return;
+          }
           
           const startHour = parseTimeToDecimal(startTime);
           const endHour = parseTimeToDecimal(endTime);
+          
+          // Skip if times couldn't be parsed (parseTimeToDecimal returns 0 for invalid input)
+          if (startHour === 0 && endHour === 0) {
+            console.warn(`⚠️ Section ${index + 1} could not parse times:`, { startTime, endTime });
+            return;
+          }
           
           days.forEach((dayName: string) => {
             const dayIndex = dayNameToIndex[dayName];
@@ -558,14 +626,25 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               
               if (!exists) {
                 slots.push({ day: dayIndex, startHour, endHour });
+                console.log(`✅ Added slot: ${dayName} ${startTime}-${endTime}`);
               }
+            } else {
+              console.warn(`⚠️ Unknown day name: ${dayName}`);
             }
           });
+        } catch (error) {
+          console.error(`❌ Error processing section ${index + 1}:`, error, section);
         }
       });
       
       console.log(`🎯 Found ${slots.length} valid drop slots:`, slots);
       setValidDropSlots(slots);
+      
+      // If no valid slots found, log diagnostic info
+      if (slots.length === 0 && sections.length > 0) {
+        console.warn(`⚠️ No valid time slots found for ${courseCode} in ${semester}`);
+        console.warn('📊 Raw sections data:', sections);
+      }
     } catch (error) {
       console.error('❌ Error fetching course sections:', error);
       setCourseSections([]);
@@ -656,18 +735,30 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     return courseSections.find(section => {
       if (!section.MeetingDays || !section.MeetingTimes) return false;
       
-      const days = section.MeetingDays.split(',').map((d: string) => d.trim());
-      const [startTime, endTime] = section.MeetingTimes.split(' - ').map((t: string) => t.trim());
-      
-      const startHour = parseTimeToDecimal(startTime);
-      const endHour = parseTimeToDecimal(endTime);
-      
-      return days.some((dayName: string) => {
-        const dayIndex = dayNameToIndex[dayName];
-        return dayIndex === day && 
-               Math.abs(startHour - validSlot.startHour) < 0.1 && 
-               Math.abs(endHour - validSlot.endHour) < 0.1;
-      });
+      try {
+        const days = section.MeetingDays.split(',').map((d: string) => d.trim());
+        const timeParts = section.MeetingTimes.split(' - ');
+        
+        if (timeParts.length !== 2) return false;
+        
+        const [startTime, endTime] = timeParts.map((t: string) => t.trim());
+        if (!startTime || !endTime) return false;
+        
+        const startHour = parseTimeToDecimal(startTime);
+        const endHour = parseTimeToDecimal(endTime);
+        
+        if (startHour === 0 && endHour === 0) return false;
+        
+        return days.some((dayName: string) => {
+          const dayIndex = dayNameToIndex[dayName];
+          return dayIndex === day && 
+                 Math.abs(startHour - validSlot.startHour) < 0.1 && 
+                 Math.abs(endHour - validSlot.endHour) < 0.1;
+        });
+      } catch (error) {
+        console.error('❌ Error processing section in getSectionForSlot:', error, section);
+        return false;
+      }
     });
   };
 
@@ -894,8 +985,12 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
         {/* Debug indicator */}
         {isDraggingCourse && (
           <div className="absolute top-2 right-2 z-50 bg-blue-600 text-white px-3 py-1 rounded shadow-lg text-sm">
-            🎯 Dragging: {draggedCourseCode} 
-            {isFetchingSections ? ' (Loading...)' : ` (${validDropSlots.length} valid slots)`}
+            🎯 Dragging: {draggedCourseCode} in {semester}
+            <br />
+            {isFetchingSections ? '🔄 Loading...' : 
+             validDropSlots.length > 0 ? `✅ ${validDropSlots.length} valid slots` :
+             courseSections.length > 0 ? '⚠️ No valid time slots (data issues)' :
+             '❌ No sections found'}
           </div>
         )}
         

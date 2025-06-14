@@ -82,10 +82,12 @@ export default function CourseOverlay({
   }, [activeTab, currentSemester, courseCode]);
 
   // --- Compute Most Common Grade & Review Count ---
-  useEffect(() => {
-    if (professors.length === 0) return;
+  const computeGradeStats = () => {
+    if (professors.length === 0) return { mostCommonGrade: 'N/A', totalReviews: 0 };
+    
     const gradesCount: Record<string, number> = {};
     let totalReviews = 0;
+    
     professors.forEach((prof) => {
       const reviews = prof.reviews ?? [];
       reviews.forEach((review) => {
@@ -93,6 +95,7 @@ export default function CourseOverlay({
         totalReviews++;
       });
     });
+    
     let mostCommonGrade = 'N/A';
     let maxCount = 0;
     Object.entries(gradesCount).forEach(([grade, count]) => {
@@ -101,16 +104,30 @@ export default function CourseOverlay({
         maxCount = count;
       }
     });
-    setCourseData((prev) => prev && ({ ...prev, mostCommonGrade, totalReviews }));
-  }, [professors]);
+    
+    return { mostCommonGrade, totalReviews };
+  };
+
+  const { mostCommonGrade, totalReviews } = computeGradeStats();
 
   // --- Helper Functions ---
-  const parseTimeToDecimal = (t: string) => {
-    const [time, meridiem] = t.split(' ');
-    let [hh, mm] = time.split(':').map(Number);
-    if (meridiem === 'PM' && hh < 12) hh += 12;
-    if (meridiem === 'AM' && hh === 12) hh = 0;
-    return hh + mm / 60;
+  const parseTimeToDecimal = (t: string | undefined | null) => {
+    if (!t || typeof t !== 'string') return 0;
+    
+    try {
+      const [time, meridiem] = t.split(' ');
+      if (!time || !meridiem) return 0;
+      
+      let [hh, mm] = time.split(':').map(Number);
+      if (isNaN(hh) || isNaN(mm)) return 0;
+      
+      if (meridiem === 'PM' && hh < 12) hh += 12;
+      if (meridiem === 'AM' && hh === 12) hh = 0;
+      return hh + mm / 60;
+    } catch (error) {
+      console.error('Error parsing time:', t, error);
+      return 0;
+    }
   };
   const dayIndexMap: Record<string, number> = {
     Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4,
@@ -124,8 +141,14 @@ export default function CourseOverlay({
 
     try {
       const days = section.MeetingDays.split(',').map(d => d.trim());
-      const [startTime, endTime] = section.MeetingTimes.split(' - ').map(t => t.trim());
+      const timeParts = section.MeetingTimes.split(' - ').map(t => t.trim());
       
+      if (timeParts.length !== 2) {
+        console.error('Invalid meeting times format in checkTimeConflict:', section.MeetingTimes);
+        return false;
+      }
+      
+      const [startTime, endTime] = timeParts;
       const sectionStart = parseTimeToDecimal(startTime);
       const sectionEnd = parseTimeToDecimal(endTime);
 
@@ -161,9 +184,22 @@ export default function CourseOverlay({
       return; // Don't add conflicting sections
     }
 
+    // Validate required data
+    if (!item.MeetingDays || !item.MeetingTimes) {
+      console.error('Invalid section data:', item);
+      return;
+    }
+
     const sessions: ClassSession[] = [];
     const days = item.MeetingDays.split(',').map((d) => d.trim());
-    const [start, end] = item.MeetingTimes.split(' - ').map((s) => s.trim());
+    const timeParts = item.MeetingTimes.split(' - ').map((s) => s.trim());
+    
+    if (timeParts.length !== 2) {
+      console.error('Invalid meeting times format:', item.MeetingTimes);
+      return;
+    }
+    
+    const [start, end] = timeParts;
     days.forEach((dayName) => {
       const day = dayIndexMap[dayName];
       if (day == null) return;
@@ -281,9 +317,9 @@ export default function CourseOverlay({
                 <h3 className="font-bold text-lg text-gray-900">{courseData.course_code}</h3>
                 <p className="text-gray-600 text-sm">{courseData.credits} credits</p>
               </div>
-              {courseData.mostCommonGrade && courseData.mostCommonGrade !== 'N/A' && (
+              {mostCommonGrade && mostCommonGrade !== 'N/A' && (
                 <div className="bg-primary-blue text-white text-2xl font-bold px-4 py-2 rounded-lg">
-                  {courseData.mostCommonGrade}
+                  {mostCommonGrade}
                 </div>
               )}
             </div>
@@ -319,9 +355,9 @@ export default function CourseOverlay({
             {/* Footer with link to full page - fixed at bottom */}
             <div className="p-4 pt-2 border-t border-gray-100 bg-white">
               <div className="flex justify-between items-center">
-                {courseData.totalReviews !== undefined && (
+                {totalReviews > 0 && (
                   <span className="text-xs text-gray-500">
-                    {courseData.totalReviews} {courseData.totalReviews === 1 ? 'review' : 'reviews'}
+                    {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}
                   </span>
                 )}
                 <Link
@@ -374,7 +410,7 @@ export default function CourseOverlay({
                           )}
                         </div>
                         <div className={`text-sm ${hasConflict ? 'text-gray-500' : 'text-gray-600'}`}>
-                          {item.MeetingDays} @ {item.MeetingTimes}
+                          {item.MeetingDays || 'TBA'} @ {item.MeetingTimes || 'TBA'}
                         </div>
                         <div className={`text-xs mt-1 ${hasConflict ? 'text-gray-400' : 'text-gray-500'}`}>
                           {item.Instructor}
