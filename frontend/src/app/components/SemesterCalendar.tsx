@@ -626,7 +626,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               
               if (!exists) {
                 slots.push({ day: dayIndex, startHour, endHour });
-                console.log(`✅ Added slot: ${dayName} ${startTime}-${endTime}`);
+                                        console.log(`✅ Added slot: ${dayName} ${startTime}-${endTime} (${startHour.toFixed(2)}-${endHour.toFixed(2)})`);
               }
             } else {
               console.warn(`⚠️ Unknown day name: ${dayName}`);
@@ -712,10 +712,22 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const isValidDropSlot = (day: number, hour: number): boolean => {
     if (!isDraggingCourse) return true; // Allow dropping anywhere if not dragging a course
     
+    // Check if the hour intersects with any valid time slot for this day
     return validDropSlots.some(slot => 
       slot.day === day && 
-      hour >= slot.startHour && 
-      hour < slot.endHour
+      hour >= Math.floor(slot.startHour) && 
+      hour < Math.ceil(slot.endHour)
+    );
+  };
+
+  // Helper function to check if a specific decimal time falls within a valid slot
+  const isValidDropTime = (day: number, decimalTime: number): boolean => {
+    if (!isDraggingCourse) return true;
+    
+    return validDropSlots.some(slot => 
+      slot.day === day && 
+      decimalTime >= slot.startHour && 
+      decimalTime <= slot.endHour
     );
   };
 
@@ -723,10 +735,11 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   const getSectionForSlot = (day: number, hour: number): any | null => {
     if (!isDraggingCourse || courseSections.length === 0) return null;
     
+    // Find the time slot that contains this hour (allowing for precise timing)
     const validSlot = validDropSlots.find(slot => 
       slot.day === day && 
-      hour >= slot.startHour && 
-      hour < slot.endHour
+      hour >= Math.floor(slot.startHour) && 
+      hour <= Math.ceil(slot.endHour)
     );
     
     if (!validSlot) return null;
@@ -988,7 +1001,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
             🎯 Dragging: {draggedCourseCode} in {semester}
             <br />
             {isFetchingSections ? '🔄 Loading...' : 
-             validDropSlots.length > 0 ? `✅ ${validDropSlots.length} valid slots` :
+             validDropSlots.length > 0 ? `✅ ${validDropSlots.length} precise time slots` :
              courseSections.length > 0 ? '⚠️ No valid time slots (data issues)' :
              '❌ No sections found'}
           </div>
@@ -1054,31 +1067,30 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                     
                     {/* Only show hours within this day's time range */}
                     {dayVisibleHours.map((hour) => {
-                      // Determine styling based on drag state and validity
+                      // Base styling - simplified without drag highlights
                       let slotClasses = 'h-16 border-b border-gray-200 transition-colors';
                       
                       if (isDraggingCourse) {
-                        // When dragging a course, show course-specific highlights
-                        if (isValidDropSlot(dayIndex, hour)) {
-                          // Valid drop zone - green outline and light green background
-                          slotClasses += ' bg-green-50 border-2 border-green-300 border-dashed cursor-copy';
-                          
-                          // If also being dragged over, make it more prominent
-                          if (draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour) {
-                            slotClasses += ' bg-green-100 border-green-500';
-                          }
-                        } else {
-                          // Invalid drop zone - muted appearance
+                        // When dragging, dim unavailable areas but don't highlight specific hours
+                        const hasAnyValidSlotThisHour = validDropSlots.some(slot => 
+                          slot.day === dayIndex && 
+                          hour >= Math.floor(slot.startHour) && 
+                          hour <= Math.ceil(slot.endHour)
+                        );
+                        
+                        if (!hasAnyValidSlotThisHour) {
                           slotClasses += ' bg-gray-50 opacity-50 cursor-not-allowed';
+                        } else {
+                          slotClasses += ' cursor-copy';
                         }
                       } else {
                         // Normal behavior when not dragging a course
                         slotClasses += ' hover:bg-blue-50 cursor-pointer';
-                        
-                        // Regular drag over styling
-                        if (draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour) {
-                          slotClasses += ' bg-blue-100 border border-blue-400';
-                        }
+                      }
+                      
+                      // Regular drag over styling
+                      if (draggedOverSlot?.day === dayIndex && draggedOverSlot?.hour === hour) {
+                        slotClasses += ' bg-blue-100 border border-blue-400';
                       }
                       
                       return (
@@ -1100,6 +1112,102 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
                         style={{ height: `${(visibleHours[visibleHours.length - 1] - dayRange.end) * 4}rem` }}
                       />
                     )}
+
+                    {/* Precise time overlays for drag targets */}
+                    {isDraggingCourse && validDropSlots
+                      .filter(slot => slot.day === dayIndex)
+                      .map((slot, slotIndex) => {
+                        // Calculate position and size with improved precision
+                        const globalVisibleStart = visibleHours[0]; // First visible hour globally
+                        const globalVisibleEnd = visibleHours[visibleHours.length - 1];
+                        
+                        // Skip if slot is completely outside visible area  
+                        if (slot.endHour <= globalVisibleStart || slot.startHour >= globalVisibleEnd) {
+                          return null;
+                        }
+                        
+                        // Clamp slot times to global visible area for positioning
+                        const clampedStartHour = Math.max(slot.startHour, globalVisibleStart);
+                        const clampedEndHour = Math.min(slot.endHour, globalVisibleEnd);
+                        
+                        let topPosition = 0;
+                        
+                        // Add placeholder height if day starts after global visible start
+                        if (dayRange.start > globalVisibleStart) {
+                          topPosition += (dayRange.start - globalVisibleStart) * 4;
+                        }
+                        
+                        // Add position within the day's time range
+                        const dayStartHour = Math.max(dayRange.start, globalVisibleStart);
+                        topPosition += (clampedStartHour - dayStartHour) * 4;
+                        const height = Math.max((clampedEndHour - clampedStartHour) * 4, 0.75); // Minimum height of 0.75rem
+                        
+                        return (
+                          <div
+                            key={`time-overlay-${dayIndex}-${slotIndex}`}
+                            className="absolute inset-x-1 bg-green-400 bg-opacity-30 border-2 border-green-400 border-dashed rounded-lg shadow-md z-10 flex items-center justify-center cursor-copy hover:bg-green-400 hover:bg-opacity-40 hover:border-green-500 hover:shadow-lg transition-all"
+                            style={{
+                              top: `${topPosition}rem`,
+                              height: `${height}rem`,
+                            }}
+                            onDragOver={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              e.dataTransfer.dropEffect = 'copy';
+                            }}
+                            onDrop={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              // Use the exact start time of the slot for precise dropping
+                              handleDrop(e, dayIndex, Math.floor(slot.startHour));
+                            }}
+                          >
+                            <div className="text-center px-2 py-1.5">
+                              <div className="text-gray-800 text-xs font-bold">{formatTime(slot.startHour)} - {formatTime(slot.endHour)}</div>
+                              {/* Find and show professor name */}
+                              {(() => {
+                                const section = courseSections.find(sec => {
+                                  if (!sec.MeetingDays || !sec.MeetingTimes) return false;
+                                  try {
+                                    const days = sec.MeetingDays.split(',').map((d: string) => d.trim());
+                                    const timeParts = sec.MeetingTimes.split(' - ');
+                                    if (timeParts.length !== 2) return false;
+                                    const [startTime, endTime] = timeParts.map((t: string) => t.trim());
+                                    const startHour = parseTimeToDecimal(startTime);
+                                    const endHour = parseTimeToDecimal(endTime);
+                                    return days.some((dayName: string) => {
+                                      const dayIdx = dayNameToIndex[dayName];
+                                      return dayIdx === dayIndex && 
+                                             Math.abs(startHour - slot.startHour) < 0.1 && 
+                                             Math.abs(endHour - slot.endHour) < 0.1;
+                                    });
+                                  } catch { return false; }
+                                });
+                                return section?.Instructor ? (
+                                  <div className="text-xs text-gray-700 mt-1 font-medium overflow-hidden text-ellipsis whitespace-nowrap">
+                                    {(() => {
+                                      // Format professor name as "Last, F"
+                                      const fullName = section.Instructor.trim();
+                                      const nameParts = fullName.split(' ').filter((part: string) => part.length > 0);
+                                      
+                                      if (nameParts.length === 0) return fullName;
+                                      if (nameParts.length === 1) return nameParts[0];
+                                      
+                                      // last name is first pt and first name is 2nd
+                                      const firstName = nameParts[1];
+                                      const lastName = nameParts[0];
+                                      const firstInitial = firstName.charAt(0).toUpperCase();
+                                      
+                                      return `${lastName} ${firstInitial}.`;
+                                    })()}
+                                  </div>
+                                ) : null;
+                              })()}
+                            </div>
+                          </div>
+                        );
+                      })
+                    }
                   </div>
                 );
               })}
