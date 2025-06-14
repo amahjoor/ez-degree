@@ -4,9 +4,10 @@
   "description": "GMU Course Planning Tool",
   "main": "index.js",
   "scripts": {
-    "start:backend": "cd . && uvicorn api.main:app --reload",
+    "start:backend-python": "cd . && uvicorn api.main:app --reload",
+    "start:backend-maven": "cd Backend/patriotassist_gmu && mvn spring-boot:run",
     "start:frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+    "dev": "concurrently \"npm run start:backend-python\" \"npm run start:backend-maven\" \"npm run start:frontend\""
   },
   "dependencies": {
     "@types/cytoscape": "^3.21.9",
