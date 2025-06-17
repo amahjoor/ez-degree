@@ -386,6 +386,75 @@ async def get_courses(
     
     Results are sorted by subject and then by course number.
     """
+    
+    # Try database first (since it should have complete course data)
+    db = get_session()
+    try:
+        query = db.query(DbCourse)
+        
+        # Apply subject filter if provided
+        if subject:
+            if len(subject) == 1:
+                # Single subject filter
+                query = query.filter(DbCourse.subject_id == subject[0].upper())
+            else:
+                # Multiple subject filter using OR condition
+                from sqlalchemy import or_
+                subject_filters = [DbCourse.subject_id == s.upper() for s in subject]
+                query = query.filter(or_(*subject_filters))
+        
+        # Apply search filter if provided
+        if search:
+            search_term = f"%{search}%"
+            query = query.filter(
+                (DbCourse.course_code.ilike(search_term)) |
+                (DbCourse.title.ilike(search_term)) |
+                (DbCourse.description.ilike(search_term))
+            )
+        
+        # Get total count before pagination
+        total_count = query.count()
+        
+        # If we have courses in the database, use them
+        if total_count > 0:
+            # Apply ordering by subject_id and then by numeric part of course code
+            # We use a SQL function to extract the numeric part from course_code for sorting
+            from sqlalchemy.sql import text
+            query = query.order_by(
+                DbCourse.subject_id,
+                text("CAST(REGEXP_REPLACE(course_code, '[^0-9]', '', 'g') AS INTEGER)")
+            )
+            
+            # Apply pagination
+            courses = query.offset(skip).limit(limit).all()
+            
+            # Convert to dictionary format
+            course_list = [
+                {
+                    "course_code": course.course_code,
+                    "title": course.title,
+                    "credits": course.credits,
+                    "description": course.description,
+                    "subject": course.subject_id,
+                    "prerequisites": course.prerequisites,
+                    "corequisites": course.corequisites,
+                    "restrictions": course.restrictions,
+                    "notes": course.notes
+                }
+                for course in courses
+            ]
+            
+            return {
+                "total": total_count,
+                "courses": course_list
+            }
+    except Exception as e:
+        print(f"Error accessing database: {str(e)}")
+        # Continue to JSON fallback if database fails
+    finally:
+        db.close()
+    
+    # Fallback to JSON files if database is empty or unavailable
     try:
         # First check if we have courses JSON file in the data directory
         courses_file = os.path.join(REQUIREMENTS_DIR, "courses", "all_courses.json")
@@ -418,18 +487,33 @@ async def get_courses(
             courses_dir = os.path.join(REQUIREMENTS_DIR, "courses")
             
             if os.path.exists(courses_dir):
-                # Either load a specific subject file or all subject files
-                if subject and len(subject) == 1:
-                    # Try to load just the specific subject file
-                    subject_file = os.path.join(courses_dir, f"{subject[0].lower()}.json")
-                    if os.path.exists(subject_file):
-                        with open(subject_file, 'r') as f:
-                            file_data = json.load(f)
-                            # Check if this is the same format as all_courses.json
-                            if isinstance(file_data, dict) and 'subjects' in file_data:
-                                # Extract from subjects field
-                                for subject_code, courses in file_data['subjects'].items():
-                                    for course in courses:
+                # Load all JSON files (except subjects.json)
+                for filename in os.listdir(courses_dir):
+                    if filename.endswith(".json") and filename != "subjects.json":
+                        try:
+                            with open(os.path.join(courses_dir, filename), 'r') as f:
+                                file_data = json.load(f)
+                                
+                                # Handle different JSON formats
+                                if filename == "all_courses.json" and isinstance(file_data, dict) and 'subjects' in file_data:
+                                    # Extract from subjects field
+                                    for subject_code, courses in file_data['subjects'].items():
+                                        for course in courses:
+                                            all_courses.append({
+                                                "course_code": course.get("Code", ""),
+                                                "title": course.get("Title", ""),
+                                                "credits": course.get("Credits", ""),
+                                                "description": course.get("Description", ""),
+                                                "subject": subject_code,
+                                                "prerequisites": course.get("Prerequisites", ""),
+                                                "corequisites": course.get("Corequisites", ""),
+                                                "restrictions": course.get("Restrictions", ""),
+                                                "notes": course.get("Notes", "")
+                                            })
+                                elif isinstance(file_data, dict) and 'courses' in file_data:
+                                    # Handle format like or_courses.json
+                                    subject_code = file_data.get('subject', filename.replace('_courses.json', '').upper())
+                                    for course in file_data['courses']:
                                         all_courses.append({
                                             "course_code": course.get("Code", ""),
                                             "title": course.get("Title", ""),
@@ -441,49 +525,19 @@ async def get_courses(
                                             "restrictions": course.get("Restrictions", ""),
                                             "notes": course.get("Notes", "")
                                         })
-                            else:
-                                # Assume it's a direct list of courses
-                                for course in file_data:
-                                    if isinstance(course, dict):
-                                        all_courses.append(course)
-                else:
-                    # Load all JSON files (except subjects.json)
-                    for filename in os.listdir(courses_dir):
-                        if filename.endswith(".json") and filename != "subjects.json":
-                            try:
-                                with open(os.path.join(courses_dir, filename), 'r') as f:
-                                    file_data = json.load(f)
-                                    
-                                    # Check if this is the same format as all_courses.json
-                                    if filename == "all_courses.json" and isinstance(file_data, dict) and 'subjects' in file_data:
-                                        # Extract from subjects field
-                                        for subject_code, courses in file_data['subjects'].items():
-                                            for course in courses:
-                                                all_courses.append({
-                                                    "course_code": course.get("Code", ""),
-                                                    "title": course.get("Title", ""),
-                                                    "credits": course.get("Credits", ""),
-                                                    "description": course.get("Description", ""),
-                                                    "subject": subject_code,
-                                                    "prerequisites": course.get("Prerequisites", ""),
-                                                    "corequisites": course.get("Corequisites", ""),
-                                                    "restrictions": course.get("Restrictions", ""),
-                                                    "notes": course.get("Notes", "")
-                                                })
-                                    else:
-                                        # Assume it's a direct list of courses or try to handle other formats
-                                        if isinstance(file_data, list):
-                                            for course in file_data:
-                                                if isinstance(course, dict):
-                                                    all_courses.append(course)
-                            except Exception as e:
-                                print(f"Error loading course file {filename}: {e}")
+                                elif isinstance(file_data, list):
+                                    # Handle direct list of courses
+                                    for course in file_data:
+                                        if isinstance(course, dict):
+                                            all_courses.append(course)
+                        except Exception as e:
+                            print(f"Error loading course file {filename}: {e}")
         
         # Apply filtering
         filtered_courses = all_courses
         
-        # Filter by subject if not already filtered by file
-        if subject and len(subject) > 1:
+        # Filter by subject
+        if subject:
             filtered_courses = [
                 course for course in filtered_courses 
                 if course.get("subject", "").upper() in [s.upper() for s in subject]
@@ -524,76 +578,6 @@ async def get_courses(
             status_code=500,
             detail=f"Error retrieving courses: {str(e)}"
         )
-    
-    # Note: This code will not be reached because the try/except above will
-    # either return courses or raise an exception. Keeping as reference.
-    # Fallback to database if file loading failed or no courses were found
-    if not all_courses:
-        db = get_session()
-        try:
-            query = db.query(DbCourse)
-            
-            # Apply subject filter if provided
-            if subject:
-                if len(subject) == 1:
-                    # Single subject filter
-                    query = query.filter(DbCourse.subject_id == subject[0].upper())
-                else:
-                    # Multiple subject filter using OR condition
-                    from sqlalchemy import or_
-                    subject_filters = [DbCourse.subject_id == s.upper() for s in subject]
-                    query = query.filter(or_(*subject_filters))
-            
-            # Apply search filter if provided
-            if search:
-                search_term = f"%{search}%"
-                query = query.filter(
-                    (DbCourse.course_code.ilike(search_term)) |
-                    (DbCourse.title.ilike(search_term)) |
-                    (DbCourse.description.ilike(search_term))
-                )
-            
-            # Get total count before pagination
-            total_count = query.count()
-            
-            # Apply ordering by subject_id and then by numeric part of course code
-            # We use a SQL function to extract the numeric part from course_code for sorting
-            from sqlalchemy.sql import text
-            query = query.order_by(
-                DbCourse.subject_id,
-                text("CAST(REGEXP_REPLACE(course_code, '[^0-9]', '', 'g') AS INTEGER)")
-            )
-            
-            # Apply pagination
-            courses = query.offset(skip).limit(limit).all()
-            
-            # Convert to dictionary format
-            course_list = [
-                {
-                    "course_code": course.course_code,
-                    "title": course.title,
-                    "credits": course.credits,
-                    "description": course.description,
-                    "subject": course.subject_id,
-                    "prerequisites": course.prerequisites,
-                    "corequisites": course.corequisites,
-                    "restrictions": course.restrictions,
-                    "notes": course.notes
-                }
-                for course in courses
-            ]
-            
-            return {
-                "total": total_count,
-                "courses": course_list
-            }
-        except Exception as e:
-            raise HTTPException(
-                status_code=500,
-                detail=f"Error retrieving courses from database: {str(e)}"
-            )
-        finally:
-            db.close()
 
 @app.get("/courses/{course_code}")
 async def get_course(course_code: str):
