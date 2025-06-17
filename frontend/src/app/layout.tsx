@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>4yrplan</title>
+        <title>ez degree</title>
         <meta name="description" content="A tool to help GMU students navigate degree requirements and plan their courses" />
       </head>
       <body
@@ -58,6 +58,17 @@ export default function RootLayout({
                 >
                   Plan
                   {pathname.startsWith('/plan') && (
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+                  )}
+                </Link>
+                <Link 
+                  href="/see" 
+                  className={`font-medium text-lg hover:text-gray-200 transition-colors relative ${
+                    pathname.startsWith('/see') ? 'font-bold' : ''
+                  }`}
+                >
+                  See
+                  {pathname.startsWith('/see') && (
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
                   )}
                 </Link>
