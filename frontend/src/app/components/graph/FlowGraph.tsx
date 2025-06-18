@@ -78,39 +78,154 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
         console.log("Sample edge structure:", JSON.stringify(edgeElements[0]));
       }
       
-      // Create ReactFlow nodes with better initial layout
-      const courseNodes: FlowNode[] = nodeElements.map((el, index) => {
-        // Use the position from the source if available, otherwise calculate
-        const position = el.position || {
-          x: 500 + 300 * Math.cos((index / nodeElements.length) * 2 * Math.PI),
-          y: 350 + 300 * Math.sin((index / nodeElements.length) * 2 * Math.PI)
-        };
+      // Helper function to extract course number for sorting
+      const extractCourseNumber = (courseCode: string): number => {
+        const match = courseCode.match(/(\d+)/);
+        return match ? parseInt(match[1]) : 999; // Put non-numeric courses at the end
+      };
+
+      // Helper function to create structured layout
+      const createStructuredLayout = (nodeElements: any[]) => {
+        // Separate regular course nodes from category labels
+        const courseNodes = nodeElements.filter(el => !el.data.isLabel);
+        const labelNodes = nodeElements.filter(el => el.data.isLabel);
         
-        const node = {
-          id: el.data.id,
-          type: 'courseNode',
-          position: position,
-          data: {
-            label: el.data.label || el.data.id,
-            title: el.data.title || '',
-            credits: el.data.credits || 0,
-            prerequisites: el.data.prerequisites,
-            category: el.data.category || '',
-            categoryColor: el.data.color || '#cccccc',
-            isLabel: el.data.isLabel || false,
-            relationshipToSelected: null,
-            isHighlighted: false
+        // Group courses by category
+        const coursesByCategory: Record<string, any[]> = {};
+        courseNodes.forEach(el => {
+          const category = el.data.category || 'Other';
+          if (!coursesByCategory[category]) {
+            coursesByCategory[category] = [];
           }
-        };
-        
-        if (el.data.isLabel) {
-          console.log(`Created category label: ${node.id}, category: ${node.data.label}`);
-        } else {
-          console.log(`Created node: ${node.id} at position (${position.x}, ${position.y}), category: ${node.data.category}`);
-        }
-        
-        return node;
-      });
+          coursesByCategory[category].push(el);
+        });
+
+        // Sort courses within each category by course number
+        Object.keys(coursesByCategory).forEach(category => {
+          coursesByCategory[category].sort((a, b) => {
+            const numA = extractCourseNumber(a.data.label || a.data.id);
+            const numB = extractCourseNumber(b.data.label || b.data.id);
+            return numA - numB;
+          });
+        });
+
+                          // Layout configuration
+         const CARD_WIDTH = 210; // Slightly wider to accommodate 190px cards + margin
+         const CARD_HEIGHT = 150; // Taller to accommodate 130px cards + margin
+         const GROUP_SPACING = 120; // Vertical space between category groups
+         const CARD_SPACING = 25; // Space between cards within a group
+         const ROW_SPACING = 40; // Extra space between rows
+         const CARDS_PER_ROW = 7; // More cards per row since we have more horizontal space
+         const START_X = 80;
+         const START_Y = 120;
+
+         const positionedNodes: FlowNode[] = [];
+         let currentGroupY = START_Y;
+
+                 // Process each category group
+         Object.entries(coursesByCategory).forEach(([category, courses]) => {
+           if (courses.length === 0) return;
+           
+           console.log(`Processing category: ${category} with ${courses.length} courses`);
+
+          // Calculate group dimensions
+          const totalCards = courses.length;
+          const rowsNeeded = Math.ceil(totalCards / CARDS_PER_ROW);
+          const cardsInLastRow = totalCards % CARDS_PER_ROW || CARDS_PER_ROW;
+          const maxCardsInAnyRow = Math.min(CARDS_PER_ROW, totalCards);
+          
+          // Group width is based on the widest row
+          const groupWidth = (maxCardsInAnyRow * CARD_WIDTH) + ((maxCardsInAnyRow - 1) * CARD_SPACING);
+
+                     // Create category label
+           const categoryLabelNode: FlowNode = {
+             id: `category-label-${category}`,
+             type: 'courseNode',
+             position: {
+               x: START_X + (groupWidth / 2) - 80, // Center the label horizontally
+               y: currentGroupY - 70 // Position above the current group
+             },
+            data: {
+              label: category,
+              title: '',
+              credits: 0,
+              prerequisites: '',
+              category: category,
+              categoryColor: categoryColors[category] || '#6b7280',
+              isLabel: true,
+              relationshipToSelected: null,
+              isHighlighted: false
+            }
+          };
+          positionedNodes.push(categoryLabelNode);
+
+          // Position course cards in grid within this group
+          courses.forEach((course, index) => {
+            const rowIndex = Math.floor(index / CARDS_PER_ROW);
+            const colIndex = index % CARDS_PER_ROW;
+            
+                         // Calculate cards in current row for centering
+             const cardsInCurrentRow = (rowIndex === rowsNeeded - 1) ? cardsInLastRow : CARDS_PER_ROW;
+             const currentRowWidth = (cardsInCurrentRow * CARD_WIDTH) + ((cardsInCurrentRow - 1) * CARD_SPACING);
+             const rowStartX = START_X + (groupWidth - currentRowWidth) / 2;
+
+             const position = {
+               x: rowStartX + (colIndex * (CARD_WIDTH + CARD_SPACING)),
+               y: currentGroupY + (rowIndex * (CARD_HEIGHT + ROW_SPACING))
+             };
+
+            const node: FlowNode = {
+              id: course.data.id,
+              type: 'courseNode',
+              position: position,
+              data: {
+                label: course.data.label || course.data.id,
+                title: course.data.title || '',
+                credits: course.data.credits || 0,
+                prerequisites: course.data.prerequisites,
+                category: course.data.category || '',
+                categoryColor: course.data.color || '#cccccc',
+                isLabel: course.data.isLabel || false,
+                relationshipToSelected: null,
+                isHighlighted: false
+              }
+            };
+
+            positionedNodes.push(node);
+          });
+
+                     // Move to next group position (vertically)
+           const groupHeight = rowsNeeded * CARD_HEIGHT + (rowsNeeded - 1) * ROW_SPACING;
+           currentGroupY += groupHeight + GROUP_SPACING;
+         });
+
+         // Add any standalone label nodes that weren't part of categories
+         labelNodes.forEach(el => {
+           if (!coursesByCategory[el.data.label]) {
+             positionedNodes.push({
+               id: el.data.id,
+               type: 'courseNode',
+               position: el.position || { x: START_X, y: currentGroupY },
+              data: {
+                label: el.data.label || el.data.id,
+                title: el.data.title || '',
+                credits: el.data.credits || 0,
+                prerequisites: el.data.prerequisites,
+                category: el.data.category || '',
+                categoryColor: el.data.color || '#cccccc',
+                isLabel: el.data.isLabel || false,
+                relationshipToSelected: null,
+                isHighlighted: false
+              }
+            });
+          }
+        });
+
+        return positionedNodes;
+      };
+
+      // Create ReactFlow nodes with structured layout
+      const courseNodes: FlowNode[] = createStructuredLayout(nodeElements);
       
       // Create ReactFlow edges with explicit source and target IDs
       const courseEdges: FlowEdge[] = edgeElements.map((el, edgeIndex) => {

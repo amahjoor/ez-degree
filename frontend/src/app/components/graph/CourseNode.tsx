@@ -12,7 +12,7 @@ function CourseNode({ data }: { data: CourseNodeData }) {
         className="flex items-center justify-center rounded-md px-4 py-2 shadow-md text-white font-bold text-lg"
         style={{ 
           backgroundColor: data.categoryColor,
-          minWidth: '120px',
+          minWidth: '160px',
           textAlign: 'center'
         }}
       >
@@ -51,7 +51,7 @@ function CourseNode({ data }: { data: CourseNodeData }) {
   // Regular course node
   return (
     <div
-      className={`flex flex-col items-center justify-center rounded-lg p-3 w-[180px] h-[120px] text-center ${
+      className={`flex flex-col items-center justify-center rounded-lg p-3 w-[190px] h-[130px] text-center ${
         data.isHighlighted ? 'z-10' : 'z-0'
       }`}
       style={{
