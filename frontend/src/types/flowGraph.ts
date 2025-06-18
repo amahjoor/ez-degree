@@ -28,4 +28,5 @@ export interface FlowGraphProps {
   showPrereqsCoreqs?: boolean;
   showUnlocks?: boolean;
   showFirstDegreeConnections?: boolean;
+  onCategoryFilterChange?: (categories: string[]) => void;
 } 

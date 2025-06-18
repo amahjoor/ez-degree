@@ -726,6 +726,7 @@ export default function SeePage() {
                         showPrereqsCoreqs={showPrereqsCoreqs}
                         showUnlocks={showUnlocks}
                         showFirstDegreeConnections={showFirstDegreeConnections}
+                        onCategoryFilterChange={setSelectedCategories}
                       />
                     </ReactFlowProvider>
                   </div>

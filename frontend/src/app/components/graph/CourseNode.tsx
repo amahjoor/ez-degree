@@ -41,7 +41,7 @@ function CourseNode({ data }: { data: CourseNodeData }) {
           backgroundColor: data.categoryColor, // Fully opaque
           border: `2px solid ${data.categoryColor}`,
           transition: 'all 0.3s ease',
-          opacity: data.isFirstDegreeConnection ? 0.5 : 1,
+          opacity: data.isFirstDegreeConnection ? 0.3 : 1,
           zIndex: zIndex,
         }}
     >
@@ -71,37 +71,56 @@ function CourseNode({ data }: { data: CourseNodeData }) {
         }}
       />
       
-      {/* Conditional rendering based on zoom level */}
-      {zoom < 0.8 ? (
-        // Zoomed out view - only show course code in larger text, sized to fit all codes
-        <div className="font-bold text-3xl flex items-center justify-center h-full px-1.5 text-center leading-tight truncate w-full" 
-             style={{ 
-               fontSize: data.label.length > 8 ? '1.5rem' : data.label.length > 6 ? '1.75rem' : '2rem',
-               lineHeight: '1.1'
-             }}>
-          {data.label}
-        </div>
-      ) : (
-        // Zoomed in view - show all details
-        <>
-          <div className="font-bold text-lg truncate w-full px-1">{data.label}</div>
-          {data.title && (
-            <div className="text-xs line-clamp-2 mt-1 h-8 overflow-hidden px-1 leading-tight">
-              {data.title}
-            </div>
-          )}
-          <div className="flex flex-col mt-1 w-full px-1">
-            {data.credits !== undefined && (
-              <span className="text-gray-700 text-xs truncate leading-none">{data.credits} Credits</span>
-            )}
-            {data.category && !data.isLabel && (
-              <span className="text-xs text-gray-600 italic truncate leading-none">
-                {data.category}
-              </span>
-            )}
+              {/* Conditional rendering based on zoom level */}
+        {zoom < 0.8 ? (
+          // Zoomed out view - only show course code in larger text, sized to fit all codes
+          <div 
+            className="font-bold text-3xl flex items-center justify-center h-full px-1.5 text-center leading-tight truncate w-full" 
+            style={{ 
+              fontSize: data.label.length > 8 ? '1.5rem' : data.label.length > 6 ? '1.75rem' : '2rem',
+              lineHeight: '1.1',
+              opacity: data.isFirstDegreeConnection ? 0.3 : 1
+            }}
+          >
+            {data.label}
           </div>
-        </>
-      )}
+        ) : (
+          // Zoomed in view - show all details
+          <>
+            <div 
+              className="font-bold text-lg truncate w-full px-1"
+              style={{ opacity: data.isFirstDegreeConnection ? 0.3 : 1 }}
+            >
+              {data.label}
+            </div>
+            {data.title && (
+              <div 
+                className="text-xs line-clamp-2 mt-1 h-8 overflow-hidden px-1 leading-tight"
+                style={{ opacity: data.isFirstDegreeConnection ? 0.3 : 1 }}
+              >
+                {data.title}
+              </div>
+            )}
+            <div className="flex flex-col mt-1 w-full px-1">
+              {data.credits !== undefined && (
+                <span 
+                  className="text-gray-700 text-xs truncate leading-none"
+                  style={{ opacity: data.isFirstDegreeConnection ? 0.3 : 1 }}
+                >
+                  {data.credits} Credits
+                </span>
+              )}
+              {data.category && !data.isLabel && (
+                <span 
+                  className="text-xs text-gray-600 italic truncate leading-none"
+                  style={{ opacity: data.isFirstDegreeConnection ? 0.3 : 1 }}
+                >
+                  {data.category}
+                </span>
+              )}
+            </div>
+          </>
+        )}
       
       {/* Relationship indicator badge */}
       {data.relationshipToSelected && data.relationshipToSelected !== 'selected' && (
