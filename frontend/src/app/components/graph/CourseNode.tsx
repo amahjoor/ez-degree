@@ -9,11 +9,12 @@ function CourseNode({ data }: { data: CourseNodeData }) {
   if (data.isLabel) {
     return (
       <div 
-        className="flex items-center justify-center rounded-md px-4 py-2 shadow-md text-white font-bold text-lg"
+        className="flex items-center justify-center rounded-md px-4 py-2 shadow-md font-bold text-lg cursor-pointer hover:shadow-lg transition-all duration-200"
         style={{ 
           backgroundColor: data.categoryColor,
           minWidth: '160px',
-          textAlign: 'center'
+          textAlign: 'center',
+          color: '#1f2937' // Dark gray text for better visibility
         }}
       >
         {data.label}

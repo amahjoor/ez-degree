@@ -23,4 +23,8 @@ export type CourseEdge = Omit<FlowEdge, 'data'> & {
 export interface FlowGraphProps {
   elements: any[];
   categoryColors: Record<string, string>;
+  initialFilteredCategories?: string[];
+  connectionFilter?: number;
+  showPrereqsCoreqs?: boolean;
+  showUnlocks?: boolean;
 } 

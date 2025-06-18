@@ -72,6 +72,11 @@ export default function SeePage() {
   const [categoryColors, setCategoryColors] = useState<Record<string, string>>({});
   const [showInfoTooltip, setShowInfoTooltip] = useState<boolean>(false);
   const [isOptimized, setIsOptimized] = useState<boolean>(false);
+  const [showFilters, setShowFilters] = useState<boolean>(false);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [connectionFilter, setConnectionFilter] = useState<number>(0); // 0 means no filter
+  const [showPrereqsCoreqs, setShowPrereqsCoreqs] = useState<boolean>(false);
+  const [showUnlocks, setShowUnlocks] = useState<boolean>(false);
 
   // Fetch comprehensive data on component mount
   useEffect(() => {
@@ -381,8 +386,16 @@ export default function SeePage() {
     if (selectedOption) {
       setSelectedMajor(selectedOption.value);
       setSelectedConcentration(''); // Clear concentration when major changes
+      setSelectedCategories([]); // Clear filters when major changes
+      setConnectionFilter(0);
+      setShowPrereqsCoreqs(false);
+      setShowUnlocks(false);
     } else {
       setSelectedMajor('');
+      setSelectedCategories([]); // Clear filters when major is cleared
+      setConnectionFilter(0);
+      setShowPrereqsCoreqs(false);
+      setShowUnlocks(false);
     }
   };
 
@@ -392,6 +405,25 @@ export default function SeePage() {
     setError('');
     // Trigger re-fetch of comprehensive data
     window.location.reload();
+  };
+
+  // Function to toggle category filter
+  const toggleCategoryFilter = (category: string) => {
+    setSelectedCategories(prev => {
+      if (prev.includes(category)) {
+        return prev.filter(c => c !== category);
+      } else {
+        return [...prev, category];
+      }
+    });
+  };
+
+  // Function to clear all filters
+  const clearAllFilters = () => {
+    setSelectedCategories([]);
+    setConnectionFilter(0);
+    setShowPrereqsCoreqs(false);
+    setShowUnlocks(false);
   };
 
   return (
@@ -426,7 +458,7 @@ export default function SeePage() {
       {(isApiAvailable && !loading && comprehensiveData) && (
         <div className="flex flex-col h-full overflow-hidden">
           {/* Header with controls */}
-          <div className="bg-primary-blue/5 border-b border-primary-blue/10 flex-shrink-0">
+          <div className="bg-primary-blue/5 border-b border-primary-blue/10 flex-shrink-0 relative">
             <div className="p-4">
               <div className="flex items-center justify-between mb-4">
                 <h1 className="text-2xl font-bold text-gray-800">See Your Degree.</h1>
@@ -471,6 +503,7 @@ export default function SeePage() {
               
               {/* Major and Concentration Selectors */}
               <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 flex gap-2 items-end">
                 <div className="flex-1">
                   <Select
                     id="major"
@@ -488,6 +521,18 @@ export default function SeePage() {
                     menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
                     menuPosition="fixed"
                   />
+                  </div>
+                  {/* Filter button */}
+                  <button
+                    onClick={() => setShowFilters(!showFilters)}
+                    className="px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md border border-gray-300 transition-colors flex items-center gap-2"
+                    title="Filter options"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.707A1 1 0 013 7V4z" />
+                    </svg>
+                    <span className="text-sm text-gray-700">Filters</span>
+                  </button>
                 </div>
                 
                 {concentrations.length > 0 && (
@@ -509,6 +554,150 @@ export default function SeePage() {
                   </div>
                 )}
               </div>
+              
+              {/* Expanded Filter Section - Overlay */}
+              {showFilters && (
+                <div className="absolute top-full left-0 right-0 p-3 bg-primary-blue/5 border-t border-primary-blue/10 z-50">
+                  <div className="flex items-center justify-between mb-2">
+                    <div></div>
+                    <button
+                      onClick={() => setShowFilters(false)}
+                      className="text-gray-400 hover:text-gray-600 ml-auto"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  
+                  {/* Category filters */}
+                  {Object.keys(categoryColors).length > 0 && (
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">Categories</span>
+                        {selectedCategories.length > 0 && (
+                          <button
+                            onClick={clearAllFilters}
+                            className="text-xs text-blue-600 hover:text-blue-800"
+                          >
+                            Clear All
+                          </button>
+                        )}
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {Object.entries(categoryColors).map(([category, color]) => {
+                          const isSelected = selectedCategories.includes(category);
+                          return (
+                            <button
+                              key={category}
+                              onClick={() => toggleCategoryFilter(category)}
+                              className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+                                isSelected
+                                  ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-sm'
+                                  : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                              }`}
+                            >
+                              <div 
+                                className="w-2 h-2 rounded-full mr-2 flex-shrink-0"
+                                style={{ backgroundColor: color }}
+                              ></div>
+                              {category}
+                            </button>
+                          );
+                        })}
+                      </div>
+                      {selectedCategories.length > 0 && (
+                        <div className="mt-2 text-xs text-gray-500">
+                          Showing: {selectedCategories.join(', ')}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Connection Filters */}
+                  <div className="mt-4 pt-3 border-t border-gray-200">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">Course Connections</span>
+                      {(showPrereqsCoreqs || showUnlocks || connectionFilter > 0) && (
+                        <button
+                          onClick={() => {
+                            setShowPrereqsCoreqs(false);
+                            setShowUnlocks(false);
+                            setConnectionFilter(0);
+                          }}
+                          className="text-xs text-blue-600 hover:text-blue-800"
+                        >
+                          Clear
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Connection Type Tag Buttons */}
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <button
+                        onClick={() => setShowPrereqsCoreqs(!showPrereqsCoreqs)}
+                        className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+                          showPrereqsCoreqs
+                            ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-sm'
+                            : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                        }`}
+                      >
+                        Prerequisites/Corequisites
+                      </button>
+                      <button
+                        onClick={() => setShowUnlocks(!showUnlocks)}
+                        className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+                          showUnlocks
+                            ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-sm'
+                            : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                        }`}
+                      >
+                        Unlocks Others
+                      </button>
+                    </div>
+
+                    {/* Connection Slider - only show when at least one type is selected */}
+                    {(showPrereqsCoreqs || showUnlocks) && (
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <label className="text-xs text-gray-600">
+                            Minimum connections:
+                          </label>
+                          <span className="text-xs font-medium text-gray-700">
+                            {connectionFilter === 0 ? 'Any' : `${connectionFilter}+`}
+                          </span>
+                        </div>
+                        <input
+                          type="range"
+                          min="0"
+                          max="10"
+                          value={connectionFilter}
+                          onChange={(e) => setConnectionFilter(Number(e.target.value))}
+                          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                          style={{
+                            background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${(connectionFilter / 10) * 100}%, #e5e7eb ${(connectionFilter / 10) * 100}%, #e5e7eb 100%)`
+                          }}
+                        />
+                        <div className="flex justify-between text-xs text-gray-400">
+                          <span>0</span>
+                          <span>5</span>
+                          <span>10+</span>
+                        </div>
+
+                        {connectionFilter > 0 && (
+                          <div className="mt-2 text-xs text-gray-500">
+                            Show courses with {connectionFilter}+ {
+                              showPrereqsCoreqs && showUnlocks ? 'total connections' :
+                              showPrereqsCoreqs ? 'prerequisites/corequisites' :
+                              'courses unlocked'
+                            }
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           
@@ -530,16 +719,20 @@ export default function SeePage() {
                 </div>
               </div>
             ) : (
-              <div className="h-full p-4">
+              <div className="h-full">
                 {/* Show graph skeleton while loading, otherwise show the actual graph */}
                 {graphLoading ? (
                   <SkeletonGraph />
                 ) : (
-                  <div className="h-[calc(100vh-280px)] bg-white border rounded-md shadow-lg">
+                  <div className="h-[calc(100vh-200px)]">
                     <ReactFlowProvider>
                       <FlowGraph 
                         elements={reactFlowElements} 
                         categoryColors={categoryColors} 
+                        initialFilteredCategories={selectedCategories}
+                        connectionFilter={connectionFilter}
+                        showPrereqsCoreqs={showPrereqsCoreqs}
+                        showUnlocks={showUnlocks}
                       />
                     </ReactFlowProvider>
                   </div>

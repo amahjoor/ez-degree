@@ -22,19 +22,63 @@ import { FlowGraphProps } from '@/types/flowGraph';
 import CourseNode from './CourseNode';
 
 // Flow Graph Component
-function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
+function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], connectionFilter = 0, showPrereqsCoreqs = false, showUnlocks = false }: FlowGraphProps) {
   const [nodes, setNodes, onNodesChange] = useNodesState<FlowNode[]>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<FlowEdge[]>([]);
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   // Use a ref to store connected edges to avoid dependency issues
   const edgesRef = useRef<FlowEdge[]>([]);
   // Add state for category filters
-  const [filteredCategories, setFilteredCategories] = useState<string[]>([]);
+  const [filteredCategories, setFilteredCategories] = useState<string[]>(initialFilteredCategories);
+  // Add state for connection filters
+  const [currentConnectionFilter, setCurrentConnectionFilter] = useState<number>(connectionFilter);
+  const [currentShowPrereqsCoreqs, setCurrentShowPrereqsCoreqs] = useState<boolean>(showPrereqsCoreqs);
+  const [currentShowUnlocks, setCurrentShowUnlocks] = useState<boolean>(showUnlocks);
   
   // Update the edges ref whenever edges change
   useEffect(() => {
     edgesRef.current = edges;
   }, [edges]);
+
+  // Update filtered categories when prop changes
+  useEffect(() => {
+    setFilteredCategories(initialFilteredCategories);
+  }, [initialFilteredCategories]);
+
+  // Update connection filters when props change
+  useEffect(() => {
+    setCurrentConnectionFilter(connectionFilter);
+    setCurrentShowPrereqsCoreqs(showPrereqsCoreqs);
+    setCurrentShowUnlocks(showUnlocks);
+  }, [connectionFilter, showPrereqsCoreqs, showUnlocks]);
+
+  // Helper function to calculate connection counts for a course
+  const calculateConnectionCount = useCallback((courseId: string, includePrereqsCoreqs: boolean, includeUnlocks: boolean) => {
+    const currentEdges = edgesRef.current;
+    
+    let count = 0;
+    
+    if (includePrereqsCoreqs) {
+      // Count prerequisites (edges pointing TO this course)
+      count += currentEdges.filter(edge => 
+        edge.target === courseId && edge.data?.type === 'prereq'
+      ).length;
+      
+      // Count corequisites (edges from OR to this course with coreq type)
+      count += currentEdges.filter(edge => 
+        (edge.source === courseId || edge.target === courseId) && edge.data?.type === 'coreq'
+      ).length;
+    }
+    
+    if (includeUnlocks) {
+      // Count unlocks (edges FROM this course to other courses)
+      count += currentEdges.filter(edge => 
+        edge.source === courseId && edge.data?.type === 'prereq'
+      ).length;
+    }
+    
+    return count;
+  }, []);
   
   // Configure default edge options for ReactFlow
   const defaultEdgeOptions = useMemo(() => ({
@@ -125,8 +169,6 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
                  // Process each category group
          Object.entries(coursesByCategory).forEach(([category, courses]) => {
            if (courses.length === 0) return;
-           
-           console.log(`Processing category: ${category} with ${courses.length} courses`);
 
           // Calculate group dimensions
           const totalCards = courses.length;
@@ -172,12 +214,12 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
              const position = {
                x: rowStartX + (colIndex * (CARD_WIDTH + CARD_SPACING)),
                y: currentGroupY + (rowIndex * (CARD_HEIGHT + ROW_SPACING))
-             };
-
+        };
+        
             const node: FlowNode = {
               id: course.data.id,
-              type: 'courseNode',
-              position: position,
+          type: 'courseNode',
+          position: position,
               data: {
                 label: course.data.label || course.data.id,
                 title: course.data.title || '',
@@ -206,17 +248,17 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
                id: el.data.id,
                type: 'courseNode',
                position: el.position || { x: START_X, y: currentGroupY },
-              data: {
-                label: el.data.label || el.data.id,
-                title: el.data.title || '',
-                credits: el.data.credits || 0,
-                prerequisites: el.data.prerequisites,
-                category: el.data.category || '',
-                categoryColor: el.data.color || '#cccccc',
-                isLabel: el.data.isLabel || false,
-                relationshipToSelected: null,
-                isHighlighted: false
-              }
+          data: {
+            label: el.data.label || el.data.id,
+            title: el.data.title || '',
+            credits: el.data.credits || 0,
+            prerequisites: el.data.prerequisites,
+            category: el.data.category || '',
+            categoryColor: el.data.color || '#cccccc',
+            isLabel: el.data.isLabel || false,
+            relationshipToSelected: null,
+            isHighlighted: false
+          }
             });
           }
         });
@@ -280,17 +322,38 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
   
   // Handle node selection to highlight connected nodes and edges
   const onNodeClick = useCallback((event: React.MouseEvent, node: FlowNode) => {
+    const nodeData = node.data as any;
+    
+    // If this is a category label, filter to show only nodes in this category
+    if (nodeData.isLabel) {
+      const category = nodeData.label;
+      setFilteredCategories(prevFiltered => {
+        // Toggle category filter: if already filtered by this category, clear it
+        if (prevFiltered.includes(category)) {
+          return [];
+        } else {
+          return [category];
+        }
+      });
+      // Clear node selection when clicking category labels
+      setSelectedNode(null);
+    } else {
+      // Regular course node behavior
     // Toggle selection: if the same node is clicked, clear selection
     setSelectedNode(prevSelected => prevSelected === node.id ? null : node.id);
+      // Clear category filters when clicking on individual courses
+      setFilteredCategories([]);
+    }
   }, []);
 
   // Apply highlighting and filtering to nodes and edges based on selection and category filters
   useEffect(() => {
     // First check for category filters
     const shouldApplyCategoryFilter = filteredCategories.length > 0;
+    const shouldApplyConnectionFilter = currentConnectionFilter > 0 && (currentShowPrereqsCoreqs || currentShowUnlocks);
     
-    // If no node is selected and no category filters active, reset all nodes and edges 
-    if (!selectedNode && !shouldApplyCategoryFilter) {
+    // If no node is selected and no filters active, reset all nodes and edges 
+    if (!selectedNode && !shouldApplyCategoryFilter && !shouldApplyConnectionFilter) {
       // No selection or filters, reset all nodes and edges to original state
       setNodes(nodes => nodes.map(node => ({
         ...node,
@@ -343,6 +406,24 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
       const matchesCategory = !shouldApplyCategoryFilter || 
         filteredCategories.includes(((node.data as any)?.category || '') as string);
       
+      // Check connection filter
+      let matchesConnectionFilter = true;
+      if (shouldApplyConnectionFilter) {
+        if (currentShowPrereqsCoreqs && currentShowUnlocks) {
+          // Both selected - count total connections
+          const connectionCount = calculateConnectionCount(node.id, true, true);
+          matchesConnectionFilter = connectionCount >= currentConnectionFilter;
+        } else if (currentShowPrereqsCoreqs) {
+          // Only prereqs/coreqs selected - count only those
+          const connectionCount = calculateConnectionCount(node.id, true, false);
+          matchesConnectionFilter = connectionCount >= currentConnectionFilter;
+        } else if (currentShowUnlocks) {
+          // Only unlocks selected - count only those
+          const connectionCount = calculateConnectionCount(node.id, false, true);
+          matchesConnectionFilter = connectionCount >= currentConnectionFilter;
+        }
+      }
+      
       const isPrereq = selectedNode && currentEdges
         .filter(edge => edge.target === selectedNode && edge.data?.type === 'prereq')
         .map(edge => edge.source)
@@ -358,8 +439,8 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
         .map(edge => edge.target)
         .includes(node.id);
       
-      // Hide nodes that don't match our criteria (not connected or filtered out by category)
-      const shouldBeHidden = (selectedNode && !isConnected) || !matchesCategory;
+      // Hide nodes that don't match our criteria (not connected or filtered out by category/connections)
+      const shouldBeHidden = (selectedNode && !isConnected) || !matchesCategory || !matchesConnectionFilter;
       
       if (shouldBeHidden) {
         return {
@@ -432,7 +513,7 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
     setEdges(updatedEdges);
     
   // Remove 'nodes' from dependency array, as it causes infinite loops
-  }, [selectedNode, filteredCategories, setNodes, setEdges]);
+  }, [selectedNode, filteredCategories, currentConnectionFilter, currentShowPrereqsCoreqs, currentShowUnlocks, calculateConnectionCount, setNodes, setEdges]);
   
   // Create details panel for selected node
   const renderDetailsPanel = () => {
@@ -549,7 +630,9 @@ function FlowGraph({ elements, categoryColors }: FlowGraphProps) {
           <span className="text-sm text-blue-700">
             {selectedNode 
               ? `Showing only connected nodes. ${hiddenCount} nodes are hidden.` 
-              : `Filtered by categories: ${filteredCategories.join(', ')}. ${hiddenCount} nodes are hidden.`}
+              : filteredCategories.length > 0
+                ? `Showing only "${filteredCategories.join(', ')}" courses. ${hiddenCount} nodes are hidden.`
+                : `${hiddenCount} nodes are hidden.`}
           </span>
           <button 
             className="ml-4 text-xs text-blue-700 underline"
