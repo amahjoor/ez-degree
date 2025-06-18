@@ -20,9 +20,10 @@ import React from "react";
 
 import { FlowGraphProps } from '@/types/flowGraph';
 import CourseNode from './CourseNode';
+import SmartStraightEdge from './SmartStraightEdge';
 
 // Flow Graph Component
-function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], connectionFilter = 0, showPrereqsCoreqs = false, showUnlocks = false }: FlowGraphProps) {
+function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], connectionFilter = 0, showPrereqsCoreqs = false, showUnlocks = false, showFirstDegreeConnections = false }: FlowGraphProps) {
   const [nodes, setNodes, onNodesChange] = useNodesState<FlowNode[]>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<FlowEdge[]>([]);
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
@@ -34,6 +35,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
   const [currentConnectionFilter, setCurrentConnectionFilter] = useState<number>(connectionFilter);
   const [currentShowPrereqsCoreqs, setCurrentShowPrereqsCoreqs] = useState<boolean>(showPrereqsCoreqs);
   const [currentShowUnlocks, setCurrentShowUnlocks] = useState<boolean>(showUnlocks);
+  const [currentShowFirstDegreeConnections, setCurrentShowFirstDegreeConnections] = useState<boolean>(showFirstDegreeConnections);
   
   // Update the edges ref whenever edges change
   useEffect(() => {
@@ -50,7 +52,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
     setCurrentConnectionFilter(connectionFilter);
     setCurrentShowPrereqsCoreqs(showPrereqsCoreqs);
     setCurrentShowUnlocks(showUnlocks);
-  }, [connectionFilter, showPrereqsCoreqs, showUnlocks]);
+    setCurrentShowFirstDegreeConnections(showFirstDegreeConnections);
+  }, [connectionFilter, showPrereqsCoreqs, showUnlocks, showFirstDegreeConnections]);
 
   // Helper function to calculate connection counts for a course
   const calculateConnectionCount = useCallback((courseId: string, includePrereqsCoreqs: boolean, includeUnlocks: boolean) => {
@@ -82,7 +85,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
   
   // Configure default edge options for ReactFlow
   const defaultEdgeOptions = useMemo(() => ({
-    type: 'straight', // Use straight lines for direct connections
+    type: 'smartStraight', // Use our custom smart straight edge
     style: { strokeWidth: 3 },
     animated: true,
     markerEnd: {
@@ -95,6 +98,11 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
   // Memoize nodeTypes to prevent recreation on every render
   const nodeTypes = useMemo(() => ({ 
     courseNode: CourseNode 
+  }), []);
+  
+  // Memoize edgeTypes to include our custom edge
+  const edgeTypes = useMemo(() => ({
+    smartStraight: SmartStraightEdge
   }), []);
 
   // Apply layout when the reference is available, elements change, or registration completes
@@ -281,10 +289,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
           id: uniqueId,
           source: el.data.source,
           target: el.data.target,
-          // Use explicit sourceHandle and targetHandle
-          sourceHandle: 'bottom', // Edge starts from bottom of source node
-          targetHandle: 'top',    // Edge ends at top of target node
-          type: 'straight',     // Use straight lines for direct connections
+          // Don't specify handles - let ReactFlow calculate best connection points
+          type: 'smartStraight', // Use our custom smart straight edge
           animated: el.data.type === 'coreq',
           style: { 
             strokeWidth: 3,
@@ -399,10 +405,52 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       });
     }
     
+    // Helper function to check if a node is a first-degree connection to any filtered nodes
+    const isFirstDegreeConnection = (nodeId: string): boolean => {
+      if (!currentShowFirstDegreeConnections) {
+        return false;
+      }
+      
+      // Check if this node is connected to any node that passes the base filters
+      return currentEdges.some(edge => {
+        const connectedNodeId = edge.source === nodeId ? edge.target : 
+                               edge.target === nodeId ? edge.source : null;
+        
+        if (!connectedNodeId) return false;
+        
+        // Find the connected node
+        const connectedNode = nodes.find(n => n.id === connectedNodeId);
+        if (!connectedNode) return false;
+        
+        // Check if the connected node passes base filters
+        const nodeCategory = (connectedNode.data as any)?.category || '';
+        const matchesCategory = !shouldApplyCategoryFilter || 
+          filteredCategories.includes(nodeCategory);
+        
+        let matchesConnectionFilter = true;
+        if (shouldApplyConnectionFilter) {
+          if (currentShowPrereqsCoreqs && currentShowUnlocks) {
+            const connectionCount = calculateConnectionCount(connectedNodeId, true, true);
+            matchesConnectionFilter = connectionCount >= currentConnectionFilter;
+          } else if (currentShowPrereqsCoreqs) {
+            const connectionCount = calculateConnectionCount(connectedNodeId, true, false);
+            matchesConnectionFilter = connectionCount >= currentConnectionFilter;
+          } else if (currentShowUnlocks) {
+            const connectionCount = calculateConnectionCount(connectedNodeId, false, true);
+            matchesConnectionFilter = connectionCount >= currentConnectionFilter;
+          }
+        }
+        
+        return matchesCategory && matchesConnectionFilter;
+      });
+    };
+
     // Create updated nodes array without triggering re-renders
     const updatedNodes = nodes.map(node => {
       const isSelected = node.id === selectedNode;
       const isConnected = selectedNode ? connectedNodeIds.has(node.id) : true;
+      
+      // Check category filter
       const matchesCategory = !shouldApplyCategoryFilter || 
         filteredCategories.includes(((node.data as any)?.category || '') as string);
       
@@ -424,6 +472,11 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
         }
       }
       
+      // Check if this node passes base filters OR is a first degree connection
+      const passesBaseFilters = matchesCategory && matchesConnectionFilter;
+      const isFirstDegree = isFirstDegreeConnection(node.id);
+      const shouldBeVisible = passesBaseFilters || isFirstDegree;
+      
       const isPrereq = selectedNode && currentEdges
         .filter(edge => edge.target === selectedNode && edge.data?.type === 'prereq')
         .map(edge => edge.source)
@@ -440,7 +493,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
         .includes(node.id);
       
       // Hide nodes that don't match our criteria (not connected or filtered out by category/connections)
-      const shouldBeHidden = (selectedNode && !isConnected) || !matchesCategory || !matchesConnectionFilter;
+      const shouldBeHidden = (selectedNode && !isConnected) || !shouldBeVisible;
       
       if (shouldBeHidden) {
         return {
@@ -513,7 +566,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
     setEdges(updatedEdges);
     
   // Remove 'nodes' from dependency array, as it causes infinite loops
-  }, [selectedNode, filteredCategories, currentConnectionFilter, currentShowPrereqsCoreqs, currentShowUnlocks, calculateConnectionCount, setNodes, setEdges]);
+  }, [selectedNode, filteredCategories, currentConnectionFilter, currentShowPrereqsCoreqs, currentShowUnlocks, currentShowFirstDegreeConnections, calculateConnectionCount, setNodes, setEdges]);
   
   // Create details panel for selected node
   const renderDetailsPanel = () => {
@@ -630,8 +683,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
           <span className="text-sm text-blue-700">
             {selectedNode 
               ? `Showing only connected nodes. ${hiddenCount} nodes are hidden.` 
-              : filteredCategories.length > 0
-                ? `Showing only "${filteredCategories.join(', ')}" courses. ${hiddenCount} nodes are hidden.`
+              : (filteredCategories.length > 0 || (currentConnectionFilter > 0 && (currentShowPrereqsCoreqs || currentShowUnlocks)))
+                ? `Showing filtered courses${currentShowFirstDegreeConnections ? ' and their connections' : ''}. ${hiddenCount} nodes are hidden.`
                 : `${hiddenCount} nodes are hidden.`}
           </span>
           <button 
@@ -786,6 +839,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
       nodeTypes={nodeTypes}
+      edgeTypes={edgeTypes}
       onNodeClick={onNodeClick}
       fitView
       fitViewOptions={{ padding: 0.5 }}
@@ -795,6 +849,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       defaultEdgeOptions={defaultEdgeOptions}
       connectionLineType={ConnectionLineType.Straight}
       connectionMode={ConnectionMode.Loose}
+
       proOptions={{ hideAttribution: true }}
       elementsSelectable={true}
       selectNodesOnDrag={false}

@@ -27,4 +27,5 @@ export interface FlowGraphProps {
   connectionFilter?: number;
   showPrereqsCoreqs?: boolean;
   showUnlocks?: boolean;
+  showFirstDegreeConnections?: boolean;
 } 

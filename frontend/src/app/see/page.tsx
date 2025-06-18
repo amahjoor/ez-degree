@@ -77,6 +77,7 @@ export default function SeePage() {
   const [connectionFilter, setConnectionFilter] = useState<number>(0); // 0 means no filter
   const [showPrereqsCoreqs, setShowPrereqsCoreqs] = useState<boolean>(false);
   const [showUnlocks, setShowUnlocks] = useState<boolean>(false);
+  const [showFirstDegreeConnections, setShowFirstDegreeConnections] = useState<boolean>(false);
 
   // Fetch comprehensive data on component mount
   useEffect(() => {
@@ -390,12 +391,14 @@ export default function SeePage() {
       setConnectionFilter(0);
       setShowPrereqsCoreqs(false);
       setShowUnlocks(false);
+      setShowFirstDegreeConnections(false);
     } else {
       setSelectedMajor('');
       setSelectedCategories([]); // Clear filters when major is cleared
       setConnectionFilter(0);
       setShowPrereqsCoreqs(false);
       setShowUnlocks(false);
+      setShowFirstDegreeConnections(false);
     }
   };
 
@@ -424,6 +427,7 @@ export default function SeePage() {
     setConnectionFilter(0);
     setShowPrereqsCoreqs(false);
     setShowUnlocks(false);
+    setShowFirstDegreeConnections(false);
   };
 
   return (
@@ -632,70 +636,76 @@ export default function SeePage() {
                       )}
                     </div>
 
-                    {/* Connection Type Tag Buttons */}
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <button
-                        onClick={() => setShowPrereqsCoreqs(!showPrereqsCoreqs)}
-                        className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-                          showPrereqsCoreqs
-                            ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-sm'
-                            : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
-                        }`}
-                      >
-                        Prerequisites/Corequisites
-                      </button>
-                      <button
-                        onClick={() => setShowUnlocks(!showUnlocks)}
-                        className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-                          showUnlocks
-                            ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-sm'
-                            : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
-                        }`}
-                      >
-                        Unlocks Others
-                      </button>
-                    </div>
+                    {/* Connection Type Tag Buttons and Slider in horizontal layout */}
+                    <div className="flex items-center gap-4">
+                      {/* Buttons Container */}
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          onClick={() => setShowPrereqsCoreqs(!showPrereqsCoreqs)}
+                          className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+                            showPrereqsCoreqs
+                              ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-sm'
+                              : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                          }`}
+                        >
+                          Prerequisites/Corequisites
+                        </button>
+                        <button
+                          onClick={() => setShowUnlocks(!showUnlocks)}
+                          className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+                            showUnlocks
+                              ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-sm'
+                              : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                          }`}
+                        >
+                          Unlocks Others
+                        </button>
+                      </div>
 
-                    {/* Connection Slider - only show when at least one type is selected */}
-                    {(showPrereqsCoreqs || showUnlocks) && (
-                      <div className="space-y-2">
-                        <div className="flex items-center justify-between">
-                          <label className="text-xs text-gray-600">
-                            Minimum connections:
-                          </label>
-                          <span className="text-xs font-medium text-gray-700">
+                      {/* Connection Slider - only show when at least one type is selected */}
+                      {(showPrereqsCoreqs || showUnlocks) && (
+                        <div className="flex-1 min-w-0 flex items-center gap-3">
+                          <input
+                            type="range"
+                            min="0"
+                            max="10"
+                            value={connectionFilter}
+                            onChange={(e) => setConnectionFilter(Number(e.target.value))}
+                            className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                            style={{
+                              background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${(connectionFilter / 10) * 100}%, #e5e7eb ${(connectionFilter / 10) * 100}%, #e5e7eb 100%)`
+                            }}
+                          />
+                          <span className="text-xs font-medium text-gray-700 min-w-[2rem] text-right">
                             {connectionFilter === 0 ? 'Any' : `${connectionFilter}+`}
                           </span>
                         </div>
-                        <input
-                          type="range"
-                          min="0"
-                          max="10"
-                          value={connectionFilter}
-                          onChange={(e) => setConnectionFilter(Number(e.target.value))}
-                          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                          style={{
-                            background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${(connectionFilter / 10) * 100}%, #e5e7eb ${(connectionFilter / 10) * 100}%, #e5e7eb 100%)`
-                          }}
-                        />
-                        <div className="flex justify-between text-xs text-gray-400">
-                          <span>0</span>
-                          <span>5</span>
-                          <span>10+</span>
-                        </div>
-
-                        {connectionFilter > 0 && (
-                          <div className="mt-2 text-xs text-gray-500">
-                            Show courses with {connectionFilter}+ {
-                              showPrereqsCoreqs && showUnlocks ? 'total connections' :
-                              showPrereqsCoreqs ? 'prerequisites/corequisites' :
-                              'courses unlocked'
-                            }
-                          </div>
-                        )}
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
+
+                  {/* General Filter Options */}
+                  {(selectedCategories.length > 0 || showPrereqsCoreqs || showUnlocks || connectionFilter > 0) && (
+                    <div className="mt-4 pt-3 border-t border-gray-200">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">General Options</span>
+                      </div>
+                      
+                      {/* First Degree Connections Toggle */}
+                      <label className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={showFirstDegreeConnections}
+                          onChange={(e) => setShowFirstDegreeConnections(e.target.checked)}
+                          className="mr-2 h-3 w-3 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                        />
+                        <span className="text-xs text-gray-700">Include connected courses (first degree connections)</span>
+                      </label>
+                      <p className="text-xs text-gray-500 mt-1 ml-5">
+                        Shows courses that are directly connected to your filtered results
+                      </p>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -733,6 +743,7 @@ export default function SeePage() {
                         connectionFilter={connectionFilter}
                         showPrereqsCoreqs={showPrereqsCoreqs}
                         showUnlocks={showUnlocks}
+                        showFirstDegreeConnections={showFirstDegreeConnections}
                       />
                     </ReactFlowProvider>
                   </div>

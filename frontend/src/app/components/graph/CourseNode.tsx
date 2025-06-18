@@ -1,6 +1,6 @@
 "use client";
 
-import { Handle, Position } from 'reactflow';
+import { Handle, Position, NodeProps } from 'reactflow';
 import { CourseNodeData } from '@/types/course';
 
 // Custom node component for courses
@@ -66,57 +66,29 @@ function CourseNode({ data }: { data: CourseNodeData }) {
         zIndex: zIndex,
       }}
     >
-      {/* Handle for incoming edges at the top */}
+      {/* Single centered handle - ReactFlow will calculate perimeter intersection */}
       <Handle
         type="target"
         position={Position.Top}
-        id="top"
+        id="center"
         style={{ 
-          background: '#555', 
-          width: '8px', 
-          height: '8px', 
-          top: '-4px',
-          borderRadius: '50%'
+          opacity: 0,
+          pointerEvents: 'none',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
         }}
       />
-      
-      {/* Handles for outgoing edges at multiple positions to support better straight connections */}
       <Handle
         type="source"
         position={Position.Bottom}
-        id="bottom"
+        id="center"
         style={{ 
-          background: '#555', 
-          width: '8px', 
-          height: '8px', 
-          bottom: '-4px',
-          borderRadius: '50%'
-        }}
-      />
-      
-      <Handle
-        type="source"
-        position={Position.Left}
-        id="left"
-        style={{ 
-          background: '#555', 
-          width: '8px', 
-          height: '8px', 
-          left: '-4px',
-          borderRadius: '50%'
-        }}
-      />
-      
-      <Handle
-        type="source"
-        position={Position.Right}
-        id="right"
-        style={{ 
-          background: '#555', 
-          width: '8px', 
-          height: '8px', 
-          right: '-4px',
-          borderRadius: '50%'
+          opacity: 0,
+          pointerEvents: 'none',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
         }}
       />
       
