@@ -34,9 +34,33 @@ interface MajorOption {
   label: string;
 }
 
+interface OptimizedCourse {
+  code: string;
+  title: string;
+  credits: string | number;
+  category: string;
+  prerequisites?: string;
+  corequisites?: string;
+  description?: string;
+  restrictions?: string;
+  notes?: string;
+}
+
+interface ComprehensiveData {
+  majors: Major[];
+  course_dependencies: Record<string, OptimizedCourse>;
+  degree_requirements: Record<string, Requirements>;
+  metadata: {
+    scraped_at: string;
+    total_majors: number;
+    total_courses: number;
+    api_version: string;
+  };
+}
+
 export default function SeePage() {
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
-  const [majors, setMajors] = useState<Major[]>([]);
+  const [comprehensiveData, setComprehensiveData] = useState<ComprehensiveData | null>(null);
   const [selectedMajor, setSelectedMajor] = useState<string>('');
   const [concentrations, setConcentrations] = useState<Concentration[]>([]);
   const [selectedConcentration, setSelectedConcentration] = useState<string>('');
@@ -47,90 +71,123 @@ export default function SeePage() {
   const [reactFlowElements, setReactFlowElements] = useState<any[]>([]);
   const [categoryColors, setCategoryColors] = useState<Record<string, string>>({});
   const [showInfoTooltip, setShowInfoTooltip] = useState<boolean>(false);
+  const [isOptimized, setIsOptimized] = useState<boolean>(false);
 
-  // Fetch majors on component mount
+  // Fetch comprehensive data on component mount
   useEffect(() => {
-    async function fetchMajors() {
+    async function fetchComprehensiveData() {
       try {
         setLoading(true);
-        const response = await fetch(`${API_BASE_URL}/requirements/majors`);
-        if (!response.ok) {
-          if (response.status === 404) {
-            throw new Error('Major requirements API endpoint not found');
-          } else {
-            throw new Error(`Failed to fetch majors: ${response.statusText}`);
+        
+        // Try to fetch optimized comprehensive data first
+        const response = await fetch(`${API_BASE_URL}/degree-visualization/comprehensive-data`);
+        
+        if (response.ok) {
+          const data = await response.json();
+          setComprehensiveData(data);
+          setIsOptimized(true);
+        } else {
+          // Fallback to original API
+          const majorsResponse = await fetch(`${API_BASE_URL}/requirements/majors`);
+          if (!majorsResponse.ok) {
+            throw new Error(`Failed to fetch majors: ${majorsResponse.statusText}`);
           }
+          const majorsData = await majorsResponse.json();
+          setComprehensiveData({
+            majors: majorsData.majors,
+            course_dependencies: {},
+            degree_requirements: {},
+            metadata: {
+              scraped_at: new Date().toISOString(),
+              total_majors: majorsData.majors.length,
+              total_courses: 0,
+              api_version: "1.0"
+            }
+          });
+          setIsOptimized(false);
         }
-        const data = await response.json();
-        setMajors(data.majors);
       } catch (error) {
-        console.error('Error fetching majors:', error);
-        setError('Error connecting to the requirements API. Please ensure the server is running.');
+        console.error('Error fetching comprehensive data:', error);
+        setError('Error connecting to the degree visualization API. Please ensure the server is running.');
         setIsApiAvailable(false);
       } finally {
         setLoading(false);
       }
     }
 
-    fetchMajors();
+    fetchComprehensiveData();
   }, []);
 
-  // Fetch concentrations when a major is selected
+  // Update concentrations when major is selected
   useEffect(() => {
-    if (!selectedMajor || !isApiAvailable) {
+    if (!selectedMajor || !comprehensiveData || !isApiAvailable) {
       setConcentrations([]);
       setSelectedConcentration('');
       return;
     }
 
-    async function fetchConcentrations() {
-      try {
-        const response = await fetch(`${API_BASE_URL}/requirements/majors/${selectedMajor}/concentrations`);
-        
-        if (!response.ok) {
-          if (response.status === 404) {
-            setConcentrations([]);
-            return;
-          } else {
-            throw new Error(`Failed to fetch concentrations: ${response.statusText}`);
+    // If using optimized data, extract concentrations directly
+    if (isOptimized && comprehensiveData.degree_requirements[selectedMajor]) {
+      const majorReqs = comprehensiveData.degree_requirements[selectedMajor];
+      const majorConcentrations = majorReqs.concentrations || [];
+      setConcentrations(majorConcentrations.map(conc => ({
+        id: conc.id,
+        name: conc.name
+      })));
+    } else {
+      // Fallback to API call
+      async function fetchConcentrations() {
+        try {
+          const response = await fetch(`${API_BASE_URL}/requirements/majors/${selectedMajor}/concentrations`);
+          if (response.ok) {
+            const data = await response.json();
+            setConcentrations(data.concentrations || []);
           }
+        } catch (error) {
+          console.error('Error fetching concentrations:', error);
+          setConcentrations([]);
         }
-        
-        const data = await response.json();
-        setConcentrations(data.concentrations || []);
-      } catch (error) {
-        console.error('Error fetching concentrations:', error);
-        setConcentrations([]);
       }
+      fetchConcentrations();
     }
-
-    fetchConcentrations();
-  }, [selectedMajor, isApiAvailable]);
+  }, [selectedMajor, comprehensiveData, isOptimized, isApiAvailable]);
 
   // Fetch requirements for selected major
   useEffect(() => {
-    if (!selectedMajor || !isApiAvailable) return;
+    if (!selectedMajor || !comprehensiveData || !isApiAvailable) return;
 
     async function fetchRequirements() {
       setLoading(true);
       setError('');
       
       try {
-        let url = `${API_BASE_URL}/requirements/majors/${selectedMajor}`;
-        if (selectedConcentration) {
-          url += `?concentration_id=${selectedConcentration}`;
-        }
-        
-        const response = await fetch(url);
-        if (!response.ok) {
-          if (response.status === 404) {
-            throw new Error(`Requirements for ${selectedMajor} not found`);
-          } else {
+        if (isOptimized) {
+          // Use optimized endpoint
+          let url = `${API_BASE_URL}/degree-visualization/major/${selectedMajor}`;
+          if (selectedConcentration) {
+            url += `?concentration_id=${selectedConcentration}`;
+          }
+          
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`Failed to fetch optimized requirements: ${response.statusText}`);
+          }
+          const data = await response.json();
+          setRequirements(data);
+        } else {
+          // Fallback to original API
+          let url = `${API_BASE_URL}/requirements/majors/${selectedMajor}`;
+          if (selectedConcentration) {
+            url += `?concentration_id=${selectedConcentration}`;
+          }
+          
+          const response = await fetch(url);
+          if (!response.ok) {
             throw new Error(`Failed to fetch requirements: ${response.statusText}`);
           }
+          const data = await response.json();
+          setRequirements(data);
         }
-        const data = await response.json();
-        setRequirements(data);
       } catch (error: any) {
         setError(error.message || 'Error loading requirements. Please try again later.');
         console.error('Error fetching requirements:', error);
@@ -140,7 +197,7 @@ export default function SeePage() {
     }
 
     fetchRequirements();
-  }, [selectedMajor, selectedConcentration, isApiAvailable]);
+  }, [selectedMajor, selectedConcentration, comprehensiveData, isOptimized, isApiAvailable]);
 
   // Create graph when requirements are loaded
   useEffect(() => {
@@ -150,15 +207,15 @@ export default function SeePage() {
     setReactFlowElements([]); // Clear existing elements
     
     try {
-      // Get all courses from all categories
+      // Get all courses from all categories with enhanced data
       const allCourses = requirements.categories.flatMap(category => 
         category.courses.map(course => ({
           ...course,
-          category: category.name
+          category: category.name,
+          // Prerequisites and corequisites are already included if using optimized data
         }))
       );
 
-      console.log(`Processing ${allCourses.length} courses for graph visualization`);
 
       // Create category colors
       const categoryColorMap: Record<string, string> = {};
@@ -167,36 +224,41 @@ export default function SeePage() {
       });
       setCategoryColors(categoryColorMap);
 
-      // Fetch prerequisites and create graph
-      const fetchPrerequisitesAndCreateGraph = async () => {
-        await Promise.all(
-          allCourses.map(async (course) => {
-            try {
-              const courseResponse = await fetch(`${API_BASE_URL}/courses/${encodeURIComponent(course.code)}`);
-              if (courseResponse.ok) {
-                const courseData = await courseResponse.json();
-                course.prerequisites = courseData.prerequisites;
-                course.corequisites = courseData.corequisites;
-              }
-            } catch (error) {
-              console.error(`Error fetching details for ${course.code}:`, error);
-            }
-          })
-        );
-
-        // Create the graph
+      if (isOptimized) {
+        // Fast path: use pre-resolved dependencies
         const { nodeElements, edgeElements } = createGraph(allCourses, categoryColorMap);
-        
         setReactFlowElements([...nodeElements, ...edgeElements]);
         setGraphLoading(false);
-      };
+      } else {
+        // Legacy path: fetch prerequisites individually
+        const fetchPrerequisitesAndCreateGraph = async () => {
+          await Promise.all(
+            allCourses.map(async (course) => {
+              try {
+                const courseResponse = await fetch(`${API_BASE_URL}/courses/${encodeURIComponent(course.code)}`);
+                if (courseResponse.ok) {
+                  const courseData = await courseResponse.json();
+                  course.prerequisites = courseData.prerequisites;
+                  course.corequisites = courseData.corequisites;
+                }
+              } catch (error) {
+                console.error(`Error fetching details for ${course.code}:`, error);
+              }
+            })
+          );
 
-      fetchPrerequisitesAndCreateGraph();
+          const { nodeElements, edgeElements } = createGraph(allCourses, categoryColorMap);
+          setReactFlowElements([...nodeElements, ...edgeElements]);
+          setGraphLoading(false);
+        };
+
+        fetchPrerequisitesAndCreateGraph();
+      }
     } catch (error) {
       console.error('Error preparing graph data:', error);
       setGraphLoading(false);
     }
-  }, [requirements, loading]);
+  }, [requirements, loading, isOptimized]);
 
   // Function to create graph nodes and edges
   const createGraph = (courses: any[], categoryColorMap: Record<string, string>) => {
@@ -280,17 +342,14 @@ export default function SeePage() {
       }
     });
 
-    console.log("Created nodes:", nodeElements.length);
-    console.log("Created edges:", edgeElements.length);
-
     return { nodeElements, edgeElements };
   };
 
   // Convert majors to react-select options format
-  const majorOptions: MajorOption[] = majors.map((major) => ({
+  const majorOptions: MajorOption[] = comprehensiveData?.majors.map((major) => ({
     value: major.id,
     label: major.name
-  }));
+  })) || [];
 
   // Custom react-select styles matching the sidebar
   const customSelectStyles = {
@@ -331,12 +390,14 @@ export default function SeePage() {
   const handleRetryConnection = () => {
     setIsApiAvailable(true);
     setError('');
+    // Trigger re-fetch of comprehensive data
+    window.location.reload();
   };
-
-
 
   return (
     <div className="h-full flex flex-col overflow-hidden">
+
+
       {/* API Error Message */}
       {!isApiAvailable && !loading && (
         <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded">
@@ -362,7 +423,7 @@ export default function SeePage() {
       )}
 
       {/* Main content */}
-      {(isApiAvailable && !loading) && (
+      {(isApiAvailable && !loading && comprehensiveData) && (
         <div className="flex flex-col h-full overflow-hidden">
           {/* Header with controls */}
           <div className="bg-primary-blue/5 border-b border-primary-blue/10 flex-shrink-0">

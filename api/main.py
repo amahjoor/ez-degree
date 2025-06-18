@@ -579,26 +579,58 @@ async def get_courses(
             detail=f"Error retrieving courses: {str(e)}"
         )
 
+@app.get("/courses/{course_code}/basic")
+async def get_course_basic(course_code: str):
+    """
+    Get basic course information without professor data (optimized for scraping)
+    """
+    try:
+        # Clean up the course code
+        course_code = " ".join(course_code.upper().split())
+        
+        db = get_session()
+        try:
+            course = db.query(DbCourse).filter(
+                (DbCourse.course_code == course_code) |
+                (DbCourse.course_code == course_code.replace(" ", "")) |
+                (DbCourse.course_code == f"{course_code[0:2]} {course_code[2:]}")
+            ).first()
+            
+            if not course:
+                raise HTTPException(status_code=404, detail=f"Course {course_code} not found")
+
+            return {
+                "course_code": course.course_code,
+                "title": course.title,
+                "credits": course.credits,
+                "description": course.description,
+                "subject": course.subject_id,
+                "prerequisites": course.prerequisites,
+                "corequisites": course.corequisites,
+                "restrictions": course.restrictions,
+                "notes": course.notes
+            }
+            
+        finally:
+            db.close()
+            
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving course: {str(e)}")
+
 @app.get("/courses/{course_code}")
 async def get_course(course_code: str):
     """
     Get detailed information about a specific course, including professor ratings and reviews
     """
-    print(f"\n[DEBUG] Starting get_course endpoint for course_code: {course_code}")
-    
     try:
         # Clean up the course code: remove extra spaces and convert to uppercase
-        print(f"[DEBUG] Original course_code: {course_code}")
         course_code = " ".join(course_code.upper().split())
-        print(f"[DEBUG] Cleaned course_code: {course_code}")
         
-        print("[DEBUG] Attempting to get database session...")
         db = get_session()
-        print("[DEBUG] Successfully got database session")
         
         try:
-            print("[DEBUG] Attempting to query course from database...")
-            print(f"[DEBUG] Querying with course_code: {course_code}")
             course = db.query(DbCourse).filter(
                 (DbCourse.course_code == course_code) |  # Try exact match
                 (DbCourse.course_code == course_code.replace(" ", "")) |  # Try without space
@@ -606,23 +638,18 @@ async def get_course(course_code: str):
             ).first()
             
             if not course:
-                print(f"[DEBUG] No course found for code: {course_code}")
                 raise HTTPException(
                     status_code=404, 
                     detail=f"Course {course_code} not found"
                 )
-            print(f"[DEBUG] Found course: {course.course_code} - {course.title}")
 
             # Get professor information for this course
-            print("[DEBUG] Starting professor data loading...")
             professors_dir = os.path.join(REQUIREMENTS_DIR, "professors")
             course_professors = []
             
             if os.path.exists(professors_dir):
-                print(f"[DEBUG] Professors directory exists at: {professors_dir}")
                 for filename in os.listdir(professors_dir):
                     try:
-                        print(f"[DEBUG] Processing professor file: {filename}")
                         with open(os.path.join(professors_dir, filename), 'r') as f:
                             professor_data = json.load(f)
                             # Try different course code formats
@@ -632,11 +659,9 @@ async def get_course(course_code: str):
                                 course_code.replace(" ", "")[:3] + course_code.replace(" ", "")[3:],  # With space after subject (e.g., "ENG 302")
                                 course_code[:2] + course_code[2:].replace(" ", ""),  # Subject without space (e.g., "ENGL302")
                             ]
-                            print(f"[DEBUG] Checking course code variants: {course_code_variants}")
                             
                             for variant in course_code_variants:
                                 if variant in professor_data.get('reviews', {}):
-                                    print(f"[DEBUG] Found matching course code variant: {variant}")
                                     # Calculate course-specific metrics
                                     reviews = professor_data['reviews'][variant]
                                     
@@ -674,15 +699,10 @@ async def get_course(course_code: str):
                                         "reviews": reviews,
                                         "url": professor_data.get('url')
                                     })
-                                    print(f"[DEBUG] Added professor: {professor_data['firstName']} {professor_data['lastName']}")
                                     break  # Found a match, no need to try other variants
                     except Exception as e:
-                        print(f"[DEBUG] Error processing professor file {filename}: {str(e)}")
                         continue
-            else:
-                print(f"[DEBUG] Professors directory not found at: {professors_dir}")
             
-            print("[DEBUG] Constructing response...")
             response = {
                 "course_code": course.course_code,
                 "title": course.title,
@@ -695,24 +715,19 @@ async def get_course(course_code: str):
                 "notes": course.notes,
                 "professors": course_professors
             }
-            print("[DEBUG] Successfully constructed response")
             return response
             
         except HTTPException as he:
-            print(f"[DEBUG] HTTP Exception: {str(he)}")
             raise he
         except Exception as e:
-            print(f"[DEBUG] Error in database operations: {str(e)}")
             raise HTTPException(
                 status_code=500,
                 detail=f"Error retrieving course data: {str(e)}"
             )
         finally:
-            print("[DEBUG] Closing database session")
             db.close()
             
     except Exception as e:
-        print(f"[DEBUG] Unhandled exception in get_course: {str(e)}")
         raise HTTPException(
             status_code=500,
             detail=f"An unexpected error occurred processing your request: {str(e)}"
@@ -749,6 +764,187 @@ async def get_subjects():
         raise HTTPException(
             status_code=500,
             detail=f"Error retrieving subjects: {str(e)}"
+        )
+
+@app.get("/degree-visualization/comprehensive-data", 
+         summary="Get comprehensive degree visualization data",
+         description="Returns pre-scraped data optimized for degree visualization, including all majors, requirements, and course dependencies",
+         response_description="Complete dataset for fast degree visualization loading")
+async def get_comprehensive_degree_data():
+    """
+    Get comprehensive degree visualization data
+    
+    This endpoint serves pre-scraped data that includes:
+    - All majors and their requirements
+    - All course dependencies (prerequisites/corequisites)
+    - Optimized for fast loading in the degree visualization page
+    
+    Returns:
+        Complete dataset with majors, course dependencies, and degree requirements
+    
+    Raises:
+        HTTPException 404: If the comprehensive data file is not found
+        HTTPException 500: If there's an error processing the request
+    """
+    try:
+        # Path to the comprehensive degree visualization data
+        degree_viz_dir = os.path.join(REQUIREMENTS_DIR, "degree_visualization")
+        comprehensive_file = os.path.join(degree_viz_dir, "comprehensive_degree_data.json")
+        
+        if not os.path.exists(comprehensive_file):
+            raise HTTPException(
+                status_code=404,
+                detail="Comprehensive degree visualization data not found. Please run the degree visualization scraper first."
+            )
+        
+        with open(comprehensive_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        return data
+        
+    except json.JSONDecodeError as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error decoding comprehensive degree data: {str(e)}"
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving comprehensive degree data: {str(e)}"
+        )
+
+@app.get("/degree-visualization/major/{major_id}",
+         summary="Get optimized degree visualization data for a specific major",
+         description="Returns optimized data for a specific major including all course dependencies",
+         response_description="Major requirements with enriched course dependency information")
+async def get_major_visualization_data(
+    major_id: str = Path(..., description="ID of the major to retrieve visualization data for"),
+    concentration_id: Optional[str] = Query(None, description="Optional concentration ID to include")
+):
+    """
+    Get optimized degree visualization data for a specific major
+    
+    This endpoint provides:
+    - Major requirements with course details
+    - Pre-resolved course dependencies (prerequisites/corequisites)
+    - Optimized data structure for graph visualization
+    
+    Args:
+        major_id: ID of the major
+        concentration_id: Optional concentration ID to filter by
+    
+    Returns:
+        Optimized major data with enriched course information
+    
+    Raises:
+        HTTPException 404: If the major or data is not found
+        HTTPException 500: If there's an error processing the request
+    """
+    try:
+        # Load the comprehensive data
+        degree_viz_dir = os.path.join(REQUIREMENTS_DIR, "degree_visualization")
+        
+        # Load course dependencies
+        course_deps_file = os.path.join(degree_viz_dir, "course_dependencies.json")
+        degree_reqs_file = os.path.join(degree_viz_dir, "degree_requirements.json")
+        
+        if not os.path.exists(course_deps_file) or not os.path.exists(degree_reqs_file):
+            raise HTTPException(
+                status_code=404,
+                detail="Degree visualization data not found. Please run the degree visualization scraper first."
+            )
+        
+        # Load the data
+        with open(course_deps_file, 'r', encoding='utf-8') as f:
+            course_dependencies = json.load(f)
+        
+        with open(degree_reqs_file, 'r', encoding='utf-8') as f:
+            degree_requirements = json.load(f)
+        
+        # Get the specific major requirements
+        if major_id not in degree_requirements:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Major '{major_id}' not found in degree requirements"
+            )
+        
+        major_data = degree_requirements[major_id]
+        
+        # Enrich the course data with dependencies
+        def enrich_course_data(course):
+            course_code = course.get("code") or course.get("id")
+            if course_code and course_code in course_dependencies:
+                dep_data = course_dependencies[course_code]
+                return {
+                    **course,
+                    "code": course_code,
+                    "title": dep_data.get("title", course.get("title", "")),
+                    "credits": dep_data.get("credits", course.get("credits", "")),
+                    "prerequisites": dep_data.get("prerequisites", ""),
+                    "corequisites": dep_data.get("corequisites", ""),
+                    "description": dep_data.get("description", ""),
+                    "restrictions": dep_data.get("restrictions", ""),
+                    "notes": dep_data.get("notes", "")
+                }
+            return course
+        
+        # Enrich all courses in the major
+        enriched_categories = []
+        for category in major_data.get("categories", []):
+            enriched_courses = [enrich_course_data(course) for course in category.get("courses", [])]
+            enriched_categories.append({
+                **category,
+                "courses": enriched_courses
+            })
+        
+        # Handle concentrations
+        enriched_concentrations = []
+        for concentration in major_data.get("concentrations", []):
+            if concentration_id and concentration.get("id") != concentration_id:
+                continue
+                
+            enriched_conc_categories = []
+            for category in concentration.get("categories", []):
+                enriched_courses = [enrich_course_data(course) for course in category.get("courses", [])]
+                enriched_conc_categories.append({
+                    **category,
+                    "courses": enriched_courses
+                })
+            
+            enriched_concentrations.append({
+                **concentration,
+                "categories": enriched_conc_categories
+            })
+        
+        # If specific concentration requested, only include that one
+        if concentration_id:
+            enriched_concentrations = [c for c in enriched_concentrations if c.get("id") == concentration_id]
+            if not enriched_concentrations:
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"Concentration '{concentration_id}' not found for major '{major_id}'"
+                )
+        
+        return {
+            **major_data,
+            "categories": enriched_categories,
+            "concentrations": enriched_concentrations,
+            "optimization_info": {
+                "pre_enriched": True,
+                "course_dependencies_resolved": True,
+                "total_courses_enriched": len([
+                    course for category in enriched_categories 
+                    for course in category.get("courses", [])
+                ])
+            }
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving major visualization data: {str(e)}"
         )
 
 @app.get("/professors/", 

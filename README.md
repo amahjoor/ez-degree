@@ -94,7 +94,5 @@ This data is used by the application to provide course information, prerequisite
 - `scrapers/` - Web scrapers for course and requirements data
 - `data/` - Collected and processed data
   - `courses/` - Course information scraped from the GMU catalog
+  - `degree_visualization/` - Pre-processed data for fast degree visualization
 - `migrations/` - Database migration scripts
-
-
-Test
