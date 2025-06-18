@@ -162,8 +162,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
         });
 
                           // Layout configuration
-         const CARD_WIDTH = 210; // Slightly wider to accommodate 190px cards + margin
-         const CARD_HEIGHT = 150; // Taller to accommodate 130px cards + margin
+         const CARD_WIDTH = 180; // Slightly wider to accommodate 160px cards + margin
+         const CARD_HEIGHT = 130; // Taller to accommodate 110px cards + margin
          const GROUP_SPACING = 120; // Vertical space between category groups
          const CARD_SPACING = 25; // Space between cards within a group
          const ROW_SPACING = 40; // Extra space between rows
@@ -204,7 +204,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
               categoryColor: categoryColors[category] || '#6b7280',
               isLabel: true,
               relationshipToSelected: null,
-              isHighlighted: false
+              isHighlighted: false,
+              isFirstDegreeConnection: false
             }
           };
           positionedNodes.push(categoryLabelNode);
@@ -237,7 +238,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
                 categoryColor: course.data.color || '#cccccc',
                 isLabel: course.data.isLabel || false,
                 relationshipToSelected: null,
-                isHighlighted: false
+                isHighlighted: false,
+                isFirstDegreeConnection: false
               }
             };
 
@@ -265,7 +267,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
             categoryColor: el.data.color || '#cccccc',
             isLabel: el.data.isLabel || false,
             relationshipToSelected: null,
-            isHighlighted: false
+            isHighlighted: false,
+            isFirstDegreeConnection: false
           }
             });
           }
@@ -302,12 +305,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
             height: 20,
             color: el.data.type === 'coreq' ? '#0000ff' : '#ff0000',
           },
-          label: el.data.type || 'prereq',
-          labelStyle: { 
-            fill: el.data.type === 'coreq' ? '#0000ff' : '#ff0000',
-            fontWeight: 700,
-            fontSize: 12
-          },
+
           data: {
             id: uniqueId,
             type: el.data.type || 'prereq'
@@ -347,8 +345,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       // Regular course node behavior
     // Toggle selection: if the same node is clicked, clear selection
     setSelectedNode(prevSelected => prevSelected === node.id ? null : node.id);
-      // Clear category filters when clicking on individual courses
-      setFilteredCategories([]);
+      // Don't clear category filters when clicking on individual courses
     }
   }, []);
 
@@ -368,19 +365,32 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
         data: { 
           ...node.data,
           isHighlighted: false,
-          relationshipToSelected: null 
+          relationshipToSelected: null,
+          isFirstDegreeConnection: false
         }
       })));
       
-      setEdges(edges => edges.map(edge => ({
-        ...edge,
-        hidden: false,
-        style: {
-          ...edge.style,
-          opacity: 1,
-          strokeWidth: 3,
-        }
-      })));
+      setEdges(edges => edges.map(edge => {
+        const edgeType = (edge.data as any)?.type;
+        const originalColor = edgeType === 'coreq' ? '#0000ff' : '#ff0000';
+        
+        return {
+          ...edge,
+          hidden: false,
+          style: {
+            ...edge.style,
+            opacity: 1,
+            strokeWidth: 3,
+            stroke: originalColor,
+          },
+          markerEnd: {
+            type: MarkerType.ArrowClosed,
+            width: 20,
+            height: 20,
+            color: originalColor,
+          },
+        };
+      }));
       
       return;
     }
@@ -476,6 +486,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       const passesBaseFilters = matchesCategory && matchesConnectionFilter;
       const isFirstDegree = isFirstDegreeConnection(node.id);
       const shouldBeVisible = passesBaseFilters || isFirstDegree;
+      const isOnlyFirstDegree = isFirstDegree && !passesBaseFilters;
       
       const isPrereq = selectedNode && currentEdges
         .filter(edge => edge.target === selectedNode && edge.data?.type === 'prereq')
@@ -502,7 +513,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
           data: {
             ...node.data,
             isHighlighted: false,
-            relationshipToSelected: null
+            relationshipToSelected: null,
+            isFirstDegreeConnection: false
           }
         };
       }
@@ -510,13 +522,11 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       // For visible nodes, show them with proper styling
       let style = {
         zIndex: 2,
-        filter: 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.3))',
       };
       
       if (isSelected) {
         style = {
           ...style,
-          filter: 'drop-shadow(0 0 14px rgba(59, 130, 246, 0.8))',
           zIndex: 10,
         };
       }
@@ -536,28 +546,72 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
                 ? 'coreq' 
                 : isDependent 
                   ? 'dependent' 
-                  : null
+                  : null,
+          isFirstDegreeConnection: isOnlyFirstDegree
         }
       };
     });
     
     // Create updated edges array
     const updatedEdges = edges.map(edge => {
-      const isConnectedToSelected = selectedNode ? (edge.source === selectedNode || edge.target === selectedNode) : true;
+      const isDirectlyConnectedToSelected = selectedNode ? (edge.source === selectedNode || edge.target === selectedNode) : false;
       
       // Get node visibility status from our updated nodes
-      const sourceVisible = updatedNodes.some(n => n.id === edge.source && !n.hidden);
-      const targetVisible = updatedNodes.some(n => n.id === edge.target && !n.hidden);
+      const sourceNode = updatedNodes.find(n => n.id === edge.source);
+      const targetNode = updatedNodes.find(n => n.id === edge.target);
+      const sourceVisible = sourceNode && !sourceNode.hidden;
+      const targetVisible = targetNode && !targetNode.hidden;
       const bothNodesVisible = sourceVisible && targetVisible;
+      
+      // Check if either node is a first-degree-only connection
+      const isFirstDegreeEdge = (sourceNode?.data as any)?.isFirstDegreeConnection || 
+                               (targetNode?.data as any)?.isFirstDegreeConnection;
+      
+      // Determine edge color based on relationship to selected node
+      let strokeColor;
+      const edgeType = (edge.data as any)?.type;
+      
+      if (selectedNode && isDirectlyConnectedToSelected) {
+        // When a node is selected and this edge is directly connected to it
+        if (edgeType === 'prereq' && edge.source === selectedNode) {
+          // Selected node is prerequisite for target (courses it unlocks) - make green
+          strokeColor = '#10b981'; // Green
+        } else if (edgeType === 'prereq' && edge.target === selectedNode) {
+          // Edge pointing to selected node (prerequisites) - keep red
+          strokeColor = '#ff0000'; // Red
+        } else if (edgeType === 'coreq') {
+          // Corequisites always blue
+          strokeColor = '#0000ff'; // Blue
+        } else {
+          // Default prereq color
+          strokeColor = '#ff0000'; // Red
+        }
+      } else {
+        // No node selected or edge not directly connected - use default colors based on type
+        strokeColor = edgeType === 'coreq' ? '#0000ff' : '#ff0000';
+      }
+      
+      // Force a new edge ID when color changes to trigger ReactFlow to update the marker
+      const colorSuffix = strokeColor === '#10b981' ? '-green' : 
+                         strokeColor === '#0000ff' ? '-blue' : '-red';
+      const updatedId = edge.id.replace(/-green|-blue|-red/g, '') + colorSuffix;
       
       return {
         ...edge,
-        hidden: !isConnectedToSelected || !bothNodesVisible,
+        id: updatedId,
+        hidden: (selectedNode && !bothNodesVisible) || (!selectedNode && !bothNodesVisible),
         style: {
           ...edge.style,
-          opacity: 1,
-          strokeWidth: isConnectedToSelected ? 5 : 2,
-        }
+          opacity: isFirstDegreeEdge ? 0.5 : 1,
+          strokeWidth: 3, // Keep consistent stroke width
+          stroke: strokeColor,
+        },
+        markerEnd: {
+          type: MarkerType.ArrowClosed,
+          width: 20,
+          height: 20,
+          color: strokeColor,
+        },
       };
     });
     
@@ -667,7 +721,10 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
 
   // Create notification panel to show when nodes are hidden
   const renderFilterNotification = () => {
-    if (!selectedNode && filteredCategories.length === 0) return null;
+    const shouldApplyCategoryFilter = filteredCategories.length > 0;
+    const shouldApplyConnectionFilter = currentConnectionFilter > 0 && (currentShowPrereqsCoreqs || currentShowUnlocks);
+    
+    if (!selectedNode && !shouldApplyCategoryFilter && !shouldApplyConnectionFilter) return null;
     
     // Count visible and hidden nodes
     const visibleNodes = nodes.filter(node => !node.hidden).length;
@@ -684,7 +741,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
             {selectedNode 
               ? `Showing only connected nodes. ${hiddenCount} nodes are hidden.` 
               : (filteredCategories.length > 0 || (currentConnectionFilter > 0 && (currentShowPrereqsCoreqs || currentShowUnlocks)))
-                ? `Showing filtered courses${currentShowFirstDegreeConnections ? ' and their connections' : ''}. ${hiddenCount} nodes are hidden.`
+                ? `${hiddenCount} nodes hidden${currentShowFirstDegreeConnections ? ' (+connections)' : ''}`
                 : `${hiddenCount} nodes are hidden.`}
           </span>
           <button 
@@ -858,6 +915,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
     >
       <Background color="#f8f8f8" gap={16} />
       <Controls />
+
       {renderDetailsPanel()}
       {renderFilterNotification()}
       {/* Remove the category filters panel since filtering is now handled in the main legend */}

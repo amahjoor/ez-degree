@@ -86,8 +86,8 @@ export default function SmartStraightEdge({
   data,
 }: EdgeProps) {
   // Node dimensions (matching CourseNode.tsx)
-  const nodeWidth = 190;
-  const nodeHeight = 130;
+  const nodeWidth = 160;
+  const nodeHeight = 110;
 
   // Calculate source node center
   const sourceCenterX = sourceX;

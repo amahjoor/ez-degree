@@ -63,6 +63,7 @@ export interface CourseNodeData {
   isLabel?: boolean;
   relationshipToSelected?: string | null;
   isHighlighted?: boolean;
+  isFirstDegreeConnection?: boolean;
 }
 
 // Global window interface for course graph state

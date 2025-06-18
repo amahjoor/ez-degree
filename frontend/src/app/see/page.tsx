@@ -561,18 +561,7 @@ export default function SeePage() {
               
               {/* Expanded Filter Section - Overlay */}
               {showFilters && (
-                <div className="absolute top-full left-0 right-0 p-3 bg-primary-blue/5 border-t border-primary-blue/10 z-50">
-                  <div className="flex items-center justify-between mb-2">
-                    <div></div>
-                    <button
-                      onClick={() => setShowFilters(false)}
-                      className="text-gray-400 hover:text-gray-600 ml-auto"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  </div>
+          <div className="flex-shrink-0 relative pt-4">
                   
                   {/* Category filters */}
                   {Object.keys(categoryColors).length > 0 && (
@@ -610,11 +599,7 @@ export default function SeePage() {
                           );
                         })}
                       </div>
-                      {selectedCategories.length > 0 && (
-                        <div className="mt-2 text-xs text-gray-500">
-                          Showing: {selectedCategories.join(', ')}
-                        </div>
-                      )}
+
                     </div>
                   )}
 
@@ -699,11 +684,8 @@ export default function SeePage() {
                           onChange={(e) => setShowFirstDegreeConnections(e.target.checked)}
                           className="mr-2 h-3 w-3 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                         />
-                        <span className="text-xs text-gray-700">Include connected courses (first degree connections)</span>
+                        <span className="text-xs text-gray-700">Show all 1st degree connections</span>
                       </label>
-                      <p className="text-xs text-gray-500 mt-1 ml-5">
-                        Shows courses that are directly connected to your filtered results
-                      </p>
                     </div>
                   )}
                 </div>
