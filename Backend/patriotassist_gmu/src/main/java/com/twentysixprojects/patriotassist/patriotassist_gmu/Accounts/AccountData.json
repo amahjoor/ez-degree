@@ -1,1 +1,7 @@
-[]
+[ {
+  "username" : "TestBob",
+  "password" : "$2a$10$W5y/Wpy/MEJgr4LsytOzmemdXmOJ5G6MOpVqHjfUIohhIsYArLuMK"
+}, {
+  "username" : "TestBobb",
+  "password" : "$2a$10$8JegR/pzI4Nu7xlwRzJjAOh94XTUq6X7nZLt9Y1qF18GEjL23Y8Km"
+} ]

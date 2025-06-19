@@ -10,9 +10,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+@Service
 public class AuthHandler {
     
     @Value("${project.accountdata.path}")

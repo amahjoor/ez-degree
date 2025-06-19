@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SecurityConfig {
-    @Autowired
     
+    @Autowired
     private JwtAuthenticationFilter jwtFilter;
 
     @Bean

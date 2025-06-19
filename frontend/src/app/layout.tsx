@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./globals.css";
+import { AuthProvider } from "./account/AuthContext";
+import { Nav } from "./components/Nav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,53 +34,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 font-sans flex flex-col min-h-screen`}
       >
-        <nav className="bg-primary-blue text-white shadow-md">
-          <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div className="flex items-center space-x-12">
-              <Link href="/" className="font-bold text-xl hover:text-gray-200 transition-colors">
-                4yrplan
-              </Link>
-              <div className="flex space-x-8">
-                <Link 
-                  href="/search" 
-                  className={`font-medium text-lg hover:text-gray-200 transition-colors relative ${
-                    pathname.startsWith('/search') ? 'font-bold' : ''
-                  }`}
-                >
-                  Search
-                  {pathname.startsWith('/search') && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
-                  )}
-                </Link>
-                <Link 
-                  href="/plan" 
-                  className={`font-medium text-lg hover:text-gray-200 transition-colors relative ${
-                    pathname.startsWith('/plan') ? 'font-bold' : ''
-                  }`}
-                >
-                  Plan
-                  {pathname.startsWith('/plan') && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
-                  )}
-                </Link>
-                <Link 
-                  href="/see" 
-                  className={`font-medium text-lg hover:text-gray-200 transition-colors relative ${
-                    pathname.startsWith('/see') ? 'font-bold' : ''
-                  }`}
-                >
-                  See
-                  {pathname.startsWith('/see') && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
-                  )}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <main className="flex-grow">
-          {children}
-        </main>
+        <AuthProvider>
+          <Nav />
+          <main className="flex-grow">
+            {children}
+          </main>
+        </AuthProvider>
       </body>
     </html>
   );
