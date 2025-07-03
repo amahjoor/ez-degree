@@ -215,7 +215,10 @@ function ProfessorStats({ professor, selectedCourse, onCourseSelect }: Professor
     const grades: { [key: string]: number } = {};
     
     filteredReviews.forEach(review => {
-      if (review.grade) {
+      if (review.grade && 
+          review.grade.trim() !== '' && 
+          review.grade.toLowerCase() !== 'not sure yet' &&
+          review.grade.toLowerCase() !== 'rather not say') {
         grades[review.grade] = (grades[review.grade] || 0) + 1;
       }
     });
@@ -732,16 +735,21 @@ function RMPTags({ professor, selectedCourse }: RMPTagsProps) {
       
       const reviewsArray = Array.isArray(courseReviews) ? courseReviews : [courseReviews];
       
-      reviewsArray.forEach(review => {
-        if (review.ratingTags && Array.isArray(review.ratingTags)) {
-          review.ratingTags.forEach((tag: string) => {
-            if (tag && tag.trim() !== '') {
-              const cleanTag = tag.trim();
-              tagCounts[cleanTag] = (tagCounts[cleanTag] || 0) + 1;
-            }
-          });
-        }
-      });
+              reviewsArray.forEach(review => {
+          if (review.ratingTags && Array.isArray(review.ratingTags)) {
+            review.ratingTags.forEach((tag: string) => {
+              if (tag && tag.trim() !== '') {
+                // Normalize case: convert to title case for consistency
+                const cleanTag = tag.trim()
+                  .toLowerCase()
+                  .split(' ')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+                tagCounts[cleanTag] = (tagCounts[cleanTag] || 0) + 1;
+              }
+            });
+          }
+        });
     });
     
     // Convert to array and sort by count (descending)
