@@ -142,23 +142,7 @@ function CourseNode({ data }: { data: CourseNodeData }) {
           </>
         )}
       
-      {/* Relationship indicator badge */}
-      {data.relationshipToSelected && data.relationshipToSelected !== 'selected' && (
-        <div 
-          className="absolute -top-2 -right-2 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs font-bold"
-          style={{
-            backgroundColor: 
-              data.relationshipToSelected === 'prereq' ? '#ef4444' :  // Red
-              data.relationshipToSelected === 'coreq' ? '#3b82f6' :   // Blue
-              data.relationshipToSelected === 'dependent' ? '#10b981' : // Green
-              '#6b7280', // Gray default
-          }}
-        >
-          {data.relationshipToSelected === 'prereq' ? 'P' : 
-           data.relationshipToSelected === 'coreq' ? 'C' : 
-           data.relationshipToSelected === 'dependent' ? 'R' : ''}
-        </div>
-      )}
+
     </div>
   );
 }
