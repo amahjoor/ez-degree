@@ -98,15 +98,36 @@ function ProfessorHeader({ professor, onClose }: ProfessorHeaderProps) {
 // Professor Stats Component
 interface ProfessorStatsProps {
   professor: Professor;
+  selectedCourse: string | null;
+  onCourseSelect: (courseCode: string | null) => void;
 }
 
-function ProfessorStats({ professor }: ProfessorStatsProps) {
+function ProfessorStats({ professor, selectedCourse, onCourseSelect }: ProfessorStatsProps) {
   // State for hover tooltips
   const [showDifficultyTooltip, setShowDifficultyTooltip] = useState(false);
   const [showTakeAgainTooltip, setShowTakeAgainTooltip] = useState(false);
   const [showTextbookTooltip, setShowTextbookTooltip] = useState(false);
   const [showAttendanceTooltip, setShowAttendanceTooltip] = useState(false);
   
+  // Get filtered reviews based on selected course
+  const getFilteredReviews = () => {
+    if (!professor.reviews || typeof professor.reviews !== 'object') return [];
+    
+    let allReviews: any[] = [];
+    
+    Object.entries(professor.reviews).forEach(([courseCode, courseReviews]) => {
+      // If a course is selected, only include reviews for that course
+      if (selectedCourse && courseCode !== selectedCourse) return;
+      
+      const reviews = Array.isArray(courseReviews) ? courseReviews : [courseReviews];
+      allReviews = allReviews.concat(reviews.map(review => ({ ...review, courseCode })));
+    });
+    
+    return allReviews;
+  };
+
+  const filteredReviews = getFilteredReviews();
+
   // Helper functions for color coding
   const getQualityColor = (rating: number) => {
     if (rating >= 4) return 'text-green-500';
@@ -134,11 +155,77 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
     return 'text-gray-900';
   };
 
-  // Calculate quality rating for the professor (average of helpfulness and clarity)
-  const professorQuality = professor.helpfulRating || professor.clarityRating ? 
-    ((professor.helpfulRating || 0) + (professor.clarityRating || 0)) / 
-    ((professor.helpfulRating ? 1 : 0) + (professor.clarityRating ? 1 : 0)) : 
-    null;
+  // Calculate quality rating based on filtered reviews
+  const calculateQualityRating = () => {
+    if (filteredReviews.length === 0) return null;
+    
+    let totalRating = 0;
+    let count = 0;
+    
+    filteredReviews.forEach(review => {
+      if (review.helpfulRating || review.clarityRating) {
+        totalRating += review.helpfulRating || review.clarityRating;
+        count++;
+      }
+    });
+    
+    return count > 0 ? totalRating / count : null;
+  };
+
+  // Calculate average difficulty based on filtered reviews
+  const calculateAvgDifficulty = () => {
+    if (filteredReviews.length === 0) return null;
+    
+    let totalDifficulty = 0;
+    let count = 0;
+    
+    filteredReviews.forEach(review => {
+      if (review.difficultyRating !== undefined && review.difficultyRating !== null) {
+        totalDifficulty += review.difficultyRating;
+        count++;
+      }
+    });
+    
+    return count > 0 ? totalDifficulty / count : null;
+  };
+
+  // Calculate would take again percentage based on filtered reviews
+  const calculateWouldTakeAgain = () => {
+    if (filteredReviews.length === 0) return null;
+    
+    let totalResponses = 0;
+    let yesCount = 0;
+    
+    filteredReviews.forEach(review => {
+      if (review.wouldTakeAgain !== undefined && review.wouldTakeAgain !== null) {
+        totalResponses++;
+        if (review.wouldTakeAgain) {
+          yesCount++;
+        }
+      }
+    });
+    
+    return totalResponses > 0 ? (yesCount / totalResponses) * 100 : null;
+  };
+
+  // Calculate most common grade based on filtered reviews
+  const calculateAvgGrade = () => {
+    if (filteredReviews.length === 0) return null;
+    
+    const grades: { [key: string]: number } = {};
+    
+    filteredReviews.forEach(review => {
+      if (review.grade) {
+        grades[review.grade] = (grades[review.grade] || 0) + 1;
+      }
+    });
+    
+    if (Object.keys(grades).length === 0) return null;
+    
+    return Object.entries(grades).reduce((a, b) => 
+      grades[a[0]] > grades[b[0]] ? a : b
+    )[0];
+  };
 
   const getDifficultyLabel = (rating: number) => {
     if (rating >= 4) return 'HARD';
@@ -148,23 +235,20 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
 
   // Calculate textbook usage percentage
   const calculateTextbookUsage = () => {
-    if (!professor.reviews || typeof professor.reviews !== 'object') return null;
+    if (filteredReviews.length === 0) return null;
     
     let totalReviews = 0;
     let textbookRequired = 0;
     
-    Object.values(professor.reviews).forEach((reviews) => {
-      const reviewsArray = Array.isArray(reviews) ? reviews : [reviews];
-      reviewsArray.forEach(review => {
-        if (review.textbookUse) {
-          totalReviews++;
-          if (review.textbookUse.toLowerCase().includes('required') || 
-              review.textbookUse.toLowerCase().includes('mandatory') ||
-              review.textbookUse.toLowerCase().includes('yes')) {
-            textbookRequired++;
-          }
+    filteredReviews.forEach(review => {
+      if (review.textbookUse) {
+        totalReviews++;
+        if (review.textbookUse.toLowerCase().includes('required') || 
+            review.textbookUse.toLowerCase().includes('mandatory') ||
+            review.textbookUse.toLowerCase().includes('yes')) {
+          textbookRequired++;
         }
-      });
+      }
     });
     
     return totalReviews > 0 ? Math.round((textbookRequired / totalReviews) * 100) : null;
@@ -172,29 +256,31 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
 
   // Calculate attendance requirement percentage
   const calculateAttendanceRequirement = () => {
-    if (!professor.reviews || typeof professor.reviews !== 'object') return null;
+    if (filteredReviews.length === 0) return null;
     
     let totalReviews = 0;
     let attendanceRequired = 0;
     
-    Object.values(professor.reviews).forEach((reviews) => {
-      const reviewsArray = Array.isArray(reviews) ? reviews : [reviews];
-      reviewsArray.forEach(review => {
-        if (review.attendanceMandatory !== undefined) {
-          totalReviews++;
-          if (review.attendanceMandatory === 'Mandatory' || 
-              review.attendanceMandatory === true ||
-              (typeof review.attendanceMandatory === 'string' && 
-               review.attendanceMandatory.toLowerCase().includes('mandatory'))) {
-            attendanceRequired++;
-          }
+    filteredReviews.forEach(review => {
+      if (review.attendanceMandatory !== undefined) {
+        totalReviews++;
+        if (review.attendanceMandatory === 'Mandatory' || 
+            review.attendanceMandatory === true ||
+            (typeof review.attendanceMandatory === 'string' && 
+             review.attendanceMandatory.toLowerCase().includes('mandatory'))) {
+          attendanceRequired++;
         }
-      });
+      }
     });
     
     return totalReviews > 0 ? Math.round((attendanceRequired / totalReviews) * 100) : null;
   };
 
+  // Calculate all filtered stats
+  const professorQuality = calculateQualityRating();
+  const avgDifficulty = calculateAvgDifficulty();
+  const wouldTakeAgainPercent = calculateWouldTakeAgain();
+  const averageGrade = calculateAvgGrade();
   const textbookUsage = calculateTextbookUsage();
   const attendanceRequirement = calculateAttendanceRequirement();
 
@@ -218,8 +304,8 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
           {/* Average Grade */}
           <div className="text-center">
             <div className="text-base text-black mb-2">Avg Grade</div>
-            <div className={`text-4xl font-bold ${professor.averageGrade ? getGradeColor(professor.averageGrade) : 'text-gray-400'}`}>
-              {professor.averageGrade || 'N/A'}
+            <div className={`text-4xl font-bold ${averageGrade ? getGradeColor(averageGrade) : 'text-gray-400'}`}>
+              {averageGrade || 'N/A'}
             </div>
           </div>
 
@@ -238,11 +324,11 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
                 {showDifficultyTooltip && (
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-md shadow-lg whitespace-nowrap z-10">
                     <div className="text-center">
-                      <div className="font-medium">Difficulty Rating: {professor.avgDifficulty.toFixed(1)}/5</div>
+                      <div className="font-medium">
+                        Difficulty Rating: {avgDifficulty ? avgDifficulty.toFixed(1) : 'N/A'}/5
+                      </div>
                       <div className="text-gray-300 mt-1">
-                        Based on {professor.reviews ? 
-                          Object.values(professor.reviews).flat().filter(r => r.difficultyRating !== undefined && r.difficultyRating !== null).length : 0
-                        } student responses
+                        Based on {filteredReviews.filter(r => r.difficultyRating !== undefined && r.difficultyRating !== null).length} student responses
                       </div>
                     </div>
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
@@ -251,8 +337,8 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
               </div>
             </div>
             <div className="flex items-baseline justify-center">
-              <span className={`text-4xl font-bold ${getDifficultyColor(professor.avgDifficulty)}`}>
-                {getDifficultyLabel(professor.avgDifficulty)}
+              <span className={`text-4xl font-bold ${avgDifficulty ? getDifficultyColor(avgDifficulty) : 'text-gray-400'}`}>
+                {avgDifficulty ? getDifficultyLabel(avgDifficulty) : 'N/A'}
               </span>
             </div>
           </div>
@@ -272,11 +358,11 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
                 {showTakeAgainTooltip && (
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-md shadow-lg whitespace-nowrap z-10">
                     <div className="text-center">
-                      <div className="font-medium">Would Take Again: {Math.round(professor.wouldTakeAgainPercent)}%</div>
+                      <div className="font-medium">
+                        Would Take Again: {wouldTakeAgainPercent ? Math.round(wouldTakeAgainPercent) : 'N/A'}%
+                      </div>
                       <div className="text-gray-300 mt-1">
-                        Based on {professor.reviews ? 
-                          Object.values(professor.reviews).flat().filter(r => r.wouldTakeAgain !== undefined && r.wouldTakeAgain !== null).length : 0
-                        } student responses
+                        Based on {filteredReviews.filter(r => r.wouldTakeAgain !== undefined && r.wouldTakeAgain !== null).length} student responses
                       </div>
                     </div>
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
@@ -285,8 +371,8 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
               </div>
             </div>
             <div className="flex items-baseline justify-center">
-              <span className={`text-4xl font-bold ${getWouldTakeAgainColor(professor.wouldTakeAgainPercent)}`}>
-                {Math.round(professor.wouldTakeAgainPercent) >= 50 ? 'YES' : 'NO'}
+              <span className={`text-4xl font-bold ${wouldTakeAgainPercent ? getWouldTakeAgainColor(wouldTakeAgainPercent) : 'text-gray-400'}`}>
+                {wouldTakeAgainPercent ? (Math.round(wouldTakeAgainPercent) >= 50 ? 'YES' : 'NO') : 'N/A'}
               </span>
             </div>
           </div>
@@ -310,9 +396,7 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
                         Textbook Required: {textbookUsage === null ? 'No data' : `${textbookUsage}%`}
                       </div>
                       <div className="text-gray-300 mt-1">
-                        Based on {professor.reviews ? 
-                          Object.values(professor.reviews).flat().filter(r => r.textbookUse !== undefined && r.textbookUse !== null && r.textbookUse !== "").length : 0
-                        } student responses
+                        Based on {filteredReviews.filter(r => r.textbookUse !== undefined && r.textbookUse !== null && r.textbookUse !== "").length} student responses
                       </div>
                     </div>
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
@@ -352,9 +436,7 @@ function ProfessorStats({ professor }: ProfessorStatsProps) {
                         Attendance Required: {attendanceRequirement === null ? 'No data' : `${attendanceRequirement}%`}
                       </div>
                       <div className="text-gray-300 mt-1">
-                        Based on {professor.reviews ? 
-                          Object.values(professor.reviews).flat().filter(r => r.attendanceMandatory !== undefined && r.attendanceMandatory !== null && r.attendanceMandatory !== "").length : 0
-                        } student responses
+                        Based on {filteredReviews.filter(r => r.attendanceMandatory !== undefined && r.attendanceMandatory !== null && r.attendanceMandatory !== "").length} student responses
                       </div>
                     </div>
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
@@ -395,9 +477,11 @@ interface TaughtCourse {
 // Courses Taught Component
 interface CoursesTaughtProps {
   professor: Professor;
+  selectedCourse: string | null;
+  onCourseSelect: (courseCode: string | null) => void;
 }
 
-function CoursesTaught({ professor }: CoursesTaughtProps) {
+function CoursesTaught({ professor, selectedCourse, onCourseSelect }: CoursesTaughtProps) {
   const [currentCourses, setCurrentCourses] = useState<TaughtCourse[]>([]);
   const [historicalCourses, setHistoricalCourses] = useState<TaughtCourse[]>([]);
   const [loading, setLoading] = useState(true);
@@ -573,7 +657,12 @@ function CoursesTaught({ professor }: CoursesTaughtProps) {
                 {currentCourses.map((course) => (
                   <button
                     key={`current-${course.courseCode}-${course.crn}`}
-                    className="px-3 py-2 bg-green-100 text-green-800 border border-green-300 rounded-md hover:bg-green-200 transition-colors text-sm font-medium"
+                    onClick={() => onCourseSelect(selectedCourse === course.courseCode ? null : course.courseCode)}
+                    className={`px-3 py-2 border rounded-md transition-colors text-sm font-medium ${
+                      selectedCourse === course.courseCode
+                        ? 'bg-green-600 text-white border-green-600'
+                        : 'bg-green-100 text-green-800 border-green-300 hover:bg-green-200'
+                    }`}
                     title={`${course.courseCode}: ${course.courseTitle} - ${course.meetingDays} ${course.meetingTimes}`}
                   >
                     {course.courseCode}
@@ -601,7 +690,12 @@ function CoursesTaught({ professor }: CoursesTaughtProps) {
                     {pastCourses.map(([courseCode, courseSections]) => (
                       <button
                         key={`past-${courseCode}`}
-                        className="px-3 py-2 bg-blue-100 text-blue-800 border border-blue-300 rounded-md hover:bg-blue-200 transition-colors text-sm font-medium"
+                        onClick={() => onCourseSelect(selectedCourse === courseCode ? null : courseCode)}
+                        className={`px-3 py-2 border rounded-md transition-colors text-sm font-medium ${
+                          selectedCourse === courseCode
+                            ? 'bg-blue-600 text-white border-blue-600'
+                            : 'bg-blue-100 text-blue-800 border-blue-300 hover:bg-blue-200'
+                        }`}
                         title={`${courseCode} - Last reviews from ${(courseSections as TaughtCourse[])[0].term}`}
                       >
                         {courseCode}
@@ -615,6 +709,174 @@ function CoursesTaught({ professor }: CoursesTaughtProps) {
           })()}
         </div>
       )}
+    </div>
+  );
+}
+
+// Rate My Professor Tags Component
+interface RMPTagsProps {
+  professor: Professor;
+  selectedCourse: string | null;
+}
+
+function RMPTags({ professor, selectedCourse }: RMPTagsProps) {
+  // Extract and count all tags from reviews
+  const getTagsWithCounts = () => {
+    const tagCounts: { [key: string]: number } = {};
+    
+    if (!professor.reviews || typeof professor.reviews !== 'object') return [];
+    
+    Object.entries(professor.reviews).forEach(([courseCode, courseReviews]) => {
+      // If a course is selected, only include tags for that course
+      if (selectedCourse && courseCode !== selectedCourse) return;
+      
+      const reviewsArray = Array.isArray(courseReviews) ? courseReviews : [courseReviews];
+      
+      reviewsArray.forEach(review => {
+        if (review.ratingTags && Array.isArray(review.ratingTags)) {
+          review.ratingTags.forEach((tag: string) => {
+            if (tag && tag.trim() !== '') {
+              const cleanTag = tag.trim();
+              tagCounts[cleanTag] = (tagCounts[cleanTag] || 0) + 1;
+            }
+          });
+        }
+      });
+    });
+    
+    // Convert to array and sort by count (descending)
+    return Object.entries(tagCounts)
+      .map(([tag, count]) => ({ tag, count }))
+      .sort((a, b) => b.count - a.count);
+  };
+
+  const tagsWithCounts = getTagsWithCounts();
+
+  // Categorize tags into strengths, expectations, and challenges
+  const categorizedTags = {
+    strengths: [] as { tag: string; count: number }[],
+    expectations: [] as { tag: string; count: number }[],
+    challenges: [] as { tag: string; count: number }[]
+  };
+
+  tagsWithCounts.forEach(({ tag, count }) => {
+    const lowerTag = tag.toLowerCase();
+    
+    // Positive/Strength tags
+    if (lowerTag.includes('amazing') || lowerTag.includes('great') || lowerTag.includes('helpful') || 
+        lowerTag.includes('clear') || lowerTag.includes('caring') || lowerTag.includes('funny') ||
+        lowerTag.includes('extra credit') || lowerTag.includes('accessible') || lowerTag.includes('inspirational') ||
+        lowerTag.includes('good') || lowerTag.includes('respected') || lowerTag.includes('hilarious') ||
+        lowerTag.includes('gives good feedback')) {
+      categorizedTags.strengths.push({ tag, count });
+    }
+    // Challenge/Warning tags
+    else if (lowerTag.includes('tough') || lowerTag.includes('hard') || lowerTag.includes('difficult') || 
+             lowerTag.includes('skip') || lowerTag.includes('avoid') || lowerTag.includes('boring') ||
+             lowerTag.includes('confusing') || lowerTag.includes('unhelpful') || lowerTag.includes('rude') ||
+             lowerTag.includes('grader') || lowerTag.includes('won\'t pass')) {
+      categorizedTags.challenges.push({ tag, count });
+    }
+    // What to Expect tags (neutral/informational)
+    else {
+      categorizedTags.expectations.push({ tag, count });
+    }
+  });
+
+  // Get size class based on count for visual hierarchy
+  const getSizeClass = (count: number, maxCount: number) => {
+    const ratio = count / maxCount;
+    if (ratio >= 0.8) return 'text-2xl px-4 py-3';
+    if (ratio >= 0.6) return 'text-xl px-4 py-2';
+    if (ratio >= 0.4) return 'text-lg px-3 py-2';
+    if (ratio >= 0.2) return 'text-base px-3 py-2';
+    return 'text-sm px-2 py-1';
+  };
+
+  const maxCount = Math.max(...tagsWithCounts.map(t => t.count));
+
+  // Render category section
+  const renderCategory = (
+    title: string, 
+    tags: { tag: string; count: number }[], 
+    bgColor: string, 
+    borderColor: string,
+    textColor: string,
+    icon: string
+  ) => {
+    if (tags.length === 0) return null;
+
+          return (
+        <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <div className="flex items-center gap-2 mb-4">
+            {icon && <span className="text-2xl">{icon}</span>}
+            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+            <span className="text-sm text-gray-500">
+              ({tags.length} tag{tags.length !== 1 ? 's' : ''})
+            </span>
+          </div>
+        <div className="flex flex-wrap gap-3">
+          {tags.map(({ tag, count }) => (
+            <span
+              key={tag}
+              className={`${getSizeClass(count, maxCount)} ${bgColor} ${textColor} ${borderColor} rounded-full font-medium border flex items-center gap-2 transition-transform hover:scale-105 cursor-default`}
+            >
+              {tag}
+              <span className="text-xs opacity-75 bg-white bg-opacity-30 px-2 py-0.5 rounded-full">
+                {count}
+              </span>
+            </span>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+    if (tagsWithCounts.length === 0) {
+    return (
+      <div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Student Feedback Overview</h2>
+        <div className="text-center py-8 text-gray-500 bg-gray-50 rounded-lg">
+          {selectedCourse 
+            ? `No student tags available for ${selectedCourse} reviews.`
+            : 'No student tags available from reviews.'
+          }
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">Student Feedback Overview</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {renderCategory(
+          'Strengths', 
+          categorizedTags.strengths, 
+          'bg-green-100', 
+          'border-green-300',
+          'text-green-800',
+          ''
+        )}
+        
+        {renderCategory(
+          'What to Expect', 
+          categorizedTags.expectations, 
+          'bg-blue-100', 
+          'border-blue-300',
+          'text-blue-800',
+          ''
+        )}
+        
+        {renderCategory(
+          'Challenges', 
+          categorizedTags.challenges, 
+          'bg-red-100', 
+          'border-red-300',
+          'text-red-800',
+          ''
+        )}
+      </div>
     </div>
   );
 }
@@ -652,7 +914,7 @@ function CourseReviews({ professor }: CourseReviewsProps) {
     
     return count > 0 ? (sum / count).toFixed(1) : 'N/A';
   };
-
+  
   return (
     <div>
       <h2 className="text-2xl font-bold text-gray-900 mb-4">Course Reviews</h2>
@@ -724,6 +986,7 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<ProfessorTabType>("overview");
+  const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -842,17 +1105,28 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
 
           {/* Tab Content */}
           <div className="rounded-lg">
-            {/* Overview Tab */}
+                        {/* Overview Tab */}
             {activeTab === 'overview' && (
-              <div className="flex flex-col md:flex-row gap-8">
-                {/* Left column - Overview information */}
-                <div className="md:w-1/2">
-                  <CoursesTaught professor={professor} />
-          </div>
+              <div className="space-y-8">
+                <div className="flex flex-col md:flex-row gap-8">
+                  {/* Left column - Overview information */}
+                  <div className="md:w-1/2">
+                    <CoursesTaught 
+                      professor={professor} 
+                      selectedCourse={selectedCourse}
+                      onCourseSelect={setSelectedCourse}
+                    />
+                  </div>
 
-                {/* Right column - Professor Stats */}
-                <div className="md:w-1/2">
-                  <ProfessorStats professor={professor} />
+                  {/* Right column - Professor Stats */}
+                  <div className="md:w-1/2">
+                    <ProfessorStats professor={professor} selectedCourse={selectedCourse} onCourseSelect={setSelectedCourse} />
+                  </div>
+                </div>
+
+                {/* Student Tags Section */}
+                <div className="border-t pt-8">
+                  <RMPTags professor={professor} selectedCourse={selectedCourse} />
                 </div>
               </div>
             )}
@@ -903,17 +1177,24 @@ export default function ProfessorPage({ params }: { params: Promise<{ id: string
 
             {/* Reviews Tab */}
             {activeTab === 'reviews' && (
-              <div className="flex flex-col md:flex-row gap-8">
-                {/* Left column - Reviews */}
-                <div className="md:w-1/2">
-                  <CourseReviews professor={professor} />
+              <div className="space-y-8">
+                <div className="flex flex-col md:flex-row gap-8">
+                  {/* Left column - Reviews */}
+                  <div className="md:w-1/2">
+                    <CourseReviews professor={professor} />
+                  </div>
+
+                  {/* Right column - Professor Stats */}
+                  <div className="md:w-1/2">
+                    <ProfessorStats professor={professor} selectedCourse={selectedCourse} onCourseSelect={setSelectedCourse} />
+                  </div>
                 </div>
 
-                {/* Right column - Professor Stats */}
-                <div className="md:w-1/2">
-                  <ProfessorStats professor={professor} />
+                {/* Student Tags Section */}
+                <div className="border-t pt-8">
+                  <RMPTags professor={professor} selectedCourse={selectedCourse} />
                 </div>
-            </div>
+              </div>
             )}
           </div>
         </div>
