@@ -3,6 +3,25 @@
 import { Handle, Position, NodeProps, useStore } from 'reactflow';
 import { CourseNodeData } from '@/types/course';
 
+// Function to darken a hex color
+function darkenColor(hex: string, amount: number = 0.2): string {
+  // Remove the # if present
+  const color = hex.replace('#', '');
+  
+  // Convert to RGB
+  const r = parseInt(color.substr(0, 2), 16);
+  const g = parseInt(color.substr(2, 2), 16);
+  const b = parseInt(color.substr(4, 2), 16);
+  
+  // Darken each component
+  const darkenedR = Math.max(0, Math.floor(r * (1 - amount)));
+  const darkenedG = Math.max(0, Math.floor(g * (1 - amount)));
+  const darkenedB = Math.max(0, Math.floor(b * (1 - amount)));
+  
+  // Convert back to hex
+  return `#${darkenedR.toString(16).padStart(2, '0')}${darkenedG.toString(16).padStart(2, '0')}${darkenedB.toString(16).padStart(2, '0')}`;
+}
+
 // Custom node component for courses
 function CourseNode({ data }: { data: CourseNodeData }) {
   // Get the current zoom level from ReactFlow store
@@ -14,6 +33,7 @@ function CourseNode({ data }: { data: CourseNodeData }) {
         className="flex items-center justify-center rounded-md px-4 py-2 font-bold text-lg cursor-pointer transition-all duration-200"
         style={{ 
           backgroundColor: data.categoryColor,
+          border: `2px solid ${darkenColor(data.categoryColor)}`, // Darker shade of the category color
           minWidth: '160px',
           textAlign: 'center',
           color: '#1f2937' // Dark gray text for better visibility
@@ -39,7 +59,7 @@ function CourseNode({ data }: { data: CourseNodeData }) {
       }`}
               style={{
           backgroundColor: data.categoryColor, // Fully opaque
-          border: `2px solid ${data.categoryColor}`,
+          border: `2px solid ${darkenColor(data.categoryColor)}`, // Darker shade of the node color
           transition: 'all 0.3s ease',
           opacity: data.isFirstDegreeConnection ? 0.3 : 1,
           zIndex: zIndex,

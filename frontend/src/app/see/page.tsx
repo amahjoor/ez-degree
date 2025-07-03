@@ -77,7 +77,7 @@ export default function SeePage() {
   const [connectionFilter, setConnectionFilter] = useState<number>(0); // 0 means no filter
   const [showPrereqsCoreqs, setShowPrereqsCoreqs] = useState<boolean>(false);
   const [showUnlocks, setShowUnlocks] = useState<boolean>(false);
-  const [showFirstDegreeConnections, setShowFirstDegreeConnections] = useState<boolean>(false);
+  const [hideFirstDegreeConnections, setHideFirstDegreeConnections] = useState<boolean>(false);
 
   // Fetch comprehensive data on component mount
   useEffect(() => {
@@ -391,14 +391,14 @@ export default function SeePage() {
       setConnectionFilter(0);
       setShowPrereqsCoreqs(false);
       setShowUnlocks(false);
-      setShowFirstDegreeConnections(false);
+      setHideFirstDegreeConnections(false);
     } else {
       setSelectedMajor('');
       setSelectedCategories([]); // Clear filters when major is cleared
       setConnectionFilter(0);
       setShowPrereqsCoreqs(false);
       setShowUnlocks(false);
-      setShowFirstDegreeConnections(false);
+      setHideFirstDegreeConnections(false);
     }
   };
 
@@ -427,7 +427,7 @@ export default function SeePage() {
     setConnectionFilter(0);
     setShowPrereqsCoreqs(false);
     setShowUnlocks(false);
-    setShowFirstDegreeConnections(false);
+    setHideFirstDegreeConnections(false);
   };
 
   return (
@@ -666,28 +666,27 @@ export default function SeePage() {
                           </span>
                         </div>
                       )}
+
+                      {/* Hide First Degree Connections Toggle - appears when filters are active */}
+                      {(selectedCategories.length > 0 || showPrereqsCoreqs || showUnlocks || connectionFilter > 0) && (
+                        <div className="flex items-center gap-2 ml-4">
+                          <span className="text-xs font-medium text-gray-700 whitespace-nowrap">Hide related</span>
+                          <button 
+                            onClick={() => setHideFirstDegreeConnections(!hideFirstDegreeConnections)}
+                            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${hideFirstDegreeConnections ? 'bg-primary-blue' : 'bg-gray-200'}`}
+                            role="switch"
+                            aria-checked={hideFirstDegreeConnections}
+                          >
+                            <span
+                              className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${hideFirstDegreeConnections ? 'translate-x-[24px]' : 'translate-x-[3px]'}`}
+                            />
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
 
-                  {/* General Filter Options */}
-                  {(selectedCategories.length > 0 || showPrereqsCoreqs || showUnlocks || connectionFilter > 0) && (
-                    <div className="mt-4 pt-3 border-t border-gray-200">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">General Options</span>
-                      </div>
-                      
-                      {/* First Degree Connections Toggle */}
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={showFirstDegreeConnections}
-                          onChange={(e) => setShowFirstDegreeConnections(e.target.checked)}
-                          className="mr-2 h-3 w-3 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                        />
-                        <span className="text-xs text-gray-700">Show all 1st degree connections</span>
-                      </label>
-                    </div>
-                  )}
+
                 </div>
               )}
             </div>
@@ -725,7 +724,7 @@ export default function SeePage() {
                         connectionFilter={connectionFilter}
                         showPrereqsCoreqs={showPrereqsCoreqs}
                         showUnlocks={showUnlocks}
-                        showFirstDegreeConnections={showFirstDegreeConnections}
+                        showFirstDegreeConnections={!hideFirstDegreeConnections}
                         onCategoryFilterChange={setSelectedCategories}
                       />
                     </ReactFlowProvider>
