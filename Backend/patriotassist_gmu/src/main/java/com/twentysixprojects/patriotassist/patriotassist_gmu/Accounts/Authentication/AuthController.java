@@ -22,7 +22,7 @@ public class AuthController {
         try {
             userService.register(body.get("username"), body.get("password"));
             return ResponseEntity.ok(Map.of("message", "User registered"));
-        } catch (IllegalArgumentException | IOException e) {
+        } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
@@ -35,7 +35,7 @@ public class AuthController {
 
             String token = jwtUtil.generateToken(body.get("username"));
             return ResponseEntity.ok(Map.of("token", token));
-        } catch (IOException e) {
+        } catch (Exception e) {
             return ResponseEntity.status(500).body(Map.of("error", "Server error"));
         }
     }

@@ -1,0 +1,13 @@
+docker-compose up
+
+docker exec -it grad-db psql -U postgres -d grad_dev
+
+
+-- List all tables
+\dt
+
+-- Show the users table schema
+\d users
+
+-- See all rows in users
+SELECT * FROM users;

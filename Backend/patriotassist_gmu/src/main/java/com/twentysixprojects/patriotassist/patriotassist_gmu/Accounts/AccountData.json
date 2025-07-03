@@ -4,4 +4,7 @@
 }, {
   "username" : "TestBobb",
   "password" : "$2a$10$8JegR/pzI4Nu7xlwRzJjAOh94XTUq6X7nZLt9Y1qF18GEjL23Y8Km"
+}, {
+  "username" : "test_ok",
+  "password" : "$2a$10$h.Zq37WygkYVzX/re53ld.xcEiSIsaQsIRKOMXYPlk3ow1/XOZ3S."
 } ]
