@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useAuth } from '../AuthContext';
 
 export default function SignUpPage() {
@@ -22,45 +23,94 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center p-4">
-      <form onSubmit={handle} className="bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6 text-white">
-        <h1 className="text-3xl font-bold text-center">📝 Sign Up</h1>
+    <div className="flex-1 bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full">
+        <div className="bg-white rounded-xl shadow-lg p-8">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              Create your account
+            </h1>
+            <p className="text-gray-600">
+              Join ez degree to start planning your degree
+            </p>
+          </div>
 
-        <input
-          value={u}
-          onChange={(e) => setU(e.target.value)}
-          placeholder="Username"
-          required
-          className="w-full px-4 py-2 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+          {/* Form */}
+          <form onSubmit={handle} className="space-y-6">
+            <div>
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
+                Username
+              </label>
+              <input
+                id="username"
+                type="text"
+                value={u}
+                onChange={(e) => setU(e.target.value)}
+                placeholder="Choose a username"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors"
+              />
+            </div>
 
-        <input
-          type="password"
-          value={p}
-          onChange={(e) => setP(e.target.value)}
-          placeholder="Password"
-          required
-          className="w-full px-4 py-2 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                Password
+              </label>
+              <input
+                id="password"
+                type="password"
+                value={p}
+                onChange={(e) => setP(e.target.value)}
+                placeholder="Create a password"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors"
+              />
+            </div>
 
-        <input
-          type="password"
-          value={p2}
-          onChange={(e) => setP2(e.target.value)}
-          placeholder="Confirm Password"
-          required
-          className="w-full px-4 py-2 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+            <div>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                Confirm Password
+              </label>
+              <input
+                id="confirmPassword"
+                type="password"
+                value={p2}
+                onChange={(e) => setP2(e.target.value)}
+                placeholder="Confirm your password"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition-colors"
+              />
+            </div>
 
-        {error && <p className="text-red-400 text-sm text-center">{error}</p>}
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                <p className="text-red-600 text-sm">{error}</p>
+              </div>
+            )}
 
-        <button
-          type="submit"
-          className="w-full py-2 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-blue-500 hover:to-cyan-400 rounded-lg text-white font-semibold transition-all duration-300"
-        >
-          Register
-        </button>
-      </form>
+            <button
+              type="submit"
+              className="w-full bg-primary-blue hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-blue focus:ring-offset-2"
+            >
+              Create Account
+            </button>
+          </form>
+
+          {/* Login link */}
+          <div className="mt-6 text-center">
+            <p className="text-gray-600 text-sm">
+              Already have an account?{' '}
+              <Link 
+                href="/account/login" 
+                className="text-primary-blue hover:text-blue-600 font-medium underline"
+              >
+                Sign in
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

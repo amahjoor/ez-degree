@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <AuthProvider>
           <Nav />
-          <main className="flex-grow">
+          <main className="flex-grow flex flex-col">
             {children}
           </main>
         </AuthProvider>

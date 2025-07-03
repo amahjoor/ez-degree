@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Major, Concentration, Requirements } from '@/types/course';
+import { Major, Concentration, Requirements, ParsedMajorData, ParsedRequirementGroup, ProgramTypeFilter } from '@/types/course';
 import { SkeletonList, SkeletonCard } from '../ui';
 import MajorSelector from './MajorSelector';
 import CourseOverlay from './CourseOverlay';
 import RequirementsList from './RequirementsList';
 import { DegreeRequirementsSidebarProps, RequirementGroup, Requirement } from './types';
 import type { ClassSession } from '../SemesterCalendar';
+import { majorDataService } from '@/utils/majorDataService';
 
 // API configuration
 const API_BASE_URL = '/api';
@@ -22,7 +23,9 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
   dayTimeRanges,
 }) => {
   const [loading, setLoading] = useState(false);
+  const [programs, setPrograms] = useState<ParsedMajorData[]>([]);
   const [majors, setMajors] = useState<Major[]>([]);
+  const [selectedProgram, setSelectedProgram] = useState<string>("");
   const [selectedMajor, setSelectedMajor] = useState<string>("");
   const [concentrations, setConcentrations] = useState<Concentration[]>([]);
   const [selectedConcentration, setSelectedConcentration] = useState<string>('');
@@ -31,42 +34,64 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
   const [requirementGroups, setRequirementGroups] = useState<RequirementGroup[]>([]);
   const [showMajorSelect, setShowMajorSelect] = useState<boolean>(true);
   
+  // New state for enhanced functionality
+  const [programTypeFilter, setProgramTypeFilter] = useState<ProgramTypeFilter>({
+    undergraduate: true,
+    graduate: true,
+    major: true,
+    minor: true,
+    certificate: true
+  });
+  const [selectedProgramTypes, setSelectedProgramTypes] = useState<string[]>(['Major']);
+  
+  // Helper function to convert string concentrations to Concentration objects
+  const stringToConcentrations = (names: string[]): Concentration[] => {
+    return names.map(name => ({
+      id: name.toLowerCase().replace(/\s+/g, '-'),
+      name: name
+    }));
+  };
+  
   // Course overlay state
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [overlayPosition, setOverlayPosition] = useState({ x: 0, y: 0 });
   const [selectedCourseCode, setSelectedCourseCode] = useState<string>('');
 
-  // Fetch majors on component mount
+  // Fetch programs on component mount
   useEffect(() => {
-    if (!isApiAvailable) return;
-    
-    async function fetchMajors() {
+    async function fetchPrograms() {
       try {
         setLoading(true);
-        const response = await fetch(`${API_BASE_URL}/requirements/majors`);
-        if (!response.ok) {
-          if (response.status === 404) {
-            throw new Error('Major requirements API endpoint not found');
-          } else {
-            throw new Error(`Failed to fetch majors: ${response.statusText}`);
-          }
-        }
-        const data = await response.json();
-        setMajors(data.majors);
+        setRequirementsError('');
+        
+        // Load all programs from local data
+        const allPrograms = await majorDataService.getAllPrograms();
+        setPrograms(allPrograms);
+        
+        // Filter for majors to maintain backward compatibility
+        const majorPrograms = allPrograms.filter(p => p.programType === 'Major');
+        const majorData: Major[] = majorPrograms.map(program => ({
+          id: program.banner,
+          name: program.name,
+          college: program.college,
+          degree_type: program.degreeType
+        }));
+        setMajors(majorData);
+        
       } catch (error) {
-        console.error('Error fetching majors:', error);
-        setRequirementsError('Error connecting to the requirements API. Please ensure the server is running.');
+        console.error('Error fetching programs:', error);
+        setRequirementsError('Error loading program data. Please try again later.');
       } finally {
         setLoading(false);
       }
     }
 
-    fetchMajors();
-  }, [isApiAvailable]);
+    fetchPrograms();
+  }, []);
 
   // Fetch concentrations when a major is selected
   useEffect(() => {
-    if (!selectedMajor || !isApiAvailable) {
+    if (!selectedMajor) {
       setConcentrations([]);
       setSelectedConcentration('');
       return;
@@ -74,19 +99,14 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
 
     async function fetchConcentrations() {
       try {
-        const response = await fetch(`${API_BASE_URL}/requirements/majors/${selectedMajor}/concentrations`);
-        
-        if (!response.ok) {
-          if (response.status === 404) {
-            setConcentrations([]);
-            return;
-          } else {
-            throw new Error(`Failed to fetch concentrations: ${response.statusText}`);
-          }
+        // Find the selected program
+        const program = programs.find(p => p.banner === selectedMajor || p.name === selectedMajor);
+        if (program && program.concentrations.length > 0) {
+          const concentrationData = stringToConcentrations(program.concentrations);
+          setConcentrations(concentrationData);
+        } else {
+          setConcentrations([]);
         }
-        
-        const data = await response.json();
-        setConcentrations(data.concentrations || []);
       } catch (error) {
         console.error('Error fetching concentrations:', error);
         setConcentrations([]);
@@ -94,46 +114,61 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
     }
 
     fetchConcentrations();
-  }, [selectedMajor, isApiAvailable]);
+  }, [selectedMajor, programs]);
 
   // Fetch requirements for selected major
   useEffect(() => {
-    if (!selectedMajor || !isApiAvailable) return;
+    if (!selectedMajor) return;
 
     async function fetchRequirements() {
       setLoading(true);
       setRequirementsError('');
       
       try {
-        let url = `${API_BASE_URL}/requirements/majors/${selectedMajor}`;
-        if (selectedConcentration) {
-          url += `?concentration_id=${selectedConcentration}`;
+        // Find the selected program
+        const program = programs.find(p => p.banner === selectedMajor || p.name === selectedMajor);
+        if (!program) {
+          throw new Error(`Program ${selectedMajor} not found`);
         }
         
-        const response = await fetch(url);
-        if (!response.ok) {
-          if (response.status === 404) {
-            throw new Error(`Requirements for ${selectedMajor} not found`);
-          } else {
-            throw new Error(`Failed to fetch requirements: ${response.statusText}`);
-          }
-        }
-        const data = await response.json();
-        setRequirements(data);
+        // Get requirements, filtering by concentration if selected
+        const requirementGroups = await majorDataService.getProgramRequirements(
+          program.name, 
+          selectedConcentration || undefined
+        );
         
-        // Convert API requirements to our sidebar format
-        const convertedGroups: RequirementGroup[] = data.categories.map((category: any) => ({
-          title: category.name,
+        // Convert to sidebar format
+        const convertedGroups: RequirementGroup[] = requirementGroups.map((group: ParsedRequirementGroup) => ({
+          title: group.title,
           isOpen: false,
-          requirements: category.courses.map((course: any) => ({
+          requirements: group.courses.map(course => ({
             id: course.code,
-            title: `${course.code} - ${course.title}`,
+            title: `${course.code} - ${course.name}`,
             completed: false,
-            credits: course.credits
+            credits: course.credits || undefined
           }))
         }));
         
         setRequirementGroups(convertedGroups);
+        
+        // Create a requirements object for backward compatibility
+        setRequirements({
+          degree_name: program.name,
+          total_credits: parseInt(program.totalCredits) || 120,
+          categories: convertedGroups.map(group => ({
+            name: group.title,
+            total_credits: 0, // Will be calculated or provided by the parsed data
+            courses: group.requirements?.map(req => ({
+              code: req.id,
+              title: req.title.replace(`${req.id} - `, ''),
+              credits: req.credits || 0,
+              alternatives: [],
+              prerequisites: '',
+              corequisites: ''
+            })) || []
+          }))
+        });
+        
       } catch (error: any) {
         setRequirementsError(error.message || 'Error loading requirements. Please try again later.');
         console.error('Error fetching requirements:', error);
@@ -143,7 +178,7 @@ const DegreeRequirementsSidebar: React.FC<DegreeRequirementsSidebarProps> = ({
     }
 
     fetchRequirements();
-  }, [selectedMajor, selectedConcentration, isApiAvailable]);
+  }, [selectedMajor, selectedConcentration, programs]);
 
   const handleGroupToggle = (index: number) => {
     const updatedGroups = [...requirementGroups];
