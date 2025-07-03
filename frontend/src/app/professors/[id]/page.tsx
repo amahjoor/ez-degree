@@ -723,6 +723,17 @@ interface RMPTagsProps {
 }
 
 function RMPTags({ professor, selectedCourse }: RMPTagsProps) {
+  // State for expanded categories
+  const [expandedCategories, setExpandedCategories] = useState<{
+    strengths: boolean;
+    expectations: boolean;
+    challenges: boolean;
+  }>({
+    strengths: false,
+    expectations: false,
+    challenges: false
+  });
+
   // Extract and count all tags from reviews
   const getTagsWithCounts = () => {
     const tagCounts: { [key: string]: number } = {};
@@ -791,49 +802,71 @@ function RMPTags({ professor, selectedCourse }: RMPTagsProps) {
     }
   });
 
-  // Get size class based on count for visual hierarchy
-  const getSizeClass = (count: number, maxCount: number) => {
-    const ratio = count / maxCount;
-    if (ratio >= 0.8) return 'text-2xl px-4 py-3';
-    if (ratio >= 0.6) return 'text-xl px-4 py-2';
-    if (ratio >= 0.4) return 'text-lg px-3 py-2';
-    if (ratio >= 0.2) return 'text-base px-3 py-2';
-    return 'text-sm px-2 py-1';
+    const maxCount = Math.max(...tagsWithCounts.map(t => t.count));
+
+  // Toggle category expansion
+  const toggleCategory = (category: 'strengths' | 'expectations' | 'challenges') => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
   };
 
-  const maxCount = Math.max(...tagsWithCounts.map(t => t.count));
+  // Generate visual bar for tag count
+  const generateBar = (count: number, maxCount: number, maxBarLength: number = 10) => {
+    const barLength = Math.max(1, Math.round((count / maxCount) * maxBarLength));
+    return '█'.repeat(barLength);
+  };
 
-  // Render category section
+  // Render category section with micro-charts
   const renderCategory = (
     title: string, 
     tags: { tag: string; count: number }[], 
     bgColor: string, 
     borderColor: string,
     textColor: string,
-    icon: string
+    categoryKey: 'strengths' | 'expectations' | 'challenges'
   ) => {
     if (tags.length === 0) return null;
 
-          return (
-        <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-          <div className="flex items-center gap-2 mb-4">
-            {icon && <span className="text-2xl">{icon}</span>}
+    const isExpanded = expandedCategories[categoryKey];
+    const displayTags = isExpanded ? tags : tags.slice(0, 5);
+    const hasMore = tags.length > 5;
+
+    return (
+      <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2">
             <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
             <span className="text-sm text-gray-500">
               ({tags.length} tag{tags.length !== 1 ? 's' : ''})
             </span>
           </div>
-        <div className="flex flex-wrap gap-3">
-          {tags.map(({ tag, count }) => (
-            <span
-              key={tag}
-              className={`${getSizeClass(count, maxCount)} ${bgColor} ${textColor} ${borderColor} rounded-full font-medium border flex items-center gap-2 transition-transform hover:scale-105 cursor-default`}
+          {hasMore && (
+            <button
+              onClick={() => toggleCategory(categoryKey)}
+              className="text-sm text-blue-600 hover:text-blue-800 font-medium"
             >
-              {tag}
-              <span className="text-xs opacity-75 bg-white bg-opacity-30 px-2 py-0.5 rounded-full">
-                {count}
-              </span>
-            </span>
+              {isExpanded ? 'Show Less' : 'Show All'}
+            </button>
+          )}
+        </div>
+        
+        <div className="space-y-2">
+          {displayTags.map(({ tag, count }) => (
+            <div key={tag} className="flex items-center gap-3">
+              <div className="flex items-center gap-2 flex-1 min-w-0">
+                <span className={`text-sm font-mono ${textColor.replace('text-', 'text-')} text-opacity-80`}>
+                  {generateBar(count, maxCount)}
+                </span>
+                <span className="text-sm text-gray-700 truncate">
+                  {tag}
+                </span>
+                <span className="text-xs text-gray-500 font-medium">
+                  ({count})
+                </span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -864,7 +897,7 @@ function RMPTags({ professor, selectedCourse }: RMPTagsProps) {
           'bg-green-100', 
           'border-green-300',
           'text-green-800',
-          ''
+          'strengths'
         )}
         
         {renderCategory(
@@ -873,7 +906,7 @@ function RMPTags({ professor, selectedCourse }: RMPTagsProps) {
           'bg-blue-100', 
           'border-blue-300',
           'text-blue-800',
-          ''
+          'expectations'
         )}
         
         {renderCategory(
@@ -882,7 +915,7 @@ function RMPTags({ professor, selectedCourse }: RMPTagsProps) {
           'bg-red-100', 
           'border-red-300',
           'text-red-800',
-          ''
+          'challenges'
         )}
       </div>
     </div>
