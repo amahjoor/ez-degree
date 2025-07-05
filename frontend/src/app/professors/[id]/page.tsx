@@ -104,6 +104,8 @@ interface ProfessorStatsProps {
 
 function ProfessorStats({ professor, selectedCourse, onCourseSelect }: ProfessorStatsProps) {
   // State for hover tooltips
+  const [showQualityTooltip, setShowQualityTooltip] = useState(false);
+  const [showGradeTooltip, setShowGradeTooltip] = useState(false);
   const [showDifficultyTooltip, setShowDifficultyTooltip] = useState(false);
   const [showTakeAgainTooltip, setShowTakeAgainTooltip] = useState(false);
   const [showTextbookTooltip, setShowTextbookTooltip] = useState(false);
@@ -294,7 +296,31 @@ function ProfessorStats({ professor, selectedCourse, onCourseSelect }: Professor
           {/* Quality */}
           {professorQuality && (
             <div className="text-center">
-              <div className="text-base text-black mb-2">Quality</div>
+              <div className="text-base text-black mb-2 flex items-center justify-center">
+                <span>Quality</span>
+                <div className="relative ml-1">
+                  <span 
+                    className="cursor-help text-gray-600 hover:text-black text-sm"
+                    onMouseEnter={() => setShowQualityTooltip(true)}
+                    onMouseLeave={() => setShowQualityTooltip(false)}
+                  >
+                    ⓘ
+                  </span>
+                  {showQualityTooltip && (
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-md shadow-lg whitespace-nowrap z-10">
+                      <div className="text-center">
+                        <div className="font-medium">
+                          Quality Rating: {professorQuality.toFixed(1)}/5
+                        </div>
+                        <div className="text-gray-300 mt-1">
+                          Based on {filteredReviews.filter(r => r.helpfulRating || r.clarityRating).length} student responses
+                        </div>
+                      </div>
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="flex items-baseline justify-center">
                 <span className={`text-4xl font-bold ${getQualityColor(professorQuality)}`}>
                   {professorQuality.toFixed(1)}
@@ -304,9 +330,38 @@ function ProfessorStats({ professor, selectedCourse, onCourseSelect }: Professor
             </div>
           )}
 
-          {/* Average Grade */}
+          {/* Most Common Grade */}
           <div className="text-center">
-            <div className="text-base text-black mb-2">Avg Grade</div>
+            <div className="text-base text-black mb-2 flex items-center justify-center">
+              <span>Predominant Grade</span>
+              <div className="relative ml-1">
+                <span 
+                  className="cursor-help text-gray-600 hover:text-black text-sm"
+                  onMouseEnter={() => setShowGradeTooltip(true)}
+                  onMouseLeave={() => setShowGradeTooltip(false)}
+                >
+                  ⓘ
+                </span>
+                {showGradeTooltip && (
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-md shadow-lg whitespace-nowrap z-10">
+                    <div className="text-center">
+                      <div className="font-medium">
+                        Most Common Grade: {averageGrade || 'No data'}
+                      </div>
+                      <div className="text-gray-300 mt-1">
+                        Based on {filteredReviews.filter(r => 
+                          r.grade && 
+                          r.grade.trim() !== '' && 
+                          r.grade.toLowerCase() !== 'not sure yet' &&
+                          r.grade.toLowerCase() !== 'rather not say'
+                        ).length} student responses
+                      </div>
+                    </div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                  </div>
+                )}
+              </div>
+            </div>
             <div className={`text-4xl font-bold ${averageGrade ? getGradeColor(averageGrade) : 'text-gray-400'}`}>
               {averageGrade || 'N/A'}
             </div>
@@ -375,7 +430,9 @@ function ProfessorStats({ professor, selectedCourse, onCourseSelect }: Professor
             </div>
             <div className="flex items-baseline justify-center">
               <span className={`text-4xl font-bold ${wouldTakeAgainPercent ? getWouldTakeAgainColor(wouldTakeAgainPercent) : 'text-gray-400'}`}>
-                {wouldTakeAgainPercent ? (Math.round(wouldTakeAgainPercent) >= 50 ? 'YES' : 'NO') : 'N/A'}
+                {wouldTakeAgainPercent ? 
+                  (Math.round(wouldTakeAgainPercent) >= 70 ? 'YES' : 
+                   Math.round(wouldTakeAgainPercent) >= 40 ? 'MAYBE' : 'NO') : 'N/A'}
               </span>
             </div>
           </div>

@@ -67,24 +67,63 @@ const getGradeColor = (grade: string): string => {
 };
 
 // Function to extract semester from date string
+// Maps review dates to the most likely semester the student actually took the course
 const extractSemesterFromDate = (dateStr: string): string => {
   try {
-    const date = new Date(dateStr);
-    const month = date.getMonth();
-    const year = date.getFullYear();
-    
-    // Define semester based on month
-    let semester;
-    if (month >= 0 && month <= 4) {      // Jan-May
-      semester = "Spring";
-    } else if (month >= 5 && month <= 7) { // June-Aug
-      semester = "Summer";
-    } else {                             // Sept-Dec
-      semester = "Fall";
+    if (!dateStr || dateStr.trim() === '') {
+      return "Unknown";
     }
     
-    return `${semester} ${year}`;
+    // Handle the specific format: "2018-06-29 02:47:28 +0000 UTC"
+    // Convert to a format JavaScript can parse
+    let cleanDateStr = dateStr.trim();
+    
+    // Remove the "+0000 UTC" suffix and replace with "Z" for UTC
+    if (cleanDateStr.includes('+0000 UTC')) {
+      cleanDateStr = cleanDateStr.replace(' +0000 UTC', 'Z');
+      // Also need to add "T" between date and time for ISO format
+      cleanDateStr = cleanDateStr.replace(' ', 'T');
+    }
+    
+    const date = new Date(cleanDateStr);
+    
+    // Check if date is valid
+    if (isNaN(date.getTime())) {
+      console.warn('Invalid date after cleanup:', cleanDateStr, 'from original:', dateStr);
+      return "Unknown";
+    }
+    
+    const month = date.getMonth(); // 0-based: Jan=0, Dec=11
+    const year = date.getFullYear();
+    
+    // Check if year is valid
+    if (isNaN(year) || year < 2000 || year > 2030) {
+      console.warn('Invalid year:', year, 'from date:', dateStr);
+      return "Unknown";
+    }
+    
+    let semester;
+    let semesterYear;
+    
+    // Map review timing to most likely course semester
+    if (month >= 0 && month <= 3) {      // Jan-Apr
+      // Reviews written in early year likely about previous Fall semester
+      semester = "Fall";
+      semesterYear = year - 1;
+    } else if (month >= 4 && month <= 7) { // May-Aug
+      // Reviews written in late spring/summer likely about current Spring semester
+      semester = "Spring";
+      semesterYear = year;
+    } else {                             // Sep-Dec
+      // Reviews written in fall likely about previous Spring semester
+      // (students often review when planning for next semester)
+      semester = "Spring";
+      semesterYear = year;
+    }
+    
+    return `${semester} ${semesterYear}`;
   } catch (e) {
+    console.warn('Error parsing date:', dateStr, e);
     return "Unknown";
   }
 };
@@ -140,8 +179,8 @@ const findMedian = (gradeDistribution: Record<string, { count: number; percentag
 };
 
 export default function GradeDistribution({ professors }: GradeDistributionProps) {
-  const [selectedProfessors, setSelectedProfessors] = useState<string[]>(['all']);
-  const [selectedSemesters, setSelectedSemesters] = useState<string[]>(['all']);
+  const [selectedProfessors, setSelectedProfessors] = useState<string[]>([]);
+  const [selectedSemesters, setSelectedSemesters] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [showAllSemesters, setShowAllSemesters] = useState<boolean>(false);
   const [showAllProfessors, setShowAllProfessors] = useState<boolean>(false);
@@ -149,7 +188,6 @@ export default function GradeDistribution({ professors }: GradeDistributionProps
   // Extract all available semesters from reviews
   const availableSemesters = useMemo(() => {
     const semesters = new Set<string>();
-    semesters.add('all'); // Always include "all" option
     
     professors.forEach(professor => {
       professor.reviews.forEach(review => {
@@ -160,72 +198,65 @@ export default function GradeDistribution({ professors }: GradeDistributionProps
       });
     });
     
-    // Sort semesters from newest to oldest
-    return Array.from(semesters).sort((a, b) => {
-      if (a === 'all') return -1; // "all" should always be first
-      if (b === 'all') return 1;
-      
-      // Extract year and semester for comparison
-      const [aSemester, aYear] = a.split(' ');
-      const [bSemester, bYear] = b.split(' ');
-      
-      // Compare years first
-      const yearDiff = parseInt(bYear) - parseInt(aYear);
-      if (yearDiff !== 0) return yearDiff;
-      
-      // If same year, compare semester
-      const semesterRank = { 'Spring': 0, 'Summer': 1, 'Fall': 2 };
-      return semesterRank[bSemester as keyof typeof semesterRank] - 
-             semesterRank[aSemester as keyof typeof semesterRank];
-    });
+          // Sort semesters from newest to oldest
+      return Array.from(semesters).sort((a, b) => {
+        // Handle "Unknown" semesters - push them to the end
+        if (a === "Unknown" && b === "Unknown") return 0;
+        if (a === "Unknown") return 1;
+        if (b === "Unknown") return -1;
+        
+        // Extract year and semester for comparison
+        const [aSemester, aYear] = a.split(' ');
+        const [bSemester, bYear] = b.split(' ');
+        
+        // Parse years safely
+        const aYearNum = parseInt(aYear);
+        const bYearNum = parseInt(bYear);
+        
+        // Handle invalid years
+        if (isNaN(aYearNum) || isNaN(bYearNum)) {
+          return a.localeCompare(b);
+        }
+        
+        // Compare years first (newest first)
+        const yearDiff = bYearNum - aYearNum;
+        if (yearDiff !== 0) return yearDiff;
+        
+        // If same year, compare semester
+        const semesterRank = { 'Spring': 0, 'Summer': 1, 'Fall': 2 };
+        return (semesterRank[bSemester as keyof typeof semesterRank] || 999) - 
+               (semesterRank[aSemester as keyof typeof semesterRank] || 999);
+      });
   }, [professors]);
   
   // Filter and limit semesters based on search and show more toggle
   const displayedSemesters = useMemo(() => {
-    // Always include 'all' and any selected semesters
-    const prioritySemesters = ['all', ...selectedSemesters.filter(s => s !== 'all')];
-    const uniquePrioritySemesters = Array.from(new Set(prioritySemesters));
-    
-    // Filter other semesters by search term
+    // Filter semesters by search term
     const searchLower = searchTerm.toLowerCase();
     const filteredSemesters = availableSemesters.filter(sem => 
-      sem === 'all' || 
-      selectedSemesters.includes(sem) || 
       sem.toLowerCase().includes(searchLower)
     );
     
-    // If not showing all, limit to priority semesters plus recent ones
+    // If not showing all and not searching, limit to recent semesters
     if (!showAllSemesters && !searchTerm) {
-      // Show priority semesters + most recent 4 semesters
-      const recentSemesters = filteredSemesters
-        .filter(sem => sem !== 'all' && !selectedSemesters.includes(sem))
-        .slice(0, 4);
-      
-      return [...uniquePrioritySemesters, ...recentSemesters];
+      return filteredSemesters.slice(0, 5); // Show most recent 5 semesters
     }
     
     return filteredSemesters;
-  }, [availableSemesters, selectedSemesters, searchTerm, showAllSemesters]);
+  }, [availableSemesters, searchTerm, showAllSemesters]);
   
   // Toggle semester selection
   const toggleSemester = (semester: string) => {
-    if (semester === 'all') {
-      setSelectedSemesters(['all']);
-    } else {
-      const newSelection = selectedSemesters.includes('all') 
-        ? [semester] 
-        : selectedSemesters.includes(semester)
-          ? selectedSemesters.filter(s => s !== semester)
-          : [...selectedSemesters, semester];
-      
-      // If nothing is selected, default to 'all'
-      setSelectedSemesters(newSelection.length ? newSelection : ['all']);
-    }
+    const newSelection = selectedSemesters.includes(semester)
+      ? selectedSemesters.filter(s => s !== semester)
+      : [...selectedSemesters, semester];
+    
+    setSelectedSemesters(newSelection);
   };
   
   // Generate list of professors
   const availableProfessors = useMemo(() => {
-    const professorSet = new Set(['all']);
+    const professorSet = new Set<string>();
     professors.forEach(p => {
       professorSet.add(`${p.firstName} ${p.lastName}`);
     });
@@ -234,45 +265,27 @@ export default function GradeDistribution({ professors }: GradeDistributionProps
   
   // Filter professors for display based on search and visibility settings
   const displayedProfessors = useMemo(() => {
-    // Always include 'all' and any selected professors
-    const priorityProfessors = ['all', ...selectedProfessors.filter(p => p !== 'all')];
-    const uniquePriorityProfessors = Array.from(new Set(priorityProfessors));
-    
     // Filter by search term
     const searchLower = searchTerm.toLowerCase();
     const filteredProfessors = availableProfessors.filter(prof => 
-      prof === 'all' || 
-      selectedProfessors.includes(prof) || 
       prof.toLowerCase().includes(searchLower)
     );
     
     // Limit display if not searching or showing all
     if (!showAllProfessors && !searchTerm) {
-      // Show priority professors + first few others
-      const otherProfessors = filteredProfessors
-        .filter(prof => prof !== 'all' && !selectedProfessors.includes(prof))
-        .slice(0, 6); // Show up to 6 other professors
-      
-      return [...uniquePriorityProfessors, ...otherProfessors];
+      return filteredProfessors.slice(0, 8); // Show first 8 professors
     }
     
     return filteredProfessors;
-  }, [availableProfessors, selectedProfessors, searchTerm, showAllProfessors]);
+  }, [availableProfessors, searchTerm, showAllProfessors]);
   
   // Toggle professor selection
   const toggleProfessor = (professor: string) => {
-    if (professor === 'all') {
-      setSelectedProfessors(['all']);
-    } else {
-      const newSelection = selectedProfessors.includes('all') 
-        ? [professor] 
-        : selectedProfessors.includes(professor)
-          ? selectedProfessors.filter(p => p !== professor)
-          : [...selectedProfessors, professor];
-      
-      // If nothing is selected, default to 'all'
-      setSelectedProfessors(newSelection.length ? newSelection : ['all']);
-    }
+    const newSelection = selectedProfessors.includes(professor)
+      ? selectedProfessors.filter(p => p !== professor)
+      : [...selectedProfessors, professor];
+    
+    setSelectedProfessors(newSelection);
   };
   
   const gradeDistribution = useMemo(() => {
@@ -286,8 +299,9 @@ export default function GradeDistribution({ professors }: GradeDistributionProps
     
     professors.forEach(professor => {
       // Skip if filtering by professor and this professor isn't selected
+      // If no professors are selected, include all professors
       const professorName = `${professor.firstName} ${professor.lastName}`;
-      if (!selectedProfessors.includes('all') && !selectedProfessors.includes(professorName)) {
+      if (selectedProfessors.length > 0 && !selectedProfessors.includes(professorName)) {
         return;
       }
       
@@ -298,7 +312,8 @@ export default function GradeDistribution({ professors }: GradeDistributionProps
         if (!GRADE_ORDER.includes(review.grade as GradeKey)) return;
         
         // Apply semester filter if needed
-        if (!selectedSemesters.includes('all')) {
+        // If no semesters are selected, include all semesters
+        if (selectedSemesters.length > 0) {
           const reviewSemester = extractSemesterFromDate(review.date);
           if (!selectedSemesters.includes(reviewSemester)) return;
         }
@@ -375,12 +390,12 @@ export default function GradeDistribution({ professors }: GradeDistributionProps
                   key={professor}
                   onClick={() => toggleProfessor(professor)}
                   className={`px-3 py-1 text-sm rounded-full transition-colors ${
-                    selectedProfessors.includes(professor) || (professor === 'all' && selectedProfessors.includes('all'))
+                    selectedProfessors.includes(professor)
                       ? 'bg-primary-blue text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
-                  {professor === 'all' ? 'All Professors' : professor}
+                  {professor}
                 </button>
               ))}
               
@@ -420,12 +435,12 @@ export default function GradeDistribution({ professors }: GradeDistributionProps
                   key={semester}
                   onClick={() => toggleSemester(semester)}
                   className={`px-3 py-1 text-sm rounded-full transition-colors ${
-                    selectedSemesters.includes(semester) || (semester === 'all' && selectedSemesters.includes('all'))
+                    selectedSemesters.includes(semester)
                       ? 'bg-primary-blue text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
-                  {semester === 'all' ? 'All Semesters' : semester}
+                  {semester}
                 </button>
               ))}
               
