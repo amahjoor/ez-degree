@@ -5,12 +5,28 @@ import SemesterPlanner, { SemesterPlannerHandle } from "../components/FourYearPl
 import DegreeRequirementsSidebar from "../components/sidebar/DegreeRequirementsSidebar";
 import WeeklyCalendar, { WeeklyCalendarHandle } from '../components/SemesterCalendar';
 import { SkeletonCard } from '../components/ui';
+import { plannerSlotFromCatalogTerm } from '@/utils/academicTerms';
+import { useAuth } from '../account/AuthContext';
+import type { CourseEntry } from '../components/FourYearPlanner';
+import type { ClassSession } from '../components/SemesterCalendar';
 
-// API configuration
 const API_BASE_URL = '/api';
 
+function authHeaders(): HeadersInit {
+  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers.Authorization = `Bearer ${token}`;
+  return headers;
+}
+
 export default function PlanPage() {
+  const { user } = useAuth();
   const weeklyCalendarRef = useRef<WeeklyCalendarHandle>(null);
+  const fourYearRef = useRef<Record<string, CourseEntry[]>>({});
+  const weeklyRef = useRef<ClassSession[]>([]);
+  const hydratedRef = useRef(false);
+  const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'login'>('idle');
   // State to track API availability
   const [isApiAvailable, setIsApiAvailable] = useState<boolean>(true);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -25,7 +41,7 @@ export default function PlanPage() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   
   // State to track current semester for the course overlay
-  const [currentSemester, setCurrentSemester] = useState<string>('Summer 2025');
+  const [currentSemester, setCurrentSemester] = useState<string>('');
   
   // State to track time availability data
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]);
@@ -76,6 +92,72 @@ export default function PlanPage() {
   useEffect(() => {
     checkApiConnection();
   }, [checkApiConnection]);
+
+  const queueSave = useCallback(() => {
+    if (!user) {
+      setSaveStatus('login');
+      return;
+    }
+    if (!hydratedRef.current) return;
+    if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
+    setSaveStatus('saving');
+    saveTimerRef.current = setTimeout(async () => {
+      try {
+        const res = await fetch('/api/me/plan', {
+          method: 'PUT',
+          headers: authHeaders(),
+          body: JSON.stringify({
+            fourYear: fourYearRef.current,
+            weekly: weeklyRef.current,
+          }),
+        });
+        setSaveStatus(res.ok ? 'saved' : 'error');
+      } catch {
+        setSaveStatus('error');
+      }
+    }, 800);
+  }, [user]);
+
+  const handlePlanChange = useCallback((plan: Record<string, CourseEntry[]>) => {
+    fourYearRef.current = plan;
+    queueSave();
+  }, [queueSave]);
+
+  const handleScheduleChange = useCallback((sessions: ClassSession[]) => {
+    weeklyRef.current = sessions;
+    queueSave();
+  }, [queueSave]);
+
+  useEffect(() => {
+    if (!user || isLoading || !isApiAvailable) {
+      hydratedRef.current = false;
+      if (!user) setSaveStatus('login');
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch('/api/me/plan', { headers: authHeaders() });
+        if (!res.ok || cancelled) return;
+        const data = await res.json();
+        const fourYear = data.fourYear || {};
+        const weekly = data.weekly || [];
+        fourYearRef.current = fourYear;
+        weeklyRef.current = weekly;
+        semesterPlannerRef.current?.setPlan(fourYear);
+        weeklyCalendarRef.current?.setClasses(weekly);
+        setTimeout(() => {
+          if (!cancelled) hydratedRef.current = true;
+        }, 50);
+        setSaveStatus('saved');
+      } catch {
+        if (!cancelled) setSaveStatus('error');
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [user, isLoading, isApiAvailable]);
 
   // Update current semester and time availability when on weekly view
   useEffect(() => {
@@ -180,6 +262,14 @@ export default function PlanPage() {
                   </h2>
                 </button>
               </div>
+              <p className="text-sm text-gray-500 px-3">
+                {saveStatus === 'saving' && 'Saving…'}
+                {saveStatus === 'saved' && 'Saved to your account'}
+                {saveStatus === 'error' && 'Could not save'}
+                {saveStatus === 'login' && (
+                  <a href="/account/login" className="text-primary-blue underline">Log in to save</a>
+                )}
+              </p>
               
               {/* Sidebar Toggle Button */}
               <button
@@ -217,12 +307,12 @@ export default function PlanPage() {
             <div className="h-full overflow-auto">
             {/* 4-Year Plan */}
             <div className={activeView === 'long-term' ? 'block' : 'hidden'}>
-              <SemesterPlanner ref={semesterPlannerRef} />
+              <SemesterPlanner ref={semesterPlannerRef} onPlanChange={handlePlanChange} />
             </div>
 
             {/* Semester Schedule */}
             <div className={activeView === 'weekly' ? 'block' : 'hidden'}>
-              <WeeklyCalendar ref={weeklyCalendarRef} />
+              <WeeklyCalendar ref={weeklyCalendarRef} onScheduleChange={handleScheduleChange} />
             </div>
         </div>
             </div>
@@ -238,17 +328,8 @@ export default function PlanPage() {
                     // In a more advanced implementation, you could switch to the correct term view
                     weeklyCalendarRef.current.addSessions(sessions);
                   } else if (activeView === 'long-term' && semesterPlannerRef.current && term) {
-                    // Add to 4-year plan - map term to year/semester
-                    const termMapping: Record<string, { year: number; semester: string }> = {
-                      'Summer 2025': { year: 1, semester: 'Summer' },
-                      'Fall 2025': { year: 1, semester: 'Fall' },
-                      'Spring 2026': { year: 1, semester: 'Spring' },
-                      // Add more mappings as needed
-                    };
-                    
-                    const mapping = termMapping[term];
+                    const mapping = plannerSlotFromCatalogTerm(term);
                     if (mapping) {
-                      // Add each session as a course to the appropriate semester
                       sessions.forEach(session => {
                         semesterPlannerRef.current?.addCourse(
                           session.courseCode,

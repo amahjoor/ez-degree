@@ -29,8 +29,14 @@ export default function LoginPage() {
               Welcome back!
             </h1>
             <p className="text-gray-600">
-              Sign in to your account to continue
+              Sign in to save your plan
             </p>
+          </div>
+
+          <div className="mb-6 rounded-lg bg-blue-50 border border-blue-100 p-4 text-sm text-blue-900">
+            <p className="font-medium mb-1">Judge demo account</p>
+            <p>Username: <span className="font-mono">judge</span></p>
+            <p>Password: <span className="font-mono">MasonPride2026</span></p>
           </div>
 
           {/* Form */}
