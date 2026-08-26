@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>ez degree</title>
+        <title>ez.degree</title>
         <meta name="description" content="A tool to help GMU students navigate degree requirements and plan their courses" />
       </head>
       <body

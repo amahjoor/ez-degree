@@ -15,7 +15,7 @@ export function Nav() {
         {/* Left side: Logo and Navigation */}
         <div className="flex items-center space-x-8">
           <Link href="/" className="font-bold text-xl hover:text-gray-200 transition-colors">
-            4yrplan
+            ez.degree
           </Link>
           
           <div className="flex space-x-6">

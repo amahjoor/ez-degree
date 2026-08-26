@@ -32,7 +32,7 @@ export default function SignUpPage() {
               Create your account
             </h1>
             <p className="text-gray-600">
-              Join ez degree to start planning your degree
+              Join ez.degree to start planning your degree
             </p>
           </div>
 

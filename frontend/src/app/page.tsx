@@ -76,7 +76,7 @@ export default function Home() {
 
         {/* Hero content */}
         <div className="text-center">
-          <h1 className="text-5xl mb-4 font-bold text-primary-green">4yrplan</h1>
+          <h1 className="text-5xl mb-4 font-bold text-primary-green">ez.degree</h1>
           <p className="text-center text-xl mb-8">
             Plan out your college courses easier than ever.
           </p>
@@ -105,7 +105,7 @@ export default function Home() {
           onClick={toggleHelpModal}
           className="text-primary-blue hover:text-primary-blue/80 text-md font-medium"
         >
-          How to use 4yrplan
+          How to use ez.degree
         </button>
       </div>
       {/* Help Modal */}
@@ -114,7 +114,7 @@ export default function Home() {
           <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-primary-green">How to Use 4yrplan</h2>
+                <h2 className="text-2xl font-bold text-primary-green">How to Use ez.degree</h2>
                 <button 
                   onClick={toggleHelpModal}
                   className="text-gray-500 hover:text-gray-700"
@@ -127,7 +127,7 @@ export default function Home() {
 
               <div className="prose max-w-none">
                 <h3 className="text-xl font-semibold text-primary-blue mb-2">Getting Started</h3>
-                <p>4yrplan helps you easily plan your college courses and track degree requirements. Here's features that what we offer:</p>
+                <p>ez.degree helps you easily plan your college courses and track degree requirements. Here's features that what we offer:</p>
                 
                 <div className="mt-4 mb-6">
                   <h4 className="font-medium text-lg text-primary-green">1. Search for Courses</h4>
@@ -138,7 +138,7 @@ export default function Home() {
                 </div>
 
                 <div className="bg-primary-blue/5 p-4 rounded-lg mt-6">
-                  <p>If you have questions or feedback, please send an email to <a href="mailto:hi@4yrplan.com" className="text-primary-blue hover:underline">hi@4yrplan.com</a> :)</p>
+                  <p>If you have questions or feedback, please send an email to <a href="mailto:hi@ez.degree" className="text-primary-blue hover:underline">hi@ez.degree</a> :)</p>
                 </div>
               </div>
             </div>
