@@ -173,12 +173,49 @@ function parseLocalMajorData(filename: string, data: LocalMajorData): ParsedMajo
   };
 }
 
+function parseFromRequirementsJson(id: string, data: any): ParsedMajorData {
+  const name = data.degree_name || id;
+  const { programType, degreeType, college } = determineProgramType(name, data.categories || []);
+  const requirementGroups = (data.categories || []).map((category: any) => ({
+    title: category.name,
+    totalCredits: category.total_credits,
+    courses: (category.courses || []).map((course: any) => ({
+      code: course.code || course.id || '',
+      name: course.title || course.name || '',
+      credits: course.credits ?? null,
+      isRequired: true,
+      isChoice: Array.isArray(course.alternatives) && course.alternatives.length > 0,
+      choiceGroup: '',
+      footnotes: [],
+    })),
+    footnotes: {},
+    preNotes: [],
+    postNotes: [],
+  }));
+  const concentrations = (data.concentrations || [])
+    .map((concentration: any) => concentration.name || concentration.id)
+    .filter(Boolean);
+
+  return {
+    banner: id,
+    name,
+    programType,
+    degreeType,
+    totalCredits: String(data.total_credits ?? ''),
+    college,
+    categories: [],
+    requirementGroups,
+    concentrations,
+    hasConcentrations: concentrations.length > 0,
+  };
+}
+
 let cachedData: ParsedMajorData[] | null = null;
 
 export async function GET(request: NextRequest) {
   try {
     // Return cached data if available
-    if (cachedData) {
+    if (cachedData !== null) {
       const { searchParams } = new URL(request.url);
       const type = searchParams.get('type');
       
@@ -187,47 +224,50 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ programs: filtered });
       }
       
-      return NextResponse.json({ programs: cachedData });
+      return NextResponse.json({ programs: cachedData, count: cachedData.length });
     }
     
-    // Get the absolute path to the data/majors directory (one level up from frontend)
-    const majorsDir = path.join(process.cwd(), '..', 'data', 'majors');
-    
-    // Check if directory exists
-    if (!fs.existsSync(majorsDir)) {
-      console.error('Majors directory not found:', majorsDir);
-      return NextResponse.json({ error: 'Majors data directory not found' }, { status: 404 });
-    }
-    
-    // Read all files in the majors directory
-    const files = fs.readdirSync(majorsDir);
     const parsedPrograms: ParsedMajorData[] = [];
-    
-    for (const file of files) {
-      try {
-        const filePath = path.join(majorsDir, file);
-        const fileStats = fs.statSync(filePath);
-        
-        // Skip directories and hidden files
-        if (fileStats.isDirectory() || file.startsWith('.')) {
-          continue;
+    const seenIds = new Set<string>();
+    const requirementsDir = path.join(process.cwd(), '..', 'data', 'majorRequirements');
+    const majorsDir = path.join(process.cwd(), '..', 'data', 'majors');
+
+    if (fs.existsSync(requirementsDir)) {
+      for (const file of fs.readdirSync(requirementsDir)) {
+        if (!file.endsWith('_requirements.json')) continue;
+        try {
+          const id = file.replace(/_requirements\.json$/, '');
+          const payload = JSON.parse(fs.readFileSync(path.join(requirementsDir, file), 'utf8'));
+          parsedPrograms.push(parseFromRequirementsJson(id, payload));
+          seenIds.add(id);
+        } catch (error) {
+          console.error(`Error parsing requirements file ${file}:`, error);
         }
-        
-        // Read and parse the JSON file
-        const fileContent = fs.readFileSync(filePath, 'utf8');
-        const majorData: LocalMajorData = JSON.parse(fileContent);
-        
-        // Parse the major data
-        const parsedData = parseLocalMajorData(file, majorData);
-        parsedPrograms.push(parsedData);
-        
-      } catch (error) {
-        console.error(`Error parsing file ${file}:`, error);
-        // Continue with other files
       }
     }
-    
-    // Cache the data
+
+    if (fs.existsSync(majorsDir)) {
+      for (const file of fs.readdirSync(majorsDir)) {
+        if (!file.endsWith('.json') || file === 'all_programs.json' || file.startsWith('.')) continue;
+        try {
+          const filePath = path.join(majorsDir, file);
+          if (fs.statSync(filePath).isDirectory()) continue;
+          const majorData: LocalMajorData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          if (!majorData?.requirements) continue;
+          const parsedData = parseLocalMajorData(file, majorData);
+          if (!seenIds.has(parsedData.banner)) {
+            parsedPrograms.push(parsedData);
+          }
+        } catch (error) {
+          console.error(`Error parsing file ${file}:`, error);
+        }
+      }
+    }
+
+    if (parsedPrograms.length === 0) {
+      return NextResponse.json({ error: 'Majors data directory not found' }, { status: 404 });
+    }
+
     cachedData = parsedPrograms;
     
     // Filter by type if requested

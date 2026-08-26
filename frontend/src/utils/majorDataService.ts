@@ -227,7 +227,7 @@ async function loadAllMajorData(): Promise<ParsedMajorData[]> {
     }
     
     cachedMajorData = data.programs || [];
-    return cachedMajorData;
+    return cachedMajorData ?? [];
   } catch (error) {
     console.error('Error loading major data:', error);
     return [];
