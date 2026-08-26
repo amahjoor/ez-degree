@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { pythonOrigin } from '@/lib/backendProxy';
 
-// Get the API base URL from environment variable or default to localhost:8000
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = pythonOrigin();
 
 // This is a catch-all route handler that proxies requests to the FastAPI backend
 export async function GET(

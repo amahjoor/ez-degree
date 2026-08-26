@@ -1,4 +1,3 @@
-// src/context/AuthContext.tsx
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -14,20 +13,44 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const API_BASE_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}`
+const API_BASE_URL = '';
+
+function decodeJwtPayload(token: string): { sub?: string } {
+  const payload = token.split('.')[1];
+  if (!payload) {
+    throw new Error('Invalid token');
+  }
+  const padded = payload.replace(/-/g, '+').replace(/_/g, '/') + '='.repeat((4 - (payload.length % 4)) % 4);
+  return JSON.parse(atob(padded));
+}
+
+async function readApiError(res: Response, fallback: string): Promise<string> {
+  try {
+    const body = await res.json();
+    return body.error || body.message || body.detail || fallback;
+  } catch {
+    return fallback;
+  }
+}
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [user, setUser] = useState<{ username: string } | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // on mount, check for token
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      // optionally decode token or verify with backend
-      const payload = JSON.parse(atob(token.split('.')[1]));
-      setUser({ username: payload.sub });
+      try {
+        const payload = decodeJwtPayload(token);
+        if (payload.sub) {
+          setUser({ username: payload.sub });
+        } else {
+          localStorage.removeItem('token');
+        }
+      } catch {
+        localStorage.removeItem('token');
+      }
     }
     setLoading(false);
   }, []);
@@ -36,13 +59,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const res = await fetch(`${API_BASE_URL}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password })
+      body: JSON.stringify({ username, password }),
     });
-    if (!res.ok) throw new Error('Login failed');
+    if (!res.ok) throw new Error(await readApiError(res, 'Login failed'));
     const { token } = await res.json();
     localStorage.setItem('token', token);
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    setUser({ username: payload.sub });
+    const payload = decodeJwtPayload(token);
+    setUser({ username: payload.sub || username });
     router.push('/');
   };
 
@@ -50,10 +73,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const res = await fetch(`${API_BASE_URL}/auth/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password })
+      body: JSON.stringify({ username, password }),
     });
-    if (!res.ok) throw new Error('Signup failed');
-    // after signup, auto-login
+    if (!res.ok) throw new Error(await readApiError(res, 'Signup failed'));
     await login(username, password);
   };
 
