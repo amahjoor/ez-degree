@@ -31,6 +31,11 @@ build/
 # Database files
 *.db
 *.sqlite3
+postgres_db/postgres-data/
+postgres_db/.env
+
+# Vercel local link (contains account IDs)
+.vercel/
 
 # IDE specific files
 .idea/

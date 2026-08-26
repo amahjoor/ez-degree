@@ -1,9 +1,13 @@
+import os
+
 from sqlalchemy import create_engine, Column, String, Integer, Text, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 
-# Create database engine
-DATABASE_URL = "postgresql://patriotassist:patriotassistftw@134.209.41.82:5432/patriotassistdb"
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "postgresql://patriotassist:patriotassistftw@134.209.41.82:5432/patriotassistdb",
+)
 engine = create_engine(DATABASE_URL)
 
 # Create declarative base
