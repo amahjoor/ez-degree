@@ -8,6 +8,8 @@ DATABASE_URL = os.getenv(
     "DATABASE_URL",
     "postgresql://patriotassist:patriotassistftw@134.209.41.82:5432/patriotassistdb",
 )
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = "postgresql://" + DATABASE_URL[len("postgres://"):]
 engine = create_engine(DATABASE_URL)
 
 # Create declarative base

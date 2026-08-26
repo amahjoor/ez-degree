@@ -1,0 +1,16 @@
+node_modules
+frontend/node_modules
+frontend/.next
+.git
+.venv
+venv
+postgres_db
+postgres_db/postgres-data
+**/target
+**/.DS_Store
+*.log
+.cursor
+agent-transcripts
+**/__pycache__
+frontend/.env.local
+.vercel

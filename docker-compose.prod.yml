@@ -1,0 +1,65 @@
+services:
+  db:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: grad_dev
+    volumes:
+      - prod_pgdata:/var/lib/postgresql/data
+      - ./postgres_db/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d grad_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  java:
+    build:
+      context: ./Backend/patriotassist_gmu
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/grad_dev
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-production-please-use-a-long-secret}
+      JWT_EXPIRATION: "604800000"
+      PROJECT_DATA_PATH: /app/AllData
+      JPA_DDL_AUTO: update
+      DEMO_USERNAME: ${DEMO_USERNAME:-judge}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-MasonPride2026}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  python:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@db:5432/grad_dev
+      FRONTEND_ORIGINS: ${FRONTEND_URL:-http://localhost:3000}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    restart: unless-stopped
+    environment:
+      JAVA_BACKEND_URL: http://java:8080
+      PYTHON_API_URL: http://python:8000
+    ports:
+      - "${PUBLIC_PORT:-3000}:3000"
+    depends_on:
+      - java
+      - python
+
+volumes:
+  prod_pgdata:
