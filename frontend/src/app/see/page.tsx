@@ -17,7 +17,7 @@ const Select = dynamic(() => import('react-select'), {
 }) as any;
 
 import { Major, Concentration, Requirements } from '@/types/course';
-import { getCourseCategory, normalizeCourseId, addEdgeIfNotExists } from '@/utils/courseUtils';
+import { getCourseCategory, normalizeCourseId, addEdgeIfNotExists, parsePrerequisites } from '@/utils/courseUtils';
 import FlowGraph from '../components/graph/FlowGraph';
 
 // API configuration
@@ -167,33 +167,18 @@ export default function SeePage() {
       setError('');
       
       try {
-        if (isOptimized) {
-          // Use optimized endpoint
-          let url = `${API_BASE_URL}/degree-visualization/major/${selectedMajor}`;
-          if (selectedConcentration) {
-            url += `?concentration_id=${selectedConcentration}`;
-          }
-          
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error(`Failed to fetch optimized requirements: ${response.statusText}`);
-          }
-          const data = await response.json();
-          setRequirements(data);
-        } else {
-          // Fallback to original API
-          let url = `${API_BASE_URL}/requirements/majors/${selectedMajor}`;
-          if (selectedConcentration) {
-            url += `?concentration_id=${selectedConcentration}`;
-          }
-          
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error(`Failed to fetch requirements: ${response.statusText}`);
-          }
-          const data = await response.json();
-          setRequirements(data);
+        let url = `${API_BASE_URL}/degree-visualization/major/${selectedMajor}`;
+        if (selectedConcentration) {
+          url += `?concentration_id=${selectedConcentration}`;
         }
+        
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch requirements: ${response.statusText}`);
+        }
+        const data = await response.json();
+        setRequirements(data);
+        setIsOptimized(true);
       } catch (error: any) {
         setError(error.message || 'Error loading requirements. Please try again later.');
         console.error('Error fetching requirements:', error);
@@ -230,36 +215,9 @@ export default function SeePage() {
       });
       setCategoryColors(categoryColorMap);
 
-      if (isOptimized) {
-        // Fast path: use pre-resolved dependencies
-        const { nodeElements, edgeElements } = createGraph(allCourses, categoryColorMap);
-        setReactFlowElements([...nodeElements, ...edgeElements]);
-        setGraphLoading(false);
-      } else {
-        // Legacy path: fetch prerequisites individually
-        const fetchPrerequisitesAndCreateGraph = async () => {
-          await Promise.all(
-            allCourses.map(async (course) => {
-              try {
-                const courseResponse = await fetch(`${API_BASE_URL}/courses/${encodeURIComponent(course.code)}`);
-                if (courseResponse.ok) {
-                  const courseData = await courseResponse.json();
-                  course.prerequisites = courseData.prerequisites;
-                  course.corequisites = courseData.corequisites;
-                }
-              } catch (error) {
-                console.error(`Error fetching details for ${course.code}:`, error);
-              }
-            })
-          );
-
-          const { nodeElements, edgeElements } = createGraph(allCourses, categoryColorMap);
-          setReactFlowElements([...nodeElements, ...edgeElements]);
-          setGraphLoading(false);
-        };
-
-        fetchPrerequisitesAndCreateGraph();
-      }
+      const { nodeElements, edgeElements } = createGraph(allCourses, categoryColorMap);
+      setReactFlowElements([...nodeElements, ...edgeElements]);
+      setGraphLoading(false);
     } catch (error) {
       console.error('Error preparing graph data:', error);
       setGraphLoading(false);
@@ -313,7 +271,7 @@ export default function SeePage() {
       
       // Create edges for prerequisites
       if (course.prerequisites) {
-        const prereqs = course.prerequisites.split(/,|and|or/).map((p: string) => p.trim());
+        const prereqs = parsePrerequisites(course.prerequisites);
         prereqs.forEach((prereq: string, index: number) => {
           const normalizedPrereqId = normalizeCourseId(prereq);
           addEdgeIfNotExists(
@@ -329,9 +287,8 @@ export default function SeePage() {
         });
       }
       
-      // Create edges for corequisites
       if (course.corequisites) {
-        const coreqs = course.corequisites.split(/,|and|or/).map((p: string) => p.trim());
+        const coreqs = parsePrerequisites(course.corequisites);
         coreqs.forEach((coreq: string, index: number) => {
           const normalizedCoreqId = normalizeCourseId(coreq);
           addEdgeIfNotExists(

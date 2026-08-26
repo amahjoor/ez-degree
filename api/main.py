@@ -12,6 +12,7 @@ from typing import List, Optional, Dict, Any, Union
 from pydantic import BaseModel, Field, validator
 from database.db import get_session, Course as DbCourse, Subject as DbSubject
 from scrapers.courseScraper.courseScraper import scrape_courses
+from api import viz_index
 
 # Define models for API documentation
 class Major(BaseModel):
@@ -140,6 +141,11 @@ if not os.path.exists(REQUIREMENTS_DIR):
     os.makedirs(REQUIREMENTS_DIR, exist_ok=True)
     print(f"Created data directory: {REQUIREMENTS_DIR}")
 
+@app.on_event("startup")
+def _build_visualization_index():
+    viz_index.build()
+
+
 # Helper function to load all majors
 def get_available_majors():
     # Check for all_programs.json in the data/majors folder
@@ -155,6 +161,9 @@ def get_available_majors():
         if os.path.exists(all_programs_path):
             with open(all_programs_path, 'r') as f:
                 return json.load(f)
+        indexed = viz_index.list_majors()
+        if indexed:
+            return indexed
         return []
 
 # Helper function to load major requirements
@@ -190,16 +199,19 @@ def load_major_requirements(major_id):
                     with open(file, 'r') as f:
                         return json.load(f)
                         
-            # If we get here, no file was found
-            return None
+            return viz_index.get_major(major_id)
     except Exception as e:
         print(f"Error loading major requirements: {e}")
-        return None
+        return viz_index.get_major(major_id)
 
 @app.get("/")
 async def root():
     """Welcome endpoint for the API"""
     return {"message": "Welcome to GMU Course API"}
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
 
 @app.get("/requirements/majors", 
          response_model=MajorList,
@@ -595,6 +607,19 @@ async def get_course_basic(course_code: str):
     try:
         # Clean up the course code
         course_code = " ".join(course_code.upper().split())
+        indexed = viz_index.get_course(course_code)
+        if indexed:
+            return {
+                "course_code": indexed.get("code", course_code),
+                "title": indexed.get("title", ""),
+                "credits": indexed.get("credits", ""),
+                "description": indexed.get("description", ""),
+                "subject": (indexed.get("code") or course_code).split(" ")[0],
+                "prerequisites": indexed.get("prerequisites", ""),
+                "corequisites": indexed.get("corequisites", ""),
+                "restrictions": indexed.get("restrictions", ""),
+                "notes": indexed.get("notes", ""),
+            }
         
         db = get_session()
         try:
@@ -779,36 +804,23 @@ async def get_subjects():
          description="Returns pre-scraped data optimized for degree visualization, including all majors, requirements, and course dependencies",
          response_description="Complete dataset for fast degree visualization loading")
 async def get_comprehensive_degree_data():
-    """
-    Get comprehensive degree visualization data
-    
-    This endpoint serves pre-scraped data that includes:
-    - All majors and their requirements
-    - All course dependencies (prerequisites/corequisites)
-    - Optimized for fast loading in the degree visualization page
-    
-    Returns:
-        Complete dataset with majors, course dependencies, and degree requirements
-    
-    Raises:
-        HTTPException 404: If the comprehensive data file is not found
-        HTTPException 500: If there's an error processing the request
-    """
+    """Serve majors from the in-memory index. Course graphs are O(1) lookups per major."""
     try:
-        # Path to the comprehensive degree visualization data
         degree_viz_dir = os.path.join(REQUIREMENTS_DIR, "degree_visualization")
         comprehensive_file = os.path.join(degree_viz_dir, "comprehensive_degree_data.json")
-        
-        if not os.path.exists(comprehensive_file):
-            raise HTTPException(
-                status_code=404,
-                detail="Comprehensive degree visualization data not found. Please run the degree visualization scraper first."
-            )
-        
-        with open(comprehensive_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        return data
+
+        if os.path.exists(comprehensive_file):
+            with open(comprehensive_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
+
+        payload = viz_index.comprehensive_payload()
+        if payload["majors"]:
+            return payload
+
+        raise HTTPException(
+            status_code=404,
+            detail="Comprehensive degree visualization data not found. Please run the degree visualization scraper first."
+        )
         
     except json.JSONDecodeError as e:
         raise HTTPException(
@@ -849,104 +861,20 @@ async def get_major_visualization_data(
         HTTPException 500: If there's an error processing the request
     """
     try:
-        # Load the comprehensive data
-        degree_viz_dir = os.path.join(REQUIREMENTS_DIR, "degree_visualization")
+        indexed = viz_index.get_major_visualization(major_id, concentration_id)
+        if indexed is not None:
+            return indexed
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Major '{major_id}' not found in degree requirements"
+        )
         
-        # Load course dependencies
-        course_deps_file = os.path.join(degree_viz_dir, "course_dependencies.json")
-        degree_reqs_file = os.path.join(degree_viz_dir, "degree_requirements.json")
-        
-        if not os.path.exists(course_deps_file) or not os.path.exists(degree_reqs_file):
-            raise HTTPException(
-                status_code=404,
-                detail="Degree visualization data not found. Please run the degree visualization scraper first."
-            )
-        
-        # Load the data
-        with open(course_deps_file, 'r', encoding='utf-8') as f:
-            course_dependencies = json.load(f)
-        
-        with open(degree_reqs_file, 'r', encoding='utf-8') as f:
-            degree_requirements = json.load(f)
-        
-        # Get the specific major requirements
-        if major_id not in degree_requirements:
-            raise HTTPException(
-                status_code=404,
-                detail=f"Major '{major_id}' not found in degree requirements"
-            )
-        
-        major_data = degree_requirements[major_id]
-        
-        # Enrich the course data with dependencies
-        def enrich_course_data(course):
-            course_code = course.get("code") or course.get("id")
-            if course_code and course_code in course_dependencies:
-                dep_data = course_dependencies[course_code]
-                return {
-                    **course,
-                    "code": course_code,
-                    "title": dep_data.get("title", course.get("title", "")),
-                    "credits": dep_data.get("credits", course.get("credits", "")),
-                    "prerequisites": dep_data.get("prerequisites", ""),
-                    "corequisites": dep_data.get("corequisites", ""),
-                    "description": dep_data.get("description", ""),
-                    "restrictions": dep_data.get("restrictions", ""),
-                    "notes": dep_data.get("notes", "")
-                }
-            return course
-        
-        # Enrich all courses in the major
-        enriched_categories = []
-        for category in major_data.get("categories", []):
-            enriched_courses = [enrich_course_data(course) for course in category.get("courses", [])]
-            enriched_categories.append({
-                **category,
-                "courses": enriched_courses
-            })
-        
-        # Handle concentrations
-        enriched_concentrations = []
-        for concentration in major_data.get("concentrations", []):
-            if concentration_id and concentration.get("id") != concentration_id:
-                continue
-                
-            enriched_conc_categories = []
-            for category in concentration.get("categories", []):
-                enriched_courses = [enrich_course_data(course) for course in category.get("courses", [])]
-                enriched_conc_categories.append({
-                    **category,
-                    "courses": enriched_courses
-                })
-            
-            enriched_concentrations.append({
-                **concentration,
-                "categories": enriched_conc_categories
-            })
-        
-        # If specific concentration requested, only include that one
-        if concentration_id:
-            enriched_concentrations = [c for c in enriched_concentrations if c.get("id") == concentration_id]
-            if not enriched_concentrations:
-                raise HTTPException(
-                    status_code=404,
-                    detail=f"Concentration '{concentration_id}' not found for major '{major_id}'"
-                )
-        
-        return {
-            **major_data,
-            "categories": enriched_categories,
-            "concentrations": enriched_concentrations,
-            "optimization_info": {
-                "pre_enriched": True,
-                "course_dependencies_resolved": True,
-                "total_courses_enriched": len([
-                    course for category in enriched_categories 
-                    for course in category.get("courses", [])
-                ])
-            }
-        }
-        
+    except KeyError:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Concentration '{concentration_id}' not found for major '{major_id}'"
+        )
     except HTTPException:
         raise
     except Exception as e:

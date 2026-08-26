@@ -21,7 +21,13 @@ import React from "react";
 import { FlowGraphProps } from '@/types/flowGraph';
 import CourseNode from './CourseNode';
 import SmartStraightEdge from './SmartStraightEdge';
-import { FilterNotification, calculateConnectionCount, isFirstDegreeConnection } from './GraphFilters';
+import { FilterNotification } from './GraphFilters';
+import {
+  buildConnectionIndex,
+  getConnectionCount,
+  isAdjacentToMatchingNode,
+  ConnectionIndex,
+} from '@/utils/graphIndex';
 
 // Flow Graph Component
 function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], connectionFilter = 0, showPrereqsCoreqs = false, showUnlocks = false, showFirstDegreeConnections = false, onCategoryFilterChange }: FlowGraphProps) {
@@ -30,6 +36,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   // Use a ref to store connected edges to avoid dependency issues
   const edgesRef = useRef<FlowEdge[]>([]);
+  const connectionIndexRef = useRef<ConnectionIndex>(buildConnectionIndex([]));
+  const nodesRef = useRef<FlowNode[]>([]);
   // Add state for category filters
   const [filteredCategories, setFilteredCategories] = useState<string[]>(initialFilteredCategories);
   // Add state for connection filters
@@ -42,6 +50,10 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
   useEffect(() => {
     edgesRef.current = edges;
   }, [edges]);
+
+  useEffect(() => {
+    nodesRef.current = nodes;
+  }, [nodes]);
 
   // Use a ref to track if the change is internal (from graph) vs external (from parent)
   const isInternalChange = useRef(false);
@@ -101,23 +113,8 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
     }
 
     try {
-      console.log("Original elements received:", elements);
-      console.log("Elements structure sample:", JSON.stringify(elements[0]));
-      
-      // Extract nodes and edges from elements
       const nodeElements = elements.filter(el => !el.data.source && !el.data.target);
-      const edgeElements = elements.filter(el => el.data.source && el.data.target);
-      
-      console.log("Node elements:", nodeElements.length);
-      if (nodeElements.length > 0) {
-        console.log("Sample node structure:", JSON.stringify(nodeElements[0]));
-      }
-      
-      console.log("Edge elements:", edgeElements.length);
-      if (edgeElements.length > 0) {
-        console.log("Sample edge structure:", JSON.stringify(edgeElements[0]));
-      }
-      
+      const edgeElements = elements.filter(el => el.data.source && el.data.target); 
       // Helper function to extract course number for sorting
       const extractCourseNumber = (courseCode: string): number => {
         const match = courseCode.match(/(\d+)/);
@@ -270,11 +267,7 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       
       // Create ReactFlow edges with explicit source and target IDs
       const courseEdges: FlowEdge[] = edgeElements.map((el, edgeIndex) => {
-        // Make sure each edge has a unique ID
         const uniqueId = `edge-${el.data.id || `${el.data.source}-to-${el.data.target}`}-${edgeIndex}`;
-        
-        // Log each edge for debugging
-        console.log(`Creating flow edge: ${el.data.source} -> ${el.data.target} (${el.data.type || 'prereq'}) with ID ${uniqueId}`);
         
         return {
           id: uniqueId,
@@ -301,12 +294,9 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
         };
       });
       
-      console.log("Final ReactFlow nodes:", courseNodes.length);
-      console.log("Final ReactFlow edges:", courseEdges.length);
-      
-      // Set the nodes and edges
       setNodes(courseNodes);
       setEdges(courseEdges);
+      connectionIndexRef.current = buildConnectionIndex(courseEdges);
     } catch (error) {
       console.error('Error converting elements to ReactFlow format:', error);
     }
@@ -381,87 +371,56 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       return;
     }
     
-    // Use the edges from the ref to avoid dependency issues
     const currentEdges = edgesRef.current;
-    
-    // Find all connected edges (where selected node is source or target)
-    let connectedEdges = currentEdges;
+    const currentNodes = nodesRef.current;
+    const index = connectionIndexRef.current;
+    const nodeById = new Map(currentNodes.map(node => [node.id, node]));
+
     let connectedNodeIds = new Set<string>();
     
     if (selectedNode) {
-      connectedEdges = currentEdges.filter(
-        edge => edge.source === selectedNode || edge.target === selectedNode
-      );
-      
-      // Get IDs of all connected nodes
-      connectedNodeIds.add(selectedNode); // Add the selected node itself
-      connectedEdges.forEach(edge => {
-        connectedNodeIds.add(edge.source);
-        connectedNodeIds.add(edge.target);
-      });
+      connectedNodeIds.add(selectedNode);
+      const neighborIds = index.neighbors.get(selectedNode);
+      if (neighborIds) {
+        neighborIds.forEach(id => connectedNodeIds.add(id));
+      }
     }
-    
 
+    const prereqSources = selectedNode ? index.prereqsOf.get(selectedNode) : undefined;
+    const unlockTargets = selectedNode ? index.unlockedBy.get(selectedNode) : undefined;
+    const coreqNeighbors = selectedNode ? index.coreqsOf.get(selectedNode) : undefined;
 
-    // Create updated nodes array without triggering re-renders
-    const updatedNodes = nodes.map(node => {
+    const updatedNodes = currentNodes.map(node => {
       const isSelected = node.id === selectedNode;
       const isConnected = selectedNode ? connectedNodeIds.has(node.id) : true;
       
-      // Check category filter
       const matchesCategory = !shouldApplyCategoryFilter || 
         filteredCategories.includes(((node.data as any)?.category || '') as string);
       
-      // Check connection filter
       let matchesConnectionFilter = true;
       if (shouldApplyConnectionFilter) {
-        if (currentShowPrereqsCoreqs && currentShowUnlocks) {
-          // Both selected - count total connections
-          const connectionCount = calculateConnectionCount(node.id, true, true, currentEdges);
-          matchesConnectionFilter = connectionCount >= currentConnectionFilter;
-        } else if (currentShowPrereqsCoreqs) {
-          // Only prereqs/coreqs selected - count only those
-          const connectionCount = calculateConnectionCount(node.id, true, false, currentEdges);
-          matchesConnectionFilter = connectionCount >= currentConnectionFilter;
-        } else if (currentShowUnlocks) {
-          // Only unlocks selected - count only those
-          const connectionCount = calculateConnectionCount(node.id, false, true, currentEdges);
-          matchesConnectionFilter = connectionCount >= currentConnectionFilter;
-        }
+        matchesConnectionFilter =
+          getConnectionCount(node.id, currentShowPrereqsCoreqs, currentShowUnlocks, index) >= currentConnectionFilter;
       }
       
-      // Check if this node passes base filters OR is a first degree connection
       const passesBaseFilters = matchesCategory && matchesConnectionFilter;
-      const isFirstDegree = isFirstDegreeConnection(
+      const isFirstDegree = currentShowFirstDegreeConnections && isAdjacentToMatchingNode(
         node.id,
-        currentShowFirstDegreeConnections,
-        currentEdges,
-        nodes,
+        index,
+        nodeById,
         shouldApplyCategoryFilter,
         filteredCategories,
         shouldApplyConnectionFilter,
         currentShowPrereqsCoreqs,
         currentShowUnlocks,
-        currentConnectionFilter,
-        calculateConnectionCount
+        currentConnectionFilter
       );
       const shouldBeVisible = passesBaseFilters || isFirstDegree;
       const isOnlyFirstDegree = isFirstDegree && !passesBaseFilters;
       
-      const isPrereq = selectedNode && currentEdges
-        .filter(edge => edge.target === selectedNode && edge.data?.type === 'prereq')
-        .map(edge => edge.source)
-        .includes(node.id);
-        
-      const isCoreq = selectedNode && currentEdges
-        .filter(edge => (edge.source === selectedNode || edge.target === selectedNode) && edge.data?.type === 'coreq')
-        .map(edge => edge.source === selectedNode ? edge.target : edge.source)
-        .includes(node.id);
-      
-      const isDependent = selectedNode && currentEdges
-        .filter(edge => edge.source === selectedNode && edge.data?.type === 'prereq')
-        .map(edge => edge.target)
-        .includes(node.id);
+      const isPrereq = !!prereqSources?.has(node.id);
+      const isCoreq = !!coreqNeighbors?.has(node.id);
+      const isDependent = !!unlockTargets?.has(node.id);
       
       // Hide nodes that don't match our criteria (not connected or filtered out by category/connections)
       const shouldBeHidden = (selectedNode && !isConnected) || !shouldBeVisible;
@@ -512,13 +471,13 @@ function FlowGraph({ elements, categoryColors, initialFilteredCategories = [], c
       };
     });
     
-    // Create updated edges array
-    const updatedEdges = edges.map(edge => {
+    const updatedNodeById = new Map(updatedNodes.map(node => [node.id, node]));
+
+    const updatedEdges = currentEdges.map(edge => {
       const isDirectlyConnectedToSelected = selectedNode ? (edge.source === selectedNode || edge.target === selectedNode) : false;
       
-      // Get node visibility status from our updated nodes
-      const sourceNode = updatedNodes.find(n => n.id === edge.source);
-      const targetNode = updatedNodes.find(n => n.id === edge.target);
+      const sourceNode = updatedNodeById.get(edge.source);
+      const targetNode = updatedNodeById.get(edge.target);
       const sourceVisible = sourceNode && !sourceNode.hidden;
       const targetVisible = targetNode && !targetNode.hidden;
       const bothNodesVisible = sourceVisible && targetVisible;

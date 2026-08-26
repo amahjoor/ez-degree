@@ -15,9 +15,7 @@ export const parsePrerequisites = (prereqString?: string): string[] => {
   
   // Normalize the matches to ensure they all have a space
   const normalizedMatches = matches.map(match => {
-    // If there's no space between the department code and course number, add one
     if (!/\s/.test(match)) {
-      // Find where the numbers start
       const numberIndex = match.search(/\d/);
       if (numberIndex > 0) {
         return match.slice(0, numberIndex) + ' ' + match.slice(numberIndex);
@@ -25,10 +23,6 @@ export const parsePrerequisites = (prereqString?: string): string[] => {
     }
     return match;
   });
-  
-  // Log the matches for debugging
-  console.log('Prerequisite string:', prereqString);
-  console.log('Extracted prereqs:', normalizedMatches);
   
   return normalizedMatches;
 };
@@ -79,13 +73,11 @@ export function addEdgeIfNotExists(
 ) {
   const edgeSignature = `${sourceId}-${targetId}-${edgeType}`;
   if (edgeTracker.has(edgeSignature)) {
-    console.log(`Skipping duplicate edge: ${edgeSignature}`);
     return;
   }
   
   // Make sure we have both source and target nodes
   if (!nodeMap[sourceId] || !nodeMap[targetId]) {
-    console.warn(`Cannot create edge: missing node for ${sourceId} or ${targetId}`);
     return;
   }
   
@@ -136,8 +128,6 @@ export function addEdgeIfNotExists(
       label: edgeType
     }
   };
-  
-  console.log(`Creating ${edgeType} edge: ${sourceId} -> ${targetId} (ID: ${edgeId})`);
   
   edgeElements.push(edge);
   edgeTracker.add(edgeSignature);
