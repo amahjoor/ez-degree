@@ -362,7 +362,7 @@ public class GenerateScheduleLogicCustom {
                             }
                             boolean locationMatch = false;
                             for (String locPref : locationPrefs) {
-                                if (locPref.toLowerCase().contains(campus.toLowerCase())) {
+                                if (campusMatchesPreference(campus, locPref)) {
                                     locationMatch = true;
                                     break;
                                 }
@@ -473,6 +473,18 @@ public class GenerateScheduleLogicCustom {
             }
         }
         return false;
+    }
+
+    private boolean campusMatchesPreference(String campus, String locPref) {
+        if (campus == null || locPref == null) {
+            return false;
+        }
+        String campusLower = campus.toLowerCase();
+        String prefLower = locPref.toLowerCase().trim();
+        if (prefLower.equals("virtual") || prefLower.equals("online")) {
+            return campusLower.contains("online") || campusLower.contains("virtual") || campusLower.contains("distance");
+        }
+        return campusLower.contains(prefLower) || prefLower.contains(campusLower);
     }
     
     public List<String> generateScheduleCustomCourseLookup(String partialCourseCode) {

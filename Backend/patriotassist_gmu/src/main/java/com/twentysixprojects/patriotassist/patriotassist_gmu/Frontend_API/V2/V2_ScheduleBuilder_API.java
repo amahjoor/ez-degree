@@ -1,11 +1,10 @@
 package com.twentysixprojects.patriotassist.patriotassist_gmu.Frontend_API.V2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.GenerateScheduleLogicCustom;
+import com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.ScheduleTermCatalog;
 import com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.V2_ScheduleBuilderLogic;
 import com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.TimeFoldCustom.CustomTimefoldScheduler;
 import com.twentysixprojects.patriotassist.patriotassist_gmu.Models.GenerateScheduleCustomModel;
@@ -22,9 +24,6 @@ import com.twentysixprojects.patriotassist.patriotassist_gmu.Models.GenerateSche
 @RequestMapping("/api/v2/schedule-builder")
 public class V2_ScheduleBuilder_API
 {
-    @Value("${supported.terms}")
-    private String SupportedTerms;
-
     @Autowired
     private V2_ScheduleBuilderLogic V2_SBL;
 
@@ -34,12 +33,14 @@ public class V2_ScheduleBuilder_API
     @Autowired
     private CustomTimefoldScheduler CTFS;
 
+    @Autowired
+    private ScheduleTermCatalog scheduleTermCatalog;
+
     @GetMapping("/term-list")
     public List<String> getSupportedTermList() {
-        String[] parts = SupportedTerms.split(",");
-        List<String> SupportedTermList = new ArrayList<>(Arrays.asList(parts));
-        System.out.println("Supported Term List: " + SupportedTermList);
-        return SupportedTermList;
+        List<String> supportedTermList = scheduleTermCatalog.listCatalogTerms();
+        System.out.println("Supported Term List: " + supportedTermList);
+        return supportedTermList;
     }
 
     @GetMapping("/get-course-code-data")
@@ -79,15 +80,31 @@ public class V2_ScheduleBuilder_API
     }
 
     @PostMapping("/generate-custom-schedule")
-    public String generateCustomSchedule(@RequestBody GenerateScheduleCustomModel request)
+    public ResponseEntity<?> generateCustomSchedule(@RequestBody GenerateScheduleCustomModel request)
     {
        System.out.println("Raw Request Data: " + request.toString());
        System.out.println("Data: " + request.getCourseCodes());
+       if (request.getCourseCodes() == null || request.getCourseCodes().isEmpty()) {
+           return ResponseEntity.badRequest().body(Map.of("error", "Select at least one course to generate a schedule."));
+       }
        List<String> ScheduleCourseFileNames = GSLC.getMatchingScheduleFiles(request);
        System.out.println("Data Files: " + ScheduleCourseFileNames);
+       if (ScheduleCourseFileNames.isEmpty()) {
+           String term = request.getTerm() == null ? "the selected term" : request.getTerm();
+           return ResponseEntity.badRequest().body(Map.of(
+               "error",
+               "No matching sections found for those courses in " + term + ". Try another term, another campus, or turn off seat limits."
+           ));
+       }
        String Data = CTFS.generateSchedules(ScheduleCourseFileNames, request);
        System.out.println("Output Data: " + Data);
-
-       return Data;
+       if (Data == null || Data.isBlank()) {
+           return ResponseEntity.internalServerError().body(Map.of("error", "Schedule generation failed."));
+       }
+       try {
+           return ResponseEntity.ok(new ObjectMapper().readTree(Data));
+       } catch (Exception e) {
+           return ResponseEntity.internalServerError().body(Map.of("error", "Schedule generation failed."));
+       }
     }
 }

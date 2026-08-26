@@ -132,7 +132,10 @@ public class CustomTimefoldScheduler {
             // and build the final course list.
             Map<String, Boolean> userLabOnlyMap = new HashMap<>();
             List<CustomTimefoldCourse> finalCourseList = new ArrayList<>();
-            for (String codeEntry : scheduleData.getCourseCodes()) {
+            List<String> requestedCodes = scheduleData.getCourseCodes() == null
+                    ? List.of()
+                    : scheduleData.getCourseCodes();
+            for (String codeEntry : requestedCodes) {
                 String[] parts = codeEntry.split(":");
                 String courseCodeStr = parts[0].trim();
                 boolean labOnlyFlag = false;
@@ -365,7 +368,10 @@ public class CustomTimefoldScheduler {
             // and build the final course list.
             Map<String, Boolean> userLabOnlyMap = new HashMap<>();
             List<CustomTimefoldCourse> finalCourseList = new ArrayList<>();
-            for (String codeEntry : scheduleData.getCourseCodes()) {
+            List<String> requestedCodes = scheduleData.getCourseCodes() == null
+                    ? List.of()
+                    : scheduleData.getCourseCodes();
+            for (String codeEntry : requestedCodes) {
                 String[] parts = codeEntry.split(":");
                 String courseCodeStr = parts[0].trim();
                 boolean labOnlyFlag = false;

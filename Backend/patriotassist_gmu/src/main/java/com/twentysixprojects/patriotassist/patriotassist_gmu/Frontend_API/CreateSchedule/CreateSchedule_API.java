@@ -35,8 +35,8 @@ public class CreateSchedule_API {
     @Value("${project.data.path}")
     private String AllData_Path;
 
-    @Value("${supported.terms}")
-    private String SupportedTerms;
+    @Autowired
+    private com.twentysixprojects.patriotassist.patriotassist_gmu.Logic.ScheduleTermCatalog scheduleTermCatalog;
 
     @Autowired
     private GenerateScheduleLogic GSL;
@@ -55,9 +55,7 @@ public class CreateSchedule_API {
     
     @GetMapping("/term-list")
     public List<String> getSupportedTermList() {
-        String[] parts = SupportedTerms.split(",");
-        List<String> SupportedTermList = new ArrayList<>(Arrays.asList(parts));
-        return SupportedTermList;
+        return scheduleTermCatalog.listCatalogTerms();
     }
 
     @GetMapping("/degree-list")
