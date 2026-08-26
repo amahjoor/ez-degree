@@ -20,7 +20,7 @@ interface CourseAmount {
   Laboratory: { courses: number; credits: string };
 }
 
-const API_BASE_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder`;
+const API_BASE_URL = `/api/v2/schedule-builder`;
 
 const CreditLimitsSelector: React.FC<CreditLimitsSelectorProps> = ({
   creditLimits,

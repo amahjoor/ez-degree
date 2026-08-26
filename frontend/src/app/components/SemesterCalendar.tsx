@@ -6,6 +6,7 @@ import CourseSelectionModal from './CourseSelectionModal';
 import AIScheduleGenerator from './ai/AIScheduleGenerator';
 import { Course } from '@/types/course';
 import { DayName, TimeInterval } from './ai/selectors/WeekAvailability';
+import { displayCatalogTerm, pickDefaultCatalogTerm, sortCatalogTerms } from '@/utils/academicTerms';
 
 
 
@@ -65,10 +66,16 @@ export interface WeeklyCalendarHandle {
   getCurrentSemester: () => string;
   getAvailableDays: () => boolean[];
   getDayTimeRanges: () => Array<{start: number, end: number}>;
+  getClasses: () => ClassSession[];
+  setClasses: (sessions: ClassSession[]) => void;
+}
+
+interface WeeklyCalendarProps {
+  onScheduleChange?: (sessions: ClassSession[]) => void;
 }
 
 const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
-  (props, ref) => {
+  ({ onScheduleChange }, ref) => {
   const [classes, setClasses] = useState<ClassSession[]>([]);
 
   // State declarations
@@ -86,7 +93,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   
   // New filter states
   const [availableDays, setAvailableDays] = useState<boolean[]>([true, true, true, true, true]); // Monday-Friday
-  const [semester, setSemester] = useState<string>("Summer 2025");
+  const [semester, setSemester] = useState<string>('');
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [draggedOverSlot, setDraggedOverSlot] = useState<{day: number, hour: number} | null>(null);
   
@@ -134,8 +141,14 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     },
     getCurrentSemester: () => semester,
     getAvailableDays: () => availableDays,
-    getDayTimeRanges: () => dayTimeRanges
-  }), [semester, availableDays, dayTimeRanges]);
+    getDayTimeRanges: () => dayTimeRanges,
+    getClasses: () => classes,
+    setClasses: (sessions) => setClasses(sessions || [])
+  }), [semester, availableDays, dayTimeRanges, classes]);
+
+  useEffect(() => {
+    onScheduleChange?.(classes);
+  }, [classes, onScheduleChange]);
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const hours = Array.from({ length: 18 }, (_, i) => i + 6); // 6am to 11pm
@@ -425,8 +438,24 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
 
 
   
-  const semesterList = ["Summer 2025", "Fall 2025"];
+  const [semesterList, setSemesterList] = useState<string[]>([]);
   const [currentSemesterIndex, setCurrentSemesterIndex] = useState(0);
+
+  useEffect(() => {
+    fetch(`/api/v2/schedule-builder/term-list`)
+      .then(res => { if (!res.ok) throw new Error('term-list failed'); return res.json() as Promise<string[]>; })
+      .then(list => {
+        const sorted = sortCatalogTerms(list);
+        setSemesterList(sorted);
+        const preferred = pickDefaultCatalogTerm(sorted);
+        const idx = Math.max(0, sorted.indexOf(preferred));
+        setCurrentSemesterIndex(idx);
+        setSemester(sorted[idx] || '');
+      })
+      .catch(err => {
+        console.error('Could not load term list', err);
+      });
+  }, []);
 
   const handlePrevSemester = () => {
     setCurrentSemesterIndex(prev => (prev > 0 ? prev - 1 : prev));
@@ -437,6 +466,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
   };
 
   useEffect(() => {
+    if (!semesterList.length) return;
     const newSemester = semesterList[currentSemesterIndex];
     console.log(`🗓️ Semester changed to: ${newSemester} (index: ${currentSemesterIndex})`);
     setSemester(newSemester);
@@ -448,7 +478,7 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     setIsFetchingSections(false);
     setIsDraggingCourse(false);
     setDraggedCourseCode('');
-  }, [currentSemesterIndex]);
+  }, [currentSemesterIndex, semesterList]);
 
   // Effect to handle body scroll lock when modal is open
   useEffect(() => {
@@ -558,9 +588,8 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
     
     setIsFetchingSections(true);
     console.log(`🔎 Fetching sections for ${courseCode} in ${semester}`);
-    console.log(`🌐 API URL: ${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data?Term=${encodeURIComponent(semester)}&CourseCode=${encodeURIComponent(courseCode)}`);
     try {
-      const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
+      const url = `/api/v2/schedule-builder/get-course-code-data` +
         `?Term=${encodeURIComponent(semester)}` +
         `&CourseCode=${encodeURIComponent(courseCode)}`;
       
@@ -793,7 +822,9 @@ const WeeklyCalendar = forwardRef<WeeklyCalendarHandle, WeeklyCalendarProps>(
               </svg>
             </button>
             <h2 className="text-lg font-semibold min-w-[150px] text-center">
-              {semesterList[currentSemesterIndex]}
+              {semesterList.length
+                ? displayCatalogTerm(semesterList[currentSemesterIndex], semesterList)
+                : 'Loading term…'}
             </h2>
             <button
               onClick={handleNextSemester}

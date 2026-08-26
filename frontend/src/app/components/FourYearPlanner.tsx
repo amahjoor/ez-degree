@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState, useMemo, useImperativeHandle, forwardRef } from 'react';
+import React, { useState, useMemo, useImperativeHandle, forwardRef, useEffect } from 'react';
 import Link from 'next/link';
 import CourseSelectionModal from './CourseSelectionModal';
 import { Course } from '@/types/course';
+import { fourYearPlanYears } from '@/utils/academicTerms';
 
-interface CourseEntry {
+export interface CourseEntry {
   id: string;
   code: string;
   title: string;
@@ -19,23 +20,29 @@ interface SemesterData {
   courses: CourseEntry[];
 }
 
-// Export a handle type for external control
 export interface SemesterPlannerHandle {
   addCourse: (courseCode: string, courseTitle: string, credits: number, targetYear?: number, targetSemester?: string) => void;
+  getPlan: () => Record<string, CourseEntry[]>;
+  setPlan: (plan: Record<string, CourseEntry[]>) => void;
 }
 
-const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
+interface SemesterPlannerProps {
+  onPlanChange?: (plan: Record<string, CourseEntry[]>) => void;
+}
+
+const SemesterPlanner = forwardRef<SemesterPlannerHandle, SemesterPlannerProps>((props, ref) => {
+  const { onPlanChange } = props;
   // State to store courses for each semester
   const [semesters, setSemesters] = useState<{[key: string]: CourseEntry[]}>({});
   const [draggedCourse, setDraggedCourse] = useState<CourseEntry | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedSemester, setSelectedSemester] = useState<{year: number, name: string} | null>(null);
   
-  // Years array (1-4)
-  const years = [1, 2, 3, 4];
-  
-  // Semesters for each year
-  const semesterTypes = ["Fall", "Spring", "Summer"];
+  const planYears = fourYearPlanYears();
+
+  useEffect(() => {
+    onPlanChange?.(semesters);
+  }, [semesters, onPlanChange]);
 
   // Expose methods to parent component
   useImperativeHandle(ref, () => ({
@@ -56,8 +63,10 @@ const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
         ...prev,
         [semesterId]: [...(prev[semesterId] || []), newCourse]
       }));
-    }
-  }));
+    },
+    getPlan: () => semesters,
+    setPlan: (plan) => setSemesters(plan || {})
+  }), [semesters]);
   
   // Function to open course selection modal
   const openCourseSelectionModal = (yearNum: number, semesterName: string) => {
@@ -171,13 +180,13 @@ const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
   
   return (
     <div className="h-full overflow-y-auto p-4">
-      {years.map(year => (
-        <div key={year} className="mb-8">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">Year {year}</h2>
+      {planYears.map(planYear => (
+        <div key={planYear.yearIndex} className="mb-8">
+          <h2 className="text-2xl font-bold text-green-600 mb-4">{planYear.label}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {semesterTypes.map(semester => {
-              const semesterId = `${year}-${semester}`;
+            {planYear.semesters.map(semester => {
+              const semesterId = `${planYear.yearIndex}-${semester.name}`;
               const semesterCourses = semesters[semesterId] || [];
               
               return (
@@ -192,10 +201,10 @@ const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
                   )}
                 >
                   <div className="flex justify-between items-center px-4 py-3 bg-gray-100 border-b border-gray-200">
-                    <h3 className="text-lg font-medium text-gray-800">{semester}</h3>
+                    <h3 className="text-lg font-medium text-gray-800">{semester.label}</h3>
                     <button 
                       className="text-primary-blue w-6 h-6 flex items-center justify-center hover:bg-gray-200 rounded"
-                      onClick={() => openCourseSelectionModal(year, semester)}
+                      onClick={() => openCourseSelectionModal(planYear.yearIndex, semester.name)}
                       title="Add course"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
@@ -249,7 +258,12 @@ const SemesterPlanner = forwardRef<SemesterPlannerHandle>((props, ref) => {
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           onSelectCourse={addCourseFromSelection}
-          semesterTitle={`Year ${selectedSemester.year} ${selectedSemester.name}`}
+          semesterTitle={
+            planYears
+              .find(y => y.yearIndex === selectedSemester.year)
+              ?.semesters.find(s => s.name === selectedSemester.name)?.label
+            || `${selectedSemester.name}`
+          }
         />
       )}
     </div>

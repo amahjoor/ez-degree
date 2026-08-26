@@ -7,10 +7,11 @@ import CampusPreferencesSelector from './selectors/CampusPreferencesSelector';
 import AdditionalPreferencesSelector from './selectors/AdditionalPreferencesSelector';
 import WeekAvailability, { TimeInterval, DayName } from './selectors/WeekAvailability';
 import ScheduleVisualization from './selectors/ScheduleVisualization';
+import { displayCatalogTerm, pickDefaultCatalogTerm, sortCatalogTerms } from '@/utils/academicTerms';
 
 
 // API configuration
-const API_BASE_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder`;
+const API_BASE_URL = `/api/v2/schedule-builder`;
 
 // Local interfaces
 export interface ClassSession {
@@ -87,10 +88,11 @@ const AIScheduleGenerator: React.FC<AIScheduleGeneratorProps> = ({
   
   const [scheduleVariants, setScheduleVariants] = useState<Variant[]>([]);
   const [selectedVariant, setSelectedVariant] = useState<number | null>(null);
+  const [generateError, setGenerateError] = useState<string | null>(null);
 
   const parseTime = (t: string): number => {
     // "13:30:00" → 13.5
-    const [h, m] = t.split(':').map(Number);
+    const [h, m] = String(t).split(':').map(Number);
     return h + m/60;
   };
   
@@ -99,53 +101,50 @@ const AIScheduleGenerator: React.FC<AIScheduleGeneratorProps> = ({
       .indexOf(dayName.trim());
   
   function mapAssignmentListToSessions(list: any[]): ClassSession[] {
+    if (!Array.isArray(list)) return [];
     return list.flatMap(item => {
-      const {
-        id,
-        course: {
-          MeetingDays,
-          startTime,
-          endTime,
-          CourseSubject,
-          CourseNumber,
-          CourseTitle,
-          CreditHours,
-          Instructor,
-          MeetingTimes
-        }
-      } = item;
-  
+      const course = item?.course;
+      if (!course) return [];
+      const MeetingDays = course.MeetingDays;
+      if (!MeetingDays || typeof MeetingDays !== 'string') return [];
+      const startTime = course.startTime;
+      const endTime = course.endTime;
+      if (startTime == null || endTime == null) return [];
+
       return MeetingDays.split(',').map((dayStr: string) => ({
-        id: `${id}-${dayStr.trim()}`,
+        id: `${item.id}-${dayStr.trim()}`,
         day: dayIndex(dayStr),
         startTime: parseTime(startTime),
-        endTime:   parseTime(endTime),
-        courseCode: `${CourseSubject} ${CourseNumber}`,
-        title: CourseTitle,
-        credits: CreditHours,
-        location: MeetingTimes,      // or format it however you like
-        instructor: Instructor || 'TBD',
+        endTime: parseTime(endTime),
+        courseCode: `${course.CourseSubject} ${course.CourseNumber}`,
+        title: course.CourseTitle,
+        credits: Number(course.CreditHours) || 0,
+        location: course.Campus || course.MeetingTimes || '',
+        instructor: course.Instructor || 'TBD',
         color: getRandomTailwindColor()
       }));
     });
   }
 
-  // Initialize courses from existingClasses
+  // Seed from the calendar only when the modal opens, so adding courses isn't wiped.
   useEffect(() => {
     if (!isOpen) return;
+    setGenerateError(null);
+    setScheduleVariants([]);
+    setSelectedVariant(null);
     if (existingClasses.length === 0) {
       setSelectedCourses([]);
       return;
     }
     const mapped = existingClasses.map(cls => ({
-      id: cls.id,
+      id: cls.courseCode,
       code: cls.courseCode,
       title: cls.title,
       hasLab: false
     }));
-    const unique = mapped.filter((c, i, arr) => arr.findIndex(x => x.id === c.id) === i);
+    const unique = mapped.filter((c, i, arr) => arr.findIndex(x => x.code === c.code) === i);
     setSelectedCourses(unique);
-  }, [isOpen, existingClasses]);
+  }, [isOpen]);
 
   // Fetch terms
   useEffect(() => {
@@ -154,8 +153,9 @@ const AIScheduleGenerator: React.FC<AIScheduleGeneratorProps> = ({
     fetch(`${API_BASE_URL}/term-list`)
       .then(res => { if (!res.ok) throw new Error(); return res.json() as Promise<string[]>; })
       .then(list => {
-        setTerms(list);
-        if (list.length) setSelectedTerm(list[0]);
+        const sorted = sortCatalogTerms(list);
+        setTerms(sorted);
+        setSelectedTerm(prev => prev && sorted.includes(prev) ? prev : pickDefaultCatalogTerm(sorted));
       })
       .catch(() => setTermsError('Could not fetch terms'))
       .finally(() => setTermsLoading(false));
@@ -175,11 +175,18 @@ const AIScheduleGenerator: React.FC<AIScheduleGeneratorProps> = ({
   const handleAvailabilityChange = (availability: Record<DayName, TimeInterval[]>) =>
     setPreferences(prev => ({ ...prev, availability }));
 
-  // Real schedule‐generation handler
 const handleGenerate = async () => {
+  if (!selectedCourses.length) {
+    setGenerateError('Add at least one course before generating a schedule.');
+    return;
+  }
+  if (!selectedTerm) {
+    setGenerateError('Pick a term before generating a schedule.');
+    return;
+  }
   setIsGenerating(true);
+  setGenerateError(null);
   try {
-    // 1) build payload to match GenerateScheduleCustomModel
     const payload = {
       term: selectedTerm,
       availability: Object.fromEntries(
@@ -198,28 +205,31 @@ const handleGenerate = async () => {
       considerProfessorRatings: preferences.considerRMP
     };
 
-    // 2) POST to your Spring Boot endpoint
     const resp = await fetch(`${API_BASE_URL}/generate-custom-schedule`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
-    if (!resp.ok) throw new Error('Schedule generation failed');
+    const raw = await resp.json();
+    if (!resp.ok) {
+      throw new Error(raw?.error || 'Schedule generation failed');
+    }
+    if (!Array.isArray(raw)) {
+      throw new Error('Unexpected response from the scheduler.');
+    }
 
-       const raw = await resp.json() as {
-           variantLabel: string;
-           schedule: { courseAssignmentList: any[] };
-         }[];
-      
-         // map into our internal shape
-         const variants = raw.map(v => ({
-           label: v.variantLabel,
-           classes: mapAssignmentListToSessions(v.schedule.courseAssignmentList)
-         }));
-         setScheduleVariants(variants);
+    const variants = raw.map((v: { variantLabel: string; schedule: { courseAssignmentList: any[] } }) => ({
+      label: v.variantLabel,
+      classes: mapAssignmentListToSessions(v.schedule?.courseAssignmentList)
+    }));
+    const usable = variants.filter(v => v.classes.length > 0);
+    if (!usable.length) {
+      throw new Error('The solver returned empty calendars. Try another term, add another campus, or turn off seat limits.');
+    }
+    setScheduleVariants(usable);
   } catch (err) {
     console.error(err);
-    // TODO: show an error notification or set an error state
+    setGenerateError(err instanceof Error ? err.message : 'Schedule generation failed');
   } finally {
     setIsGenerating(false);
   }
@@ -317,7 +327,7 @@ return (
                 : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
             }`}
           >
-            {term}
+            {displayCatalogTerm(term, terms)}
           </button>
         ))}
       </div>
@@ -367,15 +377,19 @@ return (
 
 {/* ==== FOOTER ==== */}
 <div
-  className={`px-6 py-3 bg-gray-50 border-t border-gray-200 flex justify-end ${
+  className={`px-6 py-3 bg-gray-50 border-t border-gray-200 ${
     scheduleVariants.length === 0 ? '' : 'hidden'
   }`}
 >
+  {generateError && (
+    <p className="text-sm text-red-600 mb-2">{generateError}</p>
+  )}
+  <div className="flex justify-end">
   <button
     onClick={handleGenerate}
-    disabled={isGenerating}
+    disabled={isGenerating || selectedCourses.length === 0}
     className={`px-4 py-2 ${
-      isGenerating ? 'bg-gray-400' : 'bg-primary-blue hover:bg-blue-600'
+      isGenerating || selectedCourses.length === 0 ? 'bg-gray-400' : 'bg-primary-blue hover:bg-blue-600'
     } text-white rounded flex items-center`}
   >
     {isGenerating ? (
@@ -405,6 +419,7 @@ return (
       'Generate Schedules'
     )}
   </button>
+  </div>
 </div>
 
   

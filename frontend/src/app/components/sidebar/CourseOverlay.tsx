@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { CourseOverlayProps, CourseDetails, SectionInfo } from './types';
 import type { ClassSession } from '../SemesterCalendar';
 import { getRandomColor } from '../SemesterCalendar';
+import { displayCatalogTerm } from '@/utils/academicTerms';
 
 
-const API_BASE_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder`;
+const API_BASE_URL = `/api/v2/schedule-builder`;
 
 export default function CourseOverlay({
   courseCode,
@@ -30,6 +31,7 @@ export default function CourseOverlay({
   const [codeData, setCodeData] = useState<SectionInfo[]>([]);
   const [codeDataLoading, setCodeDataLoading] = useState(false);
   const [codeDataError, setCodeDataError] = useState<string | null>(null);
+  const semesterLabel = currentSemester ? displayCatalogTerm(currentSemester) : '';
 
   // Normalize professors array to avoid undefined
   const professors = courseData?.professors ?? [];
@@ -40,7 +42,7 @@ export default function CourseOverlay({
     const fetchCourseDetails = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`http://127.0.0.1:8000/courses/${courseCode}`);
+        const res = await fetch(`/api/courses/${encodeURIComponent(courseCode)}`);
         if (!res.ok) throw new Error('Failed to fetch course data');
         const data: CourseDetails = await res.json();
         setCourseData(data);
@@ -61,7 +63,7 @@ export default function CourseOverlay({
     setCodeDataLoading(true);
     setCodeDataError(null);
     fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v2/schedule-builder/get-course-code-data` +
+      `${API_BASE_URL}/get-course-code-data` +
       `?Term=${encodeURIComponent(currentSemester)}` +
       `&CourseCode=${encodeURIComponent(courseCode)}`
     )
@@ -377,13 +379,13 @@ export default function CourseOverlay({
           {!currentSemester ? (
             <p className="text-gray-500">No semester selected</p>
           ) : codeDataLoading ? (
-            <p>Loading sections for {currentSemester}...</p>
+            <p>Loading sections for {semesterLabel}...</p>
           ) : codeDataError ? (
             <p className="text-red-500 text-sm">{codeDataError}</p>
           ) : (
             <>
               <div className="text-sm text-gray-600 mb-2">
-                Showing sections for <span className="font-medium">{currentSemester}</span>
+                Showing sections for <span className="font-medium">{semesterLabel}</span>
               </div>
               
               {/* Sections list or empty state */}
@@ -427,7 +429,7 @@ export default function CourseOverlay({
                   <div className="py-8 px-4 text-center">
                     <p className="text-gray-500 text-sm font-medium mb-1">No sections available</p>
                     <p className="text-gray-400 text-xs">
-                      {courseCode} is not offered in {currentSemester}
+                      {courseCode} is not offered in {semesterLabel}
                     </p>
                   </div>
                 )}
